@@ -7,7 +7,19 @@
 
 require('./bootstrap');
 
+// Vue JS
 window.Vue = require('vue');
+
+// Plugins
+require("./plugins/isotope.pkgd");
+require("./plugins/jquery.appear");
+require("./plugins/jquery.backstretch.min");
+require("./plugins/modernizr");
+
+require("./custom.js");
+require("./template.js");
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
