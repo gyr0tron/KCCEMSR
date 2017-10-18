@@ -2,7 +2,13 @@
 (function($){
 	$(document).ready(function(){
 	
-		$(".banner-image").backstretch('images/banner.jpg');
+		$(".banner-image").backstretch([
+			  "images/banner.jpg",
+			  "images/banner-1.jpg",
+			  "images/bg-image-1.jpg"], {
+				fade: 750,
+				duration: 4000
+			});
 		
 		// Fixed header
 		//-----------------------------------------------
@@ -10,8 +16,12 @@
 			if (($(".header.fixed").length > 0)) { 
 				if(($(this).scrollTop() > 0) && ($(window).width() > 767)) {
 					$("body").addClass("fixed-header-on");
+					$("#arw").addClass("hidn-arw");
+					$(".sub-menu").addClass("sub-menu-down");
 				} else {
 					$("body").removeClass("fixed-header-on");
+					$("#arw").removeClass("hidn-arw");
+					$(".sub-menu").removeClass("sub-menu-down");
 				}
 			};
 		});

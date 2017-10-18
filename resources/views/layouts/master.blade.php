@@ -9,7 +9,8 @@
   <title>{{ $title or config('app.name') }}</title>
   <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 </head>
-<body>
+<body class="no-trans">
+<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
 @include('layouts.nav')
 <div id="app">
   @yield('content')

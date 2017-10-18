@@ -11,7 +11,7 @@
       <div class="col-sm-3"></div>
       <div class="col-sm-6">
         <div class="panel panel-primary">
-          <div class="panel-heading" style="padding:10px;">
+          <div class="panel-heading">
             <span class="panel-title">Login</span>
           </div>
           <div class="panel-body">

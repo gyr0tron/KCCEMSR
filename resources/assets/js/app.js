@@ -8,21 +8,21 @@
 require('./bootstrap');
 
 // Vue JS
-window.Vue = require('vue');
-Vue.component('example', require('./components/Example.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
+// window.Vue = require('vue');
+// Vue.component('example', require('./components/Example.vue'));
+//
+// const app = new Vue({
+//     el: '#app'
+// });
 
 // Plugins
 // require("./plugins/isotope.pkgd");
-// require("./plugins/jquery.appear");
-// require("./plugins/jquery.backstretch.min");
-// require("./plugins/modernizr");
-//
-// require("./custom.js");
-// require("./template.js");
+require("./plugins/jquery.appear");
+require("./plugins/jquery.backstretch.min");
+require("./plugins/modernizr");
+
+require("./custom.js");
+require("./template.js");
 
 
 
