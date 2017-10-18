@@ -12,3 +12,8 @@
 */
 
 Route::get('/',"HomeController@getHome");
+
+Route::get('/login','Auth\LoginController@getLogin')->name("admin_login");
+Route::post('/login','Auth\LoginController@login');
+
+Route::get('/admin/dashboard','Admin\DashboardController@home');
