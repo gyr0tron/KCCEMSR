@@ -16,10 +16,10 @@ require('./bootstrap');
 // });
 
 // Plugins
-// require("./plugins/isotope.pkgd");
+require("./plugins/modernizr");
 require("./plugins/jquery.appear");
 require("./plugins/jquery.backstretch.min");
-require("./plugins/modernizr");
+require("./plugins/isotope.pkgd");
 
 require("./custom.js");
 require("./template.js");
