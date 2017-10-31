@@ -5,23 +5,16 @@
   $menu_item = 'login';
 @endphp
 @endsection
-@section('styles')
-<style media="screen">
-  body {
-    background-color: #eee;
-  }
-</style>
-@endsection
 @section('content')
   <div class="container">
     <div class="row" style="margin-top:100px;">
       <div class="col-sm-3"></div>
       <div class="col-sm-6">
-        <div class="box box-primary">
-          <div class="box-header">
-            <span class="box-title">Login</span>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <span class="panel-title">Login</span>
           </div>
-          <div class="box-body">
+          <div class="panel-body">
             @if ($errors->any())
               <div class="alert alert-danger">
                 <span>{{trans('auth.failed')}}</span>
@@ -47,11 +40,11 @@
                 </div>
               </div>
               <div class="form-group">
-                <button type="submit" name="button" class="btn btn-primary btn-wide btn-flat">Login</button>
+                <button type="submit" name="button" class="btn btn-primary">Login</button>
               </div>
             </form>
           </div>
-          <div class="box-footer">
+          <div class="panel-footer">
 
           </div>
         </div>

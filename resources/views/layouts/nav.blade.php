@@ -1,4 +1,4 @@
-<header class="header fixed clearfix navbar navbar-fixed-top">
+<header class="header fixed clearfix navbar navbar-fixed-top" id="navmain">
 			<div class="container" id="head-container">
 				<div class="row">
 					<div class="container">
