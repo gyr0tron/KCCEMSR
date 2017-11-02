@@ -1,3 +1,9 @@
 .btn-wide {
   min-width: 100px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+.btn-table {
+  margin-right:10px;
+  margin-bottom: 5px;
 }

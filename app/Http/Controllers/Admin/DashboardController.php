@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use Auth;
 use App\User;
+use App\Carousel;
 
 class DashboardController extends Controller
 {
@@ -17,6 +18,18 @@ class DashboardController extends Controller
   public function home()
   {
     return view("pages.admin.dashboard");
+  }
+  //Carousel
+  public function carousel()
+  {
+    return view("pages.admin.carousel");
+  }
+  //Edit Carousel Image
+  public function editcoarouselimage($id)
+  {
+    $car = Carousel::where("id",$id)->first();
+    if(!$car) abort(404);
+    return view("pages.admin.editcoarouselimage", compact("car"));
   }
   public function users()
   {
