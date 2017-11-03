@@ -26,6 +26,7 @@ class DashboardApiController extends Controller
   // Add User
   public function addUser(AdminAddUserRequest $request)
   {
+    if(!Auth::user()->is_admin()) abort("403","No Access");
     $user = new User();
     $user->username = $request->input("username");
     $user->fullname = $request->input("fullname");
@@ -39,6 +40,7 @@ class DashboardApiController extends Controller
   // Edit User
   public function editUser(AdminEditUserRequest $request)
   {
+    if(!Auth::user()->is_admin()) abort("403","No Access");
     $user = User::where("username",$request->input("username"))->first();
 
     $email = $request->input("email");
@@ -65,6 +67,7 @@ class DashboardApiController extends Controller
   // Remove User
   public function removeUser(Request $request)
   {
+    if(!Auth::user()->is_admin()) abort("403","No Access");
     $user = User::where('username', $request->input("username"));
     if($user) {
       $user->forceDelete();
@@ -84,10 +87,14 @@ class DashboardApiController extends Controller
         return ResponseBuilder::send(false, $messages, "");
       }
     }
+    if(strlen($request->input("password")) > 0) {
+      $user->password = bcrypt($request->input("password"));
+    }
     $user->fullname = $request->input("fullname");
     $user->email = $request->input("email");
+    $user->skin = $request->input("skin");
     $user->save();
-    return ResponseBuilder::send(true, "", route("admin_settings"));
+    return ResponseBuilder::send(true, "", route("admin_dashboard"));
   }
 
   // Carousel new image

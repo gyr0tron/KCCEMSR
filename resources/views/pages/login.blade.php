@@ -15,8 +15,8 @@
 @section('content')
   <div class="container">
     <div class="row" style="margin-top:100px;">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
         <div class="box box-primary">
           <div class="box-header">
             <span class="box-title">Login</span>
@@ -56,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-3"></div>
+      <div class="col-sm-4"></div>
     </div>
   </div>
 @endsection

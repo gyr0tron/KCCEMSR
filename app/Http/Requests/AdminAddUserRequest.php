@@ -16,7 +16,7 @@ class AdminAddUserRequest extends FormRequest
   */
   public function authorize()
   {
-    return Auth::user()->access==2;
+    return Auth::user()->is_admin();
   }
 
   public function response(array $errors)

@@ -25,7 +25,7 @@
   </div>
   <div class="form-group">
     <span for="password">Password:</span>
-    <input type="password" class="form-control" id="password" name="password">
+    <input type="password" class="form-control" id="password" name="password" data-toggle="password">
     <p class="help-block"></p>
   </div>
   <button type="submit" name="button" class="btn btn-primary btn-wide">Add New User</button>

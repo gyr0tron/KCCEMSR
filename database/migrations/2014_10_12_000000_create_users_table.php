@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
       $table->string('fullname');
       $table->string('password');
       $table->enum("access",['0','1','2'])->default('1');
+      $table->string('skin')->default('blue');
       $table->rememberToken();
       $table->timestamps();
     });

@@ -32,6 +32,13 @@
     </div>
   </div>
   <div class="form-group">
+    <label class="control-label col-sm-2" for="password">New Password:</label>
+    <div class="col-sm-4">
+      <input type="password" class="form-control" id="password" name="password" data-toggle="password">
+      <p class="help-block"></p>
+    </div>
+  </div>
+  <div class="form-group">
     <div class="col-sm-offset-2 col-sm-4">
       <button type="submit" class="btn btn-primary btn-wide">Save</button>
     </div>

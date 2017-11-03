@@ -33,6 +33,12 @@
             <div class="box-body">
               <form id="form-usersettings" action="" method="post" class="form-horizontal">
                 <div class="form-group">
+                  <label class="control-label col-sm-2" for="username">Color Scheme:</label>
+                  <div class="col-sm-4">
+                    @include('forms.skinlist', ['user'=>Auth::user()])
+                  </div>
+                </div>
+                <div class="form-group">
                   <label class="control-label col-sm-2" for="username">Username:</label>
                   <div class="col-sm-4">
                     <input type="text" class="form-control" id="username" name="username" value="{{Auth::user()->username}}" disabled>
@@ -49,6 +55,13 @@
                   <label class="control-label col-sm-2" for="email">Email:</label>
                   <div class="col-sm-4">
                     <input type="email" class="form-control" id="email" name="email" value="{{Auth::user()->email}}">
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="password">New Password:</label>
+                  <div class="col-sm-4">
+                    <input type="password" class="form-control" id="password" name="password" data-toggle="password">
                     <p class="help-block"></p>
                   </div>
                 </div>
