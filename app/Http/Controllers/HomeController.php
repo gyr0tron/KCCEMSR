@@ -14,6 +14,10 @@ class HomeController extends Controller
     }
 
     public function getCarousel() {
-      return Carousel::select("image","title","description")->get();
+      $images = Carousel::select("image","title","description")->get();
+      foreach ($images as &$image) {
+        $image->image = $image->getUrl();
+      }
+      return $images;
     }
 }
