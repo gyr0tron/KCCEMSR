@@ -126,7 +126,7 @@ window.dashboard = {
   },
   deleteUser: function() {
     showPasswordBox(function(password){
-      alert("password");
+      alert(password);
     });
   }
 };
@@ -150,18 +150,18 @@ function showPasswordBox(callback) {
   <div class="modal-content">
   <div class="modal-header">
   <button type="button" class="close" data-dismiss="modal">&times;</button>
-  <h4 class="modal-title">${title}</h4>
+  <h4 class="modal-title">Password</h4>
   </div>
   <div class="modal-body">
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="text" class="form-control" id="modalPassword" placeholder="Enter your password">
+    <input type="password" class="form-control" id="modalPassword" placeholder="Enter your password">
     <p class="help-block"></p>
   </div>
   </div>
   <div class="modal-footer">
-  <button type="button" class="btn btn-primary" id="modalYes">Ok</button>
-  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+  <button type="button" class="btn btn-primary btn-wide" id="modalYes">Ok</button>
+  <button type="button" class="btn btn-default  btn-wide" data-dismiss="modal">Cancel</button>
   </div>
   </div>
   </div>

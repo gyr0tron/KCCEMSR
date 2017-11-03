@@ -31,7 +31,10 @@ Route::get('/admin/users/edit/{id}','Admin\DashboardController@edituser')->name(
 Route::get('/admin/settings','Admin\DashboardController@settings')->name("admin_settings");
 
 
-// API
+// API SITE
+Route::get('/api/home/carousel/','HomeController@getCarousel');
+
+// API ADMIN
 Route::post("/api/admin/adduser","Admin\DashboardApiController@addUser");
 Route::post("/api/admin/edituser","Admin\DashboardApiController@editUser");
 Route::post("/api/admin/removeuser","Admin\DashboardApiController@removeUser");
