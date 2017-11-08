@@ -14,22 +14,27 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/AdminLTE.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/skins/_all-skins.min.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/dashboard.css') }}">
-  <link rel="stylesheet" type="text/css" href="{{ asset('css/dashboard.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/dataTables.bootstrap.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css') }}">
   @yield('styles')
 </head>
 <body class="skin-{{Auth::check()?Auth::user()->skin:"blue"}} sidebar-mini">
-  @include('layouts.nav2')
-  @yield('content')
-<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/axios.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/formhandler.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/adminlte.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/dashboard.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/bootstrap-show-password.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/dataTables.bootstrap.min.js') }}"></script>
-@yield('post')
+  <div class="wrapper">
+    @include('layouts.nav2')
+    <div class="content-wrapper">
+    @yield('content')
+  </div>
+  </div>
+  <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/axios.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/formhandler.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/adminlte.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/dashboard.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/bootstrap-show-password.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/dataTables.bootstrap.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/jquery.fancybox.js') }}"></script>
+  @yield('post')
 </body>
 </html>

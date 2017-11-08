@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use Auth;
 use App\User;
 use App\Carousel;
+use App\Event;
+use App\Eventimage;
 
 class DashboardController extends Controller
 {
@@ -15,6 +17,8 @@ class DashboardController extends Controller
   {
     $this->middleware('auth');
   }
+
+  // Home
   public function home()
   {
     return view("pages.admin.dashboard");
@@ -28,9 +32,25 @@ class DashboardController extends Controller
   public function editcoarouselimage($id)
   {
     $car = Carousel::where("id",$id)->first();
-    if(!$car) abort(404);
+    if(!$car) abort(404,"Page Not Found");
     return view("pages.admin.editcoarouselimage", compact("car"));
   }
+  // Events
+  public function events() {
+    return view("pages.admin.events");
+  }
+  // New Events
+  public function newevent() {
+    return view("pages.admin.newevent");
+  }
+  // New Events
+  public function editevent($id) {
+    $event = Event::where("id",$id)->first();
+    if(!$event) abort(404,"Page Not Found");
+    $images = Eventimage::where("event",$id)->get();
+    return view("pages.admin.editevent", compact("event", "images"));
+  }
+  // Users
   public function users()
   {
     if(!Auth::user()->is_admin()) {
@@ -38,6 +58,7 @@ class DashboardController extends Controller
     }
     return view("pages.admin.users");
   }
+  // Edit User
   public function edituser($id)
   {
     if(!Auth::user()->is_admin()) {
@@ -49,6 +70,7 @@ class DashboardController extends Controller
     }
     return view("pages.admin.edituser", compact("user"));
   }
+  // Settings
   public function settings()
   {
     return view("pages.admin.settings");

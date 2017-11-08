@@ -9,11 +9,14 @@ use App\Http\Requests\AdminEditUserRequest;
 use App\Http\Requests\AdminUserSettingsRequest;
 use App\Http\Requests\AdminAddCarouselImageRequest;
 use App\Http\Requests\AdminEditCarouselImageRequest;
+use App\Http\Requests\AdminAddNewEventRequest;
 
 use Auth;
 use Image;
 use App\User;
 use App\Carousel;
+use App\Event;
+use App\Eventimage;
 use App\ResponseBuilder;
 
 class DashboardApiController extends Controller
@@ -139,5 +142,69 @@ class DashboardApiController extends Controller
     $car->deleteImage();
     $car->forceDelete();
     return ResponseBuilder::send(true, "", route("admin_carousel"));
+  }
+  // Add new Event
+  public function addEvent(AdminAddNewEventRequest $request)
+  {
+    $event = new Event();
+    $event->name = $request->input("name");
+    $event->description = $request->input("description");
+    $event->created_by = Auth::user()->id;
+    $event->updated_by = Auth::user()->id;
+    $event->save();
+    $images = $request->images;
+    if($images) {
+      foreach ($images as $file) {
+        $img = new Eventimage();
+        $img->event = $event->id;
+        $img->uploadImage($file);
+        $img->save();
+      }
+    }
+    $event->save();
+    return ResponseBuilder::send(true, "", route("admin_events"));
+  }
+  public function removeEvent(Request $request) {
+    $id = $request->input("id","-1");
+    $event = Event::where("id",$id)->first();
+    if(!$event) abort(404, 'Not Found');
+    $imges = Eventimage::where("event",$id)->get();
+    foreach ($imges as $img) {
+      $img->deleteImage();
+      $img->forceDelete();
+    }
+    $event->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Edit Event
+  public function editEvent(AdminAddNewEventRequest $request)
+  {
+    $id = $request->input("id","-1");
+    $event = Event::where("id",$id)->first();
+    if(!$event) abort(404, 'Not Found');
+    $event->name = $request->input("name");
+    $event->description = $request->input("description");
+    $event->updated_by = Auth::user()->id;
+    $event->save();
+    $images = $request->images;
+    if($images) {
+      foreach ($images as $file) {
+        $img = new Eventimage();
+        $img->event = $event->id;
+        $img->uploadImage($file);
+        $img->save();
+      }
+    }
+    $event->save();
+    return ResponseBuilder::send(true, "", route("admin_events"));
+  }
+  // Remove Event Image
+  public function editEventRemoveImage(Request $request) {
+    $id = $request->input("id","-1");
+    $img = Eventimage::where("id",$id)->first();
+    if(!$img) abort(404, 'Not Found');
+    $img->deleteImage();
+    $img->forceDelete();
+    return ResponseBuilder::send(true, "", "");
   }
 }
