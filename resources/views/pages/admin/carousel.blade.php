@@ -65,7 +65,7 @@
                 @foreach (App\Carousel::all() as $car)
                   <tr>
                     <td>{{$no}}</td>
-                    <td><img src="{{$car->getThumb()}}" alt="" width="250" height="150"></td>
+                    <td><a href="{{$car->getUrl()}}" data-fancybox><img src="{{$car->getThumb()}}" alt="" width="250" height="150"></a></td>
                     <td>{{$car->title}}</td>
                     <td>{{$car->description}}</td>
                     <td><a class="btn btn-warning btn-sm btn-table " href="{{route("admin_editcarouselimage", $car->id)}}">Edit</a><a class="btn btn-sm btn-danger btn-table " onclick="dashboard.removeCarouselImage({{$car->id}})">Remove</a></td>

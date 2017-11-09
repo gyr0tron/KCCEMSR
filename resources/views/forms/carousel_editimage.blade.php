@@ -17,7 +17,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="title">Image:</label>
     <div class="col-sm-4">
-      <img src="{{$car->getUrl()}}" height="260" width="360">
+      <a href="{{$car->getUrl()}}" data-fancybox><img src="{{$car->getThumb()}}" height="260" width="360" class="img-thumbnail"></a>
       <br />
       <br />
       <input type="file" class="form-control" id="image" name="image">

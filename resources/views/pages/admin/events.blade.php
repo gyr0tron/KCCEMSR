@@ -45,7 +45,7 @@
                 @foreach (App\Event::all() as $event)
                   <tr>
                     <td>{{$no}}</td>
-                    <td><img src="{{$event->getFeaturedImage()}}" alt="" width="250" height="150"></td>
+                    <td><a href="{{$event->getFeaturedImage()}}" data-fancybox><img src="{{$event->getFeaturedImage()}}" alt="" width="250" height="150"></a></td>
                     <td>{{$event->name}}</td>
                     <td>{{$event->description}}</td>
                     <td><a class="btn btn-warning btn-sm btn-table " href="{{route("admin_editevent", $event->id)}}">Edit</a><a class="btn btn-sm btn-danger btn-table " onclick="dashboard.removeEvent({{$event->id}})">Remove</a></td>
