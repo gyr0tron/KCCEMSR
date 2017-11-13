@@ -26,7 +26,7 @@ class UpdateController extends Controller
       foreach ($folders as $f) {
         $src = base_path("public\\$f");
         $dest = public_path();
-        mkdir(public_path($f));
+        if (!file_exists(public_path($f))) mkdir(public_path($f), 0700);
         $res = system("cp -r $src $dest");
       }
     }
