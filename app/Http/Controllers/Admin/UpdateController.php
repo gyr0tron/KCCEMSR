@@ -18,8 +18,18 @@ class UpdateController extends Controller
     if(!Auth::user()->is_admin()) {
       return redirect()->route('admin_update');
     }
-    $last_line = system('ls', $retval);
-    return $last_line;
-    // return redirect()->route('admin_settings');
+    chdir(base_path());
+    $last_line = system('git pull origin master', $retval);
+
+    if(base_path("public") != public_path()) {
+      $folders = ['images','js','css'];
+      foreach ($folders as $f) {
+        $src = base_path("public\\$f");
+        $dest = public_path();
+        mkdir(public_path($f));
+        $res = system("cp -r $src $dest", $retval);
+      }
+    }
+    return $retval;
   }
 }

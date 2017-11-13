@@ -857,7 +857,7 @@ $menu_item = 'home';
 							</div>
 						</div>
 
-						
+
 						<div class="col-sm-6">
 							<div class="footer-content">
 								<form role="form" id="footer-form">
