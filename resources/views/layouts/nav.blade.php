@@ -16,7 +16,7 @@
 						<!-- header-left end -->
 
 					</div>
-				<div class="container">
+				<div class="navbar-container-listholder">
 					<!-- header-right start -->
 					<!-- ================ -->
 					<div class="header-right clearfix">
@@ -46,17 +46,16 @@
 											<li class="active sub-menu-parent"><a href="#banner">Home</a>
 											</li>
 											<li class="sub-menu-parent"><a href="#">About</a>
-												<ul class="sub-menu sub-menu-down">
-													<li><a href="#">College Info</a></li>
-													<li><a href="#">Boards of Governers</a></li>
-													<li><a href="#">Principal's Desk</a></li>
+												<ul class="sub-menu">
+													<li><a href="#">Vision &amp; Mission</a></li>
 												</ul>
 											</li>
-											<li class="sub-menu-parent"><a href="#">Vision &amp; Mission</a>
+											<li class="sub-menu-parent"><a href="#">Academics</a>
 												<ul class="sub-menu">
-													<li><a href="#">Mission</a></li>
-													<li><a href="#">Vision</a></li>
-													<li><a href="#">Goals</a></li>
+													<li><a href="#">Humanities &amp; Applied Sciences</a></li>
+													<li><a href="#">Computer Engineering</a></li>
+													<li><a href="#">Information Technology</a></li>
+													<li><a href="#">Electronics &amp; Telecommunication</a></li>
 												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="#">Library</a>
@@ -68,10 +67,12 @@
 												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="#">Admission</a>
+											</li>
+											<li class="sub-menu-parent"><a href="#">Mandatory Disclosure</a>
 												<ul class="sub-menu">
-													<li><a href="#">Total Intake</a></li>
-													<li><a href="#">DSE</a></li>
-													<li><a href="#">Capround Allotment</a></li>
+													<li><a href="#">Results</a></li>
+													<li><a href="#">Placements</a></li>
+													<li><a href="#">Student Achievement</a></li>
 												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="#">Alumni</a>
@@ -80,29 +81,13 @@
 													<li><a href="#">Student Feedback</a></li>
 												</ul>
 											</li>
-											<li class="sub-menu-parent"><a href="#">TPO/Placements</a>
-												<ul class="sub-menu">
-													<li><a href="#">Mission Vision</a></li>
-													<li><a href="#">Events</a></li>
-													<li><a href="#">Placements</a></li>
-												</ul>
+											<li class="sub-menu-parent"><a href="#">TPO</a>
 											</li>
 											<li class="sub-menu-parent"><a href="#">E-Cell</a>
-												<ul class="sub-menu">
-													<li><a href="#">Events</a></li>
-													<li><a href="#">Invention/Research</a></li>
-													<li><a href="#">Placements</a></li>
-													<li><a href="#">Startup</a></li>
-												</ul>
 											</li>
-											<li class="sub-menu-parent"><a href="#">Life at KC</a>
-												<ul class="sub-menu">
-													<li><a href="#">Magazines Events</a></li>
-													<li><a href="#">Student Council</a></li>
-													<li><a href="#">Gallery</a></li>
-												</ul>
+											<li class="sub-menu-parent"><a href="#">Miscellaneous Activities</a>
 											</li>
-											<li class="sub-menu-parent"><a href="#">Contact</a>
+											<li class="sub-menu-parent"><a href="#contact">Contact</a>
 											</li>
 										</ul>
 									</div>
