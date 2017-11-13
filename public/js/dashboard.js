@@ -151,7 +151,11 @@ $("#form-editevent").submit(function(event) {
 $(':radio[name="skin"]').change(function() {
   $("body").attr("class", "skin-" + this.value + " sidebar-mini");
 });
-
+$("[data-skin]").click(function(event) {
+  $val = $(this).attr("data-skin");
+  $('body').find("input[value='"+$val+"']").attr('checked', true);
+  $("body").attr("class", "skin-" + $val + " sidebar-mini");
+});
 
 // ADMIN REMOVE FUNCTIONS
 window.dashboard = {

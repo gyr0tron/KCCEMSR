@@ -27,7 +27,7 @@ class UpdateController extends Controller
         $src = base_path("public\\$f");
         $dest = public_path();
         mkdir(public_path($f));
-        $res = system("cp -r $src $dest", $retval);
+        $res = system("cp -r $src $dest");
       }
     }
     return $retval;
