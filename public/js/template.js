@@ -1,19 +1,19 @@
 
 (function($){
 	$(document).ready(function(){
-	
+
 		$(".banner-image").backstretch([
-			  "images/banner.jpg",
-			  "images/banner-1.jpg",
-			  "images/bg-image-1.jpg"], {
+			  "/images/banner.jpg",
+			  "/images/bg-image-1.jpg",
+			  "/images/bg-image-2.jpg"], {
 				fade: 750,
 				duration: 4000
 			});
-		
+
 		// Fixed header
 		//-----------------------------------------------
 		$(window).scroll(function() {
-			if (($(".header.fixed").length > 0)) { 
+			if (($(".header.fixed").length > 0)) {
 				if(($(this).scrollTop() > 0) && ($(window).width() > 767)) {
 					$("body").addClass("fixed-header-on");
 					$("#arw").addClass("hidn-arw");
@@ -27,7 +27,7 @@
 		});
 
 		$(window).load(function() {
-			if (($(".header.fixed").length > 0)) { 
+			if (($(".header.fixed").length > 0)) {
 				if(($(this).scrollTop() > 0) && ($(window).width() > 767)) {
 					$("body").addClass("fixed-header-on");
 				} else {
@@ -40,7 +40,7 @@
 		//-----------------------------------------------
 		if($(".scrollspy").length>0) {
 			$("body").addClass("scroll-spy");
-			$('body').scrollspy({ 
+			$('body').scrollspy({
 				target: '.scrollspy',
 				offset: 152
 			});
