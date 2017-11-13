@@ -76,6 +76,32 @@
       <!-- /.col -->
     </div>
     <!-- /.row -->
+  @if (Auth::user()->is_admin())
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box box-primary">
+          <div class="box-header">
+            <h3 class="box-title">Site Settings</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <form id="form-sitesettings" action="" method="post" class="form-horizontal">
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Check for Update:</label>
+                <div class="col-sm-4">
+                  <a href="{{route("admin_update")}}" class="btn btn-success btn-wide">Update</a>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+    </div>
+  @endif
+    <!-- /.row -->
   </section>
   <!-- /.content -->
 @endsection

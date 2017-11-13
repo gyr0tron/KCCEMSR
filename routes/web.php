@@ -12,11 +12,15 @@
 */
 
 Route::get("/test", function() {
-  // dd(App\Department::all());
-  return public_path('public\\carousel\\');
+
 });
 
+// SITE
 Route::get('/',"HomeController@getHome");
+Route::get('/department/{name}','DepartmentController@get')->name('department');
+
+
+// DASHBOARD
 
 Route::get('/login','Auth\LoginController@getLogin')->name("admin_login")->name("login");
 Route::get('/login','Auth\LoginController@getLogin')->name("login");
@@ -33,6 +37,8 @@ Route::get('/admin/settings','Admin\DashboardController@settings')->name("admin_
 Route::get('/admin/events','Admin\DashboardController@events')->name("admin_events");
 Route::get('/admin/events/new','Admin\DashboardController@newevent')->name("admin_newevent");
 Route::get('/admin/events/edit/{id}','Admin\DashboardController@editevent')->name("admin_editevent");
+
+Route::get('/admin/update','Admin\UpdateController@update')->name("admin_update");
 
 
 // API SITE

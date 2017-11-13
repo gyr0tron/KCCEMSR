@@ -52,10 +52,13 @@
 											</li>
 											<li class="sub-menu-parent"><a href="#">Academics</a>
 												<ul class="sub-menu">
-													<li><a href="#">Humanities &amp; Applied Sciences</a></li>
+													@foreach (App\Department::all() as $dep)
+														<li><a href="{{route("department",$dep->url)}}">{{$dep->name}}</a></li>
+													@endforeach
+													{{-- <li><a href="#">Humanities &amp; Applied Sciences</a></li>
 													<li><a href="#">Computer Engineering</a></li>
 													<li><a href="#">Information Technology</a></li>
-													<li><a href="#">Electronics &amp; Telecommunication</a></li>
+													<li><a href="#">Electronics &amp; Telecommunication</a></li> --}}
 												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="#">Library</a>
