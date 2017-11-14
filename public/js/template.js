@@ -47,6 +47,7 @@
 				}
 				else {
 					$("body").addClass("fixed-header-on");
+					$(".sub-menu").addClass("sub-menu-down");
 				}
 			});
 
