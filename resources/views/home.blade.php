@@ -3,6 +3,7 @@
 @php
 $title = config('app.name');
 $menu_item = 'home';
+$nav_trans = 1
 @endphp
 @endsection
 @section('content')

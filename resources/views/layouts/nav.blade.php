@@ -1,15 +1,15 @@
-<header class="header fixed clearfix navbar navbar-fixed-top" id="navmain">
+<header class="header fixed clearfix navbar navbar-fixed-top" id="navmain" {{isset($nav_trans)?"data-navtransparent":""}}>
 			<div class="container" id="head-container">
 				<div class="row">
 					<div class="container">
 						<div class="header-left clearfix">
 
 							<div class="logo smooth-scroll"  style="float: left;">
-								<a href="#banner"><img id="logo" src="http://via.placeholder.com/60x60" alt="KC College logo"></a>
+								<a href="/"><img id="logo" src="http://via.placeholder.com/60x60" alt="KC College logo"></a>
 							</div>
 
 							<div class="site-name-and-slogan smooth-scroll">
-								<div class="site-name"><a href="#banner" id="head-site-name" style="text-decoration:none;">K.C. College of Engineering &amp; Management Studies &amp; Research</a></div>
+								<div class="site-name"><a href="/" id="head-site-name" style="text-decoration:none;">K.C. College of Engineering &amp; Management Studies &amp; Research</a></div>
 							</div>
 
 						</div>
@@ -43,7 +43,7 @@
 									<!-- Collect the nav links, forms, and other content for toggling -->
 									<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 										<ul class="nav navbar-nav">
-											<li class="active sub-menu-parent"><a href="#banner">Home</a>
+											<li class="active sub-menu-parent"><a href="/">Home</a>
 											</li>
 											<li class="sub-menu-parent"><a href="#">About</a>
 												<ul class="sub-menu">
@@ -55,6 +55,7 @@
 													@foreach (App\Department::all() as $dep)
 														<li><a href="{{route("department",$dep->url)}}">{{$dep->name}}</a></li>
 													@endforeach
+													<li><a href="http://kcims.org/" target="_blank">MMS</a></li>
 													{{-- <li><a href="#">Humanities &amp; Applied Sciences</a></li>
 													<li><a href="#">Computer Engineering</a></li>
 													<li><a href="#">Information Technology</a></li>
@@ -86,11 +87,11 @@
 											</li>
 											<li class="sub-menu-parent"><a href="#">TPO</a>
 											</li>
-											<li class="sub-menu-parent"><a href="#">E-Cell</a>
+											<li class="sub-menu-parent"><a href="http://www.kcecell.org/" target="_blank">E-Cell</a>
 											</li>
 											<li class="sub-menu-parent"><a href="#">Miscellaneous Activities</a>
 											</li>
-											<li class="sub-menu-parent"><a href="#contact">Contact</a>
+											<li class="sub-menu-parent"><a href="/#contact">Contact</a>
 											</li>
 										</ul>
 									</div>
