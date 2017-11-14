@@ -37,12 +37,15 @@ Route::get('/admin/settings','Admin\DashboardController@settings')->name("admin_
 Route::get('/admin/events','Admin\DashboardController@events')->name("admin_events");
 Route::get('/admin/events/new','Admin\DashboardController@newevent')->name("admin_newevent");
 Route::get('/admin/events/edit/{id}','Admin\DashboardController@editevent')->name("admin_editevent");
+Route::get('/admin/messages','Admin\DashboardController@messages')->name("admin_messages");
+
 
 Route::get('/admin/update','Admin\UpdateController@update')->name("admin_update");
 
 
 // API SITE
 Route::get('/api/home/carousel/','HomeController@getCarousel');
+Route::post('/api/contact/send',"HomeController@sendContact");
 
 // API ADMIN
 Route::post("/api/admin/adduser","Admin\DashboardApiController@addUser");
@@ -56,3 +59,4 @@ Route::post("/api/admin/events/add","Admin\DashboardApiController@addEvent");
 Route::post("/api/admin/events/edit","Admin\DashboardApiController@editEvent");
 Route::post("/api/admin/events/remove","Admin\DashboardApiController@removeEvent");
 Route::post("/api/admin/events/edit/removeimage","Admin\DashboardApiController@editEventRemoveImage");
+Route::post("/api/admin/message/delete","Admin\DashboardApiController@deleteMessage");

@@ -47,49 +47,84 @@
 											</li>
 											<li class="sub-menu-parent"><a href="#">About</a>
 												<ul class="sub-menu">
+													<li><a href="#">College Info</a></li>
 													<li><a href="#">Vision &amp; Mission</a></li>
+													<li><a href="#">Board of Governance</a></li>
+													<li><a href="#">Principal's Desk</a></li>
+													<li><a href="#">Infrastructure &amp; Activities</a></li>
 												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="#">Academics</a>
+												<ul class="sub-menu">
+													<li><a href="#">Curriculum Plan</a></li>
+													<li><a href="#">Staff Noticies</a></li>
+													<li><a href="#">Gate / PSO</a></li>
+													<li><a href="#">Publications / News Letter</a></li>
+													<li><a href="#">Workshops & Conferences</a></li>
+													<li><a href="#">Exam Results</a></li>
+												</ul>
+											</li>
+											<li class="sub-menu-parent"><a href="#">Departments</a>
 												<ul class="sub-menu">
 													@foreach (App\Department::all() as $dep)
 														<li><a href="{{route("department",$dep->url)}}">{{$dep->name}}</a></li>
 													@endforeach
 													<li><a href="http://kcims.org/" target="_blank">MMS</a></li>
-													{{-- <li><a href="#">Humanities &amp; Applied Sciences</a></li>
-													<li><a href="#">Computer Engineering</a></li>
-													<li><a href="#">Information Technology</a></li>
-													<li><a href="#">Electronics &amp; Telecommunication</a></li> --}}
 												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="#">Library</a>
 												<ul class="sub-menu">
 													<li><a href="#">Question Papers</a></li>
-													<li><a href="#">E-Books</a></li>
-													<li><a href="#">Timetable</a></li>
+													<li><a href="#">E-Books &amp; Journals</a></li>
 													<li><a href="#">Syllabus</a></li>
+													<li><a href="#">Timetable</a></li>
 												</ul>
 											</li>
-											<li class="sub-menu-parent"><a href="#">Admission</a>
+											<li class="sub-menu-parent"><a href="#">Admissions</a>
+												<ul class="sub-menu">
+													<li><a href="#">Admission Criteria</a></li>
+													<li><a href="#">Fees Notices</a></li>
+													<li><a href="#">Institute Prospectus</a></li>
+													<li><a href="#">DTE Admission Information Brochure</a></li>
+													<li><a href="#">Total Intake</a></li>
+													<li><a href="#">Cap Rount Allottment</a></li>
+													<li><a href="#">Direct Second Year</a></li>
+													<li><a href="#">Anti-ragging Affidavit</a></li>
+													<li><a href="#">Campus Virtual Tour</a></li>
+												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="#">Mandatory Disclosure</a>
 												<ul class="sub-menu">
-													<li><a href="#">Results</a></li>
-													<li><a href="#">Placements</a></li>
-													<li><a href="#">Student Achievement</a></li>
+													<li><a href="#">AICTE affiliation</a></li>
+													<li><a href="#">University Of Mumbai affiliation</a></li>
+													<li><a href="#">DTE affiliation</a></li>
+													<li><a href="#">Audit statement</a></li>
 												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="#">Alumni</a>
 												<ul class="sub-menu">
-													<li><a href="#">Student Login/Information</a></li>
-													<li><a href="#">Student Feedback</a></li>
+													{{-- <li><a href="#">Student Login/Information</a></li>
+													<li><a href="#">Student Feedback</a></li> --}}
+													<li><a href="#">Alumni Portal</a></li>
+													<li><a href="#">Alumni Association</a></li>
 												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="#">TPO</a>
+												<ul class="sub-menu">
+													<li><a href="#">Function &amp; Responsibilities</a></li>
+													<li><a href="#">Placement Statistics</a></li>
+													<li><a href="#">Training &amp; Placement Process</a></li>
+													<li><a href="#">Feedback</a></li>
+												</ul>
+											</li>
 											</li>
 											<li class="sub-menu-parent"><a href="http://www.kcecell.org/" target="_blank">E-Cell</a>
 											</li>
-											<li class="sub-menu-parent"><a href="#">Miscellaneous Activities</a>
+											<li class="sub-menu-parent"><a href="#">Life At KC</a>
+												<ul class="sub-menu">
+													<li><a href="#">Staff</a></li>
+													<li><a href="#">Student</a></li>
+												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="/#contact">Contact</a>
 											</li>

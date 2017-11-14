@@ -27,6 +27,8 @@
 <script type="text/javascript" src="{{ asset('js/jquery.appear.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/template.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/axios.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/contact.js') }}"></script>
 @yield('post')
 </body>
 </html>

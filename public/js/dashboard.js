@@ -185,6 +185,20 @@ window.dashboard = {
       });
     });
   },
+  deleteMessage: function(id) {
+    showYesNo("Delete Message", "Are you sure you want to delete this message ?", function(){
+      axios.post('/api/admin/message/delete', {id:id})
+      .then(function (response) {
+        var data = response.data;
+        if(fh.is_success(data)) {
+          fh.redirect(data);
+        }
+      })
+      .catch(function (error) {
+        fh.show_errorpage(error);
+      });
+    });
+  },
   deleteUser: function() {
     showPasswordBox(function(password){
       alert(password);

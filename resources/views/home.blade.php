@@ -861,20 +861,20 @@ $nav_trans = 1
 
 						<div class="col-sm-6">
 							<div class="footer-content">
-								<form role="form" id="footer-form">
+								<form role="form" id="contact-form" method="post">
 									<div class="form-group has-feedback">
-										<label class="sr-only" for="name2">Name</label>
-										<input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
+										<label class="sr-only" for="name">Name</label>
+										<input type="text" class="form-control" id="name" placeholder="Name" name="name">
 										<i class="fa fa-user form-control-feedback"></i>
 									</div>
 									<div class="form-group has-feedback">
-										<label class="sr-only" for="email2">Email address</label>
-										<input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2" required>
+										<label class="sr-only" for="email">Email address</label>
+										<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
 										<i class="fa fa-envelope form-control-feedback"></i>
 									</div>
 									<div class="form-group has-feedback">
-										<label class="sr-only" for="message2">Message</label>
-										<textarea class="form-control" rows="8" id="message2" placeholder="Message" name="message2" required></textarea>
+										<label class="sr-only" for="message">Message</label>
+										<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message"></textarea>
 										<i class="fa fa-pencil form-control-feedback"></i>
 									</div>
 									<input type="submit" value="Send" class="btn btn-default">

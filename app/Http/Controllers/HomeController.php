@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Carousel;
+use App\Message;
 
 class HomeController extends Controller
 {
@@ -19,5 +20,13 @@ class HomeController extends Controller
         $image->image = $image->getUrl();
       }
       return $images;
+    }
+    public function sendContact(Request $request) {
+      $message = new Message();
+      $message->name = $request->input("name","");
+      $message->email = $request->input("email","");
+      $message->message = $request->input("message","");
+      $message->save();
+      return "Your message was send successfully!";
     }
 }

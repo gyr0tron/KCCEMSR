@@ -15,6 +15,7 @@ use Auth;
 use Image;
 use App\User;
 use App\Carousel;
+use App\Message;
 use App\Event;
 use App\Eventimage;
 use App\ResponseBuilder;
@@ -205,6 +206,16 @@ class DashboardApiController extends Controller
     if(!$img) abort(404, 'Not Found');
     $img->deleteImage();
     $img->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Delete Message
+  public function deleteMessage(Request $request)
+  {
+    if(!Auth::user()->is_admin()) abort("403","No Access");
+    $id = $request->input("id","-1");
+    $message = Message::where("id",$id)->first();
+    if(!$message) abort(404, 'Not Found');
+    $message->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
 }
