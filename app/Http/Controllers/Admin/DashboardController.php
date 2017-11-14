@@ -50,6 +50,9 @@ class DashboardController extends Controller
     $images = Eventimage::where("event",$id)->get();
     return view("pages.admin.editevent", compact("event", "images"));
   }
+  public function messages() {
+    return view("pages.admin.messages");
+  }
   // Users
   public function users()
   {

@@ -95,6 +95,14 @@
             <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_dashboard")}}">Syllabus</a></li>
           </ul>
         </li>
+        <li class="{{$menu_item=='messages'?'active':''}}">
+          <a href="{{route("admin_messages")}}">
+            <i class="fa fa-envelope"></i> <span>Messages</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-blue">{{App\Message::count()}}</small>
+            </span>
+          </a>
+        </li>
         @if (Auth::user()->is_admin())
           <li class="{{$menu_item=='users'?'active':''}}"><a href="{{route("admin_users")}}"><i class="fa fa-users"></i> <span>Users</span></a></li>
         @endif
