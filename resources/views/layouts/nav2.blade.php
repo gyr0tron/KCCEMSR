@@ -62,8 +62,7 @@
           <a href="{{route("admin_events")}}">
             <i class="fa fa-calendar"></i> <span>Events</span>
             <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
+              <small class="label pull-right bg-blue">{{App\Event::count()}}</small>
             </span>
           </a>
         </li>

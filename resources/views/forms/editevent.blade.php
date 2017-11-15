@@ -16,6 +16,18 @@
           </div>
         </div>
         <div class="form-group">
+          <label class="control-label col-sm-2" for="department">Department:</label>
+          <div class="col-sm-9">
+            <select class="form-control" name="department" id="department">
+              <option value="all">College</option>
+              @foreach (App\Department::all() as $dep)
+                <option value="{{$dep->url}}" {{$dep==$event->department?"selected":""}}>{{$dep->name}}</option>
+              @endforeach
+            </select>
+            <p class="help-block"></p>
+          </div>
+        </div>
+        <div class="form-group">
           <label class="control-label col-sm-2" for="description">Description:</label>
           <div class="col-sm-9">
             <textarea name="description" id="description" class="textarea" style="width: 100%; height: 600px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$event->description}}</textarea>

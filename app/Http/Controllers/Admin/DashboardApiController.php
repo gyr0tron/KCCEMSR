@@ -149,6 +149,7 @@ class DashboardApiController extends Controller
   {
     $event = new Event();
     $event->name = $request->input("name");
+    $event->department = $request->input("department","");
     $event->description = $request->input("description");
     $event->created_by = Auth::user()->id;
     $event->updated_by = Auth::user()->id;
@@ -184,6 +185,7 @@ class DashboardApiController extends Controller
     $event = Event::where("id",$id)->first();
     if(!$event) abort(404, 'Not Found');
     $event->name = $request->input("name");
+    $event->department = $request->input("department","");
     $event->description = $request->input("description");
     $event->updated_by = Auth::user()->id;
     $event->save();

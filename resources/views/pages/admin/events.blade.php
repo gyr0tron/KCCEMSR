@@ -34,7 +34,7 @@
                   <th width="10%">#</th>
                   <th width="20%">Image</th>
                   <th width="20%">Name</th>
-                  <th width="30%">Description</th>
+                  <th width="30%">Department</th>
                   <th width="20%">Actions</th>
                 </tr>
               </thead>
@@ -47,7 +47,7 @@
                     <td>{{$no}}</td>
                     <td><a href="{{$event->getFeaturedImage()}}" data-fancybox><img src="{{$event->getFeaturedImage()}}" alt="" width="250" height="150"></a></td>
                     <td>{{$event->name}}</td>
-                    <td>{{$event->description}}</td>
+                    <td>{{App\Department::getName($event->department)}}</td>
                     <td><a class="btn btn-warning btn-sm btn-table " href="{{route("admin_editevent", $event->id)}}">Edit</a><a class="btn btn-sm btn-danger btn-table " onclick="dashboard.removeEvent({{$event->id}})">Remove</a></td>
                   </tr>
                   @php
@@ -60,7 +60,7 @@
                   <th width="10%">#</th>
                   <th width="20%">Image</th>
                   <th width="20%">Name</th>
-                  <th width="30%">Description</th>
+                  <th width="30%">Department</th>
                   <th width="20%">Actions</th>
                 </tr>
               </tfoot>
