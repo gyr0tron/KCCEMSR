@@ -17,26 +17,6 @@
       <li><a class="active">Messages</a></li>
     </ol>
   </section>
-
-  {{-- Add New --}}
-  <div id="user-addnew" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Add New User</h4>
-        </div>
-        <div class="modal-body">
-          @include('forms.newuser')
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
   <!-- Main content -->
   <section class="content">
     <div class="row">
@@ -50,11 +30,11 @@
             <table id="users-table" class="table table-bordered table-hover">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Message</th>
-                  <th>Time</th>
-                  <th>Actions</th>
+                  <th width="20%">Name</th>
+                  <th width="20%">Email</th>
+                  <th width="40%">Message</th>
+                  <th width="10%">Time</th>
+                  <th width="10%">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -62,7 +42,7 @@
                   <tr>
                     <td>{{$message->name}}</td>
                     <td>{{$message->email}}</td>
-                    <td>{{$message->message}}</td>
+                    <td><span>{{$message->message}}</span></td>
                     <td>{{$message->created_at->diffForHumans()}}</td>
                     <td>
                       <button type="button" class="btn btn-sm btn-primary" style="margin-right:10px;" data-toggle="modal" data-target="#MessageModal-{{$message->id}}">View</button>
