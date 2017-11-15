@@ -2,7 +2,7 @@
 @section('pre')
 @php
 $title = $dep->name;
-$menu_item = 'departments';
+$menu_item = 'department';
 @endphp
 @endsection
 @section('content')
@@ -13,8 +13,9 @@ $menu_item = 'departments';
 	<div class="container">
 		<div class="row" id="dept-row-main">
 			<div class="col-md-12">
-				<h1 id="about" class="title text-center"><span>{{$dep->name}}</span></h1>
-				<div class="lead text-center">{!!$dep->description!!}</div>
+				<h1 id="about" class="title text-center"><span>Information Technology</span></h1>
+				<p class="lead text-center">As Albert Einstein has rightly said, “Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid” our department has always given emphasis on making the best in Education to Technology to Entertaining activities to Sports…everything is said and done with at most dedication, enthusiasm and zeal and would like to flourish the same in the upcoming years...  
+				</p>
 				<div class="space"></div>
 				<div class="row">
 					<div class="col-md-6">
@@ -23,18 +24,14 @@ $menu_item = 'departments';
 					</div>
 					<div class="col-md-6">
 						<h2 style="margin-top: 0px; margin-bottom: 5px;">Vision</h2>
-						<p margin-bottom: 15px;>{{$dep->vision}}
+						<p margin-bottom: 15px;>To change face of the world with the various upcoming Information Technologies in the field of Industry and Education.
 						</p>
 						<h2 style="margin-top: 0px; margin-bottom: 5px;">Mission</h2>
 						<ul class="list-unstyled">
-							@php
-							$data = explode(".", $dep->mission);
-							@endphp
-							@foreach ($data as $d)
-								@if (strlen($d) > 2)
-									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">{{$d}}.</p></li>
-								@endif
-							@endforeach
+							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">To Transform the students into innovative, competent and high quality IT professionals to meet growing global challenges.</p></li>
+							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">To impact value-based IT education to the students and enrich their knowledge.</p></li>
+							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">To Endeavor for continuous upgradation of technical expertise of students to cater to the needs of the society.</p></li>
+							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">To achieve an effective interaction with industry for mutual benefit.</p></li>
 						</ul>
 					</div>
 				</div>
@@ -43,19 +40,16 @@ $menu_item = 'departments';
 					<div class="col-md-6">
 						<h2 style="margin-top: 0px; margin-bottom: 5px;">Objectives</h2>
 						<ul class="list-unstyled">
-							@php
-							$data = explode(".", $dep->objectives);
-							@endphp
-							@foreach ($data as $d)
-								@if (strlen($d) > 2)
-									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">{{$d}}.</p></li>
-								@endif
-							@endforeach
+							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">To prepare Learner’s with a sound foundation in the basics of engineering fundamentals.</p></li>
+							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">To prepare Learner’s to use effectively modern programming tools to solve real life problems.</p></li>
+							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">To prepare Learner’s for successful career in Indian and Multinational Organizations and to  excel in Postgraduate studies.</p></li>
+							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">To encourage and motivate Learner’s for entrepreneurship.</p></li>
 						</ul>
 					</div>
 					<div class="col-md-6">
 						<h2 style="margin-top: 0px; margin-bottom: 5px;">Placement Record</h2>
-						<p>{{$dep->placement}}</p></div>
+						<p>Many of our students can now be found in leading corporate and business houses like Tata Consultancy services, Quinnox, Sutherland, Zycus, Teradata Pvt.Ltd., Veloces, eClinical Works Pvt Ltd, Allerin, etc.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -236,13 +230,13 @@ $menu_item = 'departments';
 	<h1 class="title text-center">Departmental Activities/STTP/Workshop</h1>
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="footer-content">
+			<div class="footer-content">	
 				<h2>Angular JS</h2>
 				<p>Guest lecture on Angular JS was organized for second year students by Mr.Khozema Nullwala from NIIT,Thane. It helped student to apply the knowledge of Angular Js and build real-life based programming exercises. It helped the students to understand following contents: Agile Modelis Multiskilled Resource, Need Of Market,Green Filed Hiring Space, Github----------Commit Work At Any Time, Stacks Of Agile Method, IOT.</p>
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="footer-content">
+			<div class="footer-content">	
 				<h2>Core Java Concepts</h2>
 				<p>A workshop was organized on CORE JAVA CONCEPTS for Final year students by Mr.Sanjay Makhija from Mikado Solutions, Thane. This workshop helped the students to build real world based programs using core java concepts. Also it gave hands on experience of writing programs on variety of java concepts.</p>
 			</div>
@@ -250,7 +244,7 @@ $menu_item = 'departments';
 	</div>
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="footer-content">
+			<div class="footer-content">	
 				<h2>Short Term Training Program</h2>
 				<p>A workshop was organized on CORE JAVA CONCEPTS for Final year students by Mr.Sanjay Makhija from Mikado Solutions, Thane. This workshop helped the students to build real world based programs using core java concepts. Also it gave hands on experience of writing programs on variety of java concepts.</p>
 			</div>

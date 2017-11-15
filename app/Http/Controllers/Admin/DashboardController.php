@@ -10,6 +10,7 @@ use App\User;
 use App\Carousel;
 use App\Event;
 use App\Eventimage;
+use App\Department;
 
 class DashboardController extends Controller
 {
@@ -52,6 +53,12 @@ class DashboardController extends Controller
   }
   public function messages() {
     return view("pages.admin.messages");
+  }
+  // Department
+  public function department($url) {
+    $dep = Department::where("url",$url)->first();
+    if(!$dep) App::abort(404, 'Page Not Found');
+    return view("pages.admin.department", compact("dep"));
   }
   // Users
   public function users()

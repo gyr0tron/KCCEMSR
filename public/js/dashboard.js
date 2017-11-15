@@ -126,7 +126,6 @@ $("#form-newevent").submit(function(event) {
 });
 
 // Edit Event
-// New Event
 $("#form-editevent").submit(function(event) {
   event.preventDefault();
   fh.hide_button();
@@ -145,6 +144,25 @@ $("#form-editevent").submit(function(event) {
     fh.show_errorpage(error);
   });
 });
+
+// Department
+// Edit Overview
+$("#form-department-overview").submit(function(event) {
+  event.preventDefault();
+  fh.hide_button();
+  axios.post('/api/admin/department/overview', new FormData(this))
+  .then(function (response) {
+    var data = response.data;
+    if(!fh.is_success(data)) {
+      fh.set_multierrors(data);
+    };
+    fh.show_button();
+  })
+  .catch(function (error) {
+    fh.show_errorpage(error);
+  });
+});
+
 
 
 // EVENTS

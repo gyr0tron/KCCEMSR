@@ -3,7 +3,7 @@
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="/" class="logo">
+    <a href="/" class="logo" target="_blank">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">KC</span>
       <!-- logo for regular state and mobile devices -->
@@ -66,8 +66,7 @@
             </span>
           </a>
         </li>
-        <li class="{{$menu_item=='admission'?'active':''}}"><a href="{{route("admin_dashboard")}}"><i class="fa fa-university"></i> <span>Admission</span></a></li>
-        {{-- <li class="treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-building-o"></i>
             <span>Departments</span>
@@ -77,10 +76,10 @@
           </a>
           <ul class="treeview-menu">
             @foreach (App\Department::all() as $dep)
-              <li><a href="{{route("admin_dashboard")}}">{{$dep->name}}</a></li>
+              <li><a href="{{route("admin_department", $dep->url)}}">{{$dep->name}}</a></li>
             @endforeach
           </ul>
-        </li> --}}
+        </li>
         <li class="treeview">
           <a href="#"><i class="fa fa-book"></i> <span>Library</span>
             <span class="pull-right-container">
@@ -102,6 +101,7 @@
             </span>
           </a>
         </li>
+        <li class="{{$menu_item=='admission'?'active':''}}"><a href="{{route("admin_dashboard")}}"><i class="fa fa-university"></i> <span>Admission</span></a></li>
         @if (Auth::user()->is_admin())
           <li class="{{$menu_item=='users'?'active':''}}"><a href="{{route("admin_users")}}"><i class="fa fa-users"></i> <span>Users</span></a></li>
         @endif
