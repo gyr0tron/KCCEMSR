@@ -16,11 +16,10 @@ class UpdateController extends Controller
   public function update()
   {
     if(!Auth::user()->is_admin()) {
-      return redirect()->route('admin_update');
+      return redirect()->route('admin_dashboard');
     }
     chdir(base_path());
-    $last_line = system('git pull origin master', $retval);
-
+    exec('git pull origin master', $output);
     if(base_path("public") != public_path()) {
       $folders = ['images','js','css'];
       foreach ($folders as $f) {
@@ -30,6 +29,6 @@ class UpdateController extends Controller
         $res = system("cp -r $src $dest");
       }
     }
-    return $retval;
+    return view("pages.admin.update",compact("output"));
   }
 }
