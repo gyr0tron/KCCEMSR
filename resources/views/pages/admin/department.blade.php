@@ -2,7 +2,8 @@
 @section('pre')
   @php
   $title = "Department of " . $dep->name;
-  $menu_item = 'events';
+  $menu_item = 'departments';
+  $second = $dep->url;
 @endphp
 @endsection
 @section('styles')
@@ -23,7 +24,33 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-10">
-        @include('forms.department-overview',compact("dep"))
+        @if ($action == "overview")
+          @include('forms.department-overview',compact("dep"))
+        @endif
+        @if ($action == "departmental-achievements")
+          @include('forms.department-departmental-achievements',compact("dep"))
+        @endif
+        @if ($action == "students-achievement")
+          @include('forms.department-students-achievement',compact("dep"))
+        @endif
+        @if ($action == "staff")
+          {{-- @include('forms.department-students-achievement',compact("dep")) --}}
+        @endif
+      </div>
+      <div class="col-sm-2">
+        <div class="box box-primary">
+          <div class="box-header">
+            <h3 class="box-title"></h3>
+          </div>
+          <div class="box-body">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="{{$action=="overview"?"active":""}}"><a href="{{route("admin_department", [$dep->url, "overview"])}}">Overview</a></li>
+              <li class="{{$action=="departmental-achievements"?"active":""}}"><a href="{{route("admin_department", [$dep->url, "departmental-achievements"])}}">Departmental Achievement</a></li>
+              <li class="{{$action=="students-achievement"?"active":""}}"><a href="{{route("admin_department", [$dep->url, "students-achievement"])}}">Student's Achievement</a></li>
+              <li class="{{$action=="staff"?"active":""}}"><a href="{{route("admin_department", [$dep->url, "staff"])}}">Staff</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>

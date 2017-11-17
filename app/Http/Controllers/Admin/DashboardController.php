@@ -55,10 +55,10 @@ class DashboardController extends Controller
     return view("pages.admin.messages");
   }
   // Department
-  public function department($url) {
+  public function department($url, $action) {
     $dep = Department::where("url",$url)->first();
     if(!$dep) App::abort(404, 'Page Not Found');
-    return view("pages.admin.department", compact("dep"));
+    return view("pages.admin.department", compact("dep","action"));
   }
   // Users
   public function users()

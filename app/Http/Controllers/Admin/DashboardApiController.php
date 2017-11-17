@@ -10,6 +10,8 @@ use App\Http\Requests\AdminUserSettingsRequest;
 use App\Http\Requests\AdminAddCarouselImageRequest;
 use App\Http\Requests\AdminEditCarouselImageRequest;
 use App\Http\Requests\AdminAddNewEventRequest;
+use App\Http\Requests\AdminAddDepartmentalAchievement;
+use App\Http\Requests\AdminAddStudentAchievement;
 
 use Auth;
 use Image;
@@ -19,6 +21,7 @@ use App\Message;
 use App\Event;
 use App\Eventimage;
 use App\Department;
+use App\Achievement;
 use App\ResponseBuilder;
 
 class DashboardApiController extends Controller
@@ -233,6 +236,54 @@ class DashboardApiController extends Controller
     $dep->objectives = $request->input("objectives","");
     $dep->placement = $request->input("placement","");
     $dep->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Departmental Achievement
+  public function addDepartmentalAchievement(AdminAddDepartmentalAchievement $request)
+  {
+    $ach = new Achievement();
+    $ach->description = $request->input("description", "");
+    $ach->department = $request->input("department", "");
+    $ach->type = "1";
+    $ach->created_by = Auth::user()->id;
+    $ach->updated_by = Auth::user()->id;
+    $ach->save();
+    return ResponseBuilder::send(true, "","");
+  }
+
+  // Department Student Achievement
+  public function addStudentAchievement(AdminAddStudentAchievement $request)
+  {
+    $ach = new Achievement();
+    $ach->name = $request->input("name","");
+    $ach->description = $request->input("description", "");
+    $ach->department = $request->input("department", "");
+    $ach->type = "0";
+    $ach->created_by = Auth::user()->id;
+    $ach->updated_by = Auth::user()->id;
+    $file = $request->image;
+    if($file) {
+      $ach->uploadImage($file);
+    }
+    $ach->save();
+    return ResponseBuilder::send(true, "","");
+  }
+  // Remove Departmental Achievement
+  public function removeDepartmentalAchievement(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $ach = Achievement::where("id",$id)->where("type","1")->first();
+    if(!$ach) abort(404, 'Not Found');
+    $ach->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Remove Student Achievement
+  public function removeStudentAchievement(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $ach = Achievement::where("id",$id)->where("type","0")->first();
+    if(!$ach) abort(404, 'Not Found');
+    $ach->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
 }

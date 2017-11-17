@@ -1,3 +1,6 @@
+@php
+  if(!isset($second)) $second = "not defined";
+@endphp
 @if (Auth::checK())
   <!-- Main Header -->
   <header class="main-header">
@@ -66,7 +69,7 @@
             </span>
           </a>
         </li>
-        <li class="treeview">
+        <li class="treeview {{$menu_item=='departments'?'active':''}}" >
           <a href="#">
             <i class="fa fa-building-o"></i>
             <span>Departments</span>
@@ -75,8 +78,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            @foreach (App\Department::all() as $dep)
-              <li><a href="{{route("admin_department", $dep->url)}}">{{$dep->name}}</a></li>
+            @foreach (App\Department::all() as $dp)
+              <li class="{{$second==$dp->url?"active":""}}"><a href="{{route("admin_department", [$dp->url, "overview"])}}">{{$dp->name}}</a></li>
             @endforeach
           </ul>
         </li>

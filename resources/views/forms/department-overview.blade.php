@@ -24,14 +24,14 @@
           <label class="control-label col-sm-2" for="mission">Mission:</label>
           <div class="col-sm-9">
             <textarea name="mission" id="mission" class="textarea" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$dep->mission}}</textarea>
-            <p class="help-block"></p>
+            <p class="help-block">Enter each point ending with a '.'</p>
           </div>
         </div>
         <div class="form-group">
           <label class="control-label col-sm-2" for="objectives">Objectives:</label>
           <div class="col-sm-9">
             <textarea name="objectives" id="objectives" class="textarea" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$dep->objectives}}</textarea>
-            <p class="help-block"></p>
+            <p class="help-block">Enter each point ending with a '.'</p>
           </div>
         </div>
         <div class="form-group">

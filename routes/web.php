@@ -38,7 +38,7 @@ Route::get('/admin/events','Admin\DashboardController@events')->name("admin_even
 Route::get('/admin/events/new','Admin\DashboardController@newevent')->name("admin_newevent");
 Route::get('/admin/events/edit/{id}','Admin\DashboardController@editevent')->name("admin_editevent");
 Route::get('/admin/messages','Admin\DashboardController@messages')->name("admin_messages");
-Route::get('/admin/department/{url}','Admin\DashboardController@department')->name("admin_department");
+Route::get('/admin/department/{url}/{action}','Admin\DashboardController@department')->name("admin_department");
 
 
 Route::get('/admin/update','Admin\UpdateController@update')->name("admin_update");
@@ -62,3 +62,7 @@ Route::post("/api/admin/events/remove","Admin\DashboardApiController@removeEvent
 Route::post("/api/admin/events/edit/removeimage","Admin\DashboardApiController@editEventRemoveImage");
 Route::post("/api/admin/message/delete","Admin\DashboardApiController@deleteMessage");
 Route::post("/api/admin/department/overview","Admin\DashboardApiController@departmentOverview");
+Route::post("/api/admin/department/da/add","Admin\DashboardApiController@addDepartmentalAchievement");
+Route::post("/api/admin/department/da/remove","Admin\DashboardApiController@removeDepartmentalAchievement");
+Route::post("/api/admin/department/sa/add","Admin\DashboardApiController@addStudentAchievement");
+Route::post("/api/admin/department/sa/remove","Admin\DashboardApiController@removeStudentAchievement");

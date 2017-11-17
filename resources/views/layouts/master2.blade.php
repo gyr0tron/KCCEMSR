@@ -18,7 +18,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css') }}">
   @yield('styles')
 </head>
-<body class="skin-{{Auth::check()?Auth::user()->skin:"blue"}} sidebar-mini">
+<body class="skin-{{Auth::check()?Auth::user()->skin:"blue"}} sidebar-mini fixed">
   <div class="wrapper">
     @include('layouts.nav2')
     <div class="content-wrapper">

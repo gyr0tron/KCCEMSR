@@ -5,6 +5,12 @@ $(function () {
   if($("#carousel-table").length = 1) {
     $("#carousel-table").DataTable();
   }
+  if($("#department-table").length =1) {
+    $("#department-table").DataTable();
+  }
+  if($("#department-student-achievenments-table").length==1) {
+    $("#department-student-achievenments-table").DataTable();
+  }
   $("[data-fancybox]").fancybox();
 })
 
@@ -162,6 +168,42 @@ $("#form-department-overview").submit(function(event) {
     fh.show_errorpage(error);
   });
 });
+// Add Student Achievement
+$("#form-department-student-achievements").submit(function(event) {
+  event.preventDefault();
+  fh.hide_button();
+  axios.post('/api/admin/department/sa/add', new FormData(this))
+  .then(function (response) {
+    var data = response.data;
+    if(fh.is_success(data)) {
+      fh.redirect(data);
+    } else {
+      fh.set_multierrors(data);
+    }
+    fh.show_button();
+  })
+  .catch(function (error) {
+    fh.show_errorpage(error);
+  });
+});
+// Add Departmental Success
+$("#form-department-departmental-achievements").submit(function(event) {
+  event.preventDefault();
+  fh.hide_button();
+  axios.post('/api/admin/department/da/add', new FormData(this))
+  .then(function (response) {
+    var data = response.data;
+    if(fh.is_success(data)) {
+      fh.redirect(data);
+    } else {
+      fh.set_multierrors(data);
+    }
+    fh.show_button();
+  })
+  .catch(function (error) {
+    fh.show_errorpage(error);
+  });
+});
 
 
 
@@ -239,6 +281,34 @@ window.dashboard = {
         fh.show_errorpage(error);
       });
     });
+  },
+  deleteDepartmentalEvent(id) {
+    showYesNo("Remove Achievement", "Are you sure you want to remove this achievement ?", function(){
+      axios.post('/api/admin/department/da/remove', {id:id})
+      .then(function (response) {
+        var data = response.data;
+        if(fh.is_success(data)) {
+          fh.redirect(data);
+        }
+      })
+      .catch(function (error) {
+        fh.show_errorpage(error);
+      });
+    });
+  },
+  deleteStudentAchievementEvent(id) {
+    showYesNo("Remove Achievement", "Are you sure you want to remove this achievement ?", function(){
+      axios.post('/api/admin/department/sa/remove', {id:id})
+      .then(function (response) {
+        var data = response.data;
+        if(fh.is_success(data)) {
+          fh.redirect(data);
+        }
+      })
+      .catch(function (error) {
+        fh.show_errorpage(error);
+      });
+    });
   }
 };
 // function removeCarouselImage(id) {
@@ -282,24 +352,24 @@ $(function(){
 function showPasswordBox(callback) {
   $("body").append(`  <div class="modal fade" id="passwordBox" role="dialog">
   <div class="modal-dialog">
-  <div class="modal-content">
-  <div class="modal-header">
-  <button type="button" class="close" data-dismiss="modal">&times;</button>
-  <h4 class="modal-title">Password</h4>
-  </div>
-  <div class="modal-body">
-  <div class="form-group">
-  <label for="password">Password</label>
-  <input type="password" class="form-control" id="modalPassword" placeholder="Enter your password">
-  <p class="help-block"></p>
-  </div>
-  </div>
-  <div class="modal-footer">
-  <button type="button" class="btn btn-primary btn-wide" id="modalYes">Ok</button>
-  <button type="button" class="btn btn-default  btn-wide" data-dismiss="modal">Cancel</button>
-  </div>
-  </div>
-  </div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Password</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="modalPassword" placeholder="Enter your password">
+            <p class="help-block"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-wide" id="modalYes">Ok</button>
+          <button type="button" class="btn btn-default  btn-wide" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
   </div>`);
   $('#passwordBox').modal();
   $('#passwordBox #modalYes').click(function(event) {
@@ -314,28 +384,28 @@ function showPasswordBox(callback) {
 function showYesNo(title, content, callback) {
   $("body").append(`  <div class="modal fade" id="YesNoBox" role="dialog">
   <div class="modal-dialog">
-  <div class="modal-content">
-  <div class="modal-header">
-  <button type="button" class="close" data-dismiss="modal">&times;</button>
-  <h4 class="modal-title">${title}</h4>
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">${title}</h4>
+      </div>
+      <div class="modal-body">
+        ${content}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-wide" id="modalYes">Yes</button>
+        <button type="button" class="btn btn-default  btn-wide" data-dismiss="modal">No</button>
+      </div>
+    </div>
   </div>
-  <div class="modal-body">
-  ${content}
-  </div>
-  <div class="modal-footer">
-  <button type="button" class="btn btn-primary btn-wide" id="modalYes">Yes</button>
-  <button type="button" class="btn btn-default  btn-wide" data-dismiss="modal">No</button>
-  </div>
-  </div>
-  </div>
-  </div>`);
-  $('#YesNoBox').modal();
-  $('#YesNoBox #modalYes').click(function(event) {
-    if(typeof callback == "function")
-    callback();
-    $('#YesNoBox').modal("hide")
-  });
-  $("#YesNoBox").on('hidden.bs.modal', function () {
-    $('#YesNoBox').remove();
-  });
+</div>`);
+$('#YesNoBox').modal();
+$('#YesNoBox #modalYes').click(function(event) {
+  if(typeof callback == "function")
+  callback();
+  $('#YesNoBox').modal("hide")
+});
+$("#YesNoBox").on('hidden.bs.modal', function () {
+  $('#YesNoBox').remove();
+});
 }
