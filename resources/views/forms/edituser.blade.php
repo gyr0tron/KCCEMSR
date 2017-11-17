@@ -1,4 +1,4 @@
-<form id="form-edituser" action="" method="post" class="form-horizontal">
+<form id="form-edituser" action="/api/admin/edituser" method="post" class="form-horizontal" data-form="sr">
   <div class="form-group">
     <label class="control-label col-sm-2" for="username">Username:</label>
     <div class="col-sm-4">

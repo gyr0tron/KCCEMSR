@@ -1,4 +1,4 @@
-<form id="form-newuser" action="" method="post">
+<form id="form-newuser" action="/api/admin/adduser" method="post" data-form="sr">
   <div class="form-group">
     <span for="username">Username:</span>
     <input type="text" class="form-control" id="username" name="username">

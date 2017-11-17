@@ -28,7 +28,7 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <form id="form-usersettings" action="" method="post" class="form-horizontal">
+            <form id="form-usersettings" action="/api/admin/usersettings" method="post" class="form-horizontal" data-form="sr">
               <div class="form-group">
                 <label class="control-label col-sm-2" for="username">Color Scheme:</label>
                 <div class="col-sm-4">

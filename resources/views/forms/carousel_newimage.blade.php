@@ -1,4 +1,4 @@
-<form id="form-carousel-newimage" action="" method="post" enctype="multipart/form-data">
+<form id="form-carousel-newimage" action="/api/admin/carousel/newimage" method="post" enctype="multipart/form-data" data-form="sr">
   <div class="form-group">
     <span for="title">Title:</span>
     <input type="text" class="form-control" id="title" name="title">

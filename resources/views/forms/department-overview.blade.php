@@ -3,7 +3,7 @@
     <h3 class="box-title">Overview</h3>
   </div>
   <div class="box-body">
-    <form id="form-department-overview" action="" method="post" class="form-horizontal">
+    <form id="form-department-overview" action="/api/admin/department/overview" method="post" class="form-horizontal" data-form="sr">
         {{ csrf_field() }}
         <input type="hidden" name="id" value="{{$dep->id}}">
         <div class="form-group">

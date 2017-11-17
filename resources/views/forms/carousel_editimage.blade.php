@@ -1,4 +1,4 @@
-<form id="form-carousel-editimage" action="" method="post" class="form-horizontal">
+<form id="form-carousel-editimage" action="/api/admin/carousel/editimage" method="post" enctype="multipart/form-data" class="form-horizontal" data-form="sr">
   <input type="hidden" name="id" id="id" value="{{$car->id}}">
   <div class="form-group">
     <label class="control-label col-sm-2" for="title">Title:</label>

@@ -1,4 +1,4 @@
-<form id="form-editevent" action="" method="post" class="form-horizontal">
+<form id="form-editevent" action="/api/admin/events/edit" method="post" class="form-horizontal" data-form="sr">
   <div class="col-sm-10">
     <div class="box box-primary">
       <div class="box-header">

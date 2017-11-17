@@ -41,7 +41,7 @@
     <h3 class="box-title">Add New</h3>
   </div>
   <div class="box-body">
-    <form id="form-department-student-achievements" action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+    <form id="form-department-student-achievements" action="/api/admin/department/sa/add" method="post" enctype="multipart/form-data" class="form-horizontal" data-form="sr">
       <input type="hidden" name="department" value="{{$dep->url}}">
       <div class="form-group">
         <label class="control-label col-sm-2" for="name">Name:</label>

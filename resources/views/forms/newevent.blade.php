@@ -1,4 +1,4 @@
-<form id="form-newevent" action="" method="post" class="form-horizontal">
+<form id="form-newevent" action="/api/admin/events/add" method="post" class="form-horizontal" data-form="sr">
   {{ csrf_field() }}
   <div class="form-group">
     <label class="control-label col-sm-2" for="name">Name:</label>
