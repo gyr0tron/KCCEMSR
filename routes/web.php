@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\MaintenanceCheck;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,13 +13,12 @@
 |
 */
 
-Route::get("/test", function() {
-
+// SITE
+Route::middleware([MaintenanceCheck::class])->group(function () {
+  Route::get('/',"HomeController@getHome");
+  Route::get('/department/{name}','DepartmentController@get')->name('department');
 });
 
-// SITE
-Route::get('/',"HomeController@getHome");
-Route::get('/department/{name}','DepartmentController@get')->name('department');
 
 
 // DASHBOARD
@@ -27,42 +28,51 @@ Route::get('/login','Auth\LoginController@getLogin')->name("login");
 Route::post('/login','Auth\LoginController@login');
 Route::get('/logout','Auth\LoginController@logout')->name("admin_logout");
 
-Route::get('/admin','Admin\DashboardController@home');
-Route::get('/admin/dashboard','Admin\DashboardController@home')->name("admin_dashboard");
-Route::get('/admin/carousel','Admin\DashboardController@carousel')->name("admin_carousel");
-Route::get('/admin/carousel/edit/image/{id}','Admin\DashboardController@editcoarouselimage')->name("admin_editcarouselimage");
-Route::get('/admin/users','Admin\DashboardController@users')->name("admin_users");
-Route::get('/admin/users/edit/{id}','Admin\DashboardController@edituser')->name("admin_edituser");
-Route::get('/admin/settings','Admin\DashboardController@settings')->name("admin_settings");
-Route::get('/admin/events','Admin\DashboardController@events')->name("admin_events");
-Route::get('/admin/events/new','Admin\DashboardController@newevent')->name("admin_newevent");
-Route::get('/admin/events/edit/{id}','Admin\DashboardController@editevent')->name("admin_editevent");
-Route::get('/admin/messages','Admin\DashboardController@messages')->name("admin_messages");
-Route::get('/admin/department/{url}/{action}','Admin\DashboardController@department')->name("admin_department");
+Route::prefix('admin')->group(function () {
+  Route::get('/','Admin\DashboardController@home');
+  Route::get('/dashboard','Admin\DashboardController@home')->name("admin_dashboard");
+  Route::get('/carousel','Admin\DashboardController@carousel')->name("admin_carousel");
+  Route::get('/carousel/edit/image/{id}','Admin\DashboardController@editcoarouselimage')->name("admin_editcarouselimage");
+  Route::get('/users','Admin\DashboardController@users')->name("admin_users");
+  Route::get('/users/edit/{id}','Admin\DashboardController@edituser')->name("admin_edituser");
+  Route::get('/settings','Admin\DashboardController@settings')->name("admin_settings");
+  Route::get('/events','Admin\DashboardController@events')->name("admin_events");
+  Route::get('/events/new','Admin\DashboardController@newevent')->name("admin_newevent");
+  Route::get('/events/edit/{id}','Admin\DashboardController@editevent')->name("admin_editevent");
+  Route::get('/messages','Admin\DashboardController@messages')->name("admin_messages");
+  Route::get('/department/{url}/{action}','Admin\DashboardController@department')->name("admin_department");
+});
+
+
 
 
 Route::get('/admin/update','Admin\UpdateController@update')->name("admin_update");
 
 
 // API SITE
-Route::get('/api/home/carousel/','HomeController@getCarousel');
-Route::post('/api/contact/send',"HomeController@sendContact");
+Route::prefix('/api')->group(function () {
+  Route::get('/home/carousel/','HomeController@getCarousel');
+  Route::post('/contact/send',"HomeController@sendContact");
+});
+
 
 // API ADMIN
-Route::post("/api/admin/adduser","Admin\DashboardApiController@addUser");
-Route::post("/api/admin/edituser","Admin\DashboardApiController@editUser");
-Route::post("/api/admin/removeuser","Admin\DashboardApiController@removeUser");
-Route::post("/api/admin/usersettings","Admin\DashboardApiController@userSettings");
-Route::post("/api/admin/carousel/newimage","Admin\DashboardApiController@addCarouselImage");
-Route::post("/api/admin/carousel/editimage","Admin\DashboardApiController@editCarouselImage");
-Route::post("/api/admin/carousel/removeimage","Admin\DashboardApiController@removeCarouselImage");
-Route::post("/api/admin/events/add","Admin\DashboardApiController@addEvent");
-Route::post("/api/admin/events/edit","Admin\DashboardApiController@editEvent");
-Route::post("/api/admin/events/remove","Admin\DashboardApiController@removeEvent");
-Route::post("/api/admin/events/edit/removeimage","Admin\DashboardApiController@editEventRemoveImage");
-Route::post("/api/admin/message/delete","Admin\DashboardApiController@deleteMessage");
-Route::post("/api/admin/department/overview","Admin\DashboardApiController@departmentOverview");
-Route::post("/api/admin/department/da/add","Admin\DashboardApiController@addDepartmentalAchievement");
-Route::post("/api/admin/department/da/remove","Admin\DashboardApiController@removeDepartmentalAchievement");
-Route::post("/api/admin/department/sa/add","Admin\DashboardApiController@addStudentAchievement");
-Route::post("/api/admin/department/sa/remove","Admin\DashboardApiController@removeStudentAchievement");
+Route::prefix('/api/admin')->group(function () {
+  Route::post("/adduser","Admin\DashboardApiController@addUser");
+  Route::post("/edituser","Admin\DashboardApiController@editUser");
+  Route::post("/removeuser","Admin\DashboardApiController@removeUser");
+  Route::post("/usersettings","Admin\DashboardApiController@userSettings");
+  Route::post("/carousel/newimage","Admin\DashboardApiController@addCarouselImage");
+  Route::post("/carousel/editimage","Admin\DashboardApiController@editCarouselImage");
+  Route::post("/carousel/removeimage","Admin\DashboardApiController@removeCarouselImage");
+  Route::post("/events/add","Admin\DashboardApiController@addEvent");
+  Route::post("/events/edit","Admin\DashboardApiController@editEvent");
+  Route::post("/events/remove","Admin\DashboardApiController@removeEvent");
+  Route::post("/events/edit/removeimage","Admin\DashboardApiController@editEventRemoveImage");
+  Route::post("/message/delete","Admin\DashboardApiController@deleteMessage");
+  Route::post("/department/overview","Admin\DashboardApiController@departmentOverview");
+  Route::post("/department/da/add","Admin\DashboardApiController@addDepartmentalAchievement");
+  Route::post("/department/da/remove","Admin\DashboardApiController@removeDepartmentalAchievement");
+  Route::post("/department/sa/add","Admin\DashboardApiController@addStudentAchievement");
+  Route::post("/department/sa/remove","Admin\DashboardApiController@removeStudentAchievement");
+});
