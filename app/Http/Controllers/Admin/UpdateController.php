@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use Auth;
+use Setting;
+use App\ResponseBuilder;
 
 class UpdateController extends Controller
 {
@@ -30,5 +32,18 @@ class UpdateController extends Controller
       }
     }
     return view("pages.admin.update",compact("output"));
+  }
+  public function settings(Request $request) {
+    if(!Auth::user()->is_admin()) {
+      return redirect()->route('admin_dashboard');
+    }
+
+    $break = $request->input('break','off');
+    $break = $break=='on'?1:0;
+    $breakTitle = $request->input('break-title','Service Unavailable');
+    Setting::set('break',$break);
+    Setting::set('break-title',$breakTitle);
+    Setting::save();
+    return ResponseBuilder::send(true, "", route("admin_settings"));
   }
 }

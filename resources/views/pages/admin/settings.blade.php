@@ -76,31 +76,53 @@
       <!-- /.col -->
     </div>
     <!-- /.row -->
-  @if (Auth::user()->is_admin())
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="box box-primary">
-          <div class="box-header">
-            <h3 class="box-title">Site Settings</h3>
-          </div>
-          <!-- /.box-header -->
-          <div class="box-body">
-            <form id="form-sitesettings" action="" method="post" class="form-horizontal">
-              <div class="form-group">
-                <label class="control-label col-sm-2" for="email">Check for Update:</label>
-                <div class="col-sm-4">
-                  <a href="{{route("admin_update")}}" class="btn btn-success btn-wide">Update</a>
+    @if (Auth::user()->is_admin())
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-primary">
+            <div class="box-header">
+              <h3 class="box-title">Site Settings</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <form id="form-sitesettings" action="/api/admin/settings/main" method="post" class="form-horizontal" data-form="sr">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Maintenance:</label>
+                  <div class="col-sm-4">
+                    @if (setting('break',0) == 0)
+                      <input id="break" name="break" type="checkbox" data-toggle="toggle" data-width="100" data-height="34">
+                    @else
+                      <input id="break" name="break" type="checkbox" checked data-toggle="toggle" data-width="100" data-height="34">
+                    @endif
+                  </div>
                 </div>
-              </div>
-            </form>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="break-title">Maintenance Title:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="break-title" name="break-title" value="{{setting('break-title','Service Unavailable')}}">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-4">
+                    <button type="submit" class="btn btn-primary btn-wide">Save</button>
+                  </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Check for Update:</label>
+                  <div class="col-sm-4">
+                    <a href="{{route("admin_update")}}" class="btn btn-success btn-wide">Update</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- /.box-body -->
           </div>
-          <!-- /.box-body -->
+          <!-- /.box -->
         </div>
-        <!-- /.box -->
+        <!-- /.col -->
       </div>
-      <!-- /.col -->
-    </div>
-  @endif
+    @endif
     <!-- /.row -->
   </section>
   <!-- /.content -->

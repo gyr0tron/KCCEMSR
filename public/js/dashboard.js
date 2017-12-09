@@ -42,7 +42,6 @@ $("[data-skin]").click(function(event) {
   $('body').find("input[value='"+$val+"']").attr('checked', true);
   $("body").attr("class", "skin-" + $val + " sidebar-mini");
 });
-
 // ADMIN REMOVE FUNCTIONS
 window.dashboard = {
   removeCarouselImage: function(id) {

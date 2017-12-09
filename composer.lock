@@ -4,8 +4,66 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d54dda47be011bd4bd6064f9738a38a6",
+    "content-hash": "f1a585bdc1439b88fce8bfb795674a32",
     "packages": [
+        {
+            "name": "akaunting/setting",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/akaunting/setting.git",
+                "reference": "4462ce24d567e3bc7c1a880fdd3bbe5841e4be7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/akaunting/setting/zipball/4462ce24d567e3bc7c1a880fdd3bbe5841e4be7d",
+                "reference": "4462ce24d567e3bc7c1a880fdd3bbe5841e4be7d",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.2.* || 5.3.* || 5.4.* || 5.5.*",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Akaunting\\Setting\\Provider"
+                    ],
+                    "aliases": {
+                        "Setting": "Akaunting\\Setting\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Akaunting\\Setting\\": "./src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Denis Duliçi",
+                    "email": "info@akaunting.com",
+                    "homepage": "https://akaunting.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Persistent settings package for Laravel.",
+            "keywords": [
+                "Settings",
+                "config",
+                "laravel",
+                "persistent"
+            ],
+            "time": "2017-12-04T18:39:43+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
