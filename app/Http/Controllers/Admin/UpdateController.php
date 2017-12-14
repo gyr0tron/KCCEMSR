@@ -21,14 +21,15 @@ class UpdateController extends Controller
       return redirect()->route('admin_dashboard');
     }
     chdir(base_path());
-    exec('git pull origin master', $output);
+    exec('git reset --hard 2>&1', $output);
+    exec('git pull origin master 2>&1', $output);
     if(base_path("public") != public_path()) {
       $folders = ['images','js','css'];
       foreach ($folders as $f) {
         $src = base_path("public\\$f");
         $dest = public_path();
         if (!file_exists(public_path($f))) mkdir(public_path($f), 0700);
-        $res = system("cp -r $src $dest");
+        $res = system("cp -r $src $dest 2>&1");
       }
     }
     return view("pages.admin.update",compact("output"));
