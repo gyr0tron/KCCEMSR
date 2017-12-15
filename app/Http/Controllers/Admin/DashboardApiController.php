@@ -12,6 +12,7 @@ use App\Http\Requests\AdminEditCarouselImageRequest;
 use App\Http\Requests\AdminAddNewEventRequest;
 use App\Http\Requests\AdminAddDepartmentalAchievement;
 use App\Http\Requests\AdminAddStudentAchievement;
+use App\Http\Requests\AdminAddStaff;
 
 use Auth;
 use Image;
@@ -22,6 +23,7 @@ use App\Event;
 use App\Eventimage;
 use App\Department;
 use App\Achievement;
+use App\Staff;
 use App\ResponseBuilder;
 
 class DashboardApiController extends Controller
@@ -284,6 +286,33 @@ class DashboardApiController extends Controller
     $ach = Achievement::where("id",$id)->where("type","0")->first();
     if(!$ach) abort(404, 'Not Found');
     $ach->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Add Staff
+  public function addStaff(AdminAddStaff $request)
+  {
+    $staff = new Staff();
+    $staff->name = $request->input("name");
+    $staff->displayname = $request->input("display");
+    $staff->designation = $request->input("designation");
+    $staff->qualification = $request->input("qualification");
+    $staff->experience = $request->input("experience");
+    $staff->interest = $request->input("interest");
+    $staff->department = $request->input("department","");
+    $staff->created_by = Auth::user()->id;
+    $staff->updated_by = Auth::user()->id;
+    $staff->uploadImage($request->image);
+    $staff->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Remove Staff
+  public function removeStaff(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $staff = Staff::where("id",$id)->first();
+    if(!$staff) abort(404, 'Not Found');
+    $staff->removeImage();
+    $staff->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
 }

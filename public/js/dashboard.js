@@ -16,6 +16,7 @@ $(function () {
 
 $("[data-form='sr']").submit(function(event) {
   event.preventDefault();
+  fh.reload(this.id);
   fh.hide_button();
   axios.post($(this).prop("action"), new FormData(this))
   .then(function (response) {
@@ -126,6 +127,21 @@ window.dashboard = {
       axios.post('/api/admin/department/sa/remove', {id:id})
       .then(function (response) {
         var data = response.data;
+        if(fh.is_success(data)) {
+          fh.redirect(data);
+        }
+      })
+      .catch(function (error) {
+        fh.show_errorpage(error);
+      });
+    });
+  },
+  deleteStaff(id) {
+    showYesNo("Remove Staff", "Are you sure you want to remove this staff ?", function(){
+      axios.post('/api/admin/department/staff/remove', {id:id})
+      .then(function (response) {
+        var data = response.data;
+        console.log(data)
         if(fh.is_success(data)) {
           fh.redirect(data);
         }

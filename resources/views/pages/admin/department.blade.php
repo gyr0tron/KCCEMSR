@@ -34,7 +34,7 @@
           @include('forms.department-students-achievement',compact("dep"))
         @endif
         @if ($action == "staff")
-          {{-- @include('forms.department-students-achievement',compact("dep")) --}}
+          @include('forms.department-staff',compact("dep"))
         @endif
       </div>
       <div class="col-sm-2">

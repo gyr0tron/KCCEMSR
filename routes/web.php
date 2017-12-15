@@ -74,6 +74,8 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/department/da/remove","Admin\DashboardApiController@removeDepartmentalAchievement");
   Route::post("/department/sa/add","Admin\DashboardApiController@addStudentAchievement");
   Route::post("/department/sa/remove","Admin\DashboardApiController@removeStudentAchievement");
+  Route::post("/department/staff/add","Admin\DashboardApiController@addStaff");
+  Route::post("/department/staff/remove","Admin\DashboardApiController@removeStaff");
 
 
   Route::get('/update','Admin\UpdateController@update')->name("admin_update");
