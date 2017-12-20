@@ -259,276 +259,359 @@ $menu_item = 'departments';
 </div>
 <div class="container">
 <h1 class="title text-center" style="margin-top: 2%;margin-bottom: 2%;">List of Staff:</h1>
-	<div class="panel-group col-md-offset-3 col-md-6" id="accordion" role="tablist" aria-multiselectable="true">
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingOne">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-						Sonal Balpande
-					</a>
-				</h4>
-			</div>
-			<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+	<div class="container">
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hi There !</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Martin Smith</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingTwo">
-				<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						Varsha Wangikar
-					</a>
-				</h4>
-			</div>
-			<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello World</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Franklin Harbet</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingThree">
-				<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-						Shailaja Mohite
-					</a>
-				</h4>
-			</div>
-			<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello all!</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Linda Anderson</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingFour">
-				<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-						Shubhangi Verulkar
-					</a>
-				</h4>
-			</div>
-			<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello World</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Franklin Harbet</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingFive">
-				<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-						Uday S.
-					</a>
-				</h4>
-			</div>
-			<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hi There !</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Martin Smith</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingSix">
-				<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-						Amuthavalli Y.
-					</a>
-				</h4>
-			</div>
-			<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello World</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Franklin Harbet</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingSeven">
-				<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-						Poonam T.
-					</a>
-				</h4>
-			</div>
-			<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello all!</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Linda Anderson</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingEight">
-				<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-						Pallavi Thakur
-					</a>
-				</h4>
-			</div>
-			<div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello World</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Franklin Harbet</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingNine">
-				<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-						Yamini Patil
-					</a>
-				</h4>
-			</div>
-			<div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hi There !</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Martin Smith</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingTen">
-				<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-						Madhuri Jha
-					</a>
-				</h4>
-			</div>
-			<div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello World</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Franklin Harbet</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading" role="tab" id="headingEleven">
-				<h4 class="panel-title">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-						Devika Rani Roy
-					</a>
-				</h4>
-			</div>
-			<div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
-				<div class="panel-body">
-					<div class="col-md-6">
-						<div class="media testimonial">
-							<div class="media-left list-dept-page-uorder-img">
-								<img src="http://via.placeholder.com/50x50" alt="">
-							</div>
-							<div class="media-body list-text-ovrflw-fix">
-								{{--  <h3 class="media-heading"></h3>  --}}
-									<p>Lorem nisi ullamco non dolor.</p>
-							</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello all!</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 					</div>
 				</div>
+				<div class="team-title">
+					<h5>Linda Anderson</h5>
+					<span>Subject</span>
+				</div>
 			</div>
-			<h2 style="margin-top: 3%; margin-bottom: 5px;">Non-Teaching Staff:</h2>
-				<ul class="list-unstyled">
-					<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Mrs. Sangeeta Pangarkar</p></li>
-					<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Ms. Shubhangi Ghadge</p></li>
-				</ul>
-		</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello World</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="team-title">
+					<h5>Franklin Harbet</h5>
+					<span>Subject</span>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hi There !</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="team-title">
+					<h5>Martin Smith</h5>
+					<span>Subject</span>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello World</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="team-title">
+					<h5>Franklin Harbet</h5>
+					<span>Subject</span>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello all!</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="team-title">
+					<h5>Linda Anderson</h5>
+					<span>Subject</span>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hello World</h4>
+							<p>I love to introduce myself as </p>
+						</div>
+						<div class="s-link">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="team-title">
+					<h5>Franklin Harbet</h5>
+					<span>Subject</span>
+				</div>
+			</div>
 	</div>
 </div>
 @endsection
