@@ -1,14 +1,31 @@
 
 (function($){
 	$(document).ready(function(){
-
-		$(".banner-image").backstretch([
-			"/images/banner.jpg",
-			"/images/bg-image-1.jpg",
-			"/images/bg-image-2.jpg"], {
-				fade: 750,
-				duration: 4000
-			});
+		(function bannerparser()
+			{
+				var response = "";
+				var bannerlistjs = '/api/home/carousel/';
+				$.ajax({
+					type: "GET", 
+					url: bannerlistjs,
+					dataType: "json",//set to JSON    
+					success: function(response)
+					{
+						var json_banner_obj = response;//parse JSON
+						var banner_image = "";
+						let banner_image_arr = new Array();
+						for (var p in json_banner_obj) {
+							if( json_banner_obj.hasOwnProperty(p) ) {
+								banner_image_arr[p] = json_banner_obj[p].image ;
+							} 
+						}
+						$(".banner-image").backstretch(banner_image_arr, {
+								fade: 750,
+								duration: 4000
+							});
+					}
+				})    
+			}());
 
 			// Fixed header
 			//-----------------------------------------------
