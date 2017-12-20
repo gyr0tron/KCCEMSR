@@ -1,11 +1,8 @@
 // Form Handler
 window.fh = {
   reload: function(form) {
-    var $inputs = $('#' + form + ' :input');
-      $inputs.each(function (index)
-      {
-          fh.remove_error('#' + $(this).attr('id'));
-      });
+    $('.form-group').removeClass('has-error');
+    $('.form-group').find('.help-block').html('');
   },
   set_success: function(element, message) {
     $(element).closest('.form-group').removeClass('has-error');

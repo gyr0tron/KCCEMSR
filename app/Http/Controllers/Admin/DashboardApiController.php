@@ -232,11 +232,15 @@ class DashboardApiController extends Controller
     $id = $request->input("id","-1");
     $dep = Department::where("id",$id)->first();
     if(!$dep) abort(404, 'Not Found');
+    if($request->image) {
+      $dep->removeImage();
+      $dep->uploadImage($request->image);
+    }
     $dep->description = $request->input("description","");
     $dep->vision = $request->input("vision","");
     $dep->mission = $request->input("mission","");
     $dep->objectives = $request->input("objectives","");
-    $dep->placement = $request->input("placement","");
+    $dep->outcome = $request->input("outcome","");
     $dep->save();
     return ResponseBuilder::send(true, "", "");
   }

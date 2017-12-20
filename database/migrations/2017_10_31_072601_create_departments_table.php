@@ -21,7 +21,8 @@ class CreateDepartmentsTable extends Migration
       $table->longtext('vision')->nullable();
       $table->longtext('mission')->nullable();
       $table->longtext('objectives')->nullable();
-      $table->longtext('placement')->nullable();
+      $table->longtext('outcome')->nullable();
+      $table->string('image')->nullable();
     });
 
     $departments = array(
