@@ -18,7 +18,7 @@ $menu_item = 'departments';
 				<div class="space"></div>
 				<div class="row">
 					<div class="col-md-6">
-						<img src="http://via.placeholder.com/1140x615" alt="">
+						<img src="{{$dep->getUrl()}}" alt="">
 						<div class="space"></div>
 					</div>
 					<div class="col-md-6">
@@ -41,7 +41,7 @@ $menu_item = 'departments';
 				<div class="space"></div>
 				<div class="row">
 					<div class="col-md-6">
-						<h2 style="margin-top: 0px; margin-bottom: 5px;">Objectives</h2>
+						<h2 style="margin-top: 0px; margin-bottom: 5px;">Program Objectives</h2>
 						<ul class="list-unstyled">
 							@php
 							$data = explode(".", $dep->objectives);
@@ -54,8 +54,8 @@ $menu_item = 'departments';
 						</ul>
 					</div>
 					<div class="col-md-6">
-						<h2 style="margin-top: 0px; margin-bottom: 5px;">Placement Record</h2>
-						<p>{{$dep->placement}}</p></div>
+						<h2 style="margin-top: 0px; margin-bottom: 5px;">Program Outcomes</h2>
+						<p>{{$dep->outcome}}</p></div>
 				</div>
 			</div>
 		</div>
@@ -260,358 +260,28 @@ $menu_item = 'departments';
 <div class="container">
 <h1 class="title text-center" style="margin-top: 2%;margin-bottom: 2%;">List of Staff:</h1>
 	<div class="container">
+		@foreach (App\Staff::where('department', $dep->url)->get() as $staff)
 			<div class="col-md-3 col-sm-3">
 				<div class="team-member">
 					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
+						<img src="{{$staff->getUrl()}}" alt="team member" class="img-responsive">
 					</div>
 					<div class="team-hover">
 						<div class="desk">
-							<h4>Hi There !</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
+							<h4>{{$staff->displayname}}</h4>
+							{{-- <p><b>Designation:</b>{{$staff->designation}}</p> --}}
+							<p><b>Qualification:</b>{{$staff->qualification}}</p>
+							<p><b>Experience:</b>{{$staff->experience}} Years</p>
+							<p><b>Area of Interest:</b>{{$staff->interest}} Years</p>
 						</div>
 					</div>
 				</div>
 				<div class="team-title">
-					<h5>Martin Smith</h5>
-					<span>Subject</span>
+					<h5>{{$staff->name}}</h5>
+					<span>{{$staff->designation}}</span>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello World</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Franklin Harbet</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello all!</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Linda Anderson</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello World</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Franklin Harbet</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hi There !</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Martin Smith</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello World</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Franklin Harbet</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello all!</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Linda Anderson</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello World</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Franklin Harbet</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hi There !</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Martin Smith</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello World</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Franklin Harbet</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello all!</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Linda Anderson</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello World</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Franklin Harbet</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hi There !</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Martin Smith</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello World</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Franklin Harbet</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello all!</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Linda Anderson</h5>
-					<span>Subject</span>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3">
-				<div class="team-member">
-					<div class="team-img">
-						<img src="http://via.placeholder.com/360x250" alt="team member" class="img-responsive">
-					</div>
-					<div class="team-hover">
-						<div class="desk">
-							<h4>Hello World</h4>
-							<p>I love to introduce myself as </p>
-						</div>
-						<div class="s-link">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="team-title">
-					<h5>Franklin Harbet</h5>
-					<span>Subject</span>
-				</div>
-			</div>
+		@endforeach
 	</div>
 </div>
 @endsection

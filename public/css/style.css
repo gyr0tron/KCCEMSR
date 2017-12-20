@@ -826,12 +826,12 @@ textarea {
 .hidn-arw {
 	visibility: hidden;
 }
-  
+
 .bounce {
 	-moz-animation: bounce 2s infinite;
 	-webkit-animation: bounce 2s infinite;
 	animation: bounce 2s infinite;
-  }  
+  }
 
 .sub-menu-parent {
 	position: relative;
@@ -860,7 +860,7 @@ textarea {
 	transition-delay: 0s, 0s, 0.3s;
 	/* this removes the transition delay so the menu will be visible while the other styles transition */
   }
- 
+
   #navbar-collapse-1 a {
 	display: block;
 	padding: 0.5em 1em;
@@ -917,7 +917,7 @@ textarea {
 	-ms-transform: rotate(180deg);         /* IE9 */
 	transform: rotate(180deg);             /* W3C compliant browsers */
   }
-  
+
   div.table-title {
 	display: block;
    margin: auto;
@@ -925,7 +925,7 @@ textarea {
    padding:5px;
    width: 100%;
  }
- 
+
  .table-title h3 {
 	color: #fafafa;
 	font-size: 30px;
@@ -935,10 +935,10 @@ textarea {
 	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
 	text-transform:uppercase;
  }
- 
- 
+
+
  /*** Table Styles **/
- 
+
  .table-fill {
    background: rgba(0, 0, 0, 0);
    border-radius:3px;
@@ -950,7 +950,7 @@ textarea {
    width: 100%;
    animation: float 5s infinite;
  }
-  
+
  th {
    color:#000000;;
    background:#rgba(0, 0, 0, 0);
@@ -961,16 +961,16 @@ textarea {
    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
    vertical-align:middle;
  }
- 
+
  th:first-child {
    border-top-left-radius:3px;
  }
-  
+
  th:last-child {
    border-top-right-radius:3px;
    border-right:none;
  }
-   
+
  tr {
    border-top: 1px solid #C1C3D1;
    border-bottom-: 1px solid #C1C3D1;
@@ -979,28 +979,28 @@ textarea {
    font-weight:normal;
    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
  }
-  
+
  tr:first-child {
    border-top:none;
  }
- 
+
  tr:last-child {
    border-bottom:none;
  }
-  
+
  tr:nth-child(odd) td {
    background:#EBEBEB;
  }
 
- 
+
  tr:last-child td:first-child {
    border-bottom-left-radius:3px;
  }
-  
+
  tr:last-child td:last-child {
    border-bottom-right-radius:3px;
  }
-  
+
  td {
    background:#FFFFFF;
    padding:20px;
@@ -1011,35 +1011,35 @@ textarea {
    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
    border-right: 1px solid #C1C3D1;
  }
- 
+
  td:last-child {
    border-right: 0px;
  }
- 
+
  th.text-left {
    text-align: left;
  }
- 
+
  th.text-center {
    text-align: center;
  }
- 
+
  th.text-right {
    text-align: right;
  }
- 
+
  td.text-left {
    text-align: left;
  }
- 
+
  td.text-center {
    text-align: center;
  }
- 
+
  td.text-right {
    text-align: right;
  }
- 
+
  .text-center {
     text-align: center;
 }
@@ -1086,7 +1086,7 @@ textarea {
     transition: all 0.3s;
 }
 .team-member:hover .team-hover .desk {
-    top: 35%;
+    top: 50%;
 }
 .team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
     opacity: 1;
