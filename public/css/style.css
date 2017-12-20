@@ -825,7 +825,7 @@ textarea {
 	visibility: hidden;
 }
   
-  .bounce {
+.bounce {
 	-moz-animation: bounce 2s infinite;
 	-webkit-animation: bounce 2s infinite;
 	animation: bounce 2s infinite;
@@ -844,6 +844,7 @@ textarea {
 	width: 100%;
 	transform: translateY(-2em);
 	z-index: -1;
+	background-color: rgba(0, 0, 0, 0.01);
 	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
   }
   .sub-menu-parent:hover .sub-menu {
@@ -852,6 +853,8 @@ textarea {
 	opacity: 1;
 	z-index: 1;
 	transform: translateY(0%);
+	background-color: rgba(0, 0, 0, 0.9);
+	transition: all 0.3s ease-in-out 0s, background-color 0.7s ease-in-out;
 	transition-delay: 0s, 0s, 0.3s;
 	/* this removes the transition delay so the menu will be visible while the other styles transition */
   }
@@ -875,13 +878,13 @@ textarea {
   #navbar-collapse-1bar-collapse-1 > ul > li:first-child {
 	border-left: none;
   }
-  .sub-menu {
+  /* .sub-menu {
 	background-color: rgba(0, 0, 0, 0.10);
   }
 
   .sub-menu-down {
 	background-color: rgba(0, 0, 0, 0.9);
-  }
+  } */
 
   .navbar-container-listholder {
 	display: flex;
