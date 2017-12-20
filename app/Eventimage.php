@@ -21,23 +21,23 @@ class Eventimage extends Model
     public function uploadImage($file) {
       $this->checkDirs();
       $filename = str_random(30) . uniqid() . '.' . 'jpg';
-      $filepath = public_path('public\\events\\' .$filename);
+      $filepath = public_path('public/events/' .$filename);
       Image::make($file)->save( $filepath );
-      $thumb = public_path('public\\events\\thumb\\' .$filename);
+      $thumb = public_path('public/events/thumb/' .$filename);
       Image::make($file)->resize(250, 150)->save($thumb);
       $this->image = $filename;
     }
     public function deleteImage() {
       $filename = $this->image;
-      $filepath = public_path('public\\events\\' .$filename);
+      $filepath = public_path('public/events/' .$filename);
       File::delete($filepath);
-      $thumb = public_path('public\\events\\thumb\\' .$filename);
+      $thumb = public_path('public/events/thumb/' .$filename);
       File::delete($thumb);
     }
     public function checkDirs() {
-      $path = public_path('public\\events');
+      $path = public_path('public/events');
       File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
-      $path = public_path('public\\events\\thumb');
+      $path = public_path('public/events/thumb');
       File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
     }
 }

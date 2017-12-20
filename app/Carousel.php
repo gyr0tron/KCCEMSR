@@ -19,23 +19,23 @@ class Carousel extends Model
   public function uploadImage($file) {
     $this->checkDirs();
     $filename = str_random(30) . uniqid() . '.' . 'jpg';
-    $filepath = public_path('public\\carousel\\' .$filename);
+    $filepath = public_path('public/carousel/' .$filename);
     Image::make($file)->save( $filepath );
-    $thumb = public_path('public\\carousel\\thumb\\' .$filename);
+    $thumb = public_path('public/carousel/thumb/' .$filename);
     Image::make($file)->resize(250, 150)->save($thumb);
     $this->image = $filename;
   }
   public function deleteImage() {
     $filename = $this->image;
-    $filepath = public_path('public\\carousel\\' .$filename);
+    $filepath = public_path('public/carousel/' .$filename);
     File::delete($filepath);
-    $thumb = public_path('public\\carousel\\thumb\\' .$filename);
+    $thumb = public_path('public/carousel/thumb/' .$filename);
     File::delete($thumb);
   }
   public function checkDirs() {
-    $path = public_path('public\\carousel');
+    $path = public_path('public/carousel');
     File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
-    $path = public_path('public\\carousel\\thumb');
+    $path = public_path('public/carousel/thumb');
     File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
   }
 }

@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Image;
 use File;
 
-class Achievement extends Model
+class Staff extends Model
 {
-    protected $table = "achievements";
+    protected $table = "staff";
     public $timestamps = true;
 
     public function getUrl() {
@@ -25,5 +25,10 @@ class Achievement extends Model
     public function checkDirs() {
       $path = public_path('public/images');
       File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
+    }
+    public function removeImage() {
+      $filename = $this->image;
+      $filepath = public_path('public/images/' .$filename);
+      File::delete($filepath);
     }
 }

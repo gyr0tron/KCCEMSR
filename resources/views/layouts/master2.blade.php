@@ -16,6 +16,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/dashboard.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/dataTables.bootstrap.min.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap2-toggle.min.css') }}">
   @yield('styles')
 </head>
 <body class="skin-{{Auth::check()?Auth::user()->skin:"blue"}} sidebar-mini fixed">
@@ -35,6 +36,7 @@
   <script type="text/javascript" src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/dataTables.bootstrap.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/jquery.fancybox.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/bootstrap2-toggle.min.js') }}"></script>
   @yield('post')
 </body>
 </html>

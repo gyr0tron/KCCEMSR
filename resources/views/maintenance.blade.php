@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Service Unavailable</title>
+        <title>{{setting('break-title','Service Unavailable')}}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,600" rel="stylesheet" type="text/css">
@@ -34,7 +34,7 @@
 
             .position-ref {
                 margin: 0px;
-                position: absolute;   
+                position: absolute;
                 top: 40%;
                 font-weight: 300;
                 text-shadow: 3px 3px 4px #000000;
@@ -70,8 +70,8 @@
         </style>
     </head>
     <body>
-        
-            
+
+
                     <div id="particles-js" class="title flex-center full-height  ">
                         <p class="position-ref">Be right back.</p>
                     </div>
@@ -82,7 +82,6 @@
 
         <script>
             particlesJS.load('particles-js', 'js/particles.json', function(){
-            console.log('particles.json loaded...');
             });
         </script>
     </body>
