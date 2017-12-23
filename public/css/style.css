@@ -733,33 +733,65 @@ textarea {
 
 @media (min-width: 200px){
 	.site-name {
-		padding-top: 10px;
-		font-size: 8px;
+		padding-top: 3%;
+		font-size: 11px;
 	}
 }
-@media (min-width: 400px){
-.site-name {
-	padding-top: 10px;
-	font-size: 15px;
+
+@media (min-width: 300px){
+	.site-name {
+		padding: 2%;
+		font-size: 17px;
 	}
 }
 
 @media (min-width: 400px){
 .site-name {
-	padding-top: 10px;
+	padding-top: 3%;
+	font-size: 18px;
+	}
+}
+
+@media (min-width: 500px){
+.site-name {
+	font-size: 19px;
+	}
+}
+
+@media (min-width: 600px){
+.site-name {
 	font-size: 20px;
+    padding-top: 2.5%;
 	}
 }
 
 @media (min-width: 768px){
 .site-name {
-	font-size: 21px;
+	font-size: 22px;
+    padding-top: 3%;
+	}
+}
+
+@media (min-width: 950px){
+.site-name {
+	font-size: 26px;
+    padding-top: 0.5%;
 	}
 }
 
 @media (min-width: 1200px){
 .site-name {
 	font-size: 35px;
+    padding-top: 1%;
+	}
+}
+
+@media (max-width: 1260px){
+	.clg-name {
+		margin-left: 0px;
+		margin-right: 0px;
+		float: left;
+		width: auto;
 	}
 }
 
@@ -863,7 +895,7 @@ textarea {
 
   #navbar-collapse-1 a {
 	display: block;
-	padding: 0.5em 1em;
+	padding: 0.5em 0.9em;
 	text-decoration: none;
   }
   #navbar-collapse-1 a:hover {
@@ -880,6 +912,45 @@ textarea {
   #navbar-collapse-1bar-collapse-1 > ul > li:first-child {
 	border-left: none;
   }
+  /* ----test nav---- */
+  @media (max-width: 1260px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+  /* ----test nav---- */
+  
   /* .sub-menu {
 	background-color: rgba(0, 0, 0, 0.10);
   }
@@ -887,11 +958,41 @@ textarea {
   .sub-menu-down {
 	background-color: rgba(0, 0, 0, 0.9);
   } */
-
   .navbar-container-listholder {
 	display: flex;
-    justify-content: center;
-  }
+	justify-content: center;
+	 }
+	 
+  @media (max-width: 1260px) {
+  .navbar-container-listholder {
+	position: absolute;
+		top: 25%;
+		left: 0px;
+		right: 0px;
+		width: -webkit-fill-available;
+		}
+
+	.header-right {
+		width: -webkit-fill-available;
+		}
+
+	.navbar-collapse {
+		top: 30px !important;
+		position: relative;
+		}
+  .collapse.in {
+		transition: background-color 0.2s linear;
+		background-color: rgba(0, 0, 0, 0.9);
+	}
+	.collapsed {
+		top: 0%;
+    right: 0%;
+		}
+	.navbar-collapse.in {
+		overflow-y: inherit !important;
+    max-height: max-content;
+	}
+	}
 
   #dept-body {
 	background-color: rgba(0, 0, 0, 0.30);

@@ -1,14 +1,14 @@
 <header class="header fixed clearfix navbar navbar-fixed-top" id="navmain" {{isset($nav_trans)?"data-navtransparent":""}}>
 			<div class="container" id="head-container">
 				<div class="row">
-					<div class="container">
+					<div class="clg-name container">
 						<div class="header-left clearfix">
 
 							<div class="logo smooth-scroll"  style="float: left;">
 								<a href="/"><img id="logo" src="http://via.placeholder.com/60x60" alt="KC College logo"></a>
 							</div>
 
-							<div class="site-name-and-slogan smooth-scroll">
+							<div class="smooth-scroll">
 								<div class="site-name"><a href="/" id="head-site-name" style="text-decoration:none;">K.C. College of Engineering &amp; Management Studies &amp; Research</a></div>
 							</div>
 
