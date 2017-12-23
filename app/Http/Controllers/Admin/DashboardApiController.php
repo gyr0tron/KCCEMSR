@@ -13,6 +13,7 @@ use App\Http\Requests\AdminAddNewEventRequest;
 use App\Http\Requests\AdminAddDepartmentalAchievement;
 use App\Http\Requests\AdminAddStudentAchievement;
 use App\Http\Requests\AdminAddStaff;
+use App\Http\Requests\AdminAddAnnouncement;
 
 use Auth;
 use Image;
@@ -24,6 +25,7 @@ use App\Eventimage;
 use App\Department;
 use App\Achievement;
 use App\Staff;
+use App\Announcement;
 use App\ResponseBuilder;
 
 class DashboardApiController extends Controller
@@ -317,6 +319,25 @@ class DashboardApiController extends Controller
     if(!$staff) abort(404, 'Not Found');
     $staff->removeImage();
     $staff->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Add Announcement
+  public function addAnnouncement(AdminAddAnnouncement $request)
+  {
+    $anouncement = new Announcement();
+    $anouncement->title = $request->input("title","");
+    $anouncement->link = $request->input("description", "");
+    $anouncement->created_by = Auth::user()->id;
+    $anouncement->updated_by = Auth::user()->id;
+    $anouncement->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function removeAnnouncement(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $anouncement = Announcement::where("id",$id)->first();
+    if(!$anouncement) abort(404, 'Not Found');
+    $anouncement->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
 }

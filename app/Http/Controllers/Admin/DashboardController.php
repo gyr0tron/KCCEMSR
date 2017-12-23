@@ -85,4 +85,10 @@ class DashboardController extends Controller
   {
     return view("pages.admin.settings");
   }
+
+  // Announcements
+  public function announcements()
+  {
+    return view("pages.admin.announcements");
+  }
 }
