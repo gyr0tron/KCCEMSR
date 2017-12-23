@@ -8,6 +8,9 @@ $(function () {
   if($("#department-table").length =1) {
     $("#department-table").DataTable();
   }
+  if($("#announcement-table").length =1) {
+    $("#announcement-table").DataTable();
+  }
   if($("#department-student-achievenments-table").length==1) {
     $("#department-student-achievenments-table").DataTable();
   }
@@ -141,7 +144,20 @@ window.dashboard = {
       axios.post('/api/admin/department/staff/remove', {id:id})
       .then(function (response) {
         var data = response.data;
-        console.log(data)
+        if(fh.is_success(data)) {
+          fh.redirect(data);
+        }
+      })
+      .catch(function (error) {
+        fh.show_errorpage(error);
+      });
+    });
+  },
+  deleteAnnoncement(id) {
+    showYesNo("Remove Announcement", "Are you sure you want to remove this announcement ?", function(){
+      axios.post('/api/admin/department/announcement/remove', {id:id})
+      .then(function (response) {
+        var data = response.data;
         if(fh.is_success(data)) {
           fh.redirect(data);
         }

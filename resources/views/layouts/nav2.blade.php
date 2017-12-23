@@ -69,6 +69,14 @@
             </span>
           </a>
         </li>
+        <li class="{{$menu_item=='announcements'?'active':''}}">
+          <a href="{{route("admin_announcements")}}">
+            <i class="fa fa-bullhorn"></i> <span>Announcements</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-blue">{{App\Announcement::count()}}</small>
+            </span>
+          </a>
+        </li>
         <li class="treeview {{$menu_item=='departments'?'active':''}}" >
           <a href="#">
             <i class="fa fa-building-o"></i>
