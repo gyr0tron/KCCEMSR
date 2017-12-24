@@ -516,9 +516,15 @@ textarea {
 		float: left !important;
 	}
 }
-@media (max-width:767px) {
+@media (max-width:1260px) {
 	.header.navbar-fixed-top {
 		position: absolute;
+	}
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+	.fixed-header-on .header {
+		height: 8%;
 	}
 }
 
@@ -742,12 +748,13 @@ textarea {
 	.site-name {
 		padding: 2%;
 		font-size: 17px;
+    width: 85%;
 	}
 }
 
 @media (min-width: 400px){
 .site-name {
-	padding-top: 3%;
+	padding-top: 2%;
 	font-size: 18px;
 	}
 }
@@ -767,14 +774,14 @@ textarea {
 
 @media (min-width: 768px){
 .site-name {
-	font-size: 22px;
-    padding-top: 3%;
+	font-size: 24px;
+	padding-top: 1%;
 	}
 }
 
 @media (min-width: 950px){
 .site-name {
-	font-size: 26px;
+	font-size: 29px;
     padding-top: 0.5%;
 	}
 }
@@ -782,7 +789,8 @@ textarea {
 @media (min-width: 1200px){
 .site-name {
 	font-size: 35px;
-    padding-top: 1%;
+		padding-top: 1%;
+    width: -webkit-fill-available;
 	}
 }
 
@@ -791,7 +799,7 @@ textarea {
 		margin-left: 0px;
 		margin-right: 0px;
 		float: left;
-		width: auto;
+    width: -webkit-fill-available;
 	}
 }
 
