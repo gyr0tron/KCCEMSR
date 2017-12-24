@@ -741,6 +741,7 @@ textarea {
 	.site-name {
 		padding-top: 3%;
 		font-size: 11px;
+    width: 85%;
 	}
 }
 
@@ -748,7 +749,7 @@ textarea {
 	.site-name {
 		padding: 2%;
 		font-size: 17px;
-    width: 85%;
+    width: 90%;
 	}
 }
 
