@@ -26,7 +26,7 @@ class UpdateController extends Controller
     if(base_path("public") != public_path()) {
       $folders = ['images','js','css'];
       foreach ($folders as $f) {
-        $src = base_path("public\\$f");
+        $src = base_path("public/$f");
         $dest = public_path();
         if (!file_exists(public_path($f))) mkdir(public_path($f), 0700);
         $res = system("cp -r $src $dest 2>&1");
