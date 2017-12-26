@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/animations.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/about.css') }}">
 </head>
 <body class="no-trans">
 <div class="scrollToTop"><i class="icon-up-open-big"></i></div>
