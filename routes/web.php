@@ -43,6 +43,7 @@ Route::prefix('admin')->group(function () {
   Route::get('/messages','Admin\DashboardController@messages')->name("admin_messages");
   Route::get('/department/{url}/{action}','Admin\DashboardController@department')->name("admin_department");
   Route::get('/announcements','Admin\DashboardController@announcements')->name("admin_announcements");
+  Route::get('/academics/{action}','Admin\DashboardController@academics')->name("admin_academics");
 });
 
 
@@ -80,6 +81,11 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/department/staff/remove","Admin\DashboardApiController@removeStaff");
   Route::post("/department/announcement/add","Admin\DashboardApiController@addAnnouncement");
   Route::post("/department/announcement/remove","Admin\DashboardApiController@removeAnnouncement");
+
+
+  Route::post("/academics/curriculum-plan","Admin\DashboardApiController@updateCurriculum");
+  Route::post("/academics/staff-notices/add","Admin\DashboardApiController@addStaffnotices");
+  Route::post("/academics/exam-results/add","Admin\DashboardApiController@addExamResults");
 
 
   Route::get('/update','Admin\UpdateController@update')->name("admin_update");

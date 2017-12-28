@@ -57,7 +57,7 @@ class DashboardController extends Controller
   // Department
   public function department($url, $action) {
     $dep = Department::where("url",$url)->first();
-    if(!$dep) App::abort(404, 'Page Not Found');
+    if(!$dep) abort(404, 'Page Not Found');
     return view("pages.admin.department", compact("dep","action"));
   }
   // Users
@@ -85,10 +85,15 @@ class DashboardController extends Controller
   {
     return view("pages.admin.settings");
   }
-
   // Announcements
   public function announcements()
   {
     return view("pages.admin.announcements");
+  }
+  // Academics
+  protected $academics = ['curriculum-plan','staff-notices','exam-results'];
+  public function academics($action) {
+    if(!in_array($action, $this->academics)) abort(404, 'Page Not Found');
+    return view("pages.admin.academics", compact("action"));
   }
 }

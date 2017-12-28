@@ -7,7 +7,6 @@ $menu_item = '404';
 @endsection
 @section('content')
 {{-- Start your content here --}}
-@endif
 @endsection
 @section('post')
 @endsection

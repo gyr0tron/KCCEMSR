@@ -14,6 +14,9 @@ use App\Http\Requests\AdminAddDepartmentalAchievement;
 use App\Http\Requests\AdminAddStudentAchievement;
 use App\Http\Requests\AdminAddStaff;
 use App\Http\Requests\AdminAddAnnouncement;
+use App\Http\Requests\AdminFileUploadDefaultRequest;
+use App\Http\Requests\AdminAddStaffNotices;
+use App\Http\Requests\AdminAddExamResult;
 
 use Auth;
 use Image;
@@ -26,6 +29,7 @@ use App\Department;
 use App\Achievement;
 use App\Staff;
 use App\Announcement;
+use App\FileUpload;
 use App\ResponseBuilder;
 
 class DashboardApiController extends Controller
@@ -338,6 +342,45 @@ class DashboardApiController extends Controller
     $anouncement = Announcement::where("id",$id)->first();
     if(!$anouncement) abort(404, 'Not Found');
     $anouncement->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Acadmics
+  public function updateCurriculum(AdminFileUploadDefaultRequest $request)
+  {
+    $type = "curriculum-plan";
+    $upload = FileUpload::where('type',$type)->first();
+    if(!$upload) {
+      $upload = new FileUpload();
+      $upload->type = $type;
+      $upload->created_by = Auth::user()->id;
+      $upload->updated_by = Auth::user()->id;
+    }
+    $upload->filename = $upload->uploadFile($request->file('file'), $type);
+    $upload->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function addStaffnotices(AdminAddStaffNotices $request)
+  {
+    $type = "staff-notices";
+    $upload = new FileUpload();
+    $upload->type = $type;
+    $upload->name = $request->input('title');
+    $upload->created_by = Auth::user()->id;
+    $upload->updated_by = Auth::user()->id;
+    $upload->filename = $upload->uploadFile($request->file('file'));
+    $upload->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function addExamResults(AdminAddExamResult $request)
+  {
+    $type = "exam-results";
+    $upload = new FileUpload();
+    $upload->type = $type;
+    $upload->name = $request->input('name');
+    $upload->created_by = Auth::user()->id;
+    $upload->updated_by = Auth::user()->id;
+    $upload->filename = $upload->uploadFile($request->file('file'));
+    $upload->save();
     return ResponseBuilder::send(true, "", "");
   }
 }

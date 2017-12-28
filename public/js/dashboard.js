@@ -14,6 +14,9 @@ $(function () {
   if($("#department-student-achievenments-table").length==1) {
     $("#department-student-achievenments-table").DataTable();
   }
+  if($("#academics-staff-notices").length==1) {
+    $("#academics-staff-notices").DataTable();
+  }
   $("[data-fancybox]").fancybox();
 })
 

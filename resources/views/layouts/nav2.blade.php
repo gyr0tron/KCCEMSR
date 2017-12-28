@@ -1,5 +1,5 @@
 @php
-  if(!isset($second)) $second = "not defined";
+if(!isset($second)) $second = "not defined";
 @endphp
 @if (Auth::checK())
   <!-- Main Header -->
@@ -104,6 +104,7 @@
             <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_dashboard")}}">Syllabus</a></li>
           </ul>
         </li>
+        <li class="{{$menu_item=='academics'?'active':''}}"><a href="{{route("admin_academics", "curriculum-plan")}}"><i class="fa fa-graduation-cap"></i> <span>Academics</span></a></li>
         <li class="{{$menu_item=='messages'?'active':''}}">
           <a href="{{route("admin_messages")}}">
             <i class="fa fa-envelope"></i> <span>Messages</span>
