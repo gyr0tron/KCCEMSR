@@ -1263,3 +1263,11 @@ textarea {
     color: #a5a5a5;
     letter-spacing: 1px;
 }
+
+/* department activities */
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }

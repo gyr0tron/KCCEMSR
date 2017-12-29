@@ -159,72 +159,68 @@ $menu_item = 'departments';
 		</div>
 		<div class="row">
 			<p class="lead text-center" style="margin-top: 3%; margin-bottom: 3%;">With academia, our students are doing best in all the areas as well...</p>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="media testimonial">
-						<div class="media-left">
-							<img src="http://via.placeholder.com/50x50" alt="">
-						</div>
-						<div class="media-body">
-							<h3 class="media-heading">Dilip Mane (B.E.I.T)</h3>
-							<blockquote>
-								<p>Along with his team formed a company named <b>JB United Agro Pvt Ltd</b> and created a brand <b>OrgoPlus</b> ( which means more than Organic). <b>“India Organic society”</b>, will be a   common single platform for all farmers, suppliers, traders and consumers to interact. They are in process of marketing these products through online shops orgoplus,  amazon, snapdeal etc.</p>
-							</blockquote>
-						</div>
+			<div class="col-xs-6 col-sm-6 col-md-6">
+				<div class="media">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<img src="http://via.placeholder.com/300x300" alt="">
 					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="media testimonial">
-						<div class="media-left">
-							<img src="http://via.placeholder.com/50x50" alt="">
-						</div>
-						<div class="media-body">
-							<h3 class="media-heading">Shruti Patil (B.E.I.T) </h3>
-							<blockquote>
-								<p>has been participating &amp; won many Ekankika competitions of Lalit kala Kendra …Recently she has worked for a marathi movie MORCHA which is going to release on 10th march. The first teaser of the movie is her monologue &amp; she also has done dubbing for that movie …</p>
-							</blockquote>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="media testimonial">
-						<div class="media-left">
-							<img src="http://via.placeholder.com/50x50" alt="">
-						</div>
-						<div class="media-body">
-							<h3 class="media-heading">Vinod Rajput (T.E.I.T) </h3>
-							<blockquote>
-								<p>is a Youtuber. He makes mobile gaming list at different category, have 30k+ followers with almost 1.5 million people watching his video monthly. 90 lac people have already watched his videos.</p>
-							</blockquote>
-						</div>
+					<div class="media-body">
+						<h3 class="media-heading">Dilip Mane (B.E.I.T)</h3>
+						<blockquote>
+							<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+						</blockquote>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="media testimonial">
-						<div class="media-left">
-							<img src="http://via.placeholder.com/50x50" alt="">
-						</div>
-						<div class="media-body">
-							<h3 class="media-heading">Nisha Raju (T.E.I.T)</h3>
-							<blockquote>
-								<p> is a writer and has published stories and poems  in more than 20 books and magazines. Her books namely, ‘Shades of Life’, ‘The Master Stroke’, ‘Dad’s Darling Daughter’, ‘Half baked love’, ‘Memoirs of heart’, and many more have been bestsellers over time. She has won First prize in ‘Creative story writing’ and ‘Creative poetry writing’ organized by Youth Writers, Mumbai. She has also won First prize in Elocution and Quiz Competition organized by Iskcon Group and many other prizes in extempores, story and poetry writing.Also she has been awarded the “Best Rotaractor of the Year” award.</p>
-							</blockquote>
-						</div>
+			<div class="col-xs-6 col-sm-6 col-md-6">
+				<div class="media">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<img src="http://via.placeholder.com/300x300" alt="">
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Shruti Patil (B.E.I.T) </h3>
+						<blockquote>
+							<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+						</blockquote>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="media testimonial">
-						<div class="media-left">
-							<img src="http://via.placeholder.com/50x50" alt="">
-						</div>
-						<div class="media-body">
-							<h3 class="media-heading">Tanaji Mandavkar (S.E.I.T)</h3>
-							<blockquote>
-								<p>has been practicing and excelling in Mallar Kambam, a traditional Indian sport in which a gymnast performs feast and poses in concert with a vertical wooden pole or rope. He has done shows throughout the country and has offers lined up from countries like China and Greece. His team was finalist in INDIA’s GOT Talent reality TV show for their athletics.</p>
-							</blockquote>
-						</div>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6">
+				<div class="media">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<img src="http://via.placeholder.com/300x300" alt="">
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Vinod Rajput (T.E.I.T) </h3>
+						<blockquote>
+							<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6">
+				<div class="media">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<img src="http://via.placeholder.com/300x300" alt="">
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Nisha Raju (T.E.I.T)</h3>
+						<blockquote>
+							<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6">
+				<div class="media">
+					<div class="col-xs-3 col-sm-3 col-md-3" style="">
+						<img src="http://via.placeholder.com/300x300" alt="">
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Tanaji Mandavkar (S.E.I.T)</h3>
+						<blockquote>
+							<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+						</blockquote>
 					</div>
 				</div>
 			</div>
@@ -234,31 +230,51 @@ $menu_item = 'departments';
 
 <div class="container">
 	<h1 class="title text-center">Departmental Activities/STTP/Workshop</h1>
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="footer-content">
-				<h2>Angular JS</h2>
-				<p>Guest lecture on Angular JS was organized for second year students by Mr.Khozema Nullwala from NIIT,Thane. It helped student to apply the knowledge of Angular Js and build real-life based programming exercises. It helped the students to understand following contents: Agile Modelis Multiskilled Resource, Need Of Market,Green Filed Hiring Space, Github----------Commit Work At Any Time, Stacks Of Agile Method, IOT.</p>
+	<div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom:5%;">
+		<div class="media">
+			<div class="col-xs-4 col-sm-4 col-md-4">
+				<img src="http://via.placeholder.com/500x500" alt="">
 			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="footer-content">
-				<h2>Core Java Concepts</h2>
-				<p>A workshop was organized on CORE JAVA CONCEPTS for Final year students by Mr.Sanjay Makhija from Mikado Solutions, Thane. This workshop helped the students to build real world based programs using core java concepts. Also it gave hands on experience of writing programs on variety of java concepts.</p>
+			<div class="media-body">
+				<h3 class="media-heading">Activity title</h3>
+				<blockquote>
+					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+				</blockquote>
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="footer-content">
-				<h2>Short Term Training Program</h2>
-				<p>A workshop was organized on CORE JAVA CONCEPTS for Final year students by Mr.Sanjay Makhija from Mikado Solutions, Thane. This workshop helped the students to build real world based programs using core java concepts. Also it gave hands on experience of writing programs on variety of java concepts.</p>
+	<div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom:5%;">
+		<div class="media">
+			<div class="col-xs-4 col-sm-4 col-md-4">
+				<img src="http://via.placeholder.com/500x500" alt="">
+			</div>
+			<div class="media-body">
+				<h3 class="media-heading">Activity title</h3>
+				<blockquote>
+					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom:5%;">
+		<div class="media">
+			<div class="col-xs-4 col-sm-4 col-md-4">
+				<img src="http://via.placeholder.com/500x500" alt="">
+			</div>
+			<div class="media-body">
+				<h3 class="media-heading">Activity title</h3>
+				<blockquote>
+					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+				</blockquote>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="container">
-<h1 class="title text-center" style="margin-top: 2%;margin-bottom: 2%;">List of Staff:</h1>
+<h1 class="title text-center" style="margin-top: 5%;margin-bottom: 2%;">List of Staff:</h1>
 	<div class="container">
 		@foreach (App\Staff::where('department', $dep->url)->get() as $staff)
 			<div class="col-md-3 col-sm-3">
