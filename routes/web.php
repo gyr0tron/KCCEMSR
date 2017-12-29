@@ -20,6 +20,8 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/about','AboutController@getAbout')->name('about');
 
   Route::get('/academics/curriculum-plan','AcademicsController@getCurriculumplan')->name('curriculum-plan');
+  Route::get('/academics/staff-notices','AcademicsController@getStaffNotices')->name('staff-notices');
+  Route::get('/academics/staff-notices/{id}','AcademicsController@getStaffNoticebyId')->name('staff-notices-id');
 
 
   Route::get('/staff/profile/{id}','DepartmentController@getProfile')->name('staff-profile');

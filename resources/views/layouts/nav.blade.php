@@ -57,7 +57,7 @@
 											<li class="sub-menu-parent"><a href="#">Academics</a>
 												<ul class="sub-menu">
 													<li><a href="{{route('curriculum-plan')}}">Curriculum Plan</a></li>
-													<li><a href="#">Staff Noticies</a></li>
+													<li><a href="{{route('staff-notices')}}">Staff Noticies</a></li>
 													<li><a href="#">Gate / PSO</a></li>
 													<li><a href="#">Publications / News Letter</a></li>
 													<li><a href="#">Workshops & Conferences</a></li>
