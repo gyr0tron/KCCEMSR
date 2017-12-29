@@ -58,10 +58,9 @@
 												<ul class="sub-menu">
 													<li><a href="{{route('curriculum-plan')}}">Curriculum Plan</a></li>
 													<li><a href="{{route('staff-notices')}}">Staff Noticies</a></li>
-													<li><a href="#">Gate / PSO</a></li>
+													<li><a href="http://www.learningatkc.com/moodle/login/index.php">Gate / PSO</a></li>
 													<li><a href="#">Publications / News Letter</a></li>
-													<li><a href="#">Workshops & Conferences</a></li>
-													<li><a href="#">Exam Results</a></li>
+													<li><a href="{{route('exam-results')}}">Exam Results</a></li>
 												</ul>
 											</li>
 											<li class="sub-menu-parent"><a href="#">Departments</a>
