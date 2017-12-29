@@ -12,6 +12,7 @@ use App\Http\Requests\AdminEditCarouselImageRequest;
 use App\Http\Requests\AdminAddNewEventRequest;
 use App\Http\Requests\AdminAddDepartmentalAchievement;
 use App\Http\Requests\AdminAddStudentAchievement;
+use App\Http\Requests\AdminAddAcademicTopper;
 use App\Http\Requests\AdminAddStaff;
 use App\Http\Requests\AdminAddAnnouncement;
 use App\Http\Requests\AdminFileUploadDefaultRequest;
@@ -27,6 +28,7 @@ use App\Event;
 use App\Eventimage;
 use App\Department;
 use App\Achievement;
+use App\AcademicTopper;
 use App\Staff;
 use App\Announcement;
 use App\FileUpload;
@@ -296,6 +298,27 @@ class DashboardApiController extends Controller
     $ach = Achievement::where("id",$id)->where("type","0")->first();
     if(!$ach) abort(404, 'Not Found');
     $ach->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Add Academic Topper
+  public function addAcademicTopper(AdminAddAcademicTopper $request)
+  {
+    $top = new AcademicTopper();
+    $top->name = $request->input('topper-name');
+    $top->pointer = $request->input('topper-pointer');
+    $top->year = $request->input('topper-year');
+    $top->department = $request->input("department","");
+    $top->created_by = Auth::user()->id;
+    $top->updated_by = Auth::user()->id;
+    $top->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function removeAcademicTopper(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $top = AcademicTopper::where("id",$id)->first();
+    if(!$top) abort(500, 'Not Found');
+    $top->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
   // Add Staff

@@ -169,6 +169,20 @@ window.dashboard = {
         fh.show_errorpage(error);
       });
     });
+  },
+  removeYesNo(body, url, id) {
+    showYesNo("", body, function(){
+      axios.post(url, {id:id})
+      .then(function (response) {
+        var data = response.data;
+        if(fh.is_success(data)) {
+          fh.redirect(data);
+        }
+      })
+      .catch(function (error) {
+        fh.show_errorpage(error);
+      });
+    });
   }
 };
 // function removeCarouselImage(id) {

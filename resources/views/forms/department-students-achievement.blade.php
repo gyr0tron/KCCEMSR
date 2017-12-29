@@ -72,3 +72,70 @@
     </form>
   </div>
 </div>
+<div class="box box-primary">
+  <div class="box-header">
+    <h3 class="box-title">Academic Toppers</h3>
+  </div>
+  <div class="box-body">
+    <table id="department-student-achievenments-table" class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th width="50%">Name</th>
+          <th width="20%">Pointer</th>
+          <th width="20%">Year</th>
+          <th width="20%">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach (App\AcademicTopper::where("department",$dep->url)->get() as $topper)
+          <tr>
+            <td>{{$topper->name}}</td>
+            <td>{{$topper->pointer}}</td>
+            <td>{{$topper->getYear()}}</td>
+            <td>
+              <a class="btn btn-sm btn-danger" style="margin-right:10px;"
+               onclick="dashboard.removeYesNo('Are you sure you want to remove {{$topper->name}} ?','/api/admin/department/topper/remove',{{$topper->id}})"
+               ><i class="fa fa-trash-o"></i></a>
+            </td>
+          </tr>
+        @endforeach
+        <tr>
+          <form id="form-department-add-academics-topper" action="/api/admin/department/topper/add" method="post" data-form="sr">
+            <input type="hidden" name="department" value="{{$dep->url}}">
+            <td>
+              <div class="form-group">
+                <input type="text" class="form-control" id="topper-name" name="topper-name">
+                <p class="help-block"></p>
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <input type="text" class="form-control" id="topper-pointer" name="topper-pointer">
+                <p class="help-block"></p>
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <select class="form-control" id="topper-year" name="topper-year">
+                  <option value="2">Second</option>
+                  <option value="3">Thrid</option>
+                  <option value="4">Final</option>
+                </select>
+                <p class="help-block"></p>
+              </div>
+            </td>
+            <td><button type="submit" class="btn btn-primary btn-wide">Add</button></td>
+          </form>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th width="50%">Name</th>
+          <th width="20%">Pointer</th>
+          <th width="20%">Year</th>
+          <th width="20%">Actions</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

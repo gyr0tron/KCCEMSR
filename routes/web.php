@@ -73,14 +73,18 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/edituser","Admin\DashboardApiController@editUser");
   Route::post("/removeuser","Admin\DashboardApiController@removeUser");
   Route::post("/usersettings","Admin\DashboardApiController@userSettings");
+
   Route::post("/carousel/newimage","Admin\DashboardApiController@addCarouselImage");
   Route::post("/carousel/editimage","Admin\DashboardApiController@editCarouselImage");
   Route::post("/carousel/removeimage","Admin\DashboardApiController@removeCarouselImage");
+
   Route::post("/events/add","Admin\DashboardApiController@addEvent");
   Route::post("/events/edit","Admin\DashboardApiController@editEvent");
   Route::post("/events/remove","Admin\DashboardApiController@removeEvent");
   Route::post("/events/edit/removeimage","Admin\DashboardApiController@editEventRemoveImage");
+
   Route::post("/message/delete","Admin\DashboardApiController@deleteMessage");
+
   Route::post("/department/overview","Admin\DashboardApiController@departmentOverview");
   Route::post("/department/da/add","Admin\DashboardApiController@addDepartmentalAchievement");
   Route::post("/department/da/remove","Admin\DashboardApiController@removeDepartmentalAchievement");
@@ -88,6 +92,10 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/department/sa/remove","Admin\DashboardApiController@removeStudentAchievement");
   Route::post("/department/staff/add","Admin\DashboardApiController@addStaff");
   Route::post("/department/staff/remove","Admin\DashboardApiController@removeStaff");
+  Route::post("/department/topper/add","Admin\DashboardApiController@addAcademicTopper");
+  Route::post("/department/topper/remove","Admin\DashboardApiController@removeAcademicTopper");
+
+
   Route::post("/department/announcement/add","Admin\DashboardApiController@addAnnouncement");
   Route::post("/department/announcement/remove","Admin\DashboardApiController@removeAnnouncement");
 
