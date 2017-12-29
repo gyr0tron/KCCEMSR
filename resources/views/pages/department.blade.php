@@ -289,6 +289,7 @@ $menu_item = 'departments';
 							<p><b>Qualification:</b>{{$staff->qualification}}</p>
 							<p><b>Experience:</b>{{$staff->experience}} Years</p>
 							<p><b>Area of Interest:</b>{{$staff->interest}} Years</p>
+							<a href="{{route('staff-profile', $staff->id)}}">View profile</a>
 						</div>
 					</div>
 				</div>
