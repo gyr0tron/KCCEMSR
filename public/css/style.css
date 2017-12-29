@@ -1314,3 +1314,17 @@ cursor: pointer;
 color: #2980b9;
 font-weight: bold;
 }
+
+/* staff page  */
+
+.line {   
+    border-left: 1px dashed #ccc;
+}
+
+.stats {
+	font-size:1.7em;
+	position: absolute;
+  	margin: auto;
+  	right: 0;
+  	left: 0;
+}
