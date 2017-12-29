@@ -229,8 +229,8 @@ $menu_item = 'departments';
 </div>
 
 <div class="container">
-	<h1 class="title text-center">Departmental Activities/STTP/Workshop</h1>
-	<div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom:5%;">
+	<h1 class="title text-center" style="margin-bottom:5%;">Departmental Activities/STTP/Workshop</h1>
+	<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
 		<div class="media">
 			<div class="col-xs-4 col-sm-4 col-md-4">
 				<img src="http://via.placeholder.com/500x500" alt="">
@@ -238,13 +238,13 @@ $menu_item = 'departments';
 			<div class="media-body">
 				<h3 class="media-heading">Activity title</h3>
 				<blockquote>
-					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
-					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+					<p class="text-ellipsis" style="margin-bottom: 0px;">Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+					<a class="trigger">read more</a>
 				</blockquote>
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom:5%;">
+	<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
 		<div class="media">
 			<div class="col-xs-4 col-sm-4 col-md-4">
 				<img src="http://via.placeholder.com/500x500" alt="">
@@ -252,13 +252,13 @@ $menu_item = 'departments';
 			<div class="media-body">
 				<h3 class="media-heading">Activity title</h3>
 				<blockquote>
-					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
-					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+					<p class="text-ellipsis" style="margin-bottom: 0px;">Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+					<a class="trigger">read more</a>
 				</blockquote>
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom:5%;">
+	<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
 		<div class="media">
 			<div class="col-xs-4 col-sm-4 col-md-4">
 				<img src="http://via.placeholder.com/500x500" alt="">
@@ -266,8 +266,8 @@ $menu_item = 'departments';
 			<div class="media-body">
 				<h3 class="media-heading">Activity title</h3>
 				<blockquote>
-					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
-					<p>Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+					<p class="text-ellipsis" style="margin-bottom: 0px;">Reprehenderit sint est eu eiusmod fugiat eiusmod in deserunt consectetur. Eu exercitation magna proident veniam officia nisi ullamco proident officia. Voluptate id mollit ipsum pariatur qui ullamco est ea ad. Commodo culpa voluptate ea laborum cupidatat cupidatat.</p>
+					<a class="trigger">read more</a>
 				</blockquote>
 			</div>
 		</div>
@@ -277,7 +277,7 @@ $menu_item = 'departments';
 <h1 class="title text-center" style="margin-top: 5%;margin-bottom: 2%;">List of Staff:</h1>
 	<div class="container">
 		@foreach (App\Staff::where('department', $dep->url)->get() as $staff)
-			<div class="col-md-3 col-sm-3">
+			<div class="col-md-3 col-sm-3 col-xs-3">
 				<div class="team-member">
 					<div class="team-img">
 						<img src="{{$staff->getUrl()}}" alt="team member" class="img-responsive">
@@ -288,7 +288,7 @@ $menu_item = 'departments';
 							{{-- <p><b>Designation:</b>{{$staff->designation}}</p> --}}
 							<p><b>Qualification:</b>{{$staff->qualification}}</p>
 							<p><b>Experience:</b>{{$staff->experience}} Years</p>
-							<p><b>Area of Interest:</b>{{$staff->interest}} Years</p>
+							<p class="text-ellipsis-small"><b>Area of Interest:</b>{{$staff->interest}} Years</p>
 							<a href="{{route('staff-profile', $staff->id)}}">View profile</a>
 						</div>
 					</div>
