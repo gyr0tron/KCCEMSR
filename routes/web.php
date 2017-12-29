@@ -18,6 +18,8 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/',"HomeController@getHome");
   Route::get('/department/{name}','DepartmentController@get')->name('department');
   Route::get('/about','AboutController@getAbout')->name('about');
+
+  Route::get('/academics/curriculum-plan','AcademicsController@getCurriculumplan')->name('curriculum-plan');
 });
 
 
