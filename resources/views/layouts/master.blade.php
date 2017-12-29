@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ $title or config('app.name') }}</title>
-  <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+  <link rel="icon" href="{{url('favicon.ico')}}" type="image/ico" sizes="16x16">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/animate.css') }}">
