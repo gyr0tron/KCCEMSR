@@ -51,51 +51,6 @@ $("[data-skin]").click(function(event) {
 });
 // ADMIN REMOVE FUNCTIONS
 window.dashboard = {
-  removeCarouselImage: function(id) {
-    axios.post('/api/admin/carousel/removeimage', {id:id})
-    .then(function (response) {
-      var data = response.data;
-      if(fh.is_success(data)) {
-        fh.redirect(data);
-      }
-    })
-    .catch(function (error) {
-      fh.show_errorpage(error);
-    });
-  },
-  removeEvent: function(id) {
-    showYesNo("Remove Event", "Are you sure you want to remove this event ?", function(){
-      axios.post('/api/admin/events/remove', {id:id})
-      .then(function (response) {
-        var data = response.data;
-        if(fh.is_success(data)) {
-          fh.redirect(data);
-        }
-      })
-      .catch(function (error) {
-        fh.show_errorpage(error);
-      });
-    });
-  },
-  deleteMessage: function(id) {
-    showYesNo("Delete Message", "Are you sure you want to delete this message ?", function(){
-      axios.post('/api/admin/message/delete', {id:id})
-      .then(function (response) {
-        var data = response.data;
-        if(fh.is_success(data)) {
-          fh.redirect(data);
-        }
-      })
-      .catch(function (error) {
-        fh.show_errorpage(error);
-      });
-    });
-  },
-  deleteUser: function() {
-    showPasswordBox(function(password){
-      alert(password);
-    });
-  },
   deleteEventImage: function(event, id) {
     event.preventDefault();
     var btn = $(document.activeElement);
@@ -107,48 +62,6 @@ window.dashboard = {
           btn.closest('.image-container').hide('slow/400/fast', function() {
             btn.closest('.image-container').remove();
           });
-        }
-      })
-      .catch(function (error) {
-        fh.show_errorpage(error);
-      });
-    });
-  },
-  deleteDepartmentalEvent(id) {
-    showYesNo("Remove Achievement", "Are you sure you want to remove this achievement ?", function(){
-      axios.post('/api/admin/department/da/remove', {id:id})
-      .then(function (response) {
-        var data = response.data;
-        if(fh.is_success(data)) {
-          fh.redirect(data);
-        }
-      })
-      .catch(function (error) {
-        fh.show_errorpage(error);
-      });
-    });
-  },
-  deleteStudentAchievementEvent(id) {
-    showYesNo("Remove Achievement", "Are you sure you want to remove this achievement ?", function(){
-      axios.post('/api/admin/department/sa/remove', {id:id})
-      .then(function (response) {
-        var data = response.data;
-        if(fh.is_success(data)) {
-          fh.redirect(data);
-        }
-      })
-      .catch(function (error) {
-        fh.show_errorpage(error);
-      });
-    });
-  },
-  deleteStaff(id) {
-    showYesNo("Remove Staff", "Are you sure you want to remove this staff ?", function(){
-      axios.post('/api/admin/department/staff/remove', {id:id})
-      .then(function (response) {
-        var data = response.data;
-        if(fh.is_success(data)) {
-          fh.redirect(data);
         }
       })
       .catch(function (error) {
@@ -171,7 +84,7 @@ window.dashboard = {
     });
   },
   removeYesNo(body, url, id) {
-    showYesNo("", body, function(){
+    showYesNo("Remove", body, function(){
       axios.post(url, {id:id})
       .then(function (response) {
         var data = response.data;

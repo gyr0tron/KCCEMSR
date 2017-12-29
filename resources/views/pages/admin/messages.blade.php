@@ -47,7 +47,7 @@
                     <td>
                       <button type="button" class="btn btn-sm btn-primary" style="margin-right:10px;" data-toggle="modal" data-target="#MessageModal-{{$message->id}}">View</button>
                       @if (Auth::user()->is_admin())
-                        <button type="button" class="btn btn-sm btn-danger" style="margin-right:10px;" onclick="dashboard.deleteMessage({{$message->id}})">Delete</button>
+                        <button type="button" class="btn btn-sm btn-danger" style="margin-right:10px;" onclick="dashboard.removeYesNo('Are you sure you want to delete this message ?', '/api/admin/message/delete',{{$message->id}})">Delete</button>
                       @endif
                     </td>
                     @include('forms.viewmessage',["message"=>$message])

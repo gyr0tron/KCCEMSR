@@ -19,8 +19,8 @@
             <td>{{$ach->name}}</td>
             <td>{{strip_tags($ach->description)}}</td>
             <td>
-              <a class="btn btn-warning btn-sm" style="margin-right:10px;" href="">Edit</a>
-              <button type="button" class="btn btn-sm btn-danger" style="margin-right:10px;" onclick="dashboard.deleteStudentAchievementEvent({{$ach->id}})">Remove</button>
+              <a class="btn btn-warning btn-sm" style="margin-right:10px;"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-sm btn-danger" style="margin-right:10px;" onclick="dashboard.removeYesNo('Are you sure you want to remove this achievement ?', '/api/admin/department/sa/remove', {{$ach->id}})"><i class="fa fa-trash-o"></i></a>
             </td>
           </tr>
         @endforeach

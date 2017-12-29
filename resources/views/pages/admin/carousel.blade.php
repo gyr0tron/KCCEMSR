@@ -68,7 +68,10 @@
                     <td><a href="{{$car->getUrl()}}" data-fancybox><img src="{{$car->getThumb()}}" alt="" width="250" height="150"></a></td>
                     <td>{{$car->title}}</td>
                     <td>{{$car->description}}</td>
-                    <td><a class="btn btn-warning btn-sm btn-table " href="{{route("admin_editcarouselimage", $car->id)}}">Edit</a><a class="btn btn-sm btn-danger btn-table " onclick="dashboard.removeCarouselImage({{$car->id}})">Remove</a></td>
+                    <td>
+                      <a class="btn btn-warning btn-sm btn-table" href="{{route("admin_editcarouselimage", $car->id)}}"><i class="fa fa-pencil"></i></a>
+                      <a class="btn btn-sm btn-danger btn-table" onclick="dashboard.removeYesNo('Are you sure you want to remove this carousel image ?', '/api/admin/carousel/removeimage', {{$car->id}})"><i class="fa fa-trash-o"></i></a>
+                    </td>
                   </tr>
                   @php
                   $no++;
