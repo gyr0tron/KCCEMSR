@@ -190,7 +190,7 @@
 							<h3 class="media-heading">{{$event->name}}</h3>
 							<blockquote>
 								<p class="text-ellipsis" style="margin-bottom: 0px;">{{strip_tags($event->description)}}</p>
-								<a class="trigger">read more</a>
+								<a class="trigger" href="{{route('event', $event->id)}}">read more</a>
 							</blockquote>
 						</div>
 					</div>
