@@ -327,11 +327,14 @@ class DashboardApiController extends Controller
     $staff = new Staff();
     $staff->name = $request->input("name");
     $staff->displayname = $request->input("display");
+    $staff->email = $request->input("email");
     $staff->designation = $request->input("designation");
     $staff->qualification = $request->input("qualification");
     $staff->experience = $request->input("experience");
     $staff->interest = $request->input("interest");
     $staff->department = $request->input("department","");
+    $staff->workshops = $request->input("workshops","");
+    $staff->publications = $request->input("publications","");
     $staff->created_by = Auth::user()->id;
     $staff->updated_by = Auth::user()->id;
     $staff->uploadImage($request->image);

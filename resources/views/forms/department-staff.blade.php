@@ -64,6 +64,13 @@
         </div>
       </div>
       <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Email:</label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" id="email" name="email">
+          <p class="help-block"></p>
+        </div>
+      </div>
+      <div class="form-group">
         <label class="control-label col-sm-2" for="image">Photo:</label>
         <div class="col-sm-9">
           <input type="file" class="form-control" id="image" name="image">
@@ -81,7 +88,7 @@
         <label class="control-label col-sm-2" for="qualification">Qualification:</label>
         <div class="col-sm-9">
           <input type="text" class="form-control" id="qualification" name="qualification">
-          <p class="help-block"></p>
+          <p class="help-block">"," indicates new line.</p>
         </div>
       </div>
       <div class="form-group has-feedback">
@@ -97,6 +104,20 @@
         <div class="col-sm-9">
           <input type="text" class="form-control" id="interest" name="interest">
           <p class="help-block"></p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="workshops">Workshops and Training Attended:</label>
+        <div class="col-sm-9">
+          <textarea class="form-control" id="workshops" name="workshops" rows="4"></textarea>
+          <p class="help-block">"." indicates new line.</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="publications">Publications:</label>
+        <div class="col-sm-9">
+          <textarea class="form-control" id="publications" name="publications" rows="4"></textarea>
+          <p class="help-block">"." indicates new line.</p>
         </div>
       </div>
       <div class="form-group">
