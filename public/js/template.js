@@ -68,6 +68,16 @@ $(window).load(function() {
 	}
 });
 
+var prev = 0;
+var $window1 = $('#navbar-collapse-1');
+var nav = $('.arrow-submenu');
+
+$window1.on('scroll', function(){
+  var scrollTop = $window1.scrollTop();
+  nav.toggleClass('hidden', scrollTop > prev);
+  prev = scrollTop;
+});
+
 //Scroll Spy
 //-----------------------------------------------
 if($(".scrollspy").length>0) {
