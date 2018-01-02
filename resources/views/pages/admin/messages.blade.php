@@ -6,7 +6,6 @@
 @endphp
 @endsection
 @section('content')
-  <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
       Contact Messages
@@ -17,15 +16,13 @@
       <li><a class="active">Messages</a></li>
     </ol>
   </section>
-  <!-- Main content -->
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box">
+        <div class="box box-primary">
           <div class="box-header">
             <h3 class="box-title">All Messages</h3>
           </div>
-          <!-- /.box-header -->
           <div class="box-body">
             <table id="users-table" class="table table-bordered table-hover">
               <thead>
@@ -65,15 +62,49 @@
               </tfoot>
             </table>
           </div>
-          <!-- /.box-body -->
         </div>
-        <!-- /.box -->
+
+        @if (Auth::user()->is_admin())
+          <div class="box box-primary">
+            <div class="box-header">
+              <h3 class="box-title">Contact Details</h3>
+            </div>
+            <div class="box-body">
+              <form id="form-newevent" action="/api/admin/contact/edit" method="post" class="form-horizontal" data-form="sr">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="address">Address:</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" id="address" name="address" rows="8" cols="80">{{setting('contact-address')}}</textarea>
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Email:</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="email" name="email" value="{{setting('contact-email')}}">
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="phone">Phone:</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="phone" name="phone" value="{{setting('contact-phone')}}">
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4">
+                      <button type="submit" class="btn btn-primary btn-wide">Save</button>
+                    </div>
+                  </div>
+                </form>
+
+            </div>
+          </div>
+        @endif
       </div>
-      <!-- /.col -->
     </div>
-    <!-- /.row -->
   </section>
-  <!-- /.content -->
 @endsection
 @section('post')
 @endsection

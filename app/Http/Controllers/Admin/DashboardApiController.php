@@ -21,6 +21,7 @@ use App\Http\Requests\AdminAddExamResult;
 use App\Http\Requests\AdminAddPublication;
 
 use Auth;
+use Setting;
 use Image;
 use App\User;
 use App\Carousel;
@@ -224,6 +225,15 @@ class DashboardApiController extends Controller
     if(!$img) abort(404, 'Not Found');
     $img->deleteImage();
     $img->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Edit contact details
+  public function editContactDetails(Request $request)
+  {
+    Setting::set('contact-address', $request->input('address'));
+    Setting::set('contact-phone', $request->input('phone'));
+    Setting::set('contact-email', $request->input('email'));
+    Setting::save();
     return ResponseBuilder::send(true, "", "");
   }
   // Delete Message

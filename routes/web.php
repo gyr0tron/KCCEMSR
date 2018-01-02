@@ -85,6 +85,7 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/events/remove","Admin\DashboardApiController@removeEvent");
   Route::post("/events/edit/removeimage","Admin\DashboardApiController@editEventRemoveImage");
 
+  Route::post("/contact/edit","Admin\DashboardApiController@editContactDetails");
   Route::post("/message/delete","Admin\DashboardApiController@deleteMessage");
 
   Route::post("/department/overview","Admin\DashboardApiController@departmentOverview");
