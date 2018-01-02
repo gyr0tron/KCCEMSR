@@ -56,6 +56,8 @@ Route::prefix('admin')->group(function () {
   Route::get('/department/{url}/{action}','Admin\DashboardController@department')->name("admin_department");
   Route::get('/announcements','Admin\DashboardController@announcements')->name("admin_announcements");
   Route::get('/academics/{action}','Admin\DashboardController@academics')->name("admin_academics");
+
+  Route::get('/update','Admin\UpdateController@update')->name("admin_update");
 });
 
 
@@ -110,7 +112,5 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/academics/publication/add","Admin\DashboardApiController@addPublication");
   Route::post("/academics/publication/remove","Admin\DashboardApiController@removePublication");
 
-
-  Route::get('/update','Admin\UpdateController@update')->name("admin_update");
   Route::post("/settings/main","Admin\UpdateController@settings");
 });
