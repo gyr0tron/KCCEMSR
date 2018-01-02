@@ -31,6 +31,9 @@
         @if ($action == "exam-results")
           @include('forms.exam-results')
         @endif
+        @if ($action == "publications")
+          @include('forms.publications')
+        @endif
       </div>
       <div class="col-sm-2">
         <div class="box box-primary">
@@ -42,6 +45,7 @@
               <li class="{{$action=="curriculum-plan"?"active":""}}"><a href="{{route("admin_academics", "curriculum-plan")}}">Curriculum Plan</a></li>
               <li class="{{$action=="staff-notices"?"active":""}}"><a href="{{route("admin_academics", "staff-notices")}}">Staff Notices</a></li>
               <li class="{{$action=="exam-results"?"active":""}}"><a href="{{route("admin_academics", "exam-results")}}">Exam Results</a></li>
+              <li class="{{$action=="publications"?"active":""}}"><a href="{{route("admin_academics", "publications")}}">Publications</a></li>
             </ul>
           </div>
         </div>

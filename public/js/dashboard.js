@@ -17,6 +17,9 @@ $(function () {
   if($("#academics-staff-notices").length==1) {
     $("#academics-staff-notices").DataTable();
   }
+  if($("#academics-publication").length==1) {
+    $("#academics-staff-notices").DataTable();
+  }
   $("[data-fancybox]").fancybox();
 })
 

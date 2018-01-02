@@ -105,6 +105,8 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/academics/curriculum-plan","Admin\DashboardApiController@updateCurriculum");
   Route::post("/academics/staff-notices/add","Admin\DashboardApiController@addStaffnotices");
   Route::post("/academics/exam-results/add","Admin\DashboardApiController@addExamResults");
+  Route::post("/academics/publication/add","Admin\DashboardApiController@addPublication");
+  Route::post("/academics/publication/remove","Admin\DashboardApiController@removePublication");
 
 
   Route::get('/update','Admin\UpdateController@update')->name("admin_update");

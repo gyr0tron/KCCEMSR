@@ -11,6 +11,7 @@ use App\Carousel;
 use App\Event;
 use App\Eventimage;
 use App\Department;
+use App\Publication;
 
 class DashboardController extends Controller
 {
@@ -91,7 +92,7 @@ class DashboardController extends Controller
     return view("pages.admin.announcements");
   }
   // Academics
-  protected $academics = ['curriculum-plan','staff-notices','exam-results'];
+  protected $academics = ['curriculum-plan','staff-notices','exam-results', 'publications'];
   public function academics($action) {
     if(!in_array($action, $this->academics)) abort(404, 'Page Not Found');
     return view("pages.admin.academics", compact("action"));

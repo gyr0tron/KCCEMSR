@@ -18,6 +18,7 @@ use App\Http\Requests\AdminAddAnnouncement;
 use App\Http\Requests\AdminFileUploadDefaultRequest;
 use App\Http\Requests\AdminAddStaffNotices;
 use App\Http\Requests\AdminAddExamResult;
+use App\Http\Requests\AdminAddPublication;
 
 use Auth;
 use Image;
@@ -32,6 +33,7 @@ use App\AcademicTopper;
 use App\Staff;
 use App\Announcement;
 use App\FileUpload;
+use App\Publication;
 use App\ResponseBuilder;
 
 class DashboardApiController extends Controller
@@ -407,6 +409,30 @@ class DashboardApiController extends Controller
     $upload->updated_by = Auth::user()->id;
     $upload->filename = $upload->uploadFile($request->file('file'));
     $upload->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function addPublication(AdminAddPublication $request)
+  {
+    $publication = new Publication();
+    $publication->name = $request->input('name');
+    $publication->description = $request->input('description');
+    $publication->uploadImage($request->image);
+    $publication->created_by = Auth::user()->id;
+    $publication->updated_by = Auth::user()->id;
+    $publication->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function editPublication()
+  {
+
+  }
+  public function removePublication(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $publication = Publication::where("id",$id)->first();
+    if(!$publication) abort(404, 'Not Found');
+    $publication->removeImage();
+    $publication->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
 }
