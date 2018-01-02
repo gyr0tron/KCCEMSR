@@ -41,7 +41,7 @@
 							</div>
 
 							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">	
+							<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 								<ul class="nav navbar-nav">
 									<li class="active sub-menu-parent"><a href="/">Home</a>
 									</li>
@@ -59,7 +59,7 @@
 											<li><a href="{{route('curriculum-plan')}}">Curriculum Plan</a></li>
 											<li><a href="{{route('staff-notices')}}">Staff Noticies</a></li>
 											<li><a href="http://www.learningatkc.com/moodle/login/index.php">Gate / PSO</a></li>
-											<li><a href="#">Publications / News Letter</a></li>
+											<li><a href="{{route('publications')}}">Publications / News Letter</a></li>
 											<li><a href="{{route('exam-results')}}">Exam Results</a></li>
 										</ul>
 									</li>

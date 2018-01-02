@@ -25,6 +25,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/academics/staff-notices/{id}','AcademicsController@getStaffNoticebyId')->name('staff-notices-id');
   Route::get('/academics/exam-results','AcademicsController@getExamResults')->name('exam-results');
   Route::get('/academics/exam-results/{id}','AcademicsController@getExamResultsbyId')->name('exam-results-id');
+  Route::get('/academics/publications','AcademicsController@getPublications')->name('publications');
 
 
   Route::get('/staff/profile/{id}','DepartmentController@getProfile')->name('staff-profile');

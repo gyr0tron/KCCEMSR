@@ -41,4 +41,8 @@ class AcademicsController extends Controller
     $url = $file->getUrl();
     return view('pages.pdfview', compact("title", "url"));
   }
+  public function getPublications()
+  {
+  return view('pages.publications');
+  }
 }
