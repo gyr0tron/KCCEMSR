@@ -64,60 +64,37 @@
 		<div class="section translucent-bg bg-image-1 blue">
 			<div class="container object-non-visible" data-animation-effect="fadeIn">
 				<h1 id="services"  class="text-center title">Departmental Achievement</h1>
+				@php
+					$achivements = App\Achievement::where('type','1')->where('department',$dep->url)->get();
+					$total = count($achivements);
+					$left =  ceil($total/2);
+				@endphp
 				<div class="space"></div>
 				<div class="row" style="font-size:16px;">
 					<div class="col-sm-6">
-						<div class="media">
-							<div class="media-body text-right">
-								<p>Many faculty members presented technical papers in International –National Conferences and Journals.</p>
+						@for ($i=0; $i < $left; $i++)
+							<div class="media">
+								<div class="media-body text-right">
+									<p>{{strip_tags($achivements[$i]->description)}}</p>
+								</div>
+								<div class="media-right">
+									<i class="fa fa-caret-right rotate-180"></i>
+								</div>
 							</div>
-							<div class="media-right">
-								<i class="fa fa-caret-right rotate-180"></i>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-body text-right">
-								<p>Many Final year students have presented technical papers in national and international conferences under the guidance of project guide.</p>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-caret-right rotate-180"></i>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-body text-right">
-								<p>In TECHNOVISION’16  many group has presented technical paper. Kanojia Anil and Singh Rahul won first prize for the same.</p>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-caret-right rotate-180"></i>
-							</div>
-						</div>
+						@endfor
 					</div>
 					<div class="space visible-xs"></div>
 					<div class="col-sm-6">
-						<div class="media">
-							<div class="media-left">
-								<i class="fa fa-caret-right"></i>
+						@for ($i=$left; $i < $total; $i++)
+							<div class="media">
+								<div class="media-left">
+									<i class="fa fa-caret-right"></i>
+								</div>
+								<div class="media-body">
+									<p>{{strip_tags($achivements[$i]->description)}}</p>
+								</div>
 							</div>
-							<div class="media-body">
-								<p>All staff members had successfully completed NPTEL Soft Skill program. Prof. Shubhangi Verulkar is 1% Topper for the same course.</p>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-left">
-								<i class="fa fa-caret-right"></i>
-							</div>
-							<div class="media-body">
-								<p>Arti Jani, from BE-IT was awarded BEST- STUDENT title for 2015-16 academic year.</p>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-left">
-								<i class="fa fa-caret-right"></i>
-							</div>
-							<div class="media-body">
-								<p>Department awarded with BEST-DEPARTMENT title 2015-16 academic year.</p>
-							</div>
-						</div>
+						@endfor
 					</div>
 				</div>
 			</div>
