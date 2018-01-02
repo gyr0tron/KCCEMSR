@@ -44,7 +44,7 @@ $(window).scroll(function() {
 		}
 	}
 	else {
-		$("body").addClass("fixed-header-on");
+		$("header").addClass("fixed-header-on-fix");
 	}
 });
 
@@ -63,8 +63,8 @@ $(window).load(function() {
 		}
 	}
 	else {
-		$("body").addClass("fixed-header-on");
-		$(".sub-menu").addClass("sub-menu-down");
+		$("header").addClass("fixed-header-on-fix");
+		// $(".sub-menu").addClass("sub-menu-down");
 	}
 });
 

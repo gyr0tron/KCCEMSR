@@ -71,6 +71,9 @@ a:focus,
 a:active {
 	outline: none;
 }
+.a-no-decrn {
+	text-decoration: none !important;
+}
 .large {
 	font-size: 18px;
 }
@@ -111,7 +114,7 @@ blockquote {
 ----------------------------------------------------------------------------- */
 .header {
 	color: #ffffff;
-	background-color: rgba(0, 0, 0, 0.10);
+	background-color: rgba(0, 0, 0, 0.2);
 	padding: 10px 0;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -137,7 +140,7 @@ blockquote {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.55);
+	background-color: rgba(0, 0, 0, 0.1);
 	content: "";
 }
 .banner-caption {
@@ -530,6 +533,10 @@ textarea {
 
 /* Fixed Header
 ----------------------------------------------------------------------------- */
+.fixed-header-on-fix {
+	background-color: rgba(0, 0, 0, 0.90);
+}
+
 .fixed-header-on .header {
 	background-color: rgba(0, 0, 0, 0.95);
 	padding: 5px 0;
@@ -1041,7 +1048,7 @@ visibility: visible;
 }
 
 #dept-row-main {
-	margin-top: 7%;
+	margin-top: 10%;
 }
 
 .list-dept-page-uorder-img {
@@ -1377,4 +1384,10 @@ font-weight: bold;
 	margin: auto;
   right: 0;
   left: 0;
+}
+
+/* maps */
+.maps {
+	width: 100%;
+	height: 348px;
 }

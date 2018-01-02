@@ -156,7 +156,7 @@
 		</div>
 
 		<div class="container">
-			<h1 class="title text-center" style="margin-bottom:4%; margin-top:5%;">Departmental Activities/STTP/Workshop</h1>
+			<h1 class="title text-center" style="margin-bottom:4%; margin-top:5%; overflow-wrap: break-word;">Departmental Activities/STTP/Workshop</h1>
 			@foreach (App\Event::where('department', $dep->url)->get() as $event)
 				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
 					<div class="media">

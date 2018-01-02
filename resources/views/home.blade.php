@@ -794,30 +794,20 @@ $nav_trans = 1
 					<h1 class="title text-center" id="contact">Contact Us</h1>
 					<div class="space"></div>
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-8 col-md-8 col-xs-8">
 							<div class="footer-content">
-								<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam magnam natus tempora cumque, aliquam deleniti voluptatibus voluptas. Repellat vel, et itaque commodi iste ab, laudantium voluptas deserunt nobis.</p>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1584.396878799198!2d72.98002808733317!3d19.179818462852708!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb4f1e032d9e4fc41!2sK+C+College+Of+Engineering+Management+Studies+And+Research!5e0!3m2!1sen!2sin!4v1514910475785" class="maps" frameborder="0" style="border:0" allowfullscreen></iframe>
 								<ul class="list-icons">
-									<li><i class="fa fa-map-marker pr-10"></i> K.C. College, Thane East, 400 603</li>
+									<li><i class="fa fa-map-marker pr-10"></i><a href="https://goo.gl/maps/9kgemW2tEwn" class="a-no-decrn"> K.C. College, Thane East, 400 603</a></li>
 									<li><i class="fa fa-phone pr-10"></i> +91 1234567890</li>
 									<li><i class="fa fa-fax pr-10"></i> +91 1234567891 </li>
 									<li><i class="fa fa-envelope-o pr-10"></i> blank@email.com</li>
-								</ul>
-								<ul class="social-links">
-									<li class="facebook"><i class="fa fa-facebook"></i></li>
-									<li class="twitter"><i class="fa fa-twitter"></i></li>
-									<li class="googleplus"><i class="fa fa-google-plus"></i></li>
-									<li class="skype"><i class="fa fa-skype"></i></li>
-									<li class="linkedin"><i class="fa fa-linkedin"></i></li>
-									<li class="youtube"><i class="fa fa-youtube"></i></li>
-									<li class="flickr"><i class="fa fa-flickr"></i></li>
-									<li class="pinterest"><i class="fa fa-pinterest"></i></li>
 								</ul>
 							</div>
 						</div>
 
 
-						<div class="col-sm-6">
+						<div class="col-sm-4 col-md-4 col-xs-4">
 							<div class="footer-content">
 								<form role="form" id="contact-form" method="post">
 									<div class="form-group has-feedback">
@@ -835,8 +825,16 @@ $nav_trans = 1
 										<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message"></textarea>
 										<i class="fa fa-pencil form-control-feedback"></i>
 									</div>
-									<input type="submit" value="Send" class="btn btn-default">
+									<input type="submit" value="Send" class="btn btn-default" style="min-width: auto;">
 								</form>
+								<ul class="social-links">
+									<li class="facebook"><i class="fa fa-facebook"></i></li>
+									<li class="twitter"><i class="fa fa-twitter"></i></li>
+									<li class="googleplus"><i class="fa fa-google-plus"></i></li>
+									<li class="skype"><i class="fa fa-skype"></i></li>
+									<li class="linkedin"><i class="fa fa-linkedin"></i></li>
+									<li class="youtube"><i class="fa fa-youtube"></i></li>
+								</ul>
 							</div>
 						</div>
 					</div>
