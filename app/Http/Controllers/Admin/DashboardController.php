@@ -12,6 +12,7 @@ use App\Event;
 use App\Eventimage;
 use App\Department;
 use App\Publication;
+use App\FileUpload;
 
 class DashboardController extends Controller
 {
@@ -96,9 +97,18 @@ class DashboardController extends Controller
     return view("pages.admin.announcements");
   }
   // Academics
-  protected $academics = ['curriculum-plan','staff-notices','exam-results', 'publications'];
+  protected $academics_list = ['curriculum-plan','staff-notices','exam-results', 'publications'];
   public function academics($action) {
-    if(!in_array($action, $this->academics)) abort(404, 'Page Not Found');
+    if(!in_array($action, $this->academics_list)) abort(404, 'Page Not Found');
     return view("pages.admin.academics", compact("action"));
+  }
+  // Admissions
+  public function admissions($action)
+  {
+    $admission_list = FileUpload::admission_list;
+    $admission_name_list = FileUpload::admission_name_list;
+    if(!in_array($action, $admission_list)) abort(404, 'Page Not Found');
+    $action_name = $admission_name_list[array_search($action, $admission_list)];
+    return view("pages.admin.admissions", compact("action", "action_name", "admission_list","admission_name_list"));
   }
 }

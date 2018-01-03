@@ -81,15 +81,14 @@
 									</li>
 									<li class="sub-menu-parent"><a href="#">Admissions</a>
 										<ul class="sub-menu" id="large-sub-menu">
-											<li><a href="#">Admission Criteria</a></li>
-											<li><a href="#">Fees Notices</a></li>
-											<li><a href="#">Institute Prospectus</a></li>
-											<li><a href="#">DTE Admission Information Brochure</a></li>
-											<li><a href="#">Total Intake</a></li>
-											<li><a href="#">Cap Rount Allottment</a></li>
-											<li><a href="#">Direct Second Year</a></li>
-											<li><a href="#">Anti-ragging Affidavit</a></li>
-											<li><a href="#">Campus Virtual Tour</a></li>
+											<li><a href="{{route('admissions', 'admission-criteria')}}">Admission Criteria</a></li>
+											<li><a href="{{route('admissions', 'fees-notices')}}">Fees Notices</a></li>
+											<li><a href="{{route('admissions', 'institute-prospectus')}}">Institute Prospectus</a></li>
+											<li><a href="{{route('admissions', 'dte-admission-information-brochure')}}">DTE Admission Information Brochure</a></li>
+											<li><a href="{{route('admissions', 'total-intake')}}">Total Intake</a></li>
+											<li><a href="{{route('admissions', 'cap-rount-allottment')}}">Cap Rount Allottment</a></li>
+											<li><a href="{{route('admissions', 'direct-second-year')}}">Direct Second Year</a></li>
+											<li><a href="{{route('admissions', 'anti-ragging-affidavit')}}">Anti-ragging Affidavit</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="#">Mandatory Disclosure</a>

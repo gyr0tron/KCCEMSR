@@ -469,4 +469,19 @@ class DashboardApiController extends Controller
     $test->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
+  public function updateAdmission($action, Request $request)
+  {
+    $admission_list = FileUpload::admission_list;
+    if(!in_array($action, $admission_list)) abort(404, 'Page Not Found');
+    $upload = FileUpload::where('type',$action)->first();
+    if(!$upload) {
+      $upload = new FileUpload();
+      $upload->type = $action;
+      $upload->created_by = Auth::user()->id;
+      $upload->updated_by = Auth::user()->id;
+    }
+    $upload->filename = $upload->uploadFile($request->file('file'), $action);
+    $upload->save();
+    return ResponseBuilder::send(true, "", "");
+  }
 }

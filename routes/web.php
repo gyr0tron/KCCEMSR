@@ -27,6 +27,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/academics/exam-results/{id}','AcademicsController@getExamResultsbyId')->name('exam-results-id');
   Route::get('/academics/publications','AcademicsController@getPublications')->name('publications');
 
+  Route::get('/admissions/{action}','AdmissionsController@get')->name('admissions');
 
   Route::get('/staff/profile/{id}','DepartmentController@getProfile')->name('staff-profile');
   Route::get('/event/{id}','DepartmentController@getEvent')->name('event');
@@ -58,6 +59,8 @@ Route::prefix('admin')->group(function () {
   Route::get('/academics/{action}','Admin\DashboardController@academics')->name("admin_academics");
 
   Route::get('/testimonials','Admin\DashboardController@testimonials')->name("admin_testimonials");
+
+  Route::get('/admissions/{action}','Admin\DashboardController@admissions')->name("admin_admissions");
 
   Route::get('/update','Admin\UpdateController@update')->name("admin_update");
 });
@@ -114,6 +117,7 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/academics/publication/add","Admin\DashboardApiController@addPublication");
   Route::post("/academics/publication/remove","Admin\DashboardApiController@removePublication");
 
+  Route::post("/admission/{action}","Admin\DashboardApiController@updateAdmission");
 
   Route::post("/testimonial/add","Admin\DashboardApiController@addTestimonial");
   Route::post("/testimonial/remove","Admin\DashboardApiController@removeTestimonial");
