@@ -57,6 +57,8 @@ Route::prefix('admin')->group(function () {
   Route::get('/announcements','Admin\DashboardController@announcements')->name("admin_announcements");
   Route::get('/academics/{action}','Admin\DashboardController@academics')->name("admin_academics");
 
+  Route::get('/testimonials','Admin\DashboardController@testimonials')->name("admin_testimonials");
+
   Route::get('/update','Admin\UpdateController@update')->name("admin_update");
 });
 
@@ -111,6 +113,10 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/academics/exam-results/add","Admin\DashboardApiController@addExamResults");
   Route::post("/academics/publication/add","Admin\DashboardApiController@addPublication");
   Route::post("/academics/publication/remove","Admin\DashboardApiController@removePublication");
+
+
+  Route::post("/testimonial/add","Admin\DashboardApiController@addTestimonial");
+  Route::post("/testimonial/remove","Admin\DashboardApiController@removeTestimonial");
 
   Route::post("/settings/main","Admin\UpdateController@settings");
 });

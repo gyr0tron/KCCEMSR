@@ -19,6 +19,7 @@ use App\Http\Requests\AdminFileUploadDefaultRequest;
 use App\Http\Requests\AdminAddStaffNotices;
 use App\Http\Requests\AdminAddExamResult;
 use App\Http\Requests\AdminAddPublication;
+use App\Http\Requests\AdminAddTestimonial;
 
 use Auth;
 use Setting;
@@ -35,6 +36,7 @@ use App\Staff;
 use App\Announcement;
 use App\FileUpload;
 use App\Publication;
+use App\Testimonial;
 use App\ResponseBuilder;
 
 class DashboardApiController extends Controller
@@ -443,6 +445,28 @@ class DashboardApiController extends Controller
     if(!$publication) abort(404, 'Not Found');
     $publication->removeImage();
     $publication->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Testimonial Add
+  public function addTestimonial(AdminAddTestimonial $request)
+  {
+    $test = new Testimonial();
+    $test->name = $request->input("name");
+    $test->comment = $request->input("comment");
+    $test->created_by = Auth::user()->id;
+    $test->updated_by = Auth::user()->id;
+    $test->uploadImage($request->image);
+    $test->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Testimonial Remove
+  public function removeTestimonial(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $test = Testimonial::where("id",$id)->first();
+    if(!$test) abort(404, 'Not Found');
+    $test->removeImage();
+    $test->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
 }

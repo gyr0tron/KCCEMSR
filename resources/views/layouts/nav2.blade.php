@@ -61,6 +61,14 @@ if(!isset($second)) $second = "not defined";
         <li class="header">ADMIN DASHBOARD</li>
         <li class="{{$menu_item=='dashboard'?'active':''}}"><a href="{{route("admin_dashboard")}}"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>
         <li class="{{$menu_item=='carousel'?'active':''}}"><a href="{{route("admin_carousel")}}"><i class="fa fa-laptop"></i> <span>Carousel</span></a></li>
+        <li class="{{$menu_item=='testimonials'?'active':''}}">
+          <a href="{{route("admin_testimonials")}}">
+            <i class="fa fa-quote-left"></i> <span>Testimonials</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-blue">{{App\Testimonial::count()}}</small>
+            </span>
+          </a>
+        </li>
         <li class="{{$menu_item=='events'?'active':''}}">
           <a href="{{route("admin_events")}}">
             <i class="fa fa-calendar"></i> <span>Events</span>

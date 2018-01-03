@@ -20,6 +20,7 @@ $(function () {
   if($("#academics-publication").length==1) {
     $("#academics-staff-notices").DataTable();
   }
+  $(".datatable-full").DataTable();
   $("[data-fancybox]").fancybox();
 })
 

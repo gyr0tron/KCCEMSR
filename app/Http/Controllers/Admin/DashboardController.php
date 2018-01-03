@@ -37,6 +37,10 @@ class DashboardController extends Controller
     if(!$car) abort(404,"Page Not Found");
     return view("pages.admin.editcoarouselimage", compact("car"));
   }
+  // Testimonials
+  public function testimonials() {
+    return view("pages.admin.testimonials");
+  }
   // Events
   public function events() {
     return view("pages.admin.events");
