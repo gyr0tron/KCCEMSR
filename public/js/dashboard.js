@@ -1,25 +1,4 @@
 $(function () {
-  if($("users-table").length = 1) {
-    $('#users-table').DataTable();
-  }
-  if($("#carousel-table").length = 1) {
-    $("#carousel-table").DataTable();
-  }
-  if($("#department-table").length =1) {
-    $("#department-table").DataTable();
-  }
-  if($("#announcement-table").length =1) {
-    $("#announcement-table").DataTable();
-  }
-  if($("#department-student-achievenments-table").length==1) {
-    $("#department-student-achievenments-table").DataTable();
-  }
-  if($("#academics-staff-notices").length==1) {
-    $("#academics-staff-notices").DataTable();
-  }
-  if($("#academics-publication").length==1) {
-    $("#academics-staff-notices").DataTable();
-  }
   $(".datatable-full").DataTable();
   $("[data-fancybox]").fancybox();
 })

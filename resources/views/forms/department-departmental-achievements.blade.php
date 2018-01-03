@@ -3,7 +3,7 @@
     <h3 class="box-title">Departmental Achievement</h3>
   </div>
   <div class="box-body">
-    <table id="department-table" class="table table-bordered table-hover">
+    <table id="department-table" class="table table-bordered table-hover datatable-full">
       <thead>
         <tr>
           <th width="80%">Achievment</th>

@@ -3,7 +3,7 @@
     <h3 class="box-title">Exam results</h3>
   </div>
   <div class="box-body">
-    <table id="academics-staff-notices" class="table table-bordered table-hover">
+    <table id="academics-staff-notices" class="table table-bordered table-hover datatable-full">
       <thead>
         <tr>
           <th width="50%">Name</th>

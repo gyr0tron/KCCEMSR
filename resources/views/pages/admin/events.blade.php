@@ -28,7 +28,7 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <table id="carousel-table" class="table table-bordered table-hover table-striped">
+            <table id="events-table" class="table table-bordered table-hover table-striped datatable-full">
               <thead>
                 <tr>
                   <th width="10%">#</th>

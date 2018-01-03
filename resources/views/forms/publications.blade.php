@@ -3,7 +3,7 @@
     <h3 class="box-title">Publications</h3>
   </div>
   <div class="box-body">
-    <table id="academics-publication" class="table table-bordered table-hover">
+    <table id="academics-publication" class="table table-bordered table-hover datatable-full">
       <thead>
         <tr>
           <th width="20%"></th>

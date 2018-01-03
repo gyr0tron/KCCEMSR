@@ -48,7 +48,7 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <table id="users-table" class="table table-bordered table-hover">
+            <table id="users-table" class="table table-bordered table-hover  datatable-full">
               <thead>
                 <tr>
                   <th>Username</th>

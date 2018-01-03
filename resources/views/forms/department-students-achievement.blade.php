@@ -3,7 +3,7 @@
     <h3 class="box-title">Student's Achievement</h3>
   </div>
   <div class="box-body">
-    <table id="department-student-achievenments-table" class="table table-bordered table-hover">
+    <table id="department-student-achievenments-table" class="table table-bordered table-hover datatable-full">
       <thead>
         <tr>
           <th width="10%">Photo</th>
@@ -77,7 +77,7 @@
     <h3 class="box-title">Academic Toppers</h3>
   </div>
   <div class="box-body">
-    <table id="department-student-achievenments-table" class="table table-bordered table-hover">
+    <table id="department-student-achievenments-table" class="table table-bordered table-hover datatable-full">
       <thead>
         <tr>
           <th width="50%">Name</th>

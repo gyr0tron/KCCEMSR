@@ -24,7 +24,7 @@
             <h3 class="box-title">All Messages</h3>
           </div>
           <div class="box-body">
-            <table id="users-table" class="table table-bordered table-hover">
+            <table id="messages-table" class="table table-bordered table-hover datatable-full">
               <thead>
                 <tr>
                   <th width="20%">Name</th>
