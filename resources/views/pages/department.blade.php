@@ -116,21 +116,36 @@
 							</tr>
 						</thead>
 						<tbody style="box-shadow: 1px 1px 10px 0px #b1b1b1;">
-							<tr>
-								<td class="text-left">Final Year</td>
-								<td class="text-left">Chodankar Trusha</td>
-								<td class="text-left">Dalvi Vaidehi</td>
-							</tr>
-							<tr>
-								<td class="text-left">Third Year</td>
-								<td class="text-left">Ayare Pranav</td>
-								<td class="text-left">Warsi Maroof</td>
-							</tr>
-							<tr>
-								<td class="text-left">Second Year</td>
-								<td class="text-left">Tulsankar Minal</td>
-								<td class="text-left">Berde Tejal</td>
-							</tr>
+							@php
+								$toppers = App\AcademicTopper::where('year',4)->where('department',$dep->url)->orderBy('pointer', 'desc')->get();
+							@endphp
+							@if (count($toppers) >= 2)
+								<tr>
+									<td class="text-left">Final Year</td>
+									<td class="text-left">{{$toppers[0]->name}}&nbsp;({{$toppers[0]->pointer}})</td>
+									<td class="text-left">{{$toppers[1]->name}}&nbsp;({{$toppers[1]->pointer}})</td>
+								</tr>
+							@endif
+							@php
+								$toppers = App\AcademicTopper::where('year',3)->where('department',$dep->url)->orderBy('pointer', 'desc')->get();
+							@endphp
+							@if (count($toppers) >= 2)
+								<tr>
+									<td class="text-left">Third Year</td>
+									<td class="text-left">{{$toppers[0]->name}}&nbsp;({{$toppers[0]->pointer}})</td>
+									<td class="text-left">{{$toppers[1]->name}}&nbsp;({{$toppers[1]->pointer}})</td>
+								</tr>
+							@endif
+							@php
+								$toppers = App\AcademicTopper::where('year',2)->where('department',$dep->url)->orderBy('pointer', 'desc')->get();
+							@endphp
+							@if (count($toppers) >= 2)
+								<tr>
+									<td class="text-left">Second Year</td>
+									<td class="text-left">{{$toppers[0]->name}}&nbsp;({{$toppers[0]->pointer}})</td>
+									<td class="text-left">{{$toppers[1]->name}}&nbsp;({{$toppers[1]->pointer}})</td>
+								</tr>
+							@endif
 						</tbody>
 					</table>
 				</div>
