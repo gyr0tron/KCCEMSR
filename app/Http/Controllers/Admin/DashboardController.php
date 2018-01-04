@@ -66,6 +66,11 @@ class DashboardController extends Controller
     if(!$dep) abort(404, 'Page Not Found');
     return view("pages.admin.department", compact("dep","action"));
   }
+  public function department_edit($url, $action, $edit) {
+    $dep = Department::where("url",$url)->first();
+    if(!$dep) abort(404, 'Page Not Found');
+    return view("pages.admin.department", compact("dep","action","edit"));
+  }
   // Users
   public function users()
   {
@@ -75,7 +80,7 @@ class DashboardController extends Controller
     return view("pages.admin.users");
   }
   // Edit User
-  public function edituser($id)
+  public function edituser($edit)
   {
     if(!Auth::user()->is_admin()) {
       return redirect()->route("admin_dashboard");

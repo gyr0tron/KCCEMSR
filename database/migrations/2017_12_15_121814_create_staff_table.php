@@ -16,15 +16,15 @@ class CreateStaffTable extends Migration
     Schema::create('staff', function (Blueprint $table) {
       $table->increments('id');
       $table->string('name', 191)->unique();
-      $table->string('email', 191)->unique();
-      $table->string('image');
-      $table->string('displayname');
-      $table->longtext('qualification');
-      $table->string('experience');
-      $table->string('designation');
-      $table->longtext('interest');
-      $table->longtext('workshops');
-      $table->longtext('publications');
+      $table->string('email', 191)->nullable();
+      $table->string('image')->nullable();
+      $table->string('displayname')->nullable();
+      $table->longtext('qualification')->nullable();
+      $table->string('experience')->nullable();
+      $table->string('designation')->nullable();
+      $table->longtext('interest')->nullable();
+      $table->longtext('workshops')->nullable();
+      $table->longtext('publications')->nullable();
       $table->string('department')->nullable();
       $table->integer('created_by');
       $table->integer('updated_by');

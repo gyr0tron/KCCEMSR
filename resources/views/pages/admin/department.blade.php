@@ -24,17 +24,23 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-10">
-        @if ($action == "overview")
-          @include('forms.department-overview',compact("dep"))
-        @endif
-        @if ($action == "departmental-achievements")
-          @include('forms.department-departmental-achievements',compact("dep"))
-        @endif
-        @if ($action == "students-achievement")
-          @include('forms.department-students-achievement',compact("dep"))
-        @endif
-        @if ($action == "staff")
-          @include('forms.department-staff',compact("dep"))
+        @if (isset($edit))
+          @if ($action == "staff")
+            @include('forms.department-staff-edit',compact("dep","edit"))
+          @endif
+        @else
+          @if ($action == "overview")
+            @include('forms.department-overview',compact("dep","action"))
+          @endif
+          @if ($action == "departmental-achievements")
+            @include('forms.department-departmental-achievements',compact("dep","action"))
+          @endif
+          @if ($action == "students-achievement")
+            @include('forms.department-students-achievement',compact("dep","action"))
+          @endif
+          @if ($action == "staff")
+            @include('forms.department-staff',compact("dep","action"))
+          @endif
         @endif
       </div>
       <div class="col-sm-2">

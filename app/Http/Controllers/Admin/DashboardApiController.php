@@ -339,13 +339,13 @@ class DashboardApiController extends Controller
   public function addStaff(AdminAddStaff $request)
   {
     $staff = new Staff();
-    $staff->name = $request->input("name");
-    $staff->displayname = $request->input("display");
-    $staff->email = $request->input("email");
-    $staff->designation = $request->input("designation");
-    $staff->qualification = $request->input("qualification");
-    $staff->experience = $request->input("experience");
-    $staff->interest = $request->input("interest");
+    $staff->name = $request->input("name","");
+    $staff->displayname = $request->input("display","");
+    $staff->email = $request->input("email","");
+    $staff->designation = $request->input("designation","");
+    $staff->qualification = $request->input("qualification","");
+    $staff->experience = $request->input("experience","");
+    $staff->interest = $request->input("interest","");
     $staff->department = $request->input("department","");
     $staff->workshops = $request->input("workshops","");
     $staff->publications = $request->input("publications","");
@@ -354,6 +354,28 @@ class DashboardApiController extends Controller
     $staff->uploadImage($request->image);
     $staff->save();
     return ResponseBuilder::send(true, "", "");
+  }
+  public function editStaff(Request $request)
+  {
+    $id = $request->input('staff-id','-1');
+    $staff = Staff::where('id',$id)->first();
+    if(!$staff) abourt(404,"Not Found");
+    $staff->name = $request->input("name","");
+    $staff->displayname = $request->input("display","");
+    $staff->email = $request->input("email","");
+    $staff->designation = $request->input("designation","");
+    $staff->qualification = $request->input("qualification","");
+    $staff->experience = $request->input("experience","");
+    $staff->interest = $request->input("interest","");
+    $staff->workshops = $request->input("workshops","");
+    $staff->publications = $request->input("publications","");
+    $staff->updated_by = Auth::user()->id;
+    if($request->image) {
+      $staff->removeImage();
+      $staff->uploadImage($request->image);
+    }
+    $staff->save();
+    return ResponseBuilder::send(true, "", route('admin_department',[$staff->department, 'staff']));
   }
   // Remove Staff
   public function removeStaff(Request $request)
