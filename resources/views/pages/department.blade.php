@@ -55,7 +55,17 @@
 						</div>
 						<div class="col-md-6">
 							<h2 style="margin-top: 0px; margin-bottom: 5px;">Program Outcomes</h2>
-							<p>{{$dep->outcome}}</p></div>
+							<ul class="list-unstyled">
+								@php
+								$data = explode(".", $dep->outcome);
+								@endphp
+								@foreach ($data as $d)
+									@if (strlen($d) > 2)
+										<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">{{$d}}.</p></li>
+									@endif
+								@endforeach
+							</ul>
+						</div>
 						</div>
 					</div>
 				</div>
