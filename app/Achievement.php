@@ -26,4 +26,9 @@ class Achievement extends Model
       $path = public_path('public/images');
       File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
     }
+    public function removeImage() {
+      $filename = $this->image;
+      $filepath = public_path('public/images/' .$filename);
+      File::delete($filepath);
+    }
 }

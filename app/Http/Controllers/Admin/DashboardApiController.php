@@ -296,6 +296,34 @@ class DashboardApiController extends Controller
     $ach->save();
     return ResponseBuilder::send(true, "","");
   }
+  // Edit Department Student Achievment
+  public function editStudentAchievement(Request $request)
+  {
+    $id = $request->input('achievement-id','-1');
+    $ach = Achievement::where('id',$id)->first();
+    if(!$ach) abort(404, 'Not Found');
+    $ach->name = $request->input("name","");
+    $ach->description = $request->input("description", "");
+    $ach->updated_by = Auth::user()->id;
+    $file = $request->image;
+    if($file) {
+      $ach->removeImage();
+      $ach->uploadImage($file);
+    }
+    $ach->save();
+    return ResponseBuilder::send(true, "", route('admin_department',[$ach->department, 'students-achievement']));
+  }
+  // Edit Departmental Achievement
+  public function editDepartmentalAchievement(Request $request)
+  {
+    $id = $request->input('achievement-id','-1');
+    $ach = Achievement::where('id',$id)->first();
+    if(!$ach) abort(404, 'Not Found');
+    $ach->description = $request->input("description", "");
+    $ach->updated_by = Auth::user()->id;
+    $ach->save();
+    return ResponseBuilder::send(true, "", route('admin_department',[$ach->department, 'departmental-achievements']));
+  }
   // Remove Departmental Achievement
   public function removeDepartmentalAchievement(Request $request)
   {
@@ -311,6 +339,7 @@ class DashboardApiController extends Controller
     $id = $request->input("id","-1");
     $ach = Achievement::where("id",$id)->where("type","0")->first();
     if(!$ach) abort(404, 'Not Found');
+    $ach->removeImage();
     $ach->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }

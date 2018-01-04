@@ -25,6 +25,12 @@
     <div class="row">
       <div class="col-xs-10">
         @if (isset($edit))
+          @if ($action == "departmental-achievements")
+            @include('forms.department-departmental-achievements-edit',compact("dep","edit"))
+          @endif
+          @if ($action == "students-achievement")
+            @include('forms.department-students-achievement-edit',compact("dep","edit"))
+          @endif
           @if ($action == "staff")
             @include('forms.department-staff-edit',compact("dep","edit"))
           @endif

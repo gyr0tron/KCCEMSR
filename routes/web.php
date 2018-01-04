@@ -99,8 +99,10 @@ Route::prefix('/api/admin')->group(function () {
 
   Route::post("/department/overview","Admin\DashboardApiController@departmentOverview");
   Route::post("/department/da/add","Admin\DashboardApiController@addDepartmentalAchievement");
+  Route::post("/department/da/edit","Admin\DashboardApiController@editDepartmentalAchievement");
   Route::post("/department/da/remove","Admin\DashboardApiController@removeDepartmentalAchievement");
   Route::post("/department/sa/add","Admin\DashboardApiController@addStudentAchievement");
+  Route::post("/department/sa/edit","Admin\DashboardApiController@editStudentAchievement");
   Route::post("/department/sa/remove","Admin\DashboardApiController@removeStudentAchievement");
   Route::post("/department/staff/add","Admin\DashboardApiController@addStaff");
   Route::post("/department/staff/edit","Admin\DashboardApiController@editStaff");
