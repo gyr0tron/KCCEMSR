@@ -34,7 +34,7 @@ if(!$staff) abort('404',"Not found!");
       <div class="form-group">
         <label class="control-label col-sm-2" for="image">Photo:</label>
         <div class="col-sm-9">
-          <img src="{{$staff->getUrl()}}" class="img-thumbnail" />
+          <img src="{{$staff->getUrl()}}" class="img-thumbnail" width="172"/>
           <br />
           <br />
           <input type="file" class="form-control" id="image" name="image" accept="image/*">
