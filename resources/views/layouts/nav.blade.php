@@ -58,8 +58,10 @@
 										<ul class="sub-menu">
 											<li><a href="{{route('curriculum-plan')}}">Curriculum Plan</a></li>
 											<li><a href="{{route('staff-notices')}}">Staff Noticies</a></li>
-											<li><a href="http://www.learningatkc.com/moodle/login/index.php">Gate / PSO</a></li>
+											<li><a href="http://www.learningatkc.com/moodle/login/index.php">Gate / PSU</a></li>
 											<li><a href="{{route('publications')}}">Publications / News Letter</a></li>
+											<li><a href="{{route('exam-results')}}">Exam Notices</a></li>
+											<li><a href="{{route('exam-results')}}">Exam Timetable</a></li>
 											<li><a href="{{route('exam-results')}}">Exam Results</a></li>
 										</ul>
 									</li>
@@ -86,7 +88,7 @@
 											<li><a href="{{route('admissions', 'institute-prospectus')}}">Institute Prospectus</a></li>
 											<li><a href="{{route('admissions', 'dte-admission-information-brochure')}}">DTE Admission Information Brochure</a></li>
 											<li><a href="{{route('admissions', 'total-intake')}}">Total Intake</a></li>
-											<li><a href="{{route('admissions', 'cap-rount-allottment')}}">Cap Rount Allottment</a></li>
+											<li><a href="{{route('admissions', 'cap-rount-allottment')}}">Cap Round Allottment</a></li>
 											<li><a href="{{route('admissions', 'direct-second-year')}}">Direct Second Year</a></li>
 											<li><a href="{{route('admissions', 'anti-ragging-affidavit')}}">Anti-ragging Affidavit</a></li>
 										</ul>
@@ -94,8 +96,6 @@
 									<li class="sub-menu-parent"><a href="#">Mandatory Disclosure</a>
 										<ul class="sub-menu">
 											<li><a href="#">AICTE affiliation</a></li>
-											<li><a href="#">University Of Mumbai affiliation</a></li>
-											<li><a href="#">DTE affiliation</a></li>
 											<li><a href="#">Audit statement</a></li>
 										</ul>
 									</li>
