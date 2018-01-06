@@ -270,11 +270,16 @@ class DashboardApiController extends Controller
   public function addDepartmentalAchievement(AdminAddDepartmentalAchievement $request)
   {
     $ach = new Achievement();
+    $ach->name = $request->input("name","");
     $ach->description = $request->input("description", "");
     $ach->department = $request->input("department", "");
     $ach->type = "1";
     $ach->created_by = Auth::user()->id;
     $ach->updated_by = Auth::user()->id;
+    $file = $request->image;
+    if($file) {
+      $ach->uploadImage($file);
+    }
     $ach->save();
     return ResponseBuilder::send(true, "","");
   }
@@ -319,8 +324,14 @@ class DashboardApiController extends Controller
     $id = $request->input('achievement-id','-1');
     $ach = Achievement::where('id',$id)->first();
     if(!$ach) abort(404, 'Not Found');
+    $ach->name = $request->input("name","");
     $ach->description = $request->input("description", "");
     $ach->updated_by = Auth::user()->id;
+    $file = $request->image;
+    if($file) {
+      $ach->removeImage();
+      $ach->uploadImage($file);
+    }
     $ach->save();
     return ResponseBuilder::send(true, "", route('admin_department',[$ach->department, 'departmental-achievements']));
   }

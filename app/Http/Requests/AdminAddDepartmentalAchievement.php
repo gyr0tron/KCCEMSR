@@ -32,7 +32,9 @@ class AdminAddDepartmentalAchievement extends FormRequest
   public function rules()
   {
     return [
-      'description' => 'required|string'
+      'name' => 'required|string',
+      'description' => 'required|string',
+      'image' => 'image',
     ];
   }
 }

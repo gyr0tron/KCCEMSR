@@ -11,11 +11,26 @@ if(!$ach) abort('404',"Not found!");
       <input type="hidden" name="department" value="{{$dep->url}}">
       <input type="hidden" name="achievement-id" value="{{$ach->id}}">
       <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Name:</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="name" name="name" value="{{$ach->name}}">
+          <p class="help-block"></p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="image">Photo:</label>
+        <div class="col-sm-9">
+          <img src="{{$ach->getUrl()}}" class="img-thumbnail" width="172"/>
+          <br />
+          <br />
+          <input type="file" class="form-control" id="image" name="image">
+          <p class="help-block"></p>
+        </div>
+      </div>
+      <div class="form-group">
         <label class="control-label col-sm-2" for="description">Achievment:</label>
         <div class="col-sm-9">
-          <textarea name="description" id="description" class="textarea" style="width: 100%; height: 500px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
-            {{$ach->description}}
-          </textarea>
+          <textarea name="description" id="description" class="textarea" style="width: 100%; height: 500px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$ach->description}}</textarea>
           <p class="help-block"></p>
         </div>
       </div>
