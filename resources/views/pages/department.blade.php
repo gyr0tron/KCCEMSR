@@ -74,37 +74,19 @@
 		<div class="section translucent-bg bg-image-1 blue">
 			<div class="container object-non-visible" data-animation-effect="fadeIn">
 				<h1 id="services"  class="text-center title">Departmental Achievement</h1>
-				@php
-					$achivements = App\Achievement::where('type','1')->where('department',$dep->url)->get();
-					$total = count($achivements);
-					$left =  ceil($total/2);
-				@endphp
 				<div class="space"></div>
-				<div class="row" style="font-size:16px;">
-					<div class="col-sm-6">
-						@for ($i=0; $i < $left; $i++)
-							<div class="media">
-								<div class="media-body text-right">
-									<p>{{strip_tags($achivements[$i]->description)}}</p>
-								</div>
-								<div class="media-right">
-									<i class="fa fa-caret-right rotate-180"></i>
-								</div>
-							</div>
-						@endfor
-					</div>
-					<div class="space visible-xs"></div>
-					<div class="col-sm-6">
-						@for ($i=$left; $i < $total; $i++)
-							<div class="media">
-								<div class="media-left">
-									<i class="fa fa-caret-right"></i>
-								</div>
-								<div class="media-body">
-									<p>{{strip_tags($achivements[$i]->description)}}</p>
-								</div>
-							</div>
-						@endfor
+				<div class="col-xs-12 col-sm-12 col-md-6">
+					<div class="media">
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<img src="http://via.placeholder.com/750x500" alt="">
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">Achievement Name</h3>
+							<blockquote>
+								<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">Culpa pariatur et et non excepteur. Anim officia laborum magna incididunt aute ea. Id et qui Lorem fugiat mollit voluptate dolore anim nulla adipisicing elit. Consectetur ipsum duis consectetur pariatur nulla do. Mollit veniam id ullamco labore consequat commodo elit dolor exercitation proident veniam consectetur. Quis incididunt ullamco Lorem culpa elit sunt sint aute esse duis deserunt deserunt.</p>
+								<a class="" style="cursor:pointer;">Read more</a>
+							</blockquote>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -162,15 +144,16 @@
 				<div class="row">
 					<p class="lead text-center" style="margin-top: 3%; margin-bottom: 3%;">With academia, our students are doing best in all the areas as well...</p>
 					@foreach (App\Achievement::where('type','0')->where('department',$dep->url)->get() as $achivement)
-						<div class="col-xs-6 col-sm-6 col-md-6">
+						<div class="col-xs-12 col-sm-12 col-md-6">
 							<div class="media">
-								<div class="col-xs-3 col-sm-3 col-md-3">
+								<div class="col-xs-4 col-sm-4 col-md-4">
 									<img src="{{$achivement->getUrl()}}" alt="">
 								</div>
 								<div class="media-body">
 									<h3 class="media-heading">{{$achivement->name}}</h3>
 									<blockquote>
-										<p>{{strip_tags($achivement->description)}}</p>
+										<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
+										<a class="" style="cursor:pointer;">Read more</a>
 									</blockquote>
 								</div>
 							</div>
@@ -200,22 +183,23 @@
 			@endforeach
 		</div>
 		<div class="container">
-			<h1 class="title text-center" style="margin-top: 5%;margin-bottom: 2%;">List of Staff:</h1>
+			<h1 class="title text-center" style="margin-top: 5%;margin-bottom: 0px;">List of Staff:</h1>
+			<p style="text-align: center;">(Click on the picture to read more.)</p>
 			<div class="container">
 				@foreach (App\Staff::where('department', $dep->url)->get() as $staff)
-					<div class="col-md-3 col-sm-3 col-xs-3">
+					<div class="col-md-3 col-sm-12 col-xs-12">
 						<div class="team-member">
-							<div class="team-img">
+							<div class="team-img" style="height: 300px;">
 								<img src="{{$staff->getUrl()}}" alt="team member" class="img-responsive">
 							</div>
 							<div class="team-hover">
 								<div class="desk">
 									<h4>{{$staff->displayname}}</h4>
 									{{-- <p><b>Designation:</b>{{$staff->designation}}</p> --}}
-									<p><b>Qualification:</b>{{$staff->qualification}}</p>
+									{{--  <p><b>Qualification:</b>{{$staff->qualification}}</p>
 									<p><b>Experience:</b>{{$staff->experience}} Years</p>
-									<p class="text-ellipsis-small"><b>Area of Interest:</b>{{$staff->interest}} Years</p>
-									<a href="{{route('staff-profile', $staff->id)}}">View profile</a>
+									<p class="text-ellipsis-small"><b>Area of Interest:</b>{{$staff->interest}} Years</p>  --}}
+									<a class="btn btn-sm btn-default" href="{{route('staff-profile', $staff->id)}}">View profile</a>
 								</div>
 							</div>
 						</div>

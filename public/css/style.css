@@ -840,9 +840,9 @@ textarea {
 	z-index: 1;
 }
 
-.arrow-submenu.hidden {
-  /* +transform(translateY(100%)); */
-}
+/* .arrow-submenu.hidden {
+  +transform(translateY(100%));
+} */
 
 .hidn-arw {
 	visibility: hidden;
@@ -1357,12 +1357,52 @@ font-weight: bold;
 
 /* staff page  */
 
+.main-content-sub {
+	margin-top: 7em;
+}
+
+@media (max-width: 1260px) {
+	.main-content-sub {
+		margin-top: 3em;
+	}
+}
+
+@media (max-width: 1260px) {
+	.resp-text-name {
+    font-size: 3.55vw;
+	}
+}
+
+.resp-text-head {
+	font-size: 2em;
+}
+
+@media (max-width: 1260px) {
+	.resp-text-head {
+    font-size: 7vw;
+	}
+}
+
+.resp-text-sub {
+	font-size: 1.5em;
+}
+
+@media (max-width: 1260px) {
+	.resp-text-sub {
+    font-size: 3.5vw;
+	}
+}
+
+.align-marg {
+	margin-left: 3%;
+}
+
 .line {   
   border-left: 1px dashed #ccc;
 }
 
 .stats {
-	font-size:1.7em;
+	font-size:1.5em;
   position: absolute;
 	margin: auto;
   right: 0;
@@ -1413,3 +1453,6 @@ font-weight: bold;
   height: auto;
   display: block;
 }
+
+/* testimonials */
+
