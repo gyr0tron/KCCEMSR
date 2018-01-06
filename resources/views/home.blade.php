@@ -11,7 +11,7 @@ $nav_trans = 1
 		<!-- ================ -->
 		<div id="banner" class="banner">
 			<div class="banner-image"></div>
-			<div class="arrow bounce" id="arw"></div>
+			<div class="arrow bounce" id="arw" onclick="location.href='/#welcome';" style="cursor: pointer; z-index: 1;"></div>
 			<div class="banner-caption">
 				<div class="container">
 					<div class="row">
@@ -20,7 +20,7 @@ $nav_trans = 1
 								class="txt-rotate"
 								data-period="2000"
 								data-rotate='[ "nerdy.", "simple.", "creative.", "fun!" ]'></span></h1>
-							<p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos debitis provident nulla illum minus enim praesentium repellendus ullam cupiditate reiciendis optio voluptatem, recusandae nobis quis aperiam, sapiente libero ut at.</p>
+							<p class="lead text-center" id="welcome">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos debitis provident nulla illum minus enim praesentium repellendus ullam cupiditate reiciendis optio voluptatem, recusandae nobis quis aperiam, sapiente libero ut at.</p>
 						</div>
 					</div>
 				</div>
