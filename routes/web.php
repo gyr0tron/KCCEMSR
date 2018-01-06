@@ -28,6 +28,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/academics/publications','AcademicsController@getPublications')->name('publications');
 
   Route::get('/admissions/{action}','AdmissionsController@get')->name('admissions');
+  Route::get('/mandatory-disclosure/{action}','AdmissionsController@get')->name('mandatory-disclosure');
 
   Route::get('/staff/profile/{id}','DepartmentController@getProfile')->name('staff-profile');
   Route::get('/event/{id}','DepartmentController@getEvent')->name('event');

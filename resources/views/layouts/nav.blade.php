@@ -81,7 +81,7 @@
 											<li><a href="#">Timetable</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Admissions</a>
+									<li class="sub-menu-parent"><a href="">Admissions</a>
 										<ul class="sub-menu" id="large-sub-menu">
 											<li><a href="{{route('admissions', 'admission-criteria')}}">Admission Criteria</a></li>
 											<li><a href="{{route('admissions', 'fees-notices')}}">Fees Notices</a></li>
@@ -93,13 +93,13 @@
 											<li><a href="{{route('admissions', 'anti-ragging-affidavit')}}">Anti-ragging Affidavit</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Mandatory Disclosure</a>
+									<li class="sub-menu-parent"><a>Mandatory Disclosure</a>
 										<ul class="sub-menu">
-											<li><a href="#">AICTE affiliation</a></li>
-											<li><a href="#">Audit statement</a></li>
+											<li><a href="{{route('mandatory-disclosure', 'aicte-affiliation')}}">AICTE affiliation</a></li>
+											<li><a href="{{route('mandatory-disclosure', 'audit-statement')}}">Audit statement</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Alumni</a>
+									<li class="sub-menu-parent"><a>Alumni</a>
 										<ul class="sub-menu">
 											{{-- <li><a href="#">Student Login/Information</a></li>
 											<li><a href="#">Student Feedback</a></li> --}}
