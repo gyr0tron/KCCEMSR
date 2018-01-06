@@ -21,14 +21,14 @@
       <div class="form-group">
         <label class="control-label col-sm-2" for="description">Description:</label>
         <div class="col-sm-9">
-          <textarea name="description" id="description" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$dep->description}}</textarea>
+          <textarea name="description" id="description" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{strip_tags($dep->description)}}</textarea>
           <p class="help-block"></p>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="message">HOD's Message:</label>
         <div class="col-sm-9">
-          <textarea name="message" id="message" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$dep->message}}</textarea>
+          <textarea name="message" id="message" class="textarea" style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{strip_tags($dep->message)}}</textarea>
           <p class="help-block"></p>
         </div>
       </div>

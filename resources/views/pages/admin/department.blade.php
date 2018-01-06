@@ -68,21 +68,4 @@
   </section>
 @endsection
 @section('post')
-  <script type="text/javascript" src="{{ asset('js/bootstrap3-wysihtml5.all.min.js') }}"></script>
-  <script>
-  $(function () {
-    $('#description').wysihtml5({
-      toolbar: {
-        "font-styles": false,
-        "emphasis": true,
-        "lists": false,
-        "html": false,
-        "link": true,
-        "image": false,
-        "color": false,
-        "blockquote": true
-      }
-    });
-  })
-  </script>
 @endsection
