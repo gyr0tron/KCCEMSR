@@ -60,9 +60,9 @@
 											<li><a href="{{route('staff-notices')}}">Staff Noticies</a></li>
 											<li><a href="http://www.learningatkc.com/moodle/login/index.php">Gate / PSU</a></li>
 											<li><a href="{{route('publications')}}">Publications / News Letter</a></li>
-											<li><a href="{{route('exam-results')}}">Exam Notices</a></li>
-											<li><a href="{{route('exam-results')}}">Exam Timetable</a></li>
-											<li><a href="{{route('exam-results')}}">Exam Results</a></li>
+											<li><a href="{{route('exam', 'notices')}}">Exam Notices</a></li>
+											<li><a href="{{route('exam', 'timetable')}}">Exam Timetable</a></li>
+											<li><a href="{{route('exam', 'results')}}">Exam Results</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="#">Departments</a>

@@ -33,6 +33,8 @@ class AdminAddExamResult extends FormRequest
   {
     return [
       'name' => 'required',
+      'department' => 'required',
+      'year' => 'integer',
       'file' => 'required|file'
     ];
   }

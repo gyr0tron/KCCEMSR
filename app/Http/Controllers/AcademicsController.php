@@ -29,13 +29,20 @@ class AcademicsController extends Controller
     $url = $file->getUrl();
     return view('pages.pdfview', compact("title", "url"));
   }
-  public function getExamResults()
+  protected $exam_actions = ['results', 'notices', 'timetable'];
+  protected $exam_title = ['Exam Results', 'Exam Notices', 'Exam Timetable'];
+  public function getExam($action)
   {
-    return view('pages.exam-results');
+    if(!in_array($action, $this->exam_actions)) abort("404");
+    $title = $this->exam_title[array_search($action, $this->exam_actions)];
+    $type = "exam-$action";
+    return view('pages.exam', compact('title','action','type'));
   }
-  public function getExamResultsbyId($id)
+  public function getExamByID($action, $id)
   {
-    $file = FileUpload::where('type','exam-results')->where('id',$id)->first();
+    if(!in_array($action, $this->exam_actions)) abort("404");
+    $type = "exam-$action";
+    $file = FileUpload::where('type', $type)->where('id',$id)->first();
     if(!$file) abort("404");
     $title = $file->name;
     $url = $file->getUrl();
@@ -43,6 +50,6 @@ class AcademicsController extends Controller
   }
   public function getPublications()
   {
-  return view('pages.publications');
+    return view('pages.publications');
   }
 }

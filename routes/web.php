@@ -23,8 +23,8 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/academics/curriculum-plan','AcademicsController@getCurriculumplan')->name('curriculum-plan');
   Route::get('/academics/staff-notices','AcademicsController@getStaffNotices')->name('staff-notices');
   Route::get('/academics/staff-notices/{id}','AcademicsController@getStaffNoticebyId')->name('staff-notices-id');
-  Route::get('/academics/exam-results','AcademicsController@getExamResults')->name('exam-results');
-  Route::get('/academics/exam-results/{id}','AcademicsController@getExamResultsbyId')->name('exam-results-id');
+  Route::get('/academics/exam/{action}','AcademicsController@getExam')->name('exam');
+  Route::get('/academics/exam/{action}/{id}','AcademicsController@getExamByID')->name('exam-id');
   Route::get('/academics/publications','AcademicsController@getPublications')->name('publications');
 
   Route::get('/admissions/{action}','AdmissionsController@get')->name('admissions');
@@ -118,7 +118,7 @@ Route::prefix('/api/admin')->group(function () {
 
   Route::post("/academics/curriculum-plan","Admin\DashboardApiController@updateCurriculum");
   Route::post("/academics/staff-notices/add","Admin\DashboardApiController@addStaffnotices");
-  Route::post("/academics/exam-results/add","Admin\DashboardApiController@addExamResults");
+  Route::post("/academics/exam/{action}/add","Admin\DashboardApiController@addExamResults");
   Route::post("/academics/publication/add","Admin\DashboardApiController@addPublication");
   Route::post("/academics/publication/remove","Admin\DashboardApiController@removePublication");
 

@@ -37,4 +37,20 @@ class FileUpload extends Model
     $path = public_path('public/files');
     File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
   }
+
+  public function getYear()
+  {
+    switch ($this->year) {
+      case '1':
+      return "FE";
+      case '2':
+      return "SE";
+      case '3':
+      return "TE";
+      case '4':
+      return "BE";
+      default:
+      return "Undefined";
+    }
+  }
 }

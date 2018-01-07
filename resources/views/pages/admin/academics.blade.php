@@ -29,7 +29,13 @@
           @include('forms.staff-notices')
         @endif
         @if ($action == "exam-results")
-          @include('forms.exam-results')
+          @include('forms.exam', ["title"=>"Exam Results", "action"=>"exam-results"])
+        @endif
+        @if ($action == "exam-notices")
+          @include('forms.exam', ["title"=>"Exam Notices", "action"=>"exam-notices"])
+        @endif
+        @if ($action == "exam-timetable")
+          @include('forms.exam', ["title"=>"Exam Timetable", "action"=>"timetable"])
         @endif
         @if ($action == "publications")
           @include('forms.publications')
@@ -45,6 +51,8 @@
               <li class="{{$action=="curriculum-plan"?"active":""}}"><a href="{{route("admin_academics", "curriculum-plan")}}">Curriculum Plan</a></li>
               <li class="{{$action=="staff-notices"?"active":""}}"><a href="{{route("admin_academics", "staff-notices")}}">Staff Notices</a></li>
               <li class="{{$action=="exam-results"?"active":""}}"><a href="{{route("admin_academics", "exam-results")}}">Exam Results</a></li>
+              <li class="{{$action=="exam-notices"?"active":""}}"><a href="{{route("admin_academics", "exam-notices")}}">Exam Notices</a></li>
+              <li class="{{$action=="exam-timetable"?"active":""}}"><a href="{{route("admin_academics", "exam-timetable")}}">Exam Timetable</a></li>
               <li class="{{$action=="publications"?"active":""}}"><a href="{{route("admin_academics", "publications")}}">Publications</a></li>
             </ul>
           </div>

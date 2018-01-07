@@ -474,12 +474,13 @@ class DashboardApiController extends Controller
     $upload->save();
     return ResponseBuilder::send(true, "", "");
   }
-  public function addExamResults(AdminAddExamResult $request)
+  public function addExamResults($action, AdminAddExamResult $request)
   {
-    $type = "exam-results";
     $upload = new FileUpload();
-    $upload->type = $type;
+    $upload->type = $action;
     $upload->name = $request->input('name');
+    $upload->department = $request->input('department');
+    $upload->year = $request->input('year');
     $upload->created_by = Auth::user()->id;
     $upload->updated_by = Auth::user()->id;
     $upload->filename = $upload->uploadFile($request->file('file'));
