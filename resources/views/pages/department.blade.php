@@ -55,7 +55,11 @@
 								@endphp
 								@foreach ($data as $d)
 									@if (strlen($d) > 2)
-										<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">{{$d}}.</p></li>
+										@php
+											$head = explode(":", $d, 2)[0];
+											$d = str_replace($head, "", $d);
+										@endphp
+										<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix"><strong>{{$head}}</strong>{{$d}}</p></li>
 									@endif
 								@endforeach
 							</ul>
