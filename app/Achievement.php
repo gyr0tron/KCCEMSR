@@ -31,14 +31,4 @@ class Achievement extends Model
       $filepath = public_path('public/images/' .$filename);
       File::delete($filepath);
     }
-    public function generateUrl()
-    {
-      $url = strtolower($this->name);
-      $url = str_replace(" ", "-", $url);
-      $no = 1;
-      while(Achievement::where('url',$url)->first()) {
-        $url = $url.'-'.$no++;
-      }
-      $this->url = $url;
-    }
 }

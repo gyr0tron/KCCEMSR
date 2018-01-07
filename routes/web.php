@@ -33,7 +33,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
 
   Route::get('/staff/profile/{id}','DepartmentController@getProfile')->name('staff-profile');
   Route::get('/event/{url}','DepartmentController@getEvent')->name('event');
-  Route::get('/achievement/{url}','DepartmentController@getAchievement')->name('achievement');
+  Route::get('/achievement/{id}','DepartmentController@getAchievement')->name('achievement');
 });
 
 
@@ -134,10 +134,6 @@ Route::prefix('/api/admin')->group(function () {
 
 Route::prefix('/test')->group(function() {
   Route::get('/generate-url', function() {
-    foreach (App\Achievement::all() as $achivement) {
-      $achivement->generateUrl();
-      $achivement->save();
-    }
     foreach (App\Event::all() as $event) {
       $event->generateUrl();
       $event->save();

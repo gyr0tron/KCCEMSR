@@ -279,7 +279,6 @@ class DashboardApiController extends Controller
     $ach->type = "1";
     $ach->created_by = Auth::user()->id;
     $ach->updated_by = Auth::user()->id;
-    $ach->generateUrl();
     $file = $request->image;
     if($file) {
       $ach->uploadImage($file);
@@ -298,7 +297,6 @@ class DashboardApiController extends Controller
     $ach->type = "0";
     $ach->created_by = Auth::user()->id;
     $ach->updated_by = Auth::user()->id;
-    $ach->generateUrl();
     $file = $request->image;
     if($file) {
       $ach->uploadImage($file);
@@ -306,7 +304,7 @@ class DashboardApiController extends Controller
     $ach->save();
     return ResponseBuilder::send(true, "","");
   }
-  // Edit Department Student Achievment
+  // Edit Department Student Achievement
   public function editStudentAchievement(Request $request)
   {
     $id = $request->input('achievement-id','-1');
@@ -315,7 +313,6 @@ class DashboardApiController extends Controller
     $ach->name = $request->input("name","");
     $ach->description = $request->input("description", "");
     $ach->updated_by = Auth::user()->id;
-    $ach->generateUrl();
     $file = $request->image;
     if($file) {
       $ach->removeImage();
@@ -333,7 +330,6 @@ class DashboardApiController extends Controller
     $ach->name = $request->input("name","");
     $ach->description = $request->input("description", "");
     $ach->updated_by = Auth::user()->id;
-    $ach->generateUrl();
     $file = $request->image;
     if($file) {
       $ach->removeImage();

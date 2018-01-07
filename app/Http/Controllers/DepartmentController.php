@@ -29,9 +29,9 @@ class DepartmentController extends Controller
       if(!$event) abort(404, 'Page Not Found');
       return view('pages.event-details', compact("event"));
     }
-    public function getAchievement($url)
+    public function getAchievement($id)
     {
-      $achivement = Achievement::where('url',$url)->first();
+      $achivement = Achievement::where('id',$id)->first();
       if(!$achivement) abort(404, 'Page Not Found');
       return view('pages.achievement-details', compact("achivement"));
     }
