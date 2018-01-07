@@ -11,6 +11,16 @@
 				<h1 class="text-center"><strong><span>{{$title}}</span></strong></h1>
 				@foreach (App\Department::all() as $dep)
 					<h2 class="title text-left resp-text-head align-marg"><strong>{{$dep->name}}</strong></h2>
+					@if ($dep->isPrimary())
+						<h4 class="text-left align-marg">FE</h4>
+						<hr class="align-marg"/>
+						<ul class="list-unstyled resp-text-sub align-marg">
+							@foreach (App\FileUpload::where('type',$type)->where('department',$dep->url)->where('year',"1")->get() as $fp)
+								<li><i class="fa fa-chevron-right pr-10 text-colored align-marg"></i><a href="{{route('exam-id', [$action, $fp->id])}}">{{$fp->name}}</a></li>
+							@endforeach
+						</ul>
+						@continue
+					@endif
 					<h4 class="text-left align-marg">SE</h4>
 					<hr class="align-marg"/>
 					<ul class="list-unstyled resp-text-sub align-marg">

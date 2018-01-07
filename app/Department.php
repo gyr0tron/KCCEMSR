@@ -40,4 +40,10 @@ class Department extends Model
       File::delete($filepath);
     }
 
+    public function isPrimary()
+    {
+      if($this->url == "humanities-sciences") return true;
+      return false;
+    }
+
 }
