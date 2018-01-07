@@ -75,20 +75,23 @@
 			<div class="container object-non-visible" data-animation-effect="fadeIn">
 				<h1 id="services"  class="text-center title">Departmental Achievement</h1>
 				<div class="space"></div>
-				<div class="col-xs-12 col-sm-12 col-md-6">
-					<div class="media">
-						<div class="col-xs-4 col-sm-4 col-md-4">
-							<img src="http://via.placeholder.com/750x500" alt="">
-						</div>
-						<div class="media-body">
-							<h3 class="media-heading">Achievement Name</h3>
-							<blockquote>
-								<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">Culpa pariatur et et non excepteur. Anim officia laborum magna incididunt aute ea. Id et qui Lorem fugiat mollit voluptate dolore anim nulla adipisicing elit. Consectetur ipsum duis consectetur pariatur nulla do. Mollit veniam id ullamco labore consequat commodo elit dolor exercitation proident veniam consectetur. Quis incididunt ullamco Lorem culpa elit sunt sint aute esse duis deserunt deserunt.</p>
-								<a class="" style="cursor:pointer;">Read more</a>
-							</blockquote>
+				@foreach (App\Achievement::where('type','1')->where('department',$dep->url)->get() as $achivement)
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<div class="media">
+							<div class="col-xs-4 col-sm-4 col-md-4">
+								<img src="{{$achivement->getUrl()}}" alt="">
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">{{$achivement->name}}</h3>
+								<blockquote>
+									<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
+									<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->id)}}">Read more</a>
+								</blockquote>
+							</div>
 						</div>
 					</div>
-				</div>
+				@endforeach
+
 			</div>
 		</div>
 		<!-- section end -->
@@ -153,7 +156,7 @@
 									<h3 class="media-heading">{{$achivement->name}}</h3>
 									<blockquote>
 										<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
-										<a class="" style="cursor:pointer;">Read more</a>
+										<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->id)}}">Read more</a>
 									</blockquote>
 								</div>
 							</div>

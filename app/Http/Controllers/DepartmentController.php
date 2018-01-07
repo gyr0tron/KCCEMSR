@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Department;
 use App\Event;
 use App\Staff;
+use App\Achievement;
 
 class DepartmentController extends Controller
 {
@@ -27,5 +28,11 @@ class DepartmentController extends Controller
       $event = Event::where('id',$id)->first();
       if(!$event) abort(404, 'Page Not Found');
       return view('pages.event-details', compact("event"));
+    }
+    public function getAchievement($id)
+    {
+      $achivement = Achievement::where('id',$id)->first();
+      if(!$achivement) abort(404, 'Page Not Found');
+      return view('pages.achievement-details', compact("achivement"));
     }
 }

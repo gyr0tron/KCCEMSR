@@ -16,8 +16,9 @@ use App\Http\Middleware\MaintenanceCheck;
 // SITE
 Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/',"HomeController@getHome");
-  Route::get('/department/{name}','DepartmentController@get')->name('department');
   Route::get('/about','AboutController@getAbout')->name('about');
+
+  Route::get('/department/{name}','DepartmentController@get')->name('department');
 
 
   Route::get('/academics/curriculum-plan','AcademicsController@getCurriculumplan')->name('curriculum-plan');
@@ -32,6 +33,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
 
   Route::get('/staff/profile/{id}','DepartmentController@getProfile')->name('staff-profile');
   Route::get('/event/{id}','DepartmentController@getEvent')->name('event');
+  Route::get('/achievement/{id}','DepartmentController@getAchievement')->name('achievement');
 });
 
 
