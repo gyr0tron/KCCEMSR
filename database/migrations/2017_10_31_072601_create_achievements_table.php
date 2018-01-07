@@ -20,6 +20,7 @@ class CreateAchievementsTable extends Migration
       $table->string('department')->nullable("0");
       $table->string('image')->nullable();
       $table->longtext('description')->nullable();
+      $table->string('url')->nullable();
       $table->integer("created_by")->nullable();
       $table->integer("updated_by")->nullable();
       $table->timestamps();

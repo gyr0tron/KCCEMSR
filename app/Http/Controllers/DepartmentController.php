@@ -23,15 +23,15 @@ class DepartmentController extends Controller
       if(!$staff) abort(404, 'Page Not Found');
       return view('pages.staff-profile', compact("staff"));
     }
-    public function getEvent($id)
+    public function getEvent($url)
     {
-      $event = Event::where('id',$id)->first();
+      $event = Event::where('url',$url)->first();
       if(!$event) abort(404, 'Page Not Found');
       return view('pages.event-details', compact("event"));
     }
-    public function getAchievement($id)
+    public function getAchievement($url)
     {
-      $achivement = Achievement::where('id',$id)->first();
+      $achivement = Achievement::where('url',$url)->first();
       if(!$achivement) abort(404, 'Page Not Found');
       return view('pages.achievement-details', compact("achivement"));
     }

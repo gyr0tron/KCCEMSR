@@ -172,6 +172,7 @@ class DashboardApiController extends Controller
     $event->description = $request->input("description");
     $event->created_by = Auth::user()->id;
     $event->updated_by = Auth::user()->id;
+    $event->generateUrl();
     $event->save();
     $images = $request->images;
     if($images) {
@@ -207,6 +208,7 @@ class DashboardApiController extends Controller
     $event->department = $request->input("department","");
     $event->description = $request->input("description");
     $event->updated_by = Auth::user()->id;
+    $event->generateUrl();
     $event->save();
     $images = $request->images;
     if($images) {
@@ -277,6 +279,7 @@ class DashboardApiController extends Controller
     $ach->type = "1";
     $ach->created_by = Auth::user()->id;
     $ach->updated_by = Auth::user()->id;
+    $ach->generateUrl();
     $file = $request->image;
     if($file) {
       $ach->uploadImage($file);
@@ -295,6 +298,7 @@ class DashboardApiController extends Controller
     $ach->type = "0";
     $ach->created_by = Auth::user()->id;
     $ach->updated_by = Auth::user()->id;
+    $ach->generateUrl();
     $file = $request->image;
     if($file) {
       $ach->uploadImage($file);
@@ -311,6 +315,7 @@ class DashboardApiController extends Controller
     $ach->name = $request->input("name","");
     $ach->description = $request->input("description", "");
     $ach->updated_by = Auth::user()->id;
+    $ach->generateUrl();
     $file = $request->image;
     if($file) {
       $ach->removeImage();
@@ -328,6 +333,7 @@ class DashboardApiController extends Controller
     $ach->name = $request->input("name","");
     $ach->description = $request->input("description", "");
     $ach->updated_by = Auth::user()->id;
+    $ach->generateUrl();
     $file = $request->image;
     if($file) {
       $ach->removeImage();

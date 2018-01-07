@@ -85,7 +85,7 @@
 								<h3 class="media-heading">{{$achivement->name}}</h3>
 								<blockquote>
 									<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
-									<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->id)}}">Read more</a>
+									<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->url)}}">Read more</a>
 								</blockquote>
 							</div>
 						</div>
@@ -156,7 +156,7 @@
 									<h3 class="media-heading">{{$achivement->name}}</h3>
 									<blockquote>
 										<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
-										<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->id)}}">Read more</a>
+										<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->url)}}">Read more</a>
 									</blockquote>
 								</div>
 							</div>
@@ -178,7 +178,7 @@
 							<h3 class="media-heading">{{$event->name}}</h3>
 							<blockquote>
 								<p class="text-ellipsis" style="margin-bottom: 0px;">{{strip_tags($event->description)}}</p>
-								<a class="trigger" href="{{route('event', $event->id)}}">read more</a>
+								<a class="trigger" href="{{route('event', $event->url)}}">read more</a>
 							</blockquote>
 						</div>
 					</div>

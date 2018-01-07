@@ -21,4 +21,15 @@ class Event extends Model
     }
   }
 
+  public function generateUrl()
+  {
+    $url = strtolower($this->name);
+    $url = str_replace(" ", "-", $url);
+    $no = 1;
+    while(Event::where('url',$url)->first()) {
+      $url = $url.'-'.$no++;
+    }
+    $this->url = $url;
+  }
+
 }

@@ -32,8 +32,8 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/mandatory-disclosure/{action}','AdmissionsController@get')->name('mandatory-disclosure');
 
   Route::get('/staff/profile/{id}','DepartmentController@getProfile')->name('staff-profile');
-  Route::get('/event/{id}','DepartmentController@getEvent')->name('event');
-  Route::get('/achievement/{id}','DepartmentController@getAchievement')->name('achievement');
+  Route::get('/event/{url}','DepartmentController@getEvent')->name('event');
+  Route::get('/achievement/{url}','DepartmentController@getAchievement')->name('achievement');
 });
 
 
@@ -130,4 +130,17 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/testimonial/remove","Admin\DashboardApiController@removeTestimonial");
 
   Route::post("/settings/main","Admin\UpdateController@settings");
+});
+
+Route::prefix('/test')->group(function() {
+  Route::get('/generate-url', function() {
+    foreach (App\Achievement::all() as $achivement) {
+      $achivement->generateUrl();
+      $achivement->save();
+    }
+    foreach (App\Event::all() as $event) {
+      $event->generateUrl();
+      $event->save();
+    }
+  });
 });
