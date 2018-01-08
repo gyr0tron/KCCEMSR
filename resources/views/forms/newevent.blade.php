@@ -15,6 +15,9 @@
         @foreach (App\Department::all() as $dep)
           <option value="{{$dep->url}}">{{$dep->name}}</option>
         @endforeach
+        @foreach (App\Committee::all() as $dep)
+          <option value="{{$dep['url']}}">{{$dep['name']}}</option>
+        @endforeach
       </select>
       <p class="help-block"></p>
     </div>
