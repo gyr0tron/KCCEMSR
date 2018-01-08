@@ -99,19 +99,7 @@ if(!isset($second)) $second = "not defined";
             @endforeach
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-book"></i> <span>Library</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_dashboard")}}">Question Papers</a></li>
-            <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_dashboard")}}">E-Books</a></li>
-            <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_dashboard")}}">Timetable</a></li>
-            <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_dashboard")}}">Syllabus</a></li>
-          </ul>
-        </li>
+        <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_library",'question-papers')}}"><i class="fa fa-book"></i> <span>Library</span></a></li>
         <li class="{{$menu_item=='academics'?'active':''}}"><a href="{{route("admin_academics", "curriculum-plan")}}"><i class="fa fa-graduation-cap"></i> <span>Academics</span></a></li>
         <li class="{{$menu_item=='messages'?'active':''}}">
           <a href="{{route("admin_messages")}}">

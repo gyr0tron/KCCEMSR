@@ -550,4 +550,30 @@ class DashboardApiController extends Controller
     $upload->save();
     return ResponseBuilder::send(true, "", "");
   }
+  // Library
+  public function addLibrary($action, Request $request)
+  {
+    $library_list = FileUpload::library_list;
+    if(!in_array($action, $library_list)) abort(404, 'Page Not Found');
+    $upload = FileUpload::where('type',$action)->first();
+    $upload = new FileUpload();
+    $upload->type = $action;
+    $upload->name = $request->input('name');
+    $upload->department = $request->input('department');
+    $upload->year = $request->input('year');
+    $upload->created_by = Auth::user()->id;
+    $upload->updated_by = Auth::user()->id;
+    $upload->filename = $upload->uploadFile($request->file('file'));
+    $upload->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function removeLibrary(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $upload = FileUpload::where("id",$id)->first();
+    if(!$upload) abort(404, 'Not Found');
+    $upload->deleteFile();
+    $upload->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
 }

@@ -107,6 +107,15 @@ class DashboardController extends Controller
     if(!in_array($action, $this->academics_list)) abort(404, 'Page Not Found');
     return view("pages.admin.academics", compact("action"));
   }
+  // Library
+  public function library($action)
+  {
+    $library_list = FileUpload::library_list;
+    $library_list_name = FileUpload::library_list_name;
+    if(!in_array($action, $library_list)) abort(404, 'Page Not Found');
+    $action_name = $library_list_name[array_search($action, $library_list)];
+    return view("pages.admin.library", compact("action", "action_name", "library_list","library_list_name"));
+  }
   // Admissions
   public function admissions($action)
   {

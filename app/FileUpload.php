@@ -14,6 +14,9 @@ class FileUpload extends Model
   const admission_list = ['admission-criteria', 'fees-notices', 'institute-prospectus', 'dte-admission-information-brochure','total-intake', 'cap-rount-allottment', 'direct-second-year', 'anti-ragging-affidavit', 'aicte-affiliation', 'audit-statement'];
   const admission_name_list = ['Admission Criteria', 'Fees Notices', 'Institute Prospectus', 'Dte Admission Information Brochure','Total Intake', 'Cap Rount Allottment', 'Direct Second Year', 'Anti Ragging Affidavit', 'AICTE affiliation', 'Audit statement'];
 
+  const library_list = ['question-papers', 'e-books', 'syllabus', 'timetable'];
+  const library_list_name = ['Question Papers', 'E-Books', 'Syllabus', 'Timetable'];
+
   public function getUrl() {
     return url("public/files/" . $this->filename);
   }
@@ -36,6 +39,12 @@ class FileUpload extends Model
   public function checkDirs() {
     $path = public_path('public/files');
     File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
+  }
+
+  public function deleteFile()
+  {
+    $path = public_path('public/files/');
+    File::delete($path . $this->filename);
   }
 
   public function getYear()
