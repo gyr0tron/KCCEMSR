@@ -31,7 +31,8 @@ class CreateDepartmentsTable extends Migration
       array("name"=>"Electronics Engineering", "url"=>"electronics"),
       array("name"=>"Electronics & Telecommunication", "url"=>"extc"),
       array("name"=>"Information Technology", "url"=>"it"),
-      array("name"=>"Dept of Humanities and Sciences", "url"=>"humanities-sciences")
+      array("name"=>"Dept of Humanities and Sciences", "url"=>"humanities-sciences"),
+      array("name"=>"MMS", "url"=>"mms"),
     );
 
     foreach ($departments as $key => $value) {

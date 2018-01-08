@@ -57,7 +57,7 @@
 									<li class="sub-menu-parent"><a href="#">Academics</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('curriculum-plan')}}">Curriculum Plan</a></li>
-											<li><a href="{{route('staff-notices')}}">Staff Noticies</a></li>
+											{{-- <li><a href="{{route('staff-notices')}}">Staff Noticies</a></li> --}}
 											<li><a href="http://www.learningatkc.com/moodle/login/index.php">Gate / PSU</a></li>
 											<li><a href="{{route('publications')}}">Publications / News Letter</a></li>
 											<li><a href="{{route('exam', 'notices')}}">Exam Notices</a></li>
@@ -70,7 +70,6 @@
 											@foreach (App\Department::all() as $dep)
 												<li><a href="{{route("department",$dep->url)}}">{{$dep->name}}</a></li>
 											@endforeach
-											<li><a href="http://kcims.org/" target="_blank">MMS</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="#">Library</a>
