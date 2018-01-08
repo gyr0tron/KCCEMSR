@@ -35,4 +35,16 @@ class DepartmentController extends Controller
       if(!$achivement) abort(404, 'Page Not Found');
       return view('pages.achievement-details', compact("achivement"));
     }
+    public function getLifeStaff()
+    {
+      $title = "Life at KC - Staff";
+      $types = Department::select("name", "url")->get();
+      return view('pages.lifeatkc', compact('types','title'));
+    }
+    public function getLifeStudent()
+    {
+      $title = "Life at KC - Student";
+      $types = Department::select("name", "url")->get();
+      return view('pages.lifeatkc', compact('types','title'));
+    }
 }

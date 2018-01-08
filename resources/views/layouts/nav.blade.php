@@ -119,8 +119,8 @@
 									</li>
 									<li class="sub-menu-parent"><a href="#">Life At KC</a>
 										<ul class="sub-menu">
-											<li><a href="#">Staff</a></li>
-											<li><a href="#">Student</a></li>
+											<li><a href="{{route('life-staff')}}">Staff</a></li>
+											<li><a href="{{route('life-student')}}">Student</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="/#contact">Contact</a>
