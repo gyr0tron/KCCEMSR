@@ -13,4 +13,8 @@ class AboutController extends Controller
     {
       return view('pages.about');
     }
+    public function getInfrastructures()
+    {
+      return view('pages.infrastructure');
+    }
 }

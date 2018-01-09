@@ -26,6 +26,7 @@
 					</div>
 				</div>
 			</div>
+							<div class="space"></div>
 			<div class="row">
 				<div class="col-md-6">
 					<h1 id="about" class="title text-center"><span>Vision</span></h1>

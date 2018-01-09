@@ -45,13 +45,13 @@
 								<ul class="nav navbar-nav">
 									<li class="active sub-menu-parent"><a href="/">Home</a>
 									</li>
-									<li class="sub-menu-parent"><a href="/about">About</a>
+									<li class="sub-menu-parent"><a href="{{route('about')}}">About</a>
 										<ul class="sub-menu">
-											<li><a href="/about">College Info</a></li>
-											<li><a href="/about">Vision &amp; Mission</a></li>
-											<li><a href="/about">Board of Governance</a></li>
-											<li><a href="/about">Principal's Desk</a></li>
-											<li><a href="/about">Infrastructure &amp; Activities</a></li>
+											<li><a href="{{route('about')}}">College Info</a></li>
+											<li><a href="{{route('about')}}">Vision &amp; Mission</a></li>
+											<li><a href="{{route('about')}}">Board of Governance</a></li>
+											<li><a href="{{route('about')}}">Principal's Desk</a></li>
+											<li><a href="{{route('infrastructures')}}">Infrastructure &amp; Activities</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="#">Academics</a>

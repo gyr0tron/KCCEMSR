@@ -17,6 +17,7 @@ use App\Http\Middleware\MaintenanceCheck;
 Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/',"HomeController@getHome");
   Route::get('/about','AboutController@getAbout')->name('about');
+  Route::get('/infrastructures','AboutController@getInfrastructures')->name('infrastructures');
 
   Route::get('/department/{name}','DepartmentController@get')->name('department');
 
