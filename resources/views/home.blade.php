@@ -1,25 +1,25 @@
 @extends('layouts.master')
 @section('pre')
-@php
-$title = config('app.name');
-$menu_item = 'home';
-$nav_trans = 1
+	@php
+	$title = config('app.name');
+	$menu_item = 'home';
+	$nav_trans = 1
 @endphp
 @endsection
 @section('content')
-  <!-- banner start -->
-		<!-- ================ -->
-		<div id="banner" class="banner">
-			<div class="banner-image"></div>
-			<div class="arrow bounce" id="arw" onclick="location.href='/#welcome';" style="cursor: pointer; z-index: 1;"></div>
-			<div class="banner-caption">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
-							<h1 class="text-center">We are <span
-								class="txt-rotate"
-								data-period="2000"
-								data-rotate='[ "nerdy.", "simple.", "creative.", "fun!" ]'></span></h1>
+	<!-- banner start -->
+	<!-- ================ -->
+	<div id="banner" class="banner">
+		<div class="banner-image"></div>
+		<div class="arrow bounce" id="arw" onclick="location.href='/#welcome';" style="cursor: pointer; z-index: 1;"></div>
+		<div class="banner-caption">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+						<h1 class="text-center">We are <span
+							class="txt-rotate"
+							data-period="2000"
+							data-rotate='[ "nerdy.", "simple.", "creative.", "fun!" ]'></span></h1>
 							<p class="lead text-center" id="welcome">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos debitis provident nulla illum minus enim praesentium repellendus ullam cupiditate reiciendis optio voluptatem, recusandae nobis quis aperiam, sapiente libero ut at.</p>
 						</div>
 					</div>
@@ -84,7 +84,7 @@ $nav_trans = 1
 						<div class="media">
 							<div class="media-body text-right">
 								<h4 class="media-heading">Computer Engineering</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat.</p>
+								<p>{{strip_tags(App\Department::where('url','computer')->first()->description)}}</p>
 							</div>
 							<div class="media-right">
 								<i class="fa fa-code"></i>
@@ -93,7 +93,7 @@ $nav_trans = 1
 						<div class="media">
 							<div class="media-body text-right">
 								<h4 class="media-heading">Information Technology</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat.</p>
+								<p>{{strip_tags(App\Department::where('url','it')->first()->description)}}</p>
 							</div>
 							<div class="media-right">
 								<i class="fa fa-desktop"></i>
@@ -102,7 +102,7 @@ $nav_trans = 1
 						<div class="media">
 							<div class="media-body text-right">
 								<h4 class="media-heading">Humanities and Sciences</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat.</p>
+								<p>{{strip_tags(App\Department::where('url','humanities-sciences')->first()->description)}}</p>
 							</div>
 							<div class="media-right">
 								<i class="fa fa-flask"></i>
@@ -119,7 +119,7 @@ $nav_trans = 1
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">Electronics Engineering</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat.</p>
+								<p>{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
 							</div>
 						</div>
 						<div class="media">
@@ -128,7 +128,7 @@ $nav_trans = 1
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">Electronics &amp; Telecommunication</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat.</p>
+								<p>{{strip_tags(App\Department::where('url','extc')->first()->description)}}</p>
 							</div>
 						</div>
 						<div class="media">
@@ -137,7 +137,7 @@ $nav_trans = 1
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">MMS</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat.</p>
+								<p>{{strip_tags(App\Department::where('url','mms')->first()->description)}}</p>
 							</div>
 						</div>
 					</div>
@@ -149,286 +149,286 @@ $nav_trans = 1
 		<!-- section start -->
 		<!-- ================ -->
 		{{--  <div class="default-bg space blue">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<h1 class="text-center"> Lorem ipsum</h1>
+		<div class="container">
+		<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+		<h1 class="text-center"> Lorem ipsum</h1>
+	</div>
+</div>
+</div>
+</div>  --}}
+<!-- section end -->
+
+<!-- section start -->
+<!-- ================ -->
+<div class="section">
+	<div class="container">
+		<h1 class="text-center title" id="portfolio">Events</h1>
+		<div class="separator"></div>
+		<p class="lead text-center">Lorem ipsum dolor sit amet laudantium molestias similique.<br> Quisquam incidunt ut laboriosam.</p>
+		<br>
+		<div class="row object-non-visible" data-animation-effect="fadeIn">
+			<div class="col-md-12">
+
+				<!-- isotope filters start -->
+				<div class="filters text-center">
+					<ul class="nav nav-pills">
+						<li class="active"><a href="#" data-filter="*">All</a></li>
+						<li><a href="#" data-filter=".student-council">Student Council</a></li>
+						<li><a href="#" data-filter=".ecell">E-Cell</a></li>
+						<li><a href="#" data-filter=".kcrtrct">KC Rotaract</a></li>
+					</ul>
+				</div>
+				<!-- isotope filters end -->
+
+				<!-- portfolio items start -->
+				<div class="isotope-container row grid-space-20">
+					<div class="col-sm-6 col-md-3 isotope-item student-council">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								{{--  url here   --}}
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>Student Council</span>
+								</a>
+							</div>
+							{{--  url here  --}}
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item ecell">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>E-Cell</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item student-council">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>Student Council</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item kcrtrct">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>K.C. Rotaract</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item ecell">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>E-Cell</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item student-council">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>Student Council</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item kcrtrct">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>K.C. Rotaract</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item student-council">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>Student Council</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item student-council">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>Student Council</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item kcrtrct">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>K.C. Rotaract</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item student-council">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>Student Council</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-3 isotope-item ecell">
+						<div class="image-box">
+							<div class="overlay-container">
+								<img src="http://via.placeholder.com/750x500" alt="">
+								<a class="overlay" href="">
+									<i class="fa fa-search-plus"></i>
+									<span>E-Cell</span>
+								</a>
+							</div>
+							<a class="btn btn-default btn-block" href="">Event Title</a>
+						</div>
 					</div>
 				</div>
+				<!-- portfolio items end -->
 			</div>
-		</div>  --}}
-		<!-- section end -->
+		</div>
+	</div>
+</div>
+<!-- section end -->
 
-		<!-- section start -->
+<!-- section start -->
+<!-- ================ -->
+<div class="section translucent-bg bg-image-2 pb-clear">
+	<div class="container object-non-visible" data-animation-effect="fadeIn">
+		<h1 id="clients" class="title text-center">Testimonials</h1>
+		<div class="space"></div>
+
+	</div>
+	<!-- footer start -->
+	<!-- ================ -->
+	<footer id="footer">
+
+		<!-- .footer start -->
 		<!-- ================ -->
-		<div class="section">
+		<div class="footer section">
 			<div class="container">
-				<h1 class="text-center title" id="portfolio">Events</h1>
-				<div class="separator"></div>
-				<p class="lead text-center">Lorem ipsum dolor sit amet laudantium molestias similique.<br> Quisquam incidunt ut laboriosam.</p>
-				<br>
-				<div class="row object-non-visible" data-animation-effect="fadeIn">
-					<div class="col-md-12">
-
-						<!-- isotope filters start -->
-						<div class="filters text-center">
-							<ul class="nav nav-pills">
-								<li class="active"><a href="#" data-filter="*">All</a></li>
-								<li><a href="#" data-filter=".student-council">Student Council</a></li>
-								<li><a href="#" data-filter=".ecell">E-Cell</a></li>
-								<li><a href="#" data-filter=".kcrtrct">KC Rotaract</a></li>
+				<h1 class="title text-center" id="contact">Contact Us</h1>
+				<div class="space"></div>
+				<div class="row">
+					<div class="col-sm-8 col-md-8 col-xs-8">
+						<div class="footer-content">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1584.396878799198!2d72.98002808733317!3d19.179818462852708!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb4f1e032d9e4fc41!2sK+C+College+Of+Engineering+Management+Studies+And+Research!5e0!3m2!1sen!2sin!4v1514910475785" class="maps" frameborder="0" style="border:0" allowfullscreen></iframe>
+							<ul class="list-icons">
+								<li><i class="fa fa-map-marker pr-10"></i><a href="https://goo.gl/maps/9kgemW2tEwn" class="a-no-decrn">{{setting('contact-address')}}</a></li>
+								<li><i class="fa fa-envelope-o pr-10"></i>&nbsp;{{setting('contact-email')}}</li>
+								<li><i class="fa fa-phone pr-10"></i>&nbsp;{{setting('contact-phone')}}</li>
 							</ul>
 						</div>
-						<!-- isotope filters end -->
+					</div>
 
-						<!-- portfolio items start -->
-						<div class="isotope-container row grid-space-20">
-							<div class="col-sm-6 col-md-3 isotope-item student-council">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										{{--  url here   --}}
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>Student Council</span>
-										</a>
-									</div>
-									{{--  url here  --}}
-									<a class="btn btn-default btn-block" href="">Event Title</a>
-								</div>
-							</div>
 
-							<div class="col-sm-6 col-md-3 isotope-item ecell">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>E-Cell</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
+					<div class="col-sm-4 col-md-4 col-xs-4">
+						<div class="footer-content">
+							<form role="form" id="contact-form" method="post">
+								<div class="form-group has-feedback">
+									<label class="sr-only" for="name">Name</label>
+									<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+									<i class="fa fa-user form-control-feedback"></i>
 								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item student-council">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>Student Council</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
+								<div class="form-group has-feedback">
+									<label class="sr-only" for="email">Email address</label>
+									<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+									<i class="fa fa-envelope form-control-feedback"></i>
 								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item kcrtrct">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>K.C. Rotaract</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
+								<div class="form-group has-feedback">
+									<label class="sr-only" for="message">Message</label>
+									<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message"></textarea>
+									<i class="fa fa-pencil form-control-feedback"></i>
 								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item ecell">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>E-Cell</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item student-council">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>Student Council</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item kcrtrct">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>K.C. Rotaract</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item student-council">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>Student Council</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item student-council">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>Student Council</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item kcrtrct">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>K.C. Rotaract</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item student-council">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>Student Council</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item ecell">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="http://via.placeholder.com/750x500" alt="">
-										<a class="overlay" href="">
-											<i class="fa fa-search-plus"></i>
-											<span>E-Cell</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" href="">Event Title</a>
-								</div>
-							</div>
+								<input type="submit" value="Send" class="btn btn-default" style="min-width: auto;">
+							</form>
+							<ul class="social-links">
+								<li class="facebook"><i class="fa fa-facebook"></i></li>
+								<li class="twitter"><i class="fa fa-twitter"></i></li>
+								<li class="googleplus"><i class="fa fa-google-plus"></i></li>
+								<li class="skype"><i class="fa fa-skype"></i></li>
+								<li class="linkedin"><i class="fa fa-linkedin"></i></li>
+								<li class="youtube"><i class="fa fa-youtube"></i></li>
+							</ul>
 						</div>
-						<!-- portfolio items end -->
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- section end -->
+		<!-- .footer end -->
 
-		<!-- section start -->
+		<!-- .subfooter start -->
 		<!-- ================ -->
-		<div class="section translucent-bg bg-image-2 pb-clear">
-			<div class="container object-non-visible" data-animation-effect="fadeIn">
-				<h1 id="clients" class="title text-center">Testimonials</h1>
-				<div class="space"></div>
-				
-			</div>
-		<!-- footer start -->
-		<!-- ================ -->
-		<footer id="footer">
-
-			<!-- .footer start -->
-			<!-- ================ -->
-			<div class="footer section">
-				<div class="container">
-					<h1 class="title text-center" id="contact">Contact Us</h1>
-					<div class="space"></div>
-					<div class="row">
-						<div class="col-sm-8 col-md-8 col-xs-8">
-							<div class="footer-content">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1584.396878799198!2d72.98002808733317!3d19.179818462852708!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb4f1e032d9e4fc41!2sK+C+College+Of+Engineering+Management+Studies+And+Research!5e0!3m2!1sen!2sin!4v1514910475785" class="maps" frameborder="0" style="border:0" allowfullscreen></iframe>
-								<ul class="list-icons">
-									<li><i class="fa fa-map-marker pr-10"></i><a href="https://goo.gl/maps/9kgemW2tEwn" class="a-no-decrn">{{setting('contact-address')}}</a></li>
-									<li><i class="fa fa-envelope-o pr-10"></i>&nbsp;{{setting('contact-email')}}</li>
-									<li><i class="fa fa-phone pr-10"></i>&nbsp;{{setting('contact-phone')}}</li>
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="col-sm-4 col-md-4 col-xs-4">
-							<div class="footer-content">
-								<form role="form" id="contact-form" method="post">
-									<div class="form-group has-feedback">
-										<label class="sr-only" for="name">Name</label>
-										<input type="text" class="form-control" id="name" placeholder="Name" name="name">
-										<i class="fa fa-user form-control-feedback"></i>
-									</div>
-									<div class="form-group has-feedback">
-										<label class="sr-only" for="email">Email address</label>
-										<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-										<i class="fa fa-envelope form-control-feedback"></i>
-									</div>
-									<div class="form-group has-feedback">
-										<label class="sr-only" for="message">Message</label>
-										<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message"></textarea>
-										<i class="fa fa-pencil form-control-feedback"></i>
-									</div>
-									<input type="submit" value="Send" class="btn btn-default" style="min-width: auto;">
-								</form>
-								<ul class="social-links">
-									<li class="facebook"><i class="fa fa-facebook"></i></li>
-									<li class="twitter"><i class="fa fa-twitter"></i></li>
-									<li class="googleplus"><i class="fa fa-google-plus"></i></li>
-									<li class="skype"><i class="fa fa-skype"></i></li>
-									<li class="linkedin"><i class="fa fa-linkedin"></i></li>
-									<li class="youtube"><i class="fa fa-youtube"></i></li>
-								</ul>
-							</div>
-						</div>
+		<div class="subfooter">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="text-center">Copyright © stuff by <a target="_blank" href="#">KC Href</a>.</p>
 					</div>
 				</div>
 			</div>
-			<!-- .footer end -->
+		</div>
+		<!-- .subfooter end -->
 
-			<!-- .subfooter start -->
-			<!-- ================ -->
-			<div class="subfooter">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<p class="text-center">Copyright © stuff by <a target="_blank" href="#">KC Href</a>.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- .subfooter end -->
-
-		</footer>
-		<!-- footer end -->
+	</footer>
+	<!-- footer end -->
 
 @endsection
 @section('post')
