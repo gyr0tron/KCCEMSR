@@ -45,6 +45,65 @@
 				</div>
 			</div>
 			<div class="space"></div>
+
+			<div class="row" id="slider">
+						<h2 class="title text-center resp-text-head title-marg-resp align-marg"><span>Chairperson Message</span></h1>
+				<div class="col-md-5 col-sm-5 col-xs-12">
+					<div style="width:100%;">
+						<img src="http://via.placeholder.com/1140x615" style="margin: 0 auto;" alt="">
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-7 col-xs-12">
+					<div class="row">
+						<p class="text-left align-marg">Tempor sunt in in fugiat nostrud laborum consequat. Tempor adipisicing quis minim laboris ad dolor veniam culpa exercitation sit in ut. Ullamco dolor Lorem tempor reprehenderit non veniam esse elit commodo elit. Nostrud laboris dolore consectetur elit ullamco fugiat veniam ea deserunt tempor dolor ea voluptate. Consequat duis consectetur dolore elit.</p>
+					</div>
+				</div>
+			</div>
+			<div class="space"></div>
+
+			<div class="row" id="slider">
+						<h2 class="title text-center resp-text-head title-marg-resp align-marg"><span>MD Message</span></h1>
+				<div class="col-md-7 col-sm-7 col-xs-12">
+					<div class="row">
+						<p class="text-left align-marg">Tempor sunt in in fugiat nostrud laborum consequat. Tempor adipisicing quis minim laboris ad dolor veniam culpa exercitation sit in ut. Ullamco dolor Lorem tempor reprehenderit non veniam esse elit commodo elit. Nostrud laboris dolore consectetur elit ullamco fugiat veniam ea deserunt tempor dolor ea voluptate. Consequat duis consectetur dolore elit.</p>
+					</div>
+				</div>
+				<div class="col-md-5 col-sm-5 col-xs-12">
+					<div style="width:100%;">
+						<img src="http://via.placeholder.com/1140x615" style="margin: 0 auto;" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="space"></div>
+
+			<div class="row" id="slider">
+						<h2 class="title text-center resp-text-head title-marg-resp align-marg"><span>CEO Message</span></h1>
+				<div class="col-md-5 col-sm-5 col-xs-12">
+					<div style="width:100%;">
+						<img src="http://via.placeholder.com/1140x615" style="margin: 0 auto;" alt="">
+					</div>
+				</div>
+				<div class="col-md-7 col-sm-7 col-xs-12">
+					<div class="row">
+						<p class="text-left align-marg">Tempor sunt in in fugiat nostrud laborum consequat. Tempor adipisicing quis minim laboris ad dolor veniam culpa exercitation sit in ut. Ullamco dolor Lorem tempor reprehenderit non veniam esse elit commodo elit. Nostrud laboris dolore consectetur elit ullamco fugiat veniam ea deserunt tempor dolor ea voluptate. Consequat duis consectetur dolore elit.</p>
+					</div>
+				</div>
+			</div>
+			<div class="space"></div>
+
+			<div class="row" id="slider">
+						<h2 class="title text-center resp-text-head title-marg-resp align-marg"><span>Principal Message</span></h1>
+				<div class="col-md-7 col-sm-7 col-xs-12">
+					<div class="row">
+						<p class="text-left align-marg">Tempor sunt in in fugiat nostrud laborum consequat. Tempor adipisicing quis minim laboris ad dolor veniam culpa exercitation sit in ut. Ullamco dolor Lorem tempor reprehenderit non veniam esse elit commodo elit. Nostrud laboris dolore consectetur elit ullamco fugiat veniam ea deserunt tempor dolor ea voluptate. Consequat duis consectetur dolore elit.</p>
+					</div>
+				</div>
+				<div class="col-md-5 col-sm-5 col-xs-12">
+					<div style="width:100%;">
+						<img src="http://via.placeholder.com/1140x615" style="margin: 0 auto;" alt="">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 @endsection
