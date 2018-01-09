@@ -20,6 +20,7 @@ use App\Http\Requests\AdminAddStaffNotices;
 use App\Http\Requests\AdminAddExamResult;
 use App\Http\Requests\AdminAddPublication;
 use App\Http\Requests\AdminAddTestimonial;
+use App\Http\Requests\AdminAddInfrastructure;
 
 use Auth;
 use Setting;
@@ -37,6 +38,7 @@ use App\Announcement;
 use App\FileUpload;
 use App\Publication;
 use App\Testimonial;
+use App\Infrastructure;
 use App\ResponseBuilder;
 
 class DashboardApiController extends Controller
@@ -530,6 +532,28 @@ class DashboardApiController extends Controller
   {
     $id = $request->input("id","-1");
     $test = Testimonial::where("id",$id)->first();
+    if(!$test) abort(404, 'Not Found');
+    $test->removeImage();
+    $test->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Infrastructure Add
+  public function addInfrastructure(AdminAddInfrastructure $request)
+  {
+    $test = new Infrastructure();
+    $test->name = $request->input("name");
+    $test->description = $request->input("description");
+    $test->created_by = Auth::user()->id;
+    $test->updated_by = Auth::user()->id;
+    $test->uploadImage($request->image);
+    $test->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Infrastructure Remove
+  public function removeInfrastructure(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $test = Infrastructure::where("id",$id)->first();
     if(!$test) abort(404, 'Not Found');
     $test->removeImage();
     $test->forceDelete();

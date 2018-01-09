@@ -42,6 +42,10 @@ class DashboardController extends Controller
   public function testimonials() {
     return view("pages.admin.testimonials");
   }
+  // Infrastructures
+  public function infrastructures() {
+    return view("pages.admin.infrastructure");
+  }
   // Events
   public function events() {
     return view("pages.admin.events");
