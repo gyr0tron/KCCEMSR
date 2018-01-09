@@ -18,7 +18,7 @@
 			<div class="col-md-7 col-md-7 col-md-12">
 				<div class="row">
 					<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>{{$achivement->name}}</span></h1>
-					<p class="text-left align-marg">{{$achivement->description}}</p>
+					<p class="text-left align-marg">{{strip_tags($achivement->description)}}</p>
 				</div>
 			</div>
 		</div>
