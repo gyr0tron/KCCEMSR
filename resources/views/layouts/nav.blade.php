@@ -45,7 +45,7 @@
 								<ul class="nav navbar-nav">
 									<li class="active sub-menu-parent"><a href="/">Home</a>
 									</li>
-									<li class="sub-menu-parent"><a href="{{route('about')}}">About</a>
+									<li class="sub-menu-parent"><a href="#">About</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('about')}}">College Info</a></li>
 											<li><a href="{{route('about')}}">Vision &amp; Mission</a></li>
