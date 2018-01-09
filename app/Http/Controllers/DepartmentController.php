@@ -8,6 +8,7 @@ use App\Department;
 use App\Event;
 use App\Staff;
 use App\Achievement;
+use App\Committee;
 
 class DepartmentController extends Controller
 {
@@ -44,7 +45,7 @@ class DepartmentController extends Controller
     public function getLifeStudent()
     {
       $title = "Life at KC - Student";
-      $types = Department::select("name", "url")->get();
+      $types = Committee::all();
       return view('pages.lifeatkc', compact('types','title'));
     }
 }
