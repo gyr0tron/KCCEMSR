@@ -19,8 +19,8 @@
 						<h1 class="text-center">We are <span
 							class="txt-rotate"
 							data-period="2000"
-							data-rotate='[ "nerdy.", "simple.", "creative.", "fun!" ]'></span></h1>
-							<p class="lead text-center" id="welcome">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos debitis provident nulla illum minus enim praesentium repellendus ullam cupiditate reiciendis optio voluptatem, recusandae nobis quis aperiam, sapiente libero ut at.</p>
+							data-rotate='["simple.", "creative.", "saints of technology!", "developers.", "nerdy." ]'></span></h1>
+							<p class="lead text-center" id="welcome">Our energy introduces us before we start speaking. We are engineers.</p>
 						</div>
 					</div>
 				</div>
@@ -35,7 +35,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h1 id="about" class="title text-center">Welcome to <span>K.C.College of Engineering and Management Studies & Research!</span></h1>
-						<p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta officia, aspernatur.</p>
+						{{-- <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta officia, aspernatur.</p> --}}
 						<div class="space"></div>
 						<div class="row">
 							<div class="col-md-6">
@@ -171,7 +171,6 @@
 	<div class="container">
 		<h1 class="text-center title" id="portfolio">Events</h1>
 		<div class="separator"></div>
-		<p class="lead text-center">Lorem ipsum dolor sit amet laudantium molestias similique.<br> Quisquam incidunt ut laboriosam.</p>
 		<br>
 		<div class="row object-non-visible" data-animation-effect="fadeIn">
 			<div class="col-md-12">
@@ -180,172 +179,46 @@
 				<div class="filters text-center">
 					<ul class="nav nav-pills">
 						<li class="active"><a href="#" data-filter="*">All</a></li>
-						<li><a href="#" data-filter=".student-council">Student Council</a></li>
-						<li><a href="#" data-filter=".ecell">E-Cell</a></li>
-						<li><a href="#" data-filter=".kcrtrct">KC Rotaract</a></li>
+						@foreach (App\Committee::all() as $type)
+							<li><a href="#" data-filter=".{{$type->url}}">{{$type->name}}</a></li>
+						@endforeach
 					</ul>
 				</div>
 				<!-- isotope filters end -->
 
 				<!-- portfolio items start -->
 				<div class="isotope-container row grid-space-20">
-					<div class="col-sm-6 col-md-3 isotope-item student-council">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								{{--  url here   --}}
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>Student Council</span>
+					@foreach (App\Event::all() as $event)
+						@php
+						if(!is_in_type($event->department, App\Committee::all())) continue;
+						@endphp
+						<div class="col-sm-6 col-md-3 isotope-item {{$event->department}}">
+							<div class="image-box">
+								<div class="overlay-container">
+									{{-- 750 x 500 --}}
+									<img src="{{$event->getFeaturedImage()}}" alt="" height="500">
+									<a class="overlay" href="{{route('event', $event->url)}}">
+										<i class="fa fa-search-plus"></i>
+										<span>{{App\Department::getName($event->department)}}</span>
+									</a>
+								</div>
+								<a class="btn btn-default btn-block" href="{{route('event', $event->url)}}">
+									<p style="overflow: hidden; margin: 0px;">
+									{{$event->name}}
+									</p>
 								</a>
 							</div>
-							{{--  url here  --}}
-							<a class="btn btn-default btn-block" href="">Event Title</a>
 						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item ecell">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>E-Cell</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item student-council">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>Student Council</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item kcrtrct">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>K.C. Rotaract</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item ecell">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>E-Cell</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item student-council">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>Student Council</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item kcrtrct">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>K.C. Rotaract</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item student-council">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>Student Council</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item student-council">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>Student Council</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item kcrtrct">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>K.C. Rotaract</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item student-council">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>Student Council</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
-
-					<div class="col-sm-6 col-md-3 isotope-item ecell">
-						<div class="image-box">
-							<div class="overlay-container">
-								<img src="http://via.placeholder.com/750x500" alt="">
-								<a class="overlay" href="">
-									<i class="fa fa-search-plus"></i>
-									<span>E-Cell</span>
-								</a>
-							</div>
-							<a class="btn btn-default btn-block" href="">Event Title</a>
-						</div>
-					</div>
+					@endforeach
+					@php
+					function is_in_type($name, $types) {
+						foreach ($types as $type) {
+							if($name == $type->url)
+							return true;
+						}
+						return false;
+					}
+					@endphp
 				</div>
 				<!-- portfolio items end -->
 			</div>
