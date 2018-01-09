@@ -19,7 +19,7 @@ class Testimonial extends Model
       $this->checkDirs();
       $filename = str_random(30) . uniqid() . '.' . 'jpg';
       $filepath = public_path('public/images/' .$filename);
-      Image::make($file)->save( $filepath );
+      Image::make($file)->resize(128, 128)->save( $filepath );
       $this->image = $filename;
     }
     public function checkDirs() {
