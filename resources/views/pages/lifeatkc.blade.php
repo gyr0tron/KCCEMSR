@@ -38,7 +38,11 @@
 											<span>{{App\Department::getName($event->department)}}</span>
 										</a>
 									</div>
-									<a class="btn btn-default btn-block" href="{{route('event', $event->url)}}">{{$event->name}}</a>
+									<a class="btn btn-default btn-block" href="{{route('event', $event->url)}}">
+										<p style="overflow: hidden; margin: 0px;">
+										{{$event->name}}
+										</p>
+									</a>
 								</div>
 							</div>
 						@endforeach
