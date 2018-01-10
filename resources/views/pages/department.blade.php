@@ -96,7 +96,7 @@
 						<div class="media-body">
 							<h3 class="media-heading">{{$achivement->name}}</h3>
 							<blockquote>
-								<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
 								<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->id)}}">Read more</a>
 							</blockquote>
 						</div>
@@ -167,7 +167,7 @@
 							<div class="media-body">
 								<h3 class="media-heading">{{$achivement->name}}</h3>
 								<blockquote>
-									<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
+									<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
 									<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->id)}}">Read more</a>
 								</blockquote>
 							</div>
