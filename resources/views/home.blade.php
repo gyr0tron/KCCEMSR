@@ -362,15 +362,6 @@
 			{{-- <div class="space"></div> --}}
 		<div class="col-md-12" data-wow-delay="0.2s">
 			<div class="carousel slide" data-ride="carousel" id="quote-carousel">
-				<!-- Bottom Carousel Indicators -->
-				<ol class="carousel-indicators">
-					@php
-						$no=0;
-					@endphp
-					@foreach (App\Testimonial::all() as $test)
-						<li data-target="#quote-carousel" data-slide-to="{{$no}}" class="{{$no++==0?'active':''}}"><img class="img-responsive " src="{{$test->getUrl()}}" alt="">
-					@endforeach
-				</ol>
 				<!-- Carousel Slides / Quotes -->
 				<div class="carousel-inner text-center">
 					@php
@@ -389,6 +380,15 @@
 						</div>
 					@endforeach
 				</div>
+				<!-- Bottom Carousel Indicators -->
+				<ol class="carousel-indicators">
+					@php
+						$no=0;
+					@endphp
+					@foreach (App\Testimonial::all() as $test)
+						<li data-target="#quote-carousel" data-slide-to="{{$no}}" class="{{$no++==0?'active':''}}"><img class="img-responsive" src="{{$test->getUrl()}}" alt="">
+					@endforeach
+				</ol>
 				<!-- Carousel Buttons Next/Prev -->
 				<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
 				<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
