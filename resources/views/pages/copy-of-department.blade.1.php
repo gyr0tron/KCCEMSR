@@ -26,12 +26,12 @@
 							<p margin-bottom: 15px;>{{strip_tags($dep->message)}}</p>
 						</div>
 					</div>
-					<div class="space"></div>
 					<div class="row">
 						<div class="col-md-6">
 							<h2 style="margin-top: 0px; margin-bottom: 5px;">Vision</h2>
 							<p margin-bottom: 15px;>{{$dep->vision}}</p>
-							<div class="space"></div>
+						</div>
+						<div class="col-md-6">
 							<h2 style="margin-top: 0px; margin-bottom: 5px;">Mission</h2>
 							<ul class="list-unstyled">
 								@php
@@ -43,7 +43,11 @@
 									@endif
 								@endforeach
 							</ul>
-							<div class="space"></div>
+						</div>
+					</div>
+					<div class="space"></div>
+					<div class="row">
+						<div class="col-md-6">
 							<h2 style="margin-top: 0px; margin-bottom: 5px;">Program Objectives</h2>
 							<ul class="list-unstyled">
 								@php

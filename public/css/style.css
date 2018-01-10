@@ -1454,5 +1454,11 @@ font-weight: bold;
   display: block;
 }
 
+@media (max-width: 1200px){
+	.title-marg-resp {
+		margin-top: 3%;
+		}
+	}
+
 /* testimonials */
 

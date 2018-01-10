@@ -176,7 +176,7 @@ $('.counting').each(function() {
 	  countNum: countTo
 	},
 	{
-	  duration: 2000,
+	  duration: 1500,
 	  easing:'linear',
 	  step: function() {
 		$this.text(Math.floor(this.countNum));
