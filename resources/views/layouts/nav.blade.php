@@ -9,7 +9,10 @@
 					</div>
 
 					<div class="smooth-scroll">
-						<div class="site-name"><a href="/" id="head-site-name" style="text-decoration:none;">K.C. College of Engineering &amp; Management Studies &amp; Research</a></div>
+						<div class="site-name" style="padding-bottom: 0px;">
+							<p style="font-size: 0.6em;margin: 0px;padding: 0px;line-height: 0.8;">Excelssior Education Society's</p>
+							<a href="/" id="head-site-name" style="text-decoration:none;">K.C. College of Engineering &amp; Management Studies &amp; Research</a>
+						</div>
 					</div>
 
 				</div>
@@ -48,9 +51,12 @@
 									<li class="sub-menu-parent"><a href="#">About</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('about')}}">College Info</a></li>
+											<li><a href="{{route('about')}}">Chairperson Message</a></li>
+											<li><a href="{{route('about')}}">MD Message</a></li>
+											<li><a href="{{route('about')}}">CEO Message</a></li>
+											<li><a href="{{route('about')}}">Principal's Desk</a></li>
 											<li><a href="{{route('about')}}">Vision &amp; Mission</a></li>
 											<li><a href="{{route('about')}}">Board of Governance</a></li>
-											<li><a href="{{route('about')}}">Principal's Desk</a></li>
 											<li><a href="{{route('infrastructures')}}">Infrastructure &amp; Activities</a></li>
 										</ul>
 									</li>
