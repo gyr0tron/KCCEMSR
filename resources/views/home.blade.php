@@ -84,7 +84,8 @@
 						<div class="media">
 							<div class="media-body text-right">
 								<h4 class="media-heading">Computer Engineering</h4>
-								<p>{{strip_tags(App\Department::where('url','computer')->first()->description)}}</p>
+								<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','computer')->first()->description)}}</p>
+								<a class="" style="cursor:pointer;" href="">Read more</a>
 							</div>
 							<div class="media-right">
 								<i class="fa fa-code"></i>
@@ -93,7 +94,8 @@
 						<div class="media">
 							<div class="media-body text-right">
 								<h4 class="media-heading">Information Technology</h4>
-								<p>{{strip_tags(App\Department::where('url','it')->first()->description)}}</p>
+								<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','it')->first()->description)}}</p>
+								<a class="" style="cursor:pointer;" href="">Read more</a>
 							</div>
 							<div class="media-right">
 								<i class="fa fa-desktop"></i>
@@ -102,7 +104,8 @@
 						<div class="media">
 							<div class="media-body text-right">
 								<h4 class="media-heading">Humanities and Sciences</h4>
-								<p>{{strip_tags(App\Department::where('url','humanities-sciences')->first()->description)}}</p>
+								<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','humanities-sciences')->first()->description)}}</p>
+								<a class="" style="cursor:pointer;" href="">Read more</a>
 							</div>
 							<div class="media-right">
 								<i class="fa fa-flask"></i>
@@ -119,7 +122,8 @@
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">Electronics Engineering</h4>
-								<p>{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
+								<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
+								<a class="" style="cursor:pointer;" href="">Read more</a>
 							</div>
 						</div>
 						<div class="media">
@@ -128,7 +132,8 @@
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">Electronics &amp; Telecommunication</h4>
-								<p>{{strip_tags(App\Department::where('url','extc')->first()->description)}}</p>
+								<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','extc')->first()->description)}}</p>
+								<a class="" style="cursor:pointer;" href="">Read more</a>
 							</div>
 						</div>
 						<div class="media">
@@ -137,7 +142,8 @@
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">MMS</h4>
-								<p>{{strip_tags(App\Department::where('url','mms')->first()->description)}}</p>
+								<p style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','mms')->first()->description)}}</p>
+								<a class="" style="cursor:pointer;" href="">Read more</a>
 							</div>
 						</div>
 					</div>
