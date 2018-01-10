@@ -403,7 +403,7 @@
 
 	<!-- .footer start -->
 	<!-- ================ -->
-	<div class="footer section">
+	<div class="footer section default-bg">
 		<div class="container">
 			<h1 class="title text-center" id="contact">Contact Us</h1>
 			<div class="space"></div>
@@ -418,6 +418,7 @@
 						</ul>
 					</div>
 				</div>
+
 
 
 				<div class="col-sm-4 col-md-4 col-xs-12">
