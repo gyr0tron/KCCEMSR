@@ -48,34 +48,12 @@
 								<ul class="nav navbar-nav">
 									<li class="active sub-menu-parent"><a href="/">Home</a>
 									</li>
-									<li class="sub-menu-parent"><a href="#">About</a>
-										<ul class="sub-menu">
-											<li><a href="{{route('about')}}">College Info</a></li>
-											<li><a href="{{route('about')}}">Chairperson Message</a></li>
-											<li><a href="{{route('about')}}">MD Message</a></li>
-											<li><a href="{{route('about')}}">CEO Message</a></li>
-											<li><a href="{{route('about')}}">Principal's Desk</a></li>
-											<li><a href="{{route('about')}}">Vision &amp; Mission</a></li>
-											<li><a href="{{route('about')}}">Board of Governance</a></li>
-											<li><a href="{{route('infrastructures')}}">Infrastructure &amp; Activities</a></li>
-										</ul>
-									</li>
 									<li class="sub-menu-parent"><a href="#">Academics</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('curriculum-plan')}}">Curriculum Plan</a></li>
-											{{-- <li><a href="{{route('staff-notices')}}">Staff Noticies</a></li> --}}
-											<li><a href="http://www.learningatkc.com/moodle/login/index.php">Gate / PSU</a></li>
+											<li><a href="#">Departments</a></li>
+											<li><a href="http://www.learningatkc.com/moodle/login/index.php">KC-Moodle</a></li>
 											<li><a href="{{route('publications')}}">Publications / News Letter</a></li>
-											<li><a href="{{route('exam', 'notices')}}">Exam Notices</a></li>
-											<li><a href="{{route('exam', 'timetable')}}">Exam Timetable</a></li>
-											<li><a href="{{route('exam', 'results')}}">Exam Results</a></li>
-										</ul>
-									</li>
-									<li class="sub-menu-parent"><a href="#">Departments</a>
-										<ul class="sub-menu">
-											@foreach (App\Department::all() as $dep)
-												<li><a href="{{route("department",$dep->url)}}">{{$dep->name}}</a></li>
-											@endforeach
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="#">Library</a>
@@ -96,12 +74,15 @@
 											<li><a href="{{route('admissions', 'cap-rount-allottment')}}">Cap Round Allottment</a></li>
 											<li><a href="{{route('admissions', 'direct-second-year')}}">Direct Second Year</a></li>
 											<li><a href="{{route('admissions', 'anti-ragging-affidavit')}}">Anti-ragging Affidavit</a></li>
+											<li><a href="{{route('admissions', 'scholarship')}}">Scholarship</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a>Mandatory Disclosure</a>
+									<li class="sub-menu-parent"><a href="#">Exam</a>
 										<ul class="sub-menu">
-											<li><a href="{{route('mandatory-disclosure', 'aicte-affiliation')}}">AICTE affiliation</a></li>
-											<li><a href="{{route('mandatory-disclosure', 'audit-statement')}}">Audit statement</a></li>
+											<li><a href="{{route('exam', 'notices')}}">Exam Notices</a></li>
+											<li><a href="{{route('exam', 'timetable')}}">Exam Timetable</a></li>
+											<li><a href="{{route('exam', 'results')}}">Exam Results</a></li>
+											<li><a href="#">Exam Rules & Procedures</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a>Alumni</a>
@@ -112,21 +93,41 @@
 											<li><a href="#">Alumni Association</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="#">TPO</a>
+									<li class="sub-menu-parent"><a href="#">Placements</a>
 										<ul class="sub-menu">
 											<li><a href="#">Function &amp; Responsibilities</a></li>
 											<li><a href="#">Placement Statistics</a></li>
 											<li><a href="#">Training &amp; Placement Process</a></li>
-											<li><a href="#">Feedback</a></li>
+											<li><a href="#">Higher Studies</a></li>
+											<li><a href="#">Reviews</a></li>
 										</ul>
 									</li>
 									</li>
-									<li class="sub-menu-parent"><a href="http://www.kcecell.org/" target="_blank">E-Cell</a>
+									<li class="sub-menu-parent"><a href="http://www.kcecell.org/" target="_blank">Entrepreneurship Cell</a>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Life At KC</a>
+									<li class="sub-menu-parent"><a href="/#contact">Life At KC</a>
+									</li>
+									<li class="sub-menu-parent"><a href="/#contact">Career At KC</a>
+									</li>
+									<li class="sub-menu-parent"><a>Statutory Affiliations</a>
 										<ul class="sub-menu">
-											<li><a href="{{route('life-staff')}}">Staff</a></li>
-											<li><a href="{{route('life-student')}}">Student</a></li>
+											<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
+											<li><a href="{{route('mandatory-disclosure', 'nirf-data')}}">NIRF data</a></li>
+											<li><a href="{{route('mandatory-disclosure', 'dte')}}">DTE</a></li>
+											<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
+										</ul>
+									</li>
+									<li class="sub-menu-parent"><a href="#">About</a>
+										<ul class="sub-menu">
+											<li><a href="{{route('about')}}">College Info</a></li>
+											<li><a href="{{route('about')}}">Chairperson Message</a></li>
+											<li><a href="{{route('about')}}">MD Message</a></li>
+											<li><a href="{{route('about')}}">CEO Message</a></li>
+											<li><a href="{{route('about')}}">Principal's Desk</a></li>
+											<li><a href="{{route('about')}}">Vision &amp; Mission</a></li>
+											<li><a href="{{route('about')}}">Board of Governance</a></li>
+											<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
+											<li><a href="#">Committees</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="/#contact">Contact</a>
