@@ -19,6 +19,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/about','AboutController@getAbout')->name('about');
   Route::get('/infrastructures','AboutController@getInfrastructures')->name('infrastructures');
 
+  Route::get('/department','DepartmentController@getList')->name('department-list');
   Route::get('/department/{name}','DepartmentController@get')->name('department');
 
 
