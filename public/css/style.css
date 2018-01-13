@@ -499,7 +499,7 @@ textarea {
 		float: left !important;
 	}
 }
-@media (max-width:1260px) {
+@media (max-width:1590px) {
 	.header.navbar-fixed-top {
 		position: absolute;
 	}
@@ -782,7 +782,7 @@ textarea {
 	}
 }
 
-@media (max-width: 1260px){
+@media (max-width: 1590px){
 	.clg-name {
 		margin-left: 0px;
 		margin-right: 0px;
@@ -905,6 +905,7 @@ visibility: visible;
 
 #navbar-collapse-1 ul,
 #navbar-collapse-1 ul li {
+	
 	list-style-type: none;
 	width: -webkit-max-content;
 	width: -moz-max-content;
@@ -917,7 +918,7 @@ visibility: visible;
 	border-left: none;
 }
 /* ----test nav---- */
-@media (max-width: 1260px) {
+@media (max-width: 1590px) {
 	.navbar-header {
 		float: none;
 	}
@@ -979,7 +980,7 @@ visibility: visible;
 	        justify-content: right;
 	 }
 	 
-@media (max-width: 1260px) {
+@media (max-width: 1590px) {
   .navbar-container-listholder {
 	position: absolute;
 		top: 25%;
@@ -1460,5 +1461,8 @@ font-weight: bold;
 		}
 	}
 
-/* testimonials */
+/* department page */
+.dept-pg-p {
+	font-size:1.2em;
+}
 
