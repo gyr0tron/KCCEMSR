@@ -12,26 +12,28 @@
 			<div class="space"></div>
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-12">
+					{{-- computer --}}
 					<div class="media">
 						<div class="media-body text-right">
-							<h2 class="media-heading" style="padding-bottom:5px;">Computer Engineering</h2>
+							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','computer')->first()->name}}</h2>
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','computer')->first()->description)}}</p>
-							<a class="" style="cursor:pointer;" href="">Read more</a>
+							<a class="" style="cursor:pointer;" href="{{route('department', 'computer')}}">Read more</a>
 							<div class="space"></div>
-							<img src="http://via.placeholder.com/1140x615" alt="">
+							<img src="{{App\Department::where('url','computer')->first()->getUrl()}}" alt="">
 						</div>
 						<div class="media-right">
 							<i class="fa fa-code"></i>
 						</div>
 					</div>
 					<div class="space"></div>
+					{{-- IT --}}
 					<div class="media">
 						<div class="media-body text-right">
-							<h2 class="media-heading" style="padding-bottom:5px;">Information Technology</h2>
+							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','it')->first()->name}}</h2>
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','it')->first()->description)}}</p>
-							<a class="" style="cursor:pointer;" href="">Read more</a>
+							<a class="" style="cursor:pointer;" href="{{route('department', 'it')}}">Read more</a>
 							<div class="space"></div>
-							<img src="http://via.placeholder.com/1140x615" alt="">
+							<img src="{{App\Department::where('url','it')->first()->getUrl()}}" alt="">
 						</div>
 						<div class="media-right">
 							<i class="fa fa-desktop"></i>
@@ -40,11 +42,11 @@
 					<div class="space"></div>
 					<div class="media">
 						<div class="media-body text-right">
-							<h2 class="media-heading" style="padding-bottom:5px;">Humanities and Sciences</h2>
+							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','humanities-sciences')->first()->name}}</h2>
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','humanities-sciences')->first()->description)}}</p>
-							<a class="" style="cursor:pointer;" href="">Read more</a>
+							<a class="" style="cursor:pointer;" href="{{route('department', 'humanities-sciences')}}">Read more</a>
 							<div class="space"></div>
-							<img src="http://via.placeholder.com/1140x615" alt="">
+							<img src="{{App\Department::where('url','humanities-sciences')->first()->getUrl()}}" alt="">
 						</div>
 						<div class="media-right">
 							<i class="fa fa-flask"></i>
@@ -61,11 +63,11 @@
 							<i class="fa fa-microchip"></i>
 						</div>
 						<div class="media-body">
-							<h2 class="media-heading" style="padding-bottom:5px;">Electronics Engineering</h2>
+							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','electronics')->first()->name}}</h2>
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
-							<a class="" style="cursor:pointer;" href="">Read more</a>
+							<a class="" style="cursor:pointer;" href="{{route('department', 'electronics')}}">Read more</a>
 							<div class="space"></div>
-							<img src="http://via.placeholder.com/1140x615" alt="">
+							<img src="{{App\Department::where('url','electronics')->first()->getUrl()}}" alt="">
 						</div>
 					</div>
 					<div class="space"></div>
@@ -74,11 +76,11 @@
 							<i class="fa fa-rss"></i>
 						</div>
 						<div class="media-body">
-							<h2 class="media-heading" style="padding-bottom:5px;">Electronics &amp; Telecommunication</h2>
+							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','extc')->first()->name}}</h2>
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','extc')->first()->description)}}</p>
-							<a class="" style="cursor:pointer;" href="">Read more</a>
+							<a class="" style="cursor:pointer;" href="{{route('department', 'extc')}}">Read more</a>
 							<div class="space"></div>
-							<img src="http://via.placeholder.com/1140x615" alt="">
+							<img src="{{App\Department::where('url','extc')->first()->getUrl()}}" alt="">
 						</div>
 					</div>
 					<div class="space"></div>
@@ -87,11 +89,11 @@
 							<i class="fa fa-area-chart"></i>
 						</div>
 						<div class="media-body">
-							<h2 class="media-heading" style="padding-bottom:5px;">MMS</h2>
+							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','mms')->first()->name}}</h2>
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','mms')->first()->description)}}</p>
-							<a class="" style="cursor:pointer;" href="">Read more</a>
+							<a class="" style="cursor:pointer;" href="{{route('department', 'mms')}}">Read more</a>
 							<div class="space"></div>
-							<img src="http://via.placeholder.com/1140x615" alt="">
+							<img src="{{App\Department::where('url','mms')->first()->getUrl()}}" alt="">
 						</div>
 					</div>
 					<div class="space"></div>
