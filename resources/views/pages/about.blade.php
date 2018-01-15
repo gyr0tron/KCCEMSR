@@ -47,7 +47,7 @@
 			</div>
 			<div class="space"></div>
 
-			<div class="row">
+			<div class="row" id="chp-msg">
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg" id="chairperson"><strong><span>Chairperson Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12">
 					<div style="width:100%;">
@@ -66,7 +66,7 @@
 			</div>
 			<div class="space"></div>
 
-			<div class="row" id="slider">
+			<div class="row" id="md-msg">
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>MD Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12" style="float:right">
 					<div style="width:100%;">
@@ -88,7 +88,7 @@
 			</div>
 			<div class="space"></div>
 
-			<div class="row" id="slider">
+			<div class="row" id="ceo-msg">
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>CEO Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12">
 					<div style="width:100%;">
@@ -111,7 +111,7 @@
 			</div>
 			<div class="space"></div>
 
-			<div class="row" id="slider">
+			<div class="row" id="prncp-msg">
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>Principal Message</span></strong></h1>
 				<div class="col-md-5 col-sm-5 col-xs-12" style="float:right">
 					<div style="width:100%;">

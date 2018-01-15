@@ -64,7 +64,7 @@
 											<li><a href="#">Timetable</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="">Admissions</a>
+									<li class="sub-menu-parent"><a href="#">Admissions</a>
 										<ul class="sub-menu" id="large-sub-menu">
 											<li><a href="{{route('admissions', 'admission-criteria')}}">Admission Criteria</a></li>
 											<li><a href="{{route('admissions', 'fees-notices')}}">Fees Notices</a></li>
@@ -82,7 +82,7 @@
 											<li><a href="{{route('exam', 'notices')}}">Exam Notices</a></li>
 											<li><a href="{{route('exam', 'timetable')}}">Exam Timetable</a></li>
 											<li><a href="{{route('exam', 'results')}}">Exam Results</a></li>
-											<li><a href="#">Exam Rules & Procedures</a></li>
+											<li><a href="#">Exam Rules &amp; Procedures</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a>Alumni</a>
@@ -95,11 +95,11 @@
 									</li>
 									<li class="sub-menu-parent"><a href="#">Placements</a>
 										<ul class="sub-menu">
-											<li><a href="#">Function &amp; Responsibilities</a></li>
-											<li><a href="#">Placement Statistics</a></li>
-											<li><a href="#">Training &amp; Placement Process</a></li>
-											<li><a href="#">Higher Studies</a></li>
-											<li><a href="#">Reviews</a></li>
+											<li><a href="">Function &amp; Responsibilities</a></li>
+											<li><a href="">Placement Statistics</a></li>
+											<li><a href="">Training &amp; Placement Process</a></li>
+											<li><a href="">Higher Studies</a></li>
+											<li><a href="">Reviews</a></li>
 										</ul>
 									</li>
 									</li>
@@ -120,10 +120,10 @@
 									<li class="sub-menu-parent"><a href="#">About</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('about')}}">College Info</a></li>
-											<li><a href="{{route('about')}}">Chairperson Message</a></li>
-											<li><a href="{{route('about')}}">MD Message</a></li>
-											<li><a href="{{route('about')}}">CEO Message</a></li>
-											<li><a href="{{route('about')}}">Principal's Desk</a></li>
+											<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
+											<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
+											<li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li>
+											<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
 											<li><a href="{{route('about')}}">Vision &amp; Mission</a></li>
 											<li><a href="{{route('about')}}">Board of Governance</a></li>
 											<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
