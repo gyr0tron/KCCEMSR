@@ -14,19 +14,28 @@
 			<div class="row" id="dept-row-main">
 				<div class="col-md-12">
 					<h1 id="about" class="title text-center"><span>{{$dep->name}}</span></h1>
-					<div class="lead text-center">{!!$dep->description!!}</div>
 					<div class="space"></div>
 					<div class="row">
-						<div class="col-md-6">
-							<img src="{{$dep->getUrl()}}" alt="">
+						<div class="col-md-12">
+							<img src="{{$dep->getUrl()}}" style="margin: 0 auto;height: 500px;width: 100%;" alt="">
 							<div class="space"></div>
 						</div>
-						<div class="col-md-6">
-							<h2 style="margin-top: 0px; margin-bottom: 5px;">HOD'S Message</h2>
-							<p margin-bottom: 15px;>{{strip_tags($dep->message)}}</p>
+						<div class="col-md-12">
+							<div class="lead text-center" style="text-align: justify;text-justify: auto;">{!!$dep->description!!}</div>
 						</div>
 					</div>
 					<div class="space"></div>
+					<div class="row">
+						<div class="col-md-6">
+							<h2 style="margin-top: 0px; margin-bottom: 5px;">HOD'S Message</h2>
+							<p margin-bottom: 15px;>{{strip_tags($dep->message)}}</p>
+							<div class="space"></div>
+						</div>
+						<div class="col-md-6">
+							<img src="http://via.placeholder.com/500x300" alt="">
+							<div class="space"></div>
+						</div>
+					</div>
 					<div class="row">
 						<div class="col-md-6">
 							<h2 style="margin-top: 0px; margin-bottom: 5px;">Vision</h2>
@@ -114,47 +123,45 @@
 			<h1 id="clients" class="title text-center">Student's Achievement</h1>
 			<p class="lead text-center" style="margin-top: 30px;">Some of our academic scholars are listed below...</p>
 			<div class="row">
-				<table class="table-fill">
-					<thead>
-						<tr>
-							<th class="text-left">Year</th>
-							<th class="text-left">First Topper</th>
-							<th class="text-left">Second Topper</th>
-						</tr>
-					</thead>
-					<tbody style="box-shadow: 1px 1px 10px 0px #b1b1b1;">
-						@php
-						$toppers = App\AcademicTopper::where('year',4)->where('department',$dep->url)->orderBy('pointer', 'desc')->get();
-						@endphp
-						@if (count($toppers) >= 2)
-							<tr>
-								<td class="text-left">Final Year</td>
-								<td class="text-left">{{$toppers[0]->name}}&nbsp;({{$toppers[0]->pointer}})</td>
-								<td class="text-left">{{$toppers[1]->name}}&nbsp;({{$toppers[1]->pointer}})</td>
-							</tr>
-						@endif
-						@php
-						$toppers = App\AcademicTopper::where('year',3)->where('department',$dep->url)->orderBy('pointer', 'desc')->get();
-						@endphp
-						@if (count($toppers) >= 2)
-							<tr>
-								<td class="text-left">Third Year</td>
-								<td class="text-left">{{$toppers[0]->name}}&nbsp;({{$toppers[0]->pointer}})</td>
-								<td class="text-left">{{$toppers[1]->name}}&nbsp;({{$toppers[1]->pointer}})</td>
-							</tr>
-						@endif
-						@php
-						$toppers = App\AcademicTopper::where('year',2)->where('department',$dep->url)->orderBy('pointer', 'desc')->get();
-						@endphp
-						@if (count($toppers) >= 2)
-							<tr>
-								<td class="text-left">Second Year</td>
-								<td class="text-left">{{$toppers[0]->name}}&nbsp;({{$toppers[0]->pointer}})</td>
-								<td class="text-left">{{$toppers[1]->name}}&nbsp;({{$toppers[1]->pointer}})</td>
-							</tr>
-						@endif
-					</tbody>
-				</table>
+				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
+					<div class="media">
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<img src="http://via.placeholder.com/300x350" alt="">
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">First Topper</h3>
+							<blockquote>
+								<h4 style="margin-bottom: 0px;">Student Name, Academic year</h4>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
+					<div class="media">
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<img src="http://via.placeholder.com/300x350" alt="">
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">First Topper</h3>
+							<blockquote>
+								<h4 style="margin-bottom: 0px;">Student Name, Academic year</h4>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
+					<div class="media">
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<img src="http://via.placeholder.com/300x350" alt="">
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">First Topper</h3>
+							<blockquote>
+								<h4 style="margin-bottom: 0px;">Student Name, Academic year</h4>
+							</blockquote>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="row">
 				<p class="lead text-center" style="margin-top: 3%; margin-bottom: 3%;">With academia, our students are doing best in all the areas as well...</p>
