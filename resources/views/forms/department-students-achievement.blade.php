@@ -27,9 +27,9 @@
       </tbody>
       <tfoot>
         <tr>
-          <th width="20%"></th>
+          <th width="10%">Photo</th>
           <th width="20%">Name</th>
-          <th width="40%">Achievement</th>
+          <th width="50%">Achievement</th>
           <th width="20%">Actions</th>
         </tr>
       </tfoot>
@@ -80,6 +80,7 @@
     <table id="department-student-achievenments-table" class="table table-bordered table-hover datatable-full">
       <thead>
         <tr>
+          <th width="20%">Photo</th>
           <th width="50%">Name</th>
           <th width="20%">Pointer</th>
           <th width="20%">Year</th>
@@ -89,6 +90,7 @@
       <tbody>
         @foreach (App\AcademicTopper::where("department",$dep->url)->get() as $topper)
           <tr>
+            <td><img width="128" height="128" src="{{$topper->getUrl()}}"/></td>
             <td>{{$topper->name}}</td>
             <td>{{$topper->pointer}}</td>
             <td>{{$topper->getYear()}}</td>
@@ -101,25 +103,31 @@
         @endforeach
         <tr>
           <form id="form-department-add-academics-topper" action="/api/admin/department/topper/add" method="post" data-form="sr">
-            <input type="hidden" name="department" value="{{$dep->url}}">
+            <input type="hidden" name="topper_department" value="{{$dep->url}}">
             <td>
               <div class="form-group">
-                <input type="text" class="form-control" id="topper-name" name="topper-name">
+                <input type="file" class="form-control" id="topper_image" name="topper_image" accept="image/*">
                 <p class="help-block"></p>
               </div>
             </td>
             <td>
               <div class="form-group">
-                <input type="text" class="form-control" id="topper-pointer" name="topper-pointer">
+                <input type="text" class="form-control" id="topper_name" name="topper_name">
                 <p class="help-block"></p>
               </div>
             </td>
             <td>
               <div class="form-group">
-                <select class="form-control" id="topper-year" name="topper-year">
-                  <option value="2">Second</option>
-                  <option value="3">Thrid</option>
-                  <option value="4">Final</option>
+                <input type="text" class="form-control" id="topper_pointer" name="topper_pointer">
+                <p class="help-block"></p>
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <select class="form-control" id="topper_year" name="topper_year">
+                  <option value="2">SE</option>
+                  <option value="3">TE</option>
+                  <option value="4">BE</option>
                 </select>
                 <p class="help-block"></p>
               </div>
@@ -130,6 +138,7 @@
       </tbody>
       <tfoot>
         <tr>
+          <th width="20%">Photo</th>
           <th width="50%">Name</th>
           <th width="20%">Pointer</th>
           <th width="20%">Year</th>

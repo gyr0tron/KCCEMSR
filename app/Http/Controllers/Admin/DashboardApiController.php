@@ -363,10 +363,14 @@ class DashboardApiController extends Controller
   public function addAcademicTopper(AdminAddAcademicTopper $request)
   {
     $top = new AcademicTopper();
-    $top->name = $request->input('topper-name');
-    $top->pointer = $request->input('topper-pointer');
-    $top->year = $request->input('topper-year');
-    $top->department = $request->input("department","");
+    $top->name = $request->input('topper_name');
+    $top->pointer = $request->input('topper_pointer');
+    $top->year = $request->input('topper_year');
+    $top->department = $request->input("topper_department","");
+    $file = $request->topper_image;
+    if($file) {
+      $top->uploadImage($file);
+    }
     $top->created_by = Auth::user()->id;
     $top->updated_by = Auth::user()->id;
     $top->save();

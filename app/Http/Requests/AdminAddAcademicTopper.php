@@ -32,9 +32,10 @@ class AdminAddAcademicTopper extends FormRequest
   public function rules()
   {
     return [
-      'topper-name' => 'required|string',
-      'topper-pointer' => 'required',
-      'topper-year' => 'required',
+      'topper_name' => 'required|string',
+      'topper_pointer' => 'required',
+      'topper_image' => 'required|image',
+      'topper_year' => 'required',
     ];
   }
 }

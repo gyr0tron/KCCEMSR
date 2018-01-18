@@ -17,6 +17,7 @@ class AcademicToppers extends Migration
       $table->increments('id');
       $table->string('name')->nullable();
       $table->string('pointer')->nullable();
+      $table->string('image')->nullable();
       $table->string('department')->nullable();
       $table->integer('year')->nullable();
       $table->integer("created_by")->nullable();
