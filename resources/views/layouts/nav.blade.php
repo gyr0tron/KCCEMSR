@@ -127,7 +127,7 @@
 											<li><a href="{{route('about')}}">Vision &amp; Mission</a></li>
 											<li><a href="{{route('about')}}">Board of Governance</a></li>
 											<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
-											<li><a href="#">Committees</a></li>
+											<li><a href="{{route('committees')}}">Committees</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="/#contact">Contact</a>

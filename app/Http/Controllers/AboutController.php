@@ -13,6 +13,10 @@ class AboutController extends Controller
     {
       return view('pages.about');
     }
+    public function getCommittees()
+    {
+      return view('pages.committees');
+    }
     public function getInfrastructures()
     {
       return view('pages.infrastructure');
