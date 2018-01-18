@@ -179,7 +179,7 @@
 				<div class="filters text-center">
 					<ul class="nav nav-pills">
 						<li class="active"><a href="#" data-filter="*">All</a></li>
-						@foreach (App\Committee::all() as $type)
+						@foreach (App\Committee::getAll() as $type)
 							<li><a href="#" data-filter=".{{$type->url}}">{{$type->name}}</a></li>
 						@endforeach
 					</ul>

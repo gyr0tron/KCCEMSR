@@ -49,7 +49,7 @@ class DepartmentController extends Controller
   public function getLifeStudent()
   {
     $title = "Life at KC - Student";
-    $types = Committee::all();
+    $types = Committee::getAll();
     return view('pages.lifeatkc', compact('types','title'));
   }
 }

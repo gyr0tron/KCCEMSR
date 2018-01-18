@@ -20,6 +20,7 @@ use App\Http\Requests\AdminAddStaffNotices;
 use App\Http\Requests\AdminAddExamResult;
 use App\Http\Requests\AdminAddPublication;
 use App\Http\Requests\AdminAddTestimonial;
+use App\Http\Requests\AdminAddCommitteeRequest;
 use App\Http\Requests\AdminAddInfrastructure;
 
 use Auth;
@@ -38,6 +39,7 @@ use App\Announcement;
 use App\FileUpload;
 use App\Publication;
 use App\Testimonial;
+use App\Committee;
 use App\Infrastructure;
 use App\ResponseBuilder;
 
@@ -601,6 +603,29 @@ class DashboardApiController extends Controller
     $upload = FileUpload::where("id",$id)->first();
     if(!$upload) abort(404, 'Not Found');
     $upload->deleteFile();
+    $upload->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Committee
+  public function addCommittee(AdminAddCommitteeRequest $request)
+  {
+    $test = new Committee();
+    $test->name = $request->input("name");
+    $test->description = $request->input("description");
+    $test->created_by = Auth::user()->id;
+    $test->updated_by = Auth::user()->id;
+    $test->uploadImage($request->image);
+    $test->filename = $test->uploadFile($request->file('file'));
+    $test->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function removeCommittee(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $upload = Committee::where("id",$id)->first();
+    if(!$upload) abort(404, 'Not Found');
+    $upload->deleteFile();
+    $upload->removeImage();
     $upload->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
