@@ -17,7 +17,7 @@
 					<div class="space"></div>
 					<div class="row">
 						<div class="col-md-12">
-							<img src="{{$dep->getUrl()}}" style="margin: 0 auto;height: 500px;width: 100%;" alt="">
+							<img src="{{$dep->getUrl()}}" style="margin: 0 auto;height: 500px;width: 80%;" alt="">
 							<div class="space"></div>
 						</div>
 						<div class="col-md-12">
