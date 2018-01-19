@@ -6,7 +6,24 @@
   text-decoration: none;
 }
 
-
+/* Nav Mobile */
+#navmobile {
+  display: none;
+}
+#navmain {
+  display: block;
+}
+@media only screen and (max-width: 1590px) {
+  #navmobile {
+    display: block;
+    height: 64px;
+    width: 100%;
+    background-color: red;
+  }
+  #navmain {
+    display: none;
+  }
+}
 
 
 /* Carousel */
@@ -29,6 +46,7 @@
 #quote-carousel .carousel-control.left {
   left: -60px;
 }
+
 
 @media (max-width: 1200px){
   #quote-carousel .carousel-control.left {
