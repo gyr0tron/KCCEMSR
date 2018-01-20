@@ -2,7 +2,7 @@
 	<div class="container" id="head-container">
 		<div class="row">
 			<div class="icon-menu">
-					<img class="bars" src="/images/bars.svg">
+					<i class="fa fa-bars fa-lg" aria-hidden="true" style="color: #fff;"></i>
       </div>
 			<div class="menu">
 
