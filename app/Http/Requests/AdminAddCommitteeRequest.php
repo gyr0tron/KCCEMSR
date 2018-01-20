@@ -32,7 +32,7 @@ class AdminAddCommitteeRequest extends FormRequest
   public function rules()
   {
     return [
-      'name' => 'required|string',
+      'name' => 'required|max:100|regex:/(^[A-Za-z0-9 ]+$)+/',
       'description' => 'required|string',
       'image' => 'required|image',
       'file' => 'required|file',

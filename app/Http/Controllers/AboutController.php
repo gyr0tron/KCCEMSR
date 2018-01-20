@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Carousel;
+use App\Committee;
 use App\Message;
 
 class AboutController extends Controller
@@ -20,5 +21,13 @@ class AboutController extends Controller
     public function getInfrastructures()
     {
       return view('pages.infrastructure');
+    }
+    public function getCommitteeDetails($url)
+    {
+      $committee = Committee::where('url',$url)->first();
+      if(!$committee) abort(404);
+      $title = $committee->name;
+      $url = $committee->getFile();
+      return view('pages.pdfview', compact("title", "url"));
     }
 }

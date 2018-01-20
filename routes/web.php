@@ -18,6 +18,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/',"HomeController@getHome");
   Route::get('/about','AboutController@getAbout')->name('about');
   Route::get('/about/committees','AboutController@getCommittees')->name('committees');
+  Route::get('/about/committee/{url}','AboutController@getCommitteeDetails')->name('committee-details');
   Route::get('/infrastructures','AboutController@getInfrastructures')->name('infrastructures');
 
   Route::get('/departments','DepartmentController@getList')->name('department-list');

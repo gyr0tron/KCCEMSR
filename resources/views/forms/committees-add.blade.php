@@ -5,7 +5,7 @@
         <h3 class="box-title">All Committees</h3>
       </div>
       <div class="box-body">
-        <table id="committees-table" class="table table-bordered table-hover datatable-full">
+        <table id="committees-table" class="table table-bordered table-hover table-responsive datatable-full">
           <thead>
             <tr>
               <th width="30%"></th>

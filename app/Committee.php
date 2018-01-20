@@ -60,6 +60,17 @@ class Committee extends Model
     File::delete($path . $this->filename);
   }
 
+  public function generateUrl()
+  {
+    $url = strtolower($this->name);
+    $url = str_replace(" ", "-", $url);
+    $no = 1;
+    while(Committee::where('url',$url)->first()) {
+      $url = $url.'-'.$no++;
+    }
+    $this->url = $url;
+  }
+
 
 
   public static function getAll() {

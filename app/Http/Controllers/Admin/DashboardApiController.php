@@ -614,6 +614,7 @@ class DashboardApiController extends Controller
     $test->description = $request->input("description");
     $test->created_by = Auth::user()->id;
     $test->updated_by = Auth::user()->id;
+    $test->generateUrl();
     $test->uploadImage($request->image);
     $test->filename = $test->uploadFile($request->file('file'));
     $test->save();

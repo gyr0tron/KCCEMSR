@@ -17,6 +17,7 @@ class CreateCommitteesTable extends Migration
       $table->increments('id');
       $table->string('name')->nullable();
       $table->string('image')->nullable();
+      $table->string('url', 191)->unique();
       $table->longtext('description')->nullable();
       $table->string('filename')->nullable();
       $table->integer("created_by")->nullable();
