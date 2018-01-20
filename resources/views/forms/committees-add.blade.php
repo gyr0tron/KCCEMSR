@@ -17,10 +17,11 @@
           <tbody>
             @foreach (App\Committee::all() as $committee)
               <tr>
-                <td><img src="{{$committee->getUrl()}}" width="174" height="174"/></td>
+                <td><a href="{{$committee->getUrl()}}" data-fancybox><img src="{{$committee->getUrl()}}" width="174" height="174"/></a></td>
                 <td>{{$committee->name}}</td>
                 <td>{{$committee->description}}</td>
                 <td>
+                  <a class="btn btn-sm btn-warning btn-table" href="{{route('admin_committees_edit', $committee->id)}}"><i class="fa fa-pencil"></i></a>
                   <a class="btn btn-sm btn-danger btn-table" onclick="dashboard.removeYesNo('Are you sure you want to remove {{$committee->name}}?', '/api/admin/committee/remove', {{$committee->id}})"><i class="fa fa-trash-o"></i></a>
                 </td>
               </tr>

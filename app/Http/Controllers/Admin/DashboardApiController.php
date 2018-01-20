@@ -609,25 +609,44 @@ class DashboardApiController extends Controller
   // Committee
   public function addCommittee(AdminAddCommitteeRequest $request)
   {
-    $test = new Committee();
-    $test->name = $request->input("name");
-    $test->description = $request->input("description");
-    $test->created_by = Auth::user()->id;
-    $test->updated_by = Auth::user()->id;
-    $test->generateUrl();
-    $test->uploadImage($request->image);
-    $test->filename = $test->uploadFile($request->file('file'));
-    $test->save();
+    $com = new Committee();
+    $com->name = $request->input("name");
+    $com->description = $request->input("description");
+    $com->created_by = Auth::user()->id;
+    $com->updated_by = Auth::user()->id;
+    $com->generateUrl();
+    $com->uploadImage($request->image);
+    $com->filename = $com->uploadFile($request->file('file'));
+    $com->save();
     return ResponseBuilder::send(true, "", "");
+  }
+  public function editCommittee(Request $request)
+  {
+    $id = $request->input('id','-1');
+    $com = Committee::where('id',$id)->first();
+    if(!$com) abort(404);
+    $com->name = $request->input("name");
+    $com->description = $request->input("description");
+    $com->updated_by = Auth::user()->id;
+    if($request->image){
+      $com->removeImage();
+      $com->uploadImage($request->image);
+    }
+    if($request->file('file')) {
+      $com->deleteFile();
+      $com->filename = $com->uploadFile($request->file('file'));
+    }
+    $com->save();
+    return ResponseBuilder::send(true, "", route('admin_committees'));
   }
   public function removeCommittee(Request $request)
   {
     $id = $request->input("id","-1");
-    $upload = Committee::where("id",$id)->first();
-    if(!$upload) abort(404, 'Not Found');
-    $upload->deleteFile();
-    $upload->removeImage();
-    $upload->forceDelete();
+    $com = Committee::where("id",$id)->first();
+    if(!$com) abort(404, 'Not Found');
+    $com->deleteFile();
+    $com->removeImage();
+    $com->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
 }

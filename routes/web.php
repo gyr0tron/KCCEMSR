@@ -71,6 +71,7 @@ Route::prefix('admin')->group(function () {
 
 
   Route::get('/committees','Admin\DashboardController@committees')->name("admin_committees");
+  Route::get('/committees/edit/{id}','Admin\DashboardController@editCommittee')->name("admin_committees_edit");
 
   Route::get('/testimonials','Admin\DashboardController@testimonials')->name("admin_testimonials");
   Route::get('/infrastructures','Admin\DashboardController@infrastructures')->name("admin_infrastructure");
@@ -148,6 +149,7 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/infrastructure/remove","Admin\DashboardApiController@removeInfrastructure");
 
   Route::post("/committee/add","Admin\DashboardApiController@addCommittee");
+  Route::post("/committee/edit","Admin\DashboardApiController@editCommittee");
   Route::post("/committee/remove","Admin\DashboardApiController@removeCommittee");
 
   Route::post("/settings/main","Admin\UpdateController@settings");
