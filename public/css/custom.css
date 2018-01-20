@@ -16,13 +16,150 @@
 @media only screen and (max-width: 1590px) {
   #navmobile {
     display: block;
-    height: 64px;
-    width: 100%;
-    background-color: red;
   }
   #navmain {
     display: none;
   }
+  
+  @media (max-width: 480px){
+  .logo {
+    display: none;
+    }
+  }
+
+  @media (max-width: 1590px){
+  .header-left {
+    margin-right: 0px;
+    }
+  }
+
+  @media (max-width: 1400px){
+  .header-left {
+    margin-right: 0px;
+    }
+  }
+
+  @media (max-width: 1300px){
+  .header-left {
+    margin-right: 0px;
+    }
+  }
+
+  @media (max-width: 1000px){
+  .header-left {
+    margin-right: 0px;
+    }
+  }
+  
+  .bars {
+    width: 25px;
+    height: 25px;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  .menu{
+    background: #000000;
+    position: fixed;
+    left: -285px;  /* start off behind the scenes */
+    width: 285px;
+    height: 100%;
+    color:#fff;
+    top: 0px;
+  }
+
+  .accordion-menu{
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .dropdownlink {
+    cursor: pointer;
+    display: block;
+    padding: 3px 0px 3px 40px;
+    font-size: 18px;
+    line-height: 45px;
+    color: #fff;
+    position: relative;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+  }
+/* 
+  .dropdownlink a {
+    color: #fff;
+  } */
+
+  .dropdownlink:hover{
+    background: #415161;
+  }
+
+  .dropdownlink i{
+    font-size:18px;
+    padding-right:15px;
+  }
+
+  .dropdownlink a {
+    text-decoration: none;
+  }
+
+  .submenuItems{
+    background-color: #000000;
+    line-height: 45px;
+    padding: 0px;
+  }
+
+  .submenuItems li{
+    padding-left:15px;
+    border-bottom:1px solid #000000;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+  }
+
+  .submenuItems li:last-child{
+    border: none;
+  }
+
+  .submenuItems li:hover{
+    background-color: #6BB9F0;
+  }
+
+  .submenuItems a{
+    display:block;
+    padding: 5px 0px 5px 45px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .icon-close {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .icon-menu {
+    float: left;
+    width: 80px;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .icon-menu i {
+    margin-right: 5px;
+  }
+
+  .plus{
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
 }
 
 

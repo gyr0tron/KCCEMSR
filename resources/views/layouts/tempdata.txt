@@ -1,0 +1,208 @@
+<input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+			<div class="menu">
+				<label class="menu-toggle" for="menu"><i class="fa fa-bars" aria-hidden="true"></i></label>
+				<ul class="list-unstyled">
+					<li>
+						<a href="#">Menu-1</a>
+					</li>
+					<li>
+						<a href="#">Menu-2</a>
+					</li>
+					<li>      
+						<label for="menu-3">Menu-3</label>
+						<input type="checkbox" id="menu-3" name="menu-3" class="menu-checkbox">
+						<div class="menu">
+							<label class="menu-toggle" for="menu-3"><span>Toggle</span></label>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#">Menu-3-1</a>
+								</li>
+								<li>
+									<label for="menu-3-2">Menu-3-2</label>
+									<input type="checkbox" id="menu-3-2" name="menu-3-2" class="menu-checkbox">
+									<div class="menu">
+										<label class="menu-toggle" for="menu-3-2"><span>Toggle</span></label>
+										<ul class="list-unstyled">
+											<li>
+												<a href="#">Menu-3-2-1</a>
+											</li>
+											<li>
+												<a href="#">Menu-3-2-2</a>
+											</li>
+											<li>
+												<label for="menu-3-2-3">Menu-3-2-3</label>
+												<input type="checkbox" id="menu-3-2-3" name="menu-3-2-3" class="menu-checkbox">
+												<div class="menu">
+													<label class="menu-toggle" for="menu-3-2-3"><span>Toggle</span></label>
+													<ul class="list-unstyled">
+														<li>
+															<a href="#">Menu-3-2-3-1</a>
+														</li>
+														<li>
+															<a href="#">Menu-3-2-3-2</a>
+														</li>
+														<li>
+															<a href="#">Menu-3-2-3-3</a>
+														</li>
+														<li>
+															<a href="#">Menu-3-2-3-4</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="#">Menu-3-2-4</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="#">Menu-3-3</a>
+								</li>
+								<li>
+									<a href="#">Menu-3-4</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<label for="menu-4">Menu-4</label>
+						<input type="checkbox" id="menu-4" name="menu-4" class="menu-checkbox">
+						<div class="menu">
+							<label class="menu-toggle" for="menu-4"><span>Toggle</span></label>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#">Menu-4-1</a>
+								</li>
+								<li>
+									<a href="#">Menu-4-2</a>
+								</li>
+								<li>
+									<a href="#">Menu-4-3</a>
+								</li>
+								<li>
+									<a href="#">Menu-4-4</a>
+								</li>
+							</ul>
+						</div>
+					</li>      
+					<li>
+						<label for="menu-5">Menu-5</label>
+						<input type="checkbox" id="menu-5" name="menu-5" class="menu-checkbox">
+						<div class="menu">
+							<label class="menu-toggle" for="menu-5"><span>Toggle</span></label>
+							<ul>
+								<li>
+									<a href="#">Menu-5-1</a>
+								</li>
+								<li>
+									<a href="#">Menu-5-2</a>
+								</li>
+								<li>
+									<a href="#">Menu-5-3</a>
+								</li>
+								<li>
+									<a href="#">Menu-5-4</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Menu-6</a>
+					</li>
+				</ul>
+			</div>
+
+      -----52----- customcss
+
+      
+  
+#wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+label {
+  cursor: pointer;
+}
+label:focus {
+  outline: none;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 240px;
+  height: 100%;
+  transform: translate3d(-240px, 0, 0);
+  transition: transform 0.35s;
+}
+.menu label.menu-toggle {
+  position: absolute;
+  top: 30px;
+  right: -85px;
+  width: 60px;
+  height: 60px;
+  line-height: 0px;
+  display: block;
+  padding: 0;
+  text-indent: -9999px;
+  background: rgba(255, 255, 255, 0) url(/images/bars.svg) 50% 50%/25px 25px no-repeat;
+}
+.menu ul li > label {
+  background: url(/images/chev-right.svg) 95% 50%/16px 16px no-repeat;
+}
+.menu ul li a, .menu ul li label {
+  display: block;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 60px;
+  text-decoration: none;
+  color: #000;
+}
+.menu ul li a:hover, .menu ul li label:hover {
+  color: #666;
+}
+
+/* hide inputs */
+.menu-checkbox {
+  display: none;
+}
+
+/* hide navigation icon for sublabels */
+.menu .menu label.menu-toggle {
+  background: none;
+}
+
+/* fade in checked menu */
+.menu-checkbox:checked + .menu label.menu-toggle {
+  background-color: rgba(0, 0, 0, 0.98);
+	-webkit-transition: all 0.3s ease-in-out 0s, background-color 0.7s ease-in-out;
+	-o-transition: all 0.3s ease-in-out 0s, background-color 0.7s ease-in-out;
+	transition: all 0.3s ease-in-out 0s, background-color 0.7s ease-in-out;
+}
+
+.menu-checkbox:checked + .menu {
+  transform: translate3d(0, 0, 0);
+  height: auto;
+}
+
+#info {
+  display: table;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+}
+#info #info-content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+}
+

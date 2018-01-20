@@ -217,3 +217,46 @@ $('[id^=carousel-thumb-]').click( function(){
   $('[id^=carousel-thumb-]').removeClass('selected');
   $(this).addClass('selected');
 });
+
+var main = function () {
+	/* Push the body and the nav over by 285px over */
+	$('.icon-menu').click(function () {
+		$('.menu').animate({
+			left: "0px"
+		}, 200);
+
+		$('body').animate({
+			left: "285px"
+		}, 200);
+
+		$('.submenuItems').hide();
+	});
+
+	/* Then push them back */
+	$('.icon-close').click(function () {
+		$('.menu').animate({
+			left: "-285px"
+		}, 200);
+
+		$('body').animate({
+			left: "0px"
+		}, 200);
+	});
+
+	//toggle the sub menu
+	$('.dropper').click(function () {
+		var clsnm = ".id" + $('.dropper').attr('data-id');
+		$('.submenuItems').toggle('slow');
+		if ($(".plus").hasClass('fa-chevron-down')) {
+			$(".plus").removeClass('fa-chevron-down');
+			$(".plus").addClass('fa-chevron-up');
+		}
+		else {
+			$(".plus").removeClass('fa-chevron-up');
+			$(".plus").addClass('fa-chevron-down');
+		}
+	});
+
+};
+
+$(document).ready(main);
