@@ -17,7 +17,11 @@
     </ol>
   </section>
   <section class="content">
-    @include('forms.committees-add')
+    @if (isset($committee))
+      @include('forms.committees-edit', compact('committee'))
+    @else
+      @include('forms.committees-add')
+    @endif
   </section>
 @endsection
 @section('post')

@@ -12,6 +12,7 @@ use App\Event;
 use App\Eventimage;
 use App\Department;
 use App\Publication;
+use App\Committee;
 use App\FileUpload;
 
 class DashboardController extends Controller
@@ -133,5 +134,11 @@ class DashboardController extends Controller
   public function committees()
   {
     return view('pages.admin.committees');
+  }
+  public function editCommittee($id)
+  {
+    $committee = Committee::where('id',$id)->first();
+    if(!$committee) abort(404);
+    return view('pages.admin.committees', compact('committee'));
   }
 }
