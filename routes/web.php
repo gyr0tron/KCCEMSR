@@ -33,7 +33,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/academics/publications','AcademicsController@getPublications')->name('publications');
 
   Route::get('/admissions/{action}','AdmissionsController@get')->name('admissions');
-  Route::get('/mandatory-disclosure/{action}','AdmissionsController@get')->name('mandatory-disclosure');
+  Route::get('/statutory-affiliations/{action}','AdmissionsController@get')->name('mandatory-disclosure');
 
   Route::get('/staff/profile/{id}','DepartmentController@getProfile')->name('staff-profile');
   Route::get('/event/{url}','DepartmentController@getEvent')->name('event');

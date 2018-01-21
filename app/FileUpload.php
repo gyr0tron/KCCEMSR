@@ -11,8 +11,8 @@ class FileUpload extends Model
   protected $table = "fileuploads";
   public $timestamps = true;
 
-  const admission_list = ['admission-criteria', 'fees-notices', 'institute-prospectus', 'dte-admission-information-brochure','total-intake', 'cap-rount-allottment', 'direct-second-year', 'anti-ragging-affidavit', 'aicte-affiliation', 'audit-statement'];
-  const admission_name_list = ['Admission Criteria', 'Fees Notices', 'Institute Prospectus', 'Dte Admission Information Brochure','Total Intake', 'Cap Rount Allottment', 'Direct Second Year', 'Anti Ragging Affidavit', 'AICTE affiliation', 'Audit statement'];
+  const admission_list = ['admission-criteria', 'fees-notices', 'institute-prospectus', 'dte-admission-information-brochure','total-intake', 'cap-rount-allottment', 'direct-second-year', 'anti-ragging-affidavit', 'scholarship', 'mandatory-disclosure', 'nirf-data', 'dte', 'university-affiliation'];
+  const admission_name_list = ['Admission Criteria', 'Fees Notices', 'Institute Prospectus', 'Dte Admission Information Brochure','Total Intake', 'Cap Rount Allottment', 'Direct Second Year', 'Anti Ragging Affidavit', 'Scholarship', 'Mandatory Disclosure', 'NIRF data', 'DTE', 'University Affiliation'];
 
   const library_list = ['question-papers', 'e-books', 'syllabus', 'timetable'];
   const library_list_name = ['Question Papers', 'E-Books', 'Syllabus', 'Timetable'];
