@@ -91,13 +91,16 @@
     display: block;
     float: left;
     padding: 0;
-    color: #345;
-    border: 2px solid #345;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
     z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);       
+    /* -webkit-transition: color 0.15s, background-color 0.15s;
+    transition: color 0.15s, background-color 0.15s; */
   }
   .js-nav-toggle span {
     position: relative;
-    background-color: #345;
+    background-color: rgb(255, 255, 255);
     height: 2px;
     display: block;
     width: 22px;
@@ -120,12 +123,12 @@
     transition: all 0.3s 0.3s;
   }
   .js-nav-toggle span:before {
-    -webkit-box-shadow: 0 14px 0 1px #345;
-            box-shadow: 0 14px 0 1px #345;
+    -webkit-box-shadow: 0 14px 0 1px rgb(255, 255, 255);
+            box-shadow: 0 14px 0 1px rgb(255, 255, 255);
   }
   .js-nav-toggle span:after {
-    -webkit-box-shadow: 0 0 0 1px #345;
-            box-shadow: 0 0 0 1px #345;
+    -webkit-box-shadow: 0 0 0 1px rgb(255, 255, 255);
+            box-shadow: 0 0 0 1px rgb(255, 255, 255);
   }
   .show-menu .js-nav-toggle span {
     background-color: transparent;
@@ -140,8 +143,8 @@
   }
   .show-menu .js-nav-toggle span:before, .show-menu .js-nav-toggle span:after {
     margin-top: 0;
-    -webkit-box-shadow: 0 0 0 1px #345;
-            box-shadow: 0 0 0 1px #345;
+    -webkit-box-shadow: 0 0 0 1px rgb(255, 255, 255);
+            box-shadow: 0 0 0 1px rgb(255, 255, 255);
   }
 
   nav {
