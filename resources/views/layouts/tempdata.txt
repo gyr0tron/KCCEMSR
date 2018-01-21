@@ -206,3 +206,370 @@ label:focus {
   font-size: 12px;
 }
 
+
+
+
+
+
+--------------------new nav --------------------------
+<div class="icon-menu">
+					<i class="fa fa-bars fa-lg" aria-hidden="true" style="color: #fff;"></i>
+      </div>
+			<div class="menu">
+
+				<!-- Menu icon -->
+				<div class="icon-close">
+					<img src="/images/close.png">
+				</div>
+
+				<!-- Menu -->
+				<!--NAV DATA START-->
+				<ul class="accordion-menu">
+					<li>
+						<div class="dropdownlink">
+							<a href="/">Home</a>
+						</div>
+					</li>
+					<li class="dropper id0" data-id="0">
+						<div class="dropdownlink">
+							<a href="#">Academics<i class="plus fa fa-chevron-down" aria-hidden="true"></i></a>
+						</div>
+						<ul class="submenuItems">
+							<li><a href="{{route('curriculum-plan')}}">Curriculum Plan</a></li>
+							<li><a href="{{route('department-list')}}">Departments</a></li>
+							<li><a href="http://www.learningatkc.com/moodle/login/index.php">KC-Moodle</a></li>
+							<li><a href="{{route('publications')}}">Publications / News Letter</a></li>
+						</ul>
+					</li>
+
+					<li class="dropper">
+						<div class="dropdownlink">
+							<a href="#">Library<i class="plus fa fa-chevron-down" aria-hidden="true"></i></a>
+						</div>
+						<ul class="submenuItems">
+							<li><a href="#">Question Papers</a></li>
+							<li><a href="#">E-Books &amp; Journals</a></li>
+							<li><a href="#">Syllabus</a></li>
+							<li><a href="#">Timetable</a></li>
+						</ul>
+					</li>
+
+					<li class="dropper">
+						<div class="dropdownlink">
+							<a href="#">Admissions<i class="plus fa fa-chevron-down" aria-hidden="true"></i></a>
+						</div>
+						<ul class="submenuItems">
+							<li><a href="{{route('admissions', 'admission-criteria')}}">Admission Criteria</a></li>
+							<li><a href="{{route('admissions', 'fees-notices')}}">Fees Notices</a></li>
+							<li><a href="{{route('admissions', 'institute-prospectus')}}">Institute Prospectus</a></li>
+							<li><a href="{{route('admissions', 'dte-admission-information-brochure')}}">DTE Admission Information Brochure</a></li>
+							<li><a href="{{route('admissions', 'total-intake')}}">Total Intake</a></li>
+							<li><a href="{{route('admissions', 'cap-rount-allottment')}}">Cap Round Allottment</a></li>
+							<li><a href="{{route('admissions', 'direct-second-year')}}">Direct Second Year</a></li>
+							<li><a href="{{route('admissions', 'anti-ragging-affidavit')}}">Anti-ragging Affidavit</a></li>
+							<li><a href="{{route('admissions', 'scholarship')}}">Scholarship</a></li>
+						</ul>
+					</li>
+					
+					<li class="dropper">
+						<div class="dropdownlink">
+							<a href="#">Exam<i class="plus fa fa-chevron-down" aria-hidden="true"></i></a>
+						</div>
+						<ul class="submenuItems">
+							<li><a href="{{route('exam', 'notices')}}">Exam Notices</a></li>
+							<li><a href="{{route('exam', 'timetable')}}">Exam Timetable</a></li>
+							<li><a href="{{route('exam', 'results')}}">Exam Results</a></li>
+							<li><a href="#">Exam Rules &amp; Procedures</a></li>
+						</ul>
+					</li>
+
+					<li class="dropper">
+						<div class="dropdownlink">
+							<a href="#">Alumni<i class="plus fa fa-chevron-down" aria-hidden="true"></i></a>
+						</div>
+						<ul class="submenuItems">
+							<li><a href="#">Alumni Portal</a></li>
+							<li><a href="#">Alumni Association</a></li>
+						</ul>
+					</li>
+
+					<li class="dropper">
+						<div class="dropdownlink">
+							<a href="#">Placements<i class="plus fa fa-chevron-down" aria-hidden="true"></i></a>
+						</div>
+						<ul class="submenuItems">
+							<li><a href="">Function &amp; Responsibilities</a></li>
+							<li><a href="">Placement Statistics</a></li>
+							<li><a href="">Training &amp; Placement Process</a></li>
+							<li><a href="">Higher Studies</a></li>
+							<li><a href="">Reviews</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="dropdownlink">
+							<a href="/#contact">Life At KC</a>
+						</div>
+					</li>
+
+					<li>
+						<div class="dropdownlink">
+							<a href="/#contact">Career At KC</a>
+						</div>
+					</li>
+
+					<li class="dropper">
+						<div class="dropdownlink">
+							<a href="#">Statutory Affiliations<i class="plus fa fa-chevron-down" aria-hidden="true"></i></a>
+						</div>
+						<ul class="submenuItems">
+							<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
+							<li><a href="{{route('mandatory-disclosure', 'nirf-data')}}">NIRF data</a></li>
+							<li><a href="{{route('mandatory-disclosure', 'dte')}}">DTE</a></li>
+							<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
+						</ul>
+					</li>
+
+					<li class="dropper">
+						<div class="dropdownlink">
+							<a href="#">About<i class="plus fa fa-chevron-down" aria-hidden="true"></i></a>
+						</div>
+						<ul class="submenuItems">
+							<li><a href="{{route('about')}}">College Info</a></li>
+							<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
+							<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
+							<li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li>
+							<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
+							<li><a href="{{route('about')}}">Vision &amp; Mission</a></li>
+							<li><a href="{{route('about')}}">Board of Governance</a></li>
+							<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
+							<li><a href="{{route('committees')}}">Committees</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<div class="dropdownlink">
+							<a href="#">Contact</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+
+
+
+
+
+
+
+			.bars {
+    width: 25px;
+    height: 25px;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  .menu{
+    background: #000000;
+    position: fixed;
+    left: -285px;  /* start off behind the scenes */
+    width: 285px;
+    height: 100%;
+    color:#fff;
+    top: 0px;
+  }
+
+  .accordion-menu{
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .dropdownlink {
+    cursor: pointer;
+    display: block;
+    padding: 3px 0px 3px 40px;
+    font-size: 18px;
+    line-height: 45px;
+    color: #fff;
+    position: relative;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+  }
+/* 
+  .dropdownlink a {
+    color: #fff;
+  } */
+
+  .dropdownlink:hover{
+    background: #415161;
+  }
+
+  .dropdownlink i{
+    font-size:18px;
+    padding-right:15px;
+  }
+
+  .dropdownlink a {
+    text-decoration: none;
+  }
+
+  .submenuItems{
+    background-color: #000000;
+    line-height: 45px;
+    padding: 0px;
+  }
+
+  .submenuItems li{
+    padding-left:15px;
+    border-bottom:1px solid #000000;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+  }
+
+  .submenuItems li:last-child{
+    border: none;
+  }
+
+  .submenuItems li:hover{
+    background-color: #6BB9F0;
+  }
+
+  .submenuItems a{
+    display:block;
+    padding: 5px 0px 5px 45px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .icon-close {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .icon-menu {
+    float: left;
+    width: 80px;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .icon-menu i {
+    margin-right: 5px;
+  }
+
+  .plus{
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
+
+
+
+
+	var main = function () {
+	/* Push the body and the nav over by 285px over */
+	$('.icon-menu').click(function () {
+		$('.menu').animate({
+			left: "0px"
+		}, 200);
+
+		$('body').animate({
+			left: "285px"
+		}, 200);
+
+		$('.submenuItems').hide();
+	});
+
+	/* Then push them back */
+	$('.icon-close').click(function () {
+		$('.menu').animate({
+			left: "-285px"
+		}, 200);
+
+		$('body').animate({
+			left: "0px"
+		}, 200);
+	});
+
+	//toggle the sub menu
+	$('.dropper').click(function () {
+		var clsnm = ".id" + $('.dropper').attr('data-id');
+		$('.submenuItems').toggle('slow');
+		if ($(".plus").hasClass('fa-chevron-down')) {
+			$(".plus").removeClass('fa-chevron-down');
+			$(".plus").addClass('fa-chevron-up');
+		}
+		else {
+			$(".plus").removeClass('fa-chevron-up');
+			$(".plus").addClass('fa-chevron-down');
+		}
+	});
+
+};
+
+$(document).ready(main);
+
+
+
+
+
+nav samples
+
+single nav
+						<li class="has-dropdown">
+							<a href="#">Category</a>
+							<ul>
+								<li><a href="#">Cat 1</a></li>
+								<li><a href="#">Cat 2</a></li>
+								<li><a href="#">Cat 3</a></li>
+								<li><a href="#">Cat 4</a></li>
+								<li><a href="#">Cat 5</a></li>
+								<li><a href="#">Cat 6</a></li>
+								<li><a href="#">Cat 7</a></li>
+							</ul>
+						</li>
+
+						multi level nav
+						<li class="has-dropdown">
+							<a href="#">Apparel</a>
+							<ul>
+									<li class="has-dropdown">
+											<a href="#">Loremus</a>
+											<ul>
+													<li><a href="#">Item 1</a></li>
+													<li><a href="#">Item 2</a></li>
+													<li><a href="#">Item 3</a></li>
+											</ul>
+									</li>
+									<li><a href="#">Aliquam</a></li>
+									<li><a href="#">Vestibulum</a></li>
+							</ul>
+						</li>
+						hyp link nav
+						<li>
+								<a href="#">Clients</a>
+						</li>
+						<li class="has-dropdown">
+							<a href="#">Contact Us</a>
+							<ul>
+									<li class="has-dropdown">
+											<a href="#">By mail</a>
+											<ul>
+													<li><a href="#">mail 1</a></li>
+													<li><a href="#">mail 2</a></li>
+													<li><a href="#">mail 3</a></li>
+											</ul>
+									</li>
+									<li><a href="#">Anything</a></li>
+									<li><a href="#">Tester</a></li>
+							</ul>
+						</li>

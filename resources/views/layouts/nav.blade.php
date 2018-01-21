@@ -61,7 +61,6 @@
 											<li><a href="#">Question Papers</a></li>
 											<li><a href="#">E-Books &amp; Journals</a></li>
 											<li><a href="#">Syllabus</a></li>
-											<li><a href="#">Timetable</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="#">Admissions</a>
@@ -85,7 +84,7 @@
 											<li><a href="#">Exam Rules &amp; Procedures</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a>Alumni</a>
+									<li class="sub-menu-parent"><a href="#">Alumni</a>
 										<ul class="sub-menu">
 											{{-- <li><a href="#">Student Login/Information</a></li>
 											<li><a href="#">Student Feedback</a></li> --}}
@@ -103,13 +102,13 @@
 										</ul>
 									</li>
 									</li>
-									<li class="sub-menu-parent"><a href="http://www.kcecell.org/" target="_blank">Entrepreneurship Cell</a>
+									<li class="sub-menu-parent"><a href="http://www.kcecell.org/">Entrepreneurship Cell</a>
 									</li>
 									<li class="sub-menu-parent"><a href="/#contact">Life At KC</a>
 									</li>
 									<li class="sub-menu-parent"><a href="/#contact">Career At KC</a>
 									</li>
-									<li class="sub-menu-parent"><a>Statutory Affiliations</a>
+									<li class="sub-menu-parent"><a href="#">Statutory Affiliations</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
 											<li><a href="{{route('mandatory-disclosure', 'nirf-data')}}">NIRF data</a></li>
