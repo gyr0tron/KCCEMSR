@@ -39,6 +39,8 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/event/{url}','DepartmentController@getEvent')->name('event');
   Route::get('/achievement/{id}','DepartmentController@getAchievement')->name('achievement');
 
+  Route::get('/pacements','PlacementsController@get')->name('pacements');
+
   Route::get('/life-at-kc/staff','DepartmentController@getLifeStaff')->name('life-staff');
   Route::get('/life-at-kc/student','DepartmentController@getLifeStudent')->name('life-student');
 });

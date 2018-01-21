@@ -65,11 +65,11 @@
 						<li class="has-dropdown">
 							<a href="#">Placements</a>
 							<ul>
-								<li><a href="">Function &amp; Responsibilities</a></li>
-								<li><a href="">Placement Statistics</a></li>
-								<li><a href="">Training &amp; Placement Process</a></li>
-								<li><a href="">Higher Studies</a></li>
-								<li><a href="">Reviews</a></li>
+								<li><a href="{{route('pacements')}}">Function &amp; Responsibilities</a></li>
+								<li><a href="{{route('pacements')}}">Placement Statistics</a></li>
+								<li><a href="{{route('pacements')}}">Training &amp; Placement Process</a></li>
+								<li><a href="{{route('pacements')}}">Higher Studies</a></li>
+								<li><a href="{{route('pacements')}}">Reviews</a></li>
 							</ul>
 						</li>
 						<li>
@@ -128,7 +128,7 @@
 					</div>
 				</div>
 				<!-- header-left end -->
-			</div>		
+			</div>
 		</div><!-- #wrapper -->
 	</div>
 </header>
