@@ -66,6 +66,7 @@
 
   .nav-wrapper {
     float: left;
+    z-index: 1;
     position: absolute;
     width: 300px;
     height: 100vh;
