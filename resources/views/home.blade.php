@@ -43,7 +43,7 @@
 								<iframe width="100%" height="300" src="https://www.youtube.com/embed/HG2thJowMAU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 								<div class="space"></div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6" style="text-align: justify;">
 								Excelssior Education Society is an educational and charitable trust that is dedicated to the pursuit of excellence and welfare of the students since 1978 and is affiliated to Mumbai University. It aims to maximise the capabilities of individuals in all generes educational, intellectual and moral. Our endeavour is to align education with innovation and practical exposure needed to meet the current industry’s requirement. Dr Harssh Khanna and late Mr K. C. Khanna are the milestone in the establishment of KCCOEMSR.
 
 							</div>
@@ -83,6 +83,16 @@
 					<div class="col-sm-6">
 						<div class="media">
 							<div class="media-body text-right">
+								<h4 class="media-heading">Humanities and Applied Sciences</h4>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','humanities-sciences')->first()->description)}}</p>
+								<a class="" style="cursor:pointer;" href="">Read more</a>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-flask"></i>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-body text-right">
 								<h4 class="media-heading">Computer Engineering</h4>
 								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','computer')->first()->description)}}</p>
 								<a class="" style="cursor:pointer;" href="">Read more</a>
@@ -93,22 +103,12 @@
 						</div>
 						<div class="media">
 							<div class="media-body text-right">
-								<h4 class="media-heading">Information Technology</h4>
-								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','it')->first()->description)}}</p>
+								<h4 class="media-heading">Electronics Engineering</h4>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
 								<a class="" style="cursor:pointer;" href="">Read more</a>
 							</div>
 							<div class="media-right">
-								<i class="fa fa-desktop"></i>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-body text-right">
-								<h4 class="media-heading">Humanities and Sciences</h4>
-								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','humanities-sciences')->first()->description)}}</p>
-								<a class="" style="cursor:pointer;" href="">Read more</a>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-flask"></i>
+								<i class="fa fa-microchip"></i>
 							</div>
 						</div>
 					</div>
@@ -118,21 +118,21 @@
 					<div class="col-sm-6">
 						<div class="media">
 							<div class="media-left">
-								<i class="fa fa-microchip"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">Electronics Engineering</h4>
-								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
-								<a class="" style="cursor:pointer;" href="">Read more</a>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-left">
 								<i class="fa fa-rss"></i>
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">Electronics &amp; Telecommunication</h4>
 								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','extc')->first()->description)}}</p>
+								<a class="" style="cursor:pointer;" href="">Read more</a>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<i class="fa fa-desktop"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Information Technology</h4>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','it')->first()->description)}}</p>
 								<a class="" style="cursor:pointer;" href="">Read more</a>
 							</div>
 						</div>

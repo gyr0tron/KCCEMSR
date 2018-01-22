@@ -53,7 +53,9 @@
 								@endforeach
 							</ul>
 							<div class="space"></div>
-							<h2 style="margin-top: 0px; margin-bottom: 5px;">Program Objectives</h2>
+						</div>
+						<div class="col-md-6">
+						<h2 style="margin-top: 0px; margin-bottom: 5px;">Program Objectives</h2>
 							<ul class="list-unstyled">
 								@php
 								$data = explode(".", $dep->objectives);
@@ -68,9 +70,7 @@
 									@endif
 								@endforeach
 							</ul>
-						</div>
-						<div class="col-md-6">
-							<h2 style="margin-top: 0px; margin-bottom: 5px;">Program Outcomes</h2>
+							<!-- <h2 style="margin-top: 0px; margin-bottom: 5px;">Program Outcomes</h2>
 							<p>Engineering Graduates will be able to</p>
 							<ul class="list-unstyled">
 								@php
@@ -85,7 +85,7 @@
 										<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix"><strong>{{$head}}</strong>{{$d}}</p></li>
 									@endif
 								@endforeach
-							</ul>
+							</ul> -->
 						</div>
 					</div>
 				</div>
