@@ -9,6 +9,12 @@
           <th width="50%">Name</th>
           <th width="20%">Department</th>
           <th width="20%">Year</th>
+          @if ($action=="question-papers" || $action == "e-books")
+            <th width="20%">Sem</th>
+          @endif
+          @if ($action=="question-papers")
+            <th width="40%">YOE</th>
+          @endif
           <th width="20%">Actions</th>
         </tr>
       </thead>
@@ -18,6 +24,12 @@
             <td>{{$fp->name}}</td>
             <td>{{$fp->department}}</td>
             <td>{{$fp->getYear()}}</td>
+            @if ($action=="question-papers" || $action == "e-books")
+              <td>{{$fp->sem}}</td>
+            @endif
+            @if ($action=="question-papers")
+              <td>{{$fp->section}}</td>
+            @endif
             <td>
               <a class="btn btn-sm btn-info btn-table" onclick=""><i class="fa fa-eye"></i></a>
               <a class="btn btn-sm btn-danger btn-table" onclick="dashboard.removeYesNo('Are you sure you want to remove {{$fp->name}}?', '/api/admin/library/{{$action}}/remove', {{$fp->id}})"><i class="fa fa-trash-o"></i></a>
@@ -30,6 +42,12 @@
           <th width="50%">Name</th>
           <th width="20%">Department</th>
           <th width="20%">Year</th>
+          @if ($action=="question-papers" || $action == "e-books")
+            <th width="20%">Sem</th>
+          @endif
+          @if ($action=="question-papers")
+            <th width="40%">YOE</th>
+          @endif
           <th width="20%">Actions</th>
         </tr>
       </tfoot>
@@ -79,6 +97,31 @@
           <p class="help-block"></p>
         </div>
       </div>
+      @if ($action=="question-papers" || $action == "e-books")
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="sem">Sem:</label>
+          <div class="col-sm-9">
+            <select class="form-control" id="sem" name="sem">
+              @for ($i=1; $i <= 8; $i++)
+                <option value="{{$i}}">{{$i}}</option>
+              @endfor
+            </select>
+            <p class="help-block"></p>
+          </div>
+        </div>
+      @endif
+      @if ($action=="question-papers")
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="section">Year of Exam:</label>
+          <div class="col-sm-9">
+            <select class="form-control" id="section" name="section">
+              @foreach (App\FileUpload::getSectionArray() as $sec)
+                <option value="{{$sec}}">{{$sec}}</option>
+              @endforeach
+            </select>
+          </div>
+        </div>
+      @endif
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-4">
           <button type="submit" class="btn btn-primary btn-wide">Add</button>

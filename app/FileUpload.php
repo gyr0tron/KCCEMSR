@@ -62,4 +62,13 @@ class FileUpload extends Model
       return "Undefined";
     }
   }
+  public static function getSectionArray()
+  {
+    $sections = [];
+    for($i=2013;$i<date('Y');$i++) {
+      array_push($sections, "May $i", "Dec $i");
+    }
+    if(date('n')>6) array_push($sections, "May $i");
+    return $sections;
+  }
 }

@@ -24,15 +24,14 @@ class CreateDepartmentsTable extends Migration
       $table->longtext('objectives')->nullable();
       $table->longtext('outcome')->nullable();
       $table->string('image')->nullable();
-      $table->integer('image')->nullable();
     });
 
     $departments = array(
+      array("name"=>"Humanities and Applied Sciences", "url"=>"humanities-sciences"),
       array("name"=>"Computer Engineering", "url"=>"computer"),
       array("name"=>"Electronics Engineering", "url"=>"electronics"),
       array("name"=>"Electronics & Telecommunication", "url"=>"extc"),
       array("name"=>"Information Technology", "url"=>"it"),
-      array("name"=>"Dept of Humanities and Sciences", "url"=>"humanities-sciences"),
       array("name"=>"MMS", "url"=>"mms"),
     );
 

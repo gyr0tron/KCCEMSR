@@ -591,6 +591,8 @@ class DashboardApiController extends Controller
     $upload->name = $request->input('name');
     $upload->department = $request->input('department');
     $upload->year = $request->input('year');
+    $upload->sem = $request->input('sem',"");
+    $upload->section = $request->input('section',"");
     $upload->created_by = Auth::user()->id;
     $upload->updated_by = Auth::user()->id;
     $upload->filename = $upload->uploadFile($request->file('file'));

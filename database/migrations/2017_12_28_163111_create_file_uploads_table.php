@@ -20,6 +20,8 @@ class CreateFileUploadsTable extends Migration
       $table->string('filename')->nullable();
       $table->string('department')->nullable();
       $table->integer('year')->nullable();
+      $table->integer('sem')->nullable();
+      $table->string('section')->nullable();
       $table->integer('created_by');
       $table->integer('updated_by');
       $table->timestamps();
