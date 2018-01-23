@@ -165,6 +165,88 @@
 </div>  --}}
 <!-- section end -->
 
+
+<!-- Announcements start -->
+<div class="section default-bg">
+	<div class="container">
+		<h1 class="title text-center" id="announcements">Announcements</h1>
+		<div class="separator"></div>
+		<br>
+		<div class="row object-non-visible" data-animation-effect="fadeIn">
+			<div class="col-md-5 col-sm-5 col-xs-12">
+				<h2 class="title text-center">Curricular</h2>
+				<div class="carousel slide" data-ride="carousel" id="quote-carousel0">
+					<!-- Carousel Slides / Quotes -->
+					<div class="carousel-inner text-center" style="min-height: auto;">
+						<div class="item active">
+								<div class="row">
+									<div class="col-sm-8 col-sm-offset-2">
+										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
+									</div>
+								</div>
+						</div>
+						<div class="item">
+								<div class="row">
+									<div class="col-sm-8 col-sm-offset-2">
+										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
+									</div>
+								</div>
+						</div>
+						<div class="item">
+								<div class="row">
+									<div class="col-sm-8 col-sm-offset-2">
+										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
+										</div>
+								</div>
+						</div>
+					</div>
+
+					<!-- Carousel Buttons Next/Prev -->
+					<a data-slide="prev" style="background: none;height: fit-content;top: 30%;" href="#quote-carousel0" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+					<a data-slide="next" style="background: none;height: fit-content;top: 30%;" href="#quote-carousel0" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+				</div>
+				<div class="space"></div>
+			</div>
+
+			<div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-2 col-xs-offset-0">
+				<h2 class="title text-center">Extra Curricular</h2>
+				<div class="carousel slide" data-ride="carousel" id="quote-carousel1">
+					<!-- Carousel Slides / Quotes -->
+					<div class="carousel-inner text-center" style="min-height: auto;">
+						<div class="item active">
+								<div class="row">
+									<div class="col-sm-8 col-sm-offset-2">
+										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
+									</div>
+								</div>
+						</div>
+						<div class="item">
+								<div class="row">
+									<div class="col-sm-8 col-sm-offset-2">
+										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
+									</div>
+								</div>
+						</div>
+						<div class="item">
+								<div class="row">
+									<div class="col-sm-8 col-sm-offset-2">
+										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
+										</div>
+								</div>
+						</div>
+					</div>
+				
+					<!-- Carousel Buttons Next/Prev -->
+					<a data-slide="prev" style="background: none;height: fit-content;top: 30%;" href="#quote-carousel1" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+					<a data-slide="next" style="background: none;height: fit-content;top: 30%;" href="#quote-carousel1" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+				</div>
+				<div class="space"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Announcements end -->
+
 <!-- section start -->
 <!-- ================ -->
 <div class="section">
