@@ -41,8 +41,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
 
   Route::get('/pacements','PlacementsController@get')->name('pacements');
 
-  Route::get('/life-at-kc/staff','DepartmentController@getLifeStaff')->name('life-staff');
-  Route::get('/life-at-kc/student','DepartmentController@getLifeStudent')->name('life-student');
+  Route::get('/life-at-kc','DepartmentController@getLifeAtKc')->name('lifeatkc');
 });
 
 

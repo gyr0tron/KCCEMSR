@@ -104,7 +104,7 @@
 									</li>
 									<li class="sub-menu-parent"><a href="http://www.kcecell.org/">Entrepreneurship Cell</a>
 									</li>
-									<li class="sub-menu-parent"><a href="/#contact">Life At KC</a>
+									<li class="sub-menu-parent"><a href="{{route('lifeatkc')}}">Life At KC</a>
 									</li>
 									<li class="sub-menu-parent"><a href="/#contact">Career At KC</a>
 									</li>

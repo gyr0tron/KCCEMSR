@@ -76,7 +76,7 @@
 							<a href="http://www.kcecell.org/">Entrepreneurship Cell</a>
 						</li>
 						<li>
-							<a href="/#contact">Life At KC</a>
+							<a href="{{route('lifeatkc')}}">Life At KC</a>
 						</li>
 						<li>
 							<a href="/#contact">Career At KC</a>
