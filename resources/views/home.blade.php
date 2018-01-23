@@ -167,7 +167,7 @@
 
 
 <!-- Announcements start -->
-<div class="section default-bg">
+<div class="section default-bg" style="padding-bottom: 10px;">
 	<div class="container">
 		<h1 class="title text-center" id="announcements">Announcements</h1>
 		<div class="separator"></div>

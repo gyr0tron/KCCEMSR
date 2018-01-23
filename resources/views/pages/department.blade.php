@@ -28,7 +28,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<h2 style="margin-top: 0px; margin-bottom: 5px;">HOD'S Message</h2>
-							<p margin-bottom: 15px;>{{strip_tags($dep->message)}}</p>
+							<p style="white-space: pre-wrap; margin-bottom: 15px;">{{strip_tags($dep->message)}}</p>
 							<div class="space"></div>
 						</div>
 						<div class="col-md-6">
