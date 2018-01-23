@@ -25,9 +25,9 @@
     <div class="row">
       <div class="col-xs-10">
         @if (isset($edit))
-          @if ($action == "departmental-achievements")
+          {{-- @if ($action == "departmental-achievements")
             @include('forms.department-departmental-achievements-edit',compact("dep","edit"))
-          @endif
+          @endif --}}
           @if ($action == "students-achievement")
             @include('forms.department-students-achievement-edit',compact("dep","edit"))
           @endif
@@ -38,9 +38,9 @@
           @if ($action == "overview")
             @include('forms.department-overview',compact("dep","action"))
           @endif
-          @if ($action == "departmental-achievements")
+          {{-- @if ($action == "departmental-achievements")
             @include('forms.department-departmental-achievements',compact("dep","action"))
-          @endif
+          @endif --}}
           @if ($action == "students-achievement")
             @include('forms.department-students-achievement',compact("dep","action"))
           @endif
@@ -57,7 +57,7 @@
           <div class="box-body">
             <ul class="nav nav-pills nav-stacked">
               <li class="{{$action=="overview"?"active":""}}"><a href="{{route("admin_department", [$dep->url, "overview"])}}">Overview</a></li>
-              <li class="{{$action=="departmental-achievements"?"active":""}}"><a href="{{route("admin_department", [$dep->url, "departmental-achievements"])}}">Departmental Achievement</a></li>
+              {{-- <li class="{{$action=="departmental-achievements"?"active":""}}"><a href="{{route("admin_department", [$dep->url, "departmental-achievements"])}}">Departmental Achievement</a></li> --}}
               <li class="{{$action=="students-achievement"?"active":""}}"><a href="{{route("admin_department", [$dep->url, "students-achievement"])}}">Student's Achievement</a></li>
               <li class="{{$action=="staff"?"active":""}}"><a href="{{route("admin_department", [$dep->url, "staff"])}}">Staff</a></li>
             </ul>
