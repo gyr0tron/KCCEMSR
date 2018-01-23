@@ -14,8 +14,8 @@ class FileUpload extends Model
   const admission_list = ['admission-criteria', 'fees-notices', 'institute-prospectus', 'dte-admission-information-brochure','total-intake', 'cap-rount-allottment', 'direct-second-year', 'anti-ragging-affidavit', 'scholarship', 'mandatory-disclosure', 'nirf-data', 'dte', 'university-affiliation'];
   const admission_name_list = ['Admission Criteria', 'Fees Notices', 'Institute Prospectus', 'Dte Admission Information Brochure','Total Intake', 'Cap Rount Allottment', 'Direct Second Year', 'Anti Ragging Affidavit', 'Scholarship', 'Mandatory Disclosure', 'NIRF data', 'DTE', 'University Affiliation'];
 
-  const library_list = ['question-papers', 'e-books', 'syllabus', 'timetable'];
-  const library_list_name = ['Question Papers', 'E-Books', 'Syllabus', 'Timetable'];
+  const library_list = ['question-papers', 'e-books', 'syllabus', 'exam-notices', 'exam-timetable', 'exam-results'];
+  const library_list_name = ['Question Papers', 'E-Books', 'Syllabus', 'Exam Notices', 'Exam Timetable', 'Exam Results'];
 
   public function getUrl() {
     return url("public/files/" . $this->filename);
