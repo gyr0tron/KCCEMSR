@@ -2,7 +2,7 @@
   margin-top: 100px;
 }
 .list-unstyled a {
-  cursor: hand;
+  cursor: pointer;
   text-decoration: none;
 }
 

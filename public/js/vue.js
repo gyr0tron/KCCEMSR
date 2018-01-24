@@ -11566,6 +11566,59 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {}
@@ -11587,48 +11640,298 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("form", { attrs: { action: "/action_page.php" } }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-sm-4" }, [
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "pwd" } }, [_vm._v("Department:")]),
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "pwd" } }, [
+                  _vm._v("Departments:")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    staticClass: "form-control",
+                    attrs: { name: "department", id: "department" }
+                  },
+                  [
+                    _c("option", [_vm._v("Helo")]),
+                    _vm._v(" "),
+                    _c("option", [_vm._v("Helo")]),
+                    _vm._v(" "),
+                    _c("option", [_vm._v("Helo")])
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c(
-              "select",
-              {
-                staticClass: "form-control",
-                attrs: { name: "department", id: "department" }
-              },
-              [_c("option", [_vm._v("Helo")])]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm-3" }, [
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "pwd" } }, [_vm._v("Year:")]),
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "pwd" } }, [_vm._v("Year:")]),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    staticClass: "form-control",
+                    attrs: { name: "year", id: "year" }
+                  },
+                  [
+                    _c("option", [_vm._v("Helo")]),
+                    _vm._v(" "),
+                    _c("option", [_vm._v("Helo")]),
+                    _vm._v(" "),
+                    _c("option", [_vm._v("Helo")])
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("select", {
-              staticClass: "form-control",
-              attrs: { name: "year", id: "year" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm-3" }, [
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "pwd" } }, [_vm._v("Sem:")]),
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "pwd" } }, [_vm._v("Sem:")]),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    staticClass: "form-control",
+                    attrs: { name: "sem", id: "sem" }
+                  },
+                  [
+                    _c("option", [_vm._v("Helo")]),
+                    _vm._v(" "),
+                    _c("option", [_vm._v("Helo")]),
+                    _vm._v(" "),
+                    _c("option", [_vm._v("Helo")])
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("select", {
-              staticClass: "form-control",
-              attrs: { name: "sem", id: "sem" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm-2" }, [
-          _c("div", { staticClass: "form-group" }, [
-            _c("button", { staticClass: "btn btn-primary btn-full" }, [
-              _vm._v("Search")
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary btn-block btn-full",
+                    staticStyle: { "margin-top": "27px", height: "45px" }
+                  },
+                  [_vm._v("Search")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "card",
+                  staticStyle: {
+                    border: ".0625rem solid #e5e5e5",
+                    "border-radius": ".25rem"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "card-block",
+                      staticStyle: { padding: "10px" }
+                    },
+                    [
+                      _c("h4", { staticClass: "text-center" }, [
+                        _vm._v("Date title")
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "list-unstyled" }, [
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 1")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "card",
+                  staticStyle: {
+                    border: ".0625rem solid #e5e5e5",
+                    "border-radius": ".25rem"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "card-block",
+                      staticStyle: { padding: "10px" }
+                    },
+                    [
+                      _c("h4", { staticClass: "text-center" }, [
+                        _vm._v("Date title")
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "list-unstyled" }, [
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 1")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "card",
+                  staticStyle: {
+                    border: ".0625rem solid #e5e5e5",
+                    "border-radius": ".25rem"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "card-block",
+                      staticStyle: { padding: "10px" }
+                    },
+                    [
+                      _c("h4", { staticClass: "text-center" }, [
+                        _vm._v("Date title")
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "list-unstyled" }, [
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 1")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", {
+                            staticClass: "fa fa-caret-right pr-10 text-colored"
+                          }),
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Subject 2")
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ]
+              )
             ])
           ])
         ])
