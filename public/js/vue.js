@@ -103,7 +103,7 @@ module.exports = __webpack_require__(2);
 
 // Vue JS
 window.Vue = __webpack_require__(3);
-Vue.component('example', __webpack_require__(7));
+Vue.component('question-papers', __webpack_require__(7));
 
 var app = new Vue({
     el: '#app'
@@ -11394,7 +11394,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\Example.vue"
+Component.options.__file = "resources\\assets\\js\\components\\QuestionPapers.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -11403,9 +11403,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-b6ebd97a", Component.options)
+    hotAPI.createRecord("data-v-610008a4", Component.options)
   } else {
-    hotAPI.reload("data-v-b6ebd97a", Component.options)
+    hotAPI.reload("data-v-610008a4", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -11546,11 +11546,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    }
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -11568,18 +11586,49 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
+    return _c("form", { attrs: { action: "/action_page.php" } }, [
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
-          _c("div", { staticClass: "panel panel-default" }, [
-            _c("div", { staticClass: "panel-heading" }, [
-              _vm._v("Example Component")
-            ]),
+        _c("div", { staticClass: "col-sm-4" }, [
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "pwd" } }, [_vm._v("Department:")]),
             _vm._v(" "),
-            _c("div", { staticClass: "panel-body" }, [
-              _vm._v(
-                "\n                    I'm an example component!\n                "
-              )
+            _c(
+              "select",
+              {
+                staticClass: "form-control",
+                attrs: { name: "department", id: "department" }
+              },
+              [_c("option", [_vm._v("Helo")])]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-3" }, [
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "pwd" } }, [_vm._v("Year:")]),
+            _vm._v(" "),
+            _c("select", {
+              staticClass: "form-control",
+              attrs: { name: "year", id: "year" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-3" }, [
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "pwd" } }, [_vm._v("Sem:")]),
+            _vm._v(" "),
+            _c("select", {
+              staticClass: "form-control",
+              attrs: { name: "sem", id: "sem" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-2" }, [
+          _c("div", { staticClass: "form-group" }, [
+            _c("button", { staticClass: "btn btn-primary btn-full" }, [
+              _vm._v("Search")
             ])
           ])
         ])
@@ -11592,7 +11641,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-b6ebd97a", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-610008a4", module.exports)
   }
 }
 
