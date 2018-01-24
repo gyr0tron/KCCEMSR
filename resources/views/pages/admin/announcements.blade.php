@@ -32,6 +32,7 @@
                 <tr>
                   <th width="10%">#</th>
                   <th width="50%">Title</th>
+                  <th width="20%">Type</th>
                   <th width="20%">Actions</th>
                 </tr>
               </thead>
@@ -43,6 +44,7 @@
                   <tr>
                     <td>{{$no}}</td>
                     <td>{{$anouncement->title}}</td>
+                    <td>{{$anouncement->type}}</td>
                     <td><a class="btn btn-sm btn-danger btn-table" onclick="dashboard.deleteAnnoncement({{$anouncement->id}})"><i class="fa fa-trash-o"></i></a></td>
                   </tr>
                   @php
@@ -54,6 +56,7 @@
                 <tr>
                   <th width="10%">#</th>
                   <th width="50%">Title</th>
+                  <th width="20%">Type</th>
                   <th width="20%">Actions</th>
                 </tr>
               </tfoot>
@@ -77,6 +80,16 @@
                 <label class="control-label col-sm-2" for="title">Title:</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="title" name="title">
+                  <p class="help-block"></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="type">Type:</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="type" name="type">
+                    <option value="0">Curricular</option>
+                    <option value="1">Extra Curricular</option>
+                  </select>
                   <p class="help-block"></p>
                 </div>
               </div>

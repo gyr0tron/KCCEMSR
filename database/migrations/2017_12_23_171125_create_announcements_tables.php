@@ -17,6 +17,7 @@ class CreateAnnouncementsTables extends Migration
       $table->increments('id');
       $table->string('title', 191);
       $table->string('link');
+      $table->integer('type');
       $table->integer('created_by');
       $table->integer('updated_by');
       $table->timestamps();
