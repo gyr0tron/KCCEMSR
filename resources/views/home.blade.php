@@ -81,31 +81,40 @@
 				<div class="space"></div>
 				<div class="row">
 					<div class="col-sm-6">
+						@php
+						$dep = App\Department::where('url','humanities-sciences')->first();
+						@endphp
 						<div class="media">
 							<div class="media-body text-right">
-								<h4 class="media-heading">Humanities and Applied Sciences</h4>
-								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','humanities-sciences')->first()->description)}}</p>
-								<a class="" style="cursor:pointer;" href="">Read more</a>
+								<h4 class="media-heading">{{$dep->name}}</h4>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($dep->description)}}</p>
+								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
 							</div>
 							<div class="media-right">
 								<i class="fa fa-flask"></i>
 							</div>
 						</div>
+						@php
+						$dep = App\Department::where('url','computer')->first();
+						@endphp
 						<div class="media">
 							<div class="media-body text-right">
-								<h4 class="media-heading">Computer Engineering</h4>
-								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','computer')->first()->description)}}</p>
-								<a class="" style="cursor:pointer;" href="">Read more</a>
+								<h4 class="media-heading">{{$dep->name}}</h4>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($dep->description)}}</p>
+								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
 							</div>
 							<div class="media-right">
 								<i class="fa fa-code"></i>
 							</div>
 						</div>
+						@php
+						$dep = App\Department::where('url','electronics')->first();
+						@endphp
 						<div class="media">
 							<div class="media-body text-right">
-								<h4 class="media-heading">Electronics Engineering</h4>
-								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
-								<a class="" style="cursor:pointer;" href="">Read more</a>
+								<h4 class="media-heading">{{$dep->name}}</h4>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($dep->description)}}</p>
+								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
 							</div>
 							<div class="media-right">
 								<i class="fa fa-microchip"></i>
@@ -116,34 +125,44 @@
 					<div class="space visible-xs"></div>
 
 					<div class="col-sm-6">
+						@php
+						$dep = App\Department::where('url','extc')->first();
+						@endphp
 						<div class="media">
 							<div class="media-left">
 								<i class="fa fa-rss"></i>
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">Electronics &amp; Telecommunication</h4>
-								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','extc')->first()->description)}}</p>
-								<a class="" style="cursor:pointer;" href="">Read more</a>
+								<h4 class="media-heading">{{$dep->name}}</h4>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($dep->description)}}</p>
+								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
 							</div>
 						</div>
+						@php
+						$dep = App\Department::where('url','it')->first();
+						@endphp
 						<div class="media">
 							<div class="media-left">
 								<i class="fa fa-desktop"></i>
 							</div>
 							<div class="media-body">
-								<h4 class="media-heading">Information Technology</h4>
-								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','it')->first()->description)}}</p>
-								<a class="" style="cursor:pointer;" href="">Read more</a>
+								<h4 class="media-heading">{{$dep->name}}</h4>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($dep->description)}}</p>
+								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
 							</div>
 						</div>
+						@php
+						$dep = App\Department::where('url','mms')->first();
+						@endphp
 						<div class="media">
 							<div class="media-left">
 								<i class="fa fa-area-chart"></i>
 							</div>
+
 							<div class="media-body">
-								<h4 class="media-heading">MMS</h4>
-								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','mms')->first()->description)}}</p>
-								<a class="" style="cursor:pointer;" href="">Read more</a>
+								<h4 class="media-heading">{{$dep->name}}</h4>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($dep->description)}}</p>
+								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
 							</div>
 						</div>
 					</div>
@@ -179,25 +198,25 @@
 					<!-- Carousel Slides / Quotes -->
 					<div class="carousel-inner text-center" style="min-height: auto;">
 						<div class="item active">
-								<div class="row">
-									<div class="col-sm-8 col-sm-offset-2">
-										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
-									</div>
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
 								</div>
+							</div>
 						</div>
 						<div class="item">
-								<div class="row">
-									<div class="col-sm-8 col-sm-offset-2">
-										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
-									</div>
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
 								</div>
+							</div>
 						</div>
 						<div class="item">
-								<div class="row">
-									<div class="col-sm-8 col-sm-offset-2">
-										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
-										</div>
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
 								</div>
+							</div>
 						</div>
 					</div>
 
@@ -214,28 +233,28 @@
 					<!-- Carousel Slides / Quotes -->
 					<div class="carousel-inner text-center" style="min-height: auto;">
 						<div class="item active">
-								<div class="row">
-									<div class="col-sm-8 col-sm-offset-2">
-										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
-									</div>
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
 								</div>
+							</div>
 						</div>
 						<div class="item">
-								<div class="row">
-									<div class="col-sm-8 col-sm-offset-2">
-										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
-									</div>
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
 								</div>
+							</div>
 						</div>
 						<div class="item">
-								<div class="row">
-									<div class="col-sm-8 col-sm-offset-2">
-										<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
-										</div>
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
 								</div>
+							</div>
 						</div>
 					</div>
-				
+
 					<!-- Carousel Buttons Next/Prev -->
 					<a data-slide="prev" style="background: none;height: fit-content;top: 30%;" href="#quote-carousel1" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
 					<a data-slide="next" style="background: none;height: fit-content;top: 30%;" href="#quote-carousel1" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
@@ -286,7 +305,7 @@
 								</div>
 								<a class="btn btn-default btn-block" href="{{route('event', $event->url)}}">
 									<p style="overflow: hidden; margin: 0px;">
-									{{$event->name}}
+										{{$event->name}}
 									</p>
 								</a>
 							</div>
