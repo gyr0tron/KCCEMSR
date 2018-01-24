@@ -58,7 +58,7 @@
 									</li>
 									<li class="sub-menu-parent"><a href="#">Library</a>
 										<ul class="sub-menu">
-											<li><a href="#">Question Papers</a></li>
+											<li><a href="{{route('question-papers')}}">Question Papers</a></li>
 											<li><a href="#">E-Books &amp; Journals</a></li>
 											<li><a href="#">Syllabus</a></li>
 										</ul>

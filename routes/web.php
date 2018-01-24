@@ -41,6 +41,8 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
 
   Route::get('/pacements','PlacementsController@get')->name('pacements');
 
+  Route::get('/library/question-papers','LibraryController@getQuestionPapers')->name('question-papers');
+
   Route::get('/life-at-kc','DepartmentController@getLifeAtKc')->name('lifeatkc');
 });
 
