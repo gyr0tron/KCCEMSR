@@ -111,9 +111,10 @@
 									<li class="sub-menu-parent"><a href="#">Statutory Affiliations</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
-											<li><a href="{{route('mandatory-disclosure', 'nirf-data')}}">NIRF data</a></li>
-											<li><a href="{{route('mandatory-disclosure', 'dte')}}">DTE</a></li>
+											<li><a href="{{route('mandatory-disclosure', 'aicte-affiliation')}}">AICTE Affiliation</a></li>
+											<li><a href="{{route('mandatory-disclosure', 'dte')}}">DTE Affiliation</a></li>
 											<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
+											<li><a href="{{route('mandatory-disclosure', 'nirf-data')}}">NIRF Data</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="#">About</a>
