@@ -118,20 +118,21 @@
 	<!-- section end -->
 	<!-- section start -->
 	<!-- ================ -->
-	<div class="section pb-clear">
+	<div class="section translucent-bg blue" style="background-color: rgba(0, 154, 245, 0.83);">
 		<div class="container object-non-visible" data-animation-effect="fadeIn">
 			<h1 id="clients" class="title text-center">Student's Achievement</h1>
 			<p class="lead text-center" style="margin-top: 30px;">Some of our academic scholars are listed below...</p>
 			<div class="row">
+				<h2 class="media-heading text-center" style="margin-bottom: 25px;">Academic year</h2>
 				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
 					<div class="media">
-						<div class="col-xs-4 col-sm-4 col-md-4">
-							<img src="http://via.placeholder.com/300x350" alt="">
+						<div class="col-xs-4 col-sm-4 col-md-4" >
+							<img src="http://via.placeholder.com/300x350" style="height: 150px;" alt="">
 						</div>
 						<div class="media-body">
 							<h3 class="media-heading">First Topper</h3>
 							<blockquote>
-								<h4 style="margin-bottom: 0px;">Student Name, Academic year</h4>
+								<h4 style="margin-bottom: 0px;">Student Name</h4>
 							</blockquote>
 						</div>
 					</div>
@@ -139,65 +140,112 @@
 				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
 					<div class="media">
 						<div class="col-xs-4 col-sm-4 col-md-4">
-							<img src="http://via.placeholder.com/300x350" alt="">
+							<img src="http://via.placeholder.com/300x350" style="height: 150px;" alt="">
 						</div>
 						<div class="media-body">
-							<h3 class="media-heading">First Topper</h3>
+							<h3 class="media-heading">Second Topper</h3>
 							<blockquote>
-								<h4 style="margin-bottom: 0px;">Student Name, Academic year</h4>
-							</blockquote>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
-					<div class="media">
-						<div class="col-xs-4 col-sm-4 col-md-4">
-							<img src="http://via.placeholder.com/300x350" alt="">
-						</div>
-						<div class="media-body">
-							<h3 class="media-heading">First Topper</h3>
-							<blockquote>
-								<h4 style="margin-bottom: 0px;">Student Name, Academic year</h4>
+								<h4 style="margin-bottom: 0px;">Student Name</h4>
 							</blockquote>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<p class="lead text-center" style="margin-top: 3%; margin-bottom: 3%;">With academia, our students are doing best in all the areas as well...</p>
-				@foreach (App\Achievement::where('type','0')->where('department',$dep->url)->get() as $achivement)
-					<div class="col-xs-12 col-sm-12 col-md-6">
-						<div class="media">
-							<div class="col-xs-4 col-sm-4 col-md-4">
-								<img src="{{$achivement->getUrl()}}" alt="">
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">{{$achivement->name}}</h3>
-								<blockquote>
-									<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
-									<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->id)}}">Read more</a>
-								</blockquote>
-							</div>
+				<h2 class="media-heading text-center" style="margin-bottom: 25px;">Academic year</h2>
+				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
+					<div class="media">
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<img src="http://via.placeholder.com/300x350" style="height: 150px;" alt="">
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">First Topper</h3>
+							<blockquote>
+								<h4 style="margin-bottom: 0px;">Student Name</h4>
+							</blockquote>
 						</div>
 					</div>
-				@endforeach
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
+					<div class="media">
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<img src="http://via.placeholder.com/300x350" style="height: 150px;" alt="">
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">Second Topper</h3>
+							<blockquote>
+								<h4 style="margin-bottom: 0px;">Student Name</h4>
+							</blockquote>
+						</div>
+					</div>
+				</div>
 			</div>
+			<div class="row">
+				<h2 class="media-heading text-center" style="margin-bottom: 25px;">Academic year</h2>
+				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
+					<div class="media">
+						<div class="col-xs-4 col-sm-4 col-md-4" >
+							<img src="http://via.placeholder.com/300x350" style="height: 150px;" alt="">
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">First Topper</h3>
+							<blockquote>
+								<h4 style="margin-bottom: 0px;">Student Name</h4>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
+					<div class="media">
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<img src="http://via.placeholder.com/300x350" style="height: 150px;" alt="">
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">Second Topper</h3>
+							<blockquote>
+								<h4 style="margin-bottom: 0px;">Student Name</h4>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<p class="lead text-center" style="margin-top: 3%; margin-bottom: 3%;">With academia, our students are doing best in all the areas as well...</p>
+			@foreach (App\Achievement::where('type','0')->where('department',$dep->url)->get() as $achivement)
+				<div class="col-xs-12 col-sm-12 col-md-6">
+					<div class="media">
+						<div class="col-xs-4 col-sm-4 col-md-4" style="padding-bottom: 15px;">
+							<img src="{{$achivement->getUrl()}}" alt="">
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">{{$achivement->name}}</h3>
+							<blockquote>
+								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
+								<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->id)}}">Read more</a>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+			@endforeach
 		</div>
 	</div>
 
 	<div class="container">
 		<h1 class="title text-center" style="margin-bottom:4%; margin-top:5%; overflow-wrap: break-word;">Departmental Achievements/Activities/STTP/Workshops</h1>
 		@foreach (App\Event::where('department', $dep->url)->get() as $event)
-			<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
+			<div class="col-xs-12 col-sm-12 col-md-6">
 				<div class="media">
-					<div class="col-xs-4 col-sm-4 col-md-4">
+					<div class="col-xs-4 col-sm-4 col-md-4" style="padding-bottom: 15px;">
 						<img src="{{$event->getFeaturedImage()}}" alt="">
 					</div>
 					<div class="media-body">
 						<h3 class="media-heading">{{$event->name}}</h3>
 						<blockquote>
-							<p class="text-ellipsis" style="margin-bottom: 0px;">{{strip_tags($event->description)}}</p>
-							<a class="trigger" href="{{route('event', $event->url)}}">read more</a>
+							<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($event->description)}}</p>
+							<a class="" style="cursor:pointer;" href="{{route('event', $event->url)}}">read more</a>
 						</blockquote>
 					</div>
 				</div>
