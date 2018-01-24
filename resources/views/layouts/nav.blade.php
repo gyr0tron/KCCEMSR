@@ -46,7 +46,7 @@
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 								<ul class="nav navbar-nav">
-									<li class="active sub-menu-parent"><a href="/">Home</a>
+									<li class="active sub-menu-parent"><a href="/" style="padding-left: 0px;">Home</a>
 									</li>
 									<li class="sub-menu-parent"><a href="#">Academics</a>
 										<ul class="sub-menu">
@@ -102,7 +102,7 @@
 										</ul>
 									</li>
 									</li>
-									<li class="sub-menu-parent"><a href="http://www.kcecell.org/">Entrepreneurship Cell</a>
+									<li class="sub-menu-parent"><a href="http://www.kcecell.org/">E-Cell</a>
 									</li>
 									<li class="sub-menu-parent"><a href="{{route('lifeatkc')}}">Life At KC</a>
 									</li>
@@ -129,7 +129,7 @@
 											<li><a href="{{route('committees')}}">Committees</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="/#contact">Contact</a>
+									<li class="sub-menu-parent"><a href="/#contact" style="padding-right: 0px;">Contact</a>
 									</li>
 								</ul>
 							</div>

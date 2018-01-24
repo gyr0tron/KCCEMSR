@@ -13,7 +13,7 @@
 #navmain {
   display: block;
 }
-@media only screen and (max-width: 1590px) {
+@media only screen and (max-width: 1250px) {
   #navmobile {
     display: block;
   }
@@ -27,7 +27,7 @@
     }
   }
 
-  @media (max-width: 1590px){
+  @media (max-width: 1250px){
   .header-left {
     margin-right: 0px;
     }

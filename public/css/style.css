@@ -499,7 +499,7 @@ textarea {
 		float: left !important;
 	}
 }
-@media (max-width:1590px) {
+@media (max-width:1250px) {
 	.header.navbar-fixed-top {
 		position: absolute;
 	}
@@ -776,13 +776,13 @@ textarea {
 
 @media (min-width: 1200px){
 .site-name {
-	font-size: 35px;
+	font-size: 34.6px;
 		padding-top: 1%;
     width: auto;
 	}
 }
 
-@media (max-width: 1590px){
+@media (max-width: 1250px){
 	.clg-name {
 		margin-left: 70px;
 		margin-right: 0px;
@@ -894,7 +894,7 @@ visibility: visible;
 
 #navbar-collapse-1 a {
 	display: block;
-	padding: 0.5em 0.9em;
+	padding: 0.5em 0.5em 0.5em 0.5em;
 	text-decoration: none;
 }
 
@@ -917,7 +917,7 @@ visibility: visible;
 	border-left: none;
 }
 /* ----test nav---- */
-@media (max-width: 1590px) {
+@media (max-width: 1250px) {
 	.navbar-header {
 		float: none;
 	}
@@ -979,7 +979,7 @@ visibility: visible;
 	        justify-content: right;
 	 }
 	 
-@media (max-width: 1590px) {
+@media (max-width: 1250px) {
   .navbar-container-listholder {
 	position: absolute;
 		top: 25%;
