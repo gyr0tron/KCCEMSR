@@ -197,27 +197,18 @@
 				<div class="carousel slide" data-ride="carousel" id="quote-carousel0">
 					<!-- Carousel Slides / Quotes -->
 					<div class="carousel-inner text-center" style="min-height: auto;">
-						<div class="item active">
-							<div class="row">
-								<div class="col-sm-8 col-sm-offset-2">
-									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
+						@php
+						$no = 0;
+						@endphp
+						@foreach (App\Announcement::where("type","0")->get() as $anouncement)
+							<div class="item {{$no++==0?'active':''}}">
+								<div class="row">
+									<div class="col-sm-8 col-sm-offset-2">
+										<p class="text-center">{{$anouncement->title}}</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-8 col-sm-offset-2">
-									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-8 col-sm-offset-2">
-									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
-								</div>
-							</div>
-						</div>
+						@endforeach
 					</div>
 
 					<!-- Carousel Buttons Next/Prev -->
@@ -232,27 +223,18 @@
 				<div class="carousel slide" data-ride="carousel" id="quote-carousel1">
 					<!-- Carousel Slides / Quotes -->
 					<div class="carousel-inner text-center" style="min-height: auto;">
-						<div class="item active">
-							<div class="row">
-								<div class="col-sm-8 col-sm-offset-2">
-									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
+						@php
+						$no = 0;
+						@endphp
+						@foreach (App\Announcement::where("type","1")->get() as $anouncement)
+							<div class="item {{$no++==0?'active':''}}">
+								<div class="row">
+									<div class="col-sm-8 col-sm-offset-2">
+										<p class="text-center">{{$anouncement->title}}</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-8 col-sm-offset-2">
-									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-8 col-sm-offset-2">
-									<p class="text-center">Labore ad quis id excepteur excepteur fugiat dolore. Quis nulla laborum ad magna sit eiusmod. Officia incididunt ea dolore laboris exercitation quis Lorem in culpa et consectetur. Qui velit tempor laborum culpa ad.</p>
-								</div>
-							</div>
-						</div>
+						@endforeach
 					</div>
 
 					<!-- Carousel Buttons Next/Prev -->

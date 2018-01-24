@@ -444,6 +444,7 @@ class DashboardApiController extends Controller
     $anouncement = new Announcement();
     $anouncement->title = $request->input("title","");
     $anouncement->link = $request->input("description", "");
+    $anouncement->type = $request->input("type", "0");
     $anouncement->created_by = Auth::user()->id;
     $anouncement->updated_by = Auth::user()->id;
     $anouncement->save();
