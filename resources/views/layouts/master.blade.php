@@ -14,6 +14,8 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/animations.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/select2.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/select2-bootstrap.css') }}">
 </head>
 <body class="no-trans">
 <div class="scrollToTop"><i class="icon-up-open-big"></i></div>
@@ -31,6 +33,7 @@
 <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/axios.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/contact.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/select2.full.js') }}"></script>
 @yield('post')
 </body>
 </html>

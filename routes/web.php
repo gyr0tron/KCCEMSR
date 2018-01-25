@@ -95,6 +95,9 @@ Route::prefix('admin')->group(function () {
 Route::prefix('/api')->group(function () {
   Route::get('/home/carousel/','HomeController@getCarousel');
   Route::post('/contact/send',"HomeController@sendContact");
+  Route::get('/get/departments',"LibraryController@getDepartments");
+  Route::get('/get/years',"LibraryController@getYears");
+  Route::get('/get/sems',"LibraryController@getSems");
 });
 
 

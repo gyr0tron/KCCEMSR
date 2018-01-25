@@ -11613,15 +11613,67 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {}
+  data: function data() {
+    return {
+      departments: [],
+      years: [],
+      sems: []
+    };
+  },
+  mounted: function mounted() {
+    this.getDepartments();
+  },
+
+  methods: {
+    departmentChanged: function departmentChanged(event) {
+      this.getYears();
+    },
+    yearChanged: function yearChanged(event) {
+      this.getSems();
+    },
+    getResults: function getResults(event) {
+      event.preventDefault();
+      var form = event.target;
+      console.log($(event.target).serialize());
+    },
+    getDepartments: function getDepartments() {
+      var _this = this;
+
+      axios.get('/api/get/departments').then(function (response) {
+        _this.departments = response.data;
+        _this.years = [];
+        setTimeout(function () {
+          $('#department').prop('selectedIndex', -1);
+          $('#year').prop('selectedIndex', -1);
+          $('#sem').prop('selectedIndex', -1);
+        }, 5);
+      });
+    },
+    getYears: function getYears() {
+      var _this2 = this;
+
+      axios.get('/api/get/years?department=' + $('#department').val()).then(function (response) {
+        _this2.years = response.data;
+        _this2.sems = [];
+        setTimeout(function () {
+          $('#year').prop('selectedIndex', -1);
+          $('#sem').prop('selectedIndex', -1);
+        }, 5);
+      });
+    },
+    getSems: function getSems() {
+      var _this3 = this;
+
+      axios.get('/api/get/sems?year=' + $('#year').val()).then(function (response) {
+        _this3.sems = response.data;
+        setTimeout(function () {
+          $('#sem').prop('selectedIndex', -1);
+        }, 5);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -11632,310 +11684,283 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("form", { on: { submit: _vm.getResults } }, [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "pwd" } }, [_vm._v("Departments:")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass: "form-control select2-single",
+                  attrs: {
+                    name: "department",
+                    id: "department",
+                    placeholder: "Select"
+                  },
+                  on: { change: _vm.departmentChanged }
+                },
+                _vm._l(_vm.departments, function(dep) {
+                  return _c("option", { domProps: { value: dep.url } }, [
+                    _vm._v(_vm._s(dep.name))
+                  ])
+                })
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "pwd" } }, [_vm._v("Year:")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass: "form-control",
+                  attrs: { name: "year", id: "year", placeholder: "Select" },
+                  on: { change: _vm.yearChanged }
+                },
+                _vm._l(_vm.years, function(year) {
+                  return _c("option", { domProps: { value: year } }, [
+                    _vm._v(_vm._s(year))
+                  ])
+                })
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "pwd" } }, [_vm._v("Sem:")]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  staticClass: "form-control",
+                  attrs: { name: "sem", id: "sem", placeholder: "Select" }
+                },
+                _vm._l(_vm.sems, function(sem) {
+                  return _c("option", { domProps: { value: sem } }, [
+                    _vm._v(_vm._s(sem))
+                  ])
+                })
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3)
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("form", { attrs: { action: "/action_page.php" } }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "pwd" } }, [
-                  _vm._v("Departments:")
+    return _c("div", { staticClass: "col-md-3" }, [
+      _c("div", { staticClass: "form-group" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary btn-block btn-full",
+            staticStyle: { "margin-top": "27px", height: "45px" }
+          },
+          [_vm._v("Search")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
+      _c(
+        "div",
+        {
+          staticClass: "card",
+          staticStyle: {
+            border: ".0625rem solid #e5e5e5",
+            "border-radius": ".25rem"
+          }
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "card-block", staticStyle: { padding: "10px" } },
+            [
+              _c("h4", { staticClass: "text-center" }, [_vm._v("Date title")]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "list-unstyled" }, [
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 1")])
                 ]),
                 _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    staticClass: "form-control",
-                    attrs: { name: "department", id: "department" }
-                  },
-                  [
-                    _c("option", [_vm._v("Helo")]),
-                    _vm._v(" "),
-                    _c("option", [_vm._v("Helo")]),
-                    _vm._v(" "),
-                    _c("option", [_vm._v("Helo")])
-                  ]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "pwd" } }, [_vm._v("Year:")]),
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ]),
                 _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    staticClass: "form-control",
-                    attrs: { name: "year", id: "year" }
-                  },
-                  [
-                    _c("option", [_vm._v("Helo")]),
-                    _vm._v(" "),
-                    _c("option", [_vm._v("Helo")]),
-                    _vm._v(" "),
-                    _c("option", [_vm._v("Helo")])
-                  ]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "pwd" } }, [_vm._v("Sem:")]),
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ]),
                 _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    staticClass: "form-control",
-                    attrs: { name: "sem", id: "sem" }
-                  },
-                  [
-                    _c("option", [_vm._v("Helo")]),
-                    _vm._v(" "),
-                    _c("option", [_vm._v("Helo")]),
-                    _vm._v(" "),
-                    _c("option", [_vm._v("Helo")])
-                  ]
-                )
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ])
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-3" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary btn-block btn-full",
-                    staticStyle: { "margin-top": "27px", height: "45px" }
-                  },
-                  [_vm._v("Search")]
-                )
+            ]
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
+      _c(
+        "div",
+        {
+          staticClass: "card",
+          staticStyle: {
+            border: ".0625rem solid #e5e5e5",
+            "border-radius": ".25rem"
+          }
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "card-block", staticStyle: { padding: "10px" } },
+            [
+              _c("h4", { staticClass: "text-center" }, [_vm._v("Date title")]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "list-unstyled" }, [
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 1")])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ])
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "card",
-                  staticStyle: {
-                    border: ".0625rem solid #e5e5e5",
-                    "border-radius": ".25rem"
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "card-block",
-                      staticStyle: { padding: "10px" }
-                    },
-                    [
-                      _c("h4", { staticClass: "text-center" }, [
-                        _vm._v("Date title")
-                      ]),
-                      _vm._v(" "),
-                      _c("ul", { staticClass: "list-unstyled" }, [
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 1")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ])
-                      ])
-                    ]
-                  )
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "card",
-                  staticStyle: {
-                    border: ".0625rem solid #e5e5e5",
-                    "border-radius": ".25rem"
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "card-block",
-                      staticStyle: { padding: "10px" }
-                    },
-                    [
-                      _c("h4", { staticClass: "text-center" }, [
-                        _vm._v("Date title")
-                      ]),
-                      _vm._v(" "),
-                      _c("ul", { staticClass: "list-unstyled" }, [
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 1")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ])
-                      ])
-                    ]
-                  )
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "card",
-                  staticStyle: {
-                    border: ".0625rem solid #e5e5e5",
-                    "border-radius": ".25rem"
-                  }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "card-block",
-                      staticStyle: { padding: "10px" }
-                    },
-                    [
-                      _c("h4", { staticClass: "text-center" }, [
-                        _vm._v("Date title")
-                      ]),
-                      _vm._v(" "),
-                      _c("ul", { staticClass: "list-unstyled" }, [
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 1")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("i", {
-                            staticClass: "fa fa-caret-right pr-10 text-colored"
-                          }),
-                          _c("a", { attrs: { href: "" } }, [
-                            _vm._v("Subject 2")
-                          ])
-                        ])
-                      ])
-                    ]
-                  )
-                ]
-              )
-            ])
-          ])
-        ])
-      ])
+            ]
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xs-12 col-sm-6 col-md-3" }, [
+      _c(
+        "div",
+        {
+          staticClass: "card",
+          staticStyle: {
+            border: ".0625rem solid #e5e5e5",
+            "border-radius": ".25rem"
+          }
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "card-block", staticStyle: { padding: "10px" } },
+            [
+              _c("h4", { staticClass: "text-center" }, [_vm._v("Date title")]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "list-unstyled" }, [
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 1")])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("i", {
+                    staticClass: "fa fa-caret-right pr-10 text-colored"
+                  }),
+                  _c("a", { attrs: { href: "" } }, [_vm._v("Subject 2")])
+                ])
+              ])
+            ]
+          )
+        ]
+      )
     ])
   }
 ]
