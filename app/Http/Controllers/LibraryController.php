@@ -33,10 +33,10 @@ class LibraryController extends Controller
     }
     else {
       $data['no'] = "2";
-      $data['name'] = "FE";
+      $data['name'] = "SE";
       array_push($reply, $data);
       $data['no'] = "3";
-      $data['name'] = "SE";
+      $data['name'] = "TE";
       array_push($reply, $data);
       $data['no'] = "4";
       $data['name'] = "BE";
@@ -46,13 +46,13 @@ class LibraryController extends Controller
   }
   public function getSems(Request $request) {
     switch ($request->input('year')) {
-      case 'FE':
+      case '1':
       return [1,2];
-      case 'SE':
+      case '2':
       return [3,4];
-      case 'TE':
+      case '4':
       return [5,6];
-      case 'BE':
+      case '4':
       return [7,8];
     }
     return [1,2];
@@ -61,13 +61,20 @@ class LibraryController extends Controller
     $department = $request->input('department');
     $year = $request->input('year');
     $sem = $request->input('sem');
-    $files = FileUpload::where('type','question-papers')->where('department', $department)->where('year',$year)->where('sem',$sem)->get();
     $reply = [];
-    foreach ($files as $file) {
-      $data['name'] = $file->name;
-      $data['url'] = $file->getUrl();
-      $data['year'] = $file->section;
-      array_push($reply, $data);
+    $groups = FileUpload::where('type','question-papers')->where('department', $department)->where('year',$year)->where('sem',$sem)->distinct()->get(['section']);
+    // return $groups;
+    foreach ($groups as $group) {
+      $group = $group->section;
+      $groupData = [];
+      $files = FileUpload::where('type','question-papers')->where('department', $department)->where('year',$year)->where('sem',$sem)->where('section',$group)->get();
+      foreach ($files as $file) {
+        $data['name'] = $file->name;
+        $data['url'] = $file->getUrl();
+        $data['year'] = $file->section;
+        array_push($groupData, $data);
+      }
+      array_push($reply, ['year'=>$group,'papers'=>$groupData]);
     }
     return $reply;
   }
