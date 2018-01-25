@@ -98,6 +98,7 @@ Route::prefix('/api')->group(function () {
   Route::get('/get/departments',"LibraryController@getDepartments");
   Route::get('/get/years',"LibraryController@getYears");
   Route::get('/get/sems',"LibraryController@getSems");
+  Route::post('/search/question-papers',"LibraryController@searchQuestionPapers");
 });
 
 

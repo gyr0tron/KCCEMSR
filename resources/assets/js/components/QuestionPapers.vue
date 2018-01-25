@@ -15,7 +15,7 @@
             <div class="form-group">
               <label for="pwd">Year:</label>
               <select class="form-control" name="year" id="year" @change="yearChanged" placeholder="Select">
-                <option v-for="year in years" v-bind:value="year">{{year}}</option>
+                <option v-for="year in years" v-bind:value="year.no">{{year.name}}</option>
               </select>
             </div>
           </div>
@@ -103,7 +103,10 @@ export default {
     getResults: function(event) {
       event.preventDefault();
       var form = event.target;
-      console.log($(event.target).serialize());
+      axios.post('/api/search/question-papers', $(form).serialize())
+      .then((response)=>{
+        console.log(response.data);
+      });
     },
     getDepartments: function() {
       axios.get('/api/get/departments')

@@ -10930,7 +10930,7 @@ module.exports = Vue$3;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var apply = Function.prototype.apply;
+/* WEBPACK VAR INJECTION */(function(global) {var apply = Function.prototype.apply;
 
 // DOM APIs, for completeness
 
@@ -10981,9 +10981,17 @@ exports._unrefActive = exports.active = function(item) {
 
 // setimmediate attaches itself to the global object
 __webpack_require__(5);
-exports.setImmediate = setImmediate;
-exports.clearImmediate = clearImmediate;
+// On some exotic environments, it's not clear which object `setimmeidate` was
+// able to install onto.  Search each possibility in the same order as the
+// `setimmediate` library.
+exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
+                       (typeof global !== "undefined" && global.setImmediate) ||
+                       (this && this.setImmediate);
+exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
+                         (typeof global !== "undefined" && global.clearImmediate) ||
+                         (this && this.clearImmediate);
 
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 5 */
@@ -11636,7 +11644,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     getResults: function getResults(event) {
       event.preventDefault();
       var form = event.target;
-      console.log($(event.target).serialize());
+      axios.post('/api/search/question-papers', $(form).serialize()).then(function (response) {
+        console.log(response.data);
+      });
     },
     getDepartments: function getDepartments() {
       var _this = this;
@@ -11724,8 +11734,8 @@ var render = function() {
                   on: { change: _vm.yearChanged }
                 },
                 _vm._l(_vm.years, function(year) {
-                  return _c("option", { domProps: { value: year } }, [
-                    _vm._v(_vm._s(year))
+                  return _c("option", { domProps: { value: year.no } }, [
+                    _vm._v(_vm._s(year.name))
                   ])
                 })
               )

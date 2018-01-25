@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Department;
+use App\FileUpload;
 
 class LibraryController extends Controller
 {
@@ -22,10 +23,26 @@ class LibraryController extends Controller
     return $reply;
   }
   public function getYears(Request $request) {
+    $reply = [];
     $dep = Department::where('url',$request->input('department'))->first();
     if(!$dep) return [];
-    if($dep->isPrimary()) return ["FE"];
-    return ['SE','TE','BE'];
+    if($dep->isPrimary()) {
+      $data['no'] = "1";
+      $data['name'] = "FE";
+      array_push($reply, $data);
+    }
+    else {
+      $data['no'] = "2";
+      $data['name'] = "FE";
+      array_push($reply, $data);
+      $data['no'] = "3";
+      $data['name'] = "SE";
+      array_push($reply, $data);
+      $data['no'] = "4";
+      $data['name'] = "BE";
+      array_push($reply, $data);
+    }
+    return $reply;
   }
   public function getSems(Request $request) {
     switch ($request->input('year')) {
@@ -39,5 +56,19 @@ class LibraryController extends Controller
       return [7,8];
     }
     return [1,2];
+  }
+  public function searchQuestionPapers(Request $request) {
+    $department = $request->input('department');
+    $year = $request->input('year');
+    $sem = $request->input('sem');
+    $files = FileUpload::where('type','question-papers')->where('department', $department)->where('year',$year)->where('sem',$sem)->get();
+    $reply = [];
+    foreach ($files as $file) {
+      $data['name'] = $file->name;
+      $data['url'] = $file->getUrl();
+      $data['year'] = $file->section;
+      array_push($reply, $data);
+    }
+    return $reply;
   }
 }
