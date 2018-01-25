@@ -39,7 +39,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/event/{url}','DepartmentController@getEvent')->name('event');
   Route::get('/achievement/{id}','DepartmentController@getAchievement')->name('achievement');
 
-  Route::get('/pacements','PlacementsController@get')->name('pacements');
+  Route::get('/placements','PlacementsController@get')->name('placements');
 
   Route::get('/library/question-papers','LibraryController@getQuestionPapers')->name('question-papers');
 

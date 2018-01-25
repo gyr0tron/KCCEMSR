@@ -65,11 +65,11 @@
 						<li class="has-dropdown">
 							<a href="#">Placements</a>
 							<ul>
-								<li><a href="{{route('pacements')}}">Function &amp; Responsibilities</a></li>
-								<li><a href="{{route('pacements')}}">Placement Statistics</a></li>
-								<li><a href="{{route('pacements')}}">Training &amp; Placement Process</a></li>
-								<li><a href="{{route('pacements')}}">Higher Studies</a></li>
-								<li><a href="{{route('pacements')}}">Reviews</a></li>
+								<li><a href="{{route('placements')}}">Function &amp; Responsibilities</a></li>
+								<li><a href="{{route('placements')}}">Placement Statistics</a></li>
+								<li><a href="{{route('placements')}}">Training &amp; Placement Process</a></li>
+								<li><a href="{{route('placements')}}">Higher Studies</a></li>
+								<li><a href="{{route('placements')}}">Reviews</a></li>
 							</ul>
 						</li>
 						<li>
