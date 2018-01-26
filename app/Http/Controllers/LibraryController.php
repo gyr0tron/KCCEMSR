@@ -82,4 +82,16 @@ class LibraryController extends Controller
     }
     return $reply;
   }
+  public function searchEbooks(Request $request)
+  {
+    $search = $request->input('search','');
+    $ebooks = FileUpload::where('type','e-books')->where('name','LIKE',"%$search%")->orderBy('id','DESC')->get();
+    $reply = [];
+    foreach ($ebooks as $book) {
+      $data['name'] = $book->name;
+      $data['url'] = $book->getUrl();
+      array_push($reply, $data);
+    }
+    return $reply;
+  }
 }

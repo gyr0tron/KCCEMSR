@@ -606,10 +606,10 @@ class DashboardApiController extends Controller
     $upload = new FileUpload();
     $upload->type = $action;
     $upload->name = $request->input('name');
-    $upload->department = $request->input('department');
-    $upload->year = $request->input('year');
-    $upload->sem = $request->input('sem',"");
-    $upload->section = $request->input('section',"");
+    $upload->department = $request->input('department',"-1");
+    $upload->year = $request->input('year',"-1");
+    $upload->sem = $request->input('sem',"-1");
+    $upload->section = $request->input('section',"-1");
     $upload->created_by = Auth::user()->id;
     $upload->updated_by = Auth::user()->id;
     $upload->filename = $upload->uploadFile($request->file('file'));

@@ -11,6 +11,7 @@
 			<div class="row">
 				<h1 class="text-center"><strong><span>E-Books & Journals</span></strong></h1>
 				<div class="space"></div>
+				<ebooks></ebooks>
 			</div>
 		</div>
 	</div>

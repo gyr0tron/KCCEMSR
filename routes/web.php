@@ -100,6 +100,7 @@ Route::prefix('/api')->group(function () {
   Route::get('/get/years',"LibraryController@getYears");
   Route::get('/get/sems',"LibraryController@getSems");
   Route::post('/search/question-papers',"LibraryController@searchQuestionPapers");
+  Route::post('/search/ebooks',"LibraryController@searchEbooks");
 });
 
 
