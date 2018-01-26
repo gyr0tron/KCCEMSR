@@ -7,12 +7,12 @@
       <thead>
         <tr>
           <th width="50%">Name</th>
-          <th width="20%">Department</th>
-          <th width="20%">Year</th>
-          @if ($action=="question-papers" || $action == "e-books")
-            <th width="20%">Sem</th>
+          @if ($action != "e-books")
+            <th width="20%">Department</th>
+            <th width="20%">Year</th>
           @endif
           @if ($action=="question-papers")
+            <th width="20%">Sem</th>
             <th width="40%">YOE</th>
           @endif
           <th width="20%">Actions</th>
@@ -22,12 +22,12 @@
         @foreach (App\FileUpload::where("type",$action)->get() as $fp)
           <tr>
             <td>{{$fp->name}}</td>
-            <td>{{$fp->department}}</td>
-            <td>{{$fp->getYear()}}</td>
-            @if ($action=="question-papers" || $action == "e-books")
-              <td>{{$fp->sem}}</td>
+            @if ($action != "e-books")
+              <td>{{$fp->department}}</td>
+              <td>{{$fp->getYear()}}</td>
             @endif
             @if ($action=="question-papers")
+              <td>{{$fp->sem}}</td>
               <td>{{$fp->section}}</td>
             @endif
             <td>
@@ -40,12 +40,12 @@
       <tfoot>
         <tr>
           <th width="50%">Name</th>
-          <th width="20%">Department</th>
-          <th width="20%">Year</th>
-          @if ($action=="question-papers" || $action == "e-books")
-            <th width="20%">Sem</th>
+          @if ($action != "e-books")
+            <th width="20%">Department</th>
+            <th width="20%">Year</th>
           @endif
           @if ($action=="question-papers")
+            <th width="20%">Sem</th>
             <th width="40%">YOE</th>
           @endif
           <th width="20%">Actions</th>
@@ -74,30 +74,33 @@
           <p class="help-block"></p>
         </div>
       </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="year">Department:</label>
-        <div class="col-sm-9">
-          <select class="form-control" id="department" name="department">
-            @foreach (App\Department::all() as $dep)
-              <option value="{{$dep->url}}">{{$dep->name}}</option>
-            @endforeach
-          </select>
-          <p class="help-block"></p>
+      @if ($action != "e-books")
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="year">Department:</label>
+          <div class="col-sm-9">
+            <select class="form-control" id="department" name="department">
+              @foreach (App\Department::all() as $dep)
+                <option value="{{$dep->url}}">{{$dep->name}}</option>
+              @endforeach
+            </select>
+            <p class="help-block"></p>
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="year">Year:</label>
-        <div class="col-sm-9">
-          <select class="form-control" id="year" name="year">
-            <option value="1">FE</option>
-            <option value="2">SE</option>
-            <option value="3">TE</option>
-            <option value="4">BE</option>
-          </select>
-          <p class="help-block"></p>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="year">Year:</label>
+          <div class="col-sm-9">
+            <select class="form-control" id="year" name="year">
+              <option value="1">FE</option>
+              <option value="2">SE</option>
+              <option value="3">TE</option>
+              <option value="4">BE</option>
+            </select>
+            <p class="help-block"></p>
+          </div>
         </div>
-      </div>
-      @if ($action=="question-papers" || $action == "e-books")
+      @endif
+
+      @if ($action=="question-papers")
         <div class="form-group">
           <label class="control-label col-sm-2" for="sem">Sem:</label>
           <div class="col-sm-9">
@@ -109,8 +112,6 @@
             <p class="help-block"></p>
           </div>
         </div>
-      @endif
-      @if ($action=="question-papers")
         <div class="form-group">
           <label class="control-label col-sm-2" for="section">Year of Exam:</label>
           <div class="col-sm-9">
