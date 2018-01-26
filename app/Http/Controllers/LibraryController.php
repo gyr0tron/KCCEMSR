@@ -13,6 +13,10 @@ class LibraryController extends Controller
   {
     return view('pages.question-papers');
   }
+  public function getEbooks()
+  {
+    return view('pages.ebooks');
+  }
   public function getDepartments(Request $request) {
     $reply = [];
     foreach (Department::orderBy('id','ASC')->get() as $dep) {
