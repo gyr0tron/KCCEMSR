@@ -26,6 +26,7 @@ class CreateStaffTable extends Migration
       $table->longtext('workshops')->nullable();
       $table->longtext('publications')->nullable();
       $table->string('department')->nullable();
+      $table->integer('sort')->nullable();
       $table->integer('created_by');
       $table->integer('updated_by');
       $table->timestamps();

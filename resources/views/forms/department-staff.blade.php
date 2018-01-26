@@ -141,7 +141,6 @@
         _super($item, container);
         var department = $('#sortable').data('department');
         var items = $('#sortable').sortable('serialize').get();
-        console.log(department, items);
         axios.post('/api/admin/department/staff/sort',{department:department, items:items});
       }
     });
