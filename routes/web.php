@@ -131,6 +131,7 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/department/staff/add","Admin\DashboardApiController@addStaff");
   Route::post("/department/staff/edit","Admin\DashboardApiController@editStaff");
   Route::post("/department/staff/remove","Admin\DashboardApiController@removeStaff");
+  Route::post("/department/staff/sort","Admin\DashboardApiController@sortStaff");
   Route::post("/department/topper/add","Admin\DashboardApiController@addAcademicTopper");
   Route::post("/department/topper/remove","Admin\DashboardApiController@removeAcademicTopper");
 

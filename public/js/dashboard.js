@@ -179,3 +179,5 @@ $("#YesNoBox").on('hidden.bs.modal', function () {
   $('#YesNoBox').remove();
 });
 }
+
+// SORTABLE

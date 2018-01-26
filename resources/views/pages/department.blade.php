@@ -256,7 +256,7 @@
 		<h1 class="title text-center" style="margin-top: 5%;margin-bottom: 0px;">List of Staff:</h1>
 		<p style="text-align: center;">(Click on the picture to read more.)</p>
 		<div class="container">
-			@foreach (App\Staff::where('department', $dep->url)->get() as $staff)
+			@foreach (App\Staff::where('department', $dep->url)->orderBy('sort','ASC')->get() as $staff)
 				<div class="col-md-3 col-sm-12 col-xs-12">
 					<div class="team-member">
 						<div class="team-img" style="height: 300px;">

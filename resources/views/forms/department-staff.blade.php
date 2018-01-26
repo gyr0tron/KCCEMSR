@@ -14,9 +14,9 @@
           <th width="30%">Actions</th>
         </tr>
       </thead>
-      <tbody>
-        @foreach (App\Staff::where("department",$dep->url)->get() as $staff)
-          <tr>
+      <tbody id="sortable" data-department="{{$dep->url}}">
+        @foreach (App\Staff::where("department",$dep->url)->orderBy('sort','ASC')->get() as $staff)
+          <tr data-id="{{$staff->id}}">
             <td><img src="{{$staff->getUrl()}}" alt="" width="60" height="60"></td>
             <td>{{$staff->name}}</td>
             <td>{{$staff->designation}}</td>
@@ -133,6 +133,17 @@
   $(function () {
     $('#name').keyup(function(event) {
       $('#display').val('Prof. ' + this.value);
+    });
+    $('#sortable').sortable({
+      containerSelector:'tbody',
+      itemSelector:'tr',
+      onDrop: function($item, container, _super) {
+        _super($item, container);
+        var department = $('#sortable').data('department');
+        var items = $('#sortable').sortable('serialize').get();
+        console.log(department, items);
+        axios.post('/api/admin/department/staff/sort',{department:department, items:items});
+      }
     });
   })
   </script>

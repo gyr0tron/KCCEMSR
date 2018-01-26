@@ -33,3 +33,19 @@
   left: 75%;
   top: 5px;
 }
+/* SORTABLE  */
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+.dragged {
+  position: absolute;
+  z-index: 2000;
+}
+#sortable .placeholder {
+  position: relative;
+  min-height: 77px;
+}
+#sortable .placeholder:before {
+  background-color: #eee;
+  position: absolute;
+}

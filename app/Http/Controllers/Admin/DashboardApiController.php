@@ -438,6 +438,22 @@ class DashboardApiController extends Controller
     $staff->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
+  // Sort Staff
+  public function sortStaff(Request $request)
+  {
+    $department = $request->input('department');
+    $items = $request->input('items');
+    $items = $items[0];
+    $no = 1;
+    foreach ($items as $item) {
+      $staff = Staff::where('id',$item['id'])->first();
+      if($staff) {
+        $staff->sort = $no++;
+        $staff->save();
+      }
+    }
+    return "";
+  }
   // Add Announcement
   public function addAnnouncement(AdminAddAnnouncement $request)
   {

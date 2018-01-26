@@ -37,6 +37,7 @@
   <script type="text/javascript" src="{{ asset('js/dataTables.bootstrap.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/jquery.fancybox.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/bootstrap2-toggle.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/jquery-sortable.js') }}"></script>
   @yield('post')
 </body>
 </html>
