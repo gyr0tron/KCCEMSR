@@ -67,33 +67,6 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
 /* globals __VUE_SSR_CONTEXT__ */
 
 // IMPORTANT: Do NOT use ES2015 features in this file.
@@ -200,6 +173,33 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -214,6 +214,7 @@ module.exports = __webpack_require__(3);
 window.Vue = __webpack_require__(4);
 Vue.component('question-papers', __webpack_require__(8));
 Vue.component('ebooks', __webpack_require__(11));
+Vue.component('placement-stats', __webpack_require__(14));
 
 var app = new Vue({
     el: '#app'
@@ -11034,7 +11035,7 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(5).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(5).setImmediate))
 
 /***/ }),
 /* 5 */
@@ -11286,7 +11287,7 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(7)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(7)))
 
 /***/ }),
 /* 7 */
@@ -11483,7 +11484,7 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(1)
+var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(9)
 /* template */
@@ -11827,7 +11828,7 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(1)
+var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(12)
 /* template */
@@ -12050,6 +12051,221 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-fed21dc8", module.exports)
+  }
+}
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(15)
+/* template */
+var __vue_template__ = __webpack_require__(16)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\PlacementStats.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3d01421e", Component.options)
+  } else {
+    hotAPI.reload("data-v-3d01421e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      years: ["2012-13", "2013-14", "2014-15", "2015-16", "2016-17"],
+      departments: ['computer', 'electronics', 'extc', 'it'],
+      yearsData: [[25, 15, 9, 11], [30, 3, 7, 5], [40, 16, 4, 5], [34, 15, 10, 27], [26, 10, 29, 27]],
+      chart: ''
+    };
+  },
+  mounted: function mounted() {
+    this.makeHomeChart();
+  },
+
+  methods: {
+    handleClick: function handleClick(evt) {
+      var activePoints = this.chart.getElementsAtEvent(evt);
+      var firstPoint = activePoints[0];
+      var label = this.chart.data.labels[firstPoint._index];
+      var value = this.chart.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
+      if (firstPoint === undefined) return;
+      var index = this.years.indexOf(label);
+      if (index == -1) return;
+      this.makeYearChat(label, index);
+    },
+    makeHomeChart: function makeHomeChart() {
+      var ctx = document.getElementById("placement-chart").getContext('2d');
+      if (this.chart) this.chart.destroy();
+      this.chart = new Chart(ctx, {
+        type: 'bar',
+        responsive: false,
+        data: {
+          labels: this.years,
+          datasets: [{
+            label: 'Total placed students',
+            data: [60, 45, 65, 86, 92],
+            backgroundColor: 'rgba(85, 172, 238, 0.2)',
+            borderColor: 'rbga(255, 99, 132, 0.2)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          tooltips: { enabled: true },
+          hover: { mode: null },
+          maintainAspectRatio: true,
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
+          title: {
+            display: true,
+            text: 'Total placed students'
+          }
+        }
+      });
+    },
+    makeYearChat: function makeYearChat(year, index) {
+      var ctx = document.getElementById("placement-chart").getContext('2d');
+      this.chart.destroy();
+      this.chart = new Chart(ctx, {
+        type: 'bar',
+        responsive: false,
+        data: {
+          labels: this.departments,
+          datasets: [{
+            label: 'Total placed students in ' + year,
+            data: this.yearsData[index],
+            backgroundColor: ['rgba(85, 172, 238, 0.2)', 'rgba(255, 13, 45, 0.2)', 'rgba(18, 208, 122, 0.2)', 'rgba(225, 21, 236, 0.2)'],
+            borderColor: 'rbga(255, 99, 132, 0.2)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          tooltips: { enabled: true },
+          hover: { mode: null },
+          maintainAspectRatio: true,
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
+          title: {
+            display: true,
+            text: 'Total placed students in ' + year
+          }
+        }
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "p",
+      { staticClass: "text-center", staticStyle: { "line-height": "0px" } },
+      [_vm._v("(Click on bar to open department specific statistics)")]
+    ),
+    _vm._v(" "),
+    _c(
+      "a",
+      {
+        staticStyle: { "margin-left": "20px", "margin-top": "20px" },
+        on: { click: _vm.makeHomeChart }
+      },
+      [_c("i", { staticClass: "fa fa-home", attrs: { "aria-hidden": "true" } })]
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "space" }),
+    _vm._v(" "),
+    _c("canvas", {
+      staticStyle: { height: "600px" },
+      attrs: { id: "placement-chart" },
+      on: { click: _vm.handleClick }
+    })
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", { staticClass: "text-center" }, [
+      _c("strong", [_c("span", [_vm._v("Placement Statistics")])])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3d01421e", module.exports)
   }
 }
 
