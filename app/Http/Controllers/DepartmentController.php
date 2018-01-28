@@ -42,8 +42,11 @@ class DepartmentController extends Controller
   }
   public function getLifeAtKc()
   {
-    $title = "Life at KC";
     $types = Committee::getAll();
     return view('pages.lifeatkc', compact('types','title'));
+  }
+  public function getCareerAtKc()
+  {
+    return view('pages.careeratkc');
   }
 }

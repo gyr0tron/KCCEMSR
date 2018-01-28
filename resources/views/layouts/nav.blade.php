@@ -106,7 +106,7 @@
 									</li>
 									<li class="sub-menu-parent"><a href="{{route('lifeatkc')}}">Life At KC</a>
 									</li>
-									<li class="sub-menu-parent"><a href="/#contact">Career At KC</a>
+									<li class="sub-menu-parent"><a href="{{route('careeratkc')}}">Career At KC</a>
 									</li>
 									<li class="sub-menu-parent"><a href="#">Statutory Affiliations</a>
 										<ul class="sub-menu">
