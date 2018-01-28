@@ -265,7 +265,8 @@ class DashboardApiController extends Controller
       $dep->uploadImage($request->image);
     }
     $dep->description = $request->input("description","");
-    $dep->message = $request->input("message","");
+    $dep->hod = $request->input("hod","-1");
+    $dep->hod_message = $request->input("hod_message","");
     $dep->vision = $request->input("vision","");
     $dep->mission = $request->input("mission","");
     $dep->objectives = $request->input("objectives","");

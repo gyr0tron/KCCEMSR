@@ -17,7 +17,8 @@ class CreateDepartmentsTable extends Migration
       $table->increments('id');
       $table->string('name', 191)->unique();
       $table->string('url', 191)->unique();
-      $table->longtext('message')->nullable();
+      $table->integer('hod')->nullable();
+      $table->longtext('hod_message')->nullable();
       $table->longtext('description')->nullable();
       $table->longtext('vision')->nullable();
       $table->longtext('mission')->nullable();

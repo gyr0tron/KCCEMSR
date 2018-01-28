@@ -25,17 +25,23 @@
 						</div>
 					</div>
 					<div class="space"></div>
-					<div class="row">
-						<div class="col-md-6">
-							<h2 style="margin-top: 0px; margin-bottom: 5px;">HOD'S Message</h2>
-							<p style="white-space: pre-wrap; margin-bottom: 15px;">{{strip_tags($dep->message)}}</p>
-							<div class="space"></div>
+					@php
+					$hod = App\Staff::where('id',$dep->hod)->first();
+					@endphp
+					@if ($hod)
+						<div class="row">
+							<div class="col-md-6">
+								<h2 style="margin-top: 0px; margin-bottom: 5px;">HOD'S Message</h2>
+								<p style="white-space: pre-wrap; margin-bottom: 15px;">{{strip_tags($dep->hod_messsage)}}</p>
+								<div class="space"></div>
+							</div>
+							<div class="col-md-6">
+								<img src="{{$hod->getUrl()}}" alt="">
+								<div class="space"></div>
+							</div>
 						</div>
-						<div class="col-md-6">
-							<img src="http://via.placeholder.com/500x300" alt="">
-							<div class="space"></div>
-						</div>
-					</div>
+					@endif
+
 					<div class="row">
 						<div class="col-md-6">
 							<h2 style="margin-top: 0px; margin-bottom: 5px;">Vision</h2>
