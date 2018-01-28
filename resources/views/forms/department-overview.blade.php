@@ -29,6 +29,7 @@
         <label class="control-label col-sm-2" for="message">HOD:</label>
         <div class="col-sm-9">
           <select class="form-control" name="hod" id="hod">
+            <option value="-1">None</option>
             @foreach (App\Staff::where('department', $dep->url)->get() as $staff)
               <option value="{{$staff->id}}" {{$dep->hod == $staff->id?'selected':''}}>{{$staff->name}}</option>
             @endforeach
