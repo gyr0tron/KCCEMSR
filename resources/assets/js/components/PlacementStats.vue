@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1 class="text-center"><strong><span>Placement Statistics</span></strong></h1>
-    <p class="text-center" style="line-height: 0px">(Click on bar to open department specific statistics)</p>
-    <a @click="makeHomeChart" style="margin-left: 20px;margin-top: 20px"><i class="fa fa-home" aria-hidden="true"></i></a>
+    <p class="text-center" style="">(Click on bar to open department specific statistics)</p>
+    <a @click="makeHomeChart" style="margin-left: 20px;margin-top: 20px"><i class="fa fa-2x fa-home" aria-hidden="true"></i></a>
     <div class="space"></div>
     <canvas id="placement-chart" style="height:600px;" @click="handleClick"></canvas>
   </div>
