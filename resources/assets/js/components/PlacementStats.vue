@@ -49,8 +49,8 @@ export default {
           datasets: [{
             label: 'Total placed students',
             data: [60, 45, 65, 86, 92],
-            backgroundColor: 'rgba(85, 172, 238, 0.2)',
-            borderColor: 'rbga(255, 99, 132, 0.2)',
+            backgroundColor: 'rgba(85, 172, 238, 0.4)',
+            borderColor: 'rbga(255, 99, 132, 0.4)',
             borderWidth: 1
           }],
         },
@@ -84,8 +84,8 @@ export default {
           datasets: [{
             label: 'Total placed students in ' + year,
             data: this.yearsData[index],
-            backgroundColor: ['rgba(85, 172, 238, 0.2)', 'rgba(255, 13, 45, 0.2)', 'rgba(18, 208, 122, 0.2)', 'rgba(225, 21, 236, 0.2)'],
-            borderColor: 'rbga(255, 99, 132, 0.2)',
+            backgroundColor: ['rgba(85, 172, 238, 0.4)', 'rgba(255, 13, 45, 0.4)', 'rgba(18, 208, 122, 0.4)', 'rgba(225, 21, 236, 0.4)'],
+            borderColor: 'rbga(255, 99, 132, 0.4)',
             borderWidth: 1
           }],
         },
