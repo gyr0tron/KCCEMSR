@@ -96,8 +96,8 @@
             <td>{{$topper->getYear()}}</td>
             <td>
               <a class="btn btn-sm btn-danger" style="margin-right:10px;"
-               onclick="dashboard.removeYesNo('Are you sure you want to remove {{$topper->name}} ?','/api/admin/department/topper/remove',{{$topper->id}})"
-               ><i class="fa fa-trash-o"></i></a>
+              onclick="dashboard.removeYesNo('Are you sure you want to remove {{$topper->name}} ?','/api/admin/department/topper/remove',{{$topper->id}})"
+              ><i class="fa fa-trash-o"></i></a>
             </td>
           </tr>
         @endforeach
@@ -125,9 +125,13 @@
             <td>
               <div class="form-group">
                 <select class="form-control" id="topper_year" name="topper_year">
-                  <option value="2">SE</option>
-                  <option value="3">TE</option>
-                  <option value="4">BE</option>
+                  @if ($dep->isPrimary())
+                    <option value="1">FE</option>
+                  @else
+                    <option value="2">SE</option>
+                    <option value="3">TE</option>
+                    <option value="4">BE</option>
+                  @endif
                 </select>
                 <p class="help-block"></p>
               </div>
