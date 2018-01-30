@@ -47,6 +47,16 @@
 			</div>
 			<div class="space"></div>
 
+				<h2 style="margin-top: 0px; margin-bottom: 5px;"><span>Program Outcomes:</span></h2>
+				<ul class="list-unstyled">
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i>Est ipsum eu dolor quis nulla irure incididunt consectetur voluptate dolor eiusmod consequat aliqua.</li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i>Est ipsum eu dolor quis nulla irure incididunt consectetur voluptate dolor eiusmod consequat aliqua.</li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i>Est ipsum eu dolor quis nulla irure incididunt consectetur voluptate dolor eiusmod consequat aliqua.</li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i>Est ipsum eu dolor quis nulla irure incididunt consectetur voluptate dolor eiusmod consequat aliqua.</li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i>Est ipsum eu dolor quis nulla irure incididunt consectetur voluptate dolor eiusmod consequat aliqua.</li>
+				</ul>
+			<div class="space"></div>
+
 			<div class="row" id="chp-msg">
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg" id="chairperson"><strong><span>Chairperson Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12">
