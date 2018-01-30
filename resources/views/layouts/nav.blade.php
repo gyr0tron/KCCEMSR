@@ -115,6 +115,7 @@
 											<li><a href="{{route('mandatory-disclosure', 'dte')}}">DTE Affiliation</a></li>
 											<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
 											<li><a href="{{route('mandatory-disclosure', 'nirf-data')}}">NIRF Data</a></li>
+											<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="#">About</a>

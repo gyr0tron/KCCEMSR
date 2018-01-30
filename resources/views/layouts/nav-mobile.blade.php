@@ -3,13 +3,13 @@
 		<div class="row">
 			<div class="nav-wrapper">
 				<a href="#" class="js-nav-toggle">
-						<span></span>
+					<span></span>
 				</a>
 				<nav role="navigation">
 					<div class="nav-toggle">
-							<span class="nav-back"></span>
-							<span class="nav-title">Menu</span>
-							<span class="nav-close"></span>
+						<span class="nav-back"></span>
+						<span class="nav-title">Menu</span>
+						<span class="nav-close"></span>
 					</div>
 					<ul>
 						<li>
@@ -89,6 +89,7 @@
 								<li><a href="{{route('mandatory-disclosure', 'dte')}}">DTE Affiliation</a></li>
 								<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
 								<li><a href="{{route('mandatory-disclosure', 'nirf-data')}}">NIRF Data</a></li>
+								<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 							</ul>
 						</li>
 						<li class="has-dropdown">
