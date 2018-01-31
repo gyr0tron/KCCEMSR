@@ -9,6 +9,7 @@ use App\Event;
 use App\Staff;
 use App\Achievement;
 use App\Committee;
+use App\JobList;
 
 class DepartmentController extends Controller
 {
@@ -48,5 +49,13 @@ class DepartmentController extends Controller
   public function getCareerAtKc()
   {
     return view('pages.careeratkc');
+  }
+  public function getCareerAtKc_PDF($url)
+  {
+    $job = JobList::where('url',$url)->first();
+    if(!$job) abort(404);
+    $title = $job->name;
+    $url = $job->getUrl();
+    return view('pages.pdfview', compact("title", "url"));
   }
 }

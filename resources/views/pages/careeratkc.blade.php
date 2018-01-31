@@ -9,22 +9,17 @@
 		<div class="container main-content-sub">
 			<div class="row">
 				<h1 class="text-center" style="margin-bottom:3%;"><strong><span>Career at KC</span></strong></h1>
-					<div class="col-md-12">
+				<div class="col-md-12">
 					<ul class="job-list">
-						<li class="job-preview">
-							<div class="content col-md-10 col-sm-10 float-left">
-								<h2 class="job-title"><strong>Job-Post 1</strong></h2>
-								<h5 class="sub-info"><a href="">Download pdf 1</a></h5>
-							</div>
-							<a href="#" class="btn btn-apply float-sm-right float-xs-left">Apply</a>
-						</li>
-						<li class="job-preview">
-							<div class="content col-md-10 col-sm-10 float-left">
-								<h2 class="job-title"><strong>Job-Post 2</strong></h2>
-								<h5 class="sub-info"><a href="">Download pdf 2</a></h5>
-							</div>
-							<a href="#" class="btn btn-apply float-sm-right float-xs-left">Apply</a>
-						</li>
+						@foreach (App\JobList::orderBy('id','DESC')->get() as $job)
+							<li class="job-preview animated fadeInDown">
+								<div class="content col-md-10 col-sm-10 float-left">
+									<h2 class="job-title"><strong>{{$job->name}}</strong></h2>
+									<h5 class="sub-info"><a href="{{route('careeratkc-details', $job->url)}}">Download</a></h5>
+								</div>
+								<a href="#" class="btn btn-apply float-sm-right float-xs-left">Apply</a>
+							</li>
+						@endforeach
 					</ul>
 				</div>
 				<div class="space"></div>
@@ -43,7 +38,7 @@
 
 							<!-- Text input-->
 							<div class="form-group">
-								<label class="col-md-4 control-label">Name</label>  
+								<label class="col-md-4 control-label">Name</label>
 								<div class="col-md-4 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -54,7 +49,7 @@
 
 							<!-- Text input-->
 							<div class="form-group">
-								<label class="col-md-4 control-label">E-Mail</label>  
+								<label class="col-md-4 control-label">E-Mail</label>
 								<div class="col-md-4 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -63,10 +58,10 @@
 								</div>
 							</div>
 
-							<!-- Text input-->			
+							<!-- Text input-->
 							<div class="form-group">
-								<label class="col-md-4 control-label">Phone No.</label>  
-									<div class="col-md-4 inputGroupContainer">
+								<label class="col-md-4 control-label">Phone No.</label>
+								<div class="col-md-4 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
 										<input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
@@ -76,7 +71,7 @@
 
 							<!-- Text input-->
 							<div class="form-group">
-								<label class="col-md-4 control-label">Post applied for</label>  
+								<label class="col-md-4 control-label">Post applied for</label>
 								<div class="col-md-4 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
@@ -88,10 +83,10 @@
 							<!-- File submit area -->
 							<div class="form-group">
 								<label class="col-md-4 control-label">Upload Resume</label>
-									<div class="col-md-4 inputGroupContainer">
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-paperclip"></i></span>
-											<input type="file" class="form-control" name="resume" placeholder="Upload Resume"></input>
+								<div class="col-md-4 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-paperclip"></i></span>
+										<input type="file" class="form-control" name="resume" placeholder="Upload Resume"></input>
 									</div>
 								</div>
 							</div>
