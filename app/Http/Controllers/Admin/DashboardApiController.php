@@ -41,6 +41,7 @@ use App\Publication;
 use App\Testimonial;
 use App\Committee;
 use App\Infrastructure;
+use App\JobList;
 use App\ResponseBuilder;
 
 class DashboardApiController extends Controller
@@ -667,6 +668,27 @@ class DashboardApiController extends Controller
     $com->deleteFile();
     $com->removeImage();
     $com->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Add Career
+  public function addCareer(Request $request)
+  {
+    $job = new JobList();
+    $job->name = $request->input("name","");
+    $job->generateUrl();
+    $job->filename = $job->uploadFile($request->file('file'));
+    $job->updated_by = Auth::user()->id;
+    $job->created_by = Auth::user()->id;
+    $job->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function removeCareer(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $job = JobList::where("id",$id)->first();
+    if(!$job) abort(404, 'Not Found');
+    $job->deleteFile();
+    $job->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
 }

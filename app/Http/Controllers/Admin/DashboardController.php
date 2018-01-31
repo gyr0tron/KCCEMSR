@@ -141,4 +141,9 @@ class DashboardController extends Controller
     if(!$committee) abort(404);
     return view('pages.admin.committees', compact('committee'));
   }
+  // Careet at KC
+  public function careeratkc()
+  {
+    return view('pages.admin.careeratkc');
+  }
 }

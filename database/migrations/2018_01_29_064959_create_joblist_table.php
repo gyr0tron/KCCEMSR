@@ -17,6 +17,7 @@ class CreateJoblistTable extends Migration
       $table->increments('id');
       $table->string('name')->nullable();
       $table->string('filename')->nullable();
+      $table->string('url')->nullable();
       $table->integer('created_by');
       $table->integer('updated_by');
       $table->timestamps();
