@@ -100,7 +100,7 @@
 								<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
 								<li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li>
 								<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
-								<li><a href="{{route('about')}}">Vision &amp; Mission</a></li>
+								<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
 								<li><a href="{{route('about')}}">Board of Governance</a></li>
 								<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
 								<li><a href="{{route('committees')}}">Committees</a></li>

@@ -29,13 +29,13 @@
 			<div class="space"></div>
 			<div class="row">
 				<div class="col-md-6">
-					<h1 id="about" class="title text-center"><span>Vision</span></h1>
+					<h1 id="vison" class="title text-center"><span>Vision</span></h1>
 					<ul class="list-unstyled">
 						<li><i class="fa fa-caret-right pr-10 text-colored"></i>To be an organization of excellence, leveraging human potential in engineering and management for a better tomorrow</li>
 					</ul>
 				</div>
 				<div class="col-md-6">
-					<h1 id="about" class="title text-center"><span>Mission</span></h1>
+					<h1 id="" class="title text-center"><span>Mission</span></h1>
 					<ul class="list-unstyled">
 						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To nurture scientific temperament through the process of intellectual stimulation.</li>
 						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To inculcate a sense of life-long learning and developing positive qualities.</li>
@@ -47,13 +47,20 @@
 			</div>
 			<div class="space"></div>
 
-				<h2 style="margin-top: 0px; margin-bottom: 5px;"><span>Program Outcomes:</span></h2>
+				<h2 id="progOutcms" style="margin-top: 0px; margin-bottom: 5px;"><span>Program Outcomes:</span></h2>
 				<ul class="list-unstyled">
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i>Est ipsum eu dolor quis nulla irure incididunt consectetur voluptate dolor eiusmod consequat aliqua.</li>
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i>Est ipsum eu dolor quis nulla irure incididunt consectetur voluptate dolor eiusmod consequat aliqua.</li>
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i>Est ipsum eu dolor quis nulla irure incididunt consectetur voluptate dolor eiusmod consequat aliqua.</li>
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i>Est ipsum eu dolor quis nulla irure incididunt consectetur voluptate dolor eiusmod consequat aliqua.</li>
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i>Est ipsum eu dolor quis nulla irure incididunt consectetur voluptate dolor eiusmod consequat aliqua.</li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Engineering knowledge:</strong><p style="padding-left:2%">Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Problem analysis:</strong><p style="padding-left:2%">Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Design/development of solutions:</strong><p style="padding-left:2%">Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Conduct investigations of complex problems:</strong><p style="padding-left:2%">Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Modern tool usage:</strong><p style="padding-left:2%">Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>The engineer and society:</strong><p style="padding-left:2%">Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Environment and sustainability:</strong><p style="padding-left:2%">Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Ethics:</strong><p style="padding-left:2%">Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Individual and team work:</strong><p style="padding-left:2%">Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Communication:</strong>Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Project management and finance:</strong><p style="padding-left:2%">Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.</p></li>
+					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Life-long learning:</strong><p style="padding-left:2%">Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.</p></li>
 				</ul>
 			<div class="space"></div>
 
