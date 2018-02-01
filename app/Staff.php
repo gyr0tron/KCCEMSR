@@ -31,4 +31,11 @@ class Staff extends Model
       $filepath = public_path('public/images/' .$filename);
       File::delete($filepath);
     }
+    public function sortAll() {
+      $no = 1;
+      foreach (Staff::where('department', $this->department)->orderBy('sort','ASC')->get() as $staff) {
+        $staff->sort = $no++;
+        $staff->save();
+      }
+    }
 }

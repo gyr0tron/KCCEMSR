@@ -405,7 +405,13 @@ class DashboardApiController extends Controller
     $staff->created_by = Auth::user()->id;
     $staff->updated_by = Auth::user()->id;
     $staff->uploadImage($request->image);
+
+    $count = Staff::where('department', $staff->department)->count();
+    $staff->sort = $count+1;
     $staff->save();
+
+    $staff->sortAll();
+
     return ResponseBuilder::send(true, "", "");
   }
   public function editStaff(Request $request)
