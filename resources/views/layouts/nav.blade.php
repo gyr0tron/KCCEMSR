@@ -60,7 +60,7 @@
 										<ul class="sub-menu">
 											<li><a href="{{route('question-papers')}}">Question Papers</a></li>
 											<li><a href="{{route('ebooks')}}">E-Books &amp; Journals</a></li>
-											<li><a href="#">Syllabus</a></li>
+											<li><a href="{{route('syllabus')}}">Syllabus</a></li>
 										</ul>
 									</li>
 									<li class="sub-menu-parent"><a href="#">Admissions</a>
