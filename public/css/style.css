@@ -952,7 +952,7 @@ visibility: visible;
 	}
 	.collapse.in{
 		display:block !important;
-		height: 250px;
+		height: auto;
 	}
 }
 
@@ -1421,15 +1421,16 @@ font-weight: bold;
 .list-inline {
 	text-align: center;
 	margin-top: 2%;
-  
-  > li {
-    margin: 10px 5px;
-    padding: 0;
-    
-    &:hover {
-      cursor: pointer;      
-    }
-  }
+}
+
+.list-inline > li {
+	margin: 10px 5px;
+	padding: 0;
+} 
+
+.list-inline:hover {
+	cursor: pointer;      
+}
   
   .selected img {
     opacity: 1;
@@ -1441,12 +1442,10 @@ font-weight: bold;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
-
-    &:hover {
+	}
+   .item:hover {
       opacity: 1;
     }
-  }
-}
 
 .item > img {
   max-width: 100%;
@@ -1532,4 +1531,66 @@ ul.job-list > li.job-preview:hover {
 	background-color: #2980b9;
 	color:  #fff;
 	border: 2px solid #2980b9;
+}
+
+
+button.accordion {
+  text-transform: uppercase;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+  background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+div.panel ul {
+  padding-left: 0;
+}
+div.panel ul li {
+  list-style-type: none;
+}
+
+div.panel.show {
+  opacity: 1;
+  max-height: 500px;
+  /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+
+button.accordion:after {
+  /* content: '\02795'; */
+  /* Unicode character for "plus" sign (+) */
+  /* font-size: 13px;
+  color: #777;
+  float: right;
+	margin-left: 5px; */
+	font-family: "FontAwesome";
+    content: "\f196";
+    position: absolute;
+    right: 40px;
+    font-size: 20px;
+		font-weight: 300;
+		margin-top: -5px;
+}
+
+button.accordion.active:after {
+	content: "\f147";
+  /* Unicode character for "minus" sign (-) */
 }
