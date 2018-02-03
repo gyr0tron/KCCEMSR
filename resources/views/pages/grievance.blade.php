@@ -15,57 +15,47 @@
 						<form class="well form-horizontal" action=" " method="post"  id="job_application">
 
 							<!-- Text input-->
-							<div class="form-group">
-								<label class="col-md-4 control-label">Name</label>  
-								<div class="col-md-4 inputGroupContainer">
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-										<input  name="first_name" placeholder="Full Name" class="form-control"  type="text">
-									</div>
+							<div class="row">
+								<div class="has-feedback col-md-4 col-md-offset-4" style="margin-bottom: 15px;">
+									<label class="sr-only" for="name">Name</label>
+									<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+									<i class="fa fa-user form-control-feedback"></i>
 								</div>
 							</div>
 
 							<!-- Text input-->
-							<div class="form-group">
-								<label class="col-md-4 control-label">E-Mail</label>  
-								<div class="col-md-4 inputGroupContainer">
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-										<input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
-									</div>
+							<div class="row">
+								<div class="has-feedback col-md-4 col-md-offset-4" style="margin-bottom: 15px;">
+									<label class="sr-only" for="email">Email address</label>
+									<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+									<i class="fa fa-envelope form-control-feedback"></i>
 								</div>
 							</div>
 
 							<!-- Text input-->			
-							<div class="form-group">
-								<label class="col-md-4 control-label">Phone No.</label>  
-									<div class="col-md-4 inputGroupContainer">
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-										<input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
-									</div>
+							<div class="row">
+								<div class="has-feedback col-md-4 col-md-offset-4" style="margin-bottom: 15px;">
+									<label class="sr-only" for="phone">Phone No.</label>
+									<input type="text" class="form-control" id="phone" placeholder="Enter Phone No." name="phone">
+									<i class="fa fa-phone form-control-feedback"></i>
 								</div>
 							</div>
 
 							<!-- Text input-->
-							<div class="form-group">
-								<label class="col-md-4 control-label">Subject</label>  
-								<div class="col-md-4 inputGroupContainer">
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-										<input name="website" placeholder="Post Details" class="form-control" type="text">
-									</div>
+							<div class="row">
+								<div class="has-feedback col-md-4 col-md-offset-4" style="margin-bottom: 15px;">
+									<label class="sr-only" for="subject">Subject</label>
+									<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
+									<i class="fa fa-quote-left form-control-feedback"></i>
 								</div>
 							</div>
 
 							<!-- File submit area -->
-							<div class="form-group">
-								<label class="col-md-4 control-label">Message</label>
-									<div class="col-md-4 inputGroupContainer">
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-paperclip"></i></span>
-											<textarea class="form-control" name="comment" placeholder="Type your message here"></textarea>
-									</div>
+							<div class="row">
+								<div class="has-feedback col-md-4 col-md-offset-4" style="margin-bottom: 15px;">
+									<label class="sr-only" for="message">Message</label>
+									<textarea rows="7" class="form-control" placeholder="Message" cols="40" id="message"></textarea>
+									<i class="fa fa-align-left form-control-feedback"></i>
 								</div>
 							</div>
 
