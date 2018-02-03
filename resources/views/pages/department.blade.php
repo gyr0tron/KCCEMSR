@@ -2,7 +2,7 @@
 @section('pre')
 	@php
 	$title = $dep->name;
-	$menu_item = 'departments';
+	$menu_item = 'academics';
 @endphp
 @endsection
 @section('content')

@@ -16,6 +16,7 @@ class AdmissionsController extends Controller
     $admission_name_list = FileUpload::admission_name_list;
     $title = $admission_name_list[array_search($action, $admission_list)];
     $url = $file->getUrl();
-    return view('pages.pdfview', compact("title", "url"));
+    $menu_item = "admissions";
+    return view('pages.pdfview', compact("title", "url", "menu_item"));
   }
 }

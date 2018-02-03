@@ -46,9 +46,9 @@
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 								<ul class="nav navbar-nav">
-									<li class="active sub-menu-parent"><a href="/" style="padding-left: 0px;">Home</a>
+									<li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="/" style="padding-left: 0px;">Home</a>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Academics</a>
+									<li class="{{$menu_item=='academics'?'active':''}} sub-menu-parent"><a href="#">Academics</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('curriculum-plan')}}">Curriculum Plan</a></li>
 											<li><a href="{{route('department-list')}}">Departments</a></li>
@@ -56,14 +56,14 @@
 											<li><a href="{{route('publications')}}">Publications / News Letter</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Library</a>
+									<li class="{{$menu_item=='library'?'active':''}} sub-menu-parent"><a href="#">Library</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('question-papers')}}">Question Papers</a></li>
 											<li><a href="{{route('ebooks')}}">E-Books &amp; Journals</a></li>
 											<li><a href="{{route('syllabus')}}">Syllabus</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Admissions</a>
+									<li class="{{$menu_item=='admissions'?'active':''}} sub-menu-parent"><a href="#">Admissions</a>
 										<ul class="sub-menu" id="large-sub-menu">
 											<li><a href="{{route('admissions', 'admission-criteria')}}">Admission Criteria</a></li>
 											<li><a href="{{route('admissions', 'fees-notices')}}">Fees Notices</a></li>
@@ -76,7 +76,7 @@
 											<li><a href="{{route('admissions', 'scholarship')}}">Scholarship</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Exam</a>
+									<li class="{{$menu_item=='exam'?'active':''}} sub-menu-parent"><a href="#">Exam</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('exam', 'notices')}}">Exam Notices</a></li>
 											<li><a href="{{route('exam', 'timetable')}}">Exam Timetable</a></li>
@@ -92,7 +92,7 @@
 											<li><a href="#">Alumni Association</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Placements</a>
+									<li class="{{$menu_item=='placements'?'active':''}} sub-menu-parent"><a href="#">Placements</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('placements')}}">Function &amp; Responsibilities</a></li>
 											<li><a href="{{route('placements')}}">Placement Statistics</a></li>
@@ -104,9 +104,9 @@
 									</li>
 									<li class="sub-menu-parent"><a href="http://www.kcecell.org/">E-Cell</a>
 									</li>
-									<li class="sub-menu-parent"><a href="{{route('lifeatkc')}}">Life At KC</a>
+									<li class="{{$menu_item=='lifeatkc'?'active':''}} sub-menu-parent"><a href="{{route('lifeatkc')}}">Life At KC</a>
 									</li>
-									<li class="sub-menu-parent"><a href="{{route('careeratkc')}}">Career At KC</a>
+									<li class="{{$menu_item=='careeratkc'?'active':''}} sub-menu-parent"><a href="{{route('careeratkc')}}">Career At KC</a>
 									</li>
 									<li class="sub-menu-parent"><a href="#">Statutory Affiliations</a>
 										<ul class="sub-menu">
@@ -118,7 +118,7 @@
 											<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="#">About</a>
+									<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">About</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('about')}}">College Info</a></li>
 											<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>

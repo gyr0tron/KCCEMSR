@@ -2,7 +2,7 @@
 @section('pre')
 	@php
 	$title = "Infrastructure & Activities";
-	$menu_item = 'about';
+	$menu_item = 'academics';
 @endphp
 @endsection
 @section('content')

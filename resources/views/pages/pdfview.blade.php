@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @section('pre')
 	@php
-	$menu_item = 'academics';
 @endphp
 <style media="screen">
 #viewer {

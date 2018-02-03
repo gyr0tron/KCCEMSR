@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('pre')
 	@php
-	$menu_item = 'about';
+	$menu_item = 'exam';
 @endphp
 @endsection
 @section('content')
