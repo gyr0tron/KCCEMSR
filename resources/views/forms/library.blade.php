@@ -3,13 +3,16 @@
     <h3 class="box-title">{{$action_name}}</h3>
   </div>
   <div class="box-body">
-    <table id="academics-staff-notices" class="table table-bordered table-hover datatable-full">
+    <table id="academics-staff-notices" class="table table-responsive table-bordered table-hover datatable-full">
       <thead>
         <tr>
-          <th width="50%">Name</th>
+          <th width="20%">Name</th>
           @if ($action != "e-books")
             <th width="20%">Department</th>
             <th width="20%">Year</th>
+          @endif
+          @if ($action=="syllabus")
+            <th width="20%">Sem</th>
           @endif
           @if ($action=="question-papers")
             <th width="20%">Sem</th>
@@ -25,6 +28,9 @@
             @if ($action != "e-books")
               <td>{{$fp->department}}</td>
               <td>{{$fp->getYear()}}</td>
+            @endif
+            @if ($action=="syllabus")
+              <td>{{$fp->sem}}</td>
             @endif
             @if ($action=="question-papers")
               <td>{{$fp->sem}}</td>
@@ -43,6 +49,9 @@
           @if ($action != "e-books")
             <th width="20%">Department</th>
             <th width="20%">Year</th>
+          @endif
+          @if ($action=="syllabus")
+            <th width="20%">Sem</th>
           @endif
           @if ($action=="question-papers")
             <th width="20%">Sem</th>
@@ -100,7 +109,7 @@
         </div>
       @endif
 
-      @if ($action=="question-papers")
+      @if ($action=="question-papers" || $action=="syllabus")
         <div class="form-group">
           <label class="control-label col-sm-2" for="sem">Sem:</label>
           <div class="col-sm-9">
@@ -112,6 +121,8 @@
             <p class="help-block"></p>
           </div>
         </div>
+      @endif
+      @if ($action=="question-papers")
         <div class="form-group">
           <label class="control-label col-sm-2" for="section">Year of Exam:</label>
           <div class="col-sm-9">
