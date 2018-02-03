@@ -15,7 +15,7 @@
         @foreach (App\Department::all() as $dep)
           <option value="{{$dep->url}}">{{$dep->name}}</option>
         @endforeach
-        @foreach (App\Committee::all() as $dep)
+        @foreach (App\Committee::getAll() as $dep)
           <option value="{{$dep->url}}">{{$dep->name}}</option>
         @endforeach
       </select>

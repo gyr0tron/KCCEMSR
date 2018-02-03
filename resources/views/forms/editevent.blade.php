@@ -23,7 +23,7 @@
               @foreach (App\Department::all() as $dep)
                 <option value="{{$dep->url}}" {{$dep==$event->department?"selected":""}}>{{$dep->name}}</option>
               @endforeach
-              @foreach (App\Committee::all() as $dep)
+              @foreach (App\Committee::getAll() as $dep)
                 <option value="{{$dep->url}}">{{$dep->name}}</option>
               @endforeach
             </select>
@@ -74,6 +74,9 @@
     <div class="box box-primary">
       <div class="box-header">
         <h3 class="box-title">Featured Image</h3>
+        <br/>
+        <br/>
+        <a href="{{$event->getFeaturedImage()}}" data-fancybox="featured"><img src="{{$event->getFeaturedImage()}}" alt="featured-image" class="img-responsive" width="250" height="150"></a>
       </div>
       <div class="box-body">
         <center>
