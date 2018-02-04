@@ -11,7 +11,7 @@ return [
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
     */
-    
+
     'name' => env('APP_NAME', 'Laravel'),
 
     /*
@@ -177,8 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        Akaunting\Setting\Provider::class,
-        Msurguy\Honeypot\HoneypotServiceProvider::class,
+        Akaunting\Setting\Provider::class
 
     ],
 
@@ -230,8 +229,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Setting' => Akaunting\Setting\Facade::class,
-        'Honeypot' => 'Msurguy\Honeypot\HoneypotFacade'
-
     ],
 
 ];

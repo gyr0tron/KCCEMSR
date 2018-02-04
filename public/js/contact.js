@@ -1,5 +1,6 @@
 $("#contact-form").submit(function(event) {
   event.preventDefault();
+  fh.reload(this.id);
   fh.hide_button();
   axios.post('/api/contact/send', $("#contact-form").serialize())
   .then(function (response) {

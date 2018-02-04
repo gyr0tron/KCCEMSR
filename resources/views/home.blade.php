@@ -379,7 +379,6 @@
 						<div class="footer-content">
 							<form role="form" id="contact-form" method="post">
 								{!! csrf_field() !!}
-								{!! Honeypot::generate('session_name', 'session_time') !!}
 								<div class="form-group has-feedback">
 									<label class="sr-only" for="name">Name</label>
 									<input type="text" class="form-control" id="name" placeholder="Name" name="name">
