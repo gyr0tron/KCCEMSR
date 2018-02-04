@@ -19,8 +19,8 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap2-toggle.min.css') }}">
   @yield('styles')
 </head>
-<body class="skin-{{Auth::check()?Auth::user()->skin:"blue"}} sidebar-mini fixed">
-  <div class="wrapper">
+<body class="skin-{{Auth::check()?Auth::user()->skin:"blue"}} sidebar-mini" style="background:#ecf0f5">
+  <div>
     @include('layouts.nav2')
     <div class="content-wrapper">
     @yield('content')
