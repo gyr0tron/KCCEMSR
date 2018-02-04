@@ -382,18 +382,21 @@
 									<label class="sr-only" for="name">Name</label>
 									<input type="text" class="form-control" id="name" placeholder="Name" name="name">
 									<i class="fa fa-user form-control-feedback"></i>
+									<p class="help-block"></p>
 								</div>
 								<div class="form-group has-feedback">
 									<label class="sr-only" for="email">Email address</label>
 									<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
 									<i class="fa fa-envelope form-control-feedback"></i>
+									<p class="help-block"></p>
 								</div>
 								<div class="form-group has-feedback">
 									<label class="sr-only" for="message">Message</label>
 									<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message"></textarea>
 									<i class="fa fa-pencil form-control-feedback"></i>
+									<p class="help-block"></p>
 								</div>
-								<input type="submit" value="Send" class="btn btn-default" style="min-width: auto;">
+								<button type="submit" name="button" class="btn btn-default" style="min-width: auto;">Send</button>
 							</form>
 							<ul class="social-links">
 								<li class="facebook"><i class="fa fa-facebook"></i></li>
