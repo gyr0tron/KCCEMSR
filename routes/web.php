@@ -90,6 +90,8 @@ Route::prefix('admin')->group(function () {
 
   Route::get('/library/{action}','Admin\DashboardController@library')->name("admin_library");
 
+  Route::get('/placements/{action}','Admin\DashboardController@placements')->name("admin_placements");
+
   Route::get('/update','Admin\UpdateController@update')->name("admin_update");
 });
 
@@ -170,6 +172,8 @@ Route::prefix('/api/admin')->group(function () {
 
   Route::post("/career/add","Admin\DashboardApiController@addCareer");
   Route::post("/career/remove","Admin\DashboardApiController@removeCareer");
+
+  Route::post("/placement/placement-process","Admin\DashboardApiController@updatePlacementProccess");
 
 
   Route::post("/settings/main","Admin\UpdateController@settings");

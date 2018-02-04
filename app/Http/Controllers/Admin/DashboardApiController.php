@@ -697,4 +697,18 @@ class DashboardApiController extends Controller
     $job->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
+  // Placements
+  public function updatePlacementProccess(Request $request)
+  {
+    $upload = FileUpload::where('type',"placement-process")->first();
+    if(!$upload) {
+      $upload = new FileUpload();
+      $upload->type = "placement-process";
+      $upload->created_by = Auth::user()->id;
+      $upload->updated_by = Auth::user()->id;
+    }
+    $upload->filename = $upload->uploadFile($request->file('file'), "placement-process");
+    $upload->save();
+    return ResponseBuilder::send(true, "", "");
+  }
 }

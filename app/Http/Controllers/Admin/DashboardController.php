@@ -146,4 +146,11 @@ class DashboardController extends Controller
   {
     return view('pages.admin.careeratkc');
   }
+  // Placements
+  public function placements($action)
+  {
+    $placments = ['placement-process'];
+    if(!in_array($action, $placments)) abort(404, 'Page Not Found');
+    return view("pages.admin.placements", compact("action"));
+  }
 }
