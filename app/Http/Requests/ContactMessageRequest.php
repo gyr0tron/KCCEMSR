@@ -35,6 +35,8 @@ class ContactMessageRequest extends FormRequest
       'name' => 'required|string',
       'email' => 'required|email',
       'message' => 'required|string',
+      'session_name'   => 'honeypot',
+      'session_time'   => 'required|honeytime:5'
     ];
   }
 }
