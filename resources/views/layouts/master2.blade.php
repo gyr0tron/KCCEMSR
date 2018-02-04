@@ -20,7 +20,7 @@
   @yield('styles')
 </head>
 <body class="skin-{{Auth::check()?Auth::user()->skin:"blue"}} sidebar-mini" style="background:#ecf0f5">
-  <div>
+  <div class="wrapper">
     @include('layouts.nav2')
     <div class="content-wrapper">
     @yield('content')
