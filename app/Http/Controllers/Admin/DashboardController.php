@@ -90,7 +90,7 @@ class DashboardController extends Controller
     if(!Auth::user()->is_admin()) {
       return redirect()->route("admin_dashboard");
     }
-    $user = User::where('id',$id)->first();
+    $user = User::where('id',$edit)->first();
     if(!$user) {
       return redirect()->route("admin_users");
     }
