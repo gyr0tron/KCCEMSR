@@ -1598,7 +1598,7 @@ button.accordion.active:after {
     bottom: 20px;
 		right: 20px;
 		z-index: 10000;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(51, 155, 235, 0.8);
     width: 50px;
     height: 50px;
     display: block;
@@ -1621,5 +1621,5 @@ button.accordion.active:after {
     transition: all 0.3s ease;
 }
 #notification:hover {
-    background: rgba(0, 0, 0, 1);
+    background: rgba(51, 155, 235, 1);
 }
