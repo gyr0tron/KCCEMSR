@@ -72,14 +72,17 @@
     height: 610px;
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
     -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
   }
   .nav-wrapper.show-menu {
     -webkit-transform: none;
-            transform: none;
+            -ms-transform: none;
+        transform: none;
   }
 
   .js-nav-toggle {
@@ -107,9 +110,11 @@
     width: 22px;
     margin: 17px auto 0;
     -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
     transition: all 0.4s;
     -webkit-transition-delay: 0.3s;
-            transition-delay: 0.3s;
+            -o-transition-delay: 0.3s;
+       transition-delay: 0.3s;
   }
   .js-nav-toggle span:before, .js-nav-toggle span:after {
     content: '';
@@ -121,6 +126,7 @@
     top: 50%;
     margin-top: -7px;
     -webkit-transition: all 0.3s 0.3s;
+    -o-transition: all 0.3s 0.3s;
     transition: all 0.3s 0.3s;
   }
   .js-nav-toggle span:before {
@@ -136,11 +142,13 @@
   }
   .show-menu .js-nav-toggle span:before {
     -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
   }
   .show-menu .js-nav-toggle span:after {
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
   }
   .show-menu .js-nav-toggle span:before, .show-menu .js-nav-toggle span:after {
     margin-top: 0;
@@ -181,7 +189,8 @@
   }
   nav .nav-toggle.back-visible .nav-title {
     -webkit-transform: translateX(40px);
-            transform: translateX(40px);
+            -ms-transform: translateX(40px);
+        transform: translateX(40px);
   }
   nav .nav-title {
     position: absolute;
@@ -190,6 +199,7 @@
     padding-left: 0.7em;
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
   }
@@ -202,6 +212,7 @@
     z-index: 1;
     opacity: 0;
     -webkit-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
     transition: opacity 0.2s;
   }
   nav .nav-back:before, nav .nav-back:after {
@@ -217,7 +228,8 @@
     border-right-color: transparent;
     border-bottom-color: transparent;
     -webkit-transform: translate(-50%, -50%) rotateZ(-45deg);
-            transform: translate(-50%, -50%) rotateZ(-45deg);
+            -ms-transform: translate(-50%, -50%) rotate(-45deg);
+        transform: translate(-50%, -50%) rotateZ(-45deg);
   }
   nav .nav-back:after {
     left: 28%;
@@ -234,6 +246,7 @@
     color: #51a4e7;
     text-decoration: none;
     -webkit-transition: color 0.15s, background-color 0.15s;
+    -o-transition: color 0.15s, background-color 0.15s;
     transition: color 0.15s, background-color 0.15s;
   }
   nav a:hover {
@@ -246,12 +259,15 @@
     padding: 45px 0 0;
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
     background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
     left: 0;
     top: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     width: 100%;
   }
@@ -262,7 +278,8 @@
   nav li.has-dropdown > a {
     padding-right: 2.5em;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     overflow: hidden;
   }
   nav li.has-dropdown > a:after {
@@ -276,13 +293,16 @@
     border-left-color: transparent;
     border-top-color: transparent;
     -webkit-transform: translateY(-90%) rotateZ(-45deg);
-            transform: translateY(-90%) rotateZ(-45deg);
+            -ms-transform: translateY(-90%) rotate(-45deg);
+        transform: translateY(-90%) rotateZ(-45deg);
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
     -webkit-transform-origin: 100%;
-            transform-origin: 100%;
+            -ms-transform-origin: 100%;
+        transform-origin: 100%;
   }
   nav li.nav-dropdown-open ul {
     display: block;
@@ -351,6 +371,8 @@
   border-radius: 50px;
   opacity: 0.4;
   overflow: hidden;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 #quote-carousel .carousel-indicators .active {

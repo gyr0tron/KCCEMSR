@@ -1478,21 +1478,18 @@ ul.job-list {
 ul.job-list > li.job-preview {
 	background: #fff;
 	border: 1px solid #d7e2e9;
-	-webkit-border-radius: 0.4rem;
-	-moz-border-radius: 0.4rem;
 	border-radius: 0.4rem;
 	padding: 1.5rem 2rem;
 	margin-bottom: 1rem;
 	float: left;
 	width: 100%;
 	-webkit-transition: all 0.3s ease 0s;
-	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 }
 
 ul.job-list > li.job-preview:hover {
 	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-	-moz-box-shadow: 0 3px 8px rgba(0,0,0,0.05);
 	box-shadow: 0 3px 8px rgba(0,0,0,0.05);
 }
 
@@ -1521,8 +1518,6 @@ ul.job-list > li.job-preview:hover {
 	color:  #2980b9;
 	border: 2px solid #2980b9;
 	padding: 0.6rem 2rem;
-	-webkit-border-radius: 2rem;
-	-moz-border-radius: 2rem;
 	border-radius: 2rem;
 }
 
@@ -1543,6 +1538,8 @@ button.accordion {
   text-align: left;
   border: none;
   outline: none;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -1557,6 +1554,8 @@ div.panel {
   background-color: white;
   max-height: 0;
   overflow: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   opacity: 0;
 }
@@ -1604,13 +1603,10 @@ button.accordion.active:after {
     height: 50px;
     display: block;
     text-decoration: none;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
     border-radius: 35px;
     -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 #notification i {
@@ -1621,8 +1617,6 @@ button.accordion.active:after {
     top: 13px;
     font-size: 19px;
     -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
