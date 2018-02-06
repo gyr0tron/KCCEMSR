@@ -1438,7 +1438,6 @@ font-weight: bold;
   }
     
   .item > img {
-    opacity: 0.5;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
