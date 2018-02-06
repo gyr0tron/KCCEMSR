@@ -9,6 +9,7 @@
 @section('content')
 	<!-- banner start -->
 	<!-- ================ -->
+	<a href="/#announcements" id="notification"><i class="fa fa-bell"></i></a>
 	<div id="banner" class="banner">
 		<div class="banner-image"></div>
 		<div class="arrow bounce" id="arw" onclick="location.href='/#welcome';" style="cursor: pointer; z-index: 1;"></div>
@@ -170,7 +171,7 @@
 							<div class="media-body">
 								<h4 class="media-heading">{{$dep->name}}</h4>
 								<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($dep->description)}}</p>
-								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
+								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}" id="announcements">Read more</a>
 							</div>
 						</div>
 					</div>
