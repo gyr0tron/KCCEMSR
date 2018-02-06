@@ -102,7 +102,7 @@ if(!isset($second)) $second = "not defined";
         <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_library",'question-papers')}}"><i class="fa fa-book"></i> <span>Library</span></a></li>
         <li class="{{$menu_item=='placements'?'active':''}}"><a href="{{route("admin_placements",'placement-process')}}"><i class="fa fa-tasks"></i> <span>Placements</span></a></li>
         <li class="{{$menu_item=='academics'?'active':''}}"><a href="{{route("admin_academics", "curriculum-plan")}}"><i class="fa fa-graduation-cap"></i> <span>Academics</span></a></li>
-        <li class="{{$menu_item=='infrastructure'?'active':''}}"><a href="{{route("admin_infrastructure")}}"><i class="fa fa-industry"></i> <span>Infrastructures</span></a></li>
+        <li class="{{$menu_item=='infrastructures'?'active':''}}"><a href="{{route("admin_infrastructure")}}"><i class="fa fa-industry"></i> <span>Infrastructures</span></a></li>
         <li class="{{$menu_item=='careeratkc'?'active':''}}"><a href="{{route("admin_careeratkc")}}"><i class="fa fa-briefcase"></i> <span>Career at KC</span></a></li>
         <li class="{{$menu_item=='messages'?'active':''}}">
           <a href="{{route("admin_messages")}}">

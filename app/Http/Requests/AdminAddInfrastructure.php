@@ -34,7 +34,7 @@ class AdminAddInfrastructure extends FormRequest
     return [
       'name' => 'required|string',
       'description' => 'required|string',
-      'image' => 'required|image'
+      'images.*' => 'image',
     ];
   }
 }

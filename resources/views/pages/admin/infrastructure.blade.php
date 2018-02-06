@@ -1,8 +1,8 @@
 @extends('layouts.master2')
 @section('pre')
   @php
-  $title = "Testimonials";
-  $menu_item = 'testimonials';
+  $title = "Infrastructures";
+  $menu_item = 'infrastructures';
 @endphp
 @endsection
 @section('content')
@@ -36,7 +36,7 @@
               <tbody>
                 @foreach (App\Infrastructure::all() as $test)
                   <tr>
-                    <td><a href="{{$test->getUrl()}}" data-fancybox><img src="{{$test->getUrl()}}" alt="" width="74"></a></td>
+                    <td><a href="{{$test->getFeaturedImage()}}" data-fancybox><img src="{{$test->getFeaturedImage()}}" alt="" width="74"></a></td>
                     <td>{{$test->name}}</td>
                     <td>{{$test->description}}</td>
                     <td>

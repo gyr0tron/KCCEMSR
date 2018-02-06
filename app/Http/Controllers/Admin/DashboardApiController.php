@@ -42,6 +42,7 @@ use App\Testimonial;
 use App\Committee;
 use App\Infrastructure;
 use App\JobList;
+use App\ImageUpload;
 use App\ResponseBuilder;
 
 class DashboardApiController extends Controller
@@ -576,7 +577,17 @@ class DashboardApiController extends Controller
     $test->description = $request->input("description");
     $test->created_by = Auth::user()->id;
     $test->updated_by = Auth::user()->id;
-    $test->uploadImage($request->image);
+    $imagesID = [];
+    $images = $request->images;
+    if($images) {
+      foreach ($images as $file) {
+        $img = new ImageUpload();
+        $img->uploadImage($file);
+        $img->save();
+        array_push($imagesID, $img->id);
+      }
+    }
+    $test->images = $imagesID;
     $test->save();
     return ResponseBuilder::send(true, "", "");
   }

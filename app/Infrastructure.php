@@ -6,14 +6,22 @@ use Illuminate\Database\Eloquent\Model;
 
 use Image;
 use File;
+use App\ImageUpload;
 
 class Infrastructure extends Model
 {
-    protected $table = "infrastructures";
-    public $timestamps = true;
+  protected $table = "infrastructures";
+  protected $casts = [
+    'images' => 'array',
+  ];
+  public $timestamps = true;
 
-    public function getUrl() {
-      return url("public/images/" . $this->image);
+  public function getFeaturedImage() {
+
+    $idno = $this->images[0];
+    $img = ImageUpload::where("id",$idno)->first();
+    if(!$img) return "http://via.placeholder.com/250x150";
+      return $img->getUrl();
     }
     public function uploadImage($file) {
       $this->checkDirs();
@@ -31,4 +39,4 @@ class Infrastructure extends Model
       $filepath = public_path('public/images/' .$filename);
       File::delete($filepath);
     }
-}
+  }
