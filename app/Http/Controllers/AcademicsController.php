@@ -14,7 +14,8 @@ class AcademicsController extends Controller
     if(!$file) abort("404");
     $title = "Curriculum plan";
     $url = $file->getUrl();
-    return view('pages.pdfview', compact("title", "url"));
+    $menu_item = "academics";
+    return view('pages.pdfview', compact("title", "url","menu_item"));
   }
 
   public function getStaffNotices()
@@ -27,7 +28,8 @@ class AcademicsController extends Controller
     if(!$file) abort("404");
     $title = $file->name;
     $url = $file->getUrl();
-    return view('pages.pdfview', compact("title", "url"));
+    $menu_item = "exam";
+    return view('pages.pdfview', compact("title", "url","menu_item"));
   }
   protected $exam_actions = ['results', 'notices', 'timetable'];
   protected $exam_title = ['Exam Results', 'Exam Notices', 'Exam Timetable'];
@@ -46,7 +48,8 @@ class AcademicsController extends Controller
     if(!$file) abort("404");
     $title = $file->name;
     $url = $file->getUrl();
-    return view('pages.pdfview', compact("title", "url"));
+    $menu_item = "exam";
+    return view('pages.pdfview', compact("title", "url","menu_item"));
   }
   public function getPublications()
   {
