@@ -266,23 +266,31 @@
 		<br>
 		<div class="row object-non-visible" data-animation-effect="fadeIn">
 			<div class="col-md-12">
-
+				@php
+				$types = App\Committee::getAll();
+				function is_in_type($name, $types) {
+					foreach ($types as $type) {
+						if($name == $type->url)
+						return true;
+					}
+					return false;
+				}
+				@endphp
 				<!-- isotope filters start -->
 				<div class="filters text-center">
 					<ul class="nav nav-pills">
 						<li class="active"><a href="#" data-filter="*">All</a></li>
-						@foreach (App\Committee::getAll() as $type)
+						@foreach ($types as $type)
 							<li><a href="#" data-filter=".{{$type->url}}">{{$type->name}}</a></li>
 						@endforeach
 					</ul>
 				</div>
 				<!-- isotope filters end -->
-
 				<!-- portfolio items start -->
 				<div class="isotope-container row grid-space-20">
 					@foreach (App\Event::all() as $event)
 						@php
-						if(!is_in_type($event->department, App\Committee::all())) continue;
+						if(!is_in_type($event->department, $types)) continue;
 						@endphp
 						<div class="col-sm-6 col-md-3 isotope-item {{$event->department}}">
 							<div class="image-box">
@@ -296,21 +304,12 @@
 								</div>
 								<a class="btn btn-default btn-block" href="{{route('event', $event->url)}}">
 									<p style="overflow: hidden; margin: 0px;">
-										{{$event->name}}
+									{{$event->name}}
 									</p>
 								</a>
 							</div>
 						</div>
 					@endforeach
-					@php
-					function is_in_type($name, $types) {
-						foreach ($types as $type) {
-							if($name == $type->url)
-							return true;
-						}
-						return false;
-					}
-					@endphp
 				</div>
 				<!-- portfolio items end -->
 			</div>
