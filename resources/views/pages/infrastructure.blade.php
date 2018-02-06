@@ -23,7 +23,10 @@
 											@php
 											$no = 0;
 											@endphp
-											@foreach (App\Eventimage::where('event',$event->id)->get() as $image)
+											@foreach ($infrastructure[$i]->images as $imageID)
+												@php
+													$image = App\ImageUpload::where('id', $imageID)->first();
+												@endphp
 												<div class="item{{$no==0?' active': ''}}" data-slide-number="{{$no++}}">
 													<img src="{{$image->getUrl()}}" width="1200">
 												</div>
@@ -49,10 +52,13 @@
 										@php
 										$no = 0;
 										@endphp
-										@foreach (App\Eventimage::where('event',$event->id)->get() as $image)
+										@foreach ($infrastructure[$i]->images as $imageID)
+											@php
+												$image = App\ImageUpload::where('id', $imageID)->first();
+											@endphp
 											<li>
 												<a id="carousel-thumb-{{$no++}}" class="{{$no==0?'selected':''}}">
-													<img src="{{$image->getThumb()}}" width="80" height="60">
+													<img src="{{$image->getUrl()}}" width="80" height="60">
 												</a>
 											</li>
 										@endforeach
@@ -60,7 +66,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="col-md-6">
 							<h2 class="title"><span>{{$infrastructure[$i]->name}}</span></h2>
 							{{$infrastructure[$i]->description}}
