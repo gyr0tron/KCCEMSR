@@ -45,7 +45,6 @@
 							</div>
 							<div class="col-md-6" style="text-align: justify;">
 								Excelssior Education Society is an educational and charitable trust that is dedicated to the pursuit of excellence and welfare of the students since 1978 and is affiliated to Mumbai University. It aims to maximise the capabilities of individuals in all generes educational, intellectual and moral. Our endeavour is to align education with innovation and practical exposure needed to meet the current industry’s requirement. Dr Harssh Khanna and late Mr K. C. Khanna are the milestone in the establishment of KCCOEMSR.
-
 							</div>
 						</div>
 					</div>
@@ -56,8 +55,7 @@
 						<ul class="list-unstyled">
 							<li><i class="fa fa-caret-right pr-10 text-colored"></i>To be an organization of excellence, leveraging human potential in engineering and management for a better tomorrow</li>
 						</ul>
-					</div>
-					<div class="col-md-6">
+						<div class="space"></div>
 						<h1 id="about" class="title text-center"><span>Mission</span></h1>
 						<ul class="list-unstyled">
 							<li><i class="fa fa-caret-right pr-10 text-colored"></i> To nurture scientific temperament through the process of intellectual stimulation.</li>
@@ -67,8 +65,18 @@
 							<li><i class="fa fa-caret-right pr-10 text-colored"></i> To facilitate employability, entrepreneurial ability along with social responsibility.</li>
 						</ul>
 					</div>
+					<div class="col-md-6">
+						<h2 id="progOutcms" style="margin-top: 0px; margin-bottom: 5px;"><span>Program Outcomes:</span></h2>
+						<p style="margin: 10px 0 0 0;">Engineering Graduates will be able to:</p>
+						<ul class="list-unstyled">
+							<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Engineering knowledge:</strong><p style="padding-left:2%">Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.</p></li>
+							<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Problem analysis:</strong><p style="padding-left:2%">Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.</p></li>
+							<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Design/development of solutions:</strong><p style="padding-left:2%">Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.</p></li>
+							<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Conduct investigations of complex problems:</strong><p style="padding-left:2%">Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.</p></li>
+						</ul>
+						<a class="" style="cursor:pointer;font-size: 1.1em;padding-left: 10px;" href="/about#progOutcms">Read more</a>
+					</div>
 				</div>
-				<div class="space"></div>
 			</div>
 		</div>
 		<!-- section end -->

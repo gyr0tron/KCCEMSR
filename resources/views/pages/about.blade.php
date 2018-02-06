@@ -35,7 +35,7 @@
 					</ul>
 				</div>
 				<div class="col-md-6">
-					<h1 id="" class="title text-center"><span>Mission</span></h1>
+					<h1 id="progOutcms" class="title text-center"><span>Mission</span></h1>
 					<ul class="list-unstyled">
 						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To nurture scientific temperament through the process of intellectual stimulation.</li>
 						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To inculcate a sense of life-long learning and developing positive qualities.</li>
@@ -47,7 +47,7 @@
 			</div>
 			<div class="space"></div>
 
-				<h2 id="progOutcms" style="margin-top: 0px; margin-bottom: 5px;"><span>Program Outcomes:</span></h2>
+				<h2 style="margin-top: 0px; margin-bottom: 5px;"><span>Program Outcomes:</span></h2>
 				<ul class="list-unstyled">
 					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Engineering knowledge:</strong><p style="padding-left:2%">Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.</p></li>
 					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Problem analysis:</strong><p style="padding-left:2%">Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.</p></li>
@@ -105,9 +105,32 @@
 			</div>
 			<div class="space"></div>
 
+			<div class="row" id="dir_id-msg">
+				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>Director Institutional Development Message</span></strong></h1>
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<div style="width:100%;">
+						<img src="http://via.placeholder.com/235x245" style="margin: 0 auto;" alt="">
+					</div>
+				</div>
+				<div class="col-md-9 col-sm-9 col-xs-12">
+					<div class="row">
+						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Jhon Doe</span></h2>
+						<blockquote class="blockquote2">
+							<p class="text-left align-marg">I am experiencing surge complex emotions while writing this message to you. It makes me really proud to send this message to my promising engineering minds who really work very hard to make themselves best so that they can ably handle the challenges of the new millennium.</p>
+							<p class="text-left align-marg">But at the back of my mind what overwhelms me is the complex challenges of this new millennium, especially for engineering students. The pace of technological development is so fast that what is new today becomes obsolete the next day. The knowledge horizon has widened so much that there is an inevitable synthesis of different streams. You are no more just an engineer but a part of a completely complex social system that demands your engineering expertise to be all inclusive.</p>
+							<p class="text-left align-marg">Here lies the real challenge. You can no more work in isolation but you have to work, invent, innovate and create in a larger context now. Now you are not just an engineer but a multitasking and multidimensional individual who has to go along with so many entities to achieve a holistic growth; a growth that is inclusive and not exclusive. This is the demand of the present millennium. By being exclusive, we have caused a grave damage to our eco system, we have played havoc with our social structure. There is a mad rush after mindless irresponsible growth.</p>
+							<p class="text-left align-marg">Today I want you to wake up to the new reality; the new reality of holistic and inclusive growth. Growth that is healthy. We cannot create to kill but we have work to build. You cannot grow at the cost of others’ lives but you have to lead the life of co-existence. As an engineer, you will have to be an entrepreneur, an economist, an environmentalist and a socialist who works responsibly to contribute to each of these areas. Only then and then we can build a society where we can all coexist peacefully, help each other to survive and grow. This is the only way we can build a healthy society around us, a nation of healthy growth and a world of peaceful co-existence. These are my genuine feelings that I have communicated to you. This is how I see the world and this is the stark reality of the moment.</p>
+							<p class="text-left align-marg">I am proud of you as promising young citizens of our nation. You are our hope for tomorrow. In your success lies the future of the nation. Never ever waver from the righteous path. Success founded on unethical base always comes to a tragic end. We have hundreds and thousands of examples of unethical enterprises coming to a tragic end.</p>
+							<p class="text-left align-marg">So, cheer up enterprising young men. All the best to you for a bright future of tomorrow.</p>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+			<div class="space"></div>
+
 			<div class="row" id="ceo-msg">
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>CEO Message</span></strong></h1>
-				<div class="col-md-3 col-sm-3 col-xs-12">
+				<div class="col-md-3 col-sm-3 col-xs-12" style="float:right">
 					<div style="width:100%;">
 						<img src="http://via.placeholder.com/235x245" style="margin: 0 auto;" alt="">
 					</div>
@@ -130,12 +153,12 @@
 
 			<div class="row" id="prncp-msg">
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>Principal Message</span></strong></h1>
-				<div class="col-md-5 col-sm-5 col-xs-12" style="float:right">
+				<div class="col-md-3 col-sm-3 col-xs-12">
 					<div style="width:100%;">
 						<img src="http://via.placeholder.com/235x245" style="margin: 0 auto;" alt="">
 					</div>
 				</div>
-				<div class="col-md-7 col-sm-7 col-xs-12">
+				<div class="col-md-9 col-sm-9 col-xs-12">
 					<div class="row">
 						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. Hansraj Guhilot BE,MTech,PhD,FIETE,SMIEEE</span></h2>
 						<blockquote class="blockquote2">

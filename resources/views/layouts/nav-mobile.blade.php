@@ -98,6 +98,7 @@
 								<li><a href="{{route('about')}}">College Info</a></li>
 								<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
 								<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
+								<li><a href="{{route('about')}}#dir_id-msg">Director Institutional Development Message</a></li>
 								<li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li>
 								<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
 								<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
