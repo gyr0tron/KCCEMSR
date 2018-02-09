@@ -18,7 +18,7 @@
 						<button class="accordion {{$no==0?'active':''}}"><strong style="text-transform: none;">{{$dep->name}}</strong></button>
 						<div class="panel {{$no++==0?'show':''}}">
 							<ul class="list-unstyled resp-text-sub" style="font-size:1em;margin-left:0px;margin-top:20px">
-								@foreach (App\FileUpload::where('Department',$dep->url)->orderBy('sem','ASC')->get() as $fp)
+								@foreach (App\FileUpload::where('Department',$dep->url)->where('type','syllabus')->orderBy('sem','ASC')->get() as $fp)
 									<li><i class="fa fa-chevron-right text-colored align-marg"></i>&nbsp;&nbsp;<a href="{{$fp->getUrl()}}">{{$fp->name}}</a></li>
 								@endforeach
 							</ul>
