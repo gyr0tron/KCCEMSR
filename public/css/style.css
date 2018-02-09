@@ -1341,11 +1341,11 @@ td.text-right {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
-.item:hover img {
+/* .item:hover img {
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	    transform: scale(1.1);
-}
+} */
 
 .trigger {
 display: block;
