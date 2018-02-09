@@ -368,7 +368,8 @@
   margin: 5px;
   cursor: pointer;
   border: 4px solid #CCC;
-  border-radius: 50px;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
   opacity: 0.4;
   overflow: hidden;
   -webkit-transition: all 0.4s;
@@ -379,7 +380,8 @@
   background: #333333;
   width: 128px;
   height: 128px;
-  border-radius: 100px;
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
   border-color: #55acee;
   opacity: 1;
   overflow: hidden;
