@@ -216,7 +216,8 @@ blockquote {
 	text-decoration: none;
 }
 .translucent-bg {
-	background-size: cover !important;
+	-webkit-background-size: cover !important;
+	        background-size: cover !important;
 	background-position: 50% 0;
 	background-repeat: no-repeat;
 	z-index: 1;
@@ -311,7 +312,8 @@ blockquote {
 	line-height: 1.42857143;
 	min-width: 160px;
 	text-align: center;
-	border-radius: 0;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
 	text-transform: uppercase;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -331,14 +333,16 @@ blockquote {
 ---------------------------------- */
 
 .panel-group .panel {
-	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	        border-radius: 0px;
 	border: none;
 }
 .panel-default > .panel-heading {
 	padding: 0;
 	outline: none;
 	border: none;
-	border-radius: 0;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
 	width: 100%;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
@@ -395,7 +399,8 @@ blockquote {
 	color: #ffffff;
 }
 .nav-pills > li > a {
-	border-radius: 0;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
 	padding: 8px 20px;
 	border: 1px solid #cacaca;
 	color: #666666;
@@ -408,7 +413,8 @@ blockquote {
 ---------------------------------- */
 .form-control {
 	height: 45px;
-	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	        border-radius: 0px;
 }
 .form-control-feedback {
 	color: #cccccc;
@@ -423,7 +429,8 @@ textarea {
 /* Modals
 ---------------------------------- */
 .modal-content {
-	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	        border-radius: 0px;
 }
 .modal-header {
 	background-color: #55acee;
@@ -829,7 +836,8 @@ textarea {
 	width: 40px;
 	height: 40px;
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
-	background-size: contain;
+	-webkit-background-size: contain;
+	        background-size: contain;
 }
 
 .arrow-submenu {
@@ -973,9 +981,11 @@ visibility: visible;
   .navbar-container-listholder {
 	display: -webkit-box;
 	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	-webkit-box-pack: right;
 	    -ms-flex-pack: right;
+	        -webkit-justify-content: right;
 	        justify-content: right;
 	 }
 	 
@@ -1068,7 +1078,8 @@ div.table-title {
 
 .table-fill {
 	background: rgba(0, 0, 0, 0);
-	border-radius:3px;
+	-webkit-border-radius:3px;
+	        border-radius:3px;
 	border-collapse: collapse;
 	height: 320px;
 	margin: auto;
@@ -1091,11 +1102,13 @@ th {
 }
 
 th:first-child {
-	border-top-left-radius:3px;
+	-webkit-border-top-left-radius:3px;
+	        border-top-left-radius:3px;
 }
 
 th:last-child {
-	border-top-right-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	        border-top-right-radius:3px;
 	border-right:none;
 }
 
@@ -1121,11 +1134,13 @@ tr:nth-child(odd) td {
 }
 
 tr:last-child td:first-child {
-	border-bottom-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	        border-bottom-left-radius:3px;
 }
 
 tr:last-child td:last-child {
-	border-bottom-right-radius:3px;
+	-webkit-border-bottom-right-radius:3px;
+	        border-bottom-right-radius:3px;
 }
 
 td {
@@ -1341,11 +1356,11 @@ td.text-right {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
-.item:hover img {
+/* .item:hover img {
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	    transform: scale(1.1);
-}
+} */
 
 .trigger {
 display: block;
@@ -1434,7 +1449,8 @@ font-weight: bold;
   
   .selected img {
     opacity: 1;
-    border-radius: 15px;
+    -webkit-border-radius: 15px;
+            border-radius: 15px;
   }
     
   .item > img {
@@ -1478,7 +1494,8 @@ ul.job-list {
 ul.job-list > li.job-preview {
 	background: #fff;
 	border: 1px solid #d7e2e9;
-	border-radius: 0.4rem;
+	-webkit-border-radius: 0.4rem;
+	        border-radius: 0.4rem;
 	padding: 1.5rem 2rem;
 	margin-bottom: 1rem;
 	float: left;
@@ -1518,7 +1535,8 @@ ul.job-list > li.job-preview:hover {
 	color:  #2980b9;
 	border: 2px solid #2980b9;
 	padding: 0.6rem 2rem;
-	border-radius: 2rem;
+	-webkit-border-radius: 2rem;
+	        border-radius: 2rem;
 }
 
 .btn-apply:hover {
@@ -1603,7 +1621,8 @@ button.accordion.active:after {
     height: 50px;
     display: block;
     text-decoration: none;
-    border-radius: 35px;
+    -webkit-border-radius: 35px;
+            border-radius: 35px;
     -webkit-transition: all 0.3s linear;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
