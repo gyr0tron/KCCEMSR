@@ -58,7 +58,7 @@ class LibraryController extends Controller
       return [1,2];
       case '2':
       return [3,4];
-      case '4':
+      case '3':
       return [5,6];
       case '4':
       return [7,8];
