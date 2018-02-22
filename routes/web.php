@@ -48,7 +48,8 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
 
   Route::get('/life-at-kc','DepartmentController@getLifeAtKc')->name('lifeatkc');
   Route::get('/career-at-kc','DepartmentController@getCareerAtKc')->name('careeratkc');
-  Route::get('/career-at-kc/details/{url}','DepartmentController@getCareerAtKc_PDF')->name('careeratkc-details');
+  // Route::get('/career-at-kc/details/{url}','DepartmentController@getCareerAtKc_PDF')->name('careeratkc-details');
+  Route::get('/career-at-kc/apply/{url}','DepartmentController@getCareerAtKcApply')->name('careeratkc-apply');
 });
 
 
@@ -109,6 +110,7 @@ Route::prefix('/api')->group(function () {
   Route::get('/get/sems',"LibraryController@getSems");
   Route::post('/search/question-papers',"LibraryController@searchQuestionPapers");
   Route::post('/search/ebooks',"LibraryController@searchEbooks");
+  Route::post('/careeratkc/apply',"DepartmentController@postCareerAtKCApply");
 });
 
 

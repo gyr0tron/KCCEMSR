@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ApllyJobRequest;
 
 use App\Department;
 use App\Event;
@@ -10,6 +11,7 @@ use App\Staff;
 use App\Achievement;
 use App\Committee;
 use App\JobList;
+use App\ResponseBuilder;
 
 class DepartmentController extends Controller
 {
@@ -58,4 +60,18 @@ class DepartmentController extends Controller
     $url = $job->getUrl();
     return view('pages.pdfview', compact("title", "url"));
   }
+  public function getCareerAtKcApply($url)
+  {
+    $job = JobList::where('url',$url)->first();
+    if(!$job) abort(404);
+    return view('pages.careeratkc-apply', compact('job'));
+  }
+  public function postCareerAtKCApply(ApllyJobRequest $request)
+  {
+    $url = $request->input('url');
+    $job = JobList::where('url',$url)->first();
+    if(!$job) abort(404);
+    return ResponseBuilder::send(true, "Your application has been received.", "/");
+  }
+
 }

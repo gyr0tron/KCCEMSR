@@ -19,8 +19,31 @@ $("#contact-form").submit(function(event) {
   });
 });
 
+$("#job_application").submit(function(event) {
+  event.preventDefault();
+  fh.reload(this.id);
+  fh.hide_button();
+  axios.post('/api/careeratkc/apply', $("#job_application").serialize())
+  .then(function (response) {
+    fh.show_button();
+    var data = response.data;
+    if(fh.is_success(data)) {
+      ShowMessage("Career At KC", data.messages, function(){
+        fh.redirect(data);
+      });
+    }
+    else {
+      fh.set_multierrors(data);
+    }
+  })
+  .catch(function (error) {
+    ShowMessage("Contact Us", "Error seending your message.");
+    fh.show_button();
+  });
+});
 
-function ShowMessage(title, content) {
+
+function ShowMessage(title, content, callback="") {
   $("body").append(`  <div class="modal fade" id="OkBox" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -38,7 +61,9 @@ function ShowMessage(title, content) {
   </div>
 </div>`);
 $('#OkBox').modal();
-$("#OkBox").on('hidden.bs.modal', function () {
+$("#OkBox").on('hidden.bs.modal', function() {
   $('#OkBox').remove();
+  if(typeof callback == "function")
+    callback();
 });
 }
