@@ -11,9 +11,6 @@
             <th width="20%">Department</th>
             <th width="20%">Year</th>
           @endif
-          @if ($action=="syllabus")
-            <th width="20%">Sem</th>
-          @endif
           @if ($action=="question-papers")
             <th width="20%">Sem</th>
             <th width="40%">YOE</th>
@@ -28,9 +25,6 @@
             @if ($action != "e-books")
               <td>{{$fp->department}}</td>
               <td>{{$fp->getYear()}}</td>
-            @endif
-            @if ($action=="syllabus")
-              <td>{{$fp->sem}}</td>
             @endif
             @if ($action=="question-papers")
               <td>{{$fp->sem}}</td>
@@ -49,9 +43,6 @@
           @if ($action != "e-books")
             <th width="20%">Department</th>
             <th width="20%">Year</th>
-          @endif
-          @if ($action=="syllabus")
-            <th width="20%">Sem</th>
           @endif
           @if ($action=="question-papers")
             <th width="20%">Sem</th>
@@ -109,7 +100,7 @@
         </div>
       @endif
 
-      @if ($action=="question-papers" || $action=="syllabus")
+      @if ($action=="question-papers")
         <div class="form-group">
           <label class="control-label col-sm-2" for="sem">Sem:</label>
           <div class="col-sm-9">
