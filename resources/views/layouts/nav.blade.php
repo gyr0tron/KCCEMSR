@@ -53,7 +53,8 @@
 											<li><a href="{{route('curriculum-plan')}}">Curriculum Plan</a></li>
 											<li><a href="{{route('department-list')}}">Departments</a></li>
 											<li><a href="http://www.learningatkc.com/moodle/login/index.php" target="_blank">KC-Moodle</a></li>
-											<li><a href="{{route('publications')}}">Publications / News Letter</a></li>
+											<li><a href="{{route('publications')}}">Publications</a></li>
+											<li><a href="{{route('newsletter')}}">News Letter</a></li>
 										</ul>
 									</li>
 									<li class="{{$menu_item=='library'?'active':''}} sub-menu-parent"><a href="#">Library</a>
