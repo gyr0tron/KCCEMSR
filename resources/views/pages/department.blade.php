@@ -145,9 +145,9 @@
 				$top2 = App\AcademicTopper::where('department',$dep->url)->where('year', $i)->orderBy('pointer','DESC')->skip(1)->first();
 				@endphp
 				@if ($top1)
-					<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
+					<div class="col-xs-12 col-sm-6 col-md-6" style="margin-bottom:3%;">
 						<div class="media">
-							<div class="col-xs-4 col-sm-4 col-md-4" >
+							<div class="col-xs-5 col-sm-4 col-md-4" >
 								<img src="{{$top1->getUrl()}}" style="height: 150px;" alt="">
 							</div>
 							<div class="media-body">
@@ -160,9 +160,9 @@
 					</div>
 				@endif
 				@if ($top2)
-					<div class="col-xs-6 col-sm-6 col-md-6" style="margin-bottom:3%;">
+					<div class="col-xs-12 col-sm-6 col-md-6" style="margin-bottom:3%;">
 						<div class="media">
-							<div class="col-xs-4 col-sm-4 col-md-4" >
+							<div class="col-xs-5 col-sm-4 col-md-4" >
 								<img src="{{$top2->getUrl()}}" style="height: 150px;" alt="">
 							</div>
 							<div class="media-body">
