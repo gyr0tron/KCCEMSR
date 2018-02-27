@@ -23,7 +23,7 @@
 							<div id="myCarousel" class="carousel slide">
 								<div class="carousel-inner">
 									<div class="active" data-slide-number="1">
-										<img src="http://placehold.it/1200x600&amp;text=8" width="1200">
+										<img src="http://placehold.it/1200x700&amp;text=1" width="1200">
 									</div>
 								</div>
 
@@ -62,12 +62,62 @@
 
 							<!-- Tab panes -->
 							<div class="tab-content">
-									<div role="tabpanel" class="tab-pane active" id="ptrn">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-									<div role="tabpanel" class="tab-pane" id="advcmtee">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-									<div role="tabpanel" class="tab-pane" id="editTeam">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-									<div role="tabpanel" class="tab-pane" id="gc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage..</div>
-									<div role="tabpanel" class="tab-pane" id="cntctUs">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-									<div role="tabpanel" class="tab-pane" id="dwnlds">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+									<div role="tabpanel" class="tab-pane active" id="ptrn">
+										<h3><span>Chief Patron</span></h3>
+										Dr. Harssh Khanna, Chair Person, Excelssior Education Society.
+										<h4>Patrons</h4>
+										<ul style="list-style: none; padding-left: 0px;">
+											<li>Dr. Sai Kiran Khanna, Managing Director,Excelssior Education Society.</li>
+											<li>Mrs. Pushpa Narang, Director, Excelssior Education Society.</li>
+											<li>Er. Satish Wadhwa, Secretary, Excelssior Education Society.</li>
+											<li>Dr. H.S Cheema,CEO,Excelssior Education Society.</li>
+											<li>Dr. N.S.Poonawala,  Dean &amp; Director, KCCEMSR.</li>
+											<li>Dr. Puja Rai,Institutional Director,KCCEMSR.</li>
+										</ul>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="advcmtee">
+										<h3><span>Advisory Committee</span></h3>
+										<ul style="list-style: none; padding-left: 0px;">
+											<li>Dr. Surendar Rathod, Sardar Patel Institute of Technology, Mumbai University, Maharashtra.</li>
+											<li>Dr. Milind Uttam Nemade, K J Somaiya Institute of Engineering and IT, Mumbai University, Maharashtra.</li>
+											<li>Prof. Ejaz Lodhi, Indira Gandhi Technical University for Women,Delhi.</li>
+											<li>Dr. Nataraj Vijapur ,M S Sheshgiri College of Engineering and Technology, Belgaum,Karnataka.</li>
+											<li>Dr. Shirish Sane, K K Wagh institute of Engineering education &amp; research, Pune University Nashik, Maharashtra.</li>
+											<li>Dr. Alhad Kuwadekar, University of South Wales, Cardiff, United Kingdom.</li>
+										</ul>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="editTeam">
+										<h3><span>Editorial Team</span></h3>
+										<ul style="list-style: none; padding-left: 0px;">
+											<li>Prof. Rajiv Iyer(HOD EXTC,KCCEMSR).</li>
+											<li>Prof. Asmita Deshmukh(HOD COMPUTER,KCCEMSR).</li>
+											<li>Prof. Amarja Adgaonkar(HOD IT,KCCEMSR).</li>
+											<li>Prof. Poornima Mahesh (HOD ELECTRONICS,KCCEMSR).</li>
+											<li>Prof. Rupinder Kaur (EXTC Department).</li>
+											<li>Prof. Sana Haji Naik (Computer Department).</li>
+										</ul>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="gc">
+										<ul style="list-style: none; padding-left: 0px;">
+											<li class="fa fa-download"><a class="" style="cursor:pointer;font-size: 1.1em;padding-left: 10px;" href="#">Download_1</a></li>
+										</ul>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="cntctUs">
+										<h3><span>Editor in Chief</span></h3>
+										<ul style="list-style: none; padding-left: 0px;">
+											<li>Dr. Hansraj Guhilot, Principal, K. C College of Engineering and Management Studies and Research, Thane.</li>
+											<li>&nbsp;</li>
+											<li class="fa fa-envelope"> technovision@kccemsr.edu.in</li>
+											<li>Excelssior Education Society’s</li>
+											<li>K. C. College of engineering &amp; Management studies &amp; Research,</li>
+											<li> MithBunder Road,Kopri, Thane East-400603</li>
+										</ul>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="dwnlds">
+										<ul style="list-style: none; padding-left: 0px;">
+											<li class="fa fa-download"><a class="" style="cursor:pointer;font-size: 1.1em;padding-left: 10px;" href="#">Download_1</a></li>
+										</ul>
+									</div>
 							</div>
 						</div>
 					</div>
