@@ -31,6 +31,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/academics/exam/{action}','AcademicsController@getExam')->name('exam');
   Route::get('/academics/exam/{action}/{id}','AcademicsController@getExamByID')->name('exam-id');
   Route::get('/academics/publications','AcademicsController@getPublications')->name('publications');
+  Route::get('/academics/newsletter','AcademicsController@getNewsletter')->name('newsletter');
 
   Route::get('/admissions/{action}','AdmissionsController@get')->name('admissions');
   Route::get('/statutory-affiliations/{action}','AdmissionsController@get')->name('mandatory-disclosure');

@@ -55,4 +55,8 @@ class AcademicsController extends Controller
   {
     return view('pages.publications');
   }
+  public function getNewsletter()
+  {
+    return view('pages.newsletter');
+  }
 }
