@@ -213,7 +213,7 @@
 							<div class="item {{$no++==0?'active':''}}">
 								<div class="row">
 									<div class="col-sm-8 col-sm-offset-2">
-										<p class="text-center">{{$anouncement->title}}</p>
+										<p class="text-center"><a class="" style="cursor:pointer;text-decoration:none;" href="#">{{$anouncement->title}}&nbsp;&nbsp;</a><i class="fa fa-download"></i></p>
 									</div>
 								</div>
 							</div>
@@ -239,7 +239,7 @@
 							<div class="item {{$no++==0?'active':''}}">
 								<div class="row">
 									<div class="col-sm-8 col-sm-offset-2">
-										<p class="text-center">{{$anouncement->title}}</p>
+										<p class="text-center"><a class="fa fa-download" style="cursor:pointer;font-size: 1.1em;padding-left: 10px;" href="#"> {{--<-this space is important--}}{{$anouncement->title}}</a></p>
 									</div>
 								</div>
 							</div>
