@@ -9,6 +9,10 @@ use App\FileUpload;
 
 class LibraryController extends Controller
 {
+  public function getAbout()
+  {
+    return view('pages.library-about');
+  }
   public function getQuestionPapers()
   {
     return view('pages.question-papers');

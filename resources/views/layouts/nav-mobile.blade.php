@@ -28,6 +28,7 @@
 						<li class="has-dropdown">
 							<a href="#">Library</a>
 							<ul>
+								<li><a href="{{route('library-about')}}">About Library</a></li>
 								<li><a href="{{route('question-papers')}}">Question Papers</a></li>
 								<li><a href="{{route('ebooks')}}">E-Books &amp; Journals</a></li>
 								<li><a href="{{route('syllabus')}}">Syllabus</a></li>
@@ -66,11 +67,12 @@
 						<li class="has-dropdown">
 							<a href="#">Placements</a>
 							<ul>
+								<li><a href="{{route('placements')}}">About TPO</a></li>
 								<li><a href="{{route('placements')}}">Function &amp; Responsibilities</a></li>
-								<li><a href="{{route('placements')}}/chart_placements">Placement Statistics</a></li>
+								<li><a href="{{route('placements')}}#chart_placements">Placement Statistics</a></li>
 								<li><a href="{{route('placements')}}">Training &amp; Placement Process</a></li>
-								<li><a href="{{route('placements')}}/#chart_placements">Higher Studies</a></li>
-								<li><a href="{{route('placements')}}/#reviews">Reviews</a></li>
+								<li><a href="{{route('placements')}}">Higher Studies</a></li>
+								<li><a href="{{route('placements')}}#reviews">Reviews</a></li>
 							</ul>
 						</li>
 						<li>
