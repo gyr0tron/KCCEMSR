@@ -21,10 +21,10 @@
             <select class="form-control" name="department" id="department">
               <option value="all">College</option>
               @foreach (App\Department::all() as $dep)
-                <option value="{{$dep->url}}" {{$dep==$event->department?"selected":""}}>{{$dep->name}}</option>
+                <option value="{{$dep->url}}" {{$dep->url==$event->department?"selected":""}}>{{$dep->name}}</option>
               @endforeach
               @foreach (App\Committee::getAll() as $dep)
-                <option value="{{$dep->url}}">{{$dep->name}}</option>
+                <option value="{{$dep->url}}" {{$dep->url==$event->department?"selected":""}}>{{$dep->name}}</option>
               @endforeach
             </select>
             <p class="help-block"></p>
