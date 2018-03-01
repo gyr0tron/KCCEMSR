@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 @yield('pre')
+@php
+ini_set('upload_max_filesize','10M');
+ini_set('post_max_size','10M');
+@endphp
 <html lang="en">
 <head>
   <meta charset="utf-8">
