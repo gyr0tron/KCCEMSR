@@ -17,10 +17,10 @@ class Department extends Model
   public static function getName($url) {
     $dep = Self::where("url",$url)->first();
     if($dep) return $dep->name;
-    foreach (\App\Committee::all() as $type) {
+    foreach (\App\Committee::getAll() as $type) {
       if($url == $type->url) return $type->name;
     }
-    return "College";
+    return "Unknown";
   }
 
   public function getUrl() {
