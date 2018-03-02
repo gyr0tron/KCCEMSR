@@ -18,6 +18,7 @@ class CreateAnnouncementsTables extends Migration
       $table->string('title', 191);
       $table->string('link');
       $table->integer('type');
+      $table->string('filename');
       $table->integer('created_by');
       $table->integer('updated_by');
       $table->timestamps();

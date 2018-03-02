@@ -468,10 +468,12 @@ class DashboardApiController extends Controller
   {
     $anouncement = new Announcement();
     $anouncement->title = $request->input("title","");
-    $anouncement->link = $request->input("description", "");
+    $anouncement->link = $request->input("url", "");
     $anouncement->type = $request->input("type", "0");
     $anouncement->created_by = Auth::user()->id;
     $anouncement->updated_by = Auth::user()->id;
+    $file = $request->file('file');
+    if($file) $anouncement->filename = $anouncement->uploadFile($file);
     $anouncement->save();
     return ResponseBuilder::send(true, "", "");
   }
@@ -481,6 +483,7 @@ class DashboardApiController extends Controller
     $anouncement = Announcement::where("id",$id)->first();
     if(!$anouncement) abort(404, 'Not Found');
     $anouncement->forceDelete();
+    if(strlen($anouncement->filename) > 3) $anouncement->deleteFile();
     return ResponseBuilder::send(true, "", "");
   }
   // Acadmics

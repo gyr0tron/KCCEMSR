@@ -33,6 +33,7 @@
                   <th width="10%">#</th>
                   <th width="50%">Title</th>
                   <th width="20%">Type</th>
+                  <th width="20%">Posted On</th>
                   <th width="20%">Actions</th>
                 </tr>
               </thead>
@@ -40,11 +41,12 @@
                 @php
                 $no=1;
                 @endphp
-                @foreach (App\Announcement::all() as $anouncement)
+                @foreach (App\Announcement::orderBy('id','DESC')->get(); as $anouncement)
                   <tr>
                     <td>{{$no}}</td>
                     <td>{{$anouncement->title}}</td>
-                    <td>{{$anouncement->type}}</td>
+                    <td>{{$anouncement->getType()}}</td>
+                    <td>{{$anouncement->created_at->format('d M Y')}}</td>
                     <td><a class="btn btn-sm btn-danger btn-table" onclick="dashboard.deleteAnnoncement({{$anouncement->id}})"><i class="fa fa-trash-o"></i></a></td>
                   </tr>
                   @php
@@ -57,6 +59,7 @@
                   <th width="10%">#</th>
                   <th width="50%">Title</th>
                   <th width="20%">Type</th>
+                        <th width="20%">Posted On</th>
                   <th width="20%">Actions</th>
                 </tr>
               </tfoot>
@@ -97,6 +100,13 @@
                 <label class="control-label col-sm-2" for="url">URL:</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="url" name="url">
+                  <p class="help-block"></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="description">File:</label>
+                <div class="col-sm-9">
+                  <input type="file" class="form-control" id="file" name="file">
                   <p class="help-block"></p>
                 </div>
               </div>
