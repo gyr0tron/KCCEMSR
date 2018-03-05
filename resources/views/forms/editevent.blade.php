@@ -67,7 +67,7 @@
         <center>
           <button type="submit" class="btn btn-primary btn-wide" style="margin-bottom:10px;">Update</button><br />
           <a class="btn btn-default btn-wide" href="{{route("admin_events")}}"  style="margin-bottom:10px;">Cancel</a><br />
-          <a class="btn btn-danger btn-wide" onclick="dashboard.removeEvent({{$event->id}})" style="margin-bottom:10px;">Remove</a>
+          <a class="btn btn-danger btn-wide" onclick="dashboard.removeYesNo('Are you sure you want to remove {{$event->name}} ?', '/api/admin/events/remove', {{$event->id}})" style="margin-bottom:10px;">Remove</a>
         </center>
       </div>
     </div>

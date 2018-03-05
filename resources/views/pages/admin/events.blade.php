@@ -42,7 +42,7 @@
                 @php
                 $no=1;
                 @endphp
-                @foreach (App\Event::all() as $event)
+                @foreach (App\Event::orderBy('id','desc')->get() as $event)
                   <tr>
                     <td>{{$no}}</td>
                     <td><a href="{{$event->getFeaturedImage()}}" data-fancybox><img src="{{$event->getFeaturedImage()}}" alt="" width="250" height="150"></a></td>
@@ -50,7 +50,7 @@
                     <td>{{App\Department::getName($event->department)}}</td>
                     <td>
                       <a class="btn btn-warning btn-sm btn-table " href="{{route("admin_editevent", $event->id)}}"><i class="fa fa-pencil"></i></a>
-                      <a class="btn btn-sm btn-danger btn-table " onclick="dashboard.removeYesNo('Are you sure you want to remove this event ?', '/api/admin/events/remove', {{$event->id}})"><i class="fa fa-trash-o"></i></a>
+                      <a class="btn btn-sm btn-danger btn-table " onclick="dashboard.removeYesNo('Are you sure you want to remove {{$event->name}} ?', '/api/admin/events/remove', {{$event->id}})"><i class="fa fa-trash-o"></i></a>
                     </td>
                   </tr>
                   @php
