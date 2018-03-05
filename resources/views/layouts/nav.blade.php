@@ -67,6 +67,7 @@
 									</li>
 									<li class="{{$menu_item=='admissions'?'active':''}} sub-menu-parent"><a href="#">Admissions</a>
 										<ul class="sub-menu" id="large-sub-menu">
+											<li><a href="{{route('admissions-apply')}}">Apply Online</a></li>
 											<li><a href="{{route('admissions', 'admission-criteria')}}">Admission Criteria</a></li>
 											<li><a href="{{route('admissions', 'fees-notices')}}">Fees Notices</a></li>
 											<li><a href="{{route('admissions', 'institute-prospectus')}}">Institute Prospectus</a></li>

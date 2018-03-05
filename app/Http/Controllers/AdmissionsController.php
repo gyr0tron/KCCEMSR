@@ -19,4 +19,8 @@ class AdmissionsController extends Controller
     $menu_item = "admissions";
     return view('pages.pdfview', compact("title", "url", "menu_item"));
   }
+  public function applyOnline()
+  {
+    return view('pages.admissions.apply');
+  }
 }
