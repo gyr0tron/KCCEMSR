@@ -11,7 +11,6 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1 id="about" class="title text-center">About <span>K.C.</span></h1>
-					{{-- <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta officia, aspernatur.</p> --}}
 					<div class="space"></div>
 					<div class="row">
 						<div class="col-md-6">
