@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminAddUserRequest;
 use App\Http\Requests\AdminEditUserRequest;
 use App\Http\Requests\AdminUserSettingsRequest;
+use App\Http\Requests\AdminAddNewCarouselRequest;
 use App\Http\Requests\AdminAddCarouselImageRequest;
 use App\Http\Requests\AdminEditCarouselImageRequest;
 use App\Http\Requests\AdminAddNewEventRequest;
@@ -126,48 +127,27 @@ class DashboardApiController extends Controller
     return ResponseBuilder::send(true, "", route("admin_dashboard"));
   }
 
-  // Carousel new image
-  public function addCarouselImage(AdminAddCarouselImageRequest $request)
+  // Add Carousel
+  public function addCarousel(AdminAddNewCarouselRequest $request)
   {
     $car = new Carousel();
-    $car->title = $request->input("title");
-    $car->description = $request->input("description", "");
+    $car->name = $request->input("name");
+    $car->type = $request->input("slug", "");
     $car->created_by = Auth::user()->id;
     $car->updated_by = Auth::user()->id;
-
-    $file = $request->image;
-    if(!$file) App::abort(404, 'File not found!');
-    $car->uploadImage($file);
-    $car->save();
-    return ResponseBuilder::send(true, "", route("admin_carousel"));
-  }
-  // Carousel edit image
-  public function editCarouselImage(AdminEditCarouselImageRequest $request)
-  {
-    $car = Carousel::where("id", $request->input("id"))->first();
-    if(!$car)abort("404","Not found");
-
-    $car->title = $request->input("title");
-    $car->description = $request->input("description", "");
-    $car->updated_by = Auth::user()->id;
-
-    $file = $request->image;
-    if($file) {
-      $car->deleteImage();
-      $car->uploadImage($file);
+    $imagesID = [];
+    $images = $request->images;
+    if($images) {
+      foreach ($images as $file) {
+        $img = new ImageUpload();
+        $img->uploadImage($file);
+        $img->save();
+        array_push($imagesID, $img->id);
+      }
     }
+    $car->images = $imagesID;
     $car->save();
-    return ResponseBuilder::send(true, "", route("admin_carousel"));
-  }
-  // Carousel remove image
-  public function removeCarouselImage(Request $request)
-  {
-    $id = $request->input("id","0");
-    $car = Carousel::where("id",$id)->first();
-    if(!$car) abort("404","Not Found");
-    $car->deleteImage();
-    $car->forceDelete();
-    return ResponseBuilder::send(true, "", route("admin_carousel"));
+    return ResponseBuilder::send(true, "", route('admin_carousel'));
   }
   // Add new Event
   public function addEvent(AdminAddNewEventRequest $request)

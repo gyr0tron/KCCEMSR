@@ -32,6 +32,11 @@ class DashboardController extends Controller
   {
     return view("pages.admin.carousel");
   }
+  //New Carousel
+  public function newcarousel()
+  {
+    return view("pages.admin.newcarousel");
+  }
   //Edit Carousel Image
   public function editcoarouselimage($id)
   {

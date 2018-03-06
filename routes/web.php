@@ -67,7 +67,8 @@ Route::get('/logout','Auth\LoginController@logout')->name("admin_logout");
 Route::prefix('admin')->group(function () {
   Route::get('/','Admin\DashboardController@home');
   Route::get('/dashboard','Admin\DashboardController@home')->name("admin_dashboard");
-  Route::get('/carousel','Admin\DashboardController@carousel')->name("admin_carousel");
+  Route::get('/carousels','Admin\DashboardController@carousel')->name("admin_carousel");
+  Route::get('/carousels/new','Admin\DashboardController@newcarousel')->name("admin_newcarousel");
   Route::get('/carousel/edit/image/{id}','Admin\DashboardController@editcoarouselimage')->name("admin_editcarouselimage");
   Route::get('/users','Admin\DashboardController@users')->name("admin_users");
   Route::get('/users/edit/{id}','Admin\DashboardController@edituser')->name("admin_edituser");
@@ -124,9 +125,7 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/removeuser","Admin\DashboardApiController@removeUser");
   Route::post("/usersettings","Admin\DashboardApiController@userSettings");
 
-  Route::post("/carousel/newimage","Admin\DashboardApiController@addCarouselImage");
-  Route::post("/carousel/editimage","Admin\DashboardApiController@editCarouselImage");
-  Route::post("/carousel/removeimage","Admin\DashboardApiController@removeCarouselImage");
+  Route::post("/carousel/add","Admin\DashboardApiController@addCarousel");
 
   Route::post("/events/add","Admin\DashboardApiController@addEvent");
   Route::post("/events/edit","Admin\DashboardApiController@editEvent");

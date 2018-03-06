@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Auth;
 use App\ResponseBuilder;
 
-class AdminAddCarouselImageRequest extends FormRequest
+class AdminAddNewCarouselRequest extends FormRequest
 {
   /**
   * Determine if the user is authorized to make this request.
@@ -32,8 +32,9 @@ class AdminAddCarouselImageRequest extends FormRequest
   public function rules()
   {
     return [
-      'title' => 'required|string',
-      'image' => 'required|image'
+      'name' => 'required|string',
+      'slug' => 'required|alpha_dash|unique:carousels,type',
+      'images.*' => 'image',
     ];
   }
 }

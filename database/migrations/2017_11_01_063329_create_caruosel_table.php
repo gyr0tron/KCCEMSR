@@ -13,11 +13,11 @@ class CreateCaruoselTable extends Migration
   */
   public function up()
   {
-    Schema::create('carousel', function (Blueprint $table) {
+    Schema::create('carousels', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('image',191)->unique();
-      $table->string('title')->nullable();
-      $table->string('description')->nullable();
+      $table->string('name',191)->unique();
+      $table->string('type')->nullable();
+      $table->string('images')->nullable();
       $table->integer('created_by');
       $table->integer('updated_by');
       $table->timestamps();
