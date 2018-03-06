@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ContactMessageRequest;
 
 use App\Carousel;
+use App\ImageUpload;
 use App\Message;
 use App\ResponseBuilder;
 
@@ -20,9 +21,14 @@ class HomeController extends Controller
   }
 
   public function getCarousel() {
-    $images = Carousel::select("image","title","description")->get();
-    foreach ($images as &$image) {
-      $image->image = "public/carousel/$image->image";
+    $images = array();
+    $carousel = Carousel::where("type","home")->first();
+    if(!$carousel) return $images;
+    foreach ($carousel->images as $id) {
+      $image = ImageUpload::where('id', $id)->first();
+      if(!$image) continue;
+      $reply['image'] = $image->getUrl();
+      array_push($images, $reply);
     }
     return $images;
   }
