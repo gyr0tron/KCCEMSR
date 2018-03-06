@@ -20,7 +20,7 @@ class Department extends Model
     foreach (\App\Committee::getAll() as $type) {
       if($url == $type->url) return $type->name;
     }
-    return "Unknown";
+    return "College";
   }
 
   public function getUrl() {
