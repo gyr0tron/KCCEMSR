@@ -16,9 +16,9 @@ class CreateAnnouncementsTables extends Migration
     Schema::create('annoucements', function (Blueprint $table) {
       $table->increments('id');
       $table->string('title', 191);
-      $table->string('link');
+      $table->string('link')->nullable();
       $table->integer('type');
-      $table->string('filename');
+      $table->string('filename')->nullable();
       $table->integer('created_by');
       $table->integer('updated_by');
       $table->timestamps();
