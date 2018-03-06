@@ -37,12 +37,12 @@ class DashboardController extends Controller
   {
     return view("pages.admin.newcarousel");
   }
-  //Edit Carousel Image
-  public function editcoarouselimage($id)
+  //Edit Carousel
+  public function editcarousel($id)
   {
     $car = Carousel::where("id",$id)->first();
     if(!$car) abort(404,"Page Not Found");
-    return view("pages.admin.editcoarouselimage", compact("car"));
+    return view("pages.admin.newcarousel", compact('car'));
   }
   // Testimonials
   public function testimonials() {

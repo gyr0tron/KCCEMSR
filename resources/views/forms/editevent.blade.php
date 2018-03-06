@@ -41,7 +41,10 @@
           <label class="control-label col-sm-2" for="images">Images:</label>
           <div class="col-sm-9">
             @foreach ($images as $image)
-              @include('forms.imagepreview', ["url" => $image->getUrl(),"thumb"=> $image->getThumb(), "group" => "groupImages", "id"=>$image->id])
+              @php
+                $onclick = "dashboard.deleteEventImage(event, $image->id);"
+              @endphp
+              @include('forms.imagepreview', ["url" => $image->getUrl(),"thumb"=> $image->getThumb(), "group" => "groupImages", "id"=>$image->id, "onclick"=>$onclick])
             @endforeach
           </div>
           <p class="help-block"></p>

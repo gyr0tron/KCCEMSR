@@ -52,6 +52,24 @@ window.dashboard = {
       });
     });
   },
+  deleteCarouselImage: function(carousel, image) {
+    event.preventDefault();
+    var btn = $(document.activeElement);
+    showYesNo("Remove Image", "Are you sure you want to remove this image ?", function(){
+      axios.post('/api/admin/carousel/edit/remove', {carousel:carousel, image:image})
+      .then(function (response) {
+        var data = response.data;
+        if(fh.is_success(data)) {
+          btn.closest('.image-container').hide('slow/400/fast', function() {
+            btn.closest('.image-container').remove();
+          });
+        }
+      })
+      .catch(function (error) {
+        fh.show_errorpage(error);
+      });
+    });
+  },
   deleteAnnoncement(id) {
     showYesNo("Remove Announcement", "Are you sure you want to remove this announcement ?", function(){
       axios.post('/api/admin/department/announcement/remove', {id:id})

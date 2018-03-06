@@ -33,6 +33,7 @@
               <thead>
                 <tr>
                   <th width="10%">#</th>
+                  <th width="20%">Images</th>
                   <th width="20%">Name</th>
                   <th width="20%">Slug</th>
                   <th width="20%">Actions</th>
@@ -45,10 +46,31 @@
                 @foreach (App\Carousel::orderBy('id','desc')->get() as $car)
                   <tr>
                     <td>{{$no}}</td>
+                    <td>
+                      <div id="{{"carousel-$car->slug"}}" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          @php
+                          $active = "active"
+                          @endphp
+                          @foreach ($car->images as $image_id)
+                            @php
+                            $image = App\ImageUpload::where('id', $image_id)->first();
+                            if(!$image) continue;
+                            @endphp
+                            <div class="item {{$active}}">
+                              <img src="{{$image->getUrl()}}" width="250" height="150">
+                            </div>
+                            @php
+                            $active = "";
+                            @endphp
+                          @endforeach
+                        </div>
+                      </div>
+                    </td>
                     <td>{{$car->name}}</td>
                     <td>{{$car->type}}</td>
                     <td>
-                      <a class="btn btn-warning btn-sm btn-table" href="{{route("admin_editcarouselimage", $car->id)}}"><i class="fa fa-pencil"></i></a>
+                      <a class="btn btn-warning btn-sm btn-table" href="{{route("admin_editcarousel", $car->id)}}"><i class="fa fa-pencil"></i></a>
                       <a class="btn btn-sm btn-danger btn-table" onclick="dashboard.removeYesNo('Are you sure you want to remove {{$car->name}} ?', '/api/admin/carousel/remove', {{$car->id}})"><i class="fa fa-trash-o"></i></a>
                     </td>
                   </tr>

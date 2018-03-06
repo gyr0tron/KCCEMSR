@@ -149,6 +149,42 @@ class DashboardApiController extends Controller
     $car->save();
     return ResponseBuilder::send(true, "", route('admin_carousel'));
   }
+  public function removeCarouselImage(Request $request) {
+    $id = $request->input('carousel', '-1');
+    $image_id = $request->input('image', '-1');
+
+    $car = Carousel::where("id",$id)->first();
+    if(!$car) abort(404, 'Not Found');
+    if(!in_array($image_id, $car->images)) abort(404, 'Not Found');
+    $image = ImageUpload::where('id', $image_id)->first();
+    if(!$image) abort(404, 'Not Found');
+    $image->deleteImage();
+    $image->forceDelete();
+    $images = $car->images;
+    unset($images[array_search($image_id, $car->images)]);
+    $car->images = $images;
+    $car->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function editCarousel(Request $request)
+  {
+    $type = $request->input("slug","-1");
+    $car = Carousel::where("type", $type)->first();
+    if(!$car) abort(404, 'Not Found');
+    $imagesID = $car->images;
+    $images = $request->images;
+    if($images) {
+      foreach ($images as $file) {
+        $img = new ImageUpload();
+        $img->uploadImage($file);
+        $img->save();
+        array_push($imagesID, $img->id);
+      }
+    }
+    $car->images = $imagesID;
+    $car->save();
+    return ResponseBuilder::send(true, "", route('admin_carousel'));
+  }
   public function removeCarousel(Request $request) {
     $id = $request->input("id","-1");
     $car = Carousel::where("id",$id)->first();
