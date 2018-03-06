@@ -126,6 +126,7 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/usersettings","Admin\DashboardApiController@userSettings");
 
   Route::post("/carousel/add","Admin\DashboardApiController@addCarousel");
+  Route::post("/carousel/remove","Admin\DashboardApiController@removeCarousel");
 
   Route::post("/events/add","Admin\DashboardApiController@addEvent");
   Route::post("/events/edit","Admin\DashboardApiController@editEvent");

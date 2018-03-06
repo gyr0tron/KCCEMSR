@@ -149,6 +149,20 @@ class DashboardApiController extends Controller
     $car->save();
     return ResponseBuilder::send(true, "", route('admin_carousel'));
   }
+  public function removeCarousel(Request $request) {
+    $id = $request->input("id","-1");
+    $car = Carousel::where("id",$id)->first();
+    if(!$car) abort(404, 'Not Found');
+    foreach ($car->images as $image_id) {
+      $image = ImageUpload::where('id', $image_id)->first();
+      if($image) {
+        $image->deleteImage();
+        $image->forceDelete();
+      }
+    }
+    $car->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
   // Add new Event
   public function addEvent(AdminAddNewEventRequest $request)
   {
