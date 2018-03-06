@@ -25,6 +25,9 @@
 					<!-- portfolio items start -->
 					<div class="isotope-container row grid-space-20">
 						@foreach (App\Event::all() as $event)
+							@php
+							if(!is_in_type($event->department, $types) && $event->department != "all") continue;
+							@endphp
 							<div class="col-sm-6 col-md-3 isotope-item {{$event->department}}">
 								<div class="image-box">
 									<div class="overlay-container">
