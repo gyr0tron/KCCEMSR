@@ -1642,3 +1642,152 @@ button.accordion.active:after {
 #notification:hover {
     background: rgba(51, 155, 235, 1);
 }
+
+/* reg/login box */
+.rolldown-list {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.rolldown-list li {
+  padding: 1em;
+  margin-bottom: .125em;
+  display: block;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.rolldown-list li {
+  visibility: hidden;
+  animation: rolldown .7s 1;
+  transform-origin: 50% 0;
+  animation-fill-mode: forwards;
+}
+
+.rolldown-list li:nth-child(2n) {
+  background-color: #3498db;
+	color: #fff;
+}
+
+.rolldown-list li:nth-child(2n+1) {
+	    background-color: #e2e2e2;
+    color: #000;
+}
+
+#myList {
+  position: absolute;
+	width: 100%; 
+	margin: 40px auto;
+	padding-right: 20px;
+}
+
+@keyframes rolldown {
+  0% {
+    visibility: visible;
+    transform: rotateX(180deg) perspective(500px);
+  }
+  70% {
+    visibility: visible;
+    transform: rotateX(-20deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateX(0deg);
+  }
+}
+
+
+
+#regBox {
+  width: auto;
+  margin: 40px auto;
+  background: #3498db;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+ul.headers {
+	display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 5px 5px 0 0;
+}
+ul.headers li {
+	background: #dedede;
+  color: #444;
+  display: inline-block;
+  padding: 10px 0;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+}
+ul.headers li.current {
+	background: transparent;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  padding: 15px;
+}
+.tab-content.current {
+  display: inherit;
+  background: #fff;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  background: #f1f1f1;
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  border: none;
+  text-indent: 60px;
+}
+
+input[type=password] {
+  margin-bottom: 10;
+}
+
+input[type=submit] {
+  background: #3498db;
+  border: none;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+}
+input[type=submit]:hover {
+  background: #2980b9;
+}
+
+.input-icon {
+  position: absolute;
+  margin-top: 17px;
+  margin-left: 17px;
+}
+.input-icon:after {
+  content: "";
+  display: block;
+  height: 49px;
+  width: 1px;
+  background: #ddd;
+  position: absolute;
+  margin-top: -33px;
+  left: 30px;
+}
+
+.btn-container {
+  margin-top: 10px;
+}
+
+.btn-icon {
+  position: absolute;
+}

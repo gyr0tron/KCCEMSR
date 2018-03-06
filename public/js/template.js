@@ -401,3 +401,26 @@ for (i = 0; i < acc.length; i++) {
 		this.nextElementSibling.classList.toggle("show");
 	}
 }
+
+// reg/login box shuffle
+$(document).ready(function () {
+	$('ul.headers li').click(function () {
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.headers li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#" + tab_id).addClass('current');
+	})
+})
+
+//rolldown list
+$('.rolldown-list li').each(function () {
+	var delay = ($(this).index() / 4) + 's';
+	$(this).css({
+		webkitAnimationDelay: delay,
+		mozAnimationDelay: delay,
+		animationDelay: delay
+	});
+});
