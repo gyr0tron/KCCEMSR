@@ -408,7 +408,7 @@ $(document).ready(function () {
 		var tab_id = $(this).attr('data-tab');
 
 		$('ul.headers li').removeClass('current');
-		$('.tab-content').removeClass('current');
+		$('.tab-content_reg').removeClass('current');
 
 		$(this).addClass('current');
 		$("#" + tab_id).addClass('current');
