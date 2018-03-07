@@ -202,7 +202,7 @@
 
 <div class="container">
 	<h1 class="title text-center" style="margin-bottom:4%; margin-top:5%; overflow-wrap: break-word;">Departmental Achievements/Activities/STTP/Workshops</h1>
-	@foreach (App\Event::where('department', $dep->url)->get() as $event)
+	@foreach (App\Event::where('department', $dep->url)->orderBy('date','desc')->get() as $event)
 		<div class="col-xs-12 col-sm-12 col-md-6">
 			<div class="media">
 				<div class="col-xs-4 col-sm-4 col-md-4" style="padding-bottom: 15px;">
