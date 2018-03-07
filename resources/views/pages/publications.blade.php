@@ -10,11 +10,22 @@
 		<div class="container main-content-sub">
 			<div class="row">
 				<div class="col-md-6" style="float:left">
+					@php
+					$car = App\Carousel::where('type', 'publications')->first();
+					if(!$car) goto carouselEnd;
+					$no = 0;
+					@endphp
 					<div id="myCarousel" class="carousel slide">
 						<div class="carousel-inner">
-								<div class="item active" data-slide-number="1">
-									<img src="via.placeholder.com/500x500" width="1200">
+							@foreach ($car->images as $id)
+								@php
+								$image = App\ImageUpload::where('id', $id)->first();
+								if(!$image) continue;
+								@endphp
+								<div class="item {{$no==0?'active':''}}" data-slide-number="{{$no++}}">
+									<img src="{{$image->getUrl()}}" width="1200">
 								</div>
+							@endforeach
 						</div>
 
 						<!-- Controls-->
@@ -27,6 +38,9 @@
 							<span class="sr-only">Next</span>
 						</a>
 					</div>
+					@php
+					carouselEnd:
+					@endphp
 				</div>
 
 				<div class="col-md-6">
@@ -113,8 +127,8 @@
 				</div>
 			</div>
 			<div class="space" style="margin-top:50px"></div>
+		</div>
 	</div>
-</div>
 @endsection
 @section('post')
 @endsection
