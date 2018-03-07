@@ -33,6 +33,7 @@ class AdminAddNewEventRequest extends FormRequest
   {
     return [
       'name' => 'required|string',
+      'date' => 'required|string',
       'images.*' => 'image',
       'description' => 'string'
     ];

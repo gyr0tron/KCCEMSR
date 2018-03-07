@@ -42,7 +42,7 @@
           <div class="col-sm-9">
             @foreach ($images as $image)
               @php
-                $onclick = "dashboard.deleteEventImage(event, $image->id);"
+              $onclick = "dashboard.deleteEventImage(event, $image->id);"
               @endphp
               @include('forms.imagepreview', ["url" => $image->getUrl(),"thumb"=> $image->getThumb(), "group" => "groupImages", "id"=>$image->id, "onclick"=>$onclick])
             @endforeach
@@ -55,6 +55,18 @@
             <div id="preview-images"></div>
             <label for="images" class="btn btn-success" style="color:white">Upload photos</label>
             <input type="file" id="images" name="images[]" style="display: none" multiple>
+            <p class="help-block"></p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="date">Date:</label>
+          <div class="col-sm-9">
+            <div class="input-group date">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input type="text" class="form-control pull-right" id="date" name="date" value="{{$event->date->format('d/m/Y')}}">
+            </div>
             <p class="help-block"></p>
           </div>
         </div>
@@ -94,12 +106,35 @@
       <div class="box-body">
         <center>
           @php
-            $name = App\User::find($event->updated_by)->fullname;
-            $date = $event->updated_at->diffForHumans();
+          $name = App\User::find($event->updated_by)->fullname;
+          $date = $event->updated_at->diffForHumans();
           @endphp
-            <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Last updated by {{$name}}<br /> {{$date}}.</span>
+          <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Last updated by {{$name}}<br /> {{$date}}.</span>
         </center>
       </div>
     </div>
   </div>
 </form>
+@section('post')
+  <script type="text/javascript" src="{{ asset('js/bootstrap3-wysihtml5.all.min.js') }}"></script>
+  <script>
+  $(function () {
+    $('#description').wysihtml5({
+      toolbar: {
+        "font-styles": true,
+        "emphasis": true,
+        "lists": true,
+        "html": false,
+        "link": true,
+        "image": false,
+        "color": false,
+        "blockquote": true
+      }
+    });
+    $('#date').datepicker({
+      format: 'dd/mm/yyyy',
+      autoclose: true
+    })
+  })
+  </script>
+@endsection

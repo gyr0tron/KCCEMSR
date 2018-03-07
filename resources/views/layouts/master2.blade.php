@@ -18,6 +18,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/dataTables.bootstrap.min.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap2-toggle.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-datepicker.css') }}">
   @yield('styles')
 </head>
 <body class="skin-{{Auth::check()?Auth::user()->skin:"blue"}} sidebar-mini" style="background:#ecf0f5">
@@ -39,6 +40,7 @@
   <script type="text/javascript" src="{{ asset('js/jquery.fancybox.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/bootstrap2-toggle.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/jquery-sortable.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
   @yield('post')
 </body>
 </html>

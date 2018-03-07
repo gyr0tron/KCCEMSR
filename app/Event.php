@@ -9,6 +9,8 @@ use App\Eventimage;
 class Event extends Model
 {
   protected $table = "events";
+  protected $dates = ['date','created_at','updated_at'];
+
 
   public function getFeaturedImage() {
     if(strlen($this->featured) > 1) {

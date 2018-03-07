@@ -19,7 +19,7 @@ class CreateEventsTable extends Migration
       $table->string('url')->nullable();
       $table->string('department')->nullable();
       $table->longText('description')->nullable();
-      $table->dateTime('dat')->nullable();
+      $table->dateTime('date')->nullable();
       $table->string('featured')->nullable();
       $table->integer('created_by');
       $table->integer('updated_by');

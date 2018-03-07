@@ -38,9 +38,44 @@
     </div>
     <p class="help-block"></p>
   </div>
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-4">
-        <button type="submit" class="btn btn-primary btn-wide">Save</button>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="date">Date:</label>
+    <div class="col-sm-9">
+      <div class="input-group date">
+        <div class="input-group-addon">
+          <i class="fa fa-calendar"></i>
+        </div>
+        <input type="text" class="form-control pull-right" id="date" name="date">
       </div>
+      <p class="help-block"></p>
     </div>
-  </form>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+      <button type="submit" class="btn btn-primary btn-wide">Save</button>
+    </div>
+  </div>
+</form>
+@section('post')
+  <script type="text/javascript" src="{{ asset('js/bootstrap3-wysihtml5.all.min.js') }}"></script>
+  <script>
+  $(function () {
+    $('#description').wysihtml5({
+      toolbar: {
+        "font-styles": true,
+        "emphasis": true,
+        "lists": true,
+        "html": false,
+        "link": true,
+        "image": false,
+        "color": false,
+        "blockquote": true
+      }
+    });
+    $('#date').datepicker({
+      format: 'dd/mm/yyyy',
+      autoclose: true
+    })
+  })
+  </script>
+@endsection

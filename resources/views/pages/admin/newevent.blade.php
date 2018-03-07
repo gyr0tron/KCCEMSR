@@ -43,22 +43,3 @@
   </section>
   <!-- /.content -->
 @endsection
-@section('post')
-  <script type="text/javascript" src="{{ asset('js/bootstrap3-wysihtml5.all.min.js') }}"></script>
-  <script>
-  $(function () {
-    $('#description').wysihtml5({
-      toolbar: {
-        "font-styles": true,
-        "emphasis": true,
-        "lists": true,
-        "html": false,
-        "link": true,
-        "image": false,
-        "color": false,
-        "blockquote": true
-      }
-    });
-  })
-  </script>
-@endsection

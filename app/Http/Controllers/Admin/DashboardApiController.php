@@ -46,6 +46,7 @@ use App\Infrastructure;
 use App\JobList;
 use App\ImageUpload;
 use App\ResponseBuilder;
+use Carbon\Carbon;
 
 class DashboardApiController extends Controller
 {
@@ -207,6 +208,7 @@ class DashboardApiController extends Controller
     $event->name = $request->input("name");
     $event->department = $request->input("department","");
     $event->description = $request->input("description");
+    $event->date = Carbon::createFromFormat('d/m/Y', $request->input("date"));
     $event->created_by = Auth::user()->id;
     $event->updated_by = Auth::user()->id;
     $event->generateUrl();
@@ -244,6 +246,7 @@ class DashboardApiController extends Controller
     $event->name = $request->input("name");
     $event->department = $request->input("department","");
     $event->description = $request->input("description");
+    $event->date = Carbon::createFromFormat('d/m/Y', $request->input("date"));
     $event->updated_by = Auth::user()->id;
     $event->generateUrl();
     $event->save();
