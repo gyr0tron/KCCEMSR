@@ -19,6 +19,7 @@ use App\Http\Requests\AdminAddAnnouncement;
 use App\Http\Requests\AdminFileUploadDefaultRequest;
 use App\Http\Requests\AdminAddStaffNotices;
 use App\Http\Requests\AdminAddExamResult;
+use App\Http\Requests\AdminAddExamNotice;
 use App\Http\Requests\AdminAddPublication;
 use App\Http\Requests\AdminAddTestimonial;
 use App\Http\Requests\AdminAddCommitteeRequest;
@@ -552,7 +553,9 @@ class DashboardApiController extends Controller
     $upload->year = $request->input('year');
     $upload->created_by = Auth::user()->id;
     $upload->updated_by = Auth::user()->id;
-    $upload->filename = $upload->uploadFile($request->file('file'));
+    $file = $request->file('file');
+    if($file) $upload->filename = $upload->uploadFile($file);
+    else $upload->filename = "#";
     $upload->save();
     return ResponseBuilder::send(true, "", "");
   }
