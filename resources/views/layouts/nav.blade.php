@@ -106,7 +106,7 @@
 										</ul>
 									</li>
 									</li>
-									<li class="sub-menu-parent"><a href="http://www.kcecell.org/">E-Cell</a>
+									<li class="sub-menu-parent"><a href="http://www.kcecell.org/" target="_blank">E-Cell</a>
 									</li>
 									<li class="{{$menu_item=='lifeatkc'?'active':''}} sub-menu-parent"><a href="{{route('lifeatkc')}}">Life At KC</a>
 									</li>

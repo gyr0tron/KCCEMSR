@@ -77,7 +77,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="http://www.kcecell.org/">Entrepreneurship Cell</a>
+							<a href="http://www.kcecell.org/" target="_blank">Entrepreneurship Cell</a>
 						</li>
 						<li>
 							<a href="{{route('lifeatkc')}}">Life At KC</a>
