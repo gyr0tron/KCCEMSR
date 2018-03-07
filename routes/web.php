@@ -185,12 +185,3 @@ Route::prefix('/api/admin')->group(function () {
 
   Route::post("/settings/main","Admin\UpdateController@settings");
 });
-
-Route::prefix('/test')->group(function() {
-  Route::get('/generate-url', function() {
-    foreach (App\Event::all() as $event) {
-      $event->generateUrl();
-      $event->save();
-    }
-  });
-});

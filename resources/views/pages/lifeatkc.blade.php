@@ -24,7 +24,7 @@
 					<!-- isotope filters end -->
 					<!-- portfolio items start -->
 					<div class="isotope-container row grid-space-20">
-						@foreach (App\Event::all() as $event)
+						@foreach (App\Event::orderBy('date','desc')->get() as $event)
 							@php
 							if(!is_in_type($event->department, $types) && $event->department != "all") continue;
 							@endphp
