@@ -11,23 +11,15 @@
 			<div class="row">
 				<div class="col-md-6" style="float:left">
 					@php
-					$publications = App\Publication::all();
-					$total = count($publications);
-					@endphp
-					@for ($i=0; $i < $total; $i++)
-						{{--  <div class="col-md-6" {!!$i/2==0?'':'style="float:right"'!!}>
-						<img src="{{$publications[$i]->getUrl()}}"/>
-					</div>  --}}
-					@php
-					$car = App\Carousel::where('type','publications')->first();
-					if(!$car) goto exitCarousel;
+					$car = App\Carousel::where('type', 'publications')->first();
+					if(!$car) goto carouselEnd;
 					$no = 0;
 					@endphp
 					<div id="myCarousel" class="carousel slide">
 						<div class="carousel-inner">
-							@foreach ($car->images as $image_id)
+							@foreach ($car->images as $id)
 								@php
-								$image = App\ImageUpload::where('id', $image_id)->first();
+								$image = App\ImageUpload::where('id', $id)->first();
 								if(!$image) continue;
 								@endphp
 								<div class="item {{$no==0?'active':''}}" data-slide-number="{{$no++}}">
@@ -47,13 +39,13 @@
 						</a>
 					</div>
 					@php
-					exitCarousel:
+					carouselEnd:
 					@endphp
 				</div>
 
 				<div class="col-md-6">
-					<h2 class="title"><span>{{$publications[$i]->name}}</span></h2>
-					{{$publications[$i]->description}}
+					<h2 class="title"><span>name</span></h2>
+					desc
 				</div>
 			</div>
 
@@ -135,9 +127,8 @@
 				</div>
 			</div>
 			<div class="space" style="margin-top:50px"></div>
-		@endfor
+		</div>
 	</div>
-</div>
 @endsection
 @section('post')
 @endsection

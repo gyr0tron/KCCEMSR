@@ -16,7 +16,7 @@
 						<li class="tab-link" data-tab="tab-2">Register</li>
 					</ul>
 
-					<div id="tab-1" class="login tab-content current">
+					<div id="tab-1" class="login tab-content_reg current">
 						<form>
 							<div class="form-section">
 								<span class="fa fa-envelope-o input-icon"></span>
@@ -32,7 +32,7 @@
 						</form>
 					</div>
 
-					<div id="tab-2" class="register tab-content">
+					<div id="tab-2" class="register tab-content_reg">
 						<form>
 							<div class="form-section">
 								<span class="fa fa-user-o input-icon"></span>

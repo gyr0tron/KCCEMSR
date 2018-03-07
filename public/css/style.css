@@ -1728,11 +1728,11 @@ ul.headers li.current {
   color: #fff;
 }
 
-.tab-content {
+.tab-content_reg {
   display: none;
   padding: 15px;
 }
-.tab-content.current {
+.tab-content_reg.current {
   display: inherit;
   background: #fff;
 }
