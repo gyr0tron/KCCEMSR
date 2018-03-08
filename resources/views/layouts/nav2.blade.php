@@ -114,6 +114,18 @@ if(!isset($second)) $second = "not defined";
         </li>
         <li class="{{$menu_item=='admission'?'active':''}}"><a href="{{route("admin_admissions", 'admission-criteria')}}"><i class="fa fa-university"></i> <span>Admissions</span></a></li>
         <li class="{{$menu_item=='committees'?'active':''}}"><a href="{{route("admin_committees")}}"><i class="fa fa-users"></i> <span>Committees</span></a></li>
+        <li class="treeview {{$menu_item=='publication'?'active':''}}" >
+          <a href="#">
+            <i class="fa fa-newspaper-o"></i>
+            <span>Publications</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="{{$menu_item=='publication'?'active':''}}" ><a href="{{route("admin_publication")}}">Technovision</a></li>
+          </ul>
+        </li>
         @if (Auth::user()->is_admin())
           <li class="{{$menu_item=='users'?'active':''}}"><a href="{{route("admin_users")}}"><i class="fa fa-users"></i> <span>Users</span></a></li>
         @endif

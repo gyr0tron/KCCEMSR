@@ -562,28 +562,44 @@ class DashboardApiController extends Controller
     $upload->save();
     return ResponseBuilder::send(true, "", "");
   }
-  public function addPublication(AdminAddPublication $request)
+  // Add Publication
+  public function addPublication($action, AdminAddPublication $request)
   {
-    $publication = new Publication();
-    $publication->name = $request->input('name');
-    $publication->description = $request->input('description');
-    $publication->uploadImage($request->image);
-    $publication->created_by = Auth::user()->id;
-    $publication->updated_by = Auth::user()->id;
-    $publication->save();
+    $file = new FileUpload();
+    $file->type = $action;
+    $file->name = $request->input('title');
+    $file->year = $request->input('volume');
+    $file->filename = $file->uploadFile($request->file('file'), $file->name);
+    $file->created_by = Auth::user()->id;
+    $file->updated_by = Auth::user()->id;
+    $file->save();
     return ResponseBuilder::send(true, "", "");
   }
-  public function editPublication()
+  // Update Guidlenes For Publication
+  public function updatePublication($action, Request $request)
   {
-
+    $action = $action."-guidelines";
+    $file = FileUpload::where('type', $action)->first();
+    if($file) {
+      $file->deleteFile();
+    }else {
+      $file = new FileUpload();
+      $file->type = $action;
+      $file->created_by = Auth::user()->id;
+    }
+    $file->filename = $file->uploadFile($request->file('file_contribution'), $action);
+    $file->updated_by = Auth::user()->id;
+    $file->save();
+    return ResponseBuilder::send(true, "", "");
   }
-  public function removePublication(Request $request)
+  // Remove Publication
+  public function removePublication($action, Request $request)
   {
     $id = $request->input("id","-1");
-    $publication = Publication::where("id",$id)->first();
-    if(!$publication) abort(404, 'Not Found');
-    $publication->removeImage();
-    $publication->forceDelete();
+    $file = FileUpload::where("id",$id)->where('type', $action)->first();
+    if(!$file) abort(404, 'Not Found');
+    $file->deleteFile();
+    $file->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
   // Testimonial Add

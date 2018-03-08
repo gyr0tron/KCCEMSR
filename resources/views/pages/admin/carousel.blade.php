@@ -71,7 +71,7 @@
                     <td>{{$car->type}}</td>
                     <td>
                       <a class="btn btn-warning btn-sm btn-table" href="{{route("admin_editcarousel", $car->id)}}"><i class="fa fa-pencil"></i></a>
-                      <a class="btn btn-sm btn-danger btn-table" onclick="dashboard.removeYesNo('Are you sure you want to remove {{$car->name}} ?', '/api/admin/carousel/remove', {{$car->id}})"><i class="fa fa-trash-o"></i></a>
+                      <a class="btn btn-sm btn-danger btn-table" onclick="dashboard.removeYesNo('Are you sure you want to remove {{$car->name}} ?', '/api/admin/publication/{action}/remove', {{$car->id}})"><i class="fa fa-trash-o"></i></a>
                     </td>
                   </tr>
                   @php

@@ -135,6 +135,11 @@ class DashboardController extends Controller
     $action_name = $admission_name_list[array_search($action, $admission_list)];
     return view("pages.admin.admissions", compact("action", "action_name", "admission_list","admission_name_list"));
   }
+  // Publication
+  public function publication()
+  {
+    return view('pages.admin.publication');
+  }
   // Committees
   public function committees()
   {

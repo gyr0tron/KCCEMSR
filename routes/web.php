@@ -82,6 +82,8 @@ Route::prefix('admin')->group(function () {
   Route::get('/announcements','Admin\DashboardController@announcements')->name("admin_announcements");
   Route::get('/academics/{action}','Admin\DashboardController@academics')->name("admin_academics");
 
+  Route::get('/publication/technovision','Admin\DashboardController@publication')->name("admin_publication");
+
 
   Route::get('/committees','Admin\DashboardController@committees')->name("admin_committees");
   Route::get('/committees/edit/{id}','Admin\DashboardController@editCommittee')->name("admin_committees_edit");
@@ -160,8 +162,11 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/academics/curriculum-plan","Admin\DashboardApiController@updateCurriculum");
   Route::post("/academics/staff-notices/add","Admin\DashboardApiController@addStaffnotices");
   Route::post("/academics/exam/{action}/add","Admin\DashboardApiController@addExamResults");
-  Route::post("/academics/publication/add","Admin\DashboardApiController@addPublication");
-  Route::post("/academics/publication/remove","Admin\DashboardApiController@removePublication");
+
+  Route::post("/publication/{action}/add","Admin\DashboardApiController@addPublication");
+  Route::post("/publication/{action}/remove","Admin\DashboardApiController@removePublication");
+  Route::post("/publication/{action}/guidelines","Admin\DashboardApiController@updatePublication");
+
 
   Route::post("/admission/{action}","Admin\DashboardApiController@updateAdmission");
 

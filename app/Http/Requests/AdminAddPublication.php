@@ -32,9 +32,9 @@ class AdminAddPublication extends FormRequest
   public function rules()
   {
     return [
-      'name' => 'required',
-      'description' => 'required',
-      'image' => 'required|image',
+      'title' => 'required',
+      'volume' => 'required',
+      'file' => 'required',
     ];
   }
 }
