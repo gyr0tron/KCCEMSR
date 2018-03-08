@@ -106,7 +106,12 @@
 						</div>
 						<div role="tabpanel" class="tab-pane" id="gc">
 							<ul style="list-style: none; padding-left: 0px;">
-								<li class="fa fa-download"><a class="" style="cursor:pointer;font-size: 1.1em;padding-left: 10px;" href="#">Download_1</a></li>
+								@php
+									$file = App\FileUpload::where('type', 'technovision-guidelines')->first();
+								@endphp
+								@if ($file)
+									<li class="fa fa-download"><a class="" style="cursor:pointer;font-size: 1.1em;padding-left: 10px;" href="{{$file->getUrl()}}">Download</a></li>
+								@endif
 							</ul>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="cntctUs">
@@ -122,7 +127,9 @@
 						</div>
 						<div role="tabpanel" class="tab-pane" id="dwnlds">
 							<ul style="list-style: none; padding-left: 0px;">
-								<li class="fa fa-download"><a class="" style="cursor:pointer;font-size: 1.1em;padding-left: 10px;" href="#">Download_1</a></li>
+								@foreach (App\FileUpload::where('type','technovision')->orderBy('year','desc')->get() as $upload)
+									<li class="fa fa-download"><a class="" style="cursor:pointer;font-size: 1.1em;padding-left: 10px;" href="{{$upload->getUrl()}}">{{$upload->name}}</a></li><br/>
+								@endforeach
 							</ul>
 						</div>
 					</div>
