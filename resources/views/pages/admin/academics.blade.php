@@ -37,9 +37,6 @@
         @if ($action == "exam-timetable")
           @include('forms.exam', ["title"=>"Exam Timetable", "action"=>"timetable"])
         @endif
-        @if ($action == "publications")
-          @include('forms.publications')
-        @endif
       </div>
       <div class="col-sm-2">
         <div class="box box-primary">
@@ -53,7 +50,6 @@
               <li class="{{$action=="exam-results"?"active":""}}"><a href="{{route("admin_academics", "exam-results")}}">Exam Results</a></li>
               <li class="{{$action=="exam-notices"?"active":""}}"><a href="{{route("admin_academics", "exam-notices")}}">Exam Notices</a></li>
               <li class="{{$action=="exam-timetable"?"active":""}}"><a href="{{route("admin_academics", "exam-timetable")}}">Exam Timetable</a></li>
-              <li class="{{$action=="publications"?"active":""}}"><a href="{{route("admin_academics", "publications")}}">Publications</a></li>
             </ul>
           </div>
         </div>

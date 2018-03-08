@@ -44,8 +44,10 @@
 				</div>
 
 				<div class="col-md-6">
-					<h2 class="title"><span>name</span></h2>
-					desc
+					<h2 class="title"><span>Technovision 2017</span></h2>
+					<p>
+						At K C we are blessed with Technovision and Technovision is our mirror that mirror whose magic penetrates like a dart who lifts that mirror and throws our mind back on us, and our heart, until we start? That mirror works well in these night hours of ache; why in that mirror are tints we never see ourselves once take when the world is awake? That mirror can test each mortal when unaware; yea, that strange mirror may catch his last thoughts, whole life foul or fair, glassing it—where? Wishing all the best to Technovision team, here i congratulate all kcians for moving from "Technovision" by participating in national vision of make in India, digital India and smart rural India.
+					</p>
 				</div>
 			</div>
 
