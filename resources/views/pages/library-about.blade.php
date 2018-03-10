@@ -13,11 +13,22 @@
 				<div class="space"></div>
 
 				<div class="col-md-6" style="float:left">
+					@php
+					$car = App\Carousel::where('type', 'library')->first();
+					if(!$car) goto carouselEnd;
+					$no = 0;
+					@endphp
 					<div id="myCarousel" class="carousel slide">
 						<div class="carousel-inner">
-							<div class="active" data-slide-number="1">
-								<img src="http://placehold.it/1200x700&amp;text=1" width="1200">
-							</div>
+							@foreach ($car->images as $id)
+								@php
+								$image = App\ImageUpload::where('id', $id)->first();
+								if(!$image) continue;
+								@endphp
+								<div class="item {{$no==0?'active':''}}" data-slide-number="{{$no++}}">
+									<img src="{{$image->getUrl()}}" width="1200">
+								</div>
+							@endforeach
 						</div>
 
 						<!-- Controls-->
@@ -30,11 +41,13 @@
 							<span class="sr-only">Next</span>
 						</a>
 					</div>
+					@php
+					carouselEnd:
+					@endphp
 				</div>
 
 				<div class="col-md-6">
-					<h2 class="title"><span></span></h2>
-					{{--  {{$library[$i]->description}}  --}}
+					<p>About library</p>
 				</div>
 			</div>
 		</div>

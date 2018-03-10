@@ -9,8 +9,47 @@
 	<div id="app" class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 		<div class="container main-content">
 			<div class="row">
+				<h1 id="about" class="title text-center"><span>About TPO</span></h1>
+				<div class="col-md-6" style="float:left">
+					@php
+					$car = App\Carousel::where('type', 'tpo')->first();
+					if(!$car) goto carouselEnd;
+					$no = 0;
+					@endphp
+					<div id="myCarousel" class="carousel slide">
+						<div class="carousel-inner">
+							@foreach ($car->images as $id)
+								@php
+								$image = App\ImageUpload::where('id', $id)->first();
+								if(!$image) continue;
+								@endphp
+								<div class="item {{$no==0?'active':''}}" data-slide-number="{{$no++}}">
+									<img src="{{$image->getUrl()}}" width="1200">
+								</div>
+							@endforeach
+						</div>
+						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+					@php
+					carouselEnd:
+					@endphp
+				</div>
+				<div class="col-md-6">
+					<p style="text-align: justify;">Welcome to Training & Placement Cell at K. C College of Engineering & Management Studies & Research, Thane. Training and Placement is a vital department in the college and is constantly striving to provide assistance to the students in their efforts to probe for the employment. It also caters needs of various organizations to conduct the interviews. It plays an important role in counselling and guiding the students for their successful career placement. It arranges various technical and soft skills programs which augments the skills and increases the confidence of the students when facing the various tests and interviews conducted by the companies and to meet companies’ expectations. The Training and Placement Cell takes pride in offering student services like consultation on a wide range of issues such as employment, career planning, opportunities etc. thereby preparing students effectively for their career to make them competent. Training and Placement Cell operates year round to facilitate contacts between graduates and Industry</p>
+				</div>
+			</div>
+			<div class="space"></div>
+			<div class="space"></div>
+			<div class="row">
 				<div class="col-md-12">
-					<h1 id="funcAndResp" class="title text-center"><span>Functions &amp; Responsibilities </span></h1>
+					<h1 id="functions" class="title text-center"><span>Functions &amp; Responsibilities </span></h1>
 				</div>
 				<div class="col-md-12">
 					<p>Training and Placement Office takes care of the following functions and responsibilities:</p>
@@ -30,12 +69,11 @@
 				</div>
 			</div>
 			<div class="space"></div>
-
-			<div class="row" id="chart_placements">
+			<div class="row" id="statistics">
 				<placement-stats></placement-stats>
 			</div>
 			<div class="space"></div>
-			
+
 			<div class="row">
 				<div class="col-md-12">
 					<h1 id="reviews" class="title text-center"><span>Reviews</span></h1>

@@ -45,9 +45,7 @@
 
 				<div class="col-md-6">
 					<h2 class="title"><span>Technovision 2017</span></h2>
-					<p>
-						At K C we are blessed with Technovision and Technovision is our mirror that mirror whose magic penetrates like a dart who lifts that mirror and throws our mind back on us, and our heart, until we start? That mirror works well in these night hours of ache; why in that mirror are tints we never see ourselves once take when the world is awake? That mirror can test each mortal when unaware; yea, that strange mirror may catch his last thoughts, whole life foul or fair, glassing it—where? Wishing all the best to Technovision team, here i congratulate all kcians for moving from "Technovision" by participating in national vision of make in India, digital India and smart rural India.
-					</p>
+					<p style="text-align: justify">TECHNOVISION is a referred bi-annually magazine of K. C. College of engineering & management studies & Research. This provides a wide platform for engineers to discuss their views and innovative technologies in the field of engineering. It aims to provide original and empirical research and papers that are more conceptual and application oriented , case studies and other matters of interest to researchers, scholars and practitioners in different domains of engineering. The views expressed in these papers provide information on technological governance reliability an industrial challenges and market issues and investor aspects.</p>
 				</div>
 			</div>
 

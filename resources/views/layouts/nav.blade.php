@@ -97,9 +97,9 @@
 									</li>
 									<li class="{{$menu_item=='placements'?'active':''}} sub-menu-parent"><a href="#">Placements</a>
 										<ul class="sub-menu">
-											<li><a href="{{route('placements')}}">About TPO</a></li>
-											<li><a href="{{route('placements')}}">Function &amp; Responsibilities</a></li>
-											<li><a href="{{route('placements')}}#chart_placements">Placement Statistics</a></li>
+											<li><a href="{{route('placements')}}#about">About TPO</a></li>
+											<li><a href="{{route('placements')}}#functions">Function &amp; Responsibilities</a></li>
+											<li><a href="{{route('placements')}}#statistics">Placement Statistics</a></li>
 											<li><a href="{{route('placements')}}">Training &amp; Placement Process</a></li>
 											<li><a href="{{route('placements')}}">Higher Studies</a></li>
 											<li><a href="{{route('placements')}}#reviews">Reviews</a></li>
