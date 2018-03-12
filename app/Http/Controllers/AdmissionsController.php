@@ -10,6 +10,7 @@ class AdmissionsController extends Controller
 {
   public function get($action)
   {
+    if($action == "total-intake") return view('pages.total-intake');
     $file = FileUpload::where('type', $action)->first();
     if(!$file) abort("404");
     $admission_list = FileUpload::admission_list;
