@@ -47,6 +47,12 @@ class FileUpload extends Model
     File::delete($path . $this->filename);
   }
 
+  public function deleteFileByName($filename)
+  {
+    $path = public_path('public/files/');
+    File::delete($path . $filename);
+  }
+
   public function getYear()
   {
     switch ($this->year) {

@@ -34,7 +34,7 @@ class AdminAddPublication extends FormRequest
     return [
       'title' => 'required',
       'volume' => 'required',
-      'file' => 'required',
+      'files.*' => 'required',
     ];
   }
 }

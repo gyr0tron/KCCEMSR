@@ -95,10 +95,10 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-2" for="description">File:</label>
+                <label class="control-label col-sm-2" for="description">Files:</label>
                 <div class="col-sm-9">
-                  <input type="file" class="form-control" id="file" name="file">
-                  <p class="help-block"></p>
+                  <input type="file" class="form-control" id="files" name="files[]" multiple>
+                  <p class="help-block">Select multiple files to upload.</p>
                 </div>
               </div>
               <div class="form-group">

@@ -61,7 +61,7 @@
 						<li role="presentation"><a href="#editTeam" aria-controls="messages" role="tab" data-toggle="tab">Editorial Team</a></li>
 						<li role="presentation"><a href="#gc" aria-controls="settings" role="tab" data-toggle="tab">Guidelines for Contribution</a></li>
 						<li role="presentation"><a href="#cntctUs" aria-controls="profile" role="tab" data-toggle="tab">Contact Us</a></li>
-						<li role="presentation"><a href="#dwnlds" aria-controls="profile" role="tab" data-toggle="tab">Downloads</a></li>
+						<li role="presentation"><a href="#dwnlds" aria-controls="profile" role="tab" data-toggle="tab">Latest Volumes</a></li>
 					</ul>
 
 					<!-- Tab panes -->
@@ -126,7 +126,11 @@
 						<div role="tabpanel" class="tab-pane" id="dwnlds">
 							<ul style="list-style: none; padding-left: 0px;">
 								@foreach (App\FileUpload::where('type','technovision')->orderBy('year','desc')->get() as $upload)
-									<li class="fa fa-download"><a class="" style="cursor:pointer;font-size: 1.1em;padding-left: 10px;" href="{{$upload->getUrl()}}">{{$upload->name}}</a></li><br/>
+									<h4>{{$upload->name}}<h4>
+									<hr/>
+									@foreach (json_decode($upload->filename) as $single)
+										<li><a class="" style="cursor:pointer;font-size: 0.8em;padding-left: 10px;" href="{{url("public/files/" . $single)}}">{{explode('.', $single)[0]}}</a>&nbsp;&nbsp;<i class="fa fa-download"></i></li><br/>
+									@endforeach
 								@endforeach
 							</ul>
 						</div>

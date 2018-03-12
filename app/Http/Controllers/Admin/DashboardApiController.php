@@ -565,14 +565,22 @@ class DashboardApiController extends Controller
   // Add Publication
   public function addPublication($action, AdminAddPublication $request)
   {
-    $file = new FileUpload();
-    $file->type = $action;
-    $file->name = $request->input('title');
-    $file->year = $request->input('volume');
-    $file->filename = $file->uploadFile($request->file('file'), $file->name);
-    $file->created_by = Auth::user()->id;
-    $file->updated_by = Auth::user()->id;
-    $file->save();
+    $upload = new FileUpload();
+    $upload->type = $action;
+    $upload->name = $request->input('title');
+    $upload->year = $request->input('volume');
+    $fileArr = [];
+    $files = $request->file('files');
+    if($files) {
+      foreach ($files as $file) {
+        $newName = $upload->uploadFile($file);
+        array_push($fileArr, $newName);
+      }
+    }
+    $upload->filename = json_encode($fileArr);
+    $upload->created_by = Auth::user()->id;
+    $upload->updated_by = Auth::user()->id;
+    $upload->save();
     return ResponseBuilder::send(true, "", "");
   }
   // Update Guidlenes For Publication
@@ -598,7 +606,9 @@ class DashboardApiController extends Controller
     $id = $request->input("id","-1");
     $file = FileUpload::where("id",$id)->where('type', $action)->first();
     if(!$file) abort(404, 'Not Found');
-    $file->deleteFile();
+    foreach (json_decode($file->filename) as $single) {
+      $file->deleteFileByName($single);
+    }
     $file->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
