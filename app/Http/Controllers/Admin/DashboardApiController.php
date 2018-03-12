@@ -667,9 +667,25 @@ class DashboardApiController extends Controller
       $upload->created_by = Auth::user()->id;
       $upload->updated_by = Auth::user()->id;
     }
-    $upload->filename = $upload->uploadFile($request->file('file'), $action);
+    if($action == 'aicte-affiliation') {
+      $upload->name = $request->input('title', '');
+      $upload->filename = $upload->uploadFile($request->file('file'));
+    } else {
+      $upload->filename = $upload->uploadFile($request->file('file'), $action);
+    }
     $upload->save();
     return ResponseBuilder::send(true, "", "");
+  }
+  public function removeAdmission($action, Request $request)
+  {
+    if($action == 'aicte-affiliation') {
+      $id = $request->input('id','-1');
+      $file = FileUpload::where('type', $action)->where('id',$id)->first();
+      if(!$file) abort(404);
+      $file->deleteFile();
+      $file->forceDelete();
+      return ResponseBuilder::send(true, "", "");
+    }
   }
   // Library
   public function addLibrary($action, Request $request)

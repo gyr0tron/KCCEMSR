@@ -112,7 +112,7 @@
 									</li>
 									<li class="{{$menu_item=='careeratkc'?'active':''}} sub-menu-parent"><a href="{{route('careeratkc')}}">Career At KC</a>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Statutory Affiliations</a>
+									<li class="{{$menu_item=='statutory-affiliation'?'active':''}} sub-menu-parent"><a href="#">Statutory Affiliations</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
 											<li><a href="{{route('mandatory-disclosure', 'aicte-affiliation')}}">AICTE Affiliation</a></li>
