@@ -12,20 +12,6 @@
 			<div class="space"></div>
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-12">
-				{{-- HM AS --}}
-					<div class="media">
-						<div class="media-body text-right">
-							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','humanities-sciences')->first()->name}}</h2>
-							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','humanities-sciences')->first()->description)}}</p>
-							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'humanities-sciences')}}">Read more</a>
-							<div class="space"></div>
-							<img src="{{App\Department::where('url','humanities-sciences')->first()->getUrl()}}" alt="">
-						</div>
-						<div class="media-right">
-							<i class="fa fa-flask"></i>
-						</div>
-					</div>
-					<div class="space"></div>
 					{{-- computer --}}
 					<div class="media">
 						<div class="media-body text-right">
@@ -40,53 +26,71 @@
 						</div>
 					</div>
 					<div class="space"></div>
-					{{-- elec --}}
-					<div class="media">
-					<div class="media-body text-right">
-							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','electronics')->first()->name}}</h2>
-							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
-							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'electronics')}}">Read more</a>
-							<div class="space"></div>
-							<img src="{{App\Department::where('url','electronics')->first()->getUrl()}}" alt="">
-						</div>
-						<div class="media-right">
-							<i class="fa fa-microchip"></i>
-						</div>
-					</div>
-					<div class="space"></div>
-				</div>
 
-				<div class="space visible-xs"></div>
-
-				<div class="col-md-6 col-sm-6 col-xs-12">
 					{{-- extc --}}
 					<div class="media">
-						<div class="media-left">
-							<i class="fa fa-rss"></i>
-						</div>
-						<div class="media-body">
+						<div class="media-body text-right">
 							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','extc')->first()->name}}</h2>
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','extc')->first()->description)}}</p>
 							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'extc')}}">Read more</a>
 							<div class="space"></div>
 							<img src="{{App\Department::where('url','extc')->first()->getUrl()}}" alt="">
 						</div>
+						<div class="media-right">
+							<i class="fa fa-rss"></i>
+						</div>
 					</div>
 					<div class="space"></div>
+
 					{{-- IT --}}
 					<div class="media">
-						<div class="media-left">
-							<i class="fa fa-desktop"></i>
-						</div>
-						<div class="media-body">
+						<div class="media-body text-right">
 							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','it')->first()->name}}</h2>
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','it')->first()->description)}}</p>
 							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'it')}}">Read more</a>
 							<div class="space"></div>
 							<img src="{{App\Department::where('url','it')->first()->getUrl()}}" alt="">
 						</div>
+						<div class="media-right">
+							<i class="fa fa-desktop"></i>
+						</div>
+					</div>
+					<div class="space"></div>	
+				</div>
+
+				<div class="space visible-xs"></div>
+
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					{{-- elec --}}
+					<div class="media">
+						<div class="media-left">
+							<i class="fa fa-microchip"></i>
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','electronics')->first()->name}}</h2>
+							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
+							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'electronics')}}">Read more</a>
+							<div class="space"></div>
+							<img src="{{App\Department::where('url','electronics')->first()->getUrl()}}" alt="">
+						</div>
 					</div>
 					<div class="space"></div>
+
+				{{-- HM AS --}}
+					<div class="media">
+						<div class="media-left">
+							<i class="fa fa-flask"></i>
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','humanities-sciences')->first()->name}}</h2>
+							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','humanities-sciences')->first()->description)}}</p>
+							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'humanities-sciences')}}">Read more</a>
+							<div class="space"></div>
+							<img src="{{App\Department::where('url','humanities-sciences')->first()->getUrl()}}" alt="">
+						</div>
+					</div>
+					<div class="space"></div>
+
 					{{-- mms --}}
 					<div class="media">
 						<div class="media-left">

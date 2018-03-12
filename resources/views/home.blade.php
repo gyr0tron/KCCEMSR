@@ -91,19 +91,6 @@
 				<div class="row">
 					<div class="col-sm-6">
 						@php
-						$dep = App\Department::where('url','humanities-sciences')->first();
-						@endphp
-						<div class="media">
-							<div class="media-body text-right">
-								<h4 class="media-heading">{{$dep->name}}</h4>
-								<p style="text-align: justify;height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($dep->description)}}</p>
-								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-flask"></i>
-							</div>
-						</div>
-						@php
 						$dep = App\Department::where('url','computer')->first();
 						@endphp
 						<div class="media">
@@ -116,8 +103,9 @@
 								<i class="fa fa-code"></i>
 							</div>
 						</div>
+
 						@php
-						$dep = App\Department::where('url','electronics')->first();
+						$dep = App\Department::where('url','extc')->first();
 						@endphp
 						<div class="media">
 							<div class="media-body text-right">
@@ -126,7 +114,21 @@
 								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
 							</div>
 							<div class="media-right">
-								<i class="fa fa-microchip"></i>
+								<i class="fa fa-rss"></i>
+							</div>
+						</div>
+
+						@php
+						$dep = App\Department::where('url','it')->first();
+						@endphp
+						<div class="media">
+							<div class="media-body text-right">
+								<h4 class="media-heading">{{$dep->name}}</h4>
+								<p style="text-align: justify;height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($dep->description)}}</p>
+								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-desktop"></i>
 							</div>
 						</div>
 					</div>
@@ -135,11 +137,11 @@
 
 					<div class="col-sm-6">
 						@php
-						$dep = App\Department::where('url','extc')->first();
+						$dep = App\Department::where('url','electronics')->first();
 						@endphp
 						<div class="media">
 							<div class="media-left">
-								<i class="fa fa-rss"></i>
+								<i class="fa fa-microchip"></i>
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">{{$dep->name}}</h4>
@@ -147,12 +149,13 @@
 								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
 							</div>
 						</div>
+
 						@php
-						$dep = App\Department::where('url','it')->first();
+						$dep = App\Department::where('url','humanities-sciences')->first();
 						@endphp
 						<div class="media">
 							<div class="media-left">
-								<i class="fa fa-desktop"></i>
+								<i class="fa fa-flask"></i>
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">{{$dep->name}}</h4>
@@ -160,6 +163,7 @@
 								<a class="" style="cursor:pointer;" href="{{route('department',$dep->url)}}">Read more</a>
 							</div>
 						</div>
+
 						@php
 						$dep = App\Department::where('url','mms')->first();
 						@endphp
@@ -167,7 +171,6 @@
 							<div class="media-left">
 								<i class="fa fa-area-chart"></i>
 							</div>
-
 							<div class="media-body">
 								<h4 class="media-heading">{{$dep->name}}</h4>
 								<p style="text-align: justify;height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($dep->description)}}</p>
