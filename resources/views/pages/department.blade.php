@@ -32,7 +32,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<h2 style="margin-top: 0px; margin-bottom: 5px;">HOD'S Message</h2>
-								<p style="white-space: pre-wrap; margin-bottom: 15px;">{{strip_tags($dep->hod_message)}}</p>
+								<p style="text-align: justify;white-space: pre-wrap; margin-bottom: 15px;">{{strip_tags($dep->hod_message)}}</p>
 								<div class="space"></div>
 							</div>
 							<div class="col-md-6">
@@ -45,7 +45,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<h2 style="margin-top: 0px; margin-bottom: 5px;">Vision</h2>
-							<p margin-bottom: 15px;>{{$dep->vision}}</p>
+							<p style="text-align: justify;">{{$dep->vision}}</p>
 							<div class="space"></div>
 							<h2 style="margin-top: 0px; margin-bottom: 5px;">Mission</h2>
 							<ul class="list-unstyled">
@@ -54,7 +54,7 @@
 								@endphp
 								@foreach ($data as $d)
 									@if (strlen($d) > 2)
-										<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">{{$d}}.</p></li>
+										<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix" style="text-align: justify;">{{$d}}.</p></li>
 									@endif
 								@endforeach
 							</ul>
@@ -98,29 +98,7 @@
 </div>
 </div>
 </div>
-{{-- <div class="section translucent-bg bg-image-1 blue">
-<div class="container object-non-visible" data-animation-effect="fadeIn">
-<h1 id="services"  class="text-center title">Departmental Achievement</h1>
-<div class="space"></div>
-@foreach (App\Achievement::where('type','1')->where('department',$dep->url)->get() as $achivement)
-<div class="col-xs-12 col-sm-12 col-md-6">
-<div class="media">
-<div class="col-xs-4 col-sm-4 col-md-4">
-<img src="{{$achivement->getUrl()}}" alt="">
-</div>
-<div class="media-body">
-<h3 class="media-heading">{{$achivement->name}}</h3>
-<blockquote>
-<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
-<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->id)}}">Read more</a>
-</blockquote>
-</div>
-</div>
-</div>
-@endforeach
 
-</div>
-</div> --}}
 <!-- section end -->
 <!-- section start -->
 <!-- ================ -->

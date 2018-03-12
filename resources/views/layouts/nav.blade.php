@@ -5,7 +5,7 @@
 				<div class="header-left clearfix">
 
 					<div class="logo smooth-scroll"  style="float: left;">
-						<a href="/"><img id="logo" src="{{ asset('images/logo.png') }}" alt="KC College logo" height="60" width="60"></a>
+						<a href="/"><img id="logo" src="{{ asset('images/logo.png') }}" alt="KC College logo" height="65" width="65"></a>
 					</div>
 
 					<div class="smooth-scroll">
