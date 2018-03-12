@@ -10,12 +10,7 @@ class AcademicsController extends Controller
 {
   public function getCurriculumplan()
   {
-    $file = FileUpload::where('type','curriculum-plan')->first();
-    if(!$file) abort("404");
-    $title = "Curriculum plan";
-    $url = $file->getUrl();
-    $menu_item = "academics";
-    return view('pages.pdfview', compact("title", "url","menu_item"));
+    return view('pages.curriculum-plan');
   }
 
   public function getStaffNotices()

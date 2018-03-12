@@ -22,7 +22,11 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-10">
-        @include('forms.admissions', compact('action','action_name'))
+        @if($action == 'aicte-affiliation')
+          @include('forms.aicte-affiliation', compact('action','action_name'))
+        @else
+          @include('forms.admissions', compact('action','action_name'))
+        @endif
       </div>
       <div class="col-sm-2">
         <div class="box box-primary">

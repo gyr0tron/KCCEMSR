@@ -8,7 +8,7 @@
 	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 		<div class="container main-content-sub">
 			<div class="row">
-				<h1 class="text-center" style="margin-bottom:3%;"><strong><span>Career at KC</span></strong></h1>
+				<h1 class="text-center" style="margin-bottom:3%;"><strong><span>Careers at KC</span></strong></h1>
 				<div class="col-md-12">
 					<ul class="job-list">
 						@foreach (App\JobList::orderBy('id','DESC')->get() as $job)

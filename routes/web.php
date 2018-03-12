@@ -169,6 +169,7 @@ Route::prefix('/api/admin')->group(function () {
 
 
   Route::post("/admission/{action}","Admin\DashboardApiController@updateAdmission");
+  Route::post("/admission/{action}/remove","Admin\DashboardApiController@removeAdmission");
 
   Route::post("/library/{action}/add","Admin\DashboardApiController@addLibrary");
   Route::post("/library/{action}/remove","Admin\DashboardApiController@removeLibrary");
