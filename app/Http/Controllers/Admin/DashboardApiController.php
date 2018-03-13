@@ -571,9 +571,10 @@ class DashboardApiController extends Controller
     $upload->year = $request->input('volume');
     $fileArr = [];
     $files = $request->file('files');
+    $path = "public/files/$action/$upload->year/";
     if($files) {
       foreach ($files as $file) {
-        $newName = $upload->uploadFile($file);
+        $newName = $upload->uploadFile($file,"",$path);
         array_push($fileArr, $newName);
       }
     }
@@ -606,8 +607,9 @@ class DashboardApiController extends Controller
     $id = $request->input("id","-1");
     $file = FileUpload::where("id",$id)->where('type', $action)->first();
     if(!$file) abort(404, 'Not Found');
+    $path = "public/files/$action/$file->year/";
     foreach (json_decode($file->filename) as $single) {
-      $file->deleteFileByName($single);
+      $file->deleteFileByName($single, $path);
     }
     $file->forceDelete();
     return ResponseBuilder::send(true, "", "");

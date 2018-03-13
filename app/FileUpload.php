@@ -17,39 +17,39 @@ class FileUpload extends Model
   const library_list = ['question-papers', 'e-books', 'syllabus', 'exam-notices', 'exam-timetable', 'exam-results'];
   const library_list_name = ['Question Papers', 'E-Books', 'Syllabus', 'Exam Notices', 'Exam Timetable', 'Exam Results'];
 
-  public function getUrl() {
-    return url("public/files/" . $this->filename);
+  public function getUrl($path="public/files/") {
+    return url($path . $this->filename);
   }
 
-  public function uploadFile($file, $filename="")
+  public function uploadFile($file, $filename="", $path="public/files/")
   {
-    $this->checkDirs();
+    $this->checkDirs($path);
     if($filename=="") {
       $filename = $file->getClientOriginalName();
-      if(file_exists(public_path('public/files/') . $filename)) {
+      if(file_exists(public_path($path) . $filename)) {
         $filename = str_replace('.' . $file->clientExtension(), '', $filename) .'-' . uniqid() . '.' . $file->clientExtension();
       }
     }else {
       $filename = $filename  . '.' . $file->clientExtension();
     }
-    $file->move(public_path('public/files/'), $filename);
+    $file->move(public_path($path), $filename);
     return $filename;
   }
 
-  public function checkDirs() {
-    $path = public_path('public/files');
+  public function checkDirs($path="public/files/") {
+    $path = public_path($path);
     File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
   }
 
-  public function deleteFile()
+  public function deleteFile($path="public/files/")
   {
-    $path = public_path('public/files/');
+    $path = public_path($path);
     File::delete($path . $this->filename);
   }
 
-  public function deleteFileByName($filename)
+  public function deleteFileByName($filename, $path="public/files/")
   {
-    $path = public_path('public/files/');
+    $path = public_path($path);
     File::delete($path . $filename);
   }
 

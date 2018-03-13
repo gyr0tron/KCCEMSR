@@ -129,7 +129,7 @@
 									<h4>{{$upload->name}}<h4>
 									<hr/>
 									@foreach (json_decode($upload->filename) as $single)
-										<li><a class="" style="cursor:pointer;font-size: 0.8em;padding-left: 10px;" href="{{url("public/files/" . $single)}}">{{explode('.', $single)[0]}}</a>&nbsp;&nbsp;<i class="fa fa-download"></i></li><br/>
+										<li><a class="" style="cursor:pointer;font-size: 0.8em;padding-left: 10px;" href="{{url("public/files/technovision/$upload->year/" . $single)}}">{{explode('.', $single)[0]}}</a>&nbsp;&nbsp;<i class="fa fa-download"></i></li><br/>
 									@endforeach
 								@endforeach
 							</ul>
