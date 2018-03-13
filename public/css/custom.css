@@ -454,3 +454,8 @@ a.anchor_guide {
     top: -190px;
     visibility: hidden;
 }
+
+/* error handling */
+.field-error {
+    color: #ff0039;
+}

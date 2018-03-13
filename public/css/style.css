@@ -1737,7 +1737,7 @@ ul.headers li.current {
   background: #fff;
 }
 
-input[type=text], input[type=password], input[type=email] {
+input[type=text],input[type=tel], input[type=password], input[type=email] {
   background: #f1f1f1;
   width: 100%;
   padding: 15px 0;
@@ -1770,7 +1770,7 @@ input[type=submit]:hover {
 
 .input-icon {
   position: absolute;
-  margin-top: 17px;
+  margin-top: 20px;
   margin-left: 17px;
 }
 .input-icon:after {
