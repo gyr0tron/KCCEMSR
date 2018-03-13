@@ -1737,20 +1737,22 @@ ul.headers li.current {
   background: #fff;
 }
 
-input[type=text],input[type=tel], input[type=password], input[type=email] {
+.tab-content_reg > form > div > input[type=text],
+.tab-content_reg > form > div > input[type=tel],
+.tab-content_reg > form > div > input[type=password],
+.tab-content_reg > form > div > input[type=email] {
   background: #f1f1f1;
   width: 100%;
   padding: 15px 0;
-  margin-bottom: 10px;
   border: none;
   text-indent: 60px;
 }
 
-input[type=password] {
+.tab-content_reg > form > div > input[type=password] {
   margin-bottom: 10;
 }
 
-input[type=submit] {
+.tab-content_reg > form > div > input[type=submit] {
   background: #3498db;
   border: none;
   padding: 10px 0;
@@ -1764,7 +1766,7 @@ input[type=submit] {
   -moz-transition: 0.3s ease;
   -ms-transition: 0.3s ease;
 }
-input[type=submit]:hover {
+.tab-content_reg > form > div > input[type=submit]:hover {
   background: #2980b9;
 }
 
