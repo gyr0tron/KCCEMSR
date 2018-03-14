@@ -41,6 +41,26 @@ $("#job_application").submit(function(event) {
     fh.show_button();
   });
 });
+$("#registration_form").submit(function(event) {
+  event.preventDefault();
+  fh.reload(this.id);
+  fh.hide_button();
+  axios.post('/api/admission/register', $("#registration_form").serialize())
+  .then(function (response) {
+    fh.show_button();
+    var data = response.data;
+    if(fh.is_success(data)) {
+
+    }
+    else {
+      fh.set_multierrors(data);
+    }
+  })
+  .catch(function (error) {
+    ShowMessage("Admissions Apply", "Error seending your message.");
+    fh.show_button();
+  });
+});
 
 
 function ShowMessage(title, content, callback="") {

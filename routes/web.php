@@ -118,6 +118,7 @@ Route::prefix('/api')->group(function () {
   Route::post('/search/question-papers',"LibraryController@searchQuestionPapers");
   Route::post('/search/ebooks',"LibraryController@searchEbooks");
   Route::post('/careeratkc/apply',"DepartmentController@postCareerAtKCApply");
+  Route::post('/admission/register',"AdmissionsController@admissionRegister");
 });
 
 

@@ -8,7 +8,7 @@
 @section('content')
 	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 		<div class="container main-content">
-			
+
 			<div class="col-xs-12 col-sm-6 col-md-6" style="float:right;">
 				<div id="regBox">
 					<ul class="headers">
@@ -17,7 +17,7 @@
 					</ul>
 
 					<div id="tab-1" class="login tab-content_reg current">
-						<form action="">
+						<form id="login_form">
 							<div class="form-group form-section">
 								<span class="fa fa-envelope-o input-icon"></span>
 								<input type="email" name="login_email" id="login_email" placeholder="Email">
@@ -35,7 +35,7 @@
 					</div>
 
 					<div id="tab-2" class="register tab-content_reg">
-						<form action="">
+						<form id="registration_form">
 							<div class="form-group form-section">
 								<span class="fa fa-user-o input-icon"></span>
 								<input type="text" name="reg_name" id="reg_name" placeholder="Name">
@@ -53,7 +53,7 @@
 							</div>
 							<div class="form-group form-section">
 								<span class="fa fa-lock input-icon"></span>
-								<input type="password" name="reg_password_cnfrm" id="reg_password_cnfrm" placeholder="Confirm Password">
+								<input type="password" name="reg_password_cnfrm" id="reg_password_confirmation" placeholder="Confirm Password">
 								<small class="field-error help-block"></small>
 							</div>
 							<div class="form-group form-section btn-container">
@@ -71,7 +71,7 @@
 					<li>Step 3: Online form filling</li>
 					<li>Step 4: Document Upload</li>
 					<li>Step 5: Take printout of filled application form and report to the college for further processing.</li>
-				</ul> 
+				</ul>
 			</div>
 
 		</div>
