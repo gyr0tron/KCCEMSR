@@ -34,6 +34,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/academics/newsletter','AcademicsController@getNewsletter')->name('newsletter');
 
   Route::get('/admissions/apply','AdmissionsController@applyOnline')->name('admissions-apply');
+  Route::get('/admissions/student-application','AdmissionsController@studentApplication');
   Route::get('/admissions/{action}','AdmissionsController@get')->name('admissions');
   Route::get('/statutory-affiliations/{action}','AdmissionsController@get')->name('mandatory-disclosure');
   Route::get('/grievance-redressal','GrievanceController@get')->name('grievance-redressal');

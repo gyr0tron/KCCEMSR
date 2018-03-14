@@ -25,4 +25,8 @@ class AdmissionsController extends Controller
   {
     return view('pages.admissions.apply');
   }
+  public function studentApplication()
+  {
+    return view('pages.admissions.student-application');
+  }
 }
