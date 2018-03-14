@@ -20,13 +20,13 @@
 						<form action="">
 							<div class="form-group form-section">
 								<span class="fa fa-envelope-o input-icon"></span>
-								<input type="email" name="name" placeholder="Email">
-								<small class="field-error">The Email is required</small>
+								<input type="email" name="login_email" id="login_email" placeholder="Email">
+								<small class="field-error help-block"></small>
 							</div>
 							<div class="form-group form-section">
 								<span class="fa fa-unlock-alt input-icon"></span>
-								<input type="password" name="password" placeholder="Password">
-								<small class="field-error">Password is required</small>
+								<input type="password" name="login_password" id="login_password"placeholder="Password">
+								<small class="field-error help-block"></small>
 							</div>
 							<div class="form-group form-section btn-container">
 								<input type="submit" value="Login">
@@ -38,23 +38,23 @@
 						<form action="">
 							<div class="form-group form-section">
 								<span class="fa fa-user-o input-icon"></span>
-								<input type="text" name="name" placeholder="Name">
-								<small class="field-error">Name is required</small>
+								<input type="text" name="reg_name" id="reg_name" placeholder="Name">
+								<small class="field-error help-block"></small>
 							</div>
 							<div class="form-group form-section">
 								<span class="fa fa-envelope-o input-icon"></span>
-								<input type="email" name="name" placeholder="Email" class="email">
-								<small class="field-error">The Email is required</small>
+								<input type="email" name="reg_email" id="reg_email" placeholder="Email">
+								<small class="field-error help-block"></small>
 							</div>
 							<div class="form-group form-section">
 								<span class="fa fa-unlock-alt input-icon"></span>
-								<input type="password" name="password" placeholder="Password">
-								<small class="field-error">Password is required</small>
+								<input type="password" name="reg_password" id="reg_password" placeholder="Password">
+								<small class="field-error help-block"></small>
 							</div>
 							<div class="form-group form-section">
 								<span class="fa fa-lock input-icon"></span>
-								<input type="password" name="password_cnfrm" placeholder="Confirm Password">
-								<small class="field-error">Passwords do not match!</small>
+								<input type="password" name="reg_password_cnfrm" id="reg_password_cnfrm" placeholder="Confirm Password">
+								<small class="field-error help-block"></small>
 							</div>
 							<div class="form-group form-section btn-container">
 								<input type="submit" value="Register">
