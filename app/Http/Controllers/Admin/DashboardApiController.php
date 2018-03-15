@@ -776,7 +776,8 @@ class DashboardApiController extends Controller
     $job = new JobList();
     $job->name = $request->input("name","");
     $job->generateUrl();
-    $job->filename = $job->uploadFile($request->file('file'));
+    $file = $request->file('file');
+    if($file) $job->filename = $job->uploadFile($file);
     $job->updated_by = Auth::user()->id;
     $job->created_by = Auth::user()->id;
     $job->save();
