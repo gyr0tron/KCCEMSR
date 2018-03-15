@@ -10,7 +10,7 @@
 		<div class="container main-content">
 			<h1 class="text-center title"><span>Grievance Redressal</span></h1>
 			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 tab-content_reg">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 tab-content_reg current">
 					<form class="well form-horizontal" action=" " method="post" id="grievance_redressal">
 
 						<!-- Text input-->
