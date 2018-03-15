@@ -17,40 +17,38 @@
 			<form class="grid-form">
 				<fieldset>
 					<legend>Branch Preference</legend>
-					<div data-row-span="1">
-						<div data-field-span="1" style="height: 60px;" class="">
-							<div style="display: inline-block;" class="col-md-4 col-sm-4 col-xs-12">
-								<label>Preference 1</label>
-								<select>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								</select>
-							</div>
+					<div data-row-span="3">
+						<div data-field-span="1">
+							<label>Preference 1</label>
+							<select>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+							</select>
+						</div>
 
-							<div style="display: inline-block;" class="col-md-4 col-sm-4 col-xs-12">
-								<label>Preference 2</label>
-								<select>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								</select>
-							</div>
+						<div data-field-span="1">
+							<label>Preference 2</label>
+							<select>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+							</select>
+						</div>
 
-							<div style="display: inline-block;" class="col-md-4 col-sm-4 col-xs-12">
-								<label>Preference 2</label>
-								<select>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-									<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								</select>
-							</div>
+						<div data-field-span="1">
+							<label>Preference 3</label>
+							<select>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+							</select>
+						</div>
 							{{--  <label>Branch Preference</label>
 							<input type="text" autofocus="">  --}}
-						</div>
 					</div>
 				</fieldset>
 
@@ -68,25 +66,23 @@
 							<input id="r3" name="customer-title" type="radio"><label for="r3"> Ms.</label>
 						</div>  --}}
 						<div data-field-span="1" style="height: 55px;">
-							<label style="font-size: 14px;">Full Name</label>
-							<label>(In Capitals)</label>
-							<input type="text">
+							<h2 style="font-size: 22px;bottom: 22px;" class="form-center-relative">Full Name</h2>
 						</div>
 						<div data-field-span="2" style="height: 55px;">
 							<label>Surname</label>
-							<input type="text">
+							<input style="text-transform: uppercase;" type="text">
 						</div>
 						<div data-field-span="2" style="height: 55px;">
 							<label>First Name</label>
-							<input type="text">
+							<input style="text-transform: uppercase;" type="text">
 						</div>
 						<div data-field-span="2" style="height: 55px;">
 							<label>Father's/Husband's Name</label>
-							<input type="text">
+							<input style="text-transform: uppercase;" type="text">
 						</div>
 						<div data-field-span="2" style="height: 55px;">
 							<label>Mother's Name</label>
-							<input type="text">
+							<input style="text-transform: uppercase;" type="text">
 						</div>
 					</div>
 
