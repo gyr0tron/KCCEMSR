@@ -69,7 +69,7 @@
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg" id="chairperson"><strong><span>Chairperson Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12">
 					<div style="width:100%;">
-						<img src="http://via.placeholder.com/235x245" style="margin: 0 auto;" alt="">
+						<img src="{{url("images/chairperson.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
 					</div>
 				</div>
 				<div class="col-md-9 col-sm-9 col-xs-12">
@@ -112,7 +112,7 @@
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>Director - Institutional Development Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12">
 					<div style="width:100%;">
-						<img src="http://via.placeholder.com/235x245" style="margin: 0 auto;" alt="">
+						<img src="{{url("images/director.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
 					</div>
 				</div>
 				<div class="col-md-9 col-sm-9 col-xs-12">
@@ -134,7 +134,7 @@
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>CEO Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12" style="float:right">
 					<div style="width:100%;">
-						<img src="http://via.placeholder.com/235x245" style="margin: 0 auto;" alt="">
+						<img src="{{url("images/ceo.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
 					</div>
 				</div>
 				<div class="col-md-9 col-sm-9 col-xs-12">
@@ -158,7 +158,7 @@
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>Principal Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12">
 					<div style="width:100%;">
-						<img src="http://via.placeholder.com/235x245" style="margin: 0 auto;" alt="">
+						<img src="{{url("images/principal.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
 					</div>
 				</div>
 				<div class="col-md-9 col-sm-9 col-xs-12">

@@ -47,7 +47,7 @@
 				</div>
 
 				<div class="col-md-6">
-					<p>About library</p>
+					<p style="text-align: justify">KCCEMSR Library is situated on 4th Floor. It is managed by professionally qualified staff. It provides essential information resources in print as well as digital / Electronic formats as per need of its academic community. It offers open access to Library collection for better utilization of available information resources. It offers required library services for better utilization of available information resources.</p>
 				</div>
 			</div>
 		</div>
