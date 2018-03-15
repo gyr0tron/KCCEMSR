@@ -61,7 +61,7 @@
 				<fieldset>
 					<legend>Personal Information</legend>
 					<div data-row-span="9">
-						{{--  <div data-field-span="1" style="height: 52px;">
+						{{--  <div data-field-span="1" style="height: 55px;">
 							<label>Title</label>
 							<input id="r1" name="customer-title" type="radio"><label for="r1"> Mr.</label>
 							<input id="r2" name="customer-title" type="radio"><label for="r2"> Mrs.</label>  
@@ -365,7 +365,7 @@
 					</div>
 
 					<div data-row-span="3">
-						{{--  <div data-field-span="2" data-field-error="Please enter a valid email address" style="height: 52px;">
+						{{--  <div data-field-span="2" data-field-error="Please enter a valid email address" style="height: 55px;">
 							<label>E-mail</label>
 							<input type="text">
 						</div>  --}}
@@ -396,41 +396,41 @@
 				<br>
 
 				<fieldset>
-					<legend>Residential address</legend>
+					<legend>Address for Correspondence</legend>
 					<div data-row-span="2">
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Flat no. and bldg. name</label>
 							<input type="text">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Road no./name</label>
 							<input type="text">
 						</div>
 					</div>
 					<div data-row-span="4">
-						<div data-field-span="3" style="height: 52px;">
+						<div data-field-span="3" style="height: 55px;">
 							<label>Area and landmark</label>
 							<input type="text">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>City</label>
 							<input type="text">
 						</div>
 					</div>
 					<div data-row-span="4">
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Telephone Residence</label>
-							<input type="text">
+							<input type="tel">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
-							<label>Office</label>
-							<input type="text">
+						<div data-field-span="1" style="height: 55px;">
+							<label>Phone Number</label>
+							<input type="tel">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
-							<label>Fax</label>
-							<input type="text">
+						<div data-field-span="1" style="height: 55px;">
+							<label>Parent's Phone Number</label>
+							<input type="tel">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Pin code</label>
 							<input type="text">
 						</div>
@@ -440,53 +440,75 @@
 				<br>
 
 				<fieldset>
-					<legend>Mailing Address (If different from the First Accountholder's address)</legend>
-					<div data-row-span="1">
-						<div data-field-span="1" style="height: 52px;">
-							<label>Company name and department/ Flat no. and bldg. name</label>
+					<legend>Permanent Address</legend>
+					<div data-row-span="2">
+						<div data-field-span="1" style="height: 55px;">
+							<label>Flat no. and bldg. name</label>
 							<input type="text">
 						</div>
-					</div>
-					<div data-row-span="4">
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Road no./name</label>
 							<input type="text">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
+					</div>
+					<div data-row-span="4">
+						<div data-field-span="3" style="height: 55px;">
 							<label>Area and landmark</label>
 							<input type="text">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>City</label>
 							<input type="text">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
-							<label>Pin Code</label>
-							<input type="text">
-						</div>
 					</div>
-					<div data-row-span="4">
-						<div data-field-span="1" style="height: 52px;">
+					<div data-row-span="3">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Telephone Residence</label>
-							<input type="text">
+							<input type="tel">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
-							<label>Office</label>
-							<input type="text">
+						<div data-field-span="1" style="height: 55px;">
+							<label>Phone Number</label>
+							<input type="tel">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
-							<label>Fax</label>
-							<input type="text">
+						<div data-field-span="1" style="height: 55px;">
+							<label>Pin code</label>
+							<input type="number">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
-							<label>Mobile No.</label>
+					</div>
+				</fieldset>
+
+				<br>
+
+				<fieldset>
+					<legend>Parent's Information</legend>
+					<div data-row-span="1">
+						<div data-field-span="1" style="height: 55px;">
+							<label>Office Address</label>
 							<input type="text">
 						</div>
 					</div>
-					<div data-row-span="1">
-						<div data-field-span="1" style="height: 52px;">
-							<label>E-mail</label>
+					<div data-row-span="2">
+						<div data-field-span="1" style="height: 55px;">
+							<label>Father's Occupation</label>
 							<input type="text">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Annual Income</label>
+							<input type="number">
+						</div>
+					</div>
+					<div data-row-span="3">
+						<div data-field-span="1" style="height: 55px;">
+							<label>Office Telephone</label>
+							<input type="tel">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Phone Number</label>
+							<input type="tel">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Pin code</label>
+							<input type="number">
 						</div>
 					</div>
 				</fieldset>
@@ -494,27 +516,163 @@
 				<br><br>
 
 				<fieldset>
-					<legend>Details of Introduction by Existing Customer (If applicable)</legend>
-					<div data-row-span="2">
-						<div data-field-span="1" style="height: 52px;" class="">
-							<label>Customer Name</label>
-							<input type="text">
+					<legend>Details of HSC/CET Examination</legend>
+					<div data-row-span="5">
+						<div data-field-span="1" style="height: 55px;">
+							<h2 class="form-center-relative">Physics</h2>
 						</div>
-						<div data-field-span="1" style="height: 52px;">
-							<label>Account No.</label>
-							<input type="text">
+						<div data-field-span="1" style="height: 55px;">
+							<label>Marks Obtained (HSC)*</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Maximum Marks (HSC)*</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Marks Obtained(CET)*</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Maximum Marks(CET)*</label>
+							<input type="number">
 						</div>
 					</div>
-					<div data-row-span="1">
-						<div data-field-span="1" style="height: auto;">
-							<label>Introducer's signature</label>
-							<textarea></textarea>
+					<div data-row-span="5">
+						<div data-field-span="1" style="height: 55px;">
+							<h2 class="form-center-relative">Mathematics</h2>
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Marks Obtained (HSC)*</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Maximum Marks (HSC)*</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Marks Obtained(CET)*</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Maximum Marks(CET)*</label>
+							<input type="number">
 						</div>
 					</div>
+					<div data-row-span="5">
+						<div data-field-span="1" style="height: 55px;">
+							<h2 class="form-center-relative" style="font-size: 2.1rem;">Chem/Bio/BioTech/
+								Tech.voc.</h2>
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Marks Obtained (HSC)*</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Maximum Marks (HSC)*</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Marks Obtained(CET)*</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Maximum Marks(CET)*</label>
+							<input type="number">
+						</div>
+					</div>
+				</fieldset>
 
 				<br><br>
 
 				<fieldset>
+					<legend>Marks Obtained in Various Exams</legend>
+					<div data-row-span="5">
+						<div data-field-span="2" style="height: 55px;">
+							<label>Diploma Branch</label>
+							<input type="text">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Diploma Marks</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Out of</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Percentage</label>
+							<input type="number">
+						</div>
+					</div>
+					<div data-row-span="5">
+						<div data-field-span="1" style="height: 55px;">
+							<h2 class="form-center-relative">SSC</h2>
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Year of Passing</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Board</label>
+							<input type="text">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Marks Obtained</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Total Marks</label>
+							<input type="number">
+						</div>
+					</div>
+					<div data-row-span="5">
+						<div data-field-span="1" style="height: 55px;">
+							<h2 class="form-center-relative">HSC</h2>
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Year of Passing</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Board</label>
+							<input type="text">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Marks Obtained</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Total Marks</label>
+							<input type="number">
+						</div>
+					</div>
+					<div data-row-span="5">
+						<div data-field-span="1" style="height: 55px;">
+							<h2 class="form-center-relative">Diploma</h2>
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Year of Passing</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Board</label>
+							<input type="text">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Marks Obtained</label>
+							<input type="number">
+						</div>
+						<div data-field-span="1" style="height: 55px;">
+							<label>Total Marks</label>
+							<input type="number">
+						</div>
+					</div>
+				</fieldset>
+
+				<br><br>
+
+				{{--  <fieldset>
 					<legend>Account Details</legend>
 					<div data-row-span="2">
 						<div data-field-span="1" style="height: 51px;">
@@ -531,7 +689,7 @@
 						</div>
 					</div>
 					<div data-row-span="1">
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Amount</label>
 							<input type="text">
 						</div>
@@ -553,15 +711,15 @@
 							</div>
 						</div>
 						<div data-row-span="4">
-							<div data-field-span="2" style="height: 52px;">
+							<div data-field-span="2" style="height: 55px;">
 								<label>Amount</label>
 								<input type="text">
 							</div>
-							<div data-field-span="1" style="height: 52px;">
+							<div data-field-span="1" style="height: 55px;">
 								<label>No. of deposits</label>
 								<input type="text">
 							</div>
-							<div data-field-span="1" style="height: 52px;">
+							<div data-field-span="1" style="height: 55px;">
 								<label>Individual Deposit Amount</label>
 								<input type="text">
 							</div>
@@ -584,17 +742,17 @@
 						</div>
 					</div>
 					<div data-row-span="1">
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Job Title</label>
 							<input type="text">
 						</div>
 					</div>
 					<div data-row-span="2">
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Department</label>
 							<input type="text">
 						</div>
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Nature of business</label>
 							<input type="text">
 						</div>
@@ -614,12 +772,12 @@
 						</div>
 					</div>
 					<div data-row-span="2">
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Maritial Status</label>
 							<label><input type="checkbox"> Married</label> &nbsp;
 							<label><input type="checkbox"> Single</label>
 						</div>
-						<div data-field-span="1" style="height: 52px;">
+						<div data-field-span="1" style="height: 55px;">
 							<label>Spouse name</label>
 							<input type="text">
 						</div>
@@ -628,11 +786,11 @@
 					<fieldset>
 						<legend>Other existing bank accounts, if any</legend>
 						<div data-row-span="2">
-							<div data-field-span="1" style="height: 52px;">
+							<div data-field-span="1" style="height: 55px;">
 								<label>Name of the Bank / branch</label>
 								<input type="text">
 							</div>
-							<div data-field-span="1" style="height: 52px;">
+							<div data-field-span="1" style="height: 55px;">
 								<label>Name of the Bank / branch</label>
 								<input type="text">
 							</div>
@@ -643,7 +801,7 @@
 				<fieldset>
 					<legend>Reason for Account opening</legend>
 					<div data-row-span="2">
-						<div data-field-span="1" style="height: 52px;" class="">
+						<div data-field-span="1" style="height: 55px;" class="">
 							<label>Please specify</label>
 							<input type="text">
 						</div>
@@ -658,9 +816,9 @@
 							<label><input type="checkbox"> I/We confirm having read and understood the account rules of The Banking Corporation Limited ('the Bank'), and hereby agree to be bound by the terms and conditions and amendments governing the account(s) issued by the Bank from time-to-time.</label>
 						</div>
 					</div>
-				</fieldset>
+				</fieldset>  --}}
 			</form>
-			<br><br><br><br><br>
+			{{--  <br><br><br><br><br>  --}}
 		</div>
 	</div>
 @endsection
