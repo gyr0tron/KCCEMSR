@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use app\Http\Requests\AdmissionRegisterRequest;
 
 use App\FileUpload;
-use Validator;
 
 class AdmissionsController extends Controller
 {
@@ -30,13 +30,8 @@ class AdmissionsController extends Controller
   {
     return view('pages.admissions.student-application');
   }
-  public function admissionRegister(Request $request)
+  public function admissionRegister(AdmissionRegisterRequest $request)
   {
-    $validator = Validator::make($request->all(), [
-      'reg_name' => 'required',
-      'reg_email' => 'required',
-      'reg_password' => 'required|confirmed',
-    ]);
-    dd($validator);
+    
   }
 }
