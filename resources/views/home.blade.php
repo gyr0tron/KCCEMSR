@@ -20,7 +20,7 @@
 						<h1 class="text-center">We are <span
 							class="txt-rotate"
 							data-period="2000"
-							data-rotate='["simple.", "creative.", "saints of technology!", "developers.", "nerdy." ]'></span></h1>
+							data-rotate='["simple.", "creative.", "developers.", "nerdy." ]'></span></h1>
 							<p class="lead text-center" id="welcome">Our energy introduces us before we start speaking. We are engineers.</p>
 						</div>
 					</div>
