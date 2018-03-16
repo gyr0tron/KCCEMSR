@@ -72,11 +72,11 @@ $(window).scroll(function() {
 
 	if ($(this).scrollTop()>0)
 	 {
-			$('#arw').fadeOut();
+			$('#arw').fadeOut(150);
 	 }
 	else
 	 {
-		$('#arw').fadeIn();
+		$('#arw').fadeIn(150);
 	 }
 });
 
