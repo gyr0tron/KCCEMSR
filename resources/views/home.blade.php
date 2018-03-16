@@ -200,7 +200,8 @@
 <!-- Announcements start -->
 <div class="section default-bg" style="padding-bottom: 10px;">
 	<div class="container">
-		<h1 class="title text-center" id="announcements">Announcements</h1>
+		<a class="anchor_guide" id="announcements"></a>
+		<h1 class="title text-center">Announcements</h1>
 		<div class="separator"></div>
 		<br>
 		<div class="row object-non-visible" data-animation-effect="fadeIn">

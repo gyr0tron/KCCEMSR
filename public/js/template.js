@@ -425,3 +425,12 @@ $('.rolldown-list li').each(function () {
 	});
 });
 
+//bell class change
+document.getElementById("notification").addEventListener('click', toggleClass);
+
+function toggleClass() {
+	document.getElementById("notification").classList.toggle('goDown');
+	setTimeout(function () {
+		document.getElementById("notification").classList.toggle('goDown');
+	}, 1500);
+}
