@@ -13,7 +13,7 @@
 				@if ($type == "exam-notices")
 					<ul class="list-unstyled resp-text-sub align-marg">
 						@foreach (App\FileUpload::where('type',$type)->get() as $fp)
-							<li><i class="fa fa-chevron-right pr-10 text-colored align-marg"></i><a href="{{route('exam-id', [$action, $fp->id])}}">{{$fp->name}}</a><small>&nbsp;&nbsp;{{$fp->created_at->format('d/m/Y')}}<small></li>
+							<li><i class="fa fa-chevron-right pr-10 text-colored align-marg"></i><a href="{{route('exam-id', [$action, $fp->id])}}">{{$fp->name}}</a><small>&nbsp;&nbsp;{{$fp->created_at->format('d/m/Y')}}</small></li>
 						@endforeach
 					</ul>
 				@else
