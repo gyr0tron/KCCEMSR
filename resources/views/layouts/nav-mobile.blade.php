@@ -83,7 +83,7 @@
 							<a href="{{route('lifeatkc')}}">Life At KC</a>
 						</li>
 						<li>
-							<a href="{{route('mediainkc')}}">KC in Media</a>
+							<a href="{{route('kcinmedia')}}">KC in Media</a>
 						</li>
 						<li class="has-dropdown">
 							<a href="#">Statutory Affiliations</a>

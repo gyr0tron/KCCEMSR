@@ -54,7 +54,7 @@ class DepartmentController extends Controller
   }
   public function getMediaAtKc()
   {
-    return view('pages.mediainkc');
+    return view('pages.kcinmedia');
   }
   public function getCareerAtKc_PDF($url)
   {

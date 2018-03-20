@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('pre')
 	@php
-	$menu_item = 'mediainkc';
+	$menu_item = 'kcinmedia';
 @endphp
 @endsection
 @section('content')
@@ -28,7 +28,7 @@
 						</a>
 					</div>
 				</div>
-				
+
 				<div class="col-md-6">
 					<h2 class="title"><span>Title</span></h2>
 					<h4>Sub heading:</h4>
@@ -58,7 +58,7 @@
 						</a>
 					</div>
 				</div>
-				
+
 				<div class="col-md-6">
 					<h2 class="title"><span>Title</span></h2>
 					<h4>Sub heading:</h4>
