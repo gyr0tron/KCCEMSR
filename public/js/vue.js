@@ -12020,7 +12020,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-md-9" }, [
         _c("div", { staticClass: "form-group" }, [
           _c("label", { attrs: { for: "search" } }, [
-            _vm._v("Enter the name of the ebook:")
+            _vm._v("Enter the name of Journal:")
           ]),
           _vm._v(" "),
           _c("input", {

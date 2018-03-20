@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('pre')
 	@php
-	$title = "E-Books & Journals";
+	$title = "Journals";
 	$menu_item = 'library';
 @endphp
 @endsection
@@ -9,7 +9,7 @@
 	<div id="app" class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 		<div class="container main-content-sub">
 			<div class="row">
-				<h1 class="text-center"><strong><span>E-Books & Journals</span></strong></h1>
+				<h1 class="text-center"><strong><span>Journals</span></strong></h1>
 				<div class="space"></div>
 				<ebooks></ebooks>
 			</div>

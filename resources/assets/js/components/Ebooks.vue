@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-9">
           <div class="form-group">
-            <label for="search">Enter the name of the ebook:</label>
+            <label for="search">Enter the name of Journal:</label>
             <input type="text" name="search" id="search" class="form-control">
           </div>
         </div>
