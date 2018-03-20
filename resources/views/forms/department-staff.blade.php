@@ -107,6 +107,13 @@
         </div>
       </div>
       <div class="form-group">
+        <label class="control-label col-sm-2" for="interest">Resume:</label>
+        <div class="col-sm-9">
+          <input type="file" class="form-control" id="file" name="file">
+          <p class="help-block"></p>
+        </div>
+      </div>
+      {{-- <div class="form-group">
         <label class="control-label col-sm-2" for="workshops">Workshops and Training Attended:</label>
         <div class="col-sm-9">
           <textarea class="form-control" id="workshops" name="workshops" rows="4"></textarea>
@@ -119,7 +126,7 @@
           <textarea class="form-control" id="publications" name="publications" rows="4"></textarea>
           <p class="help-block">"." indicates new line.</p>
         </div>
-      </div>
+      </div> --}}
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-4">
           <button type="submit" class="btn btn-primary btn-wide">Add</button>

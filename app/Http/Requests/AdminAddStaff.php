@@ -34,12 +34,12 @@ class AdminAddStaff extends FormRequest
     return [
       'name' => 'required|string',
       'display' => 'required|string',
-      // 'email' => 'required|email',
-      // 'qualification' => 'required|string',
-      // 'designation' => 'required|string',
-      // 'experience' => 'required|integer',
-      // 'interest' => 'required|string',
-      'image' => 'required|image'
+      'image' => 'required|image',
+      'email' => 'email',
+      // 'qualification' => 'string',
+      // 'designation' => 'string',
+      'experience' => 'integer',
+      'interest' => 'string',
     ];
   }
 }

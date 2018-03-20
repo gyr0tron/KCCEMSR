@@ -435,12 +435,21 @@ class DashboardApiController extends Controller
     $staff->experience = $request->input("experience","");
     $staff->interest = $request->input("interest","");
     $staff->department = $request->input("department","");
-    $staff->workshops = $request->input("workshops","");
-    $staff->publications = $request->input("publications","");
+    $file = $request->file('file');
+    if($file) {
+      $upload = new FileUpload();
+      $upload->type = "staff-resume";
+      $upload->name = $request->input('name');
+      $upload->department = $request->input('department');
+      $upload->created_by = Auth::user()->id;
+      $upload->updated_by = Auth::user()->id;
+      $upload->filename = $upload->uploadFile($file, $staff->name, 'public/files/staff/');
+      $upload->save();
+      $staff->file = $upload->id;
+    }
     $staff->created_by = Auth::user()->id;
     $staff->updated_by = Auth::user()->id;
     $staff->uploadImage($request->image);
-
     $count = Staff::where('department', $staff->department)->count();
     $staff->sort = $count+1;
     $staff->save();
@@ -461,12 +470,27 @@ class DashboardApiController extends Controller
     $staff->qualification = $request->input("qualification","");
     $staff->experience = $request->input("experience","");
     $staff->interest = $request->input("interest","");
-    $staff->workshops = $request->input("workshops","");
-    $staff->publications = $request->input("publications","");
     $staff->updated_by = Auth::user()->id;
     if($request->image) {
       $staff->removeImage();
       $staff->uploadImage($request->image);
+    }
+    $file = $request->file('file');
+    if($file) {
+      $upload = FileUpload::where('type','staff-resume')->where('id', $staff->file)->first();
+      if($upload) {
+        $upload->deleteFile('public/files/staff/');
+        $upload->forceDelete();
+      }
+      $upload = new FileUpload();
+      $upload->type = "staff-resume";
+      $upload->name = $request->input('name');
+      $upload->department = $request->input('department');
+      $upload->created_by = Auth::user()->id;
+      $upload->updated_by = Auth::user()->id;
+      $upload->filename = $upload->uploadFile($file, $staff->name, 'public/files/staff/');
+      $upload->save();
+      $staff->file = $upload->id;
     }
     $staff->save();
     return ResponseBuilder::send(true, "", route('admin_department',[$staff->department, 'staff']));
@@ -477,6 +501,11 @@ class DashboardApiController extends Controller
     $id = $request->input("id","-1");
     $staff = Staff::where("id",$id)->first();
     if(!$staff) abort(404, 'Not Found');
+    $upload = FileUpload::where('type','staff-resume')->where('id', $staff->file)->first();
+    if($upload) {
+      $upload->deleteFile('public/files/staff/');
+      $upload->forceDelete();
+    }
     $staff->removeImage();
     $staff->forceDelete();
     return ResponseBuilder::send(true, "", "");

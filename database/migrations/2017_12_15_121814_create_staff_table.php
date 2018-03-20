@@ -23,6 +23,7 @@ class CreateStaffTable extends Migration
       $table->string('experience')->nullable();
       $table->string('designation')->nullable();
       $table->longtext('interest')->nullable();
+      $table->string('file')->nullable();
       $table->longtext('workshops')->nullable();
       $table->longtext('publications')->nullable();
       $table->string('department')->nullable();
