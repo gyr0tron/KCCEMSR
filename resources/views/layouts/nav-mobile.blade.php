@@ -83,7 +83,7 @@
 							<a href="{{route('lifeatkc')}}">Life At KC</a>
 						</li>
 						<li>
-							<a href="{{route('careeratkc')}}">Career At KC</a>
+							<a href="{{route('mediainkc')}}">Career At KC</a>
 						</li>
 						<li class="has-dropdown">
 							<a href="#">Statutory Affiliations</a>

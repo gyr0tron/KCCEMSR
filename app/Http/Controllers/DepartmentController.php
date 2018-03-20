@@ -52,6 +52,10 @@ class DepartmentController extends Controller
   {
     return view('pages.careeratkc');
   }
+  public function getMediaAtKc()
+  {
+    return view('pages.mediainkc');
+  }
   public function getCareerAtKc_PDF($url)
   {
     $job = JobList::where('url',$url)->first();
