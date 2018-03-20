@@ -110,7 +110,7 @@
 									</li>
 									<li class="{{$menu_item=='lifeatkc'?'active':''}} sub-menu-parent"><a href="{{route('lifeatkc')}}">Life At KC</a>
 									</li>
-									<li class="{{$menu_item=='mediainkc'?'active':''}} sub-menu-parent"><a href="{{route('mediainkc')}}">Career At KC</a>
+									<li class="{{$menu_item=='mediainkc'?'active':''}} sub-menu-parent"><a href="{{route('mediainkc')}}">KC in Media</a>
 									</li>
 									<li class="{{$menu_item=='statutory-affiliation'?'active':''}} sub-menu-parent"><a href="#">Statutory Affiliations</a>
 										<ul class="sub-menu">
