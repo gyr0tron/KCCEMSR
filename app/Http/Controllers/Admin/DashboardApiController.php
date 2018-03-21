@@ -701,19 +701,21 @@ class DashboardApiController extends Controller
   {
     $admission_list = FileUpload::admission_list;
     if(!in_array($action, $admission_list)) abort(404, 'Page Not Found');
-    $upload = FileUpload::where('type',$action)->first();
-    if(!$upload) {
-      $upload = new FileUpload();
-      $upload->type = $action;
-      $upload->created_by = Auth::user()->id;
-      $upload->updated_by = Auth::user()->id;
-    }
     if($action == 'aicte-affiliation' || $action == 'scholarship') {
+      $upload = new FileUpload();
+      $upload->created_by = Auth::user()->id;
       $upload->name = $request->input('title', '');
       $upload->filename = $upload->uploadFile($request->file('file'));
     } else {
+      $upload = FileUpload::where('type',$action)->first();
+      if(!$upload) {
+        $upload = new FileUpload();
+        $upload->created_by = Auth::user()->id;
+      }
       $upload->filename = $upload->uploadFile($request->file('file'), $action);
     }
+    $upload->type = $action;
+    $upload->updated_by = Auth::user()->id;
     $upload->save();
     return ResponseBuilder::send(true, "", "");
   }

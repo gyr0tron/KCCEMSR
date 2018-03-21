@@ -76,17 +76,6 @@ $file = App\FileUpload::where('type',$action)->first();
               <button type="submit" class="btn btn-primary btn-wide">Upload</button>
             </div>
           </div>
-          @if ($file)
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-4">
-                @php
-                $name = App\User::find($file->updated_by)->fullname;
-                $date = $file->updated_at->diffForHumans();
-                @endphp
-                <span>Last updated by {{$name}} , {{$date}}.</span>
-              </div>
-            </div>
-          @endif
         </form>
       </div>
     </div>
