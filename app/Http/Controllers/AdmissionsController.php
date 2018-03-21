@@ -13,6 +13,7 @@ class AdmissionsController extends Controller
   {
     if($action == "aicte-affiliation") return view('pages.aicte-affiliation');
     if($action == "total-intake") return view('pages.total-intake');
+    if($action == "scholarship") return view('pages.scholarship');
     $file = FileUpload::where('type', $action)->first();
     if(!$file) abort("404");
     $admission_list = FileUpload::admission_list;
@@ -32,6 +33,6 @@ class AdmissionsController extends Controller
   }
   public function admissionRegister(AdmissionRegisterRequest $request)
   {
-    
+
   }
 }

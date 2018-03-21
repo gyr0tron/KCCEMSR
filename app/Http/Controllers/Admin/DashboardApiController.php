@@ -708,7 +708,7 @@ class DashboardApiController extends Controller
       $upload->created_by = Auth::user()->id;
       $upload->updated_by = Auth::user()->id;
     }
-    if($action == 'aicte-affiliation') {
+    if($action == 'aicte-affiliation' || $action == 'scholarship') {
       $upload->name = $request->input('title', '');
       $upload->filename = $upload->uploadFile($request->file('file'));
     } else {

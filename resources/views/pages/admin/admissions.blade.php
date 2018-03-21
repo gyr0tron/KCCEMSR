@@ -24,6 +24,8 @@
       <div class="col-xs-10">
         @if($action == 'aicte-affiliation')
           @include('forms.aicte-affiliation', compact('action','action_name'))
+        @elseif($action == 'scholarship')
+          @include('forms.scholarship', compact('action','action_name'))
         @else
           @include('forms.admissions', compact('action','action_name'))
         @endif
