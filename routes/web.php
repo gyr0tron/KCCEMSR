@@ -40,6 +40,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/grievance-redressal','GrievanceController@get')->name('grievance-redressal');
 
   Route::get('/staff/profile/{id}','DepartmentController@getProfile')->name('staff-profile');
+  Route::get('/staff/profile/resume/{id}','DepartmentController@getProfileResume')->name('staff-profile-resume');
   Route::get('/event/{url}','DepartmentController@getEvent')->name('event');
   Route::get('/achievement/{id}','DepartmentController@getAchievement')->name('achievement');
 

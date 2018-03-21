@@ -21,52 +21,37 @@
 			<div class="col-md-8 col-sm-7 col-xs-7 line">
 				<div class="row">
 					<h2 class="title text-left resp-text-head align-marg"><strong><span>Designation</span></strong></h1>
-					<p class="text-left resp-text-sub align-marg">{{$staff->designation}}</p>
-				</div>
-				<div class="row">
-					<h2 class="text-left resp-text-head align-marg"><strong>Qualification</strong></h1>
-					<ul class="list-unstyled resp-text-sub align-marg">
-						@foreach ($qualifications as $d)
-							@if (strlen($d) > 2)
-								<li><i class="fa fa-chevron-right pr-10 text-colored align-marg"></i>{{$d}}</li>
-							@endif
-						@endforeach
-					</ul>
-				</div>
-				<div class="row" style="height: 10em;">
-					<h2 class="text-left resp-text-head align-marg"><strong>Experience</strong></h1>
-					<div class="stats">
-						<div class="counting text-left align-marg" data-count="{{$staff->experience}}">0</div>
-						<h5 class="text-left align-marg">Years</h5>
+						<p class="text-left resp-text-sub align-marg">{{$staff->designation}}</p>
 					</div>
-				</div>
-				<div class="row">
-					<h2 class="text-left resp-text-head align-marg"><strong>Area of Interest</strong></h1>
-					<p class="lead text-left resp-text-sub align-marg">{{$staff->interest}}</p>
-				</div>
-				<div class="row">
-					<h2 class="text-left resp-text-head align-marg"><strong>Workshops and Training Attended</strong></h1>
-					<ul class="list-unstyled resp-text-sub align-marg">
-						@foreach ($workshops as $d)
-							@if (strlen($d) > 2)
-								<li><i class="fa fa-chevron-right pr-10 text-colored align-marg"></i>{{$d}}</li>
-							@endif
-						@endforeach
-					</ul>
-				</div>
-				<div class="row">
-					<h2 class="text-left resp-text-head align-marg"><strong>Publications</strong></h1>
-					<ul class="list-unstyled resp-text-sub align-marg">
-						@foreach ($publications as $d)
-							@if (strlen($d) > 2)
-								<li><i class="fa fa-chevron-right pr-10 text-colored align-marg"></i>{{$d}}</li>
-							@endif
-						@endforeach
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-@endsection
-@section('post')
-@endsection
+					<div class="row">
+						<h2 class="text-left resp-text-head align-marg"><strong>Qualification</strong></h1>
+							<ul class="list-unstyled resp-text-sub align-marg">
+								@foreach ($qualifications as $d)
+									@if (strlen($d) > 2)
+										<li><i class="fa fa-chevron-right pr-10 text-colored align-marg"></i>{{$d}}</li>
+									@endif
+								@endforeach
+							</ul>
+						</div>
+						<div class="row" style="height: 10em;">
+							<h2 class="text-left resp-text-head align-marg"><strong>Experience</strong></h1>
+								<div class="stats">
+									<div class="counting text-left align-marg" data-count="{{$staff->experience}}">0</div>
+									<h5 class="text-left align-marg">Years</h5>
+								</div>
+							</div>
+							<div class="row">
+								<h2 class="text-left resp-text-head align-marg"><strong>Area of Interest</strong></h1>
+									<p class="lead text-left resp-text-sub align-marg">{{$staff->interest}}</p>
+								</div>
+								@if ($staff->file)
+									<div class="row">
+										<p class="lead text-left resp-text-sub align-marg"><a class=""href="{{route('staff-profile-resume', $staff->id)}}">View Resume</a></p>
+									</div>
+								@endif
+							</div>
+						</div>
+					</div>
+				@endsection
+				@section('post')
+				@endsection

@@ -11,6 +11,7 @@ use App\Staff;
 use App\Achievement;
 use App\Committee;
 use App\JobList;
+use App\FileUpload;
 use App\ResponseBuilder;
 
 class DepartmentController extends Controller
@@ -30,6 +31,17 @@ class DepartmentController extends Controller
     $staff = StafF::where('id',$id)->first();
     if(!$staff) abort(404, 'Page Not Found');
     return view('pages.staff-profile', compact("staff"));
+  }
+  public function getProfileResume($id)
+  {
+    $staff = StafF::where('id',$id)->first();
+    if(!$staff) abort(404, 'Page Not Found');
+    $title = $staff->name;
+    $fp = FileUpload::where('id', $staff->file)->first();
+    if($fp) $url = $fp->getUrl();
+    else $url = '';
+    $menu_item = "";
+    return view('pages.pdfview', compact("title", "url", "menu_item"));
   }
   public function getEvent($url)
   {
