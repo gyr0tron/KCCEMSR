@@ -156,6 +156,11 @@ class DashboardController extends Controller
   {
     return view('pages.admin.careeratkc');
   }
+  // KC in Media
+  public function kcinmedia()
+  {
+    return view('pages.admin.kcinmedia');
+  }
   // Placements
   public function placements($action)
   {

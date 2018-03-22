@@ -44,6 +44,7 @@ use App\Testimonial;
 use App\Committee;
 use App\Infrastructure;
 use App\JobList;
+use App\KCinMedia;
 use App\ImageUpload;
 use App\ResponseBuilder;
 use Carbon\Carbon;
@@ -828,6 +829,26 @@ class DashboardApiController extends Controller
     if(!$job) abort(404, 'Not Found');
     $job->deleteFile();
     $job->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Add KC in Media
+  public function addKCinMedia(Request $request)
+  {
+    $media = new KCinMedia();
+    $media->name = $request->input("title","");
+    $media->description = $request->input("description","");
+    $media->carousel = $request->input("carousel","");
+    $media->updated_by = Auth::user()->id;
+    $media->created_by = Auth::user()->id;
+    $media->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function removeKCinMedia(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $media = KCinMedia::where("id",$id)->first();
+    if(!$media) abort(404, 'Not Found');
+    $media->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
   // Placements
