@@ -18,36 +18,16 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>1</td>
-						<td>07/07/2017</td>
-						<td>Display of the Time Table, Roll list, EXP. List</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>07/07/2017</td>
-						<td>Display of the Time Table, Roll list, EXP. List</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>07/07/2017</td>
-						<td>Display of the Time Table, Roll list, EXP. List</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>07/07/2017</td>
-						<td>Display of the Time Table, Roll list, EXP. List</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>07/07/2017</td>
-						<td>Display of the Time Table, Roll list, EXP. List</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>07/07/2017</td>
-						<td>Display of the Time Table, Roll list, EXP. List</td>
-					</tr>
+					@php
+						$no = 1;
+					@endphp
+					@foreach (App\FileUpload::where('type', 'curriculum-plan')->orderBy('section','ASC')->get() as $fp)
+						<tr>
+							<td>{{$no++}}</td>
+							<td>{{$fp->section}}</td>
+							<td>{{$fp->name}}</td>
+						</tr>
+					@endforeach
 				</tbody>
 			</table>
 		</div>
