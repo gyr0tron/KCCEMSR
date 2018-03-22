@@ -545,23 +545,29 @@ class DashboardApiController extends Controller
     $id = $request->input("id","-1");
     $anouncement = Announcement::where("id",$id)->first();
     if(!$anouncement) abort(404, 'Not Found');
-    $anouncement->forceDelete();
     if(strlen($anouncement->filename) > 3) $anouncement->deleteFile();
+    $anouncement->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
   // Acadmics
-  public function updateCurriculum(AdminFileUploadDefaultRequest $request)
+  public function addCurriculum(Request $request)
   {
     $type = "curriculum-plan";
-    $upload = FileUpload::where('type',$type)->first();
-    if(!$upload) {
-      $upload = new FileUpload();
-      $upload->type = $type;
-      $upload->created_by = Auth::user()->id;
-      $upload->updated_by = Auth::user()->id;
-    }
-    $upload->filename = $upload->uploadFile($request->file('file'), $type);
+    $upload = new FileUpload();
+    $upload->type = $type;
+    $upload->name = $request->input('title','');
+    $upload->section = $request->input('date','');
+    $upload->created_by = Auth::user()->id;
+    $upload->updated_by = Auth::user()->id;
     $upload->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function removeCurriculum(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $upload = FileUpload::where("id",$id)->where('type','curriculum-plan')->first();
+    if(!$upload) abort(404, 'Not Found');
+    $upload->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
   public function addStaffnotices(AdminAddStaffNotices $request)

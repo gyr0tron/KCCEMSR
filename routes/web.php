@@ -163,7 +163,8 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/department/announcement/remove","Admin\DashboardApiController@removeAnnouncement");
 
 
-  Route::post("/academics/curriculum-plan","Admin\DashboardApiController@updateCurriculum");
+  Route::post("/academics/curriculum-plan/add","Admin\DashboardApiController@addCurriculum");
+  Route::post("/academics/curriculum-plan/remove","Admin\DashboardApiController@removeCurriculum");
   Route::post("/academics/staff-notices/add","Admin\DashboardApiController@addStaffnotices");
   Route::post("/academics/exam/{action}/add","Admin\DashboardApiController@addExamResults");
 

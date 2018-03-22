@@ -6,7 +6,7 @@ $file = App\FileUpload::where('type',$action)->first();
     <h3 class="box-title">{{$action_name}}</h3>
   </div>
   <div class="box-body">
-    <form id="form-curriculum-plan" action="/api/admin/admission/{{$action}}" method="post" enctype="multipart/form-data" data-form="sr">
+    <form id="form-{{$action}}" action="/api/admin/admission/{{$action}}" method="post" enctype="multipart/form-data" data-form="sr">
       <div class="form-group">
         <label class="control-label col-sm-2" for="description">File:</label>
         <div class="col-sm-9">
