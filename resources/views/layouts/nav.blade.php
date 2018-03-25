@@ -79,7 +79,7 @@
 											<li><a href="{{route('admissions', 'scholarship')}}">Scholarship</a></li>
 										</ul>
 									</li>
-									<li class="{{$menu_item=='exam'?'active':''}} sub-menu-parent"><a href="#">Exam</a>
+									<li class=" sub-menu-parent"><a href="#">Exam</a>
 										<ul class="sub-menu">
 											<li><a href="{{route('exam', 'notices')}}">Exam Notices</a></li>
 											<li><a href="{{route('exam', 'timetable')}}">Exam Timetable</a></li>
@@ -87,10 +87,11 @@
 											<li><a href="#">Exam Rules &amp; Procedures</a></li>
 										</ul>
 									</li>
-									<li class="sub-menu-parent"><a href="#">Alumni</a>
+									<li class="{{$menu_item=='alumni'?'active':''}} sub-menu-parent"><a href="#">Alumni</a>
 										<ul class="sub-menu">
 											{{-- <li><a href="#">Student Login/Information</a></li>
 											<li><a href="#">Student Feedback</a></li> --}}
+											<li><a href="{{route('alumni-login')}}">Alumni Login</a></li>
 											<li><a href="#">Alumni Portal</a></li>
 											<li><a href="#">Alumni Association</a></li>
 										</ul>

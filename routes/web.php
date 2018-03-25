@@ -56,6 +56,8 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/kc-in-media','DepartmentController@getMediaAtKc')->name('kcinmedia');
   // Route::get('/career-at-kc/details/{url}','DepartmentController@getCareerAtKc_PDF')->name('careeratkc-details');
   Route::get('/career-at-kc/apply/{url}','DepartmentController@getCareerAtKcApply')->name('careeratkc-apply');
+
+  Route::get('/alumni/login','AlumniController@getLogin')->name('alumni-login');
 });
 
 

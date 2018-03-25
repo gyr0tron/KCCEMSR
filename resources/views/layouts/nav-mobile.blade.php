@@ -61,6 +61,7 @@
 						<li class="has-dropdown">
 							<a href="#">Alumni</a>
 							<ul>
+								<li><a href="{{route('alumni-login')}}">Alumni Login</a></li>
 								<li><a href="#">Alumni Portal</a></li>
 								<li><a href="#">Alumni Association</a></li>
 							</ul>
