@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
       $table->string('fullname');
       $table->string('password');
       $table->enum("access",['0','1','2'])->default('1');
+      $table->enum("type",['0','1','2'])->default('1');//0-Admin, 1-Admission, 2-Alumni
+      $table->enum("verified", ['0', '1'])->default('0');
       $table->string('skin')->default('blue');
       $table->rememberToken();
       $table->timestamps();
