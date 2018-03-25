@@ -32,6 +32,7 @@ class CreateUsersTable extends Migration
       'email' => "admin",
       'fullname' => "admin",
       'access' => "2",
+      'type' => "0",
       "password" => bcrypt("admin"),
       'created_at' => date("Y-m-d H:i:s"),
       'updated_at' => date("Y-m-d H:i:s"),
