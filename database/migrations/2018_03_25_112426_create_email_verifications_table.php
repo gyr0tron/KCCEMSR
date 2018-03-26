@@ -20,6 +20,7 @@ class CreateEmailVerificationsTable extends Migration
       $table->string('tokenid',191)->unique();
       $table->string('token');
       $table->integer('times')->default(0);
+      $table->timestamps();
     });
   }
 
