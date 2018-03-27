@@ -46,7 +46,7 @@
 								</div>
 								@if ($staff->file)
 									<div class="row">
-										<p class="lead text-left resp-text-sub align-marg"><a class=""href="{{route('staff-profile-resume', $staff->id)}}">View Resume</a></p>
+										<p class="lead text-left resp-text-sub align-marg"><a class=""href="{{route('staff-profile-resume', $staff->id)}}">View profile in detail</a></p>
 									</div>
 								@endif
 							</div>
