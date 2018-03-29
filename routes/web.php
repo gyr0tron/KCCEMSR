@@ -34,7 +34,10 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/academics/newsletter','AcademicsController@getNewsletter')->name('newsletter');
 
   Route::get('/admissions/apply','AdmissionsController@applyOnline')->name('admissions-apply');
+  Route::get('/admissions/verify','Auth\AdmissionsController@verify')->name('verify');
   Route::get('/admissions/student-application','AdmissionsController@studentApplication');
+
+
   Route::get('/admissions/{action}','AdmissionsController@get')->name('admissions');
   Route::get('/statutory-affiliations/{action}','AdmissionsController@get')->name('mandatory-disclosure');
   Route::get('/grievance-redressal','GrievanceController@get')->name('grievance-redressal');
@@ -123,7 +126,8 @@ Route::prefix('/api')->group(function () {
   Route::post('/search/question-papers',"LibraryController@searchQuestionPapers");
   Route::post('/search/ebooks',"LibraryController@searchEbooks");
   Route::post('/careeratkc/apply',"DepartmentController@postCareerAtKCApply");
-  Route::post('/admission/register',"AdmissionsController@admissionRegister");
+
+  Route::post('/admission/register',"Auth\AdmissionsController@register");
 });
 
 

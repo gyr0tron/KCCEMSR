@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Http\Requests\AdmissionRegisterRequest;
 
 use App\FileUpload;
 
@@ -30,9 +29,5 @@ class AdmissionsController extends Controller
   public function studentApplication()
   {
     return view('pages.admissions.student-application');
-  }
-  public function admissionRegister(AdmissionRegisterRequest $request)
-  {
-
   }
 }

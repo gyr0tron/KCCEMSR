@@ -53,7 +53,7 @@
 							</div>
 							<div class="form-group form-section">
 								<span class="fa fa-lock input-icon"></span>
-								<input type="password" name="reg_password_cnfrm" id="reg_password_confirmation" placeholder="Confirm Password">
+								<input type="password" name="reg_password_confirmation" id="reg_password_confirmation" placeholder="Confirm Password">
 								<small class="field-error help-block"></small>
 							</div>
 							<div class="form-group form-section btn-container">

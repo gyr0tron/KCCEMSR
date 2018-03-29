@@ -16,7 +16,7 @@ class AdmissionRegisterRequest extends FormRequest
   */
   public function authorize()
   {
-    return Auth::check();
+    return true;
   }
 
   public function response(array $errors)
