@@ -32,4 +32,11 @@
     </div>
   @endsection
   @section('post')
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      setTimeout(function () {
+        window.location = "/";
+      }, 5000);
+    });
+    </script>
   @endsection

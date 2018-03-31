@@ -20,12 +20,12 @@
 						<form id="login_form">
 							<div class="form-group form-section">
 								<span class="fa fa-envelope-o input-icon"></span>
-								<input type="email" name="login_email" id="login_email" placeholder="Email">
+								<input type="email" name="email" id="email" placeholder="Email">
 								<small class="field-error help-block"></small>
 							</div>
 							<div class="form-group form-section">
 								<span class="fa fa-unlock-alt input-icon"></span>
-								<input type="password" name="login_password" id="login_password"placeholder="Password">
+								<input type="password" name="password" id="password" placeholder="Password">
 								<small class="field-error help-block"></small>
 							</div>
 							<div class="form-group form-section btn-container">

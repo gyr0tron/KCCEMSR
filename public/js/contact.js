@@ -50,7 +50,9 @@ $("#registration_form").submit(function(event) {
     fh.show_button();
     var data = response.data;
     if(fh.is_success(data)) {
-
+      ShowMessage("Apply now", data.messages, function(){
+        fh.redirect(data);
+      });
     }
     else {
       fh.set_multierrors(data);
