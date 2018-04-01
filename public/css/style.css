@@ -2213,9 +2213,12 @@ h2.form-center-relative {
 		word-wrap: break-word;
 }
 
-/* h3.form-center-relative {
-		text-align: center;
-    position: relative;
-		bottom: 22px;
-		word-wrap: break-word;
-} */
+/* for subnavbar */
+.inactiveLink {
+   pointer-events: none;
+   cursor: default;
+}
+
+#hover_black_nav:hover {
+    color: #000 !important;
+}
