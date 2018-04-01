@@ -8,10 +8,14 @@
 				<nav role="navigation">
 					<div class="nav-toggle">
 						<span class="nav-back"></span>
-						<span class="nav-title">Menu</span>
+						<span class="nav-title" style="font-weight: bold;">Menu</span>
 						<span class="nav-close"></span>
 					</div>
 					<ul>
+						<li style="background-color: #ffffff;">
+							<a href="" class="inactiveLink" style="color: black;font-weight: bold;">Hello,ALUMNI_NAME</a>
+							<a href="" id="hover_black_nav" style="color: black;font-weight: bold;text-align: right;padding-right: 5%;">Logout</a>
+						</li>
 						<li>
 							<a href="/">Home</a>
 						</li>
