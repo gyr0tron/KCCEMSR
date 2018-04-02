@@ -59,8 +59,8 @@
 								<input type="password" name="reg_password_confirmation" id="reg_password_confirmation" placeholder="Confirm Password">
 								<small class="field-error help-block"></small>
 							</div>
-							<div class="form-group form-section btn-container">
-								<input type="submit" value="Register">
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary btn-block">Register</button>
 							</div>
 						</form>
 					</div>

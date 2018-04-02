@@ -9,6 +9,10 @@ use App\FileUpload;
 
 class AdmissionsController extends Controller
 {
+  public function __construct()
+{
+    $this->middleware('admission', ['only' => ['studentApplication']]);
+}
   public function get($action)
   {
     if($action == "aicte-affiliation") return view('pages.aicte-affiliation');

@@ -12,6 +12,7 @@ use App\ResponseBuilder;
 use App\User;
 use App\EmailVerification;
 use App\Mail\AdmissionRegisterMail;
+use App\Mail\AdmissionWelcomeMail;
 
 
 use App\Http\Requests\AdmissionRegisterRequest;
@@ -43,7 +44,8 @@ class AdmissionsController extends Controller
     $token = $request->input('token');
     $user = EmailVerification::verify($token);
     if($user) {
-      return redirect()->route('admissions-application');
+      Mail::to($user->email)->send(new AdmissionWelcomeMail($user));
+      return redirect()->route('admissions-apply');
     }
     return redirect('/');
   }
