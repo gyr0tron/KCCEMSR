@@ -33,7 +33,7 @@ class AdmissionsController extends Controller
     $user->fullname = $request->input('reg_name');
     $user->username = $request->input('reg_email');
     $user->password = bcrypt($request->input('reg_password'));
-    $user->type = 1;
+    $user->type = '1';
     $user->save();
     $ev = EmailVerification::new($user, $request->input('reg_email'));
     Mail::to($request->input('reg_email'))->send(new AdmissionRegisterMail($user, $ev));
@@ -43,18 +43,24 @@ class AdmissionsController extends Controller
     $token = $request->input('token');
     $user = EmailVerification::verify($token);
     if($user) {
-      return redirect()->route('admissions-apply');
+      return redirect()->route('admissions-application');
     }
     return redirect('/');
   }
-
-
-
   /*
   Login Functions
   */
   public function username()
   {
     return 'email';
+  }
+  protected function credentials(Request $request)
+  {
+    return [
+      'email'    => $request->input('email'),
+      'password' => $request->input('password'),
+      'verified' => '1',
+      'type' => '1',
+    ];
   }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
 use App\FileUpload;
 
 class AdmissionsController extends Controller
@@ -24,6 +25,9 @@ class AdmissionsController extends Controller
   }
   public function applyOnline()
   {
+    if(Auth::check()) {
+      return redirect()->route('admissions-application');
+    }
     return view('pages.admissions.apply');
   }
   public function studentApplication()

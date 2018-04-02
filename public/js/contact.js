@@ -63,6 +63,20 @@ $("#registration_form").submit(function(event) {
     fh.show_button();
   });
 });
+$("#login_form").submit(function(event) {
+  event.preventDefault();
+  fh.reload(this.id);
+  fh.hide_button();
+  axios.post('/api/admission/login', $("#login_form").serialize())
+  .then(function (response) {
+    fh.show_button();
+    window.location = "/";
+  })
+  .catch(function (error) {
+    fh.set_single_error("");
+    fh.show_button();
+  });
+});
 
 
 function ShowMessage(title, content, callback="") {
@@ -86,6 +100,6 @@ $('#OkBox').modal();
 $("#OkBox").on('hidden.bs.modal', function() {
   $('#OkBox').remove();
   if(typeof callback == "function")
-    callback();
+  callback();
 });
 }

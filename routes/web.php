@@ -35,7 +35,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
 
   Route::get('/admissions/apply','AdmissionsController@applyOnline')->name('admissions-apply');
   Route::get('/admissions/verify','Auth\AdmissionsController@verify')->name('verify');
-  Route::get('/admissions/student-application','AdmissionsController@studentApplication');
+  Route::get('/admissions/student-application','AdmissionsController@studentApplication')->name('admissions-application');
 
 
   Route::get('/admissions/{action}','AdmissionsController@get')->name('admissions');
@@ -128,6 +128,7 @@ Route::prefix('/api')->group(function () {
   Route::post('/careeratkc/apply',"DepartmentController@postCareerAtKCApply");
 
   Route::post('/admission/register',"Auth\AdmissionsController@register");
+  Route::post('/admission/login',"Auth\AdmissionsController@login");
 });
 
 

@@ -18,6 +18,9 @@
 
 					<div id="tab-1" class="login tab-content_reg current">
 						<form id="login_form">
+							<div id="error-result" class="alert alert-danger" style="display:none">
+								<span>{{trans('auth.failed')}}</span>
+							</div>
 							<div class="form-group form-section">
 								<span class="fa fa-envelope-o input-icon"></span>
 								<input type="email" name="email" id="email" placeholder="Email">
@@ -28,8 +31,8 @@
 								<input type="password" name="password" id="password" placeholder="Password">
 								<small class="field-error help-block"></small>
 							</div>
-							<div class="form-group form-section btn-container">
-								<input type="submit" value="Login">
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary btn-block">Login</button>
 							</div>
 						</form>
 					</div>
