@@ -38,7 +38,7 @@ class DepartmentController extends Controller
     if(!$staff) abort(404, 'Page Not Found');
     $title = $staff->name;
     $fp = FileUpload::where('id', $staff->file)->first();
-    if($fp) $url = $fp->getUrl();
+    if($fp) $url = $fp->getUrl("public/files/staff/");
     else $url = '';
     $menu_item = "";
     return view('pages.pdfview', compact("title", "url", "menu_item"));
