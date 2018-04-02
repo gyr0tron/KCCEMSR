@@ -1,4 +1,4 @@
-<header class="header fixed clearfix navbar navbar-fixed-top" id="navmain" {{isset($nav_trans)?"data-navtransparent":""}}>
+<header style="padding:0px;"class="header fixed clearfix navbar navbar-fixed-top" id="navmain" {{isset($nav_trans)?"data-navtransparent":""}}>
 	<div class="container" id="head-container">
 		<div class="row">
 			{{-- Toggle navbar --}}
@@ -29,7 +29,7 @@
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 								<ul class="nav navbar-nav" style="width: 100%;" >
-									<li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="" style="pointer-events: none;cursor: default;padding-left: 0px;">Hello, ALUMNI_NAME</a>
+									<li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="" style="color: #fff; pointer-events: none;cursor: default;padding-left: 0px;">Hello, ALUMNI_NAME</a>
 									</li>
 									</li>
 									<li class="sub-menu-parent" style="float: right;" ><a href="/#contact" id="hover_black_nav" style="padding-right: 0px;">Logout</a>
