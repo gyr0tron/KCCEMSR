@@ -32,7 +32,9 @@
 									<li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="" style="color: #fff; pointer-events: none;cursor: default;padding-left: 0px;">Hello, ALUMNI_NAME</a>
 									</li>
 									</li>
-									<li class="sub-menu-parent" style="float: right;" ><a href="/#contact" id="hover_black_nav" style="padding-right: 0px;">Logout</a>
+									<li class="sub-menu-parent" style="float: right;" ><a href="" id="hover_black_nav" style="padding-right: 0px;">Logout</a>
+									</li>
+									<li class="sub-menu-parent" style="float: right;" ><a href="" id="hover_black_nav" style="padding-right: 10px;">Application Form</a>
 									</li>
 								</ul>
 							</div>
