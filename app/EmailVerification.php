@@ -11,7 +11,7 @@ class EmailVerification extends Model
   protected $table = "email_verifications";
   public $timestamps = true;
 
-  public static function new(User $user, $email) {
+  public static function newEmail(User $user, $email) {
     $ev = new Self();
     $ev->userid = $user->id;
     $ev->email = $email;

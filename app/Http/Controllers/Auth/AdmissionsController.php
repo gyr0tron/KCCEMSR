@@ -38,7 +38,7 @@ class AdmissionsController extends Controller
     $user->password = bcrypt($request->input('reg_password'));
     $user->type = '1';
     $user->save();
-    $ev = EmailVerification::new($user, $request->input('reg_email'));
+    $ev = EmailVerification::newEmail($user, $request->input('reg_email'));
     Mail::to($request->input('reg_email'))->send(new AdmissionRegisterMail($user, $ev));
     return ResponseBuilder::send(true, "We have send a email containing the steps to verify your email address.", "/");
   }
