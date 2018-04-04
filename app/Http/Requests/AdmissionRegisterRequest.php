@@ -33,8 +33,18 @@ class AdmissionRegisterRequest extends FormRequest
   {
     return [
       'reg_name' => 'required',
-      'reg_email' => 'required',
+      'reg_email' => 'required|unique:users,email',
       'reg_password' => 'required|confirmed',
+    ];
+  }
+  public function messages()
+  {
+    return [
+      'reg_name.required' => 'Name is required.',
+      'reg_email.required' => 'Email is required.',
+      'reg_email.unique' => 'Email is already taken.',
+      'reg_password.required' => 'Password is required.',
+      'reg_password.confirmed' => 'Passwords does not match.',
     ];
   }
 }
