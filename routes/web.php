@@ -36,6 +36,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/admissions/apply','AdmissionsController@applyOnline')->name('admissions-apply');
   Route::get('/admissions/verify','Auth\AdmissionsController@verify')->name('verify');
   Route::get('/admissions/student-application','AdmissionsController@studentApplication')->name('admissions-application');
+  Route::post('/admissions/student-application','Auth\AdmissionsController@postApplication');
 
 
   Route::get('/admissions/{action}','AdmissionsController@get')->name('admissions');

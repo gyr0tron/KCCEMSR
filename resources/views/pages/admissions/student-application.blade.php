@@ -3,6 +3,12 @@
 	@php
 	$title = "Student Application";
 	$menu_item = 'admissions';
+	$admission = App\Admission::where('userid', Auth::user()->id)->first();
+	if($admission) {
+		$data = json_decode($admission->data);
+	}else {
+		$data = json_decode('{"pre1":"Computer Engineering","pre2":"Computer Engineering","pre3":"Computer Engineering","surname":null,"firstname":null,"fathername":null,"mothername":null,"dob":null,"blood":"A+","nationality":"India","caste":null,"sex":"Male","category":"Open","caddress":null,"croad":null,"carea":null,"ccity":null,"ctelephone":null,"cphone":null,"cparent":null,"cpin":null,"pflat":null,"proad":null,"parea":null,"pcity":null,"ptel":null,"pphone":null,"ppin":null,"parentOffice":null,"parentOccupation":null,"parentIncome":null,"parentOfficeNo1":null,"parentOfficeNo2":null,"parentOfficePin":null,"hscPhysics":null,"hscPhysicsMax":null,"cetPhysics":null,"cetPhysicsMax":null,"hscMaths":null,"hscMathsMax":null,"cetMaths":null,"cetMathsMax":null,"hscChem":null,"hscChemMax":null,"cetChem":null,"cetChemMax":null,"diploma2Branch":null,"diploma2Marks":null,"diploma2Max":null,"diploma2Percent":null,"sscYear":null,"sscBoard":null,"sscMarks":null,"sscMax":null,"hscYear":null,"hscBoard":null,"hscMarks":null,"hscMax":null,"diplomaYear":null,"diplomaBoard":null,"diplomaMarks":null,"diplomaMax":null}');
+	}
 @endphp
 @endsection
 @section('content')
@@ -14,37 +20,35 @@
 		<div class="container main-content">
 			<h1 class="title text-center">Student Application Form To First/Second Year Degree Course In Engineering</h1>
 			{{--  <h2>Sample text lol</h2>  --}}
-			<form class="grid-form">
+			<form id="form-admission" method="post" class="grid-form">
+				{{ csrf_field() }}
 				<fieldset>
 					<legend>Branch Preference</legend>
 					<div data-row-span="3">
 						<div data-field-span="1">
 							<label>Preference 1</label>
-							<select>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+							<select name="pre1">
+								<option value="Computer Engineering" title="Computer Engineering" {{$data->pre1=='Computer Engineering'?"selected":""}}>Computer Engineering</option>
+								<option value="Electronics & Telecommunication" title="Electronics & Telecommunication" {{$data->pre1=='Electronics & Telecommunication'?"selected":""}}>Electronics & Telecommunication</option>
+								<option value="Information Technology" title="Information Technology" {{$data->pre1=='Information Technology'?"selected":""}}>Information Technology</option>
 							</select>
 						</div>
 
 						<div data-field-span="1">
 							<label>Preference 2</label>
-							<select>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+							<select name="pre2">
+								<option value="Computer Engineering" title="Computer Engineering" {{$data->pre2=='Computer Engineering'?"selected":""}}>Computer Engineering</option>
+								<option value="Electronics & Telecommunication" title="Electronics & Telecommunication" {{$data->pre2=='Electronics & Telecommunication'?"selected":""}}>Electronics & Telecommunication</option>
+								<option value="Information Technology" title="Information Technology" {{$data->pre2=='Information Technology'?"selected":""}}>Information Technology</option>
 							</select>
 						</div>
 
 						<div data-field-span="1">
 							<label>Preference 3</label>
-							<select>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
-								<option value="Computer Engineering" title="Computer Engineering">Computer Engineering</option>
+							<select name="pre3">
+								<option value="Computer Engineering" title="Computer Engineering" {{$data->pre3=='Computer Engineering'?"selected":""}}>Computer Engineering</option>
+								<option value="Electronics & Telecommunication" title="Electronics & Telecommunication" {{$data->pre3=='Electronics & Telecommunication'?"selected":""}}>Electronics & Telecommunication</option>
+								<option value="Information Technology" title="Information Technology" {{$data->pre3=='Information Technology'?"selected":""}}>Information Technology</option>
 							</select>
 						</div>
 							{{--  <label>Branch Preference</label>
@@ -62,7 +66,7 @@
 						{{--  <div data-field-span="1" style="height: 55px;">
 							<label>Title</label>
 							<input id="r1" name="customer-title" type="radio"><label for="r1"> Mr.</label>
-							<input id="r2" name="customer-title" type="radio"><label for="r2"> Mrs.</label>  
+							<input id="r2" name="customer-title" type="radio"><label for="r2"> Mrs.</label>
 							<input id="r3" name="customer-title" type="radio"><label for="r3"> Ms.</label>
 						</div>  --}}
 						<div data-field-span="1" style="height: 55px;">
@@ -70,292 +74,47 @@
 						</div>
 						<div data-field-span="2" style="height: 55px;">
 							<label>Surname</label>
-							<input style="text-transform: uppercase;" type="text">
+							<input style="text-transform: uppercase;" type="text" name="surname" value="{{$data->surname}}">
 						</div>
 						<div data-field-span="2" style="height: 55px;">
 							<label>First Name</label>
-							<input style="text-transform: uppercase;" type="text">
+							<input style="text-transform: uppercase;" type="text" name="firstname" value="{{$data->firstname}}">
 						</div>
 						<div data-field-span="2" style="height: 55px;">
 							<label>Father's/Husband's Name</label>
-							<input style="text-transform: uppercase;" type="text">
+							<input style="text-transform: uppercase;" type="text" name="fathername" value="{{$data->fathername}}">
 						</div>
 						<div data-field-span="2" style="height: 55px;">
 							<label>Mother's Name</label>
-							<input style="text-transform: uppercase;" type="text">
+							<input style="text-transform: uppercase;" type="text" name="mothername" value="{{$data->surname}}">
 						</div>
 					</div>
 
 					<div data-row-span="3">
 						<div data-field-span="1" style="height: 60px;">
 							<label>Date of birth</label>
-							<input type="text" placeholder="DD/MM/YYYY">
+							<input type="text" placeholder="DD/MM/YYYY" name="dob" value="{{$data->dob}}">
 						</div>
 						<div data-field-span="1" style="height: 60px;" class="">
 							<label>Blood Group</label>
-							<select>
-								<option value="A+" title="A+">A+</option>
-								<option value="A-" title="A-">A-</option>
-								<option value="B+" title="B+">B+</option>
-								<option value="B-" title="B-">B-</option>
-								<option value="O+" title="O+">O+</option>
-								<option value="O-" title="O-">O-</option>
-								<option value="AB+" title="AB+">AB+</option>
-								<option value="AB-" title="AB-">AB-</option>
+							<select name="blood">
+								@php
+									$bloodGroups = ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"];
+								@endphp
+								@foreach ($bloodGroups as $key)
+									<option value="{{$key}}" title="{{$key}}" {{$data->blood == $key?"selected":""}}>{{$key}}</option>
+								@endforeach
 							</select>
 						</div>
 						<div data-field-span="1" style="height: 60px;" class="">
 							<label>Nationality</label>
-							<select>
-								<option value="Afghanistan" title="Afghanistan">Afghanistan</option>
-								<option value="Ã…land Islands" title="Ã…land Islands">Aland Islands</option>
-								<option value="Albania" title="Albania">Albania</option>
-								<option value="Algeria" title="Algeria">Algeria</option>
-								<option value="American Samoa" title="American Samoa">American Samoa</option>
-								<option value="Andorra" title="Andorra">Andorra</option>
-								<option value="Angola" title="Angola">Angola</option>
-								<option value="Anguilla" title="Anguilla">Anguilla</option>
-								<option value="Antarctica" title="Antarctica">Antarctica</option>
-								<option value="Antigua and Barbuda" title="Antigua and Barbuda">Antigua and Barbuda</option>
-								<option value="Argentina" title="Argentina">Argentina</option>
-								<option value="Armenia" title="Armenia">Armenia</option>
-								<option value="Aruba" title="Aruba">Aruba</option>
-								<option value="Australia" title="Australia">Australia</option>
-								<option value="Austria" title="Austria">Austria</option>
-								<option value="Azerbaijan" title="Azerbaijan">Azerbaijan</option>
-								<option value="Bahamas" title="Bahamas">Bahamas</option>
-								<option value="Bahrain" title="Bahrain">Bahrain</option>
-								<option value="Bangladesh" title="Bangladesh">Bangladesh</option>
-								<option value="Barbados" title="Barbados">Barbados</option>
-								<option value="Belarus" title="Belarus">Belarus</option>
-								<option value="Belgium" title="Belgium">Belgium</option>
-								<option value="Belize" title="Belize">Belize</option>
-								<option value="Benin" title="Benin">Benin</option>
-								<option value="Bermuda" title="Bermuda">Bermuda</option>
-								<option value="Bhutan" title="Bhutan">Bhutan</option>
-								<option value="Bolivia, Plurinational State of" title="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
-								<option value="Bonaire, Sint Eustatius and Saba" title="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
-								<option value="Bosnia and Herzegovina" title="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-								<option value="Botswana" title="Botswana">Botswana</option>
-								<option value="Bouvet Island" title="Bouvet Island">Bouvet Island</option>
-								<option value="Brazil" title="Brazil">Brazil</option>
-								<option value="British Indian Ocean Territory" title="British Indian Ocean Territory">British Indian Ocean Territory</option>
-								<option value="Brunei Darussalam" title="Brunei Darussalam">Brunei Darussalam</option>
-								<option value="Bulgaria" title="Bulgaria">Bulgaria</option>
-								<option value="Burkina Faso" title="Burkina Faso">Burkina Faso</option>
-								<option value="Burundi" title="Burundi">Burundi</option>
-								<option value="Cambodia" title="Cambodia">Cambodia</option>
-								<option value="Cameroon" title="Cameroon">Cameroon</option>
-								<option value="Canada" title="Canada">Canada</option>
-								<option value="Cape Verde" title="Cape Verde">Cape Verde</option>
-								<option value="Cayman Islands" title="Cayman Islands">Cayman Islands</option>
-								<option value="Central African Republic" title="Central African Republic">Central African Republic</option>
-								<option value="Chad" title="Chad">Chad</option>
-								<option value="Chile" title="Chile">Chile</option>
-								<option value="China" title="China">China</option>
-								<option value="Christmas Island" title="Christmas Island">Christmas Island</option>
-								<option value="Cocos (Keeling) Islands" title="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-								<option value="Colombia" title="Colombia">Colombia</option>
-								<option value="Comoros" title="Comoros">Comoros</option>
-								<option value="Congo" title="Congo">Congo</option>
-								<option value="Congo, the Democratic Republic of the" title="Congo, the Democratic Republic of the">Congo, the Democratic Republic of the</option>
-								<option value="Cook Islands" title="Cook Islands">Cook Islands</option>
-								<option value="Costa Rica" title="Costa Rica">Costa Rica</option>
-								<option value="CÃ´te d'Ivoire" title="CÃ´te d'Ivoire">CÃ´te d'Ivoire</option>
-								<option value="Croatia" title="Croatia">Croatia</option>
-								<option value="Cuba" title="Cuba">Cuba</option>
-								<option value="CuraÃ§ao" title="CuraÃ§ao">CuraÃ§ao</option>
-								<option value="Cyprus" title="Cyprus">Cyprus</option>
-								<option value="Czech Republic" title="Czech Republic">Czech Republic</option>
-								<option value="Denmark" title="Denmark">Denmark</option>
-								<option value="Djibouti" title="Djibouti">Djibouti</option>
-								<option value="Dominica" title="Dominica">Dominica</option>
-								<option value="Dominican Republic" title="Dominican Republic">Dominican Republic</option>
-								<option value="Ecuador" title="Ecuador">Ecuador</option>
-								<option value="Egypt" title="Egypt">Egypt</option>
-								<option value="El Salvador" title="El Salvador">El Salvador</option>
-								<option value="Equatorial Guinea" title="Equatorial Guinea">Equatorial Guinea</option>
-								<option value="Eritrea" title="Eritrea">Eritrea</option>
-								<option value="Estonia" title="Estonia">Estonia</option>
-								<option value="Ethiopia" title="Ethiopia">Ethiopia</option>
-								<option value="Falkland Islands (Malvinas)" title="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
-								<option value="Faroe Islands" title="Faroe Islands">Faroe Islands</option>
-								<option value="Fiji" title="Fiji">Fiji</option>
-								<option value="Finland" title="Finland">Finland</option>
-								<option value="France" title="France">France</option>
-								<option value="French Guiana" title="French Guiana">French Guiana</option>
-								<option value="French Polynesia" title="French Polynesia">French Polynesia</option>
-								<option value="French Southern Territories" title="French Southern Territories">French Southern Territories</option>
-								<option value="Gabon" title="Gabon">Gabon</option>
-								<option value="Gambia" title="Gambia">Gambia</option>
-								<option value="Georgia" title="Georgia">Georgia</option>
-								<option value="Germany" title="Germany">Germany</option>
-								<option value="Ghana" title="Ghana">Ghana</option>
-								<option value="Gibraltar" title="Gibraltar">Gibraltar</option>
-								<option value="Greece" title="Greece">Greece</option>
-								<option value="Greenland" title="Greenland">Greenland</option>
-								<option value="Grenada" title="Grenada">Grenada</option>
-								<option value="Guadeloupe" title="Guadeloupe">Guadeloupe</option>
-								<option value="Guam" title="Guam">Guam</option>
-								<option value="Guatemala" title="Guatemala">Guatemala</option>
-								<option value="Guernsey" title="Guernsey">Guernsey</option>
-								<option value="Guinea" title="Guinea">Guinea</option>
-								<option value="Guinea-Bissau" title="Guinea-Bissau">Guinea-Bissau</option>
-								<option value="Guyana" title="Guyana">Guyana</option>
-								<option value="Haiti" title="Haiti">Haiti</option>
-								<option value="Heard Island and McDonald Islands" title="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
-								<option value="Holy See (Vatican City State)" title="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
-								<option value="Honduras" title="Honduras">Honduras</option>
-								<option value="Hong Kong" title="Hong Kong">Hong Kong</option>
-								<option value="Hungary" title="Hungary">Hungary</option>
-								<option value="Iceland" title="Iceland">Iceland</option>
-								<option value="India" title="India">India</option>
-								<option value="Indonesia" title="Indonesia">Indonesia</option>
-								<option value="Iran, Islamic Republic of" title="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
-								<option value="Iraq" title="Iraq">Iraq</option>
-								<option value="Ireland" title="Ireland">Ireland</option>
-								<option value="Isle of Man" title="Isle of Man">Isle of Man</option>
-								<option value="Israel" title="Israel">Israel</option>
-								<option value="Italy" title="Italy">Italy</option>
-								<option value="Jamaica" title="Jamaica">Jamaica</option>
-								<option value="Japan" title="Japan">Japan</option>
-								<option value="Jersey" title="Jersey">Jersey</option>
-								<option value="Jordan" title="Jordan">Jordan</option>
-								<option value="Kazakhstan" title="Kazakhstan">Kazakhstan</option>
-								<option value="Kenya" title="Kenya">Kenya</option>
-								<option value="Kiribati" title="Kiribati">Kiribati</option>
-								<option value="Korea, Democratic People's Republic of" title="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
-								<option value="Korea, Republic of" title="Korea, Republic of">Korea, Republic of</option>
-								<option value="Kuwait" title="Kuwait">Kuwait</option>
-								<option value="Kyrgyzstan" title="Kyrgyzstan">Kyrgyzstan</option>
-								<option value="Lao People's Democratic Republic" title="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
-								<option value="Latvia" title="Latvia">Latvia</option>
-								<option value="Lebanon" title="Lebanon">Lebanon</option>
-								<option value="Lesotho" title="Lesotho">Lesotho</option>
-								<option value="Liberia" title="Liberia">Liberia</option>
-								<option value="Libya" title="Libya">Libya</option>
-								<option value="Liechtenstein" title="Liechtenstein">Liechtenstein</option>
-								<option value="Lithuania" title="Lithuania">Lithuania</option>
-								<option value="Luxembourg" title="Luxembourg">Luxembourg</option>
-								<option value="Macao" title="Macao">Macao</option>
-								<option value="Macedonia, the former Yugoslav Republic of" title="Macedonia, the former Yugoslav Republic of">Macedonia, the former Yugoslav Republic of</option>
-								<option value="Madagascar" title="Madagascar">Madagascar</option>
-								<option value="Malawi" title="Malawi">Malawi</option>
-								<option value="Malaysia" title="Malaysia">Malaysia</option>
-								<option value="Maldives" title="Maldives">Maldives</option>
-								<option value="Mali" title="Mali">Mali</option>
-								<option value="Malta" title="Malta">Malta</option>
-								<option value="Marshall Islands" title="Marshall Islands">Marshall Islands</option>
-								<option value="Martinique" title="Martinique">Martinique</option>
-								<option value="Mauritania" title="Mauritania">Mauritania</option>
-								<option value="Mauritius" title="Mauritius">Mauritius</option>
-								<option value="Mayotte" title="Mayotte">Mayotte</option>
-								<option value="Mexico" title="Mexico">Mexico</option>
-								<option value="Micronesia, Federated States of" title="Micronesia, Federated States of">Micronesia, Federated States of</option>
-								<option value="Moldova, Republic of" title="Moldova, Republic of">Moldova, Republic of</option>
-								<option value="Monaco" title="Monaco">Monaco</option>
-								<option value="Mongolia" title="Mongolia">Mongolia</option>
-								<option value="Montenegro" title="Montenegro">Montenegro</option>
-								<option value="Montserrat" title="Montserrat">Montserrat</option>
-								<option value="Morocco" title="Morocco">Morocco</option>
-								<option value="Mozambique" title="Mozambique">Mozambique</option>
-								<option value="Myanmar" title="Myanmar">Myanmar</option>
-								<option value="Namibia" title="Namibia">Namibia</option>
-								<option value="Nauru" title="Nauru">Nauru</option>
-								<option value="Nepal" title="Nepal">Nepal</option>
-								<option value="Netherlands" title="Netherlands">Netherlands</option>
-								<option value="New Caledonia" title="New Caledonia">New Caledonia</option>
-								<option value="New Zealand" title="New Zealand">New Zealand</option>
-								<option value="Nicaragua" title="Nicaragua">Nicaragua</option>
-								<option value="Niger" title="Niger">Niger</option>
-								<option value="Nigeria" title="Nigeria">Nigeria</option>
-								<option value="Niue" title="Niue">Niue</option>
-								<option value="Norfolk Island" title="Norfolk Island">Norfolk Island</option>
-								<option value="Northern Mariana Islands" title="Northern Mariana Islands">Northern Mariana Islands</option>
-								<option value="Norway" title="Norway">Norway</option>
-								<option value="Oman" title="Oman">Oman</option>
-								<option value="Pakistan" title="Pakistan">Pakistan</option>
-								<option value="Palau" title="Palau">Palau</option>
-								<option value="Palestinian Territory, Occupied" title="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
-								<option value="Panama" title="Panama">Panama</option>
-								<option value="Papua New Guinea" title="Papua New Guinea">Papua New Guinea</option>
-								<option value="Paraguay" title="Paraguay">Paraguay</option>
-								<option value="Peru" title="Peru">Peru</option>
-								<option value="Philippines" title="Philippines">Philippines</option>
-								<option value="Pitcairn" title="Pitcairn">Pitcairn</option>
-								<option value="Poland" title="Poland">Poland</option>
-								<option value="Portugal" title="Portugal">Portugal</option>
-								<option value="Puerto Rico" title="Puerto Rico">Puerto Rico</option>
-								<option value="Qatar" title="Qatar">Qatar</option>
-								<option value="RÃ©union" title="RÃ©union">RÃ©union</option>
-								<option value="Romania" title="Romania">Romania</option>
-								<option value="Russian Federation" title="Russian Federation">Russian Federation</option>
-								<option value="Rwanda" title="Rwanda">Rwanda</option>
-								<option value="Saint BarthÃ©lemy" title="Saint BarthÃ©lemy">Saint BarthÃ©lemy</option>
-								<option value="Saint Helena, Ascension and Tristan da Cunha" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
-								<option value="Saint Kitts and Nevis" title="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-								<option value="Saint Lucia" title="Saint Lucia">Saint Lucia</option>
-								<option value="Saint Martin (French part)" title="Saint Martin (French part)">Saint Martin (French part)</option>
-								<option value="Saint Pierre and Miquelon" title="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-								<option value="Saint Vincent and the Grenadines" title="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
-								<option value="Samoa" title="Samoa">Samoa</option>
-								<option value="San Marino" title="San Marino">San Marino</option>
-								<option value="Sao Tome and Principe" title="Sao Tome and Principe">Sao Tome and Principe</option>
-								<option value="Saudi Arabia" title="Saudi Arabia">Saudi Arabia</option>
-								<option value="Senegal" title="Senegal">Senegal</option>
-								<option value="Serbia" title="Serbia">Serbia</option>
-								<option value="Seychelles" title="Seychelles">Seychelles</option>
-								<option value="Sierra Leone" title="Sierra Leone">Sierra Leone</option>
-								<option value="Singapore" title="Singapore">Singapore</option>
-								<option value="Sint Maarten (Dutch part)" title="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
-								<option value="Slovakia" title="Slovakia">Slovakia</option>
-								<option value="Slovenia" title="Slovenia">Slovenia</option>
-								<option value="Solomon Islands" title="Solomon Islands">Solomon Islands</option>
-								<option value="Somalia" title="Somalia">Somalia</option>
-								<option value="South Africa" title="South Africa">South Africa</option>
-								<option value="South Georgia and the South Sandwich Islands" title="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
-								<option value="South Sudan" title="South Sudan">South Sudan</option>
-								<option value="Spain" title="Spain">Spain</option>
-								<option value="Sri Lanka" title="Sri Lanka">Sri Lanka</option>
-								<option value="Sudan" title="Sudan">Sudan</option>
-								<option value="Suriname" title="Suriname">Suriname</option>
-								<option value="Svalbard and Jan Mayen" title="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
-								<option value="Swaziland" title="Swaziland">Swaziland</option>
-								<option value="Sweden" title="Sweden">Sweden</option>
-								<option value="Switzerland" title="Switzerland">Switzerland</option>
-								<option value="Syrian Arab Republic" title="Syrian Arab Republic">Syrian Arab Republic</option>
-								<option value="Taiwan, Province of China" title="Taiwan, Province of China">Taiwan, Province of China</option>
-								<option value="Tajikistan" title="Tajikistan">Tajikistan</option>
-								<option value="Tanzania, United Republic of" title="Tanzania, United Republic of">Tanzania, United Republic of</option>
-								<option value="Thailand" title="Thailand">Thailand</option>
-								<option value="Timor-Leste" title="Timor-Leste">Timor-Leste</option>
-								<option value="Togo" title="Togo">Togo</option>
-								<option value="Tokelau" title="Tokelau">Tokelau</option>
-								<option value="Tonga" title="Tonga">Tonga</option>
-								<option value="Trinidad and Tobago" title="Trinidad and Tobago">Trinidad and Tobago</option>
-								<option value="Tunisia" title="Tunisia">Tunisia</option>
-								<option value="Turkey" title="Turkey">Turkey</option>
-								<option value="Turkmenistan" title="Turkmenistan">Turkmenistan</option>
-								<option value="Turks and Caicos Islands" title="Turks and Caicos Islands">Turks and Caicos Islands</option>
-								<option value="Tuvalu" title="Tuvalu">Tuvalu</option>
-								<option value="Uganda" title="Uganda">Uganda</option>
-								<option value="Ukraine" title="Ukraine">Ukraine</option>
-								<option value="United Arab Emirates" title="United Arab Emirates">United Arab Emirates</option>
-								<option value="United Kingdom" title="United Kingdom">United Kingdom</option>
-								<option value="United States" title="United States">United States</option>
-								<option value="United States Minor Outlying Islands" title="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
-								<option value="Uruguay" title="Uruguay">Uruguay</option>
-								<option value="Uzbekistan" title="Uzbekistan">Uzbekistan</option>
-								<option value="Vanuatu" title="Vanuatu">Vanuatu</option>
-								<option value="Venezuela, Bolivarian Republic of" title="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
-								<option value="Viet Nam" title="Viet Nam">Viet Nam</option>
-								<option value="Virgin Islands, British" title="Virgin Islands, British">Virgin Islands, British</option>
-								<option value="Virgin Islands, U.S." title="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
-								<option value="Wallis and Futuna" title="Wallis and Futuna">Wallis and Futuna</option>
-								<option value="Western Sahara" title="Western Sahara">Western Sahara</option>
-								<option value="Yemen" title="Yemen">Yemen</option>
-								<option value="Zambia" title="Zambia">Zambia</option>
-								<option value="Zimbabwe" title="Zimbabwe">Zimbabwe</option>
+							<select name="nationality">
+								@php
+								$countries = array("Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegowina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad", "Chile", "China", "Christmas Island", "Cocos (Keeling) Islands", "Colombia", "Comoros", "Congo", "Congo, the Democratic Republic of the", "Cook Islands", "Costa Rica", "Cote d'Ivoire", "Croatia (Hrvatska)", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands (Malvinas)", "Faroe Islands", "Fiji", "Finland", "France", "France Metropolitan", "French Guiana", "French Polynesia", "French Southern Territories", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard and Mc Donald Islands", "Holy See (Vatican City State)", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, Democratic People's Republic of", "Korea, Republic of", "Kuwait", "Kyrgyzstan", "Lao, People's Democratic Republic", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libyan Arab Jamahiriya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia, The Former Yugoslav Republic of", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia, Federated States of", "Moldova, Republic of", "Monaco", "Mongolia", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russian Federation", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Seychelles", "Sierra Leone", "Singapore", "Slovakia (Slovak Republic)", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia and the South Sandwich Islands", "Spain", "Sri Lanka", "St. Helena", "St. Pierre and Miquelon", "Sudan", "Suriname", "Svalbard and Jan Mayen Islands", "Swaziland", "Sweden", "Switzerland", "Syrian Arab Republic", "Taiwan, Province of China", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Togo", "Tokelau", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "United States Minor Outlying Islands", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Virgin Islands (British)", "Virgin Islands (U.S.)", "Wallis and Futuna Islands", "Western Sahara", "Yemen", "Yugoslavia", "Zambia", "Zimbabwe");
+								@endphp
+								@foreach ($countries as $key)
+									<option value="{{$key}}" title="{{$key}}" {{$data->nationality==$key?"selected":""}}>{{$key}}</option>
+								@endforeach
 							</select>
 						</div>
 					</div>
@@ -367,28 +126,33 @@
 						</div>  --}}
 						<div data-field-span="1" style="height: 60px;">
 							<label>Caste</label>
-							<input type="text">
+							<input type="text" name="caste" value="{{$data->caste}}">
 						</div>
 						<div data-field-span="1" style="height: 60px;">
 							<label>Sex</label>
-							<select>
-								<option value="Male" title="Male">Male</option>
-								<option value="Female" title="Female">Female</option>
-								<option value="Other" title="Other">Other</option>
-								<option value="Prefer not to say" title="Prefer not to say">Prefer not to say</option>
+							<select name="sex">
+								@php
+									$sexs = ["Male", "Female", "Other", "Prefer not to say"];
+								@endphp
+								@foreach ($sexs as $key)
+									<option value="{{$key}}" title="{{$key}}" {{$data->sex==$key?"selected":""}}>{{$key}}</option>
+								@endforeach
 							</select>
 						</div>
 						<div data-field-span="1" style="height: 60px;">
 							<label>Category</label>
-							<select>
-								<option value="Open" title="Open">Open</option>
-								<option value="SV" title="SV">SC</option>
-								<option value="OBC" title="OBC">OBC</option>
+							<select name="category">
+								@php
+									$categories = ["Open", "SV", "OBC"];
+								@endphp
+								@foreach ($categories as $key)
+									<option value="{{$key}}" title="{{$key}}" {{$data->category==$key?"selected":""}}>{{$key}}</option>
+								@endforeach
 							</select>
 						</div>
 					</div>
 				</fieldset>
-			
+
 				<br>
 
 				<fieldset>
@@ -396,43 +160,43 @@
 					<div data-row-span="2">
 						<div data-field-span="1" style="height: 55px;">
 							<label>Flat no. and bldg. name</label>
-							<input type="text">
+							<input type="text" name="caddress" value="{{$data->caddress}}">
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Road no./name</label>
-							<input type="text">
+							<input type="text" name="croad" value="{{$data->croad}}">
 						</div>
 					</div>
 					<div data-row-span="4">
 						<div data-field-span="3" style="height: 55px;">
 							<label>Area and landmark</label>
-							<input type="text">
+							<input type="text" name="carea" value="{{$data->carea}}">
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>City</label>
-							<input type="text">
+							<input type="text" name="ccity" value="{{$data->ccity}}">
 						</div>
 					</div>
 					<div data-row-span="4">
 						<div data-field-span="1" style="height: 55px;">
 							<label>Telephone Residence</label>
-							<input type="tel">
+							<input type="tel" name="ctelephone" value="{{$data->ctelephone}}">
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Phone Number</label>
-							<input type="tel">
+							<input type="tel" name="cphone" value="{{$data->cphone}}">
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Parent's Phone Number</label>
-							<input type="tel">
+							<input type="tel" name="cparent" value="{{$data->cparent}}">
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Pin code</label>
-							<input type="text">
+							<input type="text" name="cpin" value="{{$data->cpin}}">
 						</div>
 					</div>
 				</fieldset>
-				
+
 				<br>
 
 				<fieldset>
@@ -440,35 +204,35 @@
 					<div data-row-span="2">
 						<div data-field-span="1" style="height: 55px;">
 							<label>Flat no. and bldg. name</label>
-							<input type="text">
+							<input type="text" name="pflat" value={{$data->pflat}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Road no./name</label>
-							<input type="text">
+							<input type="text" name="proad" value={{$data->proad}}>
 						</div>
 					</div>
 					<div data-row-span="4">
 						<div data-field-span="3" style="height: 55px;">
 							<label>Area and landmark</label>
-							<input type="text">
+							<input type="text" name="parea" value={{$data->parea}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>City</label>
-							<input type="text">
+							<input type="text" name="pcity" value={{$data->pcity}}>
 						</div>
 					</div>
 					<div data-row-span="3">
 						<div data-field-span="1" style="height: 55px;">
 							<label>Telephone Residence</label>
-							<input type="tel">
+							<input type="tel" name="ptel" value={{$data->ptel}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Phone Number</label>
-							<input type="tel">
+							<input type="tel" name="pphone" value={{$data->pphone}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Pin code</label>
-							<input type="number">
+							<input type="number" name="ppin" value={{$data->ppin}}>
 						</div>
 					</div>
 				</fieldset>
@@ -480,31 +244,31 @@
 					<div data-row-span="1">
 						<div data-field-span="1" style="height: 55px;">
 							<label>Office Address</label>
-							<input type="text">
+							<input type="text" name="parentOffice" value={{$data->parentOffice}}>
 						</div>
 					</div>
 					<div data-row-span="2">
 						<div data-field-span="1" style="height: 55px;">
 							<label>Father's Occupation</label>
-							<input type="text">
+							<input type="text" name="parentOccupation" value={{$data->parentOccupation}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Annual Income</label>
-							<input type="number">
+							<input type="number" name="parentIncome" value={{$data->parentIncome}}>
 						</div>
 					</div>
 					<div data-row-span="3">
 						<div data-field-span="1" style="height: 55px;">
 							<label>Office Telephone</label>
-							<input type="tel">
+							<input type="tel" name="parentOfficeNo1" value={{$data->parentOfficeNo1}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Phone Number</label>
-							<input type="tel">
+							<input type="tel" name="parentOfficeNo2" value={{$data->parentOfficeNo2}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Pin code</label>
-							<input type="number">
+							<input type="number" name="parentOfficePin" value={{$data->parentOfficePin}}>
 						</div>
 					</div>
 				</fieldset>
@@ -519,19 +283,19 @@
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Marks Obtained (HSC)*</label>
-							<input type="number">
+							<input type="number" name="hscPhysics" value={{$data->hscPhysics}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Maximum Marks (HSC)*</label>
-							<input type="number">
+							<input type="number" name="hscPhysicsMax" value={{$data->hscPhysicsMax}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Marks Obtained(CET)*</label>
-							<input type="number">
+							<input type="number" name="cetPhysics" value={{$data->cetPhysics}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Maximum Marks(CET)*</label>
-							<input type="number">
+							<input type="number" name="cetPhysicsMax" value={{$data->cetPhysicsMax}}>
 						</div>
 					</div>
 					<div data-row-span="5">
@@ -540,19 +304,19 @@
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Marks Obtained (HSC)*</label>
-							<input type="number">
+							<input type="number" name="hscMaths" value={{$data->hscMaths}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Maximum Marks (HSC)*</label>
-							<input type="number">
+							<input type="number" name="hscMathsMax" value={{$data->hscMathsMax}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Marks Obtained(CET)*</label>
-							<input type="number">
+							<input type="number" name="cetMaths" value={{$data->cetMaths}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Maximum Marks(CET)*</label>
-							<input type="number">
+							<input type="number" name="cetMathsMax" value={{$data->cetMathsMax}}>
 						</div>
 					</div>
 					<div data-row-span="5">
@@ -562,19 +326,19 @@
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Marks Obtained (HSC)*</label>
-							<input type="number">
+							<input type="number" name="hscChem" value={{$data->hscChem}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Maximum Marks (HSC)*</label>
-							<input type="number">
+							<input type="number" name="hscChemMax" value={{$data->hscChemMax}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Marks Obtained(CET)*</label>
-							<input type="number">
+							<input type="number" name="cetChem" value={{$data->cetChem}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Maximum Marks(CET)*</label>
-							<input type="number">
+							<input type="number" name="cetChemMax" value={{$data->cetChemMax}}>
 						</div>
 					</div>
 				</fieldset>
@@ -586,19 +350,19 @@
 					<div data-row-span="5">
 						<div data-field-span="2" style="height: 55px;">
 							<label>Diploma Branch</label>
-							<input type="text">
+							<input type="text" name="diploma2Branch" value={{$data->diploma2Branch}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Diploma Marks</label>
-							<input type="number">
+							<input type="number" name="diploma2Marks" value={{$data->diploma2Marks}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Out of</label>
-							<input type="number">
+							<input type="number" name="diploma2Max" value={{$data->diploma2Max}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Percentage</label>
-							<input type="number">
+							<input type="number" name="diploma2Percent" value={{$data->diploma2Percent}}>
 						</div>
 					</div>
 					<div data-row-span="5">
@@ -607,19 +371,19 @@
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Year of Passing</label>
-							<input type="number">
+							<input type="number" name="sscYear" value={{$data->sscYear}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Board</label>
-							<input type="text">
+							<input type="text" name="sscBoard" value={{$data->sscBoard}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Marks Obtained</label>
-							<input type="number">
+							<input type="number" name="sscMarks" value={{$data->sscMarks}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Total Marks</label>
-							<input type="number">
+							<input type="number" name="sscMax" value={{$data->sscMax}}>
 						</div>
 					</div>
 					<div data-row-span="5">
@@ -628,19 +392,19 @@
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Year of Passing</label>
-							<input type="number">
+							<input type="number" name="hscYear" value={{$data->hscYear}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Board</label>
-							<input type="text">
+							<input type="text"  name="hscBoard" value={{$data->hscBoard}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Marks Obtained</label>
-							<input type="number">
+							<input type="number" name="hscMarks" value={{$data->hscMarks}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Total Marks</label>
-							<input type="number">
+							<input type="number" name="hscMax" value={{$data->hscMax}}>
 						</div>
 					</div>
 					<div data-row-span="5">
@@ -649,19 +413,19 @@
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Year of Passing</label>
-							<input type="number">
+							<input type="number" name="diplomaYear" value={{$data->diplomaYear}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Board</label>
-							<input type="text">
+							<input type="text" name="diplomaBoard" value={{$data->diplomaBoard}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Marks Obtained</label>
-							<input type="number">
+							<input type="number" name="diplomaMarks" value={{$data->diplomaMarks}}>
 						</div>
 						<div data-field-span="1" style="height: 55px;">
 							<label>Total Marks</label>
-							<input type="number">
+							<input type="number" name="diplomaMax" value={{$data->diplomaMax}}>
 						</div>
 					</div>
 				</fieldset>
@@ -813,6 +577,8 @@
 						</div>
 					</div>
 				</fieldset>  --}}
+				<button type="submit" name="submit" value="save" class="btn btn-primary" style="margin-right:20px">Save</button>
+				<button type="submit" name="submit" value="proceed" class="btn btn-primary">Proceed</button>
 			</form>
 			{{--  <br><br><br><br><br>  --}}
 		</div>

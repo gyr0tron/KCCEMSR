@@ -10,6 +10,7 @@ use Auth;
 use Mail;
 use App\ResponseBuilder;
 use App\User;
+use App\Admission;
 use App\EmailVerification;
 use App\Mail\AdmissionRegisterMail;
 use App\Mail\AdmissionWelcomeMail;
@@ -24,7 +25,8 @@ class AdmissionsController extends Controller
   protected $redirectTo = '/';
   public function __construct()
   {
-    $this->middleware('guest');
+    $this->middleware('guest')->except(['postApplication']);
+    $this->middleware('admission')->only(['postApplication']);
   }
 
   public function register(AdmissionRegisterRequest $request)
@@ -64,5 +66,19 @@ class AdmissionsController extends Controller
       'verified' => '1',
       'type' => '1',
     ];
+  }
+  public function postApplication(Request $request)
+  {
+    $data = $request->all();
+    unset($data['_token']);
+    $admission = Admission::where('userid', Auth::user()->id)->first();
+    if(!$admission) {
+      $admission = new Admission();
+    }
+    $admission->userid = Auth::user()->id;
+    $admission->data = json_encode($data);
+    $admission->save();
+    if($data['submit'] == "proceed") return $data;
+    return view('pages.admissions.student-application');
   }
 }
