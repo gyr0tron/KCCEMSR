@@ -25,8 +25,8 @@ class AdmissionsController extends Controller
   protected $redirectTo = '/';
   public function __construct()
   {
-    $this->middleware('guest')->except(['postApplication']);
-    $this->middleware('admission')->only(['postApplication']);
+    $this->middleware('guest')->except(['postApplication', 'printApplication']);
+    $this->middleware('admission')->only(['postApplication', 'printApplication']);
   }
 
   public function register(AdmissionRegisterRequest $request)
@@ -78,7 +78,14 @@ class AdmissionsController extends Controller
     $admission->userid = Auth::user()->id;
     $admission->data = json_encode($data);
     $admission->save();
-    if($data['submit'] == "proceed") return $data;
+    if($data['submit'] == "proceed") {
+      $admission->completed = '1';
+      $admission->save();
+    };
     return view('pages.admissions.student-application');
+  }
+  public function printApplication()
+  {
+    return view('pages.admissions.student-application-print');
   }
 }

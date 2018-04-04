@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('pre')
 	@php
-	$title = "Student Application";
+	$title = "Print student Application";
 	$menu_item = 'admissions';
-	$admission = App\Admission::where('userid', Auth::user()->id)->first();
+	$nonav = true;
 @endphp
 @endsection
 @section('content')
@@ -13,11 +13,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 		<div class="container main-content">
-			@if (!$admission || ($admission->completed == 0))
-				@include('forms.student-application')
-			@else
-				<a href="{{route('admissions-application-print')}}" target="_blank" class="btn btn-primary">Print</a>
-			@endif
+
 		</div>
 	</div>
 @endsection

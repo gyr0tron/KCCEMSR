@@ -23,8 +23,10 @@
 </head>
 <body class="no-trans">
   <div class="scrollToTop"><i class="icon-up-open-big"></i></div>
-  @include('layouts.nav')
-  @include('layouts.nav-mobile')
+  @if (!isset($nonav))
+    @include('layouts.nav')
+    @include('layouts.nav-mobile')
+  @endif
   @yield('content')
   @include('layouts.footer')
   <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
