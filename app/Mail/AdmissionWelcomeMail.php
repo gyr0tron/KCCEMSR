@@ -13,7 +13,7 @@ class AdmissionWelcomeMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subject = "[kccemsr.edu.in] Welcome";
+    public $subject = "Welcome";
     public $user;
 
     /**

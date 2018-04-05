@@ -14,7 +14,7 @@ class AdmissionRegisterMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subject = "[kccemsr.edu.in] Email Verification";
+    public $subject = "Email Verification";
     public $user;
     public $ev;
 
