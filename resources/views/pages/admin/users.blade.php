@@ -59,7 +59,7 @@
                 </tr>
               </thead>
               <tbody>
-                @foreach (App\User::all() as $user)
+                @foreach (App\User::where('type','0')->get() as $user)
                   <tr>
                     <td>{{$user->username}}</td>
                     <td>{{$user->fullname}}</td>
