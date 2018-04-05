@@ -95,12 +95,12 @@
 						<div role="tabpanel" class="tab-pane" id="editTeam">
 							<h3><span>Editorial Team</span></h3>
 							<ul style="list-style: none; padding-left: 0px;">
-								<li>Prof. Rajiv Iyer(HOD EXTC,KCCEMSR).</li>
-								<li>Prof. Asmita Deshmukh(HOD COMPUTER,KCCEMSR).</li>
-								<li>Prof. Amarja Adgaonkar(HOD IT,KCCEMSR).</li>
-								<li>Prof. Poornima Mahesh (HOD ELECTRONICS,KCCEMSR).</li>
-								<li>Prof. Rupinder Kaur (EXTC Department).</li>
-								<li>Prof. Sana Haji Naik (Computer Department).</li>
+								<li>Prof. Rajiv Iyer(HOD EXTC,KCCEMSR).</br><small>rajiv.iyer@kccemsr.edu.in</small></li>
+								<li>Prof. Asmita Deshmukh(HOD COMPUTER,KCCEMSR).</br><small>asmita.deshmukh@kccemsr.edu.in</small></li>
+								<li>Prof. Amarja Adgaonkar(HOD IT,KCCEMSR).</br><small>amarja.adgaonkar@kccemsr.edu.in</small></li>
+								<li>Prof. Poornima Mahesh (HOD ELECTRONICS,KCCEMSR).</br><small>poornima.mahesh@kccemsr.edu.in</small></li>
+								<li>Prof. Rupinder Kaur (EXTC Department).</br><small>rupinder.kaur@kccemsr.edu.in</small></li>
+								<li>Prof. Sana Haji Naik (Computer Department).</br><small>sana.naik@kccemsr.edu.in</small></li>
 							</ul>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="gc">
@@ -118,6 +118,9 @@
 							<ul style="list-style: none; padding-left: 0px;">
 								<li>Dr. Hansraj Guhilot, Principal, K. C College of Engineering and Management Studies and Research, Thane.</li>
 								<li>&nbsp;</li>
+								<li><h3><span>Publisher's Name<span></h3></li>
+								<li>K. C College of Engineering and Management Studies and Research, Thane.</li>
+								{{-- <li>&nbsp;</li> --}}
 								<li class="fa fa-envelope"> technovision@kccemsr.edu.in</li>
 								<li>Excelssior Education Society’s</li>
 								<li>K. C. College of engineering &amp; Management studies &amp; Research,</li>
