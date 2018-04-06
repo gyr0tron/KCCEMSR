@@ -419,6 +419,18 @@ if($admission) {
 
   <br><br>
 
+   <fieldset>
+    <legend>Photograph</legend>
+    <div data-row-span="1">
+      <div data-field-span="1" style="height: 55px;">
+        <label>Upload your Photograph</label>
+        <input type="file" id="profile_pic" name="profile_pic" accept=".jpg, .jpeg, .png">
+      </div>
+    </div>
+  </fieldset>
+
+  <br><br>
+
   {{--  <fieldset>
     <legend>Account Details</legend>
     <div data-row-span="2">
