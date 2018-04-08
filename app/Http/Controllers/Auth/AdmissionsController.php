@@ -18,6 +18,7 @@ use App\Mail\AdmissionWelcomeMail;
 
 use App\Http\Requests\AdmissionRegisterRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\StudentApplicationRequest;
 
 class AdmissionsController extends Controller
 {
@@ -77,6 +78,11 @@ class AdmissionsController extends Controller
     }
     $admission->userid = Auth::user()->id;
     $admission->data = json_encode($data);
+    if($request->image) {
+      $admission->deleteImage();
+      // return $request->image;
+      $admission->uploadImage($request->file('image'));
+    }
     $admission->save();
     if($data['submit'] == "proceed") {
       $admission->completed = '1';

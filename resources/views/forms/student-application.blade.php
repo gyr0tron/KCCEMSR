@@ -6,8 +6,17 @@ if($admission) {
 }
 @endphp
 <h1 class="title text-center">Student Application Form To First/Second Year Degree Course In Engineering</h1>
+@if (isset($errors) && count($errors) > 0)
+       <div class="alert alert-danger">
+           <ul>
+               @foreach ($errors->all() as $error)
+                   <li>{{ $error }}</li>
+               @endforeach
+           </ul>
+       </div>
+   @endif
 {{--  <h2>Sample text lol</h2>  --}}
-<form id="form-admission" method="post" class="grid-form">
+<form id="form-admission" method="post" class="grid-form" enctype="multipart/form-data">
   {{ csrf_field() }}
   <fieldset>
     <legend>Branch Preference</legend>
@@ -424,158 +433,11 @@ if($admission) {
     <div data-row-span="1">
       <div data-field-span="1" style="height: 55px;">
         <label>Upload your Photograph</label>
-        <input type="file" id="profile_pic" name="profile_pic" accept=".jpg, .jpeg, .png">
-      </div>
-    </div>
-  </fieldset>
-
-  <br><br>
-
-  {{--  <fieldset>
-    <legend>Account Details</legend>
-    <div data-row-span="2">
-      <div data-field-span="1" style="height: 51px;">
-        <label>Choice of account</label>
-        <label><input type="checkbox"> Savings</label> &nbsp;
-        <label><input type="checkbox"> Current</label> &nbsp;
-        <label><input type="checkbox"> Fixed deposits</label>
-      </div>
-      <div data-field-span="1" style="height: 51px;">
-        <label>Mode of funding</label>
-        <label><input type="checkbox"> Cash</label> &nbsp;
-        <label><input type="checkbox"> Cheque</label> &nbsp;
-        <label><input type="checkbox"> NEFT</label>
-      </div>
-    </div>
-    <div data-row-span="1">
-      <div data-field-span="1" style="height: 55px;">
-        <label>Amount</label>
-        <input type="text">
-      </div>
-    </div>
-    <br>
-    <fieldset>
-      <legend>Details of Fixed Deposit</legend>
-      <div data-row-span="2">
-        <div data-field-span="1" style="height: 51px;">
-          <label>Types of deposit</label>
-          <label><input type="checkbox"> Ordinary</label> &nbsp;
-          <label><input type="checkbox"> Cumulative</label>
-        </div>
-        <div data-field-span="1" style="height: 51px;">
-          <label>Mode of funding</label>
-          <label><input type="checkbox"> Cash</label> &nbsp;
-          <label><input type="checkbox"> Cheque</label> &nbsp;
-          <label><input type="checkbox"> NEFT</label>
-        </div>
-      </div>
-      <div data-row-span="4">
-        <div data-field-span="2" style="height: 55px;">
-          <label>Amount</label>
-          <input type="text">
-        </div>
-        <div data-field-span="1" style="height: 55px;">
-          <label>No. of deposits</label>
-          <input type="text">
-        </div>
-        <div data-field-span="1" style="height: 55px;">
-          <label>Individual Deposit Amount</label>
-          <input type="text">
-        </div>
-      </div>
-    </fieldset>
-  </fieldset>
-
-  <br><br>
-  <fieldset>
-    <legend>Personal Details</legend>
-    <div data-row-span="1">
-      <div data-field-span="1" style="height: 51px;">
-        <label>Occupation</label>
-        <label><input type="checkbox"> Non-executive</label> &nbsp;
-        <label><input type="checkbox"> Housewife</label> &nbsp;
-        <label><input type="checkbox"> Retired</label> &nbsp;
-        <label><input type="checkbox"> Student</label> &nbsp;
-        <label><input type="checkbox"> Other</label> &nbsp;
-        <label><input type="checkbox"> Unemployed</label>
-      </div>
-    </div>
-    <div data-row-span="1">
-      <div data-field-span="1" style="height: 55px;">
-        <label>Job Title</label>
-        <input type="text">
-      </div>
-    </div>
-    <div data-row-span="2">
-      <div data-field-span="1" style="height: 55px;">
-        <label>Department</label>
-        <input type="text">
-      </div>
-      <div data-field-span="1" style="height: 55px;">
-        <label>Nature of business</label>
-        <input type="text">
-      </div>
-    </div>
-    <div data-row-span="2">
-      <div data-field-span="1" style="height: 51px;">
-        <label>Education</label>
-        <label><input type="checkbox"> Under graduate</label> &nbsp;
-        <label><input type="checkbox"> Graduate</label> &nbsp;
-        <label><input type="checkbox"> Others</label>
-      </div>
-      <div data-field-span="1" style="height: 51px;">
-        <label>Monthly Income</label>
-        <label><input type="checkbox"> Zero Income</label> &nbsp;
-        <label><input type="checkbox"> Less than $10,000</label> &nbsp;
-        <label><input type="checkbox"> $10,000+</label>
-      </div>
-    </div>
-    <div data-row-span="2">
-      <div data-field-span="1" style="height: 55px;">
-        <label>Maritial Status</label>
-        <label><input type="checkbox"> Married</label> &nbsp;
-        <label><input type="checkbox"> Single</label>
-      </div>
-      <div data-field-span="1" style="height: 55px;">
-        <label>Spouse name</label>
-        <input type="text">
-      </div>
-    </div>
-    <br>
-    <fieldset>
-      <legend>Other existing bank accounts, if any</legend>
-      <div data-row-span="2">
-        <div data-field-span="1" style="height: 55px;">
-          <label>Name of the Bank / branch</label>
-          <input type="text">
-        </div>
-        <div data-field-span="1" style="height: 55px;">
-          <label>Name of the Bank / branch</label>
-          <input type="text">
-        </div>
-      </div>
-    </fieldset>
-  </fieldset>
-  <br><br>
-  <fieldset>
-    <legend>Reason for Account opening</legend>
-    <div data-row-span="2">
-      <div data-field-span="1" style="height: 55px;" class="">
-        <label>Please specify</label>
-        <input type="text">
+        <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png">
       </div>
     </div>
   </fieldset>
   <br><br>
-  <fieldset>
-    <legend>Terms And Conditions</legend>
-    <div data-row-span="1">
-      <div data-field-span="1" style="height: 58px;">
-        <label></label>
-        <label><input type="checkbox"> I/We confirm having read and understood the account rules of The Banking Corporation Limited ('the Bank'), and hereby agree to be bound by the terms and conditions and amendments governing the account(s) issued by the Bank from time-to-time.</label>
-      </div>
-    </div>
-  </fieldset>  --}}
   <button type="submit" name="submit" value="save" class="btn btn-primary" style="margin-right:20px">Save</button>
   <button type="submit" name="submit" value="proceed" class="btn btn-primary">Proceed</button>
 </form>
