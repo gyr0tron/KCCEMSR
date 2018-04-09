@@ -41,7 +41,8 @@ class DepartmentController extends Controller
     if($fp) $url = $fp->getUrl("public/files/staff/");
     else $url = '';
     $menu_item = "";
-    return view('pages.pdfview', compact("title", "url", "menu_item"));
+    $no_download = true;
+    return view('pages.pdfview', compact("title", "url", "menu_item", "no_download"));
   }
   public function getEvent($url)
   {
