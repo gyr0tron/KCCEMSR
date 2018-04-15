@@ -68,7 +68,7 @@ class AdmissionsController extends Controller
       'type' => '1',
     ];
   }
-  public function postApplication(Request $request)
+  public function postApplication(StudentApplicationRequest $request)
   {
     $data = $request->all();
     unset($data['_token']);
@@ -80,14 +80,10 @@ class AdmissionsController extends Controller
     $admission->data = json_encode($data);
     if($request->image) {
       $admission->deleteImage();
-      // return $request->image;
       $admission->uploadImage($request->file('image'));
     }
+    $admission->completed = '1';
     $admission->save();
-    if($data['submit'] == "proceed") {
-      $admission->completed = '1';
-      $admission->save();
-    };
     return view('pages.admissions.student-application');
   }
   public function printApplication()
