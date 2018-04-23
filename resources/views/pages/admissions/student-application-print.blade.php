@@ -1,9 +1,6 @@
 @extends('layouts.master')
 @section('pre')
 	@php
-	if(!isset($admission)) {
-		$admission = App\Admission::where('userid', Auth::user()->id)->first();
-	}
 	$title = "Print student Application";
 	$menu_item = 'admissions';
 	$nonav = true;

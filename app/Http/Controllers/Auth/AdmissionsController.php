@@ -14,6 +14,7 @@ use App\Admission;
 use App\EmailVerification;
 use App\Mail\AdmissionRegisterMail;
 use App\Mail\AdmissionWelcomeMail;
+use App\Mail\AdmissionSubmit;
 
 
 use App\Http\Requests\AdmissionRegisterRequest;
@@ -68,7 +69,7 @@ class AdmissionsController extends Controller
       'type' => '1',
     ];
   }
-  public function postApplication(StudentApplicationRequest $request)
+  public function postApplication(Request $request)
   {
     $data = $request->all();
     unset($data['_token']);
@@ -84,10 +85,24 @@ class AdmissionsController extends Controller
     }
     $admission->completed = '1';
     $admission->save();
+
+    $to_email = "admisions@kccemsr.edu.in";
+    if(strlen($to_email)) {
+      Mail::send('mails.admission_submit2', compact('admission'), function($message) use($to_email)  {
+        $message->subject("[kccemsr.edu.in] New application received.");
+        // if(strpos(env('MAIL_USERNAME'), "@"))$message->from(env('MAIL_USERNAME'), 'kccemsr.edu.in');
+        $message->to($to_email);
+      });
+    }
+
+    Mail::to(Auth::user()->email)->send(new AdmissionSubmit(Auth::user()));
+
     return view('pages.admissions.student-application');
   }
   public function printApplication()
   {
-    return view('pages.admissions.student-application-print');
+    $admission = Admission::where('userid', Auth::user()->id)->first();
+    if($admission->completed != 1) abort("404");
+    return view('pages.admissions.student-application-print', compact('admission'));
   }
 }

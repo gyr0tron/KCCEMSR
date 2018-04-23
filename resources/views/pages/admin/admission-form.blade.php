@@ -38,7 +38,8 @@
               <tbody>
                 @foreach (App\User::where('type','1')->get() as $user)
                   @php
-                    $admission = App\Admission::where('userid', $user->id)->first();
+                    $admission = App\Admission::where('userid', $user->id)->where('completed', '1')->first();
+                    if(!$admission) continue;
                     $data = json_decode($admission->data);
                   @endphp
                   <tr>
