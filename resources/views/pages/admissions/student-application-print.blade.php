@@ -33,7 +33,7 @@
 					<legend>Photograph</legend>
 					<div data-row-span="4">
 						<div data-field-span="1">
-							<img src="http://via.placeholder.com/500x500" alt="">
+							<img src="{{$admission->getImage()}}" alt="">
 						</div>
 					</div>
 				</fieldset>
