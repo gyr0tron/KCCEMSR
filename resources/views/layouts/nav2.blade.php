@@ -114,6 +114,7 @@ if(!isset($second)) $second = "not defined";
           </a>
         </li>
         <li class="{{$menu_item=='admission'?'active':''}}"><a href="{{route("admin_admissions", 'admission-criteria')}}"><i class="fa fa-university"></i> <span>Admissions</span></a></li>
+        <li class="{{$menu_item=='admission_form'?'active':''}}"><a href="{{route("admin_admission_form")}}"><i class="fa fa-list"></i> <span>Admission Forms</span></a></li>
         <li class="{{$menu_item=='committees'?'active':''}}"><a href="{{route("admin_committees")}}"><i class="fa fa-users"></i> <span>Committees</span></a></li>
         <li class="treeview {{$menu_item=='publication'?'active':''}}" >
           <a href="#">

@@ -136,6 +136,17 @@ class DashboardController extends Controller
     $action_name = $admission_name_list[array_search($action, $admission_list)];
     return view("pages.admin.admissions", compact("action", "action_name", "admission_list","admission_name_list"));
   }
+  // Admission Forms
+  public function admissionForms()
+  {
+    return view("pages.admin.admission-form");
+  }
+  public function admissionFormsID($id)
+  {
+    $admission = \App\Admission::where('id', $id)->first();
+    if(!$admission) abort(404);
+    return view("pages.admissions.student-application-print", compact('admission'));
+  }
   // Publication
   public function publication()
   {

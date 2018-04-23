@@ -105,6 +105,8 @@ Route::prefix('admin')->group(function () {
   Route::get('/infrastructures','Admin\DashboardController@infrastructures')->name("admin_infrastructure");
 
   Route::get('/admissions/{action}','Admin\DashboardController@admissions')->name("admin_admissions");
+  Route::get('/admission/forms','Admin\DashboardController@admissionForms')->name("admin_admission_form");
+  Route::get('/admission/forms/{id}','Admin\DashboardController@admissionFormsID')->name("admin_admission_form_id");
 
   Route::get('/library/{action}','Admin\DashboardController@library')->name("admin_library");
 

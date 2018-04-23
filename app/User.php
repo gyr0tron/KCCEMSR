@@ -46,5 +46,8 @@ class User extends Authenticatable
   public function is_admin() {
     return $this->access == 2;
   }
+  public function is_admission() {
+    return $this->access == 2 || $this->access == 3
+  }
 
 }
