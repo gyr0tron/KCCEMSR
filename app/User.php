@@ -47,7 +47,7 @@ class User extends Authenticatable
     return $this->access == 2;
   }
   public function is_admission() {
-    return $this->access == 2 || $this->access == 3
+    return $this->access == 2 || $this->access == 3;
   }
 
 }
