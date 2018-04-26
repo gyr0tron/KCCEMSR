@@ -4,5 +4,6 @@
 @endsection
 @section('content')
   Welcome {{$user->fullname}}<br>
-  Get started by filling the application form
+  Your account has been verified you can now start filling your admission application form.
+  Logon to <a href="{{route("admissions-apply")}}">{{route('admissions-apply')}}</a>
 @endsection
