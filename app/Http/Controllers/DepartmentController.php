@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ApllyJobRequest;
+use App\Http\Requests\GrievanceRequest;
 
 use App\Department;
 use App\Event;
@@ -14,6 +15,7 @@ use App\JobList;
 use App\FileUpload;
 use App\ResponseBuilder;
 use App\Mail\CareerAtKCMail;
+use App\Mail\GrievanceMail;
 
 use File;
 use Mail;
@@ -100,6 +102,16 @@ class DepartmentController extends Controller
     $filename = $path . $filename;
     Mail::to('career@kccemsr.edu.in')->send(new CareerAtKCMail($request->input('name'), $request->input('email'), $request->input('phone'), $filename, $job->name));
     File::delete($path . $filename);
+    return ResponseBuilder::send(true, "Your application has been received.", "/");
+  }
+  public function postGrievance(GrievanceRequest $request)
+  {
+    $name = $request->input('name','');
+    $email = $request->input('email','');
+    $phone = $request->input('phone','');
+    $subject = $request->input('subject','');
+    $message = $request->input('message','');
+    Mail::to('career@kccemsr.edu.in')->send(new GrievanceMail($name, $email, $phone, $subject, $message));
     return ResponseBuilder::send(true, "Your application has been received.", "/");
   }
 

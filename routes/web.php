@@ -130,6 +130,7 @@ Route::prefix('/api')->group(function () {
   Route::post('/search/question-papers',"LibraryController@searchQuestionPapers");
   Route::post('/search/ebooks',"LibraryController@searchEbooks");
   Route::post('/careeratkc/apply',"DepartmentController@postCareerAtKCApply");
+  Route::post('/grievance_redressal/send',"DepartmentController@postGrievance");
 
   Route::post('/admission/register',"Auth\AdmissionsController@register");
   Route::post('/admission/login',"Auth\AdmissionsController@login");
