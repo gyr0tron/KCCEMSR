@@ -17,7 +17,7 @@ class StudentApplicationRequest extends FormRequest
   public function authorize()
   {
     if(Auth::user()->type == 1) {
-        return true;
+      return true;
     }
     return false;
   }
@@ -46,6 +46,24 @@ class StudentApplicationRequest extends FormRequest
       'cphone' => 'required|string',
       'cparent' => 'required|string',
       'cpin' => 'required|string',
+    ];
+  }
+  public function messages()
+  {
+    return [
+      'surname.required' => 'Surname is required.',
+      'firstname.required'  => 'First name is required.',
+      'fathername.required'  => 'Father name is required.',
+      'mothername.required'  => 'Mother name is required.',
+      'dob.required'  => 'Date of birth is required.',
+      'caste.required'  => 'Caste is required.',
+      'sex.required'  => 'Sex is required.',
+      'caddress.required'  => 'Correspondence address is required.',
+      'sex.required'  => 'Sex is required.',
+      'croad.required'  => 'Correspondence address is required',
+      'carea.required'  => 'Correspondence address is required.',
+      'ccity.required'  => 'Correspondence address is required.',
+      'cpin.required'  => 'Correspondence address is required.',
     ];
   }
 }

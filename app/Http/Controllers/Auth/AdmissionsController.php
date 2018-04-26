@@ -69,7 +69,7 @@ class AdmissionsController extends Controller
       'type' => '1',
     ];
   }
-  public function postApplication(Request $request)
+  public function postApplication(StudentApplicationRequest $request)
   {
     $data = $request->all();
     unset($data['_token']);
