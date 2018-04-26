@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 use Auth;
 use Mail;
+use Setting;
 use App\ResponseBuilder;
 use App\User;
 use App\Admission;
@@ -86,7 +87,7 @@ class AdmissionsController extends Controller
     $admission->completed = '1';
     $admission->save();
 
-    $to_email = "admisions@kccemsr.edu.in";
+    $to_email = Setting::get('mail_admissions');
     if(strlen($to_email)) {
       Mail::send('mails.admission_submit2', compact('admission'), function($message) use($to_email)  {
         $message->subject("[kccemsr.edu.in] New application received.");

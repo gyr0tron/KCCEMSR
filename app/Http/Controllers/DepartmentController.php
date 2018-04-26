@@ -19,6 +19,7 @@ use App\Mail\GrievanceMail;
 
 use File;
 use Mail;
+use Setting;
 
 class DepartmentController extends Controller
 {
@@ -100,7 +101,7 @@ class DepartmentController extends Controller
     $filename = $file->getClientOriginalName();
     $file->move($path, $filename);
     $filename = $path . $filename;
-    Mail::to('career@kccemsr.edu.in')->send(new CareerAtKCMail($request->input('name'), $request->input('email'), $request->input('phone'), $filename, $job->name));
+    Mail::to(Setting::get('mail_career'))->send(new CareerAtKCMail($request->input('name'), $request->input('email'), $request->input('phone'), $filename, $job->name));
     File::delete($path . $filename);
     return ResponseBuilder::send(true, "Your application has been received.", "/");
   }
@@ -111,7 +112,7 @@ class DepartmentController extends Controller
     $phone = $request->input('phone','');
     $subject = $request->input('subject','');
     $message = $request->input('message','');
-    Mail::to('career@kccemsr.edu.in')->send(new GrievanceMail($name, $email, $phone, $subject, $message));
+    Mail::to(Setting::get('mail_grievance'))->send(new GrievanceMail($name, $email, $phone, $subject, $message));
     return ResponseBuilder::send(true, "Your application has been received.", "/");
   }
 

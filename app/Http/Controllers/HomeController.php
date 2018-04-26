@@ -38,7 +38,7 @@ class HomeController extends Controller
     $contact->email = $request->input("email"," ");
     $contact->message = $request->input("message"," ");
     $contact->save();
-    $to_email = Setting::get('contact-email');
+    $to_email = Setting::get('mail_contactus');
     if(strlen($to_email)) {
       Mail::send('mails.contactmessage', compact('contact'), function($message) use($to_email)  {
         $message->subject("[kccemsr.edu.in] New message received.");
