@@ -35,6 +35,7 @@ class ApllyJobRequest extends FormRequest
       'name' => 'required|string',
       'email' => 'required|email',
       'phone' => 'required|string',
+      "resume" => 'required|file|max:10000'
     ];
   }
 }

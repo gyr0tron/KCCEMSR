@@ -13,6 +13,10 @@ use App\Committee;
 use App\JobList;
 use App\FileUpload;
 use App\ResponseBuilder;
+use App\Mail\CareerAtKCMail;
+
+use File;
+use Mail;
 
 class DepartmentController extends Controller
 {
@@ -77,17 +81,25 @@ class DepartmentController extends Controller
     $url = $job->getUrl();
     return view('pages.pdfview', compact("title", "url"));
   }
-  public function getCareerAtKcApply($url)
+  public function getCareerAtKcApply($id)
   {
-    $job = JobList::where('url',$url)->first();
+    $job = JobList::where('id',$id)->first();
     if(!$job) abort(404);
     return view('pages.careeratkc-apply', compact('job'));
   }
   public function postCareerAtKCApply(ApllyJobRequest $request)
   {
-    $url = $request->input('url');
-    $job = JobList::where('url',$url)->first();
+    $id = $request->input('id');
+    $job = JobList::where('id',$id)->first();
     if(!$job) abort(404);
+    $path = public_path("temp\\resumes\\");
+    $file = $request->resume;
+    File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
+    $filename = $file->getClientOriginalName();
+    $file->move($path, $filename);
+    $filename = $path . $filename;
+    Mail::to('career@kccemsr.edu.in')->send(new CareerAtKCMail($request->input('name'), $request->input('email'), $request->input('phone'), $filename, $job->name));
+    File::delete($path . $filename);
     return ResponseBuilder::send(true, "Your application has been received.", "/");
   }
 

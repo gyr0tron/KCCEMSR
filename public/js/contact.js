@@ -23,7 +23,7 @@ $("#job_application").submit(function(event) {
   event.preventDefault();
   fh.reload(this.id);
   fh.hide_button();
-  axios.post('/api/careeratkc/apply', $("#job_application").serialize())
+  axios.post('/api/careeratkc/apply', new FormData(this))
   .then(function (response) {
     fh.show_button();
     var data = response.data;

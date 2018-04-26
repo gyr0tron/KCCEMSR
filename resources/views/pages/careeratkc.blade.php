@@ -15,9 +15,11 @@
 							<li class="job-preview animated fadeInDown">
 								<div class="content col-md-10 col-sm-10 float-left">
 									<h2 class="job-title"><strong>{{$job->name}}</strong></h2>
-									<h5 class="sub-info"><a href="{{$job->getUrl()}}">Download</a></h5>
+									@if (isset($job->filename))
+										<h5 class="sub-info"><a href="{{$job->getUrl()}}">Download</a></h5>
+									@endif
 								</div>
-								<a href="{{route('careeratkc-apply', $job->url)}}" class="btn btn-apply float-sm-right float-xs-left">Apply</a>
+								<a href="{{route('careeratkc-apply', $job->id)}}" class="btn btn-apply float-sm-right float-xs-left">Apply</a>
 							</li>
 						@endforeach
 					</ul>
