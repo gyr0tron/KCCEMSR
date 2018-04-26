@@ -87,6 +87,36 @@
             <div class="box-body">
               <form id="form-sitesettings" action="/api/admin/settings/main" method="post" class="form-horizontal" data-form="sr">
                 <div class="form-group">
+                  <h3 class="control-label col-sm-2">Mail Settings</h3>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="mail_contactus">Contact us Mail:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="mail_contactus" name="mail_contactus" value="{{setting('mail_contactus','')}}">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="mail_career">Career At KC Mail:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="mail_career" name="mail_career" value="{{setting('mail_career','')}}">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="mail_grievance">Grievance Redressal Mail:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="mail_grievance" name="mail_grievance" value="{{setting('mail_grievance','')}}">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="mail_admissions">Admissions Mail Mail:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="mail_admissions" name="mail_admissions" value="{{setting('mail_admissions','')}}">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h3 class="control-label col-sm-2">Maintenance Settings</h3>
+                </div>
+                <div class="form-group">
                   <label class="control-label col-sm-2" for="email">Maintenance:</label>
                   <div class="col-sm-4">
                     @if (setting('break',0) == 0)

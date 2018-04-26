@@ -38,7 +38,12 @@ class UpdateController extends Controller
     if(!Auth::user()->is_admin()) {
       return redirect()->route('admin_dashboard');
     }
-
+    // Mail Settings
+    Setting::set('mail_contactus', $request->input('mail_contactus', ''));
+    Setting::set('mail_career', $request->input('mail_career', ''));
+    Setting::set('mail_grievance', $request->input('mail_grievance', ''));
+    Setting::set('mail_admissions', $request->input('mail_admissions', ''));
+    // Maintenance
     $break = $request->input('break','off');
     $break = $break=='on'?1:0;
     $breakTitle = $request->input('break-title','Service Unavailable');
