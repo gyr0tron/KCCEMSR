@@ -2222,3 +2222,43 @@ h2.form-center-relative {
 #hover_black_nav:hover {
     color: #000 !important;
 }
+
+/* Bell info */
+p.bubble {
+	right: 185px;
+	top: -156px;
+  position: relative;
+  width: 216px;
+  text-align: center;
+  line-height: 1.2em;
+  margin: 10px auto;
+	background-color: #fff;
+  border: 5px solid #000;
+  border-radius: 30px;
+  font-family: sans-serif;
+  padding: 12px;
+  font-size: large;
+}
+p.bubble:before,
+p.bubble:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+p.speech:before {
+		left: 144px;
+     bottom: -40px;
+    border: 20px solid;
+  border-color: #000 #000 transparent transparent;
+}
+p.speech:after {
+	left: 150px;
+		bottom: -25px;
+	border: 13px solid;
+  border-color: #fff #fff transparent transparent;
+}
+
+.hide {
+    display: none; 
+}

@@ -434,3 +434,7 @@ function toggleClass() {
 		document.getElementById("notification").classList.toggle('goDown');
 	}, 1500);
 }
+
+setTimeout(function () {
+	document.getElementById("bell_info").classList.toggle('hide');
+}, 5000);

@@ -9,7 +9,10 @@
 @section('content')
 	<!-- banner start -->
 	<!-- ================ -->
-	<a href="/#announcements" id="notification"><i class="fa fa-bell"></i></a>
+	<a href="/#announcements" id="notification"><i class="fa fa-bell">
+		<p class="bubble speech" id="bell_info" style="color:black">Check out the latest happenings at KC!
+		</p>
+	</i></a>
 	<div id="banner" class="banner">
 		<div class="banner-image"></div>
 		<div class="arrow bounce" id="arw" onclick="location.href='/#welcome';" style="cursor: pointer; z-index: 1;"></div>
