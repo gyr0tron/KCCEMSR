@@ -2247,18 +2247,18 @@ p.bubble:after {
   height: 0;
 }
 p.speech:before {
-		left: 144px;
-     bottom: -40px;
-    border: 20px solid;
+	left: 144px;
+	bottom: -40px;
+	border: 20px solid;
   border-color: #000 #000 transparent transparent;
 }
 p.speech:after {
 	left: 150px;
-		bottom: -25px;
+	bottom: -25px;
 	border: 13px solid;
   border-color: #fff #fff transparent transparent;
 }
 
 .hide {
-    display: none; 
+	display: none; 
 }
