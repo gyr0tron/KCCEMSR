@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Made by: Simmar Kalsi and Bhaktij Koli -->
 @yield('pre')
 <html lang="en">
 <head>
@@ -7,6 +8,10 @@
     <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-113452648-1');</script>
   @endif
   <meta charset="utf-8">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="K.C. College of Engineering (KCCOE) is a private engineering college located in Thane, Mumbai, Maharashtra, India. The college is affiliated to the University of Mumbai and approved by Directorate of Technical Education (DTE), Maharashtra State and All India Council of Technical Education (AICTE), New Delhi. KCCOE offers undergraduate courses of study in engineering. The four year undergraduate programme leads to the degree of Bachelor of Engineering (BE).">
+  <meta name="keywords" content="K.C. College,kccoe,kc college of engineering,kc college thane, kc engineering college">
+  <meta name="author" content="Simmar Kalsi, Bhaktij Koli">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
