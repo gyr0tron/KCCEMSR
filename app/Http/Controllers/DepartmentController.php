@@ -112,7 +112,10 @@ class DepartmentController extends Controller
     $phone = $request->input('phone','');
     $subject = $request->input('subject','');
     $message = $request->input('message','');
-    Mail::to(Setting::get('mail_grievance'))->send(new GrievanceMail($name, $email, $phone, $subject, $message));
+    $emails = explode(",", Setting::get('mail_grievance'));
+    foreach($mail as $mails) {
+      Mail::to($mail)->send(new GrievanceMail($name, $email, $phone, $subject, $message));
+    }
     return ResponseBuilder::send(true, "Your application has been received.", "/");
   }
 
