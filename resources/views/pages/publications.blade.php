@@ -45,7 +45,7 @@
 
 				<div class="col-md-6">
 					<h2 class="title"><span>Technovision</span></h2>
-					<h4>ISSN No(Online):</h4>
+					<h4>ISSN No(Online): 2581-4419</h4>
 					<p style="text-align: justify">TECHNOVISION is a referred annual magazine of K. C. College of engineering &amp; management studies &amp; Research. This provides a wide platform for engineers to discuss their views and innovative technologies in the field of engineering. It aims to provide original and empirical research and papers that are more conceptual and application oriented , case studies and other matters of interest to researchers, scholars and practitioners in different domains of engineering. The views expressed in these papers provide information on technological governance reliability an industrial challenges and market issues and investor aspects.</p>
 				</div>
 			</div>
