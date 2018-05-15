@@ -448,7 +448,7 @@
 					<div class="col-md-12">
 						<p class="text-center">Copyright © 2018 K.C.College of Engineerng & Management Studies & Research.</p>
 						<p class="text-center">Developed by K.C. College Web Development Team</p>
-						<p class="text-center">For any queries contact <a target="_blank" href="https://www.linkedin.com/in/bhaktij-koli/">Bhaktij Koli</a> or <a target="_blank" href="https://www.linkedin.com/in/simmarkalsi/">Simmar Kalsi</a></p>
+						<p class="text-center">Regarding any queries please contact <a target="_blank" href="https://www.linkedin.com/in/bhaktij-koli/">Bhaktij Koli</a> or <a target="_blank" href="https://www.linkedin.com/in/simmarkalsi/">Simmar Kalsi</a></p>
 					</div>
 				</div>
 			</div>
