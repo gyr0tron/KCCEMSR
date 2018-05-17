@@ -1,6 +1,6 @@
 
 (function($){
-	$(document).ready(function(){
+	$(function(){
 		(function bannerparser()
 			{
 				var response = "";

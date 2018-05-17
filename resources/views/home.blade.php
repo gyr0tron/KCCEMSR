@@ -51,6 +51,7 @@
 							<div class="col-md-6" style="text-align: justify;">
 								Excelssior Education Society is an educational and charitable trust that is dedicated to the pursuit of excellence and welfare of the students since 1978 and is affiliated to Mumbai University. It aims to maximise the capabilities of individuals in all generes educational, intellectual and moral. Our endeavour is to align education with innovation and practical exposure needed to meet the current industry’s requirement. Dr Harssh Khanna and late Mr K. C. Khanna are the milestone in the establishment of KCCOEMSR.
 							</div>
+							<div class="space"></div>
 						</div>
 					</div>
 				</div>
@@ -430,9 +431,11 @@
 								<button type="submit" name="button" class="btn btn-default" style="min-width: auto;">Send</button>
 							</form>
 							<ul class="social-links">
-								<li class="facebook"><i class="fa fa-facebook"></i></li>
-								<li class="linkedin"><i class="fa fa-linkedin"></i></li>
-								<li class="youtube"><i class="fa fa-youtube"></i></li>
+								<a href="https://www.linkedin.com/in/kccemsr/" target="_blank"><li class="linkedin"><i class="fa fa-linkedin"></i></li></a>
+								<a href="https://www.facebook.com/social.kc2001/" target="_blank"><li class="facebook"><i class="fa fa-facebook"></i></li></a>
+								<a href="https://twitter.com/kccemsr_social/" target="_blank"><li class="twitter"><i class="fa fa-twitter"></i></li></a>
+								<a href="https://www.instagram.com/kccemsr_social/" target="_blank"><li class="instagram"><i class="fa fa-instagram"></i></li></a>
+								<a href="https://www.youtube.com/channel/UCoWQSD-KlLD47LpqiSkDZkQ/" target="_blank"><li class="youtube"><i class="fa fa-youtube"></i></li></a>
 							</ul>
 						</div>
 					</div>
