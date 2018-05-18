@@ -34,6 +34,9 @@ class AdmissionsController extends Controller
     }
     return view('pages.admissions.apply');
   }
+  public function details() {
+    return view('pages.admissions.details');
+  }
   public function studentApplication()
   {
     return view('pages.admissions.student-application');
