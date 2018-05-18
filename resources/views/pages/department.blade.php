@@ -34,7 +34,7 @@
 								<div class="space"></div>
 							</div>
 							<div class="col-md-6">
-								<img src="" alt=""data-echo="{{$hod->getUrl()}}" style="Width:555px; height:700px" >
+								<img src="" alt="" data-echo="{{$hod->getUrl()}}">
 								<div class="space"></div>
 							</div>
 						</div>
