@@ -21,8 +21,8 @@
 						}
 						$(".banner-image").backstretch(banner_image_arr, {
 								fade: 750,
-								preload:3,
-								preloadSize:3,
+								preload:2,
+								preloadSize:1,
 								duration: 4000
 							});
 					}

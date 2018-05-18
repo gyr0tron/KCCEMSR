@@ -14,11 +14,9 @@
 			<div class="row" id="dept-row-main">
 				<div class="col-md-12">
 					<h1 id="about" class="title text-center"><span>{{$dep->name}}</span></h1>
-					<div class="space"></div>
 					<div class="row">
 						<div class="col-md-12">
-							<img src="{{$dep->getUrl()}}" style="margin: 0 auto;height: 500px;width: 80%;" alt="">
-							<div class="space"></div>
+							<img src="{{$dep->getUrl()}}" style="margin: 0 auto;width: 80%;" alt="">
 						</div>
 						<div class="col-md-12">
 							<div class="lead text-center" style="text-align: justify;text-justify: auto;">{!!$dep->description!!}</div>
@@ -36,7 +34,7 @@
 								<div class="space"></div>
 							</div>
 							<div class="col-md-6">
-								<img src="{{$hod->getUrl()}}" alt="">
+								<img src="{{url("images/eclipse.gif")}}" alt=""data-echo="{{$hod->getUrl()}}">
 								<div class="space"></div>
 							</div>
 						</div>
@@ -205,7 +203,7 @@
 			<div class="col-md-3 col-sm-12 col-xs-12">
 				<div class="team-member">
 					<div class="team-img" style="height: 300px;">
-						<img src="{{$staff->getUrl()}}" alt="team member" class="img-responsive">
+						<img src="{{url("images/eclipse.gif")}}" data-echo="{{$staff->getUrl()}}" alt="team member" class="img-responsive" style="height: 300px;width: 255px;">
 					</div>
 					<div class="team-hover">
 						<div class="desk">
