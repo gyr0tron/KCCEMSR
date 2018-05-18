@@ -317,7 +317,7 @@
 								<div class="image-box">
 									<div class="overlay-container">
 										{{-- 750 x 500 --}}
-										<img src="{{$event->getFeaturedImage()}}" alt="" data-echo="{{$event->getFeaturedImage()}}" height="500">
+										<img src="{{url("images/eclipse.gif")}}" alt="" data-echo="{{$event->getFeaturedImage()}}" height="500">
 										<a class="overlay" href="{{route('event', $event->url)}}">
 											<i class="fa fa-search-plus"></i>
 											<span>{{App\Department::getName($event->department)}}</span>
@@ -371,7 +371,7 @@
 						$no=0;
 						@endphp
 						@foreach (App\Testimonial::all() as $test)
-							<li data-target="#quote-carousel" data-slide-to="{{$no}}" class="{{$no++==0?'active':''}}"><img class="img-responsive" src="{{$test->getUrl()}}" alt="" data-echo="{{$test->getUrl()}}">
+							<li data-target="#quote-carousel" data-slide-to="{{$no}}" class="{{$no++==0?'active':''}}"><img class="img-responsive" src="{{url("images/eclipse.gif")}}" alt="" data-echo="{{$test->getUrl()}}">
 							@endforeach
 						</ol>
 						<!-- Carousel Buttons Next/Prev -->
