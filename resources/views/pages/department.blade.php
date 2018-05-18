@@ -202,8 +202,8 @@
 		@foreach (App\Staff::where('department', $dep->url)->orderBy('sort','ASC')->get() as $staff)
 			<div class="col-md-3 col-sm-12 col-xs-12">
 				<div class="team-member">
-					<div class="team-img" style="height: 300px;">
-						<img src="{{url("images/eclipse.gif")}}" data-echo="{{$staff->getUrl()}}" alt="team member" class="img-responsive" style="height: 300px;width: 255px;">
+					<div class="team-img" style="height: 320px;">
+						<img src="{{url("images/eclipse.gif")}}" data-echo="{{$staff->getUrl()}}" alt="team member" class="img-responsive" style="height: auto;width: 255px;">
 					</div>
 					<div class="team-hover">
 						<div class="desk">
