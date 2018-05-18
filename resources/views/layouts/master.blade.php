@@ -40,6 +40,19 @@
   <script type="text/javascript" src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/jquery.backstretch.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/jquery.appear.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/echo.js') }}"></script>
+  <script>
+  echo.init({
+    offset: 100,
+    throttle: 250,
+    unload: true,
+      callback: function (element, op) {
+          console.log(element, 'has been', op + 'ed')
+      }
+  });
+
+  // echo.render(); is also available for non-scroll callbacks
+  </script>
   <script type="text/javascript" src="{{ asset('js/template.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/axios.min.js') }}"></script>
