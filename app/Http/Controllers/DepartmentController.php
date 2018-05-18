@@ -95,7 +95,7 @@ class DepartmentController extends Controller
     $id = $request->input('id');
     $job = JobList::where('id',$id)->first();
     if(!$job) abort(404);
-    $path = public_path("temp\\resumes\\");
+    $path = public_path("temp/resumes/");
     $file = $request->resume;
     File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
     $filename = $file->getClientOriginalName();
