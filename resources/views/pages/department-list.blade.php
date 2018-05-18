@@ -19,7 +19,7 @@
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','computer')->first()->description)}}</p>
 							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'computer')}}">Read more</a>
 							<div class="space"></div>
-							<img src="{{App\Department::where('url','computer')->first()->getUrl()}}" alt="">
+							<img src="" alt="" data-echo="{{App\Department::where('url','computer')->first()->getUrl()}}" style="height: 340px;width: 505px;">
 						</div>
 						<div class="media-right">
 							<i class="fa fa-code"></i>
@@ -34,7 +34,7 @@
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','extc')->first()->description)}}</p>
 							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'extc')}}">Read more</a>
 							<div class="space"></div>
-							<img src="{{App\Department::where('url','extc')->first()->getUrl()}}" alt="">
+							<img src="" alt="" data-echo="{{App\Department::where('url','extc')->first()->getUrl()}}" style="height: 340px;width: 505px;">
 						</div>
 						<div class="media-right">
 							<i class="fa fa-rss"></i>
@@ -49,7 +49,7 @@
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','it')->first()->description)}}</p>
 							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'it')}}">Read more</a>
 							<div class="space"></div>
-							<img src="{{App\Department::where('url','it')->first()->getUrl()}}" alt="">
+							<img src="" alt="" data-echo="{{App\Department::where('url','it')->first()->getUrl()}}" style="height: 340px;width: 505px;">
 						</div>
 						<div class="media-right">
 							<i class="fa fa-desktop"></i>
@@ -71,7 +71,7 @@
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
 							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'electronics')}}">Read more</a>
 							<div class="space"></div>
-							<img src="{{App\Department::where('url','electronics')->first()->getUrl()}}" alt="">
+							<img src="" alt="" data-echo="{{App\Department::where('url','electronics')->first()->getUrl()}}" style="height: 340px;width: 505px;">
 						</div>
 					</div>
 					<div class="space"></div>
@@ -86,7 +86,7 @@
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','humanities-sciences')->first()->description)}}</p>
 							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'humanities-sciences')}}">Read more</a>
 							<div class="space"></div>
-							<img src="{{App\Department::where('url','humanities-sciences')->first()->getUrl()}}" alt="">
+							<img src="" alt="" data-echo="{{App\Department::where('url','humanities-sciences')->first()->getUrl()}}" style="height: 340px;width: 505px;">
 						</div>
 					</div>
 					<div class="space"></div>
@@ -101,7 +101,7 @@
 							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','mms')->first()->description)}}</p>
 							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'mms')}}">Read more</a>
 							<div class="space"></div>
-							<img src="{{App\Department::where('url','mms')->first()->getUrl()}}" alt="">
+							<img src="" alt="" data-echo="{{App\Department::where('url','mms')->first()->getUrl()}}" style="height: 340px;width: 505px;">
 						</div>
 					</div>
 					<div class="space"></div>
