@@ -12,10 +12,14 @@
 						<span class="nav-close"></span>
 					</div>
 					<ul>
-						<li style="background-color: #ffffff;">
-							<a href="" class="inactiveLink" style="color: black;font-weight: bold;">Hello,ALUMNI_NAME</a>
-							<a href="" id="hover_black_nav" style="color: black;font-weight: bold;text-align: right;padding-right: 5%;">Logout</a>
-						</li>
+						@if (Auth::check())
+							@if (Auth::user()->type == 1)
+								<li style="background-color: #ffffff;">
+									<a href="" class="inactiveLink" style="color: black;font-weight: bold;">Hello, {{Auth::user()->fullname}}</a>
+									<a href="" id="hover_black_nav" style="color: black;font-weight: bold;text-align: right;padding-right: 5%;">Logout</a>
+								</li>
+							@endif
+						@endif
 						<li>
 							<a href="/">Home</a>
 						</li>
