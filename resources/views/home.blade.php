@@ -371,7 +371,7 @@
 						$no=0;
 						@endphp
 						@foreach (App\Testimonial::all() as $test)
-							<li data-target="#quote-carousel" data-slide-to="{{$no}}" class="{{$no++==0?'active':''}}"><img class="img-responsive" style="margin: 0 auto;" src="{{url("images/eclipse.gif")}}" alt="" data-echo="{{$test->getUrl()}}">
+							<li data-target="#quote-carousel" data-slide-to="{{$no}}" class="{{$no++==0?'active':''}}"><img class="img-responsive" src="{{$test->getUrl()}}" alt="">
 							@endforeach
 						</ol>
 						<!-- Carousel Buttons Next/Prev -->
