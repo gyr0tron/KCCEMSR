@@ -273,6 +273,18 @@ class DashboardApiController extends Controller
     $img->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
+  // Fav Event Image
+  public function favEventFavImage(Request $request) {
+    $id = $request->input("id","-1");
+    $img = Eventimage::where("id",$id)->first();
+    if(!$img) abort(404, 'Not Found');
+    $event_id = $request->input('event');
+    $event = Event::where('id', $event_id)->first();
+    if(!$event) abort(404, 'Not Found');
+    $event->featured = $id;
+    $event->save();
+    return ResponseBuilder::send(true, "", "");
+  }
   // Edit contact details
   public function editContactDetails(Request $request)
   {

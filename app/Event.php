@@ -13,14 +13,14 @@ class Event extends Model
 
 
   public function getFeaturedImage() {
-    if(strlen($this->featured) > 1) {
-      return url("public/events/" . $this->featured);
+    if($this->featured) {
+      $img = Eventimage::where("id",$this->featured)->first();
     }
     else {
-      $img = Eventimage::where("event",$this->id)->first();
-      if(!$img) return "http://via.placeholder.com/250x150";
-      return $img->getUrl();
+      $img = Eventimage::where("id",$this->id)->first();
     }
+    if(!$img) return "http://via.placeholder.com/250x150";
+    return $img->getUrl();
   }
 
   public function generateUrl()

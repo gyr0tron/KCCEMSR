@@ -52,6 +52,20 @@ window.dashboard = {
       });
     });
   },
+  favEventImage: function(event, id, eventid) {
+    event.preventDefault();
+    var btn = $(document.activeElement);
+    axios.post('/api/admin/events/edit/favimage', {id:id, event:eventid})
+    .then(function (response) {
+      var data = response.data;
+      if(fh.is_success(data)) {
+        location.reload();
+      }
+    })
+    .catch(function (error) {
+      fh.show_errorpage(error);
+    });
+  },
   deleteCarouselImage: function(carousel, image) {
     event.preventDefault();
     var btn = $(document.activeElement);

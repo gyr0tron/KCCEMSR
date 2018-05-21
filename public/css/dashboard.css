@@ -33,6 +33,11 @@
   left: 75%;
   top: 5px;
 }
+.image-container button.favorite {
+  /* background-color: yellow; */
+  left: 5px;
+  top: 5px;
+}
 /* SORTABLE  */
 body.dragging, body.dragging * {
   cursor: move !important;

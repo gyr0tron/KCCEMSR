@@ -42,9 +42,10 @@
           <div class="col-sm-9">
             @foreach ($images as $image)
               @php
-              $onclick = "dashboard.deleteEventImage(event, $image->id);"
+              $onclick = "dashboard.deleteEventImage(event, $image->id);";
+              $onfav = "dashboard.favEventImage(event, $image->id, $event->id);";
               @endphp
-              @include('forms.imagepreview', ["url" => $image->getUrl(),"thumb"=> $image->getThumb(), "group" => "groupImages", "id"=>$image->id, "onclick"=>$onclick])
+              @include('forms.imagepreview', ["url" => $image->getUrl(),"thumb"=> $image->getThumb(), "group" => "groupImages", "id"=>$image->id, "onclick"=>$onclick, 'fav'=>$image->id==$event->featured, 'onfav'=>$onfav])
             @endforeach
           </div>
           <p class="help-block"></p>
