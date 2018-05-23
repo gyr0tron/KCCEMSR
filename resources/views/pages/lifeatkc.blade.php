@@ -39,8 +39,8 @@
 										</a>
 									</div>
 									<a class="btn btn-default btn-block" href="{{route('event', $event->url)}}">
-										<p style="overflow: hidden; margin: 0px;">
-										{{$event->name}}
+										<p style="overflow: hidden; margin: 0px; white-space: normal;" class="ellipsis_3_line">
+											{{$event->name}}
 										</p>
 									</a>
 								</div>
