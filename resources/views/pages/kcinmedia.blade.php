@@ -9,7 +9,7 @@
 	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 		<div class="container main-content-sub">
 			<div class="row">
-				<h1 class="text-center title" style="font-weight: 300;"><span>KC in Media</span></h1>
+				<h1 class="text-center title" id="portfolio"><span>KC in Media</span></h1>
 				@foreach (App\KCinMedia::orderBy('id','DESC')->get() as $media)
 					<div class="col-md-6" style="float:left">
 						@php

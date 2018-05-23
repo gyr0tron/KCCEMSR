@@ -32,7 +32,7 @@
 								<div class="image-box">
 									<div class="overlay-container">
 										{{-- 750 x 500 --}}
-										<img src="{{$event->getFeaturedImage()}}" alt="" height="500">
+										<img src="{{url("images/eclipse.gif")}}" alt="" data-echo="{{$event->getFeaturedImage()}}" style="height: 250px;margin: 0 auto;" height="500">
 										<a class="overlay" href="{{route('event', $event->url)}}">
 											<i class="fa fa-search-plus"></i>
 											<span>{{App\Department::getName($event->department)}}</span>
