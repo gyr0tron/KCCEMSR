@@ -21,7 +21,9 @@
 						<div class="col-md-6" style="text-align: justify;">
 							<h2>Latest New's</h2>
 							<ul class="list-unstyled resp-text-sub">
-								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="{{route('admissions-apply')}}">Apply Online</a></li>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="{{route('admissions-apply')}}" target="_blank">Apply Online</a></li>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="http://dtemaharashtra.gov.in/approvedinstitues/" target="_blank">DTE Home Page</a></li>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="http://fe2017.dtemaharashtra.gov.in/StaticPages/HomePage.aspx" target="_blank">Engineering Cut-off 2017</a></li>
 							</ul>
 						</div>
 					</div>
