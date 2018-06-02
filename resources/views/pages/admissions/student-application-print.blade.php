@@ -404,4 +404,11 @@
 	</div>
 @endsection
 @section('post')
+<script type="text/javascript">
+$(function() {
+	setTimeout(function () {
+		window.print();
+	}, 1000);
+});
+</script>
 @endsection
