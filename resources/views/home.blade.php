@@ -34,7 +34,7 @@
 
 		<!-- section start -->
 		<!-- ================ -->
-		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn" style="padding: 0px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
