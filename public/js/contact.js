@@ -94,7 +94,7 @@ $("#login_form").submit(function(event) {
   axios.post('/api/admission/login', $("#login_form").serialize())
   .then(function (response) {
     fh.show_button();
-    window.location = "/";
+    window.location = "/admissions/student-application";
   })
   .catch(function (error) {
     fh.set_single_error("");
