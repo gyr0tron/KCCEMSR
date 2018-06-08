@@ -17,9 +17,10 @@
   <div class="form-group">
     <span for="fullname">Role:</span>
     <select class="form-control" id="role" name="role">
-      <option value="0" selected>User</option>
-      <option value="1">Editor</option>
-      <option value="2">Administrator</option>
+      <option value="3" selected>User</option>
+      <option value="2">Editor</option>
+      <option value="1">Administrator</option>
+      <option value="-4">Admission</option>
     </select>
     <p class="help-block"></p>
   </div>

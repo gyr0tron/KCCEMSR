@@ -60,74 +60,80 @@ if(!isset($second)) $second = "not defined";
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">ADMIN DASHBOARD</li>
         <li class="{{$menu_item=='dashboard'?'active':''}}"><a href="{{route("admin_dashboard")}}"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>
-        <li class="{{$menu_item=='carousel'?'active':''}}"><a href="{{route("admin_carousel")}}"><i class="fa fa-laptop"></i> <span>Carousel</span></a></li>
-        <li class="{{$menu_item=='testimonials'?'active':''}}">
-          <a href="{{route("admin_testimonials")}}">
-            <i class="fa fa-quote-left"></i> <span>Testimonials</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-blue">{{App\Testimonial::count()}}</small>
-            </span>
-          </a>
-        </li>
-        <li class="{{$menu_item=='events'?'active':''}}">
-          <a href="{{route("admin_events")}}">
-            <i class="fa fa-calendar"></i> <span>Events</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-blue">{{App\Event::count()}}</small>
-            </span>
-          </a>
-        </li>
-        <li class="{{$menu_item=='announcements'?'active':''}}">
-          <a href="{{route("admin_announcements")}}">
-            <i class="fa fa-bullhorn"></i> <span>Announcements</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-blue">{{App\Announcement::count()}}</small>
-            </span>
-          </a>
-        </li>
-        <li class="treeview {{$menu_item=='departments'?'active':''}}" >
-          <a href="#">
-            <i class="fa fa-building-o"></i>
-            <span>Departments</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            @foreach (App\Department::all() as $dp)
-              <li class="{{$second==$dp->url?"active":""}}"><a href="{{route("admin_department", [$dp->url, "overview"])}}">{{$dp->name}}</a></li>
-            @endforeach
-          </ul>
-        </li>
-        <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_library",'question-papers')}}"><i class="fa fa-book"></i> <span>Library</span></a></li>
-        <li class="{{$menu_item=='placements'?'active':''}}"><a href="{{route("admin_placements",'placement-process')}}"><i class="fa fa-tasks"></i> <span>Placements</span></a></li>
-        <li class="{{$menu_item=='academics'?'active':''}}"><a href="{{route("admin_academics", "curriculum-plan")}}"><i class="fa fa-graduation-cap"></i> <span>Academics</span></a></li>
-        <li class="{{$menu_item=='infrastructures'?'active':''}}"><a href="{{route("admin_infrastructure")}}"><i class="fa fa-industry"></i> <span>Infrastructures</span></a></li>
-        <li class="{{$menu_item=='careeratkc'?'active':''}}"><a href="{{route("admin_careeratkc")}}"><i class="fa fa-briefcase"></i> <span>Career at KC</span></a></li>
-        <li class="{{$menu_item=='kcinmedia'?'active':''}}"><a href="{{route("admin_kcinmedia")}}"><i class="fa fa-newspaper-o"></i> <span>KC in Media</span></a></li>
-        <li class="{{$menu_item=='messages'?'active':''}}">
-          <a href="{{route("admin_messages")}}">
-            <i class="fa fa-envelope"></i> <span>Messages</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-blue">{{App\Message::count()}}</small>
-            </span>
-          </a>
-        </li>
-        <li class="{{$menu_item=='admission'?'active':''}}"><a href="{{route("admin_admissions", 'admission-criteria')}}"><i class="fa fa-university"></i> <span>Admissions</span></a></li>
-        <li class="{{$menu_item=='admission_form'?'active':''}}"><a href="{{route("admin_admission_form")}}"><i class="fa fa-list"></i> <span>Admission Forms</span></a></li>
-        <li class="{{$menu_item=='committees'?'active':''}}"><a href="{{route("admin_committees")}}"><i class="fa fa-users"></i> <span>Committees</span></a></li>
-        <li class="treeview {{$menu_item=='publication'?'active':''}}" >
-          <a href="#">
-            <i class="fa fa-newspaper-o"></i>
-            <span>Publications</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="{{$menu_item=='publication'?'active':''}}" ><a href="{{route("admin_publication")}}">Technovision</a></li>
-          </ul>
-        </li>
+        @if (Auth::user()->is_editor())
+          <li class="{{$menu_item=='carousel'?'active':''}}"><a href="{{route("admin_carousel")}}"><i class="fa fa-laptop"></i> <span>Carousel</span></a></li>
+          <li class="{{$menu_item=='testimonials'?'active':''}}">
+            <a href="{{route("admin_testimonials")}}">
+              <i class="fa fa-quote-left"></i> <span>Testimonials</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-blue">{{App\Testimonial::count()}}</small>
+              </span>
+            </a>
+          </li>
+          <li class="{{$menu_item=='events'?'active':''}}">
+            <a href="{{route("admin_events")}}">
+              <i class="fa fa-calendar"></i> <span>Events</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-blue">{{App\Event::count()}}</small>
+              </span>
+            </a>
+          </li>
+          <li class="{{$menu_item=='announcements'?'active':''}}">
+            <a href="{{route("admin_announcements")}}">
+              <i class="fa fa-bullhorn"></i> <span>Announcements</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-blue">{{App\Announcement::count()}}</small>
+              </span>
+            </a>
+          </li>
+          <li class="treeview {{$menu_item=='departments'?'active':''}}" >
+            <a href="#">
+              <i class="fa fa-building-o"></i>
+              <span>Departments</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              @foreach (App\Department::all() as $dp)
+                <li class="{{$second==$dp->url?"active":""}}"><a href="{{route("admin_department", [$dp->url, "overview"])}}">{{$dp->name}}</a></li>
+              @endforeach
+            </ul>
+          </li>
+          <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_library",'question-papers')}}"><i class="fa fa-book"></i> <span>Library</span></a></li>
+          <li class="{{$menu_item=='kcinmedia'?'active':''}}"><a href="{{route("admin_kcinmedia")}}"><i class="fa fa-newspaper-o"></i> <span>KC in Media</span></a></li>
+          <li class="{{$menu_item=='committees'?'active':''}}"><a href="{{route("admin_committees")}}"><i class="fa fa-users"></i> <span>Committees</span></a></li>
+          <li class="treeview {{$menu_item=='publication'?'active':''}}" >
+            <a href="#">
+              <i class="fa fa-newspaper-o"></i>
+              <span>Publications</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="{{$menu_item=='publication'?'active':''}}" ><a href="{{route("admin_publication")}}">Technovision</a></li>
+            </ul>
+          </li>
+        @endif
+        @if (Auth::user()->is_admin())
+          <li class="{{$menu_item=='placements'?'active':''}}"><a href="{{route("admin_placements",'placement-process')}}"><i class="fa fa-tasks"></i> <span>Placements</span></a></li>
+          <li class="{{$menu_item=='academics'?'active':''}}"><a href="{{route("admin_academics", "curriculum-plan")}}"><i class="fa fa-graduation-cap"></i> <span>Academics</span></a></li>
+          <li class="{{$menu_item=='infrastructures'?'active':''}}"><a href="{{route("admin_infrastructure")}}"><i class="fa fa-industry"></i> <span>Infrastructures</span></a></li>
+          <li class="{{$menu_item=='careeratkc'?'active':''}}"><a href="{{route("admin_careeratkc")}}"><i class="fa fa-briefcase"></i> <span>Career at KC</span></a></li>
+          <li class="{{$menu_item=='messages'?'active':''}}">
+            <a href="{{route("admin_messages")}}">
+              <i class="fa fa-envelope"></i> <span>Messages</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-blue">{{App\Message::count()}}</small>
+              </span>
+            </a>
+          </li>
+          <li class="{{$menu_item=='admission'?'active':''}}"><a href="{{route("admin_admissions", 'admission-criteria')}}"><i class="fa fa-university"></i> <span>Admissions</span></a></li>
+        @endif
+        @if (Auth::user()->is_admissionAccess())
+          <li class="{{$menu_item=='admission_form'?'active':''}}"><a href="{{route("admin_admission_form")}}"><i class="fa fa-list"></i> <span>Admission Forms</span></a></li>
+        @endif
         @if (Auth::user()->is_admin())
           <li class="{{$menu_item=='users'?'active':''}}"><a href="{{route("admin_users")}}"><i class="fa fa-users"></i> <span>Users</span></a></li>
         @endif

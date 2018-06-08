@@ -31,11 +31,16 @@ class User extends Authenticatable
 
   public function getRole() {
     switch ($this->access) {
-      case '2':
+      case '1':
       return "Administrator";
       break;
-      case '1':
+      case '2':
       return "Editor";
+      case '3':
+      return "User";
+      break;
+      case '4':
+      return "Admission";
       break;
       default:
       return "User";
@@ -44,7 +49,13 @@ class User extends Authenticatable
   }
 
   public function is_admin() {
-    return $this->access == 2;
+    return $this->access == 1;
+  }
+  public function is_editor() {
+    return $this->access <= 2;
+  }
+  public function is_admissionAccess() {
+    return $this->access <= 4;
   }
   public function is_admission() {
     return $this->access == 2 || $this->access == 3;
