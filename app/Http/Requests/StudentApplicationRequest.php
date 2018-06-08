@@ -42,10 +42,15 @@ class StudentApplicationRequest extends FormRequest
       'croad' => 'required|string',
       'carea' => 'required|string',
       'ccity' => 'required|string',
-      'ctelephone' => 'required|string',
       'cphone' => 'required|string',
       'cparent' => 'required|string',
       'cpin' => 'required|string',
+      'pflat' => 'required|string',
+      'proad' => 'required|string',
+      'parea' => 'required|string',
+      'pcity' => 'required|string',
+      'pphone' => 'required|string',
+      'ppin' => 'required|string',
     ];
   }
   public function messages()
@@ -60,10 +65,17 @@ class StudentApplicationRequest extends FormRequest
       'sex.required'  => 'Sex is required.',
       'caddress.required'  => 'Correspondence address is required.',
       'sex.required'  => 'Sex is required.',
-      'croad.required'  => 'Correspondence address is required',
-      'carea.required'  => 'Correspondence address is required.',
-      'ccity.required'  => 'Correspondence address is required.',
-      'cpin.required'  => 'Correspondence address is required.',
+      'croad.required'  => 'Correspondence road is required',
+      'carea.required'  => 'Correspondence area is required.',
+      'ccity.required'  => 'Correspondence city is required.',
+      'cphone.required'  => 'Correspondence phone is required.',
+      'cparent.required'  => 'Correspondence parent is required.',
+      'pflat.required'  => 'Permanent flat is required.',
+      'proad.required'  => 'Permanent road is required.',
+      'parea.required'  => 'Permanent area is required.',
+      'pcity.required'  => 'Permanent city is required.',
+      'pphone.required'  => 'Permanent phone is required.',
+      'ppin.required'  => 'Permanent pin is required.',
     ];
   }
 }
