@@ -30,17 +30,17 @@
 				<div class="col-md-6">
 					<h1 id="vison" class="title text-center"><span>Vision</span></h1>
 					<ul class="list-unstyled">
-						<li><i class="fa fa-caret-right pr-10 text-colored"></i>To be an organization of excellence, leveraging human potential in engineering and management for a better tomorrow</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To be an organization of excellence, leveraging human potential in engineering and management for a better tomorrow</li>
 					</ul>
 				</div>
 				<div class="col-md-6">
 					<h1 id="progOutcms" class="title text-center"><span>Mission</span></h1>
 					<ul class="list-unstyled">
-						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To nurture scientific temperament through the process of intellectual stimulation.</li>
-						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To inculcate a sense of life-long learning and developing positive qualities.</li>
-						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To excel in academics, practical engineering and research endeavors.</li>
-						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To collaborate with institutions and industries for mutual benefits and to achieve excellence.</li>
-						<li id="test"><i class="fa fa-caret-right pr-10 text-colored"></i> To facilitate employability, entrepreneurial ability along with social responsibility.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To nurture scientific temperament through the process of intellectual stimulation.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To inculcate a sense of life-long learning and developing positive qualities.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To excel in academics, practical engineering and research endeavors.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To collaborate with institutions and industries for mutual benefits and to achieve excellence.</li>
+						<li id="test"><i class="fa fa-caret-right text-colored"></i> To facilitate employability, entrepreneurial ability along with social responsibility.</li>
 					</ul>
 				</div>
 			</div>

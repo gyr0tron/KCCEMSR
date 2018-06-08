@@ -15,6 +15,25 @@
 							<li class="job-preview animated fadeInDown">
 								<div class="content col-md-10 col-sm-10 float-left">
 									<h2 class="job-title"><strong>{{$job->name}}</strong></h2>
+
+									<h4>Responsibility:</h4>
+									<ul style="list-style: none;">
+										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
+										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
+										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
+										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
+										<li id="test"><i class="fa fa-caret-right text-colored"></i> Test</li>
+									</ul>
+
+									<h4>Eligibility:</h4>
+									<ul style="list-style: none;">
+										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
+										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
+										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
+										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
+										<li id="test"><i class="fa fa-caret-right text-colored"></i> Test</li>
+									</ul>
+
 									@if (isset($job->filename))
 										<h5 class="sub-info"><a href="{{$job->getUrl()}}">Download</a></h5>
 									@endif
