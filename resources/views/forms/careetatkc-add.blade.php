@@ -48,6 +48,20 @@
             </div>
           </div>
           <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Responsibility:</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" id="responsibility" name="responsibility"  style="width: 100%; height: 100px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              <p class="help-block">Enter each point ending with a '.'</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Eligibility:</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" id="eligibility" name="eligibility"  style="width: 100%; height: 100px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              <p class="help-block">Enter each point ending with a '.'</p>
+            </div>
+          </div>
+          <div class="form-group">
             <label class="control-label col-sm-2" for="file">File:</label>
             <div class="col-sm-9">
               <input type="file" class="form-control" id="file" name="file">
