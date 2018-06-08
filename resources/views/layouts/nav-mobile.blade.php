@@ -52,8 +52,8 @@
 								<li><a href="{{route('admissions', 'institute-prospectus')}}">Institute Prospectus</a></li>
 								<li><a href="{{route('admissions', 'dte-admission-information-brochure')}}">DTE Admission Information Brochure</a></li>
 								<li><a href="{{route('admissions', 'total-intake')}}">Total Intake</a></li>
-								<li><a href="{{route('admissions', 'cap-rount-allottment')}}">Cap Round Allottment</a></li>
-								<li><a href="{{route('admissions', 'direct-second-year')}}">Direct Second Year</a></li>
+								{{-- <li><a href="{{route('admissions', 'cap-rount-allottment')}}">Cap Round Allottment</a></li> --}}
+								{{-- <li><a href="{{route('admissions', 'direct-second-year')}}">Direct Second Year</a></li> --}}
 								<li><a href="{{route('admissions', 'anti-ragging-affidavit')}}">Anti-ragging Affidavit</a></li>
 								<li><a href="{{route('admissions', 'scholarship')}}">Scholarship</a></li>
 							</ul>
