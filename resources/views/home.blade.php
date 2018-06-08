@@ -9,8 +9,8 @@
 @section('content')
 	<!-- banner start -->
 	<!-- ================ -->
-	<a href="/#announcements" id="notification"><i class="fa fa-bell">
-		<p class="bubble speech" id="bell_info" style="color:black">Check out the latest happenings at KC!
+	<a href="{{route('admissions-details')}}" id="notification"><i class="fa fa-bell">
+		<p class="bubble speech" id="bell_info" style="color:black">Check out Admissions at KC!
 		</p>
 	</i></a>
 	<div id="banner" class="banner">
