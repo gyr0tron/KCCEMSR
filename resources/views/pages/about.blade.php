@@ -129,7 +129,7 @@
 			</div>
 			<div class="space"></div>
 
-			<div class="row" id="">
+			{{-- <div class="row" id="">
 				<a class="anchor_guide" id="ceo-msg"></a>
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>CEO Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12" style="float:right">
@@ -151,12 +151,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="space"></div>
+			<div class="space"></div> --}}
 
 			<div class="row" id="">
 				<a class="anchor_guide" id="prncp-msg"></a>
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>Principal Message</span></strong></h1>
-				<div class="col-md-3 col-sm-3 col-xs-12">
+				<div class="col-md-3 col-sm-3 col-xs-12" style="float:right">
 					<div style="width:100%;">
 						<img src="{{url("images/principal.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
 					</div>
