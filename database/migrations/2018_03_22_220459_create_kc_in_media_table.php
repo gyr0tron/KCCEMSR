@@ -31,6 +31,6 @@ class CreateKcInMediaTable extends Migration
   */
   public function down()
   {
-    Schema::dropIfExists('infrastructures');
+    Schema::dropIfExists('kcinmedia');
   }
 }
