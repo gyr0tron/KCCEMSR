@@ -12,6 +12,9 @@
 				<div class="col-md-12">
 					<ul class="job-list">
 						@foreach (App\JobList::orderBy('id','DESC')->get() as $job)
+							@if ($job->visible == '0')
+								@continue
+							@endif
 							<li class="job-preview animated fadeInDown">
 								<div class="content col-md-10 col-sm-10 float-left">
 									<h2 class="job-title"><strong>{{$job->name}}</strong></h2>

@@ -837,6 +837,19 @@ class DashboardApiController extends Controller
     $job->save();
     return ResponseBuilder::send(true, "", "");
   }
+  // Show Career
+  public function showCareer($id, Request $request) {
+    $data = $request->input('data');
+    $job = JobList::where("id",$id)->first();
+    if(!$job) abort(404, 'Not Found');
+    if($data == '1') {
+      $job->visible = '1';
+    } else {
+      $job->visible = '0';
+    }
+    $job->save();
+    return ResponseBuilder::send(true, "", "");
+  }
   public function removeCareer(Request $request)
   {
     $id = $request->input("id","-1");

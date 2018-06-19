@@ -204,6 +204,7 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/committee/remove","Admin\DashboardApiController@removeCommittee");
 
   Route::post("/career/add","Admin\DashboardApiController@addCareer");
+  Route::post("/career/show/{id}","Admin\DashboardApiController@showCareer");
   Route::post("/career/remove","Admin\DashboardApiController@removeCareer");
   Route::post("/kcinmedia/add","Admin\DashboardApiController@addKCinMedia");
   Route::post("/kcinmedia/remove","Admin\DashboardApiController@removeKCinMedia");
