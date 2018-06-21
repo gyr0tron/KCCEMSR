@@ -11,6 +11,7 @@
 			<div class="row">
 				<h1 class="text-center title" id="portfolio"><span>KC in Media</span></h1>
 				@foreach (App\KCinMedia::orderBy('id','DESC')->get() as $media)
+				<div class="row">
 					<div class="col-md-6" style="float:left">
 						@php
 						$carousel = App\Carousel::where('type', $media->carousel)->first();
@@ -45,7 +46,8 @@
 						{{-- <h4>Sub heading:</h4> --}}
 						<p style="text-align: justify">{{$media->description}}</p>
 					</div>
-					<div class="space"></div>
+				</div>
+				<div class="space"></div>
 				@endforeach
 			</div>
 		</div>
