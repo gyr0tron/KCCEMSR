@@ -45,9 +45,9 @@
 						{{-- <h4>Sub heading:</h4> --}}
 						<p style="text-align: justify">{{$media->description}}</p>
 					</div>
-				</div>
-				<div class="space"></div>
-			@endforeach
+					<div class="space"></div>
+				@endforeach
+			</div>
 		</div>
 	</div>
 @endsection
