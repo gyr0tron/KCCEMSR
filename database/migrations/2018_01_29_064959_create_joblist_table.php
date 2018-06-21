@@ -18,6 +18,9 @@ class CreateJoblistTable extends Migration
       $table->string('name')->nullable();
       $table->string('filename')->nullable();
       $table->string('url')->nullable();
+      $table->text('responsibility')->nullable();
+      $table->text('eligibility')->nullable();
+      $table->enum('visible', [0,1])->default(1);
       $table->integer('created_by');
       $table->integer('updated_by');
       $table->timestamps();

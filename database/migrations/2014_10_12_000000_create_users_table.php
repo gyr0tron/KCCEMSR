@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
       $table->string('email', 191)->unique();
       $table->string('fullname');
       $table->string('password');
-      $table->enum("access",['0','1','2'])->default('1');
+      $table->enum("access",['0','1','2','3','4'])->default('1');
       $table->enum("type",['0','1','2'])->default('1');//0-Admin, 1-Admission, 2-Alumni
       $table->enum("verified", ['0', '1'])->default('0');
       $table->string('skin')->default('blue');
@@ -31,7 +31,7 @@ class CreateUsersTable extends Migration
       'username' => "admin",
       'email' => "admin",
       'fullname' => "admin",
-      'access' => "2",
+      'access' => "1",
       'type' => "0",
       "password" => bcrypt("admin"),
       'created_at' => date("Y-m-d H:i:s"),

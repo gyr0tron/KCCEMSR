@@ -25,7 +25,8 @@ use App\Http\Requests\StudentApplicationRequest;
 class AdmissionsController extends Controller
 {
   use AuthenticatesUsers;
-  protected $redirectTo = '/';
+  protected $redirectTo = "/";
+  
   public function __construct()
   {
     $this->middleware('guest')->except(['postApplication', 'printApplication']);
@@ -70,6 +71,7 @@ class AdmissionsController extends Controller
       'type' => '1',
     ];
   }
+
   public function postApplication(StudentApplicationRequest $request)
   {
     $data = $request->all();

@@ -30,17 +30,17 @@
 				<div class="col-md-6">
 					<h1 id="vison" class="title text-center"><span>Vision</span></h1>
 					<ul class="list-unstyled">
-						<li><i class="fa fa-caret-right pr-10 text-colored"></i>To be an organization of excellence, leveraging human potential in engineering and management for a better tomorrow</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To be an organization of excellence, leveraging human potential in engineering and management for a better tomorrow</li>
 					</ul>
 				</div>
 				<div class="col-md-6">
 					<h1 id="progOutcms" class="title text-center"><span>Mission</span></h1>
 					<ul class="list-unstyled">
-						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To nurture scientific temperament through the process of intellectual stimulation.</li>
-						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To inculcate a sense of life-long learning and developing positive qualities.</li>
-						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To excel in academics, practical engineering and research endeavors.</li>
-						<li><i class="fa fa-caret-right pr-10 text-colored"></i> To collaborate with institutions and industries for mutual benefits and to achieve excellence.</li>
-						<li id="test"><i class="fa fa-caret-right pr-10 text-colored"></i> To facilitate employability, entrepreneurial ability along with social responsibility.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To nurture scientific temperament through the process of intellectual stimulation.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To inculcate a sense of life-long learning and developing positive qualities.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To excel in academics, practical engineering and research endeavors.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To collaborate with institutions and industries for mutual benefits and to achieve excellence.</li>
+						<li id="test"><i class="fa fa-caret-right text-colored"></i> To facilitate employability, entrepreneurial ability along with social responsibility.</li>
 					</ul>
 				</div>
 			</div>
@@ -129,7 +129,7 @@
 			</div>
 			<div class="space"></div>
 
-			<div class="row" id="">
+			{{-- <div class="row" id="">
 				<a class="anchor_guide" id="ceo-msg"></a>
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>CEO Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12" style="float:right">
@@ -151,12 +151,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="space"></div>
+			<div class="space"></div> --}}
 
 			<div class="row" id="">
 				<a class="anchor_guide" id="prncp-msg"></a>
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>Principal Message</span></strong></h1>
-				<div class="col-md-3 col-sm-3 col-xs-12">
+				<div class="col-md-3 col-sm-3 col-xs-12" style="float:right">
 					<div style="width:100%;">
 						<img src="{{url("images/principal.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
 					</div>

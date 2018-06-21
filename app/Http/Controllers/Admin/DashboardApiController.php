@@ -827,11 +827,26 @@ class DashboardApiController extends Controller
   {
     $job = new JobList();
     $job->name = $request->input("name","");
+    $job->responsibility = $request->input("responsibility","");
+    $job->eligibility = $request->input("eligibility","");
     $job->generateUrl();
     $file = $request->file('file');
     if($file) $job->filename = $job->uploadFile($file);
     $job->updated_by = Auth::user()->id;
     $job->created_by = Auth::user()->id;
+    $job->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Show Career
+  public function showCareer($id, Request $request) {
+    $data = $request->input('data');
+    $job = JobList::where("id",$id)->first();
+    if(!$job) abort(404, 'Not Found');
+    if($data == '1') {
+      $job->visible = '1';
+    } else {
+      $job->visible = '0';
+    }
     $job->save();
     return ResponseBuilder::send(true, "", "");
   }

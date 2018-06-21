@@ -34,6 +34,18 @@ $("[data-skin]").click(function(event) {
 });
 // ADMIN REMOVE FUNCTIONS
 window.dashboard = {
+  directRequest: function(url, data) {
+    axios.post(url, {data:data})
+    .then(function (response) {
+      var data = response.data;
+      if(fh.is_success(data)) {
+        window.location.reload();
+      }
+    })
+    .catch(function (error) {
+      fh.show_errorpage(error);
+    });
+  },
   deleteEventImage: function(event, id) {
     event.preventDefault();
     var btn = $(document.activeElement);

@@ -24,9 +24,10 @@
     <label class="control-label col-sm-2" for="role">Role:</label>
     <div class="col-sm-4">
       <select class="form-control" id="role" name="role">
-        <option value="0" {{$user->access==0?"selected":""}}>User</option>
-        <option value="1" {{$user->access==1?"selected":""}}>Editor</option>
-        <option value="2" {{$user->access==2?"selected":""}}>Administrator</option>
+        <option value="3" {{$user->access==3?"selected":""}}>User</option>
+        <option value="2" {{$user->access==2?"selected":""}}>Editor</option>
+        <option value="1" {{$user->access==1?"selected":""}}>Administrator</option>
+        <option value="4" {{$user->access==-4?"selected":""}}>Admission</option>
       </select>
       <p class="help-block"></p>
     </div>
