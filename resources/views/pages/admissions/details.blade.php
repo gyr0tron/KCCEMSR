@@ -22,8 +22,11 @@
 							<h2>Latest New's</h2>
 							<ul class="list-unstyled resp-text-sub">
 								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="{{route('admissions-apply')}}" target="_blank">Apply Online</a></li>
-								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="http://fe2017.dtemaharashtra.gov.in/StaticPages/HomePage.aspx" target="_blank">DTE Home Page</a></li>
-								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="http://dtemaharashtra.gov.in/approvedinstitues/" target="_blank">Engineering Cut-off 2017</a></li>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://fe2018.mahcet.org/StaticPages/HomePage.aspx" target="_blank">DTE Home Page</a></li>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://fe2018.mahcet.org/StaticPages/HomePage.aspx" target="_blank">Engineering  Cut-Off 2017 for CAP Round 1</a></li>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://fe2018.mahcet.org/StaticPages/HomePage.aspx" target="_blank">Engineering  Cut-Off 2017 for CAP Round 2</a></li>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://fe2018.mahcet.org/StaticPages/HomePage.aspx" target="_blank">Engineering  Cut-Off 2017 for CAP Round 3</a></li>
+								<p class="text-left align-marg" style="text-align: justify;">For more information on option form filling for CAP Round Guidance Visit us on 23/06/2018 at 11.30 AM</p>
 							</ul>
 						</div>
 					</div>
