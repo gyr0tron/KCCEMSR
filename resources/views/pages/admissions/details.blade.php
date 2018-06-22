@@ -43,8 +43,8 @@
 						$image = App\ImageUpload::where('id', $id)->first();
 						if(!$image) continue;
 						@endphp
-						<div class="col-sm-3">
-							<img src="{{$image->getUrl()}}">
+						<div class="col-sm-3" style="padding-bottom: 20px;">
+							<img src="{{$image->getUrl()}}" style="height: 200px;">
 						</div>
 					@endforeach
 				@endif
