@@ -19,8 +19,14 @@
 							<div class="space"></div>
 						</div>
 						<div class="col-md-6" style="text-align: justify;">
-							<h2>Latest New's</h2>
+							<h1 style="font-size: 30px">Latest News</h1>
 							<ul class="list-unstyled resp-text-sub">
+								<h2 class="text-left align-marg" style="font-size: 120%; margin-bottom: 1%;">Excelssior Education Society's K.C. College of Engineering &amp; Management Studies &amp; Research, Thane</h2>
+								<p class="text-left align-marg">DTE Choice Code:</p>
+								<p class="text-left align-marg">Electronics &amp; Telecommunication - 321037210</p>
+								<p class="text-left align-marg">Computer Engineering - 321024510</p>
+								<p class="text-left align-marg">Information Technology - 321024610</p>
+
 								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="{{route('admissions-apply')}}" target="_blank">Apply Online</a></li>
 								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://fe2018.mahacet.org/StaticPages/HomePage.aspx" target="_blank">DTE Home Page</a></li>
 								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="http://fe2018.mahacet.org/2017/2017ENGG_CAP1_CutOff.pdf" target="_blank">Engineering  Cut-Off 2017 for CAP Round 1</a></li>
