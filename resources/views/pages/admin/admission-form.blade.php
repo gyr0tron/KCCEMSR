@@ -32,6 +32,7 @@
               <thead>
                 <tr>
                   <th>Name</th>
+                  <th>Date</th>
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -44,6 +45,7 @@
                   @endphp
                   <tr>
                     <td>{{strtoupper($data->surname . " " . $data->firstname . " " . $data->fathername . " " . $data->mothername)}}</td>
+                    <td>{{$admission->updated_at}}</td>
                     <td><a href="{{route('admin_admission_form_id', $admission->id)}}" class="btn btn-sm btn-info" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
                   </tr>
                 @endforeach
@@ -51,6 +53,7 @@
               <tfoot>
                 <tr>
                   <th>Name</th>
+                  <th>Date</th>
                   <th>Actions</th>
                 </tr>
               </tfoot>
