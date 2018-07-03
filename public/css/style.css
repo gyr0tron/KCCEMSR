@@ -2043,8 +2043,8 @@ button.accordion.active:after {
     color: #fff;
     margin: 0;
     position: relative;
-    left: 16px;
-    top: 13px;
+    left: 15px;
+    top: 15px;
     font-size: 19px;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
