@@ -15,7 +15,10 @@
 					<div class="row">
 						<div class="col-md-6">
 							{{-- <img src="http://via.placeholder.com/1140x615" alt=""> --}}
-							<iframe width="100%" height="300" src="https://www.youtube.com/embed/ciiMB8Mbg5g" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+							{{-- <iframe width="100%" height="300" src="https://www.youtube.com/embed/ciiMB8Mbg5g" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> --}}
+							<div class="" style="">
+								<img src="{{url("images/Ad002.jpg")}}">
+							</div>
 							<div class="space"></div>
 							<div class="" style="padding-bottom: 20px;">
 								<img src="{{url("images/Ad001.jpg")}}">
