@@ -404,6 +404,8 @@
 							<li><i class="fa fa-map-marker pr-10"></i><a href="https://goo.gl/maps/9kgemW2tEwn" class="a-no-decrn">{{setting('contact-address')}}</a></li>
 							<li><i class="fa fa-envelope-o pr-10"></i>&nbsp;{{setting('contact-email')}}</li>
 							<li><i class="fa fa-phone pr-10"></i>&nbsp;{{setting('contact-phone')}}</li>
+							<li><i class="fa fa-whatsapp pr-10"></i>&nbsp;9594477844</li>
+							<li><i class="fa fa-volume-control-phone pr-10"></i>&nbsp;8448385585</li>
 						</ul>
 					</div>
 				</div>
