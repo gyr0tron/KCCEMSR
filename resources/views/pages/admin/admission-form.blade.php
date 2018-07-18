@@ -31,12 +31,16 @@
             <table id="users-table" class="table table-bordered table-hover  datatable-full">
               <thead>
                 <tr>
+                  <th>#</th>
                   <th>Name</th>
                   <th>Date</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
+                @php
+                  $no = 0;
+                @endphp
                 @foreach (App\User::where('type','1')->get() as $user)
                   @php
                     $admission = App\Admission::where('userid', $user->id)->where('completed', '1')->first();
@@ -44,6 +48,7 @@
                     $data = json_decode($admission->data);
                   @endphp
                   <tr>
+                    <td>{{$no++}}</td>
                     <td>{{strtoupper($data->surname . " " . $data->firstname . " " . $data->fathername . " " . $data->mothername)}}</td>
                     <td>{{$admission->updated_at}}</td>
                     <td><a href="{{route('admin_admission_form_id', $admission->id)}}" class="btn btn-sm btn-info" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
@@ -52,6 +57,7 @@
               </tbody>
               <tfoot>
                 <tr>
+                  <th>#</th>
                   <th>Name</th>
                   <th>Date</th>
                   <th>Actions</th>
