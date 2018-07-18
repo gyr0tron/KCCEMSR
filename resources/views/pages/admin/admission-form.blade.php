@@ -39,7 +39,7 @@
               </thead>
               <tbody>
                 @php
-                  $no = 0;
+                  $no = 1;
                 @endphp
                 @foreach (App\User::where('type','1')->get() as $user)
                   @php
