@@ -65,7 +65,12 @@
                     <td>{{$user->fullname}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->getRole()}}</td>
-                    <td><a class="btn btn-warning btn-sm" style="margin-right:10px;" href="{{route("admin_edituser", $user->id)}}">Edit</a><button type="button" class="btn btn-sm btn-danger" style="margin-right:10px;">Remove</button></td>
+                    <td>
+                      <a class="btn btn-warning btn-sm btn-table " href="{{route("admin_edituser", $user->id)}}"><i class="fa fa-pencil"></i></a>
+                      @if ($user->id != 1)
+                        <a class="btn btn-sm btn-danger btn-table " onclick="dashboard.removeYesNo('Are you sure you want to remove {{$user->fullname}} ?', '/api/admin/removeuser', {{$user->id}})"><i class="fa fa-trash-o"></i></a>
+                      @endif
+                    </td>
                   </tr>
                 @endforeach
               </tbody>

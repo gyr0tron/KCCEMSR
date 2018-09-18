@@ -67,6 +67,8 @@ class DashboardApiController extends Controller
     $user->email = $request->input("email");
     $user->access = $request->input("role");
     $user->password = bcrypt($request->input("password"));
+    $user->verified = '1';
+    $user->type = '0';
     $user->save();
     return ResponseBuilder::send(true, "", route("admin_users"));
   }
@@ -102,13 +104,12 @@ class DashboardApiController extends Controller
   public function removeUser(Request $request)
   {
     if(!Auth::user()->is_admin()) abort("403","No Access");
-    $user = User::where('username', $request->input("username"));
+    $user = User::where('id', $request->input("id"))->first();
     if($user) {
-      $user->forceDelete();
+      if($user->id != 1) $user->forceDelete();
     }
     return ResponseBuilder::send(true, "", route("admin_users"));
   }
-
   // User Settings
   public function userSettings(AdminUserSettingsRequest $request)
   {
