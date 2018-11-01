@@ -21,20 +21,30 @@
 
 									<h4>Eligibility:</h4>
 									<ul style="list-style: none;">
-										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
-										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
-										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
-										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
-										<li id="test"><i class="fa fa-caret-right text-colored"></i> Test</li>
+										@php
+										$datae = $job->eligibility;
+										if(substr($datae,-1) == ".") {
+											$datae = substr($datae, 0, -1);
+										}
+										$eligibilities = explode(".", $datae);
+										@endphp
+										@foreach ($eligibilities as $eligibility)
+											<li><i class="fa fa-caret-right text-colored"></i> {{ $eligibility }}</li>
+										@endforeach
 									</ul>
 
 									<h4>Responsibility:</h4>
 									<ul style="list-style: none;">
-										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
-										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
-										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
-										<li><i class="fa fa-caret-right text-colored"></i> Test</li>
-										<li id="test"><i class="fa fa-caret-right text-colored"></i> Test</li>
+										@php
+										$datar = $job->responsibility;
+										if(substr($datar,-1) == ".") {
+											$datar = substr($datar, 0, -1);
+										}
+										$responsibilities = explode(".", $datar);
+										@endphp
+										@foreach ($responsibilities as $responsibility)
+										<li><i class="fa fa-caret-right text-colored"></i> {{ $responsibility }}</li>
+										@endforeach
 									</ul>
 
 									@if (isset($job->filename))
