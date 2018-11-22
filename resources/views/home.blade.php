@@ -9,8 +9,8 @@
 @section('content')
 <!-- banner start -->
 <!-- ================ -->
-<a href="{{route('admissions-details')}}" id="notification"><i class="fa fa-bell">
-	<p class="bubble speech" id="bell_info" style="color:black">Check out Admissions at KC!
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdBHQ2nKSML8JIjM0tm-B09o924mQy7ryD-QhgCKRGvgLBD4A/viewform?usp=send_form" id="notification"><i class="fa fa-bell">
+	<p class="bubble speech" id="bell_info" style="color:black">Click here to apply for mock test of JEE/MHCET 2019
 	</p>
 </i></a>
 <div id="banner" class="banner">
@@ -86,7 +86,7 @@
 	</div>
 </div>
 <!-- section end -->
-		
+
 <!-- section start -->
 <!-- ================ -->
 <div class="section">
@@ -223,7 +223,7 @@
 	</div>
 </div>
 <!-- Announcements end -->
-	
+
 
 		<!-- section start -->
 		<!-- ================ -->

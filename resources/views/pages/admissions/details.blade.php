@@ -10,7 +10,7 @@
 		<div class="container main-content">
 			<div class="row">
 				<div class="col-md-12">
-					<h1 id="about" class="title text-center">Admissions <span>2018</span></h1>
+					<h1 id="about" class="title text-center">Admissions <span>2019</span></h1>
 					<div class="space"></div>
 					<div class="row">
 						<div class="col-md-6">
@@ -33,12 +33,13 @@
 								<p class="text-left align-marg">Computer Engineering - 321024510</p>
 								<p class="text-left align-marg">Information Technology - 321024610</p>
 
-								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="{{route('admissions-apply')}}" target="_blank">Apply Online</a></li>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://goo.gl/forms/6VUPg6imlSNK8H822" target="_blank">Apply for mock test of JEE/MHCET 2019</a></li>
+								{{-- <li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="{{route('admissions-apply')}}" target="_blank">Apply Online</a></li>
 								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://fe2018.mahacet.org/StaticPages/HomePage.aspx" target="_blank">DTE Home Page</a></li>
 								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="http://fe2018.mahacet.org/2017/2017ENGG_CAP1_CutOff.pdf" target="_blank">Engineering  Cut-Off 2017 for CAP Round 1</a></li>
 								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="http://fe2018.mahacet.org/2017/2017ENGG_CAP2_CutOff.pdf" target="_blank">Engineering  Cut-Off 2017 for CAP Round 2</a></li>
-								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="http://fe2018.mahacet.org/2017/2017ENGG_CAP3_CutOff.pdf" target="_blank">Engineering  Cut-Off 2017 for CAP Round 3</a></li>
-								<p class="text-left align-marg" style="text-align: justify;">For more information on option form filling for CAP Round Guidance Visit us on 23/06/2018 at 11.30 AM</p>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="http://fe2018.mahacet.org/2017/2017ENGG_CAP3_CutOff.pdf" target="_blank">Engineering  Cut-Off 2017 for CAP Round 3</a></li> --}}
+								{{-- <p class="text-left align-marg" style="text-align: justify;">For more information on option form filling for CAP Round Guidance Visit us on 23/06/2018 at 11.30 AM</p> --}}
 							</ul>
 						</div>
 					</div>
