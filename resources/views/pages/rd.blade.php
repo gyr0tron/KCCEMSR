@@ -8,7 +8,15 @@
 @section('content')
 	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 		<div class="container main-content-sub">
-			<div class="col-sm-8">
+			<div class="col-sm-4 col-md-4">
+				<ul class="nav nav-tabs nav-stacked">
+					<li class="active"><a data-toggle="pill" href="#aim">Aim</a></li>
+					<li><a data-toggle="pill" href="#objectives">Objectives</a></li>
+					<li><a data-toggle="pill" href="#activities">Activities</a></li>
+					<li><a data-toggle="pill" href="#members">Members</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-8 col-md-8">
 				<div class="tab-content">
 					<div id="aim" class="tab-pane fade in active">
 						<h3>Aim</h3>
@@ -41,86 +49,80 @@
 							<li>Eyeing the recent trend, to foster the idea of interdisciplinary research and projects among faculties and students.</li>
 						</ol>
 					</div>
-					<div id="members" class="tab-pane fade">
-						<h3>Members</h3>
+					<div id="members" class=" table-responsive tab-pane fade">
+						<h3 style="padding: 3%;margin: 0px;">Members</h3>
 						<table class="table table-hover">
-							<tr>
-								<td>Sr.No.</td>
-								<td>Name of Faculty</td>
-								<td>Position</td>
-								<td>Designation</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>Dr. Hansraj Guhilot</td>
-								<td>Chairman</td>
-								<td>Principal, K.C College of Engineering and Management Studies and Research, Thane.</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Dr. Alhad Kuwdekar</td>
-								<td>External Advisory</td>
-								<td>CTO, My Life Guard Ltd, UK</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>Dr. N.S Poonawala</td>
-								<td>Internal Advisory</td>
-								<td>Dean (IIPP) and Director, K.C College of Engineering and Management Studies and Research, Thane.</td>
-							</tr>
-							<tr>
-								<td>4</td>
-								<td>Dr. Shelley Oberoi</td>
-								<td>Coordinator</td>
-								<td>HOD, Humanities and Applied Sciences</td>
-							</tr>
-							<tr>
-								<td>5</td>
-								<td>Dr. Arundhati Chakrabarti</td>
-								<td>Member</td>
-								<td>Assistant Professor, Humanities and Applied Sciences</td>
-							</tr>
-							<tr>
-								<td>6</td>
-								<td>Ms. Aarti Bakshi</td>
-								<td>Member</td>
-								<td>ssistant Professor, Electronics and Telecommunication</td>
-							</tr>
-							<tr>
-								<td>7</td>
-								<td>Mr. Rajiv Iyer</td>
-								<td>Member	</td>
-								<td>Assistant Professor, Electronics and Telecommunication</td>
-							</tr>
-							<tr>
-								<td>8</td>
-								<td>Mr. Yogesh Karunakar</td>
-								<td>Member</td>
-								<td>Assistant Professor, Electronics Engineering</td>
-							</tr>
-							<tr>
-								<td>9</td>
-								<td>Ms. Prasannati Kulkarni	Member</td>
-								<td>Member</td>
-								<td>Assistant Professor, Electronics Engineering</td>
-							</tr>
-							<tr>
-								<td>10</td>
-								<td>Mr. Pratap Nair</td>
-								<td>Member</td>
-								<td>Assistant Professor, Computer Engineering</td>
-							</tr>
+							<thead>
+									<th>Sr.No.</th>
+									<th>Name of Faculty</th>
+									<th>Position</th>
+									<th>Designation</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Dr. Hansraj Guhilot</td>
+									<td>Chairman</td>
+									<td>Principal, K.C College of Engineering and Management Studies and Research, Thane.</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Dr. Alhad Kuwdekar</td>
+									<td>External Advisory</td>
+									<td>CTO, My Life Guard Ltd, UK</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Dr. N.S Poonawala</td>
+									<td>Internal Advisory</td>
+									<td>Dean (IIPP) and Director, K.C College of Engineering and Management Studies and Research, Thane.</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Dr. Shelley Oberoi</td>
+									<td>Coordinator</td>
+									<td>HOD, Humanities and Applied Sciences</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>Dr. Arundhati Chakrabarti</td>
+									<td>Member</td>
+									<td>Assistant Professor, Humanities and Applied Sciences</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>Ms. Aarti Bakshi</td>
+									<td>Member</td>
+									<td>ssistant Professor, Electronics and Telecommunication</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>Mr. Rajiv Iyer</td>
+									<td>Member	</td>
+									<td>Assistant Professor, Electronics and Telecommunication</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>Mr. Yogesh Karunakar</td>
+									<td>Member</td>
+									<td>Assistant Professor, Electronics Engineering</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>Ms. Prasannati Kulkarni	Member</td>
+									<td>Member</td>
+									<td>Assistant Professor, Electronics Engineering</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>Mr. Pratap Nair</td>
+									<td>Member</td>
+									<td>Assistant Professor, Computer Engineering</td>
+								</tr>
+							</tbody>
 						</table>
 					</div>
 				</div>
-			</div>
-			<div class="col-sm-4">
-				<ul class="nav nav-tabs nav-stacked">
-					<li class="active"><a data-toggle="pill" href="#aim">Aim</a></li>
-					<li><a data-toggle="pill" href="#objectives">Objectives</a></li>
-					<li><a data-toggle="pill" href="#activities">Activities</a></li>
-					<li><a data-toggle="pill" href="#members">Members</a></li>
-				</ul>
 			</div>
 		</div>
 	</div>

@@ -31,6 +31,7 @@
 								<li><a href="http://www.learningatkc.com/moodle/login/index.php" target="_blank">KC-Moodle</a></li>
 								<li><a href="{{route('publications')}}">Publications</a></li>
 								<li><a href="{{route('newsletter')}}">News Letter</a></li>
+								<li><a href="{{route('rd')}}">Research &amp; Development</a></li>
 							</ul>
 						</li>
 						<li class="has-dropdown">
