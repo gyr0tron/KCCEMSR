@@ -54,4 +54,8 @@ class AcademicsController extends Controller
   {
     return view('pages.newsletter');
   }
+  public function getResearchAndDevelopment()
+  {
+    return view('pages.rd');
+  }
 }
