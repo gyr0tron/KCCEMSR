@@ -14,6 +14,7 @@
 					<li><a data-toggle="pill" href="#objectives">Objectives</a></li>
 					<li><a data-toggle="pill" href="#activities">Activities</a></li>
 					<li><a data-toggle="pill" href="#members">Members</a></li>
+					<li><a data-toggle="pill" href="#coe">Code Of Ethics</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-8 col-md-8">
@@ -121,6 +122,32 @@
 								</tr>
 							</tbody>
 						</table>
+					</div>
+					<div id="coe" class="tab-pane fade">
+						<h3>CODE OF ETHICS FOR AUTHORS</h3>
+						<h5 style="text-transform: capitalize;font-weight: 200;">Ethical guidelines for authors (Staff /Student):</h5>
+						<ul>
+							<li>Researcher/Author must properly cite any relevant studies of your work in your manuscript.</li>
+							<li>Author must cite the source and should quote the words into quotation marks unless it is paraphrased and Author should also quote text which is from another publication even if it’s your own.</li>
+							<li>Author should not submit his/hers manuscript to more than one journal at a time.</li>
+							<li>While awaiting the decision of the first journal, Author should not submit his/her’s manuscript to a new journal.</li>
+							<li>Author should find any methodology or apparatus used which are having any threat inherent in their use.</li>
+							<li>Author must declare any personal or other relationships which might cause a competing interest related to the work described in the manuscript.</li>
+							<li>To become eligible as an Author an individual must contribute significantly to study design and conception, data collection, data analysis and data interpretation.</li>
+							<li>He/she should agree to be listed as an author on the manuscript and also approve the version submitted and the final version to be published in the journal.</li>
+						</ul>
+						<h5 style="text-transform: capitalize;font-weight: 200;">Ethics topics to consider when publishing:</h5>
+						<ol>
+							<li>Authorship: He/She will be given authorship of the paper who have made important contribution to the conception, design, execution or interpretation of the study.</li>
+							<li>Plagiarism: The author should assure that content of the manuscript written is completely original and if any of the contents are taken from the used work and/or words of others it must be cited or quoted appropriately.</li>
+							<li>Data access and retention: Author should be ready with raw data in connection with the given paper whenever asked to provide for editorial review and data should be provided with public access.</li>
+							<li>Multiple, repetitious or simultaneous publication: Author should not publish general manuscripts explaining actual & the same research in more than one journals or publications.</li>
+							<li>Acknowledgement: Sources should be acknowledge properly.</li>
+							<li>Disclosure and conflicts of interest: Manuscript must include disclosure of all the relationships which can be viewed as the a potential conflict of interest.</li>
+							<li>Error correction in published works: Author will be obliged to notify the journal editor or publisher for correction of the manuscript in case of errors or inaccuracy detection.</li>
+							<li>Reporting standards: Author should prepare proper reports of original research with accurate account of the work performed as well as important objectives.</li>
+							<li>Use of patient images or case details: Author using case studies of patients or volunteers should get ethics committee approval and informed consent which would be documented in the manuscript.</li>
+						</ol>
 					</div>
 				</div>
 			</div>

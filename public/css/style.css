@@ -2012,6 +2012,14 @@ button.accordion.active:after {
 }
 /* webkit animation keyframes end */
 
+/* general ol li styles */
+ol>li {
+	padding-bottom: 1%;
+}
+
+ul>li {
+	padding-bottom: 1%;
+}
 
 #notification {
     position: fixed;

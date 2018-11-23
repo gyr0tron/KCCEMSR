@@ -36,8 +36,8 @@
 				<div class="col-md-6">
 					<h1 id="progOutcms" class="title text-center"><span>Mission</span></h1>
 					<ul class="list-unstyled">
-						<li><i class="fa fa-caret-right text-colored"></i> To excel in academics,  practical engineering, management and to commence research endeavors.</li>
-						<li><i class="fa fa-caret-right text-colored"></i> To prepare students for future opportunities. </li>
+						<li><i class="fa fa-caret-right text-colored"></i> To excel in academics, practical engineering, management and to commence research endeavors.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> To prepare students for future opportunities.</li>
 						<li><i class="fa fa-caret-right text-colored"></i> To nurture students with social and ethical responsibilities.</li>
 					</ul>
 				</div>
