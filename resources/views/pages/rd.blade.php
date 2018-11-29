@@ -15,6 +15,7 @@
 					<li><a data-toggle="pill" href="#activities">Activities</a></li>
 					<li><a data-toggle="pill" href="#members">Members</a></li>
 					<li><a data-toggle="pill" href="#coe">Code Of Ethics</a></li>
+					<li><a data-toggle="pill" href="#events">Events</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-8 col-md-8">
@@ -148,6 +149,39 @@
 							<li>Reporting standards: Author should prepare proper reports of original research with accurate account of the work performed as well as important objectives.</li>
 							<li>Use of patient images or case details: Author using case studies of patients or volunteers should get ethics committee approval and informed consent which would be documented in the manuscript.</li>
 						</ol>
+					</div>
+					<div id="events" class="tab-pane fade">
+						@php
+						$car = App\Carousel::where('type', 'rd')->first();
+						if(!$car) goto carouselEnd;
+						$no = 0;
+						@endphp
+						<div id="myCarousel" class="carousel slide">
+							<div class="carousel-inner">
+								@foreach ($car->images as $id)
+									@php
+									$image = App\ImageUpload::where('id', $id)->first();
+									if(!$image) continue;
+									@endphp
+									<div class="item {{$no==0?'active':''}}" data-slide-number="{{$no++}}">
+										<img src="{{$image->getUrl()}}" width="1200">
+									</div>
+								@endforeach
+							</div>
+
+							<!-- Controls-->
+							<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+						@php
+						carouselEnd:
+						@endphp
 					</div>
 				</div>
 			</div>
