@@ -43,10 +43,8 @@
 				<h1 id="about" class="title text-center">Welcome to <span>K.C.College of Engineering and Management Studies & Research!</span></h1>
 				{{-- <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta officia, aspernatur.</p> --}}
 				<div class="space"></div>
-				<div class="row">
+				{{-- <div class="row">
 					<div class="col-md-6">
-						{{-- <img src="http://via.placeholder.com/1140x615" alt=""> --}}
-						{{-- previous link https://www.youtube.com/embed/HG2thJowMAU --}}
 						<iframe width="100%" height="300" src="https://www.youtube.com/embed/ciiMB8Mbg5g" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 						<div class="space"></div>
 					</div>
@@ -54,7 +52,7 @@
 						Excelssior Education Society is an educational and charitable trust that is dedicated to the pursuit of excellence and welfare of the students since 1978 and is affiliated to Mumbai University. It aims to maximise the capabilities of individuals in all generes educational, intellectual and moral. Our endeavour is to align education with innovation and practical exposure needed to meet the current industry’s requirement. Dr Harssh Khanna and late Mr K. C. Khanna are the milestone in the establishment of KCCOEMSR.
 					</div>
 					<div class="space"></div>
-				</div>
+				</div> --}}
 			</div>
 		</div>
 		{{-- <div class="row">
