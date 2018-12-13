@@ -192,6 +192,7 @@
 									<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
 									<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
 									<li><a href="{{route('about')}}">Board of Governance</a></li>
+									<li><a href="{{route('iqac')}}">IQAC</a></li>
 									<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
 									<li><a href="{{route('committees')}}">Committees</a></li>
 									<li><a href="{{route('careeratkc')}}">Career At KC</a></li>

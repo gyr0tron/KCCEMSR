@@ -22,6 +22,10 @@ class AboutController extends Controller
     {
       return view('pages.infrastructure');
     }
+    public function getIqac()
+    {
+      return view('pages.iqac');
+    }
     public function getCommitteeDetails($url)
     {
       $committee = Committee::where('url',$url)->first();
