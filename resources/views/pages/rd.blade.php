@@ -95,7 +95,7 @@
 									<td>6</td>
 									<td>Ms. Aarti Bakshi</td>
 									<td>Member</td>
-									<td>ssistant Professor, Electronics and Telecommunication</td>
+									<td>Assistant Professor, Electronics and Telecommunication</td>
 								</tr>
 								<tr>
 									<td>7</td>
@@ -111,7 +111,7 @@
 								</tr>
 								<tr>
 									<td>9</td>
-									<td>Ms. Prasannati Kulkarni	Member</td>
+									<td>Ms. Prasannati Kulkarni</td>
 									<td>Member</td>
 									<td>Assistant Professor, Electronics Engineering</td>
 								</tr>
