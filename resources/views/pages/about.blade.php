@@ -92,7 +92,7 @@
 				</div>
 				<div class="col-md-9 col-sm-9 col-xs-12">
 					<div class="row">
-						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Mr.Sai Kiran Khanna</span></h2>
+						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. Sai Kiran Khanna</span></h2>
 						<blockquote class="blockquote2">
 							<p class="text-left align-marg" style="text-align: justify;">My dear students,</p>
 							<p class="text-left align-marg" style="text-align: justify;">At the outset, I wish to thank you for your interest in joining this institution and I welcome you to our website. As being young, I am fully aware of the aspirations and hopes of the youngsters. I deem it an honor to be at the helm of an institution that helps so many youth like you to achieve their heart's desire in entering the vocation of their choice. I wish to assure you that our predominant aim is to ensure that you build the foundation of your successful career in this institution.</p>
@@ -156,12 +156,12 @@
 				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>Principal Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12" style="float:right">
 					<div style="width:100%;">
-						<img src="{{url("images/principal.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
+						<img src="{{url("images/principal.jpeg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
 					</div>
 				</div>
 				<div class="col-md-9 col-sm-9 col-xs-12">
 					<div class="row">
-						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. Hansraj Guhilot BE,MTech,PhD,FIETE,SMIEEE</span></h2>
+						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. V N Pawar PhD Tech.</span></h2>
 						<blockquote class="blockquote2">
 							<p class="text-left align-marg" style="text-align: justify;">All are welcome  to the website which will introduce you to a place of transformation, a place where caterpillars are converted into beautiful butterflies, the youth is transformed into  multi faceted engineers. We at K C College nurture technical proficiency and expertise of students in wide range of functional, organizational and cultural environments . K C College works to serve the society by developing “ classroom ready” study materials for student fraternity in pursuit of making “ industry ready “ engineers and managers.</p>
 							<p class="text-left align-marg" style="text-align: justify;">At K C College student’s competency in solving contemporary problems is enhanced by providing them exemplary infrastructural facilities and well equipped laboratories. Here students are empowered and enlightened by highly dedicated and committed , research oriented, challenge seeking, well qualified and devoted faculty members. We orient and orchestrate students for smart India Challenge through National level Project exhibition competition and Detroix the robotic competition.</p>

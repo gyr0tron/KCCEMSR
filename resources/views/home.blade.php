@@ -32,7 +32,55 @@
 	</div>
 </div>
 <!-- banner end -->
+<!-- fixed tabs -->
+<div class="scale-section default-bg" style="">
+	<div class="container">
+		<div class="col-sm-1 scalable-margin"></div>
+		<div class="col-sm-2 scalable-margin">
+			<div class="boxes-icon" style="width:fit-content; margin: 0 auto;">
+				<i class="fa fa-handshake-o" style="color:#ffffff; font-size:36px; line-height:36px; vertical-align: middle;"></i>
+			</div>
+			<div>
+				<h3 style="text-align:center;">FE Admission</h3>
+			</div>
+		</div>
+		<div class="col-sm-2 scalable-margin">
+			<div class="boxes-icon" style="width:fit-content; margin: 0 auto;">
+				<i class="fa fa-globe" style="color:#ffffff; font-size:36px; line-height:36px; vertical-align: middle;"></i>
+			</div>
+			<div>
+				<h3 style="text-align:center;">Placements</h3>
+			</div>
+		</div>
+		<div class="col-sm-2 scalable-margin">
+			<div class="boxes-icon" style="width:fit-content; margin: 0 auto;">
+				<i class="fa fa-bell" style="color:#ffffff; font-size:36px; line-height:36px; vertical-align: middle;"></i>
+			</div>
+			<div>
+				<h3 style="text-align:center;">Notice Board</h3>
+			</div>
+		</div>
+		<div class="col-sm-2 scalable-margin">
+			<div class="boxes-icon" style="width:fit-content; margin: 0 auto;">
+				<i class="fa fa-smile-o" style="color:#ffffff; font-size:36px; line-height:36px; vertical-align: middle;"></i>
+			</div>
+			<div>
+				<h3 style="text-align:center;">Alumni</h3>
+			</div>
+		</div>
+		<div class="col-sm-2 scalable-margin">
+			<div class="boxes-icon" style="width:fit-content; margin: 0 auto;">
+				<i class="fa fa-calendar" style="color:#ffffff; font-size:36px; line-height:36px; vertical-align: middle;"></i>
+			</div>
+			<div>
+				<h3 style="text-align:center;">Events</h3>
+			</div>
+		</div>
+		<div class="col-sm-1 scalable-margin"></div>
+	</div>
+</div>
 
+<!-- ================ -->
 <!-- section start -->
 <!-- ================ -->
 <div class="section clearfix object-non-visible" data-animation-effect="fadeIn" style="padding: 0px;">

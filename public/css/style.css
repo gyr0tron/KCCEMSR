@@ -310,6 +310,23 @@ blockquote {
 	margin-bottom: 0;
 }
 
+.scale-section {
+	padding: 50px 0;
+}
+
+.scalable-margin {
+	margin-bottom: 0px;
+}
+
+@media (max-width:768px) {
+	.scale-section {
+		padding: 5% 0;
+	}
+	.scalable-margin {
+		margin-bottom: 13%;
+	}
+}
+
 /* Template Components
 ----------------------------------------------------------------------------- */
 /* Buttons
