@@ -90,8 +90,14 @@
 						<li>
 							<a href="http://www.kcecell.org/" target="_blank">Entrepreneurship Cell</a>
 						</li>
-						<li>
-							<a href="{{route('lifeatkc')}}">Life At KC</a>
+						<li class="has-dropdown">
+							<a href="#">Student Corner</a>
+							<ul>
+								<li><a href="#">Code of Conduct</a></li>
+								<li><a href="#">Student Handbook</a></li>
+								<li><a href="#">Student Discipline</a></li>
+								<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
+							</ul>
 						</li>
 						<li>
 							<a href="{{route('kcinmedia')}}">KC in Media</a>

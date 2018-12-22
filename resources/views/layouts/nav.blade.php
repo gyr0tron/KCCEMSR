@@ -104,7 +104,7 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="/" style="padding-left: 0px;">Home</a>
+								{{-- <li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="/" style="padding-left: 0px;">Home</a> --}}
 								</li>
 								<li class="{{$menu_item=='academics'?'active':''}} sub-menu-parent"><a href="#">Academics</a>
 									<ul class="sub-menu">
@@ -169,7 +169,13 @@
 							</li>
 							<li class="sub-menu-parent"><a href="http://www.kcecell.org/" target="_blank">E-Cell</a>
 							</li>
-							<li class="{{$menu_item=='lifeatkc'?'active':''}} sub-menu-parent"><a href="{{route('lifeatkc')}}">Life At KC</a>
+							<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">Student Corner</a>
+								<ul class="sub-menu">
+									<li><a href="#">Code of Conduct</a></li>
+									<li><a href="#">Student Handbook</a></li>
+									<li><a href="#">Student Discipline</a></li>
+									<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
+								</ul>
 							</li>
 							<li class="{{$menu_item=='kcinmedia'?'active':''}} sub-menu-parent"><a href="{{route('kcinmedia')}}">KC in Media</a>
 							</li>
