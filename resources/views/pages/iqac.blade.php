@@ -15,6 +15,7 @@
 					<li><a data-toggle="pill" href="#members">Members</a></li>
 					<li><a data-toggle="pill" href="#procedure">Procedure</a></li>
 					<li><a data-toggle="pill" href="#functions_strategy">Functions and Strategy</a></li>
+					<li><a data-toggle="pill" href="#contact_us">Contact Us</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-8 col-md-8">
@@ -171,6 +172,11 @@
 							<li>IQAC will work as an interface for other accreditation agencies.</li>
 							<li> Preparing Annual Quality Assurance Report (AQAR) as per NAAC guidelines and its submission.</li>
 						</ol>
+					</div>
+					<div id="contact_us" class="tab-pane fade in">
+						<h3>Contact Us</h3>
+						<p>Phone No: 022-2536088</p>
+						<p>Email id: iqac@kccemsr.edu.in</p>
 					</div>
 				</div>
 			</div>
