@@ -37,7 +37,7 @@
 	<div class="container">
 		<div class="col-sm-1 scalable-margin"></div>
 		<div class="col-sm-2 scalable-margin">
-			<a  href="{{route('admissions-details')}}" style="text-decoration: none;">
+			<a href="{{route('admissions-details')}}" style="text-decoration: none;">
 				<div class="boxes-icon" style="width:fit-content; margin: 0 auto;">
 					<i class="fa fa-handshake-o" style="color:#ffffff; font-size:36px; line-height:36px; vertical-align: middle;"></i>
 				</div>
@@ -54,7 +54,7 @@
 				<div>
 					<h3 style="text-align:center;">Placements</h3>
 				</div>
-			<a/>
+			</a>
 		</div>
 		<div class="col-sm-2 scalable-margin">
 			<a href="{{route('exam', 'notices')}}" style="text-decoration: none;">
@@ -64,7 +64,7 @@
 				<div>
 					<h3 style="text-align:center;">Notice Board</h3>
 				</div>
-			<a/>
+			</a>
 		</div>
 		<div class="col-sm-2 scalable-margin">
 			<a href="{{route('alumni-login')}}" style="text-decoration: none;">
@@ -84,7 +84,7 @@
 				<div>
 					<h3 style="text-align:center;">Events</h3>
 				</div>
-			<a/>
+			</a>
 		</div>
 		<div class="col-sm-1 scalable-margin"></div>
 	</div>
@@ -208,7 +208,7 @@
 <div class="section default-bg" style="padding-bottom: 10px;">
 	<div class="container">
 		<a class="anchor_guide" id="announcements"></a>
-		<h1 class="title text-center" style="font-size: 5.2vh;">Announcements</h1>
+		<h1 class="title text-center" id="portfolio" style="color: #fff">Announcements</h1>
 		<div class="separator"></div>
 		<br>
 		<div class="row object-non-visible" data-animation-effect="fadeIn">
