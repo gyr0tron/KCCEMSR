@@ -101,44 +101,93 @@
 				<h1 id="about" class="title text-center">Welcome to <span>K.C.College of Engineering and Management Studies & Research!</span></h1>
 				{{-- <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta officia, aspernatur.</p> --}}
 				<div class="space"></div>
-				{{-- <div class="row">
+				<div class="row">
+					<div class="col-md-6">						
+						<h2 class="title text-center">KC@Glance</h2>
+						<div class="b" id="b2">
+							<div class="b-con" style="height: 2600px; margin-top: 0px;">
+								<div>
+									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
+								</div>
+								<div>
+									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
+								</div>
+								<div>
+									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
+								</div>
+								<div>
+									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
+								</div>
+								<div>
+									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
+								</div>
+								<div>
+									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
+								</div>
+								<div>
+									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
+								</div>
+								<div>
+									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
+								</div>
+								<div>
+									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div class="col-md-6">
-						<iframe width="100%" height="300" src="https://www.youtube.com/embed/ciiMB8Mbg5g" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-						<div class="space"></div>
+						<h2 class="title text-center">Upcoming Events</h2>
+						<ul class="events">
+							<li>
+								<div class="date">
+									<span class="month">Jan</span>
+									<span class="day">11</span>
+								</div>
+								<p>STTP on “Probability and Statistics for Scientists and Engineers” STTP on “Probability and Statistics for Scientists and Engineers”</p>
+								<p><i class="fa fa-clock-o" style="margin-right:2%"></i>9:00AM to 5:00PM</p>
+								<p>
+									<a href="">More details</a>
+								</p>
+							</li>
+							<li>
+								<div class="date">
+									<span class="month">Jan</span>
+									<span class="day">11</span>
+								</div>
+								<p>STTP on “Probability and Statistics for Scientists and Engineers” STTP on “Probability and Statistics for Scientists and Engineers”</p>
+								<p><i class="fa fa-clock-o" style="margin-right:2%"></i>9:00AM to 5:00PM</p>
+								<p>
+									<a href="">More details</a>
+								</p>
+							</li>
+							<li>
+								<div class="date">
+									<span class="month">Jan</span>
+									<span class="day">11</span>
+								</div>
+								<p>STTP on “Probability and Statistics for Scientists and Engineers” STTP on “Probability and Statistics for Scientists and Engineers”</p>
+								<p><i class="fa fa-clock-o" style="margin-right:2%"></i>9:00AM to 5:00PM</p>
+								<p>
+									<a href="">More details</a>
+								</p>
+							</li>
+							<li>
+								<div class="date">
+									<span class="month">Jan</span>
+									<span class="day">11</span>
+								</div>
+								<p>STTP on “Probability and Statistics for Scientists and Engineers” STTP on “Probability and Statistics for Scientists and Engineers”</p>
+								<p><i class="fa fa-clock-o" style="margin-right:2%"></i>9:00AM to 5:00PM</p>
+								<p>
+									<a href="">More details</a>
+								</p>
+							</li>
+						</ul>
 					</div>
-					<div class="col-md-6" style="text-align: justify;">
-						Excelssior Education Society is an educational and charitable trust that is dedicated to the pursuit of excellence and welfare of the students since 1978 and is affiliated to Mumbai University. It aims to maximise the capabilities of individuals in all generes educational, intellectual and moral. Our endeavour is to align education with innovation and practical exposure needed to meet the current industry’s requirement. Dr Harssh Khanna and late Mr K. C. Khanna are the milestone in the establishment of KCCOEMSR.
-					</div>
-					<div class="space"></div>
-				</div> --}}
+				</div>
 			</div>
 		</div>
-		{{-- <div class="row">
-			<div class="col-md-6">
-				<h2 id="about" class="title text-center"><span>Vision</span></h2>
-				<ul class="list-unstyled">
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i>To be an organization with potential for excellence in engineering and management for the advancement of society and human kind.</li>
-				</ul>
-				<div class="space"></div>
-				<h2 id="about" class="title text-center"><span>Mission</span></h2>
-				<ul class="list-unstyled">
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i>To excel in academics, practical engineering, management and to commence research endeavors.</li>
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i>To prepare students for future opportunities.</li>
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i>To nurture students with social and ethical responsibilities.</li>
-				</ul>
-			</div>
-			<div class="col-md-6">
-				<h2 id="progOutcms" style="margin-top: 0px; margin-bottom: 5px;"><span>Program Outcomes:</span></h2>
-				<p style="margin: 10px 0 0 0;">Engineering Graduates will be able to:</p>
-				<ul class="list-unstyled">
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Engineering knowledge:</strong><p style="padding-left:2%">Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.</p></li>
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Problem analysis:</strong><p style="padding-left:2%">Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.</p></li>
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Design/development of solutions:</strong><p style="padding-left:2%">Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.</p></li>
-					<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Conduct investigations of complex problems:</strong><p style="padding-left:2%">Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.</p></li>
-				</ul>
-				<a class="" style="cursor:pointer;font-size: 1.1em;padding-left: 10px;" href="/about#progOutcms">Read more</a>
-			</div>
-		</div> --}}
 	</div>
 </div>
 <!-- section end -->

@@ -92,6 +92,18 @@ $window1.on('scroll', function(){
   prev = scrollTop;
 });
 
+// inf scroll
+$(function () {
+	$("#b2").scrollForever({
+		dir: "top", 
+		container: ".b-con", 
+		inner: "div", 
+		speed: 1000,
+		continuous: false 
+	});
+});
+
+
 //Scroll Spy
 //-----------------------------------------------
 if($(".scrollspy").length>0) {

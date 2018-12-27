@@ -36,6 +36,7 @@
   @include('layouts.footer')
   <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/scrollForever.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/modernizr.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/jquery.backstretch.min.js') }}"></script>

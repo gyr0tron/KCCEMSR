@@ -490,6 +490,60 @@ textarea {
 	text-align: center;
 }
 
+
+/* scroll list
+----------------------------------------------------------------------------- */
+.b {
+  height: 350px;
+  overflow: hidden;
+}
+
+.b-con div {
+	font-size: 120%;
+	height: fit-content;
+  text-align: center;
+}
+
+.b-con div p {
+	padding-bottom: 2%;
+}
+
+
+/* upcoming events
+----------------------------------------------------------------------------- */
+ul.events {
+  margin: 0;
+}
+ul.events li {
+  list-style-type: none;
+  padding: 0 0 24px;
+  overflow: hidden;
+}
+ul.events .date {
+  float: left;
+  width: 60px;
+  margin-right: 16px;
+  padding: 10px 4px;
+  background: #ccc;
+  text-align: center;
+  color: #555;
+}
+ul.events .date .month {
+  display: block;
+  text-transform: uppercase;
+}
+ul.events .date .day {
+  font-size: 1.25rem;
+}
+ul.events li p{
+	margin: 0px;
+  padding-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 /* Navigations
 ----------------------------------------------------------------------------- */
 .header .navbar {
