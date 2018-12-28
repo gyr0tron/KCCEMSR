@@ -103,6 +103,36 @@ $(function () {
 	});
 });
 
+$(document).ready(function(){
+	$('.target-container').slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				autoplay: true,
+				infinite: true,
+				autoplaySpeed: 1000,
+				arrows: false,
+				dots: false,
+				pauseOnHover: true,
+				responsive: [{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+					pauseOnHover: false,
+					verticalSwiping: false,
+					vertical: true
+				}
+			}, {
+				breakpoint: 520,
+				settings: {
+					slidesToShow: 3,
+					pauseOnHover: false,
+					verticalSwiping: false,
+					vertical: true
+				}
+			}]
+		});
+	});
+
 
 //Scroll Spy
 //-----------------------------------------------
