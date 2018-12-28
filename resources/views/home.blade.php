@@ -135,10 +135,11 @@
 								</div>
 							</div>
 						</div>
+						<div class="space"></div>
 					</div>
 					<div class="col-md-6">
 						<h2 class="title text-center">Upcoming Events</h2>
-						<ul class="events">
+						<ul class="events" style="padding-left: 0px;">
 							<li>
 								<div class="date">
 									<span class="month">Jan</span>
