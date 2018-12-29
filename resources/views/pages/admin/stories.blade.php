@@ -18,6 +18,7 @@
   </section>
   <section class="content">
     @include('forms.stories-add1')
+    @include('forms.stories-add2')
   </section>
 @endsection
 @section('post')

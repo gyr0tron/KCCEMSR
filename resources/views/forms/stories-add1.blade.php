@@ -15,7 +15,7 @@
           </thead>
           <tbody>
             @php
-              $no = 1;
+            $no = 1;
             @endphp
             @foreach (App\Story::where('type', '0')->orderBy('created_at', 'DESC')->get() as $story)
               <tr>
@@ -50,12 +50,11 @@
               <p class="help-block"></p>
             </div>
           </div>
-            <div class="col-sm-offset-2 col-sm-4">
-              <button type="submit" class="btn btn-primary btn-wide">Add</button>
-            </div>
+          <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" class="btn btn-primary btn-wide">Add</button>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>

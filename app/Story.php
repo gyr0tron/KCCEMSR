@@ -45,6 +45,8 @@ class Story extends Model
   {
     $url = strtolower($this->title);
     $url = str_replace(" ", "-", $url);
-    $this->url = $url;
+    $url = str_replace('"', "", $url);
+    $url = str_replace("''", "", $url);
+    $this->url = urlencode($url);
   }
 }

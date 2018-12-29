@@ -118,50 +118,22 @@
 					<div class="col-md-6">
 						<h2 class="title text-center">Upcoming Events</h2>
 						<ul class="events" style="padding-left: 0px;">
-							<li>
-								<div class="date">
-									<span class="month">Jan</span>
-									<span class="day">11</span>
-								</div>
-								<p>STTP on “Probability and Statistics for Scientists and Engineers” STTP on “Probability and Statistics for Scientists and Engineers”</p>
-								<p><i class="fa fa-clock-o" style="margin-right:2%"></i>9:00AM to 5:00PM</p>
-								<p>
-									<a href="">More details</a>
-								</p>
-							</li>
-							<li>
-								<div class="date">
-									<span class="month">Jan</span>
-									<span class="day">11</span>
-								</div>
-								<p>STTP on “Probability and Statistics for Scientists and Engineers” STTP on “Probability and Statistics for Scientists and Engineers”</p>
-								<p><i class="fa fa-clock-o" style="margin-right:2%"></i>9:00AM to 5:00PM</p>
-								<p>
-									<a href="">More details</a>
-								</p>
-							</li>
-							<li>
-								<div class="date">
-									<span class="month">Jan</span>
-									<span class="day">11</span>
-								</div>
-								<p>STTP on “Probability and Statistics for Scientists and Engineers” STTP on “Probability and Statistics for Scientists and Engineers”</p>
-								<p><i class="fa fa-clock-o" style="margin-right:2%"></i>9:00AM to 5:00PM</p>
-								<p>
-									<a href="">More details</a>
-								</p>
-							</li>
-							<li>
-								<div class="date">
-									<span class="month">Jan</span>
-									<span class="day">11</span>
-								</div>
-								<p>STTP on “Probability and Statistics for Scientists and Engineers” STTP on “Probability and Statistics for Scientists and Engineers”</p>
-								<p><i class="fa fa-clock-o" style="margin-right:2%"></i>9:00AM to 5:00PM</p>
-								<p>
-									<a href="">More details</a>
-								</p>
-							</li>
+							@foreach (App\Story::where('type','1')->orderBy('created_at', 'DESC')->get() as $story)
+								@php
+								$date = Carbon\Carbon::createFromFormat('Y-m-d', $story->date);
+								@endphp
+								<li>
+									<div class="date">
+										<span class="month">{{$date->format('M')}}</span>
+										<span class="day">{{$date->format('d')}}</span>
+									</div>
+									<p>{{$story->title}}</p>
+									<p><i class="fa fa-clock-o" style="margin-right:2%"></i>{{$story->from.' to '.$story->to}}</p>
+									<p>
+										<a href="">More details</a>
+									</p>
+								</li>
+							@endforeach
 						</ul>
 					</div>
 				</div>

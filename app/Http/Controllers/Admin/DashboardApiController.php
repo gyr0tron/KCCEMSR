@@ -888,6 +888,12 @@ class DashboardApiController extends Controller
     $story->type = $request->input('type', '0');
     $story->title = $request->input('title', '');
     if($story->type == 1) {
+      $story->from = $request->input('from', '0');
+      $story->to = $request->input('to', '0');
+      $story->date = $request->input('date', date('Y-m-d'));
+      $story->generateUrl();
+      $file = $request->file('file');
+      if($file) $story->filename = $story->uploadFile($file);
     }
     $story->updated_by = Auth::user()->id;
     $story->created_by = Auth::user()->id;
