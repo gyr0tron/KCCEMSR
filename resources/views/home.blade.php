@@ -102,37 +102,15 @@
 				{{-- <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta officia, aspernatur.</p> --}}
 				<div class="space"></div>
 				<div class="row">
-					<div class="col-md-6">						
+					<div class="col-md-6">
 						<h2 class="title text-center">KC@Glance</h2>
 						<div class="b" id="b2">
 							<div class="b-con" style="height: 2600px; margin-top: 0px;">
-								<div>
-									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
-								</div>
-								<div>
-									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
-								</div>
-								<div>
-									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
-								</div>
-								<div>
-									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
-								</div>
-								<div>
-									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
-								</div>
-								<div>
-									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
-								</div>
-								<div>
-									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
-								</div>
-								<div>
-									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
-								</div>
-								<div>
-									<p>✔ Dolore do nulla reprehenderit et non adipisicing nulla minim ullamco commodo exercitation id labore sit.</p>
-								</div>
+								@foreach (App\Story::where('type','0')->orderBy('created_at', 'DESC')->get() as $story)
+									<div>
+										<p>✔ {{$story->title}}
+									</div>
+								@endforeach
 							</div>
 						</div>
 						<div class="space"></div>
@@ -212,7 +190,7 @@
 					return false;
 				}
 				@endphp
-				
+
 				<!-- portfolio items start -->
 				<div class="row">
 					<div class="target-container container" style="overflow:hidden;">

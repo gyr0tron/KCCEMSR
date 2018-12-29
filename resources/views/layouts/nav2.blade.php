@@ -102,6 +102,7 @@ if(!isset($second)) $second = "not defined";
           </li>
           <li class="{{$menu_item=='library'?'active':''}}"><a href="{{route("admin_library",'question-papers')}}"><i class="fa fa-book"></i> <span>Library</span></a></li>
           <li class="{{$menu_item=='kcinmedia'?'active':''}}"><a href="{{route("admin_kcinmedia")}}"><i class="fa fa-newspaper-o"></i> <span>KC in Media</span></a></li>
+          <li class="{{$menu_item=='stories'?'active':''}}"><a href="{{route("admin_stories")}}"><i class="fa fa-newspaper-o"></i> <span>KC at Glance</span></a></li>
           <li class="{{$menu_item=='committees'?'active':''}}"><a href="{{route("admin_committees")}}"><i class="fa fa-users"></i> <span>Committees</span></a></li>
           <li class="treeview {{$menu_item=='publication'?'active':''}}" >
             <a href="#">

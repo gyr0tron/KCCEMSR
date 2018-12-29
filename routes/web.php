@@ -103,6 +103,7 @@ Route::prefix('admin')->group(function () {
 
   Route::get('/career-at-kc','Admin\DashboardController@careeratkc')->name("admin_careeratkc");
   Route::get('/kc-in-media','Admin\DashboardController@kcinmedia')->name("admin_kcinmedia");
+  Route::get('/kc-at-glance','Admin\DashboardController@stories')->name("admin_stories");
 
   Route::get('/testimonials','Admin\DashboardController@testimonials')->name("admin_testimonials");
   Route::get('/infrastructures','Admin\DashboardController@infrastructures')->name("admin_infrastructure");
@@ -210,6 +211,7 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/career/remove","Admin\DashboardApiController@removeCareer");
   Route::post("/kcinmedia/add","Admin\DashboardApiController@addKCinMedia");
   Route::post("/kcinmedia/remove","Admin\DashboardApiController@removeKCinMedia");
+  Route::post("/stories/add","Admin\DashboardApiController@addStory");
 
   Route::post("/placement/placement-process","Admin\DashboardApiController@updatePlacementProccess");
 

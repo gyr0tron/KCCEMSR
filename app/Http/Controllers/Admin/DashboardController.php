@@ -180,4 +180,9 @@ class DashboardController extends Controller
     if(!in_array($action, $placments)) abort(404, 'Page Not Found');
     return view("pages.admin.placements", compact("action"));
   }
+  // Stories
+  public function stories()
+  {
+    return view("pages.admin.stories");
+  }
 }

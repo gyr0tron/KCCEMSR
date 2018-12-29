@@ -45,6 +45,7 @@ use App\Committee;
 use App\Infrastructure;
 use App\JobList;
 use App\KCinMedia;
+use App\Story;
 use App\ImageUpload;
 use App\ResponseBuilder;
 use Carbon\Carbon;
@@ -879,6 +880,20 @@ class DashboardApiController extends Controller
     if(!$media) abort(404, 'Not Found');
     $media->forceDelete();
     return ResponseBuilder::send(true, "", "");
+  }
+  // Story
+  public function addStory(Request $request)
+  {
+    $story = new Story();
+    $story->type = $request->input('type', '0');
+    $story->title = $request->input('title', '');
+    if($story->type == 1) {
+    }
+    $story->updated_by = Auth::user()->id;
+    $story->created_by = Auth::user()->id;
+    $story->save();
+    return ResponseBuilder::send(true, "", "");
+
   }
   // Placements
   public function updatePlacementProccess(Request $request)
