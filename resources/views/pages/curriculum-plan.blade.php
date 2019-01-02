@@ -15,6 +15,7 @@
 						<th>Sr. No</th>
 						<th>Date</th>
 						<th>Activity</th>
+						<th>Year</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -26,6 +27,7 @@
 							<td>{{$no++}}</td>
 							<td>{{$fp->section}}</td>
 							<td>{{$fp->name}}</td>
+							<td>{{$fp->department}}</td>
 						</tr>
 					@endforeach
 				</tbody>

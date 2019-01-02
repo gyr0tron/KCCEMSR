@@ -9,6 +9,7 @@
           <th width="10%">#</th>
           <th width="20%">Name</th>
           <th width="20%">Date</th>
+          <th width="20%">Year</th>
           <th width="20%">Actions</th>
         </tr>
       </thead>
@@ -21,6 +22,7 @@
             <td>{{$no++}}</td>
             <td>{{$fp->name}}</td>
             <td>{{$fp->section}}</td>
+            <td>{{$fp->department}}</td>
             <td>
               <a class="btn btn-sm btn-danger btn-table" onclick="dashboard.removeYesNo('Are you sure you want to remove {{$fp->name}}?', '/api/admin/academics/curriculum-plan/remove', {{$fp->id}})"><i class="fa fa-trash-o"></i></a>
             </td>
@@ -32,6 +34,7 @@
           <th width="10%">#</th>
           <th width="20%">Name</th>
           <th width="20%">Date</th>
+          <th width="20%">Year</th>
           <th width="20%">Actions</th>
         </tr>
       </tfoot>
@@ -65,6 +68,13 @@
         </div>
       </div>
       <div class="form-group">
+        <label class="control-label col-sm-2" for="title">Year:</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="year" name="year">
+          <p class="help-block"></p>
+        </div>
+      </div>
+      <div class="form-group">
         <div class="col-sm-offset-2 col-sm-4">
           <button type="submit" class="btn btn-primary btn-wide">Upload</button>
         </div>
@@ -72,11 +82,3 @@
     </form>
   </div>
 </div>
-@section('post')
-  <script>
-    $('#date').datepicker({
-      format: 'dd/mm/yyyy',
-      autoclose: true
-    })
-  </script>
-@endsection
