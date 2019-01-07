@@ -42,11 +42,13 @@
 					<div id="members" class="tab-pane fade in">
 						<h3>Members</h3>
 						<table class="table">
+							<thead>
 							<tr>
-								<td>#</td>
-								<td>Name</td>
-								<td>Designation</td>
+								<th>#</th>
+								<th>Name</th>
+								<th>Designation</th>
 							</tr>
+							</thead>
 							<tr>
 								<td>1</td>
 								<td>Dr. Hansraj Guhilot</td>
