@@ -9,7 +9,7 @@
 	@if (!isset($no_download))
 		<a href="{{$url}}" id="notification"><i class="fa fa-download"></i></a>
 	@endif
-	<iframe id="viewer" src="http://docs.google.com/viewer?url={{$url}}&embedded=true" width="100%" height="300" style="border: none;"></iframe>
+	<iframe id="viewer" src="https://docs.google.com/viewer?url={{$url}}&embedded=true" width="100%" height="300" style="border: none;"></iframe>
 @endsection
 @section('post')
 	<script type="text/javascript">
