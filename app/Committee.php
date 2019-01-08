@@ -88,6 +88,7 @@ class Committee extends Model
       (object)["name"=>"WDC", "url"=>"wdc"],
       (object)["name"=>"ECO Club", "url"=>"eco"],
       (object)["name"=>"R&D", "url"=>"r-and-d"],
+      (object)["name"=>"NSS", "url"=>"nss"],
     ]);
     return $committees;
   }
