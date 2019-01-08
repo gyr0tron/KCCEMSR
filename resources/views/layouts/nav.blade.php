@@ -147,34 +147,15 @@
 										<li><a href="#">Exam Rules &amp; Procedures</a></li>
 									</ul>
 								</li>
-								<li class="{{$menu_item=='alumni'?'active':''}} sub-menu-parent"><a href="#">Alumni</a>
-									<ul class="sub-menu">
-										{{-- <li><a href="#">Student Login/Information</a></li>
-										<li><a href="#">Student Feedback</a></li> --}}
-										<li><a href="{{route('alumni-login')}}">Alumni Login</a></li>
-										<li><a href="#">Alumni Portal</a></li>
-										<li><a href="#">Alumni Association</a></li>
-									</ul>
-								</li>
-								<li class="{{$menu_item=='placements'?'active':''}} sub-menu-parent"><a href="#">Placements</a>
-									<ul class="sub-menu">
-										<li><a href="{{route('placements')}}#about">About TPO</a></li>
-										<li><a href="{{route('placements')}}#functions">Function &amp; Responsibilities</a></li>
-										<li><a href="{{route('placements')}}#statistics">Placement Statistics</a></li>
-										<li><a href="{{route('placements')}}">Training &amp; Placement Process</a></li>
-										<li><a href="{{route('placements')}}">Higher Studies</a></li>
-										<li><a href="{{route('placements')}}#reviews">Reviews</a></li>
-									</ul>
-								</li>
-							</li>
-							<li class="sub-menu-parent"><a href="http://www.kcecell.org/" target="_blank">E-Cell</a>
 							</li>
 							<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">Student Corner</a>
 								<ul class="sub-menu">
+									<li><a href="http://kcecell.org/">KC Ecell</a></li>
+									<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
+									<li><a href="#">Student Council</a></li>
 									<li><a href="#">Code of Conduct</a></li>
 									<li><a href="#">Student Handbook</a></li>
 									<li><a href="#">Student Discipline</a></li>
-									<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
 								</ul>
 							</li>
 							<li class="{{$menu_item=='kcinmedia'?'active':''}} sub-menu-parent"><a href="{{route('kcinmedia')}}">KC in Media</a>
@@ -188,6 +169,16 @@
 									<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 								</ul>
 							</li>
+							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="#">IQAC</a>
+								<ul class="sub-menu">
+									<li><a href="{{route('iqac')}}">About</a></li>
+									<li><a href="{{route('iqac')}}">NAAC</a></li>
+									@for ($i=1; $i <= 9; $i++)
+										<li><a href="#">Meeting {{$i}}</a></li>
+									@endfor
+								</ul>
+							</li>
+							<li class="{{$menu_item=='circular'?'active':''}} sub-menu-parent"><a href="#">Circulars</a></li>
 							<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">About</a>
 								<ul class="sub-menu">
 									<li><a href="{{route('about')}}">College Info</a></li>
@@ -202,9 +193,8 @@
 									<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
 									<li><a href="{{route('committees')}}">Committees</a></li>
 									<li><a href="{{route('careeratkc')}}">Career At KC</a></li>
+									<li><a href="/#contact">Contact Us</li>
 								</ul>
-							</li>
-							<li class="sub-menu-parent"><a href="/#contact" style="padding-right: 0px;">Contact</a>
 							</li>
 						</ul>
 					</div>

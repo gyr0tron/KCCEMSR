@@ -35,7 +35,6 @@
 <!-- fixed tabs -->
 <div class="scale-section default-bg" style="">
 	<div class="container">
-		<div class="col-sm-1 scalable-margin"></div>
 		<div class="col-sm-2 scalable-margin">
 			<a href="{{route('admissions-details')}}" style="text-decoration: none;">
 				<div class="boxes-icon" style="width:fit-content; margin: 0 auto;">
@@ -86,7 +85,16 @@
 				</div>
 			</a>
 		</div>
-		<div class="col-sm-1 scalable-margin"></div>
+		<div class="col-sm-2 scalable-margin">
+			<a href="http://kcecell.org" style="text-decoration: none;">
+				<div class="boxes-icon" style="width:fit-content; margin: 0 auto;">
+					<i class="fa fa-lightbulb-o" style="color:#ffffff; font-size:36px; line-height:36px; vertical-align: middle;"></i>
+				</div>
+				<div>
+					<h3 style="text-align:center;">Ecell</h3>
+				</div>
+			</a>
+		</div>
 	</div>
 </div>
 
