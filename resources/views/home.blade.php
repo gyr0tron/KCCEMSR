@@ -9,10 +9,10 @@
 @section('content')
 <!-- banner start -->
 <!-- ================ -->
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdBHQ2nKSML8JIjM0tm-B09o924mQy7ryD-QhgCKRGvgLBD4A/viewform?usp=send_form" id="notification"><i class="fa fa-bell">
+{{-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSdBHQ2nKSML8JIjM0tm-B09o924mQy7ryD-QhgCKRGvgLBD4A/viewform?usp=send_form" id="notification"><i class="fa fa-bell">
 	<p class="bubble speech" id="bell_info" style="color:black">Click here to apply for mock test of JEE/MHCET 2019
 	</p>
-</i></a>
+</i></a> --}}
 <div id="banner" class="banner">
 	<div class="banner-image"></div>
 	<div class="arrow bounce" id="arw" onclick="location.href='/#welcome';" style="cursor: pointer; z-index: 1;"></div>
@@ -106,7 +106,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="space"></div>
-				<h1 id="about" class="title text-center">Welcome to <span>K.C.College of Engineering and Management Studies & Research!</span></h1>
+				<h1 class="title text-center">Welcome to <span>K.C.College of Engineering and Management Studies & Research!</span></h1>
 				{{-- <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta officia, aspernatur.</p> --}}
 				<div class="space"></div>
 				<div class="row">
@@ -265,6 +265,50 @@
 		</div>
 	</div>
 </div>
+
+
+<!-- fixed tabs -->
+<div class="scale-section default-bg" style="background-color: black;">
+	<div class="container">
+		<h1 id="ribbon-title" class="title text-center"><span style="font-weight: 100;">Statutory Affiliations</span></h1>
+		<div class="col-md-3">
+			<a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}" style="text-decoration: none;">
+				<div style="width: max-content;margin:0 auto;">
+					<h3 class="ribbon-link" style="text-align:center;width: max-content;">Mandatory Disclosure</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="{{route('mandatory-disclosure', 'aicte-affiliation')}}" style="text-decoration: none;">
+				<div style="width: max-content;margin:0 auto;">
+					<h3 class="ribbon-link" style="text-align:center;width: max-content;">AICTE Affiliation</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="{{route('mandatory-disclosure', 'dte')}}" style="text-decoration: none;">
+				<div style="width: max-content;margin:0 auto;">
+					<h3 class="ribbon-link" style="text-align:center;width: max-content;">DTE Affiliation</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-md-2">
+			<a href="{{route('mandatory-disclosure', 'university-affiliation')}}" style="text-decoration: none;">
+				<div style="width: max-content;margin:0 auto;">
+					<h3 class="ribbon-link" style="text-align:center;width: max-content;">University affiliation</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-md-3">
+			<a href="{{route('grievance-redressal')}}" style="text-decoration: none;">
+				<div style="width: max-content;margin:0 auto;">
+					<h3 class="ribbon-link" style="text-align:center;width: max-content;">Grievance Redressal</h3>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
 
 <!-- footer start -->
 <!-- ================ -->

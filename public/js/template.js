@@ -133,6 +133,9 @@ $(document).ready(function(){
 		});
 	});
 
+// Tab in url
+// -------------------------------------------------
+	
 
 //Scroll Spy
 //-----------------------------------------------
@@ -469,8 +472,8 @@ $('.rolldown-list li').each(function () {
 	});
 });
 
-//bell class change
-document.getElementById("notification").addEventListener('click', toggleClass);
+// //bell class change
+// document.getElementById("notification").addEventListener('click', toggleClass);
 
 function toggleClass() {
 	document.getElementById("notification").classList.toggle('goDown');
@@ -479,6 +482,6 @@ function toggleClass() {
 	}, 1500);
 }
 
-setTimeout(function () {
-	document.getElementById("bell_info").classList.toggle('hide');
-}, 3000);
+// setTimeout(function () {
+// 	document.getElementById("bell_info").classList.toggle('hide');
+// }, 3000);

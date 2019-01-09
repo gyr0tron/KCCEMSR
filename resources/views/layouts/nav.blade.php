@@ -105,6 +105,21 @@
 						<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 							<ul class="nav navbar-nav">
 								{{-- <li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="/" style="padding-left: 0px;">Home</a> --}}
+								{{-- </li> --}}
+								<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">About</a>
+									<ul class="sub-menu">
+										<li><a href="{{route('about')}}">College Info</a></li>
+										<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
+										<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
+										<li><a href="{{route('about')}}#dir_id-msg">Director ID Message</a></li>
+										{{-- <li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li> --}}
+										<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
+										<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
+										<li><a href="{{route('about')}}">Board of Governance</a></li>
+										<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
+										<li><a href="{{route('committees')}}">Committees</a></li>
+										<li><a href="{{route('careeratkc')}}">Career At KC</a></li>
+									</ul>
 								</li>
 								<li class="{{$menu_item=='academics'?'active':''}} sub-menu-parent"><a href="#">Academics</a>
 									<ul class="sub-menu">
@@ -150,7 +165,7 @@
 							</li>
 							<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">Student Corner</a>
 								<ul class="sub-menu">
-									<li><a href="http://kcecell.org/">KC Ecell</a></li>
+									<li><a href="http://www.kcecell.org/">KC Ecell</a></li>
 									<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
 									<li><a href="#">Student Council</a></li>
 									<li><a href="#">Code of Conduct</a></li>
@@ -160,7 +175,7 @@
 							</li>
 							<li class="{{$menu_item=='kcinmedia'?'active':''}} sub-menu-parent"><a href="{{route('kcinmedia')}}">KC in Media</a>
 							</li>
-							<li class="{{$menu_item=='statutory-affiliation'?'active':''}} sub-menu-parent"><a href="#">Statutory Affiliations</a>
+							{{-- <li class="{{$menu_item=='statutory-affiliation'?'active':''}} sub-menu-parent"><a href="#">Statutory Affiliations</a>
 								<ul class="sub-menu">
 									<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
 									<li><a href="{{route('mandatory-disclosure', 'aicte-affiliation')}}">AICTE Affiliation</a></li>
@@ -168,33 +183,13 @@
 									<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
 									<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 								</ul>
+							</li> --}}
+							<li class="{{$menu_item=='naac'?'active':''}} sub-menu-parent"><a href="{{route('iqac')}}">NAAC</a>
 							</li>
-							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="#">IQAC</a>
-								<ul class="sub-menu">
-									<li><a href="{{route('iqac')}}">About</a></li>
-									<li><a href="{{route('iqac')}}">NAAC</a></li>
-									@for ($i=1; $i <= 9; $i++)
-										<li><a href="#">Meeting {{$i}}</a></li>
-									@endfor
-								</ul>
+							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="{{route('iqac')}}">IQAC</a>
 							</li>
 							<li class="{{$menu_item=='circular'?'active':''}} sub-menu-parent"><a href="{{route('circulars')}}">Circulars</a></li>
-							<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">About</a>
-								<ul class="sub-menu">
-									<li><a href="{{route('about')}}">College Info</a></li>
-									<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
-									<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
-									<li><a href="{{route('about')}}#dir_id-msg">Director ID Message</a></li>
-									{{-- <li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li> --}}
-									<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
-									<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
-									<li><a href="{{route('about')}}">Board of Governance</a></li>
-									<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
-									<li><a href="{{route('committees')}}">Committees</a></li>
-									<li><a href="{{route('careeratkc')}}">Career At KC</a></li>
-									<li><a href="/#contact">Contact Us</li>
-								</ul>
-							</li>
+							<li><a href="/#contact">Contact Us</a></li>
 						</ul>
 					</div>
 

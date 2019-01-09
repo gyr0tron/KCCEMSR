@@ -20,8 +20,24 @@
 								</li>
 							@endif
 						@endif
-						<li>
+						{{-- <li>
 							<a href="/">Home</a>
+						</li> --}}
+						<li class="has-dropdown">
+							<a href="#">About</a>
+							<ul>
+								<li><a href="{{route('about')}}">College Info</a></li>
+								<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
+								<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
+								<li><a href="{{route('about')}}#dir_id-msg">Director Institutional Development Message</a></li>
+								{{-- <li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li> --}}
+								<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
+								<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
+								<li><a href="{{route('about')}}">Board of Governance</a></li>
+								<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
+								<li><a href="{{route('committees')}}">Committees</a></li>
+								<li><a href="{{route('careeratkc')}}">Career At KC</a></li>
+							</ul>
 						</li>
 						<li class="has-dropdown">
 							<a href="#">Academics</a>
@@ -69,14 +85,44 @@
 							</ul>
 						</li>
 						<li class="has-dropdown">
+							<a href="#">Student Corner</a>
+							<ul>
+								<li><a href="http://www.kcecell.org/" target="_blank">KC Ecell</a></li>
+								<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
+								<li><a href="#">Student Council</a></li>
+								<li><a href="#">Code of Conduct</a></li>
+								<li><a href="#">Student Handbook</a></li>
+								<li><a href="#">Student Discipline</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="{{route('kcinmedia')}}">KC in Media</a>
+						</li>
+						{{-- <li class="has-dropdown">
+							<a href="#">Statutory Affiliations</a>
+							<ul>
+								<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
+								<li><a href="{{route('mandatory-disclosure', 'aicte-affiliation')}}">AICTE Affiliation</a></li>
+								<li><a href="{{route('mandatory-disclosure', 'dte')}}">DTE Affiliation</a></li>
+								<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
+								<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
+							</ul>
+						</li> --}}
+						<li>
+							<a href="{{route('iqac')}}">NAAC</a>
+						</li>
+						<li>
+							<a href="{{route('iqac')}}">IQAC</a>
+						</li>
+						{{-- <li class="has-dropdown">
 							<a href="#">Alumni</a>
 							<ul>
 								<li><a href="{{route('alumni-login')}}">Alumni Login</a></li>
 								<li><a href="#">Alumni Portal</a></li>
 								<li><a href="#">Alumni Association</a></li>
 							</ul>
-						</li>
-						<li class="has-dropdown">
+						</li> --}}
+						{{-- <li class="has-dropdown">
 							<a href="#">Placements</a>
 							<ul>
 								<li><a href="{{route('placements')}}#about">About TPO</a></li>
@@ -86,48 +132,7 @@
 								<li><a href="{{route('placements')}}">Higher Studies</a></li>
 								<li><a href="{{route('placements')}}#reviews">Reviews</a></li>
 							</ul>
-						</li>
-						<li>
-							<a href="http://www.kcecell.org/" target="_blank">Entrepreneurship Cell</a>
-						</li>
-						<li class="has-dropdown">
-							<a href="#">Student Corner</a>
-							<ul>
-								<li><a href="#">Code of Conduct</a></li>
-								<li><a href="#">Student Handbook</a></li>
-								<li><a href="#">Student Discipline</a></li>
-								<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="{{route('kcinmedia')}}">KC in Media</a>
-						</li>
-						<li class="has-dropdown">
-							<a href="#">Statutory Affiliations</a>
-							<ul>
-								<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
-								<li><a href="{{route('mandatory-disclosure', 'aicte-affiliation')}}">AICTE Affiliation</a></li>
-								<li><a href="{{route('mandatory-disclosure', 'dte')}}">DTE Affiliation</a></li>
-								<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
-								<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
-							</ul>
-						</li>
-						<li class="has-dropdown">
-							<a href="#">About</a>
-							<ul>
-								<li><a href="{{route('about')}}">College Info</a></li>
-								<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
-								<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
-								<li><a href="{{route('about')}}#dir_id-msg">Director Institutional Development Message</a></li>
-								{{-- <li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li> --}}
-								<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
-								<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
-								<li><a href="{{route('about')}}">Board of Governance</a></li>
-								<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
-								<li><a href="{{route('committees')}}">Committees</a></li>
-								<li><a href="{{route('careeratkc')}}">Career At KC</a></li>
-							</ul>
-						</li>
+						</li> --}}
 						<li>
 							<a href="/#contact">Contact</a>
 						</li>
