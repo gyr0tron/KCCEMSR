@@ -178,7 +178,7 @@
 									@endfor
 								</ul>
 							</li>
-							<li class="{{$menu_item=='circular'?'active':''}} sub-menu-parent"><a href="#">Circulars</a></li>
+							<li class="{{$menu_item=='circular'?'active':''}} sub-menu-parent"><a href="{{route('circulars')}}">Circulars</a></li>
 							<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">About</a>
 								<ul class="sub-menu">
 									<li><a href="{{route('about')}}">College Info</a></li>

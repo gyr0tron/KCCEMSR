@@ -113,7 +113,7 @@ class DashboardController extends Controller
     return view("pages.admin.announcements");
   }
   // Academics
-  protected $academics_list = ['curriculum-plan','staff-notices','exam-results', 'exam-timetable', 'exam-notices'];
+  protected $academics_list = ['curriculum-plan','staff-notices','exam-results', 'exam-timetable', 'exam-notices', 'circulars'];
   public function academics($action) {
     if(!in_array($action, $this->academics_list)) abort(404, 'Page Not Found');
     return view("pages.admin.academics", compact("action"));

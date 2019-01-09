@@ -37,6 +37,9 @@
         @if ($action == "exam-timetable")
           @include('forms.exam', ["title"=>"Exam Timetable", "action"=>"timetable"])
         @endif
+        @if ($action == "circulars")
+          @include('forms.exam', ["title"=>"Circulars", "action"=>"circulars"])
+        @endif
       </div>
       <div class="col-sm-2">
         <div class="box box-primary">
@@ -50,6 +53,7 @@
               <li class="{{$action=="exam-results"?"active":""}}"><a href="{{route("admin_academics", "exam-results")}}">Exam Results</a></li>
               <li class="{{$action=="exam-notices"?"active":""}}"><a href="{{route("admin_academics", "exam-notices")}}">Exam Notices</a></li>
               <li class="{{$action=="exam-timetable"?"active":""}}"><a href="{{route("admin_academics", "exam-timetable")}}">Exam Timetable</a></li>
+              <li class="{{$action=="circulars"?"active":""}}"><a href="{{route("admin_academics", "circulars")}}">Circulars</a></li>
             </ul>
           </div>
         </div>
