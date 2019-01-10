@@ -21,6 +21,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/about/committee/{url}','AboutController@getCommitteeDetails')->name('committee-details');
   Route::get('/infrastructures','AboutController@getInfrastructures')->name('infrastructures');
   Route::get('/iqac/{action}','AboutController@getIqac')->name('iqac');
+  Route::get('/iqac/meetings/{id}','AboutController@getIqacMeetingsByID')->name('iqac-meetings');
 
   Route::get('/departments','DepartmentController@getList')->name('department-list');
   Route::get('/department/{name}','DepartmentController@get')->name('department');

@@ -26,6 +26,12 @@ class AboutController extends Controller
     {
       return view('pages.iqac', compact(['action']));
     }
+    public function getIqacMeetingsByID($id) {
+      $title = "Meeting $id";
+      $url = url("/public/iqac/meetings/meeting$id.pdf");
+      $menu_item = "iqac";
+      return view('pages.pdfview', compact("title", "url","menu_item"));
+    }
     public function getCommitteeDetails($url)
     {
       $committee = Committee::where('url',$url)->first();

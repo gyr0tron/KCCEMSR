@@ -16,6 +16,7 @@
 					<li class="{{$action=='procedure'?'active':''}}"><a href="{{route('iqac', 'procedure')}}">Procedure</a></li>
 					<li class="{{$action=='functions_strategy'?'active':''}}"><a href="{{route('iqac', 'functions_strategy')}}">Functions and Strategy</a></li>
 					<li class="{{$action=='contact_us'?'active':''}}"><a href="{{route('iqac', 'contact_us')}}">Contact Us</a></li>
+					<li class="{{$action=='meetings'?'active':''}}"><a href="{{route('iqac', 'meetings')}}">Meetings</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-8 col-md-8">
@@ -179,6 +180,14 @@
 						<h3>Contact Us</h3>
 						<p>Phone No: 022-2536088</p>
 						<p>Email id: iqac@kccemsr.edu.in</p>
+					</div>
+					<div id="meetings" class="{{$action=='meetings'?'tab-pane fade in active':'tab-pane fade in'}}">
+						<h3>Meetings</h3>
+						<ul>
+							@for ($i=1; $i < 10; $i++)
+								<li><a target="_blank" href="{{route('iqac-meetings',$i)}}">Meeting {{$i}}</a></li>
+							@endfor
+						</ul>
 					</div>
 				</div>
 			</div>
