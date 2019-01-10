@@ -109,10 +109,10 @@
 							</ul>
 						</li> --}}
 						<li>
-							<a href="{{route('iqac')}}">NAAC</a>
+							<a href="{{route('iqac', 'introduction')}}">NAAC</a>
 						</li>
 						<li>
-							<a href="{{route('iqac')}}">IQAC</a>
+							<a href="{{route('iqac', 'introduction')}}">IQAC</a>
 						</li>
 						{{-- <li class="has-dropdown">
 							<a href="#">Alumni</a>

@@ -184,9 +184,9 @@
 									<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 								</ul>
 							</li> --}}
-							<li class="{{$menu_item=='naac'?'active':''}} sub-menu-parent"><a href="{{route('iqac')}}">NAAC</a>
+							<li class="{{$menu_item=='naac'?'active':''}} sub-menu-parent"><a href="{{route('iqac', 'introduction')}}">NAAC</a>
 							</li>
-							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="{{route('iqac')}}">IQAC</a>
+							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="{{route('iqac', 'introduction')}}">IQAC</a>
 							</li>
 							<li class="{{$menu_item=='circular'?'active':''}} sub-menu-parent"><a href="{{route('circulars')}}">Circulars</a></li>
 							<li><a href="/#contact">Contact Us</a></li>

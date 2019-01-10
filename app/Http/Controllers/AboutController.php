@@ -22,9 +22,9 @@ class AboutController extends Controller
     {
       return view('pages.infrastructure');
     }
-    public function getIqac()
+    public function getIqac($action)
     {
-      return view('pages.iqac');
+      return view('pages.iqac', compact(['action']));
     }
     public function getCommitteeDetails($url)
     {

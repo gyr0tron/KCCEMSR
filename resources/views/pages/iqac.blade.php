@@ -2,7 +2,7 @@
 @section('pre')
 	@php
 	$title = "IQAC";
-	$menu_item = 'about';
+	$menu_item = 'iqac';
 @endphp
 @endsection
 @section('content')
@@ -10,17 +10,17 @@
 		<div class="container main-content-sub">
 			<div class="col-sm-4 col-md-4">
 				<ul class="nav nav-tabs nav-stacked">
-					<li class="active"><a data-toggle="pill" href="#introduction">Introduction</a></li>
-					<li><a data-toggle="pill" href="#aim">Aim</a></li>
-					<li><a data-toggle="pill" href="#members">Members</a></li>
-					<li><a data-toggle="pill" href="#procedure">Procedure</a></li>
-					<li><a data-toggle="pill" href="#functions_strategy">Functions and Strategy</a></li>
-					<li><a data-toggle="pill" href="#contact_us">Contact Us</a></li>
+					<li class="{{$action=='introduction'?'active':''}}"><a href="{{route('iqac', 'introduction')}}">Introduction</a></li>
+					<li class="{{$action=='aim'?'active':''}}"><a href="{{route('iqac', 'aim')}}">Aim</a></li>
+					<li class="{{$action=='members'?'active':''}}"><a href="{{route('iqac', 'members')}}">Members</a></li>
+					<li class="{{$action=='procedure'?'active':''}}"><a href="{{route('iqac', 'procedure')}}">Procedure</a></li>
+					<li class="{{$action=='functions_strategy'?'active':''}}"><a href="{{route('iqac', 'functions_strategy')}}">Functions and Strategy</a></li>
+					<li class="{{$action=='contact_us'?'active':''}}"><a href="{{route('iqac', 'contact_us')}}">Contact Us</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-8 col-md-8">
 				<div class="tab-content">
-					<div id="introduction" class="tab-pane fade in active">
+					<div id="introduction" class="{{$action=='introduction'?'tab-pane fade in active':'tab-pane fade in'}}">
 						<h3>Introduction</h3>
 						<p>
 							National Assessment and Accreditation Council (NAAC) is an autonomous body established under UGC ACT in September 1994. NAAC was entrusted with the responsibility of evaluating performances, assessing and accreditating universities, autonomous and affiliated colleges in the country. NAAC is paving the road for the establishment of “Quality Culture” in the universities and colleges along with enhancing awareness among all stakeholders for the need of Institutional Quality Assurance.
@@ -32,14 +32,14 @@
 							IQAC should function to channelize the effort of the college for academic excellence. It should not be just another record keeping body in the hierarchy of the institution. It will work as a facilitating and planning body of the college becoming a driving force for leading the quality culture of college by removing deficiencies.
 						</p>
 					</div>
-					<div id="aim" class="tab-pane fade in">
+					<div id="aim" class="{{$action=='aim'?'tab-pane fade in active':'tab-pane fade in'}}">
 						<h3>Aim</h3>
 						<ol>
 							<li>To work in harmony and sync with all internal and external agencies for development of a system which assists in advancement for the academic and administrative performance of KCCEMSR.</li>
 							<li>To stimulate and provide a path towards quality enhancement of KCCEMSR.</li>
 						</ol>
 					</div>
-					<div id="members" class="tab-pane fade in">
+					<div id="members" class="{{$action=='members'?'tab-pane fade in active':'tab-pane fade in'}}">
 						<h3>Members</h3>
 						<table class="table">
 							<thead>
@@ -141,7 +141,7 @@
 							</tr>
 						</table>
 					</div>
-					<div id="procedure" class="tab-pane fade in">
+					<div id="procedure" class="{{$action=='procedure'?'tab-pane fade in active':'tab-pane fade in'}}">
 						<h3>Procedure</h3>
 						<ol>
 							<li>Every member of the committee is appointed for a period of 2 years.</li>
@@ -157,7 +157,7 @@
 							<li>IQAC will act as a catalyst for NAAC peer team and other accreditation bodies.</li>
 						</ol>
 					</div>
-					<div id="functions_strategy" class="tab-pane fade in">
+					<div id="functions_strategy" class="{{$action=='functions_strategy'?'tab-pane fade in active':'tab-pane fade in'}}">
 						<h3>Functions and Strategy</h3>
 						<ol>
 							<li>Creating a learner centric environment favorable for quality education.</li>
@@ -175,7 +175,7 @@
 							<li> Preparing Annual Quality Assurance Report (AQAR) as per NAAC guidelines and its submission.</li>
 						</ol>
 					</div>
-					<div id="contact_us" class="tab-pane fade in">
+					<div id="contact_us" class="{{$action=='contact_us'?'tab-pane fade in active':'tab-pane fade in'}}">
 						<h3>Contact Us</h3>
 						<p>Phone No: 022-2536088</p>
 						<p>Email id: iqac@kccemsr.edu.in</p>
