@@ -23,9 +23,10 @@
 					<h1 class="text-center">We are <span
 						class="txt-rotate"
 						data-period="2000"
-						data-rotate='["simple.", "creative.", "developers.", "nerdy." ]'></span>
+						data-rotate='["simple.", "creative.", "developers.", "nerdy."]'></span>
 					</h1>
 					<p class="lead text-center" id="welcome">Our energy introduces us before we start speaking. We are engineers.</p>
+					<p class="text-center">An ISO 9001:2015 Certified Institute</p>
 				</div>
 			</div>
 		</div>
@@ -379,7 +380,7 @@
 				<div class="col-md-12">
 					<p class="text-center">Copyright © 2018 K.C.College of Engineerng & Management Studies & Research.</p>
 					<p class="text-center">Developed by K.C. College Web Development Team</p>
-					<p class="text-center">Regarding any queries please contact <a target="_blank" href="https://www.linkedin.com/in/bhaktij-koli/">Bhaktij Koli</a> or <a target="_blank" href="https://www.linkedin.com/in/simmarkalsi/">Simmar Kalsi</a></p>
+					{{-- <p class="text-center">Regarding any queries please contact <a target="_blank" href="https://www.linkedin.com/in/bhaktij-koli/">Bhaktij Koli</a> or <a target="_blank" href="https://www.linkedin.com/in/simmarkalsi/">Simmar Kalsi</a></p> --}}
 				</div>
 			</div>
 		</div>
