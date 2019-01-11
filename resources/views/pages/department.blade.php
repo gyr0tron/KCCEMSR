@@ -197,7 +197,7 @@
 							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix"><strong>{{$head}}</strong>{{$d}}</p></li>
 						@endif
 					@endforeach
-				</ul> -->
+				</ul>
 			</div>
 		</div>
 	</div>
