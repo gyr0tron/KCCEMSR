@@ -93,6 +93,7 @@
 								<li><a href="#">Code of Conduct</a></li>
 								<li><a href="#">Student Handbook</a></li>
 								<li><a href="#">Student Discipline</a></li>
+								<li><a href="https://www.youtube.com/watch?v=fWECyi8vmL8&list=PLZSzAtoBtkwXHjZ4LJdCDSrYdOhLQSWzf" target="_blank">Video Lectures</a></li>
 							</ul>
 						</li>
 						<li>
