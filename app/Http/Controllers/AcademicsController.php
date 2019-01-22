@@ -66,8 +66,8 @@ class AcademicsController extends Controller
   {
     return view('pages.newsletter');
   }
-  public function getResearchAndDevelopment()
+  public function getResearchAndDevelopment($action)
   {
-    return view('pages.rd');
+    return view('pages.rd', compact(['action']));
   }
 }

@@ -10,17 +10,17 @@
 		<div class="container main-content-sub">
 			<div class="col-sm-4 col-md-4">
 				<ul class="nav nav-tabs nav-stacked">
-					<li class="active"><a data-toggle="pill" href="#aim">Aim</a></li>
-					<li><a data-toggle="pill" href="#objectives">Objectives</a></li>
-					<li><a data-toggle="pill" href="#activities">Activities</a></li>
-					<li><a data-toggle="pill" href="#members">Members</a></li>
-					<li><a data-toggle="pill" href="#coe">Code Of Ethics</a></li>
-					<li><a data-toggle="pill" href="#events">Events</a></li>
+					<li class="{{$action=='aim'?'active':''}}"><a href="{{route('rd', 'aim')}}">Aim</a></li>
+					<li class="{{$action=='objectives'?'active':''}}"><a href="{{route('rd', 'objectives')}}">Objectives</a></li>
+					<li class="{{$action=='activities'?'active':''}}"><a href="{{route('rd', 'activities')}}">Activities</a></li>
+					<li class="{{$action=='members'?'active':''}}"><a href="{{route('rd', 'members')}}">Members</a></li>
+					<li class="{{$action=='coe'?'active':''}}"><a href="{{route('rd', 'coe')}}">Code Of Ethics</a></li>
+					<li class="{{$action=='events'?'active':''}}"><a href="{{route('rd', 'events')}}">Events</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-8 col-md-8">
 				<div class="tab-content">
-					<div id="aim" class="tab-pane fade in active">
+					<div id="aim" class="{{$action=='aim'?'tab-pane fade in active':'tab-pane fade'}}">
 						<h3>Aim</h3>
 						<ol>
 							<li>To create awareness about research amongst our faculty members and students.</li>
@@ -28,7 +28,7 @@
 							<li>To develop a correlation among different sectors like Industry, R&amp;D organizations, foreign universities and apex bodies.</li>
 						</ol>
 					</div>
-					<div id="objectives" class="tab-pane fade">
+					<div id="objectives" class="{{$action=='objectives'?'tab-pane fade in active':'tab-pane fade'}}">
 						<h3>Objectives</h3>
 						<p>
 							Research and development is an important avenue of an organization. This platform will help in understanding the role and importance of research among faculties and students.
@@ -43,7 +43,7 @@
 							<li>To facilitate collaboration and interaction of researchers working on disciplinary and interdisciplinary research.</li>
 						</ol>
 					</div>
-					<div id="activities" class="tab-pane fade">
+					<div id="activities" class="{{$action=='activities'?'tab-pane fade in active':'tab-pane fade'}}">
 						<h3>Activities</h3>
 						<ol>
 							<li>Establishment and promotion of the research environment in the institute by academic and research training activities.</li>
@@ -51,7 +51,7 @@
 							<li>Eyeing the recent trend, to foster the idea of interdisciplinary research and projects among faculties and students.</li>
 						</ol>
 					</div>
-					<div id="members" class=" table-responsive tab-pane fade">
+					<div id="members" class=" table-responsive {{$action=='members'?'tab-pane fade in active':'tab-pane fade'}}">
 						<h3 style="padding: 3%;margin: 0px;">Members</h3>
 						<table class="table table-hover">
 							<thead>
@@ -124,7 +124,7 @@
 							</tbody>
 						</table>
 					</div>
-					<div id="coe" class="tab-pane fade">
+					<div id="coe" class="{{$action=='coe'?'tab-pane fade in active':'tab-pane fade'}}">
 						<h3>CODE OF ETHICS FOR AUTHORS</h3>
 						<h5 style="text-transform: capitalize;font-weight: 200;">Ethical guidelines for authors (Staff /Student):</h5>
 						<ul>
@@ -150,7 +150,7 @@
 							<li>Use of patient images or case details: Author using case studies of patients or volunteers should get ethics committee approval and informed consent which would be documented in the manuscript.</li>
 						</ol>
 					</div>
-					<div id="events" class="tab-pane fade">
+					<div id="events" class="{{$action=='events'?'tab-pane fade in active':'tab-pane fade'}}">
 						@php
 						$car = App\Carousel::where('type', 'rd')->first();
 						if(!$car) goto carouselEnd;
