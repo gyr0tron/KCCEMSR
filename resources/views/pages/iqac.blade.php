@@ -52,7 +52,7 @@
 							</thead>
 							<tr>
 								<td>1</td>
-								<td>Dr. Hansraj Guhilot</td>
+								<td>Dr. V. N. Pawar</td>
 								<td>Chairman (Principal) </td>
 							</tr>
 							<tr>

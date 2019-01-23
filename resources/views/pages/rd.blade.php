@@ -63,7 +63,7 @@
 							<tbody>
 								<tr>
 									<td>1</td>
-									<td>Dr. Hansraj Guhilot</td>
+									<td>Dr. V. N. Pawar</td>
 									<td>Chairman</td>
 									<td>Principal, K.C College of Engineering and Management Studies and Research, Thane.</td>
 								</tr>
