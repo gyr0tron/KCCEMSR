@@ -902,6 +902,15 @@ class DashboardApiController extends Controller
     return ResponseBuilder::send(true, "", "");
 
   }
+  // Remoe Story
+  public function removeStory(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $story = Story::where("id",$id)->first();
+    if(!$story) abort(404, 'Not Found');
+    $story->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
   // Placements
   public function updatePlacementProccess(Request $request)
   {

@@ -25,7 +25,7 @@
                 <td>{{$story->title}}</td>
                 <td>{{$story->date}}</td>
                 <td>{{$story->from.' to '.$story->to}}</td>
-                <td></td>
+                <td><a class="btn btn-sm btn-danger btn-table" onclick="dashboard.removeYesNo('Are you sure you want to remove {{$story->title}}?', '/api/admin/stories/remove', {{$story->id}})"><i class="fa fa-trash-o"></i></a></td>
               </tr>
             @endforeach
           </tbody>

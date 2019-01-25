@@ -215,6 +215,7 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/kcinmedia/add","Admin\DashboardApiController@addKCinMedia");
   Route::post("/kcinmedia/remove","Admin\DashboardApiController@removeKCinMedia");
   Route::post("/stories/add","Admin\DashboardApiController@addStory");
+  Route::post("/stories/remove","Admin\DashboardApiController@removeStory");
 
   Route::post("/placement/placement-process","Admin\DashboardApiController@updatePlacementProccess");
 
