@@ -70,4 +70,13 @@ class AcademicsController extends Controller
   {
     return view('pages.rd', compact(['action']));
   }
+  public function getStudnetCorner($type)
+  {
+    $file = FileUpload::where('type', $type)->first();
+    if(!$file) abort("404");
+    $title = $file->name;
+    $url = $file->getUrl();
+    $menu_item = "student-corner";
+    return view('pages.pdfview', compact("title", "url","menu_item"));
+  }
 }
