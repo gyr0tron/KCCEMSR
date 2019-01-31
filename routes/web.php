@@ -37,6 +37,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/academics/research-and-Development/{action}','AcademicsController@getResearchAndDevelopment')->name('rd');
   Route::get('/circulars','AcademicsController@getCirculars')->name('circulars');
   Route::get('/circulars/{id}','AcademicsController@getCircularsByID')->name('circulars-id');
+  Route::get('/student-corner/student-development','AcademicsController@getStudentDevelopment')->name('student-development');
   Route::get('/student-corner/{type}','AcademicsController@getStudnetCorner')->name('student-corner');
 
   Route::get('/admissions/2019','AdmissionsController@details')->name('admissions-details');

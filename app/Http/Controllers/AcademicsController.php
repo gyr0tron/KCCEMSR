@@ -79,4 +79,8 @@ class AcademicsController extends Controller
     $menu_item = "student-corner";
     return view('pages.pdfview', compact("title", "url","menu_item"));
   }
+  public function getStudentDevelopment()
+  {
+    return view('pages.student-development');
+  }
 }

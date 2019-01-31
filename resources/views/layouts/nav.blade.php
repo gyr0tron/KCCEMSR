@@ -163,7 +163,7 @@
 									</ul>
 								</li>
 							</li>
-							<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">Student Corner</a>
+							<li class="{{$menu_item=='student-corner'?'active':''}} sub-menu-parent"><a href="#">Student Corner</a>
 								<ul class="sub-menu">
 									<li><a href="http://www.kcecell.org/">KC Ecell</a></li>
 									<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
@@ -171,6 +171,7 @@
 									<li><a href="{{route('student-corner', 'code-of-conduct')}}">Code of Conduct</a></li>
 									<li><a href="{{route('student-corner', 'student-handbook')}}">Student Handbook</a></li>
 									<li><a href="{{route('student-corner', 'student-discipline')}}">Student Discipline</a></li>
+									<li><a href="{{route('student-development')}}">Student Development</a></li>
 									<li><a href="https://www.youtube.com/watch?v=fWECyi8vmL8&list=PLZSzAtoBtkwXHjZ4LJdCDSrYdOhLQSWzf" target="_blank">Video Lectures</a></li>
 								</ul>
 							</li>
