@@ -139,7 +139,7 @@
 									<p>{{$story->title}}</p>
 									{{-- <p><i class="fa fa-clock-o" style="margin-right:2%"></i>{{$story->from.' to '.$story->to}}</p> --}}
 									<p>
-										<a href="">More details</a>
+										<a href="{{$story->url}}" target="_blank">More details</a>
 									</p>
 								</li>
 							@endforeach
