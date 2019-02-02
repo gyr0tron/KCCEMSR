@@ -130,7 +130,6 @@
 	</div>
 	<!-- Student Achievement 2 End -->
 	<!-- Hod Message Start -->
-	<div class="space"></div>
 	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 		<div class="container">
 			@php
@@ -144,8 +143,7 @@
 						<div class="space"></div>
 					</div>
 					<div class="col-md-6">
-						<img src="{{$hod->getUrl()}}" alt="">
-						<div class="space"></div>
+						<img src="{{$hod->getUrl()}}" width="300">
 					</div>
 				</div>
 			@endif
