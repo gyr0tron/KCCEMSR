@@ -15,7 +15,12 @@
 			@for ($i=0; $i < $total; $i++)
 				<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 					<div class="row">
-						<div class="col-md-6" style="float:right">
+
+						<div class="container">
+							<h2 class="title text-center"><span>{{$infrastructure[$i]->name}}</span></h2>
+							<p class="text-center">{{$infrastructure[$i]->description}}</p>
+						</div>
+						<div class="container" style="float:right">
 							<div class="row" id="slider">
 								<div class="col-md-12">
 									<div id="myCarousel" class="carousel slide">
@@ -67,10 +72,6 @@
 							</div>
 						</div>
 
-						<div class="col-md-6">
-							<h2 class="title"><span>{{$infrastructure[$i]->name}}</span></h2>
-							{{$infrastructure[$i]->description}}
-						</div>
 					</div>
 				</div>
 				<div class="space" style="margin-top:50px"></div>
