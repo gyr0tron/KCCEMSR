@@ -137,17 +137,20 @@
 			@endphp
 			@if ($hod)
 				<div class="row">
+					<h2 class="text-center" style="margin-top: 0px; margin-bottom: 2%;">HOD'S Message</h2>
 					<div class="col-md-6">
-						<h2 style="margin-top: 0px; margin-bottom: 5px;">HOD'S Message</h2>
-						<p style="text-align: justify;white-space: pre-wrap; margin-bottom: 15px;">{{strip_tags($dep->hod_message)}}</p>
+						<img src="{{$hod->getUrl()}}" width="300">
 						<div class="space"></div>
 					</div>
 					<div class="col-md-6">
-						<img src="{{$hod->getUrl()}}" width="300">
+						<p style="text-align: justify;white-space: pre-wrap; margin-bottom: 15px;">{{strip_tags($dep->hod_message)}}</p>
 					</div>
 				</div>
 			@endif
 		</div>
+
+		<div class="space"></div>
+
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
