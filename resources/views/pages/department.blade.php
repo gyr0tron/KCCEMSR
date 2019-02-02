@@ -138,11 +138,11 @@
 			@if ($hod)
 				<div class="row">
 					<h2 class="text-center" style="margin-top: 0px; margin-bottom: 2%;">HOD'S Message</h2>
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<img src="{{$hod->getUrl()}}" width="300">
 						<div class="space"></div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-8">
 						<p style="text-align: justify;white-space: pre-wrap; margin-bottom: 15px;">{{strip_tags($dep->hod_message)}}</p>
 					</div>
 				</div>
