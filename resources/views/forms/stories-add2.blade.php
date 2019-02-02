@@ -65,23 +65,30 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="from">From (HH:MM AM/PM):</label>
+            <label class="control-label col-sm-2" for="from">From (Date):</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" id="from" name="from">
               <p class="help-block"></p>
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="to">To (HH:MM AM/PM):</label>
+            <label class="control-label col-sm-2" for="to">To (Date):</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" id="to" name="to">
               <p class="help-block"></p>
             </div>
           </div>
-          <div class="form-group">
+          {{-- <div class="form-group">
             <label class="control-label col-sm-2" for="file">File:</label>
             <div class="col-sm-9">
               <input type="file" class="form-control" id="file" name="file">
+              <p class="help-block"></p>
+            </div>
+          </div> --}}
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="url">Url:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="url" name="url">
               <p class="help-block"></p>
             </div>
           </div>

@@ -888,6 +888,7 @@ class DashboardApiController extends Controller
     $story = new Story();
     $story->type = $request->input('type', '0');
     $story->title = $request->input('title', '');
+    $story->url = $request->input('url', '');
     if($story->type == 1) {
       $story->from = $request->input('from', '0');
       $story->to = $request->input('to', '0');
