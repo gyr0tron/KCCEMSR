@@ -524,9 +524,9 @@ ul.events .date {
   width: 60px;
   margin-right: 16px;
   padding: 10px 4px;
-  background: #ccc;
+  background: #000;
   text-align: center;
-  color: #555;
+  color: #fff;
 }
 ul.events .date .month {
   display: block;

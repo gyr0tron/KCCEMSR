@@ -133,11 +133,11 @@
 								@endphp
 								<li>
 									<div class="date">
-										<span class="month">{{$date->format('M')}}</span>
-										<span class="day">{{$date->format('d')}}</span>
+										<span class="month" style="font-weight: 500;">{{$date->format('M')}}</span>
+										<span class="day" style="font-weight: 500;">{{$date->format('d')}}</span>
 									</div>
 									<p>{{$story->title}}</p>
-									<p><i class="fa fa-clock-o" style="margin-right:2%"></i>{{$story->from.' to '.$story->to}}</p>
+									{{-- <p><i class="fa fa-clock-o" style="margin-right:2%"></i>{{$story->from.' to '.$story->to}}</p> --}}
 									<p>
 										<a href="">More details</a>
 									</p>
