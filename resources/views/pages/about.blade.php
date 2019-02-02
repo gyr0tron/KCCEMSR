@@ -32,13 +32,26 @@
 					<ul class="list-unstyled">
 						<li><i class="fa fa-caret-right text-colored"></i> To be an organization with potential for excellence in engineering and management for the advancement of society and human kind.</li>
 					</ul>
-				</div>
-				<div class="col-md-6">
-					<h1 id="progOutcms" class="title text-center"><span>Mission</span></h1>
+					<h1 id="mission" class="title text-center"><span>Mission</span></h1>
 					<ul class="list-unstyled">
 						<li><i class="fa fa-caret-right text-colored"></i> To excel in academics, practical engineering, management and to commence research endeavors.</li>
 						<li><i class="fa fa-caret-right text-colored"></i> To prepare students for future opportunities.</li>
 						<li><i class="fa fa-caret-right text-colored"></i> To nurture students with social and ethical responsibilities.</li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<h1 id="coreValues" class="title text-center"><span>Core Values</span></h1>
+					<ul class="list-unstyled">
+						<li><i class="fa fa-caret-right text-colored"></i> <b>Academic Enrichment:</b> We are committed to provide best quality teaching to our student
+community.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> <b>Contribution in social development through technology and beyond:</b> We instill social and
+ethical values amongst our students and overall in the college programmes through curricular,
+co-curricular and extra-curricular activities.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> <b>Promotion of Employment &amp; Entrepreneurial training:</b> We are focused on promotion of both
+employment and entrepreneurial skills of our students to gain competitive edge.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> <b>Promotion of Employment & Entrepreneurial training:</b> We are focused on promotion of both employment and entrepreneurial skills of our students to gain competitive edge. </li>
+						<li><i class="fa fa-caret-right text-colored"></i> <b>Advancement in Research & Managerial skills:</b> We emphasize on developing research & management skills of students and staff of the college.</li>
+						<li><i class="fa fa-caret-right text-colored"></i> <b>Synergy in institutional development:</b> We work in synergy for institutional development which enriches staff culture of our college.</li>
 					</ul>
 				</div>
 			</div>
