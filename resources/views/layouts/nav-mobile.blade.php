@@ -110,11 +110,11 @@
 								<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 							</ul>
 						</li> --}}
-						<li>
-							<a href="{{route('iqac', 'introduction')}}">NAAC</a>
-						</li>
-						<li>
-							<a href="{{route('iqac', 'introduction')}}">IQAC</a>
+						<li class="has-dropdown">
+							<a href="#">IQAC</a>
+							<ul>
+								<li><a href="{{route('iqac', 'introduction')}}">NAAC</a></li>
+							</ul>
 						</li>
 						{{-- <li class="has-dropdown">
 							<a href="#">Alumni</a>

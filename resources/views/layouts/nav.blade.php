@@ -104,8 +104,8 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								{{-- <li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="/" style="padding-left: 0px;">Home</a> --}}
-								{{-- </li> --}}
+								<li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="/" style="padding-left: 0px;">Home</a>
+								</li>
 								<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">About</a>
 									<ul class="sub-menu">
 										<li><a href="{{route('about')}}">College Info</a></li>
@@ -186,9 +186,10 @@
 									<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 								</ul>
 							</li> --}}
-							<li class="{{$menu_item=='naac'?'active':''}} sub-menu-parent"><a href="{{route('iqac', 'introduction')}}">NAAC</a>
-							</li>
-							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="{{route('iqac', 'introduction')}}">IQAC</a>
+							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="#">IQAC</a>
+								<ul class="sub-menu">
+									<li><a href="{{route('iqac', 'introduction')}}">NAAC</a></li>
+								</ul>
 							</li>
 							<li class="{{$menu_item=='circular'?'active':''}} sub-menu-parent"><a href="{{route('circulars')}}">Circulars</a></li>
 							<li><a href="/#contact">Contact Us</a></li>
