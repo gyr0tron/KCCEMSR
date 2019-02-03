@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Carousel;
 use App\Committee;
 use App\Message;
+use App\FileUpload;
 
 class AboutController extends Controller
 {
@@ -39,5 +40,13 @@ class AboutController extends Controller
       $title = $committee->name;
       $url = $committee->getFile();
       return view('pages.pdfview', compact("title", "url"));
+    }
+    public function getCOD() {
+      $file = FileUpload::where('type', 'code-of-conduct-staff')->first();
+      if(!$file) abort("404");
+      $title = $file->name;
+      $url = $file->getUrl();
+      $menu_item = "about";
+      return view('pages.pdfview', compact("title", "url","menu_item"));
     }
 }
