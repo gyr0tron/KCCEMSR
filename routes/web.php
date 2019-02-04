@@ -23,6 +23,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/infrastructures','AboutController@getInfrastructures')->name('infrastructures');
   Route::get('/iqac/{action}','AboutController@getIqac')->name('iqac');
   Route::get('/iqac/meetings/{id}','AboutController@getIqacMeetingsByID')->name('iqac-meetings');
+  Route::get('/naac/sop','AboutController@getSOP')->name('naac-sop');
 
   Route::get('/departments','DepartmentController@getList')->name('department-list');
   Route::get('/department/{name}','DepartmentController@get')->name('department');
