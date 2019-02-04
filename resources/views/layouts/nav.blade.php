@@ -191,6 +191,7 @@
 								<ul class="sub-menu">
 									<li><a href="{{route('iqac', 'introduction')}}">IQAC</a></li>
 									<li><a href="{{route('naac-sop')}}">SOP</a></li>
+									<li><a href="{{route('naac-feedback')}}">Feedback</a></li>
 								</ul>
 							</li>
 							<li class="{{$menu_item=='circular'?'active':''}} sub-menu-parent"><a href="{{route('circulars')}}">Circulars</a></li>

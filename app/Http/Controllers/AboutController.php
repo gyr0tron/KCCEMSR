@@ -52,4 +52,7 @@ class AboutController extends Controller
     public function getSOP() {
       return redirect('/public/naac/sop.pdf');
     }
+    public function getFeedback() {
+      return redirect('/public/naac/feedback.pdf');
+    }
 }
