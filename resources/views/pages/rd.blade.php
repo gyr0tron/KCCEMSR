@@ -152,36 +152,13 @@
 					</div>
 					<div id="events" class="{{$action=='events'?'tab-pane fade in active':'tab-pane fade'}}">
 						@php
-						$car = App\Carousel::where('type', 'rd')->first();
-						if(!$car) goto carouselEnd;
-						$no = 0;
+							$reports = File::allFiles(public_path('public/reports'));
 						@endphp
-						<div id="myCarousel" class="carousel slide">
-							<div class="carousel-inner">
-								@foreach ($car->images as $id)
-									@php
-									$image = App\ImageUpload::where('id', $id)->first();
-									if(!$image) continue;
-									@endphp
-									<div class="item {{$no==0?'active':''}}" data-slide-number="{{$no++}}">
-										<img src="{{$image->getUrl()}}" width="1200">
-									</div>
-								@endforeach
-							</div>
-
-							<!-- Controls-->
-							<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-								<span class="sr-only">Previous</span>
-							</a>
-							<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-								<span class="sr-only">Next</span>
-							</a>
-						</div>
-						@php
-						carouselEnd:
-						@endphp
+						<ul>
+							@foreach ($reports as $report)
+								<li><a href="{{url('/public/reports/'.$report->getFilename())}}" target="_blank">{{str_replace('.pdf', '', $report->getFilename())}}</a></li>
+							@endforeach
+						</ul>
 					</div>
 				</div>
 			</div>
