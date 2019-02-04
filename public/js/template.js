@@ -109,7 +109,7 @@ $(document).ready(function(){
 				slidesToScroll: 1,
 				autoplay: true,
 				infinite: true,
-				autoplaySpeed: 1000,
+				autoplaySpeed: 1500,
 				arrows: false,
 				dots: false,
 				pauseOnHover: true,
