@@ -21,8 +21,8 @@ class UpdateController extends Controller
       return redirect()->route('admin_dashboard');
     }
     chdir(base_path());
-    exec('sudo git reset --hard 2>&1', $output);
-    exec('sudo git pull origin master 2>&1', $output);
+    exec('git reset --hard 2>&1', $output);
+    exec('git pull origin master 2>&1', $output);
     if(base_path("public") != public_path()) {
       $folders = ['images','js','css'];
       foreach ($folders as $f) {
