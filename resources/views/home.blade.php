@@ -67,7 +67,7 @@
 			</a>
 		</div>
 		<div class="col-sm-2 scalable-margin">
-			<a href="{{route('alumni-login')}}" style="text-decoration: none;">
+			<a href="https://alumni.kccemsr.edu.in" style="text-decoration: none;">
 				<div class="boxes-icon" style="width:fit-content; margin: 0 auto;">
 					<i class="fa fa-smile-o" style="color:#ffffff; font-size:36px; line-height:36px; vertical-align: middle;"></i>
 				</div>
@@ -378,7 +378,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<p class="text-center">Copyright © 2018 K.C. College of Engineerng & Management Studies & Research.</p>
+					<p class="text-center">Copyright © 2019 K.C. College of Engineerng & Management Studies & Research.</p>
 					<p class="text-center">Supervised by: Mandar Ganjapurkar</p>
 					<p class="text-center">Developed by: <a target="_blank" href="https://www.linkedin.com/in/bhaktij-koli/">Bhaktij Koli</a> and <a target="_blank" href="https://www.linkedin.com/in/simmarkalsi/">Simmar Kalsi</a></p>
 				</div>

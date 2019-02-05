@@ -90,7 +90,6 @@
 								<li><a href="http://www.kcecell.org/" target="_blank">KC Ecell</a></li>
 								<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
 								<li><a href="#">Student Council</a></li>
-								<li><a href="#">Code of Conduct</a></li>
 								<li><a href="#">Student Handbook</a></li>
 								<li><a href="#">Student Discipline</a></li>
 								<li><a href="{{route('student-development')}}">Student Development</a></li>
@@ -137,6 +136,9 @@
 								<li><a href="{{route('placements')}}#reviews">Reviews</a></li>
 							</ul>
 						</li> --}}
+						<li>
+							<a href="{{route('circulars')}}">Circulars</a>
+						</li>
 						<li>
 							<a href="/#contact">Contact</a>
 						</li>
