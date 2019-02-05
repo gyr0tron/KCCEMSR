@@ -27,6 +27,7 @@
 							<a href="#">About</a>
 							<ul>
 								<li><a href="{{route('about')}}">College Info</a></li>
+								<li><a href="{{route('hr-handbook')}}">HR Handbook</a></li>
 								<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
 								<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
 								<li><a href="{{route('about')}}#dir_id-msg">Director Institutional Development Message</a></li>
