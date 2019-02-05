@@ -109,7 +109,7 @@
 								<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">About</a>
 									<ul class="sub-menu">
 										<li><a href="{{route('about')}}">College Info</a></li>
-										<li><a href="{{route('code-of-conduct-staff')}}">Code of Conduct for Teaching / Non-Teaching Staff</a></li>
+										<li><a href="{{route('hr-handbook')}}">HR Handbook</a></li>
 										<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
 										<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
 										<li><a href="{{route('about')}}#dir_id-msg">Director ID Message</a></li>

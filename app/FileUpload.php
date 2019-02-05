@@ -11,8 +11,8 @@ class FileUpload extends Model
   protected $table = "fileuploads";
   public $timestamps = true;
 
-  const admission_list = ['admission-criteria', 'fees-notices', 'institute-prospectus', 'dte-admission-information-brochure', 'cap-rount-allottment', 'direct-second-year', 'anti-ragging-affidavit', 'scholarship', 'mandatory-disclosure', 'aicte-affiliation', 'nirf-data', 'dte', 'university-affiliation', 'code-of-conduct', 'student-handbook', 'student-discipline', 'code-of-conduct-staff'];
-  const admission_name_list = ['Admission Criteria', 'Fees Notices', 'Institute Prospectus', 'Dte Admission Information Brochure', 'Cap Rount Allottment', 'Direct Second Year', 'Anti Ragging Affidavit', 'Scholarship', 'Mandatory Disclosure', 'AICTE Affiliation', 'NIRF Data', 'DTE', 'University Affiliation' , 'Code Of Conduct', "Student Handbook", 'Student Discipline', 'Code of Conduct For Staff'];
+  const admission_list = ['admission-criteria', 'fees-notices', 'institute-prospectus', 'dte-admission-information-brochure', 'cap-rount-allottment', 'direct-second-year', 'anti-ragging-affidavit', 'scholarship', 'mandatory-disclosure', 'aicte-affiliation', 'nirf-data', 'dte', 'university-affiliation', 'code-of-conduct', 'student-handbook', 'student-discipline', 'hr-handbook'];
+  const admission_name_list = ['Admission Criteria', 'Fees Notices', 'Institute Prospectus', 'Dte Admission Information Brochure', 'Cap Rount Allottment', 'Direct Second Year', 'Anti Ragging Affidavit', 'Scholarship', 'Mandatory Disclosure', 'AICTE Affiliation', 'NIRF Data', 'DTE', 'University Affiliation' , 'Code Of Conduct', "Student Handbook", 'Student Discipline', 'HR Handbook'];
 
   const library_list = ['question-papers', 'e-books', 'syllabus', 'exam-notices', 'exam-timetable', 'exam-results'];
   const library_list_name = ['Question Papers', 'E-Books', 'Syllabus', 'Exam Notices', 'Exam Timetable', 'Exam Results'];

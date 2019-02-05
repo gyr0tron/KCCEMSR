@@ -41,8 +41,8 @@ class AboutController extends Controller
       $url = $committee->getFile();
       return view('pages.pdfview', compact("title", "url"));
     }
-    public function getCOD() {
-      $file = FileUpload::where('type', 'code-of-conduct-staff')->first();
+    public function getHRHandBook() {
+      $file = FileUpload::where('type', 'hr-handbook')->first();
       if(!$file) abort("404");
       $title = $file->name;
       $url = $file->getUrl();
