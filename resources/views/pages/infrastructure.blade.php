@@ -6,7 +6,7 @@
 @endphp
 @endsection
 @section('content')
-	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+	<div class="section">
 		<div class="container main-content-sub">
 			@php
 			$infrastructure = App\Infrastructure::all();
