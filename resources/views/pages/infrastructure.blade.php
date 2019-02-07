@@ -23,7 +23,7 @@
 						<div class="container" style="float:right">
 							<div class="row" id="slider">
 								<div class="col-md-12">
-									<div id="myCarousel" class="carousel slide">
+									<div id="myCarousel{{$i}}" class="carousel slide">
 										<div class="carousel-inner">
 											@php
 											$no = 0;
