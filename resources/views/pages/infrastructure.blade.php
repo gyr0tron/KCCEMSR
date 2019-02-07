@@ -13,7 +13,7 @@
 			$total = count($infrastructure);
 			@endphp
 			@for ($i=0; $i < $total; $i++)
-				<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+				<div class="section">
 					<div class="row">
 
 						<div class="container">
