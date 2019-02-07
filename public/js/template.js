@@ -294,9 +294,8 @@ $('#myCarousel').on('slide.bs.carousel', function (e) {
 $('[id^=carousel-thumb-]').click( function(){
   var id_selector = $(this).attr("id");
   var id = id_selector.substr(id_selector.length -1);
-	id = parseInt(id);
-	var car_no = $('#myCarousel').data('carousel-no');
-  $(`#myCarousel${car_no}`).carousel(id);
+  id = parseInt(id);
+  $('#myCarousel').carousel(id);
   $('[id^=carousel-thumb-]').removeClass('selected');
   $(this).addClass('selected');
 });
