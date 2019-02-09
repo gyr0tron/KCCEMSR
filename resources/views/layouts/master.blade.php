@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta name="robots" content="index, follow">
   <meta name="description" content="K.C. College of Engineering (KCCOE) is a private engineering college located in Thane, Mumbai, Maharashtra, India. The college is affiliated to the University of Mumbai and approved by Directorate of Technical Education (DTE), Maharashtra State and All India Council of Technical Education (AICTE), New Delhi. KCCOE offers undergraduate courses of study in engineering. The four year undergraduate programme leads to the degree of Bachelor of Engineering (BE).">
-  <meta name="keywords" content="K.C. College, kccoe, kc college of engineering,kc college thane, kc engineering college, kc moodle">
+  <meta name="keywords" content="K.C. College, kccoe, kccemsr, kc college of engineering, kc college thane, kc engineering college, kc moodle, engineering college thane, engineering college maharahstra">
   <meta name="author" content="Bhaktij Koli, Simmar Kalsi">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
