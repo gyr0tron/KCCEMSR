@@ -151,10 +151,10 @@
       <tfoot>
         <tr>
           <th width="20%">Photo</th>
-          <th width="50%">Name</th>
-          <th width="20%">Pointer</th>
-          <th width="20%">Year</th>
-          <th width="20%">Actions</th>
+          <th width="30%">Name</th>
+          <th width="10%">Pointer</th>
+          <th width="10%">Year</th>
+          <th width="10%">Actions</th>
         </tr>
       </tfoot>
     </table>
