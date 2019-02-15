@@ -30,7 +30,7 @@
 								<li><a href="{{route('hr-handbook')}}">HR Handbook</a></li>
 								<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
 								<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
-								<li><a href="{{route('about')}}#dir_id-msg">Director Institutional Development Message</a></li>
+								<li><a href="{{url('/public/files/institute-prospectus.pdf')}}">Director Institutional Development Message</a></li>
 								{{-- <li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li> --}}
 								<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
 								<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
