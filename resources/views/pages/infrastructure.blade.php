@@ -6,14 +6,14 @@
 @endphp
 @endsection
 @section('content')
-	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+	<div class="section">
 		<div class="container main-content-sub">
 			@php
 			$infrastructure = App\Infrastructure::all();
 			$total = count($infrastructure);
 			@endphp
 			@for ($i=0; $i < $total; $i++)
-				<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+				<div class="section">
 					<div class="row">
 
 						<div class="container">
@@ -23,7 +23,7 @@
 						<div class="container" style="float:right">
 							<div class="row" id="slider">
 								<div class="col-md-12">
-									<div id="myCarousel{{$i}}" class="carousel slide">
+									<div id="myCarousel{{$i}}" data-carousel-no="{{ $i }}"class="carousel slide">
 										<div class="carousel-inner">
 											@php
 											$no = 0;
