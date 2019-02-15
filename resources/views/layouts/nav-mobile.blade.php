@@ -90,9 +90,9 @@
 							<ul>
 								<li><a href="http://www.kcecell.org/" target="_blank">KC Ecell</a></li>
 								<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
-								<li><a href="#">Student Council</a></li>
-								<li><a href="#">Student Handbook</a></li>
-								<li><a href="#">Student Discipline</a></li>
+								<li><a href="{{route('student-corner', 'student-council')}}">Student Council</a></li>
+								<li><a href="{{route('student-corner', 'student-handbook')}}">Student Handbook</a></li>
+								<li><a href="{{route('student-corner', 'student-discipline')}}">Student Discipline</a></li>
 								<li><a href="{{route('student-development')}}">Student Development</a></li>
 								<li><a href="https://www.youtube.com/watch?v=fWECyi8vmL8&list=PLZSzAtoBtkwXHjZ4LJdCDSrYdOhLQSWzf" target="_blank">Video Lectures</a></li>
 							</ul>
