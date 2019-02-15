@@ -116,7 +116,7 @@
 										{{-- <li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li> --}}
 										<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
 										<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
-										<li><a href="{{route('about')}}">Board of Governance</a></li>
+										{{-- <li><a href="{{route('about')}}">Board of Governance</a></li> --}}
 										<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
 										<li><a href="{{route('committees')}}">Committees</a></li>
 										<li><a href="{{route('careeratkc')}}">Career At KC</a></li>
@@ -128,7 +128,7 @@
 										<li><a href="{{route('department-list')}}">Departments</a></li>
 										<li><a href="http://www.learningatkc.com/moodle/login/index.php" target="_blank">KC-Moodle</a></li>
 										<li><a href="{{route('publications')}}">Publications</a></li>
-										<li><a href="{{route('publications')}}">News Letter</a></li>
+										{{-- <li><a href="{{route('publications')}}">News Letter</a></li> --}}
 										<li><a href="{{route('rd', 'aim')}}">Research &amp; Development</a></li>
 									</ul>
 								</li>
@@ -159,7 +159,7 @@
 									<ul class="sub-menu">
 										<li><a href="{{route('exam', 'notices')}}">Exam Notices</a></li>
 										<li><a href="{{route('exam', 'timetable')}}">Exam Timetable</a></li>
-										<li><a href="{{route('exam', 'results')}}">Exam Results</a></li>
+										{{-- <li><a href="{{route('exam', 'results')}}">Exam Results</a></li> --}}
 										<li><a href="#">Exam Rules &amp; Procedures</a></li>
 									</ul>
 								</li>
@@ -170,7 +170,7 @@
 									<li><a href="{{route('lifeatkc')}}">Life At KC</a></li>
 									<li><a href="{{route('student-corner', 'student-council')}}">Student Council</a></li>
 									<li><a href="{{route('student-corner', 'student-handbook')}}">Student Handbook</a></li>
-									<li><a href="{{route('student-corner', 'student-discipline')}}">Student Discipline</a></li>
+									{{-- <li><a href="{{route('student-corner', 'student-discipline')}}">Student Discipline</a></li> --}}
 									<li><a href="{{route('student-development')}}">Student Development</a></li>
 									<li><a href="https://www.youtube.com/watch?v=fWECyi8vmL8&list=PLZSzAtoBtkwXHjZ4LJdCDSrYdOhLQSWzf" target="_blank">Video Lectures</a></li>
 								</ul>
