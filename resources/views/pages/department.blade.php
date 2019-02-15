@@ -80,6 +80,7 @@
 									<h3 class="media-heading">First Topper</h3>
 									<blockquote>
 										<h4 style="margin-bottom: 0px;">{{$top1->name}}</h4>
+										<h5 style="margin-bottom: 0px;">{{$top1->academic_year}}</h5>
 									</blockquote>
 								</div>
 							</div>
