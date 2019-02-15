@@ -17,7 +17,12 @@
 						<ul class="nav nav-pills">
 							<li class="active"><a href="#" data-filter="*">All</a></li>
 							@foreach ($types as $type)
-								<li><a href="#" data-filter=".{{$type->url}}">{{$type->name}}</a></li>
+								@php
+									$count = App\Event::where('department', $type->url)->count();
+								@endphp
+								@if ($count != 0)
+									<li><a href="#" data-filter=".{{$type->url}}">{{$type->name}}</a></li>
+								@endif
 							@endforeach
 						</ul>
 					</div>
