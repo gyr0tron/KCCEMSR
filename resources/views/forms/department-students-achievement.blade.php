@@ -84,6 +84,7 @@
           <th width="50%">Name</th>
           <th width="20%">Pointer</th>
           <th width="20%">Year</th>
+          <th width="20%">Academic Year</th>
           <th width="20%">Actions</th>
         </tr>
       </thead>
@@ -94,6 +95,7 @@
             <td>{{$topper->name}}</td>
             <td>{{$topper->pointer}}</td>
             <td>{{$topper->getYear()}}</td>
+            <td>{{$topper->academic_year}}</td>
             <td>
               <a class="btn btn-sm btn-danger" style="margin-right:10px;"
               onclick="dashboard.removeYesNo('Are you sure you want to remove {{$topper->name}} ?','/api/admin/department/topper/remove',{{$topper->id}})"
@@ -133,6 +135,12 @@
                     <option value="4">BE</option>
                   @endif
                 </select>
+                <p class="help-block"></p>
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <input type="number" class="form-control" id="topper_academic_year" name="topper_academic_year" value="2018">
                 <p class="help-block"></p>
               </div>
             </td>

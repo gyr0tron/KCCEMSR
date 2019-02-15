@@ -422,6 +422,7 @@ class DashboardApiController extends Controller
     $top->pointer = $request->input('topper_pointer');
     $top->year = $request->input('topper_year');
     $top->department = $request->input("topper_department","");
+    $top->academic_year = $request->input("topper_academic_year","");
     $file = $request->topper_image;
     if($file) {
       $top->uploadImage($file);

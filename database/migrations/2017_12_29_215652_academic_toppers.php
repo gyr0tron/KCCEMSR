@@ -20,6 +20,7 @@ class AcademicToppers extends Migration
       $table->string('image')->nullable();
       $table->string('department')->nullable();
       $table->integer('year')->nullable();
+      $table->integer('academic_year')->nullable();
       $table->integer("created_by")->nullable();
       $table->integer("updated_by")->nullable();
       $table->timestamps();
