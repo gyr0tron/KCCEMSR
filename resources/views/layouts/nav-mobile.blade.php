@@ -47,7 +47,7 @@
 								<li><a href="{{route('department-list')}}">Departments</a></li>
 								<li><a href="http://www.learningatkc.com/moodle/login/index.php" target="_blank">KC-Moodle</a></li>
 								<li><a href="{{route('publications')}}">Publications</a></li>
-								<li><a href="{{route('newsletter')}}">News Letter</a></li>
+								<li><a href="{{route('publications')}}">News Letter</a></li>
 								<li><a href="{{route('rd', 'aim')}}">Research &amp; Development</a></li>
 							</ul>
 						</li>
@@ -137,9 +137,9 @@
 								<li><a href="{{route('placements')}}#reviews">Reviews</a></li>
 							</ul>
 						</li> --}}
-						<li>
+						{{-- <li>
 							<a href="{{route('circulars')}}">Circulars</a>
-						</li>
+						</li> --}}
 						<li>
 							<a href="/#contact">Contact</a>
 						</li>
