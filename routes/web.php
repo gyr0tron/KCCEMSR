@@ -223,6 +223,8 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/stories/remove","Admin\DashboardApiController@removeStory");
 
   Route::post("/placement/placement-process","Admin\DashboardApiController@updatePlacementProccess");
+  Route::post("/placement/student-placement/add","Admin\DashboardApiController@addStudentPlacement");
+  Route::post("/placement/student-placement/remove","Admin\DashboardApiController@removeStudentPlacement");
 
 
   Route::post("/settings/main","Admin\UpdateController@settings");

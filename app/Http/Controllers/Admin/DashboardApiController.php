@@ -46,6 +46,7 @@ use App\Infrastructure;
 use App\JobList;
 use App\KCinMedia;
 use App\Story;
+use App\Placement;
 use App\ImageUpload;
 use App\ResponseBuilder;
 use Carbon\Carbon;
@@ -925,6 +926,25 @@ class DashboardApiController extends Controller
     }
     $upload->filename = $upload->uploadFile($request->file('file'), "placement-process");
     $upload->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function addStudentPlacement(Request $request)
+  {
+    $placment = new Placement();
+    $placment->name = $request->input('name', '');
+    $placment->company = $request->input('company', '');
+    $placment->package = $request->input('package', '');
+    $placment->year = $request->input('year', '');
+    $placment->academic_year = $request->input('academic_year', '');
+    $placment->save();
+    return ResponseBuilder::send(true, "", "");
+  }
+  public function removeStudentPlacement(Request $request)
+  {
+    $id = $request->input("id","-1");
+    $placment = Placement::where("id",$id)->first();
+    if(!$placment) abort(404, 'Not Found');
+    $placment->forceDelete();
     return ResponseBuilder::send(true, "", "");
   }
 }

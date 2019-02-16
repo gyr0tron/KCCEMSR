@@ -176,7 +176,7 @@ class DashboardController extends Controller
   // Placements
   public function placements($action)
   {
-    $placments = ['placement-process'];
+    $placments = ['placement-process', 'student-placement'];
     if(!in_array($action, $placments)) abort(404, 'Page Not Found');
     return view("pages.admin.placements", compact("action"));
   }
