@@ -74,7 +74,39 @@
 				<placement-stats></placement-stats>
 			</div>
 			<div class="space"></div>
-
+			<div class="row" id="student-placement">
+				<div class="col-md-12">
+					<h1 class="title text-center"><span>Student Placement</span></h1>
+				</div>
+				<div class="col-md-12">
+					<table class="table table-hover">
+						<thead>
+							<th>Sr.No.</th>
+							<th>Name</th>
+							<th>Company</th>
+							<th>Package</th>
+							<th>Branch</th>
+							<th>Year</th>
+						</thead>
+						<tbody>
+							@php
+								$placements = App\Placement::all();
+								$no=0;
+							@endphp
+							@foreach ($placements as $placement)
+								<tr>
+									<td>{{++$no}}</td>
+									<td>{{$placement->name}}</td>
+									<td>{{$placement->company}}</td>
+									<td>{{$placement->package}}</td>
+									<td>{{$placement->year}}</td>
+									<td>{{$placement->academic_year}}</td>
+								</tr>
+							@endforeach
+						</tbody>
+					</table>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-md-12">
 					<h1 id="reviews" class="title text-center"><span>Reviews</span></h1>
