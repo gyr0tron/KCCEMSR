@@ -2353,3 +2353,81 @@ p.speech:after {
 .ribbon-link:hover {
 	color: rgb(0, 195, 255);
 }
+/* 
+.slideout {
+  position: fixed;
+  top: 25%;
+  left: -55%;
+  width: 40%;
+  height: 100%;
+  padding: 1rem 0;
+	z-index: 999999;
+  transition-duration: 0.3s;
+  color: black;
+  font-size: 1.5rem;
+}
+.slideout.right {
+  left: initial;
+  right: -40%;
+}
+.slideout.right .tab {
+  right: initial;
+  left: -3rem;
+  border-right: 0;
+  border-radius: 0.75rem 0 0 0.7rem;
+}
+.slideout.right .rot270 {
+  -webkit-transform: rotate(270deg) translate(-100%, -3rem);
+          transform: rotate(270deg) translate(-100%, -3rem);
+}
+.slideout .tab {
+  position: absolute;
+  width: 3rem;
+  height: 25vh;
+  border: 1px black solid;
+  right: -3rem;
+  cursor: pointer;
+  background-color: #369beb;
+  z-index: 100;
+}
+.slideout .guts {
+  border-radius: 0.75rem 0.75rem 0.75rem 0.75rem;
+  position: absolute;
+  top: -8%;
+  border: 1px black solid;
+  background: white;
+  height: 75%;
+  width: 100%;
+}
+.slideout .guts input {
+  width: 84%;
+  border: 1px black solid;
+  border-radius: 0.5rem;
+  background: lightgrey;
+  text-align: center;
+}
+.slideout .guts .row {
+	margin: 0.5rem 0;
+	width: 100%;
+}
+.slideout.active {
+  left: 0;
+}
+.slideout.active.right {
+  left: initial;
+  right: 0;
+}
+
+.rot270 {
+  display: inline-block;
+  -webkit-transform: rotate(270deg) translate(-70%, -5rem);
+          transform: rotate(270deg) translate(-70%, -5rem);
+  font-size: 2rem;
+}
+
+.btn-slideout {
+  position: absolute;
+  top: 15%;
+  right: 1rem;
+  font-size: 2rem;
+} */

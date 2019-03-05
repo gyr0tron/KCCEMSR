@@ -100,7 +100,7 @@
 						<li>
 							<a href="{{route('kcinmedia')}}">KC in Media</a>
 						</li>
-						{{-- <li class="has-dropdown">
+						<li class="has-dropdown">
 							<a href="#">Statutory Affiliations</a>
 							<ul>
 								<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
@@ -109,7 +109,7 @@
 								<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
 								<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 							</ul>
-						</li> --}}
+						</li>
 						<li class="has-dropdown">
 							<a href="#">NAAC</a>
 							<ul>

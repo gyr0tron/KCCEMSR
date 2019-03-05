@@ -177,7 +177,7 @@
 							</li>
 							<li class="{{$menu_item=='kcinmedia'?'active':''}} sub-menu-parent"><a href="{{route('kcinmedia')}}">KC in Media</a>
 							</li>
-							{{-- <li class="{{$menu_item=='statutory-affiliation'?'active':''}} sub-menu-parent"><a href="#">Statutory Affiliations</a>
+							<li class="{{$menu_item=='statutory-affiliation'?'active':''}} sub-menu-parent"><a href="#">Statutory Affiliations</a>
 								<ul class="sub-menu">
 									<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
 									<li><a href="{{route('mandatory-disclosure', 'aicte-affiliation')}}">AICTE Affiliation</a></li>
@@ -185,7 +185,7 @@
 									<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
 									<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 								</ul>
-							</li> --}}
+							</li>
 							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="#">NAAC</a>
 								<ul class="sub-menu">
 									<li><a href="{{route('iqac', 'introduction')}}">IQAC</a></li>
