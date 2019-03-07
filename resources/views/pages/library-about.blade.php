@@ -13,7 +13,7 @@
 					<h1 id="about" class="title text-center"><span>Library</span></h1>
 					{{-- <div class="space"></div> --}}
 					<div class="col-md-12">
-						@php
+						{{-- @php
 						$car = App\Carousel::where('type', 'library')->first();
 						if(!$car) goto carouselEnd;
 						$no = 0;
@@ -43,7 +43,7 @@
 						</div>
 						@php
 						carouselEnd:
-						@endphp
+						@endphp --}}
 						<p style="text-align: center;">The institution has a library, which is located at 4th floor of the college campus and functions independently.  The library has a well-ventilated and lighted reading room, research reference section, periodical section, processing section and counter stations for circulation.</p>
 					</div>
 				</div>
