@@ -12,6 +12,7 @@
 				<div class="row">
 					<h1 id="about" class="title text-center"><span>Library</span></h1>
 					{{-- <div class="space"></div> --}}
+					<img src="{{ url("images/lib2.jpg") }}" width="500" style="margin-bottom:3%;margin-left: auto;margin-right: auto;" class="img-responsive" alt="">
 					<div class="col-md-12">
 						{{-- @php
 						$car = App\Carousel::where('type', 'library')->first();
@@ -90,12 +91,12 @@
 							<tbody>
 								<tr>
 									<td>1</td>
-									<td>Engineering College Books</td>
+									<td>UG Engineering Books</td>
 									<td>18337</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Management College Books</td>
+									<td>PG MMS Books</td>
 									<td>2408</td>
 								</tr>
 								<tr>
@@ -132,6 +133,7 @@
 			<div class="section clearfix object-non-visible" style="padding-top: 0px" data-animation-effect="fadeIn">
 				<div class="row">
 					<h1 id="general-rules" class="title text-center"><span>Facilities</span></h1>
+					<img src="{{ url("images/lib1.jpg") }}" width="500" style="margin-bottom:3%;margin-left: auto;margin-right: auto;" class="img-responsive" alt="">
 					<div class="col-md-12">
 						<ul class="list-unstyled">
 							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">The library is automated using indigenously developed Biyani Software: Library Management System, integrated software with OPAC and bar code technology.  Library has completed the automation work of the library holdings and circulation is started with barcodes.  OPAC facility is made available at various stations and on library portal of college website for searching the books to students and faculty.</p></li>
@@ -181,6 +183,7 @@
 							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Online / E-library Open to All (on College website: <a>https://www.kccemsr.edu.in/library</a>).</p></li>
 							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Reading Rooms.</p></li>
 						</ul>
+					<img src="{{ url("images/lib4.jpg") }}" width="300" style="margin-bottom:3%;margin-left: auto;margin-right: auto;" class="img-responsive" alt="">
 					</div>
 					<div class="col-md-6">
 						<h2 id="general-rules" class="title text-center"><span>Highlights</span></h2>
@@ -263,6 +266,7 @@
 			<div class="section clearfix object-non-visible" style="padding-top: 0px" data-animation-effect="fadeIn">
 				<div class="row">
 					<h1 id="general-rules" class="title text-center"><span>Rules</span></h1>
+					<img src="{{ url("images/lib3.jpg") }}" width="500" style="margin-bottom:3%;margin-left: auto;margin-right: auto;" class="img-responsive" alt="">
 					<div class="col-md-12">
 						<p style="text-align: center;">To establish complete silence and utmost use of library holding, the library has formed some rules & regulations.</p>
 						<ul class="list-unstyled">
