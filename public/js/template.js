@@ -486,13 +486,3 @@ function toggleClass() {
 // 	document.getElementById("bell_info").classList.toggle('hide');
 // }, 3000);
 
-
-// $(`#pop-slide`).on(`click`, evt => {
-// 	let $target = $(evt.currentTarget);
-// 	$target.closest(`.slideout`).toggleClass(`active`);
-// })
-
-// $(`#deets-slide`).on(`click`, evt => {
-// 	let $target = $(evt.currentTarget);
-// 	$target.closest(`.slideout`).toggleClass(`active`);
-// })

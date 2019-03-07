@@ -15,32 +15,6 @@
 </i></a> --}}
 <div id="banner" class="banner">
 <!-- button -->
-{{-- d<div class="slideout right">
-  <div class="tab btn-slideout" id="deets-slide">d --}}
-    {{-- <div class="rot270">
-      <div>
-        <mtech-msg>TEST</mtech-msg>
-      </div>
-		</div> --}}
-		{{-- d<p class="rot270" style="margin:0px;position: inherit;top: 15%;right: -105%;">test</p>d --}}
-    {{-- <div class="rot270 btn-slideout" id="deets-slide">test</div> --}}
-  {{-- d</div>d --}}
-  {{-- d<div class="guts">
-    <div class="row container">
-			<div class="b" id="b2">
-				<div class="b-con" style="height: 2600px; margin-top: 0px;">
-					@foreach (App\Story::where('type','0')->orderBy('created_at', 'DESC')->get() as $story)
-						<div>
-							<p style="text-align:left;">✔ {{$story->title}}
-						</div>
-					@endforeach
-				</div>
-			</div>
-    </div>
-  </div>d --}}
-  
-{{-- d</div>d --}}
-
 	<div class="banner-image"></div>
 	<div class="arrow bounce" id="arw" onclick="location.href='/#welcome';" style="cursor: pointer; z-index: 1;"></div>
 	<div class="banner-caption">
