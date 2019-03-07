@@ -328,7 +328,9 @@
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1584.396878799198!2d72.98002808733317!3d19.179818462852708!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb4f1e032d9e4fc41!2sK+C+College+Of+Engineering+Management+Studies+And+Research!5e0!3m2!1sen!2sin!4v1514910475785" class="maps" frameborder="0" style="border:0" allowfullscreen></iframe>
 						<ul class="list-icons">
 							<li><i class="fa fa-map-marker pr-10"></i><a href="https://goo.gl/maps/9kgemW2tEwn" class="a-no-decrn">{{setting('contact-address')}}</a></li>
-							<li><i class="fa fa-envelope-o pr-10"></i>&nbsp;{{setting('contact-email')}}</li>
+							<li><i class="fa fa-envelope-o pr-10"></i>
+							&nbsp;<a href="mailto:{{setting('contact-email')}}" style="text-decoration: none;">{{setting('contact-email')}}</a>
+							</li>
 							<li><i class="fa fa-phone pr-10"></i>&nbsp;{{setting('contact-phone')}}</li>
 							<li><i class="fa fa-whatsapp pr-10"></i>&nbsp;9594477844</li>
 							<li><i class="fa fa-volume-control-phone pr-10"></i>&nbsp;8448385585</li>
