@@ -290,19 +290,19 @@
 					<h1 id="general-rules" class="title text-center"><span>Important Links</span></h1>
 					<div class="col-md-12">
 						<div class="col-md-2 col-md-offset-1">
-								<img src="{{ url("images/NDLI.png") }}" style="margin: 0 auto;" alt="" height="100" width ="100" class="img-responsive">
+								<a href="https://ndl.iitkgp.ac.in/" target="_blank"><img src="{{ url("images/NDLI.png") }}" style="margin: 0 auto;" alt="" height="100" width ="100" class="img-responsive"></a>
 						</div>
 						<div class="col-md-2">
-								<img src="{{ url("images/delnet.jpg") }}" style="margin: 0 auto;" alt="" height="" width ="" class="img-responsive">
+								<a href="http://delnet.in/" target="_blank"><img src="{{ url("images/delnet.jpg") }}" style="margin: 0 auto;" alt="" height="" width ="" class="img-responsive">
 						</div>
 						<div class="col-md-2">
-								<img src="{{ url("images/Ietlogo.png") }}" style="margin: 0 auto;" alt="" height="100" width ="100" class="img-responsive">
+								<a href="https://digital-library.theiet.org/" target="_blank"><img src="{{ url("images/iet.gif") }}" style="margin: 0 auto;padding-top: 5%;padding-bottom: 5%;" alt="" class="img-responsive">
 						</div>
 						<div class="col-md-2">
-								<img src="{{ url("images/eshodh.png") }}" style="margin: 0 auto;" alt="" height="" width ="" class="img-responsive">
+								<a href="https://www.inflibnet.ac.in/ess/" target="_blank"><img src="{{ url("images/eshodh.png") }}" style="margin: 0 auto;" alt="" height="" width ="" class="img-responsive">
 						</div>
 						<div class="col-md-2">
-								<img src="{{ url("images/IITB.png") }}" style="margin: 0 auto;" alt="" height="100" width ="100" class="img-responsive">
+								<a href="https://ndl.iitkgp.ac.in/" target="_blank"><img src="{{ url("images/IITB.png") }}" style="margin: 0 auto;" alt="" height="100" width ="100" class="img-responsive">
 						</div>
 					</div>
 				</div>
