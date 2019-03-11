@@ -70,7 +70,7 @@ class DepartmentController extends Controller
   }
   public function getCareerAtKc()
   {
-    return view('pages.careeratkc');
+    return view('pages.ugc');
   }
   public function getMediaAtKc()
   {
