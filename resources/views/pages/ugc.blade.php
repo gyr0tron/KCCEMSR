@@ -104,7 +104,7 @@
 					<p>The qualification and pay - scale for the posts of Professor, Associate Professor & Assistant Professor and Librarian are as prescribed by the University of Mumbai,AICTE & DTE from time to time.</p>
 					<p>Circular no. Concol/ICC/04 of 2012 Dated 10th February, 2012 for equivalence in the subject please refer circular no. Concol/05/17-18 dated 14th August 2017</p>
 					<p>Applicants who are aleady employed must send their application through proper channel, Applicants are required to account for breaks, if any in their academic career. The details of the qualification pay - scale & allowance will be supplied on request to the applicants.</p>
-					<p>Applications with full details should reach to the  Chairperson, Excelssior Education Society's, K.C.COLLEGE OF ENGINEERING AND MANAGEMENT STUDIES AND RESEARCH, Mith Bunder Road, Near Sadguru Garden, Kopri, Thane (East), Pin 400603 within 15 days from the date of publication of this advertisement or email : career@kccemsr.edu.in</p>
+					<p>Applications with full details should reach to the  Chairperson, Excelssior Education Society's, K.C.COLLEGE OF ENGINEERING AND MANAGEMENT STUDIES AND RESEARCH, Mith Bunder Road, Near Sadguru Garden, Kopri, Thane (East), Pin 400603 within 15 days from the date of publication of this advertisement or email : <a href="mailto:career@kccemsr.edu.in" style="text-decoration: none;">career@kccemsr.edu.in</a></p>
 				</div>
 				<div class="space"></div>
 			</div>

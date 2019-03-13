@@ -10,7 +10,7 @@
 		<div class="container main-content">
 			<div class="row">
 				<div class="col-md-12">
-					<h1 id="about" class="title text-center">About <span>K.C.</span></h1>
+					<h1 id="about" class="title text-center">About <span>Us</span></h1>
 					<div class="space"></div>
 					<div class="row">
 						<div class="col-md-6">
@@ -19,7 +19,7 @@
 							<div class="space"></div>
 						</div>
 						<div class="col-md-6" style="text-align: justify;">
-							Excelssior Education Society is an educational and charitable trust that is dedicated to the pursuit of excellence and welfare of the students since 1978 and is affiliated to Mumbai University. It aims to maximise the capabilities of individuals in all generes educational, intellectual and moral. Our endeavour is to align education with innovation and practical exposure needed to meet the current industry’s requirement. Dr Harssh Khanna and late Mr K. C. Khanna are the milestone in the establishment of KCCOEMSR.
+							Excelssior Education Society is an educational and charitable trust that is dedicated to the pursuit of excellence and welfare of the students since 1978 and is affiliated to Mumbai University. It aims to maximise the capabilities of individuals in all generes educational, intellectual and moral. Our endeavour is to align education with innovation and practical exposure needed to meet the current industry’s requirement. Dr Harssh Khanna and late Mr K C Khanna are the milestone in the establishment of KCCEMSR.
 
 						</div>
 					</div>
@@ -69,7 +69,7 @@ employment and entrepreneurial skills of our students to gain competitive edge.<
 				<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Environment and sustainability:</strong><p style="padding-left:2%">Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.</p></li>
 				<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Ethics:</strong><p style="padding-left:2%">Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.</p></li>
 				<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Individual and team work:</strong><p style="padding-left:2%">Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.</p></li>
-				<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Communication:</strong>Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.</p></li>
+				<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Communication:</strong><p style="padding-left:2%">Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.</p></li>
 				<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Project management and finance:</strong><p style="padding-left:2%">Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.</p></li>
 				<li><i class="fa fa-caret-right pr-10 text-colored"></i><strong>Life-long learning:</strong><p style="padding-left:2%">Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.</p></li>
 			</ul>
@@ -77,14 +77,14 @@ employment and entrepreneurial skills of our students to gain competitive edge.<
 
 			<div class="row" id="">
 				<a class="anchor_guide" id="chp-msg"></a>
-				<h1 class="title text-center resp-text-head title-marg-resp align-marg" id="chairperson"><strong><span>Chairperson Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12">
 					<div style="width:100%;">
-						<img src="{{url("images/chairperson.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
+							<img src="{{url("images/chairperson.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
+						</div>
 					</div>
-				</div>
-				<div class="col-md-9 col-sm-9 col-xs-12">
-					<div class="row">
+					<div class="col-md-9 col-sm-9 col-xs-12">
+						<div class="row">
+						<h1 class="title resp-text-head title-marg-resp align-marg" id="chairperson"><strong><span>Chairperson Message</span></strong></h1>
 						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. Harssh Khanna</span></h2>
 						<blockquote class="blockquote2">
 							<p class="text-left align-marg" style="text-align: justify;">To embark on a journey of success, one needs the tool of preparedness, foresight and strategy. These lead to the path of growth and excellence. It is imperative to combine these three forces in knowledge assimilation, where every day and every semester acts like a pivot tilting the pan balance of life in favour of professional excellence. In K.C College of Engineering and Management Studies and Research, learning is beyond the limits of conventional thoughts as students and faculty push the boundaries of human understanding.</p>
@@ -97,14 +97,14 @@ employment and entrepreneurial skills of our students to gain competitive edge.<
 
 			<div class="row" id="">
 				<a class="anchor_guide" id="md-msg"></a>
-				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>MD Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12" style="float:right">
-					<div style="width:100%;">
-						<img src="http://via.placeholder.com/235x245" style="margin: 0 auto;" alt="">
-					</div>
-				</div>
-				<div class="col-md-9 col-sm-9 col-xs-12">
-					<div class="row">
+						<div style="width:100%;">
+								<img src="http://via.placeholder.com/235x245" style="margin: 0 auto;" alt="">
+							</div>
+						</div>
+						<div class="col-md-9 col-sm-9 col-xs-12">
+							<div class="row">
+						<h1 class="title resp-text-head title-marg-resp align-marg"><strong><span>MD Message</span></strong></h1>
 						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. Sai Kiran Khanna</span></h2>
 						<blockquote class="blockquote2">
 							<p class="text-left align-marg" style="text-align: justify;">My dear students,</p>
@@ -120,14 +120,14 @@ employment and entrepreneurial skills of our students to gain competitive edge.<
 
 			<div class="row" id="">
 				<a class="anchor_guide" id="dir_id-msg"></a>
-				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>Director - Institutional Development Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12">
 					<div style="width:100%;">
-						<img src="{{url("images/director.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
+							<img src="{{url("images/director.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
+						</div>
 					</div>
-				</div>
-				<div class="col-md-9 col-sm-9 col-xs-12">
-					<div class="row">
+					<div class="col-md-9 col-sm-9 col-xs-12">
+						<div class="row">
+						<h1 class="title resp-text-head title-marg-resp align-marg"><strong><span>Director - Institutional Development Message</span></strong></h1>
 						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. Puja Rai Pradhan</span></h2>
 						<blockquote class="blockquote2">
 							<p class="text-left align-marg" style="text-align: justify;">Welcome  to the  KC  college campus at Thane east.  Since its inception in  2001 it  has made remarkable progress in the field of technical teaching . The excellence in teaching and research comes with a committed  team  working relentlessly towards it   . The students are mentored  here in a very personalized and customized pattern keeping their strengths and weakness in mind. We believe that an individual‘s personality must not come in conflict with the environment and every one should engage technically with a free mind.</p>
@@ -166,14 +166,14 @@ employment and entrepreneurial skills of our students to gain competitive edge.<
 
 			<div class="row" id="">
 				<a class="anchor_guide" id="prncp-msg"></a>
-				<h1 class="title text-center resp-text-head title-marg-resp align-marg"><strong><span>Principal Message</span></strong></h1>
 				<div class="col-md-3 col-sm-3 col-xs-12" style="float:right">
-					<div style="width:100%;">
-						<img src="{{url("images/principal.jpeg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-9 col-sm-9 col-xs-12">
-					<div class="row">
+						<div style="width:100%;">
+								<img src="{{url("images/principal.jpeg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
+							</div>
+						</div>
+						<div class="col-md-9 col-sm-9 col-xs-12">
+							<div class="row">
+						<h1 class="title resp-text-head title-marg-resp align-marg"><strong><span>Principal Message</span></strong></h1>
 						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. V. N. Pawar PhD Tech.</span></h2>
 						<blockquote class="blockquote2">
 							<p class="text-left align-marg" style="text-align: justify;">All are welcome  to the website which will introduce you to a place of transformation, a place where caterpillars are converted into beautiful butterflies, the youth is transformed into  multi faceted engineers. We at K C College nurture technical proficiency and expertise of students in wide range of functional, organizational and cultural environments . K C College works to serve the society by developing “ classroom ready” study materials for student fraternity in pursuit of making “ industry ready “ engineers and managers.</p>

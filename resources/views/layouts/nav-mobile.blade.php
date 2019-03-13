@@ -114,7 +114,7 @@
 						<li class="has-dropdown">
 							<a href="#">NAAC</a>
 							<ul>
-								<li><a href="{{route('iqac', 'introduction')}}">IQAC</a></li>
+								{{-- <li><a href="{{route('iqac', 'introduction')}}">IQAC</a></li> --}}
 								<li><a href="{{route('naac-sop')}}">SOP</a></li>
 								<li><a href="{{route('naac-feedback')}}">Feedback</a></li>
 							</ul>
@@ -138,9 +138,9 @@
 								<li><a href="{{route('placements')}}#reviews">Reviews</a></li>
 							</ul>
 						</li> --}}
-						{{-- <li>
-							<a href="{{route('circulars')}}">Circulars</a>
-						</li> --}}
+						<li>
+							<a href="{{route('iqac', 'introduction')}}">IQAC</a>
+						</li>
 						<li>
 							<a href="/#contact">Contact</a>
 						</li>
