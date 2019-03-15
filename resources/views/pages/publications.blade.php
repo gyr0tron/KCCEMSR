@@ -97,7 +97,7 @@
 							<ul style="list-style: none; padding-left: 0px;">
 								<li>Prof. Mandar Ganjapurkar (HOD COMPUTER,KCCEMSR).</br><small>asmita.deshmukh@kccemsr.edu.in</small></li>
 								<li>Prof. Amarja Adgaonkar (HOD IT,KCCEMSR).</br><small>amarja.adgaonkar@kccemsr.edu.in</small></li>
-								<li>Dr. Baban Rindhe (EXTC Department).</br><small>rupinder.kaur@kccemsr.edu.in</small></li>
+								<li>Dr. Baban Rindhe (HOT EXTC,KCCEMSR).</br><small>rupinder.kaur@kccemsr.edu.in</small></li>
 								<li>Prof. Rajiv Iyer (HOD ELECTRONICS,KCCEMSR).</br><small>poornima.mahesh@kccemsr.edu.in</small></li>
 								<li>Prof. Sana Haji Naik (Computer Department).</br><small>sana.naik@kccemsr.edu.in</small></li>
 							</ul>
