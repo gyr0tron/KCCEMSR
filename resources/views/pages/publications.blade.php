@@ -95,11 +95,11 @@
 						<div role="tabpanel" class="tab-pane" id="editTeam">
 							<h3><span>Editorial Team</span></h3>
 							<ul style="list-style: none; padding-left: 0px;">
-								<li>Prof. Rajiv Iyer(HOD EXTC,KCCEMSR).</br><small>rajiv.iyer@kccemsr.edu.in</small></li>
-								<li>Prof. Asmita Deshmukh(HOD COMPUTER,KCCEMSR).</br><small>asmita.deshmukh@kccemsr.edu.in</small></li>
-								<li>Prof. Amarja Adgaonkar(HOD IT,KCCEMSR).</br><small>amarja.adgaonkar@kccemsr.edu.in</small></li>
+								<li>Prof. Rajiv Iyer (HOD EXTC,KCCEMSR).</br><small>rajiv.iyer@kccemsr.edu.in</small></li>
+								<li>Prof. Mandar Ganjapurkar (HOD COMPUTER,KCCEMSR).</br><small>asmita.deshmukh@kccemsr.edu.in</small></li>
+								<li>Prof. Amarja Adgaonkar (HOD IT,KCCEMSR).</br><small>amarja.adgaonkar@kccemsr.edu.in</small></li>
 								<li>Prof. Poornima Mahesh (HOD ELECTRONICS,KCCEMSR).</br><small>poornima.mahesh@kccemsr.edu.in</small></li>
-								<li>Prof. Rupinder Kaur (EXTC Department).</br><small>rupinder.kaur@kccemsr.edu.in</small></li>
+								<li>Dr. Baban Rindhe (EXTC Department).</br><small>rupinder.kaur@kccemsr.edu.in</small></li>
 								<li>Prof. Sana Haji Naik (Computer Department).</br><small>sana.naik@kccemsr.edu.in</small></li>
 							</ul>
 						</div>
