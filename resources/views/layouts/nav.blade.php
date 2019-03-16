@@ -135,7 +135,7 @@
 								<li class="{{$menu_item=='library'?'active':''}} sub-menu-parent"><a href="#">Library</a>
 									<ul class="sub-menu">
 										<li><a href="{{route('library-about')}}">About Library</a></li>
-										<li><a href="http://library.biyanitechnologies.com/" target="_blank">OPAC</a></li>
+										<li><a href="http://library.biyanitechnologies.com/LogInPageController/LogInUser?Username=kc_student&Password=kc_student" target="_blank">OPAC</a></li>
 										<li><a href="{{route('question-papers')}}">Question Papers</a></li>
 										<li><a href="{{route('ebooks')}}">Journals</a></li>
 										<li><a href="{{route('syllabus')}}">Syllabus</a></li>
