@@ -291,7 +291,7 @@
 
 			<div class="section clearfix object-non-visible" style="padding-top: 0px" data-animation-effect="fadeIn">
 				<div class="row">
-					<h1 id="general-rules" class="title text-center"><span>Important Links</span></h1>
+					<h1 id="digital-library" class="title text-center"><span>Important Links</span></h1>
 					<div class="col-md-12">
 						<div class="col-md-2 col-md-offset-1">
 								<a href="https://ndl.iitkgp.ac.in/" target="_blank"><img src="{{ url("images/NDLI.png") }}" style="margin: 0 auto;" alt="" height="100" width ="100" class="img-responsive"></a>
