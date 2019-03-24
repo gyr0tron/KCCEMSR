@@ -121,6 +121,12 @@
 									<td>Member</td>
 									<td>Assistant Professor, Computer Engineering</td>
 								</tr>
+								<tr>
+									<td>11</td>
+									<td>Ms. Devika Roy</td>
+									<td>Member</td>
+									<td>Assistant Professor, Information Technology</td>
+								</tr>
 							</tbody>
 						</table>
 					</div>
