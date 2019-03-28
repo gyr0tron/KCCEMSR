@@ -19,7 +19,7 @@
 						@endphp
 						@if ($carousel)
 							<div id="carousel-{{$media->carousel}}" class="carousel slide">
-								<div class="carousel-inner">
+								<div class="carousel-inner" style="height: 420px;">
 									@foreach ($carousel->images as $id)
 										@php
 										$image = App\ImageUpload::where('id', $id)->first();
