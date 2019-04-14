@@ -116,7 +116,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
-					<h2>2. Anti Ragging Commiittee</h2>
+					<h2>2. Anti Ragging Committee</h2>
 					<table class="table table-responsive table-hover table-striped">
 						<thead>
 							<tr>
@@ -763,7 +763,7 @@
 							<tr>
 								<td>1</td>
 								<td>Dr. Saikiran Khanna</td>
-								<td>MR</td>
+								<td>MD</td>
 							</tr>
 							<tr>
 								<td>2</td>
