@@ -49,6 +49,9 @@ class AboutController extends Controller
       $menu_item = "about";
       return view('pages.pdfview', compact("title", "url","menu_item"));
     }
+    public function getSSR() {
+      return redirect('/public/naac/ssr.pdf');
+    }
     public function getSOP() {
       return redirect('/public/naac/sop.pdf');
     }

@@ -115,6 +115,7 @@
 							<a href="#">NAAC</a>
 							<ul>
 								{{-- <li><a href="{{route('iqac', 'introduction')}}">IQAC</a></li> --}}
+								<li><a href="{{route('naac-ssr')}}">SSR</a></li>
 								<li><a href="{{route('naac-sop')}}">SOP</a></li>
 								<li><a href="{{route('naac-feedback')}}">Feedback</a></li>
 							</ul>
