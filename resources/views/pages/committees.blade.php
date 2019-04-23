@@ -734,6 +734,11 @@
 								<td>Member</td>
 							</tr>
 							<tr>
+								<td>4</td>
+								<td>Prof. Manasi Choche</td>
+								<td>Member</td>
+							</tr>
+							<tr>
 								<td>3</td>
 								<td>Prof. Yamini Patil</td>
 								<td>Member</td>
@@ -743,6 +748,7 @@
 								<td>Prof. Amuthavalli Yadav</td>
 								<td>Member</td>
 							</tr>
+							
 						</tbody>
 					</table>
 				</div>
