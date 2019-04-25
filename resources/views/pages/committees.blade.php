@@ -515,7 +515,7 @@
 			{{-- 9. Trainning & Placement Cell --}}
 			<div class="row">
 				<div class="col-sm-12">
-					<h2>9. Trainning & Placement Cell</h2>
+					<h2>9. Training & Placement Cell</h2>
 					<table class="table table-responsive table-hover table-striped">
 						<thead>
 							<tr>
@@ -916,7 +916,7 @@
 			{{-- 17. Marathi Bhasha Wagdmay Mandal - Nakshatra --}}
 			<div class="row">
 				<div class="col-sm-12">
-					<h2>17. Marathi Bhasha Wagdmay Mandal - Nakshatra</h2>
+					<h2>17. Marathi Bhasha Wangdmay Mandal - Nakshatra</h2>
 					<table class="table table-responsive table-hover table-striped">
 						<thead>
 							<tr>
