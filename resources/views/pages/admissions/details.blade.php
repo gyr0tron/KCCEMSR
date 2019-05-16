@@ -33,7 +33,7 @@
 								<p class="text-left align-marg">Computer Engineering - 321024510</p>
 								<p class="text-left align-marg">Information Technology - 321024610</p>
 
-								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://fforms.gle/wScAzmwu4Q2flqod9" target="_blank">Click here to register for free seminar on Engineering Admission Process 2019-20</a></li>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://docs.google.com/forms/d/e/1FAIpQLSdyW4hdTLvhlglvOYyxqkyw40OrRleIcSY9YilCx-fqVB-7Wg/viewform?usp=sf_link" target="_blank">Click here to register for free seminar on Engineering Admission Process 2019-20</a></li>
 								{{-- <li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="{{route('admissions-apply')}}" target="_blank">Apply Online</a></li>
 								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://fe2018.mahacet.org/StaticPages/HomePage.aspx" target="_blank">DTE Home Page</a></li>
 								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="http://fe2018.mahacet.org/2017/2017ENGG_CAP1_CutOff.pdf" target="_blank">Engineering  Cut-Off 2017 for CAP Round 1</a></li>
