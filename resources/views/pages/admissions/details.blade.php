@@ -33,7 +33,7 @@
 								<p class="text-left align-marg">Computer Engineering - 321024510</p>
 								<p class="text-left align-marg">Information Technology - 321024610</p>
 
-								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://bit.ly/2JnUzu0" target="_blank">Click here to enroll for free seminar on engineering admission process 2019-20</a></li>
+								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://docs.google.com/forms/d/e/1FAIpQLSdyW4hdTLvhlglvOYyxqkyw40OrRleIcSY9YilCx-fqVB-7Wg/viewform" target="_blank">Click here to enroll for free seminar on engineering admission process 2019-20</a></li>
 								{{-- <li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://goo.gl/forms/6VUPg6imlSNK8H822" target="_blank">Apply for mock test of JEE/MHCET 2019</a></li> --}}
 								{{-- <li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="{{route('admissions-apply')}}" target="_blank">Apply Online</a></li>
 								<li><i class="fa fa-chevron-right pr-10 text-colored"></i><a href="https://fe2018.mahacet.org/StaticPages/HomePage.aspx" target="_blank">DTE Home Page</a></li>
