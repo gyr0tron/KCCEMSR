@@ -20,9 +20,9 @@
 								<img src="{{url("images/Ad002.jpg")}}">
 							</div>
 							<div class="space"></div>
-							<div class="" style="padding-bottom: 20px;">
+							{{-- <div class="" style="padding-bottom: 20px;">
 								<img src="{{url("images/Ad001.jpg")}}">
-							</div>
+							</div> --}}
 						</div>
 						<div class="col-md-6" style="text-align: justify;">
 							<h1 style="font-size: 30px">Latest News</h1>
