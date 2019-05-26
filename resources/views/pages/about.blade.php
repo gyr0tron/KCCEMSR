@@ -49,7 +49,6 @@ ethical values amongst our students and overall in the college programmes throug
 co-curricular and extra-curricular activities.</li>
 						<li><i class="fa fa-caret-right text-colored"></i> <b>Promotion of Employment &amp; Entrepreneurial training:</b> We are focused on promotion of both
 employment and entrepreneurial skills of our students to gain competitive edge.</li>
-						<li><i class="fa fa-caret-right text-colored"></i> <b>Promotion of Employment & Entrepreneurial training:</b> We are focused on promotion of both employment and entrepreneurial skills of our students to gain competitive edge. </li>
 						<li><i class="fa fa-caret-right text-colored"></i> <b>Advancement in Research & Managerial skills:</b> We emphasize on developing research & management skills of students and staff of the college.</li>
 						<li><i class="fa fa-caret-right text-colored"></i> <b>Synergy in institutional development:</b> We work in synergy for institutional development which enriches staff culture of our college.</li>
 					</ul>
