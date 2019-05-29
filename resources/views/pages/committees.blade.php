@@ -282,7 +282,7 @@
 							</tr>
 							<tr>
 								<td>4</td>
-								<td>Student Representative</td>
+								<td>Mr. Kamal Duseja</td>
 								<td>General Secretary</td>
 							</tr>
 							<tr>
@@ -292,7 +292,7 @@
 							</tr>
 							<tr>
 								<td>6</td>
-								<td>Student Representative</td>
+								<td>Mr. Amanjeet Singh Malhotra</td>
 								<td>Cultural Secretary</td>
 							</tr>
 							<tr>
@@ -302,7 +302,7 @@
 							</tr>
 							<tr>
 								<td>8</td>
-								<td>Student Representative</td>
+								<td>Mr. Jaison Thomas</td>
 								<td>Sports Secretary</td>
 							</tr>
 						</tbody>
