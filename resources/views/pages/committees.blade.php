@@ -287,7 +287,7 @@
 							</tr>
 							<tr>
 								<td>5</td>
-								<td>Student Representative</td>
+								<td>Mr. Harsh Kanzariya</td>
 								<td>Joint Secretary</td>
 							</tr>
 							<tr>
