@@ -163,9 +163,9 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th>On working days9.00 am - 7.00 pm</th>
-									<th>During/Before Examination Days 8.30 am - 6.00 pm</th>
-									<th>During Vacation 9.30 am - 6.00 pm</th>
+									<th>On working days 9:00 AM - 6:00 PM</th>
+									<th>During/Before Examination Days 9:00 AM - 7:00 PM</th>
+									<th>During Vacation 9:30 AM - 6:00 PM</th>
 								</tr>
 							</thead>
 						</table>
@@ -316,7 +316,7 @@
 				<div class="row">
 					<h1 id="general-rules" class="title text-center"><span>Contact Person</span></h1>
 					<div class="col-md-12">
-						<p style="text-align: center;">Mrs. Jyoti Meshram</p>
+						<p style="text-align: center;">Mrs. Prashant Sutone</p>
 						<a href="mailto:library@kccemsr.edu.in"><p style="text-align: center;">library@kccemsr.edu.in</p></a>
 					</div>
 				</div>

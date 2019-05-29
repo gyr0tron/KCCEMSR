@@ -215,7 +215,7 @@
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Ms. Jyoti Meshram</td>
+								<td>Mr. Prashant Sutone</td>
 								<td>Librarian</td>
 							</tr>
 							<tr>
