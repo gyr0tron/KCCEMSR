@@ -316,7 +316,7 @@
 				<div class="row">
 					<h1 id="general-rules" class="title text-center"><span>Contact Person</span></h1>
 					<div class="col-md-12">
-						<p style="text-align: center;">Mrs. Prashant Sutone</p>
+						<p style="text-align: center;">Librarian</p>
 						<a href="mailto:library@kccemsr.edu.in"><p style="text-align: center;">library@kccemsr.edu.in</p></a>
 					</div>
 				</div>
