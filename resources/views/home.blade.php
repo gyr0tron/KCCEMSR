@@ -27,6 +27,7 @@
 						data-rotate='["simple.", "creative.", "developers.", "nerdy."]'></span>
 					</h1>
 					<p class="lead text-center" id="welcome">Our energy introduces us before we start speaking. We are engineers.</p>
+					<p class="text-center" style="font-weight:900;font-size:16px;">NAAC Accredited with B++  Grade</p>
 					<p class="text-center">An ISO 9001:2015 Certified Institute</p>
 				</div>
 			</div>
