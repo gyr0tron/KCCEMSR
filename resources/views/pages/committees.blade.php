@@ -215,7 +215,7 @@
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Ms. Jyoti Meshram</td>
+								<td>Mr. Prashant Sutone</td>
 								<td>Librarian</td>
 							</tr>
 							<tr>
@@ -282,17 +282,17 @@
 							</tr>
 							<tr>
 								<td>4</td>
-								<td>Student Representative</td>
+								<td>Mr. Kamal Duseja</td>
 								<td>General Secretary</td>
 							</tr>
 							<tr>
 								<td>5</td>
-								<td>Student Representative</td>
+								<td>Mr. Harsh Kanzariya</td>
 								<td>Joint Secretary</td>
 							</tr>
 							<tr>
 								<td>6</td>
-								<td>Student Representative</td>
+								<td>Mr. Amanjeet Singh Malhotra</td>
 								<td>Cultural Secretary</td>
 							</tr>
 							<tr>
@@ -302,7 +302,7 @@
 							</tr>
 							<tr>
 								<td>8</td>
-								<td>Student Representative</td>
+								<td>Mr. Jaison Thomas</td>
 								<td>Sports Secretary</td>
 							</tr>
 						</tbody>
