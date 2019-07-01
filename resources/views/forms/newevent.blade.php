@@ -7,21 +7,26 @@
       <p class="help-block"></p>
     </div>
   </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="department">Department:</label>
-    <div class="col-sm-9">
-      <select class="form-control" name="department" id="department">
-        <option value="all">College</option>
-        @foreach (App\Department::all() as $dep)
-          <option value="{{$dep->url}}">{{$dep->name}}</option>
-        @endforeach
-        @foreach (App\Committee::getAll() as $dep)
-          <option value="{{$dep->url}}">{{$dep->name}}</option>
-        @endforeach
-      </select>
-      <p class="help-block"></p>
+  @if (Auth::user()->is_editor())
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="department">Department:</label>
+      <div class="col-sm-9">
+        <select class="form-control" name="department" id="department">
+          <option value="all">College</option>
+          @foreach (App\Department::all() as $dep)
+            <option value="{{$dep->url}}">{{$dep->name}}</option>
+          @endforeach
+          @foreach (App\Committee::getAll() as $dep)
+            <option value="{{$dep->url}}">{{$dep->name}}</option>
+          @endforeach
+        </select>
+        <p class="help-block"></p>
+      </div>
     </div>
-  </div>
+  @endif
+  @if (Auth::user()->is_tpo())
+    <input type="hidden" name="department" value="tpo">
+  @endif
   <div class="form-group">
     <label class="control-label col-sm-2" for="description">Description:</label>
     <div class="col-sm-9">
