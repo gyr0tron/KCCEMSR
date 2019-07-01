@@ -63,6 +63,16 @@ if(!isset($second)) $second = "not defined";
         @if (Auth::user()->is_tpo())
           <li class="{{$menu_item=='tpo_announcements'?'active':''}}"><a href="{{route("admin_tpo_announcements")}}"><i class="fa fa-bullhorn"></i> <span>Announcements</span></a></li>
         @endif
+        @if (Auth::user()->is_tpo() || Auth::user()->is_editor())
+          <li class="{{$menu_item=='events'?'active':''}}">
+            <a href="{{route("admin_events")}}">
+              <i class="fa fa-calendar"></i> <span>Events</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-blue">{{App\Event::count()}}</small>
+              </span>
+            </a>
+          </li>
+        @endif
         @if (Auth::user()->is_editor())
           <li class="{{$menu_item=='carousel'?'active':''}}"><a href="{{route("admin_carousel")}}"><i class="fa fa-laptop"></i> <span>Carousel</span></a></li>
           <li class="{{$menu_item=='testimonials'?'active':''}}">
@@ -70,14 +80,6 @@ if(!isset($second)) $second = "not defined";
               <i class="fa fa-quote-left"></i> <span>Testimonials</span>
               <span class="pull-right-container">
                 <small class="label pull-right bg-blue">{{App\Testimonial::count()}}</small>
-              </span>
-            </a>
-          </li>
-          <li class="{{$menu_item=='events'?'active':''}}">
-            <a href="{{route("admin_events")}}">
-              <i class="fa fa-calendar"></i> <span>Events</span>
-              <span class="pull-right-container">
-                <small class="label pull-right bg-blue">{{App\Event::count()}}</small>
               </span>
             </a>
           </li>
