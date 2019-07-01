@@ -103,6 +103,7 @@ Route::prefix('admin')->group(function () {
   Route::get('/department/{url}/{action}','Admin\DashboardController@department')->name("admin_department");
   Route::get('/department/{url}/{action}/edit/{id}','Admin\DashboardController@department_edit')->name("admin_department_edit");
   Route::get('/announcements','Admin\DashboardController@announcements')->name("admin_announcements");
+  Route::get('/tpo/announcements','Admin\DashboardController@tpoAnnouncements')->name("admin_tpo_announcements");
   Route::get('/academics/{action}','Admin\DashboardController@academics')->name("admin_academics");
 
   Route::get('/publication/technovision','Admin\DashboardController@publication')->name("admin_publication");
@@ -227,6 +228,8 @@ Route::prefix('/api/admin')->group(function () {
   Route::post("/placement/placement-process","Admin\DashboardApiController@updatePlacementProccess");
   Route::post("/placement/student-placement/add","Admin\DashboardApiController@addStudentPlacement");
   Route::post("/placement/student-placement/remove","Admin\DashboardApiController@removeStudentPlacement");
+
+  Route::post("/tpo_announcements/add", "Admin\DashboardApiController@addTpoAnnouncement");
 
 
   Route::post("/settings/main","Admin\UpdateController@settings");

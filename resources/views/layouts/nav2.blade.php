@@ -60,6 +60,9 @@ if(!isset($second)) $second = "not defined";
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">ADMIN DASHBOARD</li>
         <li class="{{$menu_item=='dashboard'?'active':''}}"><a href="{{route("admin_dashboard")}}"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>
+        @if (Auth::user()->is_tpo())
+          <li class="{{$menu_item=='tpo_announcements'?'active':''}}"><a href="{{route("admin_tpo_announcements")}}"><i class="fa fa-bullhorn"></i> <span>Announcements</span></a></li>
+        @endif
         @if (Auth::user()->is_editor())
           <li class="{{$menu_item=='carousel'?'active':''}}"><a href="{{route("admin_carousel")}}"><i class="fa fa-laptop"></i> <span>Carousel</span></a></li>
           <li class="{{$menu_item=='testimonials'?'active':''}}">

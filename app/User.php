@@ -42,6 +42,9 @@ class User extends Authenticatable
       case '4':
       return "Admission";
       break;
+      case '5':
+      return "TPO Administrator";
+      break;
       default:
       return "User";
       break;
@@ -59,6 +62,9 @@ class User extends Authenticatable
   }
   public function is_admission() {
     return $this->access == 2 || $this->access == 3;
+  }
+  public function is_tpo() {
+    return $this->access == 5;
   }
 
 }

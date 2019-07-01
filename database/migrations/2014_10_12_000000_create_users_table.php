@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
       $table->string('email', 191)->unique();
       $table->string('fullname');
       $table->string('password');
-      $table->enum("access",['0','1','2','3','4'])->default('1');
+      $table->enum("access",['0','1','2','3','4', '5'])->default('1');
       $table->enum("type",['0','1','2'])->default('1');//0-Admin, 1-Admission, 2-Alumni
       $table->enum("verified", ['0', '1'])->default('0');
       $table->string('skin')->default('blue');

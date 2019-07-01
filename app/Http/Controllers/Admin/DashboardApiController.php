@@ -48,6 +48,7 @@ use App\KCinMedia;
 use App\Story;
 use App\Placement;
 use App\ImageUpload;
+use App\TpoAnnouncement;
 use App\ResponseBuilder;
 use Carbon\Carbon;
 
@@ -565,6 +566,18 @@ class DashboardApiController extends Controller
     if(!$anouncement) abort(404, 'Not Found');
     if(strlen($anouncement->filename) > 3) $anouncement->deleteFile();
     $anouncement->forceDelete();
+    return ResponseBuilder::send(true, "", "");
+  }
+  // Add TPO Announcement
+  public function addTpoAnnouncement(Request $request)
+  {
+    $anouncement = new TpoAnnouncement();
+    $anouncement->title = $request->input("title","");
+    $anouncement->url = $request->input("url", "");
+    $anouncement->date = $request->input("date", "");
+    $anouncement->created_by = Auth::user()->id;
+    $anouncement->updated_by = Auth::user()->id;
+    $anouncement->save();
     return ResponseBuilder::send(true, "", "");
   }
   // Acadmics

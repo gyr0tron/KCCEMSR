@@ -20,7 +20,8 @@
       <option value="3" selected>User</option>
       <option value="2">Editor</option>
       <option value="1">Administrator</option>
-      <option value="-4">Admission</option>
+      <option value="4">Admission</option>
+      <option value="5">TPO Administrator</option>
     </select>
     <p class="help-block"></p>
   </div>

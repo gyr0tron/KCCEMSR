@@ -112,6 +112,11 @@ class DashboardController extends Controller
   {
     return view("pages.admin.announcements");
   }
+  // TPO Announcements
+  public function tpoAnnouncements()
+  {
+    return view("pages.admin.tpo_announcements");
+  }
   // Academics
   protected $academics_list = ['curriculum-plan','staff-notices','exam-results', 'exam-timetable', 'exam-notices', 'circulars'];
   public function academics($action) {
