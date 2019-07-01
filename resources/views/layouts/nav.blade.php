@@ -68,9 +68,9 @@
 
 			<div class="smooth-scroll">
 				<div class="site-name" style="padding-bottom: 0px;">
-					<p style="font-size: 0.6em;margin: 0px;padding: 0px;line-height: 0.8;">Excelssior Education Society's</p>
+					<p class="text-center" style="font-size: 0.6em;margin: 0px;padding: 0px;line-height: 0.8;">Excelssior Education Society's</p>
 					<a href="/" id="head-site-name" style="text-decoration:none;">K.C. College of Engineering &amp; Management Studies &amp; Research</a>
-					<p class="lead" style="margin:0px;font-weight:900;font-size:15px;">NAAC Accredited with B++ Grade</p>
+					<p class="lead text-center" style="margin:0px;font-size:15px;"><i>(NAAC Accredited with B++ Grade)</i></p>
 				</div>
 			</div>
 
