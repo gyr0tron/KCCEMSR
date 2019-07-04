@@ -29,7 +29,7 @@
 <body class="no-trans">
   <div id="splashscreen">
     <button type="button" class="close enter_site" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <img src="{{url("images/splash_banner.jpg")}}" />
+    <img id="splashimg" src="{{url("images/splash_banner.jpg")}}" />
   </div>
   <div class="scrollToTop"><i class="icon-up-open-big"></i></div>
   @if (!isset($nonav))
