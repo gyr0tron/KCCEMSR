@@ -12,20 +12,18 @@
 				<h1 id="about" class="title text-center"><span>About TPO</span></h1>
 				<div class="col-md-6" style="float:left">
 					@php
-					$car = App\Carousel::where('type', 'tpo')->first();
-					if(!$car) goto carouselEnd;
+					$events = App\Event::where('department', 'tpo')->get();
+					if(!$events) goto carouselEnd;
 					$no = 0;
 					@endphp
 					<div id="myCarousel" class="carousel slide">
 						<div class="carousel-inner">
-							@foreach ($car->images as $id)
-								@php
-								$image = App\ImageUpload::where('id', $id)->first();
-								if(!$image) continue;
-								@endphp
-								<div class="item {{$no==0?'active':''}}" data-slide-number="{{$no++}}">
-									<img src="{{$image->getUrl()}}" width="1200">
-								</div>
+							@foreach ($events as $event)
+								@foreach (App\Eventimage::where('event', $event->id)->get() as $image)
+									<div class="item {{$no==0?'active':''}}" data-slide-number="{{$no++}}">
+										<img src="{{$image->getUrl()}}" width="1200">
+									</div>
+								@endforeach
 							@endforeach
 						</div>
 						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
