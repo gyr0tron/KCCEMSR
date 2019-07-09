@@ -10,7 +10,7 @@
 		<div class="container main-content">
 			<div class="row">
 				<h1 id="about" class="title text-center"><span>About TPO</span></h1>
-				
+
 				<div class="col-md-12">
 					<p style="text-align: justify;">Welcome to Training &amp; Placement Cell at K. C College of Engineering &amp; Management Studies &amp; Research, Thane. Training and Placement is a vital department in the college and is constantly striving to provide assistance to the students in their efforts to probe for the employment. It also caters needs of various organizations to conduct the interviews. It plays an important role in counselling and guiding the students for their successful career placement. It arranges various technical and soft skills programs which augments the skills and increases the confidence of the students when facing the various tests and interviews conducted by the companies and to meet companies’ expectations. The Training and Placement Cell takes pride in offering student services like consultation on a wide range of issues such as employment, career planning, opportunities etc. thereby preparing students effectively for their career to make them competent.</p>
 					<p style="text-align: justify;">Training and Placement Cell operates year round to facilitate contacts between graduates and Industry.</p>
@@ -107,10 +107,9 @@
 					<table class="table table-hover">
 						<thead>
 							<th>Sr.No.</th>
-							<th>Name</th>
 							<th>Company</th>
-							<th>Package</th>
-							<th>Branch</th>
+							<th>Avg Package</th>
+							<th>No Of Students</th>
 							<th>Year</th>
 						</thead>
 						<tbody>
@@ -121,10 +120,9 @@
 							@foreach ($placements as $placement)
 								<tr>
 									<td>{{++$no}}</td>
-									<td>{{$placement->name}}</td>
 									<td>{{$placement->company}}</td>
 									<td>{{$placement->package}}</td>
-									<td>{{$placement->year}}</td>
+									<td>{{$placement->students}}</td>
 									<td>{{$placement->academic_year}}</td>
 								</tr>
 							@endforeach

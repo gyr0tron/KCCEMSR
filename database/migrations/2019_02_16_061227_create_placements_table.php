@@ -15,10 +15,9 @@ class CreatePlacementsTable extends Migration
   {
     Schema::create('placements', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name')->nullable();
       $table->string('company')->nullable();
       $table->double('package')->nullable();
-      $table->string('year')->nullable();
+      $table->integer('students')->nullable();
       $table->integer('academic_year')->nullable();
     });
   }

@@ -944,10 +944,9 @@ class DashboardApiController extends Controller
   public function addStudentPlacement(Request $request)
   {
     $placment = new Placement();
-    $placment->name = $request->input('name', '');
     $placment->company = $request->input('company', '');
     $placment->package = $request->input('package', '');
-    $placment->year = $request->input('year', '');
+    $placment->students = $request->input('students', '');
     $placment->academic_year = $request->input('academic_year', '');
     $placment->save();
     return ResponseBuilder::send(true, "", "");
