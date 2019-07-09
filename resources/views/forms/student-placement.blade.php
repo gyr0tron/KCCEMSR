@@ -30,11 +30,10 @@
       </tbody>
       <tfoot>
         <tr>
-          <th width="30%">Name</th>
-          <th width="20%">Company</th>
+          <th width="30%">Company</th>
           <th width="10%">Package</th>
-          <th width="10%">Branch/Year</th>
-          <th width="10%">Academic Year</th>
+          <th width="10%">No of Students</th>
+          <th width="20%">Academic Year</th>
           <th width="10%">Actions</th>
         </tr>
       </tfoot>
