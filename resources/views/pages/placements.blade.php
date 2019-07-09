@@ -10,6 +10,16 @@
 		<div class="container main-content">
 			<div class="row">
 				<h1 id="about" class="title text-center"><span>About TPO</span></h1>
+				
+				<div class="col-md-12">
+					<p style="text-align: justify;">Welcome to Training &amp; Placement Cell at K. C College of Engineering &amp; Management Studies &amp; Research, Thane. Training and Placement is a vital department in the college and is constantly striving to provide assistance to the students in their efforts to probe for the employment. It also caters needs of various organizations to conduct the interviews. It plays an important role in counselling and guiding the students for their successful career placement. It arranges various technical and soft skills programs which augments the skills and increases the confidence of the students when facing the various tests and interviews conducted by the companies and to meet companies’ expectations. The Training and Placement Cell takes pride in offering student services like consultation on a wide range of issues such as employment, career planning, opportunities etc. thereby preparing students effectively for their career to make them competent.</p>
+					<p style="text-align: justify;">Training and Placement Cell operates year round to facilitate contacts between graduates and Industry.</p>
+				</div>
+			</div>
+			<div class="space"></div>
+			<div class="space"></div>
+
+			<div class="row">
 				<div class="col-md-6" style="float:left">
 					@php
 					$events = App\Event::where('department', 'tpo')->get();
@@ -40,11 +50,28 @@
 					@endphp
 				</div>
 				<div class="col-md-6">
-					<p style="text-align: justify;">Welcome to Training &amp; Placement Cell at K. C College of Engineering &amp; Management Studies &amp; Research, Thane. Training and Placement is a vital department in the college and is constantly striving to provide assistance to the students in their efforts to probe for the employment. It also caters needs of various organizations to conduct the interviews. It plays an important role in counselling and guiding the students for their successful career placement. It arranges various technical and soft skills programs which augments the skills and increases the confidence of the students when facing the various tests and interviews conducted by the companies and to meet companies’ expectations. The Training and Placement Cell takes pride in offering student services like consultation on a wide range of issues such as employment, career planning, opportunities etc. thereby preparing students effectively for their career to make them competent.</p>
-					<p style="text-align: justify;">Training and Placement Cell operates year round to facilitate contacts between graduates and Industry.</p>
+					<h2 class="title text-center">Upcoming Events</h2>
+					<ul class="events" style="padding-left: 0px;">
+						@foreach (App\TpoAnnouncement::orderBy('created_at', 'DESC')->get() as $story)
+							@php
+							$date = Carbon\Carbon::createFromFormat('Y-m-d', $story->date);
+							@endphp
+							<li>
+								<div class="date">
+									<span class="month" style="font-weight: 500;">{{$date->format('M')}}</span>
+									<span class="day" style="font-weight: 500;">{{$date->format('d')}}</span>
+								</div>
+								<p>{{$story->title}}</p>
+								{{-- <p><i class="fa fa-clock-o" style="margin-right:2%"></i>{{$story->from.' to '.$story->to}}</p> --}}
+								<p>
+									<a href="{{$story->url}}" target="_blank">More details</a>
+								</p>
+							</li>
+						@endforeach
+					</ul>
 				</div>
 			</div>
-			<div class="space"></div>
+
 			<div class="space"></div>
 			<div class="row">
 				<div class="col-md-12">
