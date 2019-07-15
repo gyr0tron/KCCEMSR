@@ -14,10 +14,10 @@
 	</p>
 </i></a> --}}
 
-<div id="splashscreen">
+{{-- <div id="splashscreen">
 	<button type="button" class="close enter_site" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	<img id="splashimg" src="{{url("images/splash_banner.jpg")}}" />
-</div>
+</div> --}}
 <div id="banner" class="banner">
 <!-- button -->
 	<div class="banner-image"></div>

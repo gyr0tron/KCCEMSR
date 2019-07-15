@@ -129,17 +129,17 @@
 
     // splash banner
     // -------------------------------------------------
-    $(".enter_site").click(function() {
-      $(this)
-        .parent("#splashscreen")
-        .fadeOut(500);
-    });
+    // $(".enter_site").click(function() {
+    //   $(this)
+    //     .parent("#splashscreen")
+    //     .fadeOut(500);
+    // });
 
-    (function myFunction() {
-      setTimeout(function() {
-        $("#splashscreen").fadeOut(500);
-      }, 5000);
-    })();
+    // (function myFunction() {
+    //   setTimeout(function() {
+    //     $("#splashscreen").fadeOut(500);
+    //   }, 5000);
+    // })();
 
     //Scroll Spy
     //-----------------------------------------------
