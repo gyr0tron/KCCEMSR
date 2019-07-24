@@ -174,7 +174,7 @@ employment and entrepreneurial skills of our students to gain competitive edge.<
 						<div class="col-md-9 col-sm-9 col-xs-12">
 							<div class="row">
 						<h1 class="title resp-text-head title-marg-resp align-marg"><strong><span>Principal Message</span></strong></h1>
-						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. V. N. Pawar PhD Tech.</span></h2>
+						<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. Vilas Nitnavre PhD (VLSI)</span></h2>
 						<blockquote class="blockquote2">
 							<p class="text-left align-marg" style="text-align: justify;">All are welcome  to the website which will introduce you to a place of transformation, a place where caterpillars are converted into beautiful butterflies, the youth is transformed into  multi faceted engineers. We at K C College nurture technical proficiency and expertise of students in wide range of functional, organizational and cultural environments . K C College works to serve the society by developing “ classroom ready” study materials for student fraternity in pursuit of making “ industry ready “ engineers and managers.</p>
 							<p class="text-left align-marg" style="text-align: justify;">At K C College student’s competency in solving contemporary problems is enhanced by providing them exemplary infrastructural facilities and well equipped laboratories. Here students are empowered and enlightened by highly dedicated and committed , research oriented, challenge seeking, well qualified and devoted faculty members. We orient and orchestrate students for smart India Challenge through National level Project exhibition competition and Detroix the robotic competition.</p>
