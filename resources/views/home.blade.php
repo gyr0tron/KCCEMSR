@@ -33,7 +33,7 @@
 					</h1>
 					{{-- <p class="lead text-center" id="welcome">Our energy introduces us before we start speaking. We are engineers.</p> --}}
 					<p class="text-center">An ISO 9001:2015 Certified Institute</p>
-					<p class="text-center">Setu Suvidha Kendra Cum FC Center for Engineering and other Admission 2019-20</p>
+					{{-- <p class="text-center">Setu Suvidha Kendra Cum FC Center for Engineering and other Admission 2019-20</p> --}}
 				</div>
 			</div>
 		</div>
@@ -399,7 +399,7 @@
 </footer>
 <!-- footer end -->
 <div id="intro-model" class="modal fade" role="dialog">
-	<div class="modal-dialog" style="width: 70vw;">
+	<div class="modal-dialog" style="width: 65vw;">
 
 		<!-- Modal content-->
 		<div class="modal-content">
@@ -415,9 +415,7 @@
 </div>
 @endsection
 @section('post')
-<script type="text/javascript">
-	$(window).on('load',function(){
-		$('#intro-model').modal('show');
-	});
+	<script type="text/javascript">
+	$('#intro-model').modal('show');
 </script>
 @endsection
