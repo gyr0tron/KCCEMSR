@@ -7,19 +7,19 @@
 @endphp
 @endsection
 @section('content')
-<!-- banner start -->
-<!-- ================ -->
-{{-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSdBHQ2nKSML8JIjM0tm-B09o924mQy7ryD-QhgCKRGvgLBD4A/viewform?usp=send_form" id="notification"><i class="fa fa-bell">
+	<!-- banner start -->
+	<!-- ================ -->
+	{{-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSdBHQ2nKSML8JIjM0tm-B09o924mQy7ryD-QhgCKRGvgLBD4A/viewform?usp=send_form" id="notification"><i class="fa fa-bell">
 	<p class="bubble speech" id="bell_info" style="color:black">Click here to apply for mock test of JEE/MHCET 2019
-	</p>
+</p>
 </i></a> --}}
 
 {{-- <div id="splashscreen">
-	<button type="button" class="close enter_site" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	<img id="splashimg" src="{{url("images/splash_banner.jpg")}}" />
+<button type="button" class="close enter_site" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<img id="splashimg" src="{{url("images/splash_banner.jpg")}}" />
 </div> --}}
 <div id="banner" class="banner">
-<!-- button -->
+	<!-- button -->
 	<div class="banner-image"></div>
 	<div class="arrow bounce" id="arw" onclick="location.href='/#welcome';" style="cursor: pointer; z-index: 1;"></div>
 	<div class="banner-caption">
@@ -125,103 +125,103 @@
 								@foreach (App\Story::where('type','0')->orderBy('created_at', 'DESC')->get() as $story)
 									<div>
 										<p>✔ {{$story->title}}
-									</div>
-								@endforeach
-							</div>
-						</div>
-						<div class="space"></div>
-					</div>
-					<div class="col-md-6">
-						<h2 class="title text-center">Upcoming Events</h2>
-						<ul class="events" style="padding-left: 0px;">
-							@foreach (App\Story::where('type','1')->orderBy('created_at', 'DESC')->get() as $story)
-								@php
-								$date = Carbon\Carbon::createFromFormat('Y-m-d', $story->date);
-								@endphp
-								<li>
-									<div class="date">
-										<span class="month" style="font-weight: 500;">{{$date->format('M')}}</span>
-										<span class="day" style="font-weight: 500;">{{$date->format('d')}}</span>
-									</div>
-									<p>{{$story->title}}</p>
-									{{-- <p><i class="fa fa-clock-o" style="margin-right:2%"></i>{{$story->from.' to '.$story->to}}</p> --}}
-									<p>
-										<a href="{{$story->url}}" target="_blank">More details</a>
-									</p>
-								</li>
-							@endforeach
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- section end -->
-
-<!-- section start -->
-<!-- ================ -->
-<div class="section">
-	<div class="container">
-		<h1 class="text-center title" id="portfolio">Events</h1>
-		<div class="separator"></div>
-		<br>
-		<div class="row object-non-visible" data-animation-effect="fadeIn">
-			<div class="col-md-12">
-				@php
-				$types = App\Committee::getAll();
-				function is_in_type($name, $types) {
-					foreach ($types as $type) {
-						if($name == $type->url)
-						return true;
-					}
-					return false;
-				}
-				@endphp
-
-				<!-- portfolio items start -->
-				<div class="row">
-					<div class="target-container container" style="overflow:hidden;">
-					@foreach (App\Event::orderBy('date','desc')->get() as $event)
-						@php
-						if(!is_in_type($event->department, $types) && $event->department != "all") continue;
-						@endphp
-						<div class="col-sm-6 col-md-3 isotope-item {{$event->department}}">
-							<div class="image-box">
-								<div class="overlay-container">
-									{{-- 750 x 500 --}}
-									<img src="{{url("images/eclipse.gif")}}" alt="" data-echo="{{$event->getFeaturedImage()}}" style="height: 240px;margin: 0 auto;" height="500">
-									<a class="overlay" href="{{route('event', $event->url)}}">
-										<i class="fa fa-search-plus"></i>
-										<span>{{App\Department::getName($event->department)}}</span>
-									</a>
+										</div>
+									@endforeach
 								</div>
-								<a class="btn btn-default btn-block" href="{{route('event', $event->url)}}">
-									<p style="overflow: hidden; margin: 0px; white-space: normal;" class="ellipsis_3_line">
-										{{$event->name}}
-									</p>
-								</a>
 							</div>
+							<div class="space"></div>
 						</div>
-					@endforeach
+						<div class="col-md-6">
+							<h2 class="title text-center">Upcoming Events</h2>
+							<ul class="events" style="padding-left: 0px;">
+								@foreach (App\Story::where('type','1')->orderBy('created_at', 'DESC')->get() as $story)
+									@php
+									$date = Carbon\Carbon::createFromFormat('Y-m-d', $story->date);
+									@endphp
+									<li>
+										<div class="date">
+											<span class="month" style="font-weight: 500;">{{$date->format('M')}}</span>
+											<span class="day" style="font-weight: 500;">{{$date->format('d')}}</span>
+										</div>
+										<p>{{$story->title}}</p>
+										{{-- <p><i class="fa fa-clock-o" style="margin-right:2%"></i>{{$story->from.' to '.$story->to}}</p> --}}
+										<p>
+											<a href="{{$story->url}}" target="_blank">More details</a>
+										</p>
+									</li>
+								@endforeach
+							</ul>
+						</div>
 					</div>
 				</div>
-				<!-- portfolio items end -->
 			</div>
 		</div>
 	</div>
-</div>
-<!-- section end -->
+	<!-- section end -->
 
-
-		<!-- section start -->
-		<!-- ================ -->
-		{{--  <div class="default-bg space blue">
+	<!-- section start -->
+	<!-- ================ -->
+	<div class="section">
 		<div class="container">
-		<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-		<h1 class="text-center"> Lorem ipsum</h1>
+			<h1 class="text-center title" id="portfolio">Events</h1>
+			<div class="separator"></div>
+			<br>
+			<div class="row object-non-visible" data-animation-effect="fadeIn">
+				<div class="col-md-12">
+					@php
+					$types = App\Committee::getAll();
+					function is_in_type($name, $types) {
+						foreach ($types as $type) {
+							if($name == $type->url)
+							return true;
+						}
+						return false;
+					}
+					@endphp
+
+					<!-- portfolio items start -->
+					<div class="row">
+						<div class="target-container container" style="overflow:hidden;">
+							@foreach (App\Event::orderBy('date','desc')->get() as $event)
+								@php
+								if(!is_in_type($event->department, $types) && $event->department != "all") continue;
+								@endphp
+								<div class="col-sm-6 col-md-3 isotope-item {{$event->department}}">
+									<div class="image-box">
+										<div class="overlay-container">
+											{{-- 750 x 500 --}}
+											<img src="{{url("images/eclipse.gif")}}" alt="" data-echo="{{$event->getFeaturedImage()}}" style="height: 240px;margin: 0 auto;" height="500">
+											<a class="overlay" href="{{route('event', $event->url)}}">
+												<i class="fa fa-search-plus"></i>
+												<span>{{App\Department::getName($event->department)}}</span>
+											</a>
+										</div>
+										<a class="btn btn-default btn-block" href="{{route('event', $event->url)}}">
+											<p style="overflow: hidden; margin: 0px; white-space: normal;" class="ellipsis_3_line">
+												{{$event->name}}
+											</p>
+										</a>
+									</div>
+								</div>
+							@endforeach
+						</div>
+					</div>
+					<!-- portfolio items end -->
+				</div>
+			</div>
+		</div>
 	</div>
+	<!-- section end -->
+
+
+	<!-- section start -->
+	<!-- ================ -->
+	{{--  <div class="default-bg space blue">
+	<div class="container">
+	<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+	<h1 class="text-center"> Lorem ipsum</h1>
+</div>
 </div>
 </div>
 </div>  --}}
@@ -335,7 +335,7 @@
 						<ul class="list-icons">
 							<li><i class="fa fa-map-marker pr-10"></i><a href="https://goo.gl/maps/9kgemW2tEwn" class="a-no-decrn">{{setting('contact-address')}}</a></li>
 							<li><i class="fa fa-envelope-o pr-10"></i>
-							&nbsp;<a href="mailto:{{setting('contact-email')}}" style="text-decoration: none;">{{setting('contact-email')}}</a>
+								&nbsp;<a href="mailto:{{setting('contact-email')}}" style="text-decoration: none;">{{setting('contact-email')}}</a>
 							</li>
 							<li><i class="fa fa-phone pr-10"></i>&nbsp;{{setting('contact-phone')}}</li>
 							<li><i class="fa fa-whatsapp pr-10"></i>&nbsp;9594477844</li>
@@ -398,7 +398,26 @@
 
 </footer>
 <!-- footer end -->
+<div id="intro-model" class="modal fade" role="dialog">
+	<div class="modal-dialog" style="width: 70vw;">
 
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-body" style="padding: 5px">
+				<img src="{{url('images/KC_BANNER_AD.jpg')}}"/>
+			</div>
+			<div class="modal-footer text-center">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Proceed to website</button>
+			</div>
+		</div>
+
+	</div>
+</div>
 @endsection
 @section('post')
+<script type="text/javascript">
+	$(window).on('load',function(){
+		$('#intro-model').modal('show');
+	});
+</script>
 @endsection
