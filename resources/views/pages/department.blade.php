@@ -17,7 +17,7 @@
 						<div class="col-md-12">
 							<img src="{{$dep->getUrl()}}" style="margin: 0 auto;width: 80%;" alt="">
 						</div>
-						<div class="col-md-12">
+						<div class="col-md-12" style="margin-top: 3%;">
 							<div class="lead text-center" style="text-align: justify;text-justify: auto;">{!!$dep->description!!}</div>
 						</div>
 					</div>
