@@ -51,7 +51,7 @@
 				</div>
 				<div class="col-md-6">
 					<h2 class="title text-center">Upcoming Events</h2>
-					<ul class="events" style="padding-left: 0px;">
+					<ul class="events" style="padding-left: 0px;max-height: 500px;overflow-y: scroll;">
 						@foreach (App\TpoAnnouncement::orderBy('created_at', 'DESC')->get() as $story)
 							@php
 							$date = Carbon\Carbon::createFromFormat('Y-m-d', $story->date);
