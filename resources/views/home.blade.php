@@ -398,24 +398,6 @@
 
 </footer>
 <!-- footer end -->
-<div id="intro-model" class="modal fade" role="dialog">
-	<div class="modal-dialog" style="width: 65vw;">
-
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-body" style="padding: 5px">
-				<img src="{{url('images/KC_BANNER_AD.jpg')}}"/>
-			</div>
-			<div class="modal-footer text-center">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Proceed to website</button>
-			</div>
-		</div>
-
-	</div>
-</div>
 @endsection
 @section('post')
-	<script type="text/javascript">
-	$('#intro-model').modal('show');
-</script>
 @endsection
