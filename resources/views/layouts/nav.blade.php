@@ -58,7 +58,36 @@
 		</div>
 	@endif
 
+	<div class="navbar-container-listholder" style="background-color: rgba(0, 0, 0, 0.5);">
+		<!-- header-right start -->
+		<!-- ================ -->
+		<div class="container clearfix">
 
+			<!-- main-navigation start -->
+			<!-- ================ -->
+			<div class="main-navigation animated">
+				<!-- navbar start -->
+				<!-- ================ -->
+				<nav class="navbar navbar-default" role="navigation" style="min-height: 40px !important;">
+					<div class="container-fluid">
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="/">Home</a></li>
+								<li><a href="/#contact">Contact Us</a></li>
+								<li><a href="{{route('kcinmedia')}}">KC in Media</a></li>
+								<li><a href="{{route('careeratkc')}}">Careers</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			<!-- navbar end -->
+			</div>
+		<!-- main-navigation end -->
+
+	</div>
+	<!-- header-right end -->
+	</div>
 	<div class="clg-name container">
 		<div class="header-left clearfix">
 
@@ -105,8 +134,8 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="/" style="padding-left: 0px;">Home</a>
-								</li>
+								{{-- <li class="{{$menu_item=='home'?'active':''}} sub-menu-parent"><a href="/" style="padding-left: 0px;">Home</a>
+								</li> --}}
 								<li class="{{$menu_item=='about'?'active':''}} sub-menu-parent"><a href="#">About</a>
 									<ul class="sub-menu">
 										<li><a href="{{route('about')}}">College Info</a></li>
@@ -120,7 +149,7 @@
 										{{-- <li><a href="{{route('about')}}">Board of Governance</a></li> --}}
 										<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
 										<li><a href="{{route('committees')}}">Committees</a></li>
-										<li><a href="{{route('careeratkc')}}">Career At KC</a></li>
+										{{-- <li><a href="{{route('careeratkc')}}">Career At KC</a></li> --}}
 									</ul>
 								</li>
 								<li class="{{$menu_item=='academics'?'active':''}} sub-menu-parent"><a href="#">Academics</a>
@@ -178,9 +207,9 @@
 									<li><a href="https://www.youtube.com/watch?v=fWECyi8vmL8&list=PLZSzAtoBtkwXHjZ4LJdCDSrYdOhLQSWzf" target="_blank">Video Lectures</a></li>
 								</ul>
 							</li>
-							<li class="{{$menu_item=='kcinmedia'?'active':''}} sub-menu-parent"><a href="{{route('kcinmedia')}}">KC in Media</a>
-							</li>
-							<li class="{{$menu_item=='statutory-affiliation'?'active':''}} sub-menu-parent"><a href="#">Statutory Affiliations</a>
+							{{-- <li class="{{$menu_item=='kcinmedia'?'active':''}} sub-menu-parent"><a href="{{route('kcinmedia')}}">KC in Media</a>
+							</li> --}}
+							{{-- <li class="{{$menu_item=='statutory-affiliation'?'active':''}} sub-menu-parent"><a href="#">Statutory Affiliations</a>
 								<ul class="sub-menu">
 									<li><a href="{{route('mandatory-disclosure', 'mandatory-disclosure')}}">Mandatory Disclosure</a></li>
 									<li><a href="{{route('mandatory-disclosure', 'aicte-affiliation')}}">AICTE Affiliation</a></li>
@@ -188,7 +217,7 @@
 									<li><a href="{{route('mandatory-disclosure', 'university-affiliation')}}">University affiliation</a></li>
 									<li><a href="{{route('grievance-redressal')}}">Grievance Redressal</a></li>
 								</ul>
-							</li>
+							</li> --}}
 							<li class="{{$menu_item=='naac'?'active':''}} sub-menu-parent"><a href="#">NAAC</a>
 								<ul class="sub-menu">
 									{{-- <li><a href="{{route('iqac', 'introduction')}}">IQAC</a></li> --}}
@@ -198,7 +227,9 @@
 								</ul>
 							</li>
 							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="{{route('iqac', 'introduction')}}">IQAC</a></li>
-							<li><a href="/#contact">Contact Us</a></li>
+							<li class="{{$menu_item=='placements'?'active':''}} sub-menu-parent"><a href="{{route('placements')}}">Placement</a></li>
+							<li class="{{$menu_item=='human-values-cell'?'active':''}} sub-menu-parent"><a href="/">Human Values Cell</a></li>
+							{{-- <li><a href="/#contact">Contact Us</a></li> --}}
 						</ul>
 					</div>
 
