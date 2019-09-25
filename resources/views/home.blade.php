@@ -229,7 +229,7 @@
 							</div>
 							<div class="column-for-comp">
 									<img src="{{url("images/Jaro.jpeg")}}">
-									<img src="{{url("images/lti.jpg")}}">
+									<img src="{{url("images/ltihr.jpg")}}">
 							</div>
 							<div class="column-for-comp">
 									<img src="{{url("images/neosoft.jpg")}}">
