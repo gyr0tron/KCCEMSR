@@ -213,6 +213,40 @@
 	</div>
 	<!-- section end -->
 
+	<!-- section start -->
+	<!-- ================ -->
+	<div class="section">
+		<div class="container">
+			<h1 class="text-center title" id="portfolio">Our students are placed with the following companies</h1>
+			<div class="separator"></div>
+			<br>
+			<div class="row object-non-visible" data-animation-effect="fadeIn">
+				<div class="col-md-12">
+						<div style="display: flex;flex-wrap: wrap;padding: 0 4px;">
+								<div class="column-for-comp">
+									<img src="{{url("images/eclinicalworks.png")}}">
+									<img src="{{url("images/infosys.jpg")}}">
+							</div>
+							<div class="column-for-comp">
+									<img src="{{url("images/Jaro.jpeg")}}">
+									<img src="{{url("images/ltihr.jpg")}}">
+							</div>
+							<div class="column-for-comp">
+									<img src="{{url("images/neosoft.jpg")}}">
+									<img src="{{url("images/sankey.jpg")}}">
+							</div>
+							<div class="column-for-comp">
+									<img src="{{url("images/simple-logic.png")}}">
+									<img src="{{url("images/tcs.png")}}">
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- section end -->
+
+
 
 	<!-- section start -->
 	<!-- ================ -->
