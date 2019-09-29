@@ -27,7 +27,7 @@
 						<tbody>
 							<tr>
 								<td>1</td>
-								<td>Dr. V.N. Pawar</td>
+								<td>Dr. Vilas Nitnaware</td>
 								<td>Chairman</td>
 							</tr>
 							<tr>
@@ -37,76 +37,87 @@
 							</tr>
 							<tr>
 								<td>3</td>
-								<td>Prof. Rajiv Iyer</td>
+								<td>Prof.Rajiv Iyer</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>4</td>
-								<td>Dr. Shelley Oberoi</td>
+								<td>Dr.Shelley Oberoi</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>5</td>
-								<td>Prof. Amarja Adgaonkar</td>
+								<td>Prof.Amarja Adgaonkar</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>6</td>
+								<td>Dr.Baban Rindhe</td>
+								<td>Member</td>
+							</tr>
+
+							<tr>
+								<td>7</td>
 								<td>Prof.Shirkesh Poojari</td>
 								<td>Member</td>
 							</tr>
 							<tr>
-								<td>7</td>
-								<td>Prof. Vaishali Bhalerao</td>
-								<td>Member</td>
-							</tr>
-							<tr>
 								<td>8</td>
-								<td>Prof. Ashwini Jayawant</td>
+								<td>Prof.Vaishali Bhalerao</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>9</td>
-								<td>Prof. Varsha Wangikar</td>
+								<td>Prof.Ashwini Jayawant</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>10</td>
-								<td>Prof. Sonal Balpande</td>
+								<td>Prof.Varsha Wangikar</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>11</td>
+								<td>A.P. Mandar Ganjapurkar</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>12</td>
+								<td>Prof               Sonal Balpande</td
+								<td>Mem                                                                                                                                                                                                                                                                                                                       xcvbkl4+ber</td>
+							</tr>
+							<tr>
+								<td>13</td>
 								<td>Mr. Mahesh Dalvi</td>
 								<td>Office Supritendent</td>
 							</tr>
 							<tr>
-								<td>12</td>
+								<td>14</td>
 								<td>Ms. Nayna Khandekar</td>
 								<td>Lab Assistant</td>
 							</tr>
 							<tr>
-								<td>13</td>
+								<td>15</td>
 								<td>Mr. Anil Mourya</td>
 								<td>Lab Assistant</td>
 							</tr>
 							<tr>
-								<td>14</td>
+								<td>16</td>
 								<td>Dr. Nitin Kale</td>
 								<td>External Advisor</td>
 							</tr>
 							<tr>
-								<td>15</td>
+								<td>17</td>
 								<td>Mrs. Rashmi Joshi</td>
 								<td>NGO</td>
 							</tr>
 							<tr>
-								<td>16</td>
+								<td>18</td>
 								<td>Mr. Amanjeet Malhotra</td>
 								<td>Student Representative </td>
 							</tr>
 							<tr>
-								<td>17</td>
+								<td>19</td>
 								<td>Mr. Harshad Bhoir</td>
 								<td>Alumni</td>
 							</tr>
@@ -116,7 +127,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
-					<h2>2. Anti Ragging Committee</h2>
+					<h2>2. Anti Ragging Commiittee & Anti Ragging Squad</h2>
 					<table class="table table-responsive table-hover table-striped">
 						<thead>
 							<tr>
@@ -128,37 +139,37 @@
 						<tbody>
 							<tr>
 								<td>1</td>
-								<td>Dr. V.N. Pawar</td>
+								<td>Dr. Vilas Nitnaware</td>
 								<td>Chairman</td>
 							</tr>
 							<tr>
 								<td>2</td>
 								<td>Prof. Reeta Shaktivel</td>
-								<td>Faculty representative</td>
+								<td>Member</td>
 							</tr>
 							<tr>
 								<td>3</td>
-								<td>Mr. Korde</td>
-								<td>Police representative</td>
+								<td>Ad. Rahul Ranpise</td>
+								<td>Member</td>
 							</tr>
 							<tr>
 								<td>4</td>
-								<td>Mr.Virendra Mishra</td>
-								<td>Media representative</td>
+								<td>A.P. Asmita Deshmukh</td>
+								<td>Member</td>
 							</tr>
 							<tr>
 								<td>5</td>
-								<td>Mr.Kasber Augustin</td>
-								<td>social administration representative</td>
+								<td>A.P. Sandesh Bhingardeve</td>
+								<td>Member</td>
 							</tr>
 							<tr>
 								<td>6</td>
-								<td>Prof. Asmita Deshmukh</td>
-								<td>Faculty representative</td>
+								<td>A.P. Hasib Shaikh</td>
+								<td>Member</td>
 							</tr>
 							<tr>
 								<td>7</td>
-								<td>Prof. Uday Kumar Singh</td>
+								<td>Mr. Mahesh Dalvi</td>
 								<td>Faculty representative</td>
 							</tr>
 							<tr>
@@ -179,7 +190,7 @@
 							<tr>
 								<td>11</td>
 								<td>Mr. Mahesh Dalvi</td>
-								<td>Non Teaching representative</td>
+								<td>Non Teaching Member</td>
 							</tr>
 							<tr>
 								<td>12</td>
@@ -195,10 +206,10 @@
 					</table>
 				</div>
 			</div>
-			{{-- 3. Library Advisory Committee --}}
+			{{-- 3. Library Committee --}}
 			<div class="row">
 				<div class="col-sm-12">
-					<h2>3. Library Advisory Committee</h2>
+					<h2>3. Library Committee</h2>
 					<table class="table table-responsive table-hover table-striped">
 						<thead>
 							<tr>
@@ -210,18 +221,18 @@
 						<tbody>
 							<tr>
 								<td>1</td>
-								<td>Dr. V.N. Pawar</td>
+								<td>Dr. Vilas Nitnaware</td>
 								<td>Chairman</td>
 							</tr>
 							<tr>
 								<td>2</td>
 								<td>Mr. Prashant Sutone</td>
-								<td>Librarian</td>
+								<td>Secretary</td>
 							</tr>
 							<tr>
 								<td>3</td>
-								<td>Ms. Supriya</td>
-								<td>Asst. Librarian</td>
+								<td>A.P. Pragati C</td>
+								<td>Member</td>
 							</tr>
 							<tr>
 								<td>4</td>
@@ -276,32 +287,32 @@
 								<td>Chairman</td>
 							</tr>
 							<tr>
-								<td>3</td>
+								<td>2</td>
 								<td>Prof. Hasib Shaikh</td>
 								<td>Member</td>
 							</tr>
 							<tr>
-								<td>4</td>
-								<td>Mr. Kamal Duseja</td>
-								<td>General Secretary</td>
+								<td>3</td>
+								<td>A.P. Pragati C.</td>
+								<td>Member</td>
 							</tr>
 							<tr>
-								<td>5</td>
+								<td>4</td>
 								<td>Mr. Harsh Kanzariya</td>
 								<td>Joint Secretary</td>
 							</tr>
 							<tr>
-								<td>6</td>
+								<td>5</td>
 								<td>Mr. Amanjeet Singh Malhotra</td>
 								<td>Cultural Secretary</td>
 							</tr>
 							<tr>
-								<td>7</td>
+								<td>6</td>
 								<td>Student Representative</td>
 								<td>Technical Secretary</td>
 							</tr>
 							<tr>
-								<td>8</td>
+								<td>7</td>
 								<td>Mr. Jaison Thomas</td>
 								<td>Sports Secretary</td>
 							</tr>
@@ -324,47 +335,73 @@
 						<tbody>
 							<tr>
 								<td>1</td>
-								<td>Dr. N.S. Poonawala</td>
-								<td>Dean</td>
+								<td>Dr. Vilas Nitnaware</td>
+								<td>Chairman</td>
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Dr. Shelley Oberoi</td>
+								<td>Dr. N.S. Poonawala</td>
+								<td>Dean</td>
+							</tr>
+
+							<tr>
+								<td>3</td>
+								<td>Dr. Baban Rindhe</td>
 								<td>Coordinator</td>
 							</tr>
 							<tr>
-								<td>3</td>
+								<td>4</td>
+								<td>Dr. Shelley Oberoi</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>5</td>
 								<td>Dr. Arundhati Chakrabarti</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>4</td>
-								<td>Dr. Baban Rindhe</td>
-								<td>Member</td>
-							</tr>
-							<tr>
-								<td>5</td>
-								<td>Prof. Rajiv Iyer</td>
+								<td>A.P. Rajiv Iyer</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>6</td>
-								<td>Prof. Aarti Bakshi</td>
+								<td>A.P. Mandar Ganjapurkar</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>7</td>
-								<td>Prof. Pratap Nair</td>
+								<td>Prof. Aarti Bakshi</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>8</td>
-								<td>Prof. Devika Roy</td>
+								<td>A.P. Amarja Adgaonkar</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>9</td>
-								<td>Prof. Prasannati Kulkarni</td>
+								<td>A.P. Aarti Bakshi</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>A.P. Pratap Nair</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>11</td>
+								<td>A.P. Shubhangi Verulkar</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>12</td>
+								<td>A.P. Prasannati Kulkarni</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>13</td>
+								<td>A.P. Hasib Shaikh</td>
 								<td>Member</td>
 							</tr>
 						</tbody>
@@ -391,26 +428,31 @@
 							</tr>
 							<tr>
 								<td>2</td>
+								<td>Dr.N.S. Poonalwala</td>
+								<td>Ombudsman</td>
+							</tr>
+							<tr>
+								<td>3</td>
 								<td>Prof. Pallavi Chopde</td>
 								<td>Member</td>
 							</tr>
 							<tr>
-								<td>3</td>
+								<td>4</td>
 								<td>Prof. Varsha Wangikar</td>
 								<td>Member</td>
 							</tr>
 							<tr>
-								<td>4</td>
+								<td>5</td>
 								<td>Prof. Shrikesh Poojari</td>
 								<td>Member</td>
 							</tr>
 							<tr>
-								<td>5</td>
+								<td>6</td>
 								<td>Mr. Mahesh Dalvi</td>
 								<td>Member</td>
 							</tr>
 							<tr>
-								<td>6</td>
+								<td>7</td>
 								<td>Ms. Pramila B.</td>
 								<td>Member</td>
 							</tr>
@@ -448,7 +490,7 @@
 							</tr>
 							<tr>
 								<td>4</td>
-								<td>Prof. Vaishali Bhalerao</td>
+								<td>Prof. Uday Prajapati</td>
 								<td>Member</td>
 							</tr>
 							<tr>
@@ -493,21 +535,6 @@
 								<td>Prof. Yogesh Karunakar</td>
 								<td>Coordinator</td>
 							</tr>
-							<tr>
-								<td>2</td>
-								<td>Prof. Devika Roy</td>
-								<td>Member</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>Prof. Kaushiki Upadhyaya</td>
-								<td>Member</td>
-							</tr>
-							<tr>
-								<td>4</td>
-								<td>Prof. Pratap Nair</td>
-								<td>Member</td>
-							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -528,26 +555,32 @@
 							<tr>
 								<td>1</td>
 								<td>Dr. Ravi Prakash</td>
-								<td>T & P Incharge</td>
+								<td>T & P Officer</td>
 							</tr>
 							<tr>
 								<td>2</td>
 								<td>Prof. Pratap Nair</td>
-								<td>Member</td>
+								<td>TPC</td>
 							</tr>
 							<tr>
 								<td>3</td>
 								<td>Prof. Archana Gupte</td>
-								<td>Member</td>
+								<td>TPC</td>
 							</tr>
 							<tr>
 								<td>4</td>
 								<td>Prof. Yamini Patil</td>
-								<td>Member</td>
+								<td>TPC</td>
 							</tr>
 							<tr>
 								<td>5</td>
-								<td>Prof. Shwan Langford</td>
+								<td>Prof. Sheena Unmesh</td>
+								<td>Member</td>
+							</tr>
+
+							<tr>
+								<td>6</td>
+								<td>A.P. Shwan L.</td>
 								<td>Member</td>
 							</tr>
 						</tbody>
@@ -710,10 +743,10 @@
 					</table>
 				</div>
 			</div>
-			{{-- 13. Website --}}
+			{{-- 13. Website Handling Committee --}}
 			<div class="row">
 				<div class="col-sm-12">
-					<h2>13. Website</h2>
+					<h2>13. Website Handling Committee</h2>
 					<table class="table table-responsive table-hover table-striped">
 						<thead>
 							<tr>
@@ -725,22 +758,17 @@
 						<tbody>
 							<tr>
 								<td>1</td>
-								<td>Prof. Mandar Ganjapurkar</td>
+								<td>Prof. Amuthavalli Yadav</td>
 								<td>Coordinator</td>
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Prof. Kaushiki Upadhyaya</td>
+								<td>Prof. Christina Bage</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>3</td>
-								<td>Prof. Yamini Patil</td>
-								<td>Member</td>
-							</tr>
-							<tr>
-								<td>4</td>
-								<td>Prof. Amuthavalli Yadav</td>
+								<td>Ms. Nayna Khandekar </td>
 								<td>Member</td>
 							</tr>
 						</tbody>
@@ -767,7 +795,7 @@
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Dr Hansraj Guhilot</td>
+								<td>Dr.Vilas Nitnaware</td>
 								<td>Principal</td>
 							</tr>
 							<tr>
@@ -803,7 +831,7 @@
 							<tr>
 								<td>9</td>
 								<td>Mr. Mahesh Dalvi</td>
-								<td>Office Supritendent</td>
+								<td>Office Superintendent</td>
 							</tr>
 							<tr>
 								<td>10</td>
@@ -839,7 +867,7 @@
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Prof. Vaishali Bhalerao</td>
+								<td>Prof. Bhuma Devi</td>
 								<td>Member</td>
 							</tr>
 							<tr>
@@ -886,12 +914,12 @@
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Prof. Manjusha Shelke</td>
+								<td>Prof. Sheena Unmesh</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>3</td>
-								<td>Prof. Nilima Patil</td>
+								<td>Prof. Manjusha Shelke</td>
 								<td>Member</td>
 							</tr>
 							<tr>
@@ -901,12 +929,12 @@
 							</tr>
 							<tr>
 								<td>5</td>
-								<td>Prof. Shrikesh Poojari</td>
+								<td>Prof. Shawn Langford</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>6</td>
-								<td>Prof. Sheena Unmesh</td>
+								<td>Prof. Manjusha Shelke</td>
 								<td>Member</td>
 							</tr>
 						</tbody>
@@ -960,12 +988,17 @@
 						<tbody>
 							<tr>
 								<td>1</td>
-								<td>Prof. Sandesh Bhingardeve</td>
+								<td>Prof.Uday Prajapati</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Prof. Uday Kumar Singh</td>
+								<td>Prof. Rupinder Kaur</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Prof. Hasib Shaikh</td>
 								<td>Member</td>
 							</tr>
 						</tbody>
@@ -992,11 +1025,11 @@
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Prof. Devika Roy</td>
+								<td>Prof.Geetanjali Kale</td>
 								<td>Program Officer</td>
 							</tr>
 							<tr>
-								<td>4</td>
+								<td>3</td>
 								<td>Prof. Ajay Mishra</td>
 								<td>Program Officer</td>
 							</tr>
@@ -1019,22 +1052,22 @@
 						<tbody>
 							<tr>
 								<td>1</td>
-								<td>Prof. Sandesh Bhingardeve</td>
+								<td>Prof. Neha Khare</td>
 								<td>Coordinator</td>
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Prof. Tejal Patil</td>
+								<td>Prof. Sandesh Bhingardeve</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>3</td>
-								<td>Prof. Zubeda Khan</td>
+								<td>Prof. Sushma Kore</td>
 								<td>Member</td>
 							</tr>
 							<tr>
 								<td>4</td>
-								<td>Prof. Neha Khare</td>
+								<td>Prof. Zubeda Khan</td>
 								<td>Member</td>
 							</tr>
 						</tbody>
@@ -1066,7 +1099,7 @@
 							</tr>
 							<tr>
 								<td>3</td>
-								<td>Prof. Amuthavalli Yadav</td>
+								<td>Prof. Manasi Choche</td>
 								<td>Member</td>
 							</tr>
 							<tr>
@@ -1079,14 +1112,19 @@
 								<td>Prof. Anupama Chaurasia</td>
 								<td>Member</td>
 							</tr>
+							<tr>
+								<td>6</td>
+								<td>Prof. Shawn Langford</td>
+								<td>Member</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
-			{{-- 22. Rotract --}}
+			{{-- 22. Rotaract --}}
 			<div class="row">
 				<div class="col-sm-12">
-					<h2>22. Rotract</h2>
+					<h2>22. Rotaract</h2>
 					<table class="table table-responsive table-hover table-striped">
 						<thead>
 							<tr>
@@ -1135,14 +1173,10 @@
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Prof. Aditi Kamble</td>
+								<td>Prof.Sana Haji</td>
 								<td>Member</td>
 							</tr>
-							<tr>
-								<td>3</td>
-								<td>Mr. Nilesh Kadam</td>
-								<td>Lab Assistant</td>
-							</tr>
+
 						</tbody>
 					</table>
 				</div>
