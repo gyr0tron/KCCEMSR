@@ -29,7 +29,7 @@
                 <tr>
                   <th width="20%"></th>
                   <th width="20%">Name</th>
-                  <th width="30%">Description</th>
+                  <th width="30%">Department</th>
                   <th width="20%">Actions</th>
                 </tr>
               </thead>
@@ -38,7 +38,7 @@
                   <tr>
                     <td><a href="{{$test->getFeaturedImage()}}" data-fancybox><img src="{{$test->getFeaturedImage()}}" alt="" width="74"></a></td>
                     <td>{{$test->name}}</td>
-                    <td>{{$test->description}}</td>
+                    <td>{{$test->department}}</td>
                     <td>
                       <a class="btn btn-sm btn-danger btn-table" onclick="dashboard.removeYesNo('Are you sure you want to remove {{$test->name}} ?', '/api/admin/infrastructure/remove', {{$test->id}})"><i class="fa fa-trash-o"></i></a>
                     </td>
@@ -49,7 +49,7 @@
                 <tr>
                   <th width="20%"></th>
                   <th width="20%">Name</th>
-                  <th width="30%">Description</th>
+                  <th width="30%">Department</th>
                   <th width="20%">Actions</th>
                 </tr>
               </tfoot>

@@ -17,7 +17,8 @@ class CreateInfrastructuresTable extends Migration
       $table->increments('id');
       $table->string('name')->nullable();
       $table->longtext('description')->nullable();
-      $table->string('images')->nullable();
+      $table->longtext('images')->nullable();
+      $table->string("department")->default('ALL');
       $table->integer("created_by")->nullable();
       $table->integer("updated_by")->nullable();
       $table->timestamps();

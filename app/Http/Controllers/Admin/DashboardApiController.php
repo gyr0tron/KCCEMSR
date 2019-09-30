@@ -709,6 +709,7 @@ class DashboardApiController extends Controller
     $test = new Infrastructure();
     $test->name = $request->input("name");
     $test->description = $request->input("description");
+    $test->department = $request->input("department", "ALL");
     $test->created_by = Auth::user()->id;
     $test->updated_by = Auth::user()->id;
     $imagesID = [];

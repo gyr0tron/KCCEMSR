@@ -15,6 +15,18 @@
     </div>
   </div>
   <div class="form-group">
+    <label class="control-label col-sm-2" for="department">Department:</label>
+    <div class="col-sm-9">
+      <select name="department" id="department" class="form-control">
+        <option value="ALL">ALL</option>
+        @foreach (App\Department::all() as $department)
+          <option value="{{$department->url}}">{{$department->name}}</option>
+        @endforeach
+      </select>
+      <p class="help-block"></p>
+    </div>
+  </div>
+  <div class="form-group">
     <label class="control-label col-sm-2" for="images">Images:</label>
     <div class="col-sm-9">
       <div id="preview-images"></div>
