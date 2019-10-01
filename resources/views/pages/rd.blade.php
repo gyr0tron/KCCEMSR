@@ -63,26 +63,26 @@
 							<tbody>
 								<tr>
 									<td>1</td>
-									<td>Dr. V. N. Pawar</td>
+									<td>Dr. Vilas Nitnaware</td>
 									<td>Chairman</td>
 									<td>Principal, K.C College of Engineering and Management Studies and Research, Thane.</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Dr. Alhad Kuwdekar</td>
-									<td>External Advisory</td>
-									<td>CTO, My Life Guard Ltd, UK</td>
+									<td>Dr. N.S. Poonawala</td>
+									<td>Dean(IIPP)</td>
+									<td>Director, K.C College of Engineering and Management Studies and Research, Thane.</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td>Dr. N.S Poonawala</td>
-									<td>Internal Advisory</td>
-									<td>Dean (IIPP) and Director, K.C College of Engineering and Management Studies and Research, Thane.</td>
+									<td>Dr. Baban Rindhe</td>
+									<td>Coordinator</td>
+									<td>Professor, Electronics and Telecommunication Engineering</td>
 								</tr>
 								<tr>
 									<td>4</td>
 									<td>Dr. Shelley Oberoi</td>
-									<td>Coordinator</td>
+									<td>Member</td>
 									<td>HOD, Humanities and Applied Sciences</td>
 								</tr>
 								<tr>
@@ -93,27 +93,27 @@
 								</tr>
 								<tr>
 									<td>6</td>
-									<td>Ms. Aarti Bakshi</td>
+									<td>Mr.Rajiv Iyer</td>
 									<td>Member</td>
-									<td>Assistant Professor, Electronics and Telecommunication</td>
+									<td>Assistant Professor, Electronics and Telecommunication Engineering</td>
 								</tr>
 								<tr>
 									<td>7</td>
-									<td>Mr. Rajiv Iyer</td>
-									<td>Member	</td>
-									<td>Assistant Professor, Electronics and Telecommunication</td>
+									<td>Mr.Mandar Ganjapurkar</td>
+									<td>Member</td>
+									<td>Assistant Professor, Computer Engineering</td>
 								</tr>
 								<tr>
 									<td>8</td>
-									<td>Mr. Yogesh Karunakar</td>
+									<td>Ms.Amarja Adgaonkar</td>
 									<td>Member</td>
-									<td>Assistant Professor, Electronics Engineering</td>
+									<td>Assistant Professor, Information Technology</td>
 								</tr>
 								<tr>
 									<td>9</td>
-									<td>Ms. Prasannati Kulkarni</td>
+									<td>Ms.Aarti Bakshi</td>
 									<td>Member</td>
-									<td>Assistant Professor, Electronics Engineering</td>
+									<td>Assistant Professor, Electronics and Telecommunciation Engineering</td>
 								</tr>
 								<tr>
 									<td>10</td>
@@ -123,9 +123,21 @@
 								</tr>
 								<tr>
 									<td>11</td>
-									<td>Ms. Devika Roy</td>
+									<td>Ms.Shubhangi Verulkar</td>
 									<td>Member</td>
 									<td>Assistant Professor, Information Technology</td>
+								</tr>
+								<tr>
+									<td>12</td>
+									<td>Ms.Prasannati Kulkarni</td>
+									<td>Member</td>
+									<td>Assistant Professor,Electronics and Telecommunication Engineering</td>
+								</tr>
+								<tr>
+									<td>13</td>
+									<td>Mr.Hasib Shaikh</td>
+									<td>Member</td>
+									<td>Assistant Professor,Computer Engineering</td>
 								</tr>
 							</tbody>
 						</table>
