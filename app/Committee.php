@@ -90,6 +90,7 @@ class Committee extends Model
       (object)["name"=>"R&D", "url"=>"r-and-d"],
       (object)["name"=>"NSS", "url"=>"nss"],
       (object)["name"=>"TPO", "url"=>"tpo"],
+      (object)["name"=>"Human Values Education Cell", "url"=>"hvecell"],
     ]);
     return $committees;
   }
