@@ -1,14 +1,14 @@
 @extends('layouts.master')
 @section('pre')
 	@php
-	$title = "Curriculum Plan";
+	$title = "Academic Calendar";
 	$menu_item = 'academics';
 @endphp
 @endsection
 @section('content')
 	<div id="curriculum-plan" class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 		<div id="members" class="container main-content-sub tab-pane fade in">
-			<h1 class="text-center title"><span>Curriculum Plan</span></h1>
+			<h1 class="text-center title"><span>Academic Calendar</span></h1>
 			<table class="table">
 				<thead>
 					<tr>

@@ -43,7 +43,7 @@
 						<li class="has-dropdown">
 							<a href="#">Academics</a>
 							<ul>
-								<li><a href="{{route('curriculum-plan')}}">Curriculum Plan</a></li>
+								<li><a href="{{route('academic-calendar')}}">Academic Calendar</a></li>
 								<li><a href="{{route('department-list')}}">Departments</a></li>
 								<li><a href="http://www.learningatkc.com/moodle/login/index.php" target="_blank">KC-Moodle</a></li>
 								<li><a href="{{route('publications')}}">Publications</a></li>

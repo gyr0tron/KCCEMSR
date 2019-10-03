@@ -31,7 +31,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/department/{name}','DepartmentController@get')->name('department');
 
 
-  Route::get('/academics/curriculum-plan','AcademicsController@getCurriculumplan')->name('curriculum-plan');
+  Route::get('/academics/academic-calendar','AcademicsController@getCurriculumplan')->name('academic-calendar');
   Route::get('/academics/staff-notices','AcademicsController@getStaffNotices')->name('staff-notices');
   Route::get('/academics/staff-notices/{id}','AcademicsController@getStaffNoticebyId')->name('staff-notices-id');
   Route::get('/academics/exam/{action}','AcademicsController@getExam')->name('exam');
