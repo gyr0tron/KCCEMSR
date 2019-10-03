@@ -76,6 +76,8 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/career-at-kc/apply/{id}','DepartmentController@getCareerAtKcApply')->name('careeratkc-apply');
 
   Route::get('/alumni/login','AlumniController@getLogin')->name('alumni-login');
+
+  Route::get('/human-values-education-cell','HumanValuesEducationCellController@index')->name('hvecell');
 });
 
 
