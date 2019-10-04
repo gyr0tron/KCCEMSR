@@ -72,11 +72,7 @@
   </div>
   <div class="ribbon-right">
   </div>
-  @if (Auth::user())
-    <img class="ribbon-bow" src="/images/ribbon.svg" onClick="handleRibbonClick()"/>
-  @else
-    <img class="ribbon-bow" src="/images/ribbon.svg"/>
-  @endif
+  <img class="ribbon-bow" src="/images/ribbon.svg" onClick="handleRibbonClick()"/>
 </div>
 @section('post')
   <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
@@ -99,7 +95,10 @@
   });
 
   function handleRibbonClick() {
-    axios.post('/human-value-education-cell/trigger');
+    let data = {
+      token: "{{request()->get('apiToken')}}"
+    }
+    axios.post('/human-value-education-cell/trigger', data);
   }
   </script>
 @endsection

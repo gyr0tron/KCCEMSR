@@ -10,16 +10,15 @@ use Auth;
 
 class HumanValuesEducationCellController extends Controller
 {
-  public function __construct() {
-    $this->middleware('auth', ['only' => 'trigger']);
-  }
   public function index()
   {
     return view('pages.hvecell.index');
   }
-  public function trigger()
+  public function trigger(Request $request)
   {
-    event(new RibbonCutEvent('open'));
+    if($request->input('token')==env('TOKEN_KEY')) {
+      event(new RibbonCutEvent('open'));
+    }
     return "Ok";
   }
 }
