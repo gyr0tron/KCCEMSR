@@ -77,7 +77,8 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
 
   Route::get('/alumni/login','AlumniController@getLogin')->name('alumni-login');
 
-  Route::get('/human-values-education-cell','HumanValuesEducationCellController@index')->name('hvecell');
+  Route::get('/human-value-education-cell','HumanValuesEducationCellController@index')->name('hvecell');
+  Route::post('/human-value-education-cell/trigger','HumanValuesEducationCellController@trigger');
 });
 
 

@@ -229,6 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Setting' => Akaunting\Setting\Facade::class,
+        'Pusher' => Pusher\Pusher::class,
     ],
 
 ];

@@ -228,7 +228,7 @@
 							</li>
 							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="{{route('iqac', 'introduction')}}">IQAC</a></li>
 							<li class="{{$menu_item=='placements'?'active':''}} sub-menu-parent"><a href="{{route('placements')}}">Placement</a></li>
-							<li class="{{$menu_item=='hvecell'?'active':''}} sub-menu-parent"><a href="{{route('hvecell')}}">Human Values Education Cell</a></li>
+							<li class="{{$menu_item=='hvecell'?'active':''}} sub-menu-parent"><a href="{{route('hvecell')}}">Human Value Education Cell</a></li>
 							{{-- <li><a href="/#contact">Contact Us</a></li> --}}
 						</ul>
 					</div>
