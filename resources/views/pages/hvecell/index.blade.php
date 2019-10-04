@@ -7,7 +7,7 @@
 @endsection
 @section('content')
 	<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
-		@include('layouts.ribbon')
+		{{-- @include('layouts.ribbon') --}}
 		<div class="container main-content-sub tab-pane fade in">
 			<h1 class="text-center title"><span>Human Value Education Cell</span></h1>
 			<div class="text-center">
