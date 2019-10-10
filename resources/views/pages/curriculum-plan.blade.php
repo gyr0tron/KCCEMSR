@@ -9,7 +9,7 @@
 	<div id="curriculum-plan" class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 		<div id="members" class="container main-content-sub tab-pane fade in">
 			<h1 class="text-center title"><span>Academic Calendar</span></h1>
-			<table class="table">
+			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>Sr. No</th>
