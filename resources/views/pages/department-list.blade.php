@@ -55,27 +55,12 @@
 							<i class="fa fa-desktop"></i>
 						</div>
 					</div>
-					<div class="space"></div>	
+					<div class="space"></div>
 				</div>
 
 				<div class="space visible-xs"></div>
 
 				<div class="col-md-6 col-sm-6 col-xs-12">
-					{{-- elec --}}
-					<div class="media">
-						<div class="media-left">
-							<i class="fa fa-microchip"></i>
-						</div>
-						<div class="media-body">
-							<h2 class="media-heading" style="padding-bottom:5px;">{{App\Department::where('url','electronics')->first()->name}}</h2>
-							<p class="dept-pg-p" style="height: 7.5em;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;margin-bottom: 0px;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags(App\Department::where('url','electronics')->first()->description)}}</p>
-							<a class="btn btn-default" style="cursor:pointer;" href="{{route('department', 'electronics')}}">Read more</a>
-							<div class="space"></div>
-							<img src="" alt="" data-echo="{{App\Department::where('url','electronics')->first()->getUrl()}}" style="height: 340px;width: 505px;">
-						</div>
-					</div>
-					<div class="space"></div>
-
 				{{-- HM AS --}}
 					<div class="media">
 						<div class="media-left">
