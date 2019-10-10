@@ -12,8 +12,8 @@
 				<ul class="nav nav-tabs nav-stacked">
 					<li class="{{$action=='aim'?'active':''}}"><a href="{{route('rd', 'aim')}}">Aim</a></li>
 					<li class="{{$action=='objectives'?'active':''}}"><a href="{{route('rd', 'objectives')}}">Objectives</a></li>
-					<li class="{{$action=='activities'?'active':''}}"><a href="{{route('rd', 'activities')}}">Activities</a></li>
 					<li class="{{$action=='members'?'active':''}}"><a href="{{route('rd', 'members')}}">Members</a></li>
+					<li class="{{$action=='activities'?'active':''}}"><a href="{{route('rd', 'activities')}}">Activities</a></li>
 					<li class="{{$action=='coe'?'active':''}}"><a href="{{route('rd', 'coe')}}">Code Of Ethics</a></li>
 					<li class="{{$action=='events'?'active':''}}"><a href="{{route('rd', 'events')}}">Events</a></li>
 				</ul>
