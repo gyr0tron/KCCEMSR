@@ -98,6 +98,32 @@
 				<placement-stats></placement-stats>
 			</div>
 			<div class="space"></div>
+			{{-- Team  --}}
+			<div class="row" id="team">
+				<div class="col-md-12">
+					<h1 class="title text-center"><span>The Team</span></h1>
+				</div>
+				<div class="col-sm-12">
+					<center>
+						<img src="/images/dr.ravi.prakash.jpg" width="256"/>
+						<div class="team-title">
+							<h5>Dr Ravi Prakash</h5>
+							<span>Head, TPC</span>
+							<p>kctpo@kccemsr.edu.in</p>
+							<p>9768809537 / 022-25327100/6088</p>
+						</div>
+					</center>
+				</div>
+				<div class="col-sm-12">
+					<ul>
+						<li>Prof Pratap Nair (Computer Engineering)</li>
+						<li>Prof Archana Gupte (EXTC)</li>
+						<li>Prof Yamini PAtil (IT)</li>
+					</ul>
+				</div>
+			</div>
+			<div class="space"></div>
+			{{-- Student placement --}}
 			<div class="row" id="student-placement">
 				<div class="col-md-12">
 					<h1 class="title text-center"><span>Student Placement</span></h1>
@@ -113,8 +139,8 @@
 						</thead>
 						<tbody>
 							@php
-								$placements = App\Placement::all();
-								$no=0;
+							$placements = App\Placement::all();
+							$no=0;
 							@endphp
 							@foreach ($placements as $placement)
 								<tr>
