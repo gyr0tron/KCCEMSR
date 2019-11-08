@@ -118,7 +118,7 @@
 					<ul>
 						<li>Prof Pratap Nair (Computer Engineering)</li>
 						<li>Prof Archana Gupte (EXTC)</li>
-						<li>Prof Yamini PAtil (IT)</li>
+						<li>Prof Yaminee Patil (IT)</li>
 					</ul>
 				</div>
 			</div>
