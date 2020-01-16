@@ -77,7 +77,7 @@
 							</div>
 							<div class="col-md-9 col-sm-9 col-xs-12">
 								<div class="row">
-									<h1 class="title resp-text-head title-marg-resp align-marg" id="chairperson"><strong><span>Chairperson Message</span></strong></h1>
+									<h1 class="title resp-text-head title-marg-resp align-marg" id="chairperson"><strong><span>Chairperson's Message</span></strong></h1>
 									<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. Harssh Khanna</span></h2>
 									<blockquote class="blockquote2">
 										<p class="text-left align-marg" style="text-align: justify;">To embark on a journey of success, one needs the tool of preparedness, foresight and strategy. These lead to the path of growth and excellence. It is imperative to combine these three forces in knowledge assimilation, where every day and every semester acts like a pivot tilting the pan balance of life in favour of professional excellence. In K.C College of Engineering and Management Studies and Research, learning is beyond the limits of conventional thoughts as students and faculty push the boundaries of human understanding.</p>
@@ -92,7 +92,7 @@
 							<a class="anchor_guide" id="md-msg"></a>
 							<div class="col-md-9 col-sm-9 col-xs-12">
 								<div class="row">
-									<h1 class="title resp-text-head title-marg-resp align-marg"><strong><span>MD Message</span></strong></h1>
+									<h1 class="title resp-text-head title-marg-resp align-marg"><strong><span>MD's Message</span></strong></h1>
 									<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. Sai Kiran Khanna</span></h2>
 									<blockquote class="blockquote2">
 										<p class="text-left align-marg" style="text-align: justify;">My dear students,</p>
@@ -161,7 +161,7 @@
 	</div>
 	<div class="col-md-9 col-sm-9 col-xs-12">
 		<div class="row">
-			<h1 class="title resp-text-head title-marg-resp align-marg"><strong><span>Principal Message</span></strong></h1>
+			<h1 class="title resp-text-head title-marg-resp align-marg"><strong><span>Principal's Message</span></strong></h1>
 			<h2 class="title text-left resp-text-head title-marg-resp align-marg"><span>Dr. Vilas Nitnaware PhD</span></h2>
 			<blockquote class="blockquote2">
 				<p class="text-left align-marg" style="text-align: justify;">All are welcome  to the website which will introduce you to a place of transformation, a place where caterpillars are converted into beautiful butterflies, the youth is transformed into  multi faceted engineers. We at K C College nurture technical proficiency and expertise of students in wide range of functional, organizational and cultural environments . K C College works to serve the society by developing “ classroom ready” study materials for student fraternity in pursuit of making “ industry ready “ engineers and managers.</p>

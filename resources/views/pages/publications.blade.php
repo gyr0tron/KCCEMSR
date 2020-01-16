@@ -115,8 +115,8 @@
 						<div role="tabpanel" class="tab-pane" id="cntctUs">
 							<h3><span>Editor in Chief</span></h3>
 							<ul style="list-style: none; padding-left: 0px;">
-								<li>Dr. V. N. Pawar, Principal, K. C College of Engineering and Management Studies and Research, Thane.</li>
-								<li>&nbsp;</li>
+								{{-- <li>Dr. V. N. Pawar, Principal, K. C College of Engineering and Management Studies and Research, Thane.</li>
+								<li>&nbsp;</li> --}}
 								<li><h3><span>Publisher's Name<span></h3></li>
 								<li>K. C College of Engineering and Management Studies and Research, Thane.</li>
 								{{-- <li>&nbsp;</li> --}}
