@@ -12,7 +12,7 @@
 export default {
   data: function() {
     return {
-      years: ["2012-13", "2013-14","2014-15","2015-16","2016-17"],
+      years: ["2012-13", "2013-14","2014-15","2015-16","2016-17","2017-18","2018-19","2019-20"],
       departments: ['computer', 'electronics','extc','it'],
       yearsData:[
         [25,15,9,11],
@@ -20,6 +20,9 @@ export default {
         [40,16,4,5],
         [34,15,10,27],
         [26,10,29,27],
+        [26,0,20,18],
+        [32,6,9,18],
+        [38,0,5,28],
       ],
       chart: '',
     }
@@ -48,7 +51,7 @@ export default {
           labels: this.years,
           datasets: [{
             label: 'Total placed students',
-            data: [60, 45, 65, 86, 92],
+            data: [60, 45, 65, 86, 92, 67, 65, 76],
             backgroundColor: 'rgba(85, 172, 238, 0.4)',
             borderColor: 'rbga(255, 99, 132, 0.4)',
             borderWidth: 1

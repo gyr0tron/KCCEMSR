@@ -74,129 +74,125 @@
 			<div class="space"></div>
 			<div class="row">
 				<div class="col-md-12">
-					<h1 id="functions" class="title text-center"><span>Functions &amp; Responsibilities </span></h1>
-				</div>
-				<div class="col-md-12">
-					<p>Training and Placement Office takes care of the following functions and responsibilities:</p>
-					<div class="col-md-12">
-						<ul class="list-unstyled">
-							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">To have close liaison with Industry to facilitate Training &amp; Placement activities.</p></li>
-							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Perform Training Need Analysis of students after analysing industry needs and skill gaps</p></li>
-							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Organize pre-recruitment, technical and soft skill trainings for the second and third year students</p></li>
-							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Plan recruitment drives for final year students</p></li>
-							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Conduct pre-recruitment trainings by the placed students</p></li>
-							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Organize internships and industrial visits for students</p></li>
-							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Collect feedback from companies visiting institute for recruitment</p></li>
-							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Co-ordinate periodical meetings with students and HOD’s, Principal for feedback on Training &amp; Placement activities</p></li>
-							<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Prepare schedule, budget, policies for Training &amp; Placement Office.</p></li>
+					<div class="card">
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#vision_mission" aria-controls="home" role="tab" data-toggle="tab">Vision & Mission</a></li>
+							<li role="presentation"><a href="#statistics" aria-controls="profile" role="tab" data-toggle="tab">Placement Statistics</a></li>
+							<li role="presentation"><a href="#functions_responsibilities" aria-controls="messages" role="tab" data-toggle="tab">Functions &amp; Responsibilities</a></li>
+							<li role="presentation"><a href="#team" aria-controls="settings" role="tab" data-toggle="tab">Team</a></li>
+							<li role="presentation"><a href="#student_placement" aria-controls="profile" role="tab" data-toggle="tab">Student Placement</a></li>
+							<li role="presentation"><a href="#student_testimonials" aria-controls="profile" role="tab" data-toggle="tab">Student Testimonials</a></li>
 						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="space"></div>
-			<div class="row" id="statistics">
-				<placement-stats></placement-stats>
-			</div>
-			<div class="space"></div>
-			{{-- Team  --}}
-			<div class="row" id="team">
-				<div class="col-md-12">
-					<h1 class="title text-center"><span>The Team</span></h1>
-				</div>
-				<div class="col-sm-12">
-					<center>
-						<img src="/images/dr.ravi.prakash.jpg" width="256"/>
-						<div class="team-title">
-							<h5>Dr Ravi Prakash</h5>
-							<span>Head, TPC</span>
-							<p>kctpo@kccemsr.edu.in</p>
-							<p>9768809537 / 022-25327100/6088</p>
-						</div>
-					</center>
-				</div>
-				<div class="col-sm-12">
-					<ul>
-						<li>Prof Pratap Nair (Computer Engineering)</li>
-						<li>Prof Archana Gupte (EXTC)</li>
-						<li>Prof Yaminee Patil (IT)</li>
-					</ul>
-				</div>
-			</div>
-			<div class="space"></div>
-			{{-- Student placement --}}
-			<div class="row" id="student-placement">
-				<div class="col-md-12">
-					<h1 class="title text-center"><span>Student Placement</span></h1>
-				</div>
-				<div class="col-md-12">
-					<table class="table table-hover">
-						<thead>
-							<th>Sr.No.</th>
-							<th>Company</th>
-							<th>Avg Package</th>
-							<th>No Of Students</th>
-							<th>Year</th>
-						</thead>
-						<tbody>
-							@php
-							$placements = App\Placement::all();
-							$no=0;
-							@endphp
-							@foreach ($placements as $placement)
-								<tr>
-									<td>{{++$no}}</td>
-									<td>{{$placement->company}}</td>
-									<td>{{$placement->package}}</td>
-									<td>{{$placement->students}}</td>
-									<td>{{$placement->academic_year}}</td>
-								</tr>
-							@endforeach
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<h1 id="reviews" class="title text-center"><span>Reviews</span></h1>
-					<div class="col-md-12" data-wow-delay="0.2s">
-						<div class="carousel slide" data-ride="carousel" id="quote-carousel">
-							<!-- Carousel Slides / Quotes -->
-							<div class="carousel-inner text-center">
-								@php
-								$no=0;
-								@endphp
-								@foreach (App\Testimonial::all() as $test)
-									<div class="item {{$no++==0?'active':''}}">
-										<blockquote>
-											<div class="row">
-												<div class="col-sm-8 col-sm-offset-2">
-													<p>{{strip_tags($test->comment)}}</p>
-													<small>{{$test->name}}</small>
-												</div>
-											</div>
-										</blockquote>
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="vision_mission">
+								<h2 style="margin-top: 0px; margin-bottom: 5px;">Vision</h2>
+								<p style="text-align: justify;">To be an organization with potential for excellence in engineering and management for the advancement of society and human kind.</p>
+								<div class="space"></div>
+								<h2 style="margin-top: 0px; margin-bottom: 5px;">Mission</h2>
+								<ul class="list-unstyled">
+									<li>To excel in academics, practical engineering, management and to commence research endeavors.</li>
+									<li>To prepare students for future opportunities.</li>
+									<li>To nurture students with social and ethical responsibilities.</li>
+								</ul>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="statistics">
+								<div class="row" id="statistics">
+									<placement-stats></placement-stats>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="functions_responsibilities">
+								<p>Training and Placement Office takes care of the following functions and responsibilities:</p>
+								<ul class="list-unstyled">
+									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">To have close liaison with Industry to facilitate Training &amp; Placement activities.</p></li>
+									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Perform Training Need Analysis of students after analysing industry needs and skill gaps</p></li>
+									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Organize pre-recruitment, technical and soft skill trainings for the second and third year students</p></li>
+									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Plan recruitment drives for final year students</p></li>
+									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Conduct pre-recruitment trainings by the placed students</p></li>
+									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Organize internships and industrial visits for students</p></li>
+									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Collect feedback from companies visiting institute for recruitment</p></li>
+									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Co-ordinate periodical meetings with students and HOD’s, Principal for feedback on Training &amp; Placement activities</p></li>
+									<li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img"></i> <p class="list-text-ovrflw-fix">Prepare schedule, budget, policies for Training &amp; Placement Office.</p></li>
+								</ul>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="team">
+								<center>
+									<img src="/images/dr.ravi.prakash.jpg" width="256"/>
+									<div class="team-title">
+										<h5>Dr Ravi Prakash</h5>
+										<span>Head, TPC</span>
+										<p>kctpo@kccemsr.edu.in</p>
+										<p>9768809537 / 022-25327100/6088</p>
 									</div>
-								@endforeach
+								</center>
+								<ul>
+									<li>Prof Pratap Nair (Computer Engineering)</li>
+									<li>Prof Archana Gupte (EXTC)</li>
+									<li>Prof Manasi Choche (IT)</li>
+								</ul>
 							</div>
-							<!-- Bottom Carousel Indicators -->
-							<ol class="carousel-indicators">
-								@php
-								$no=0;
-								@endphp
-								@foreach (App\Testimonial::all() as $test)
-									<li data-target="#quote-carousel" data-slide-to="{{$no}}" class="{{$no++==0?'active':''}}"><img class="img-responsive" src="{{$test->getUrl()}}" alt="">
-									@endforeach
-								</ol>
-								<!-- Carousel Buttons Next/Prev -->
-								<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-								<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+							<div role="tabpanel" class="tab-pane" id="student_placement">
+								<table class="table table-hover">
+									<thead>
+										<th>Sr.No.</th>
+										<th>Company</th>
+										<th>Avg Package</th>
+										<th>No Of Students</th>
+										<th>Year</th>
+									</thead>
+									<tbody>
+										@php
+										$placements = App\Placement::all();
+										$no=0;
+										@endphp
+										@foreach ($placements as $placement)
+											<tr>
+												<td>{{++$no}}</td>
+												<td>{{$placement->company}}</td>
+												<td>{{$placement->package}}</td>
+												<td>{{$placement->students}}</td>
+												<td>{{$placement->academic_year}}</td>
+											</tr>
+										@endforeach
+									</tbody>
+								</table>
 							</div>
-							<div class="space"></div>
-							<div class="space"></div>
+							<div role="tabpanel" class="tab-pane" id="student_testimonials">
+								<div class="carousel slide" data-ride="carousel" id="quote-carousel">
+									<!-- Carousel Slides / Quotes -->
+									<div class="carousel-inner text-center">
+										@php
+										$no=0;
+										@endphp
+										@foreach (App\Testimonial::all() as $test)
+											<div class="item {{$no++==0?'active':''}}">
+												<blockquote>
+													<div class="row">
+														<div class="col-sm-8 col-sm-offset-2">
+															<p>{{strip_tags($test->comment)}}</p>
+															<small>{{$test->name}}</small>
+														</div>
+													</div>
+												</blockquote>
+											</div>
+										@endforeach
+									</div>
+									<!-- Bottom Carousel Indicators -->
+									<ol class="carousel-indicators">
+										@php
+										$no=0;
+										@endphp
+										@foreach (App\Testimonial::all() as $test)
+											<li data-target="#quote-carousel" data-slide-to="{{$no}}" class="{{$no++==0?'active':''}}"><img class="img-responsive" src="{{$test->getUrl()}}" alt="">
+											@endforeach
+										</ol>
+										<!-- Carousel Buttons Next/Prev -->
+										<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+										<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+									</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 			<div class="space"></div>
 
 		</div>
