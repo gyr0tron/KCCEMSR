@@ -119,7 +119,7 @@
 										<img src="{{$event->getFeaturedImage()}}" alt="">
 									</div>
 									<div class="media-body">
-										<h3 class="media-heading">{{$event->name}}</h3>
+										<h3 class="media-heading"><b>{{$event->name}}</b></h3>
 										<blockquote>
 											<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($event->description)}}</p>
 											<a class="" style="cursor:pointer;" href="{{route('event', $event->url)}}">read more</a>
@@ -193,11 +193,7 @@
 										<img src="{{$achivement->getUrl()}}" alt="">
 									</div>
 									<div class="media-body">
-										<h3 class="media-heading">{{$achivement->name}}</h3>
-										<blockquote>
-											<p style="height: 4.5em;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;">{{strip_tags($achivement->description)}}</p>
-											<a class="" style="cursor:pointer;" href="{{route('achievement',$achivement->id)}}">Read more</a>
-										</blockquote>
+										<h3 class="media-heading"><b>{{$achivement->name}}</b></h3>
 									</div>
 								</div>
 							</div>
