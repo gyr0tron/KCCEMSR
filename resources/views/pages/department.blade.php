@@ -32,11 +32,11 @@
 				<ul class="nav nav-tabs" role="tablist">
 					<li role="presentation" class="active"><a href="#visMis" aria-controls="profile" role="tab" data-toggle="tab">Vision and Mission</a></li>
 					<li role="presentation"><a href="#hod" aria-controls="settings" role="tab" data-toggle="tab">HOD's Message</a></li>
+					<li role="presentation"><a href="#staff" aria-controls="profile" role="tab" data-toggle="tab">Staff</a></li>
+					<li role="presentation"><a href="#labs" aria-controls="profile" role="tab" data-toggle="tab">Laboratories</a></li>
 					<li role="presentation"><a href="#dptAct" aria-controls="home" role="tab" data-toggle="tab">Departmental Activities</a></li>
 					<li role="presentation"><a href="#stuAch" aria-controls="profile" role="tab" data-toggle="tab">Student's Achievement</a></li>
 					<li role="presentation"><a href="#alumni" aria-controls="messages" role="tab" data-toggle="tab">Successful Alumni</a></li>
-					<li role="presentation"><a href="#staff" aria-controls="profile" role="tab" data-toggle="tab">List of Staff</a></li>
-					<li role="presentation"><a href="#labs" aria-controls="profile" role="tab" data-toggle="tab">Laboratories</a></li>
 				</ul>
 
 				<!-- Tab panes -->
