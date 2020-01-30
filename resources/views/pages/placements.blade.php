@@ -76,7 +76,7 @@
 				<div class="col-md-12">
 					<div class="card">
 						<ul class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#vision_mission" aria-controls="home" role="tab" data-toggle="tab">Vision & Mission</a></li>
+							<li role="presentation" class="active"><a href="#tpo-message" aria-controls="home" role="tab" data-toggle="tab">TPO's Message</a></li>
 							<li role="presentation"><a href="#statistics" aria-controls="profile" role="tab" data-toggle="tab">Placement Statistics</a></li>
 							<li role="presentation"><a href="#functions_responsibilities" aria-controls="messages" role="tab" data-toggle="tab">Functions &amp; Responsibilities</a></li>
 							<li role="presentation"><a href="#team" aria-controls="settings" role="tab" data-toggle="tab">Team</a></li>
@@ -84,16 +84,13 @@
 							<li role="presentation"><a href="#student_testimonials" aria-controls="profile" role="tab" data-toggle="tab">Student Testimonials</a></li>
 						</ul>
 						<div class="tab-content">
-							<div role="tabpanel" class="tab-pane active" id="vision_mission">
-								<h2 style="margin-top: 0px; margin-bottom: 5px;">Vision</h2>
-								<p style="text-align: justify;">To be an organization with potential for excellence in engineering and management for the advancement of society and human kind.</p>
+							<div role="tabpanel" class="tab-pane active" id="tpo-message">
+								<h2 style="margin-top: 0px; margin-bottom: 5px;">TPO's Message</h2>
+								<blockquote class="blockquote">
+									<p style="text-align: justify;">This era of globalization has opened enormous opportunities for young and talented budding engineers in all the walks of life. As a result, the expectations from the young engineers are that they should mould themselves seamlessly in to the global corporate culture. To achieve this, Team Training & Placement cell is functioning for employability enhancement and achieve the career aspirations of our students.</p>
+									<footer class="blockquote-footer">Dr Ravi Prakash, Head, TPC.</footer>
+								</blockquote>
 								<div class="space"></div>
-								<h2 style="margin-top: 0px; margin-bottom: 5px;">Mission</h2>
-								<ul class="list-unstyled">
-									<li>To excel in academics, practical engineering, management and to commence research endeavors.</li>
-									<li>To prepare students for future opportunities.</li>
-									<li>To nurture students with social and ethical responsibilities.</li>
-								</ul>
 							</div>
 							<div role="tabpanel" class="tab-pane" id="statistics">
 								<div class="row" id="statistics">
@@ -135,7 +132,7 @@
 									<thead>
 										<th>Sr.No.</th>
 										<th>Company</th>
-										<th>Avg Package</th>
+										{{-- <th>Avg Package</th> --}}
 										<th>No Of Students</th>
 										<th>Year</th>
 									</thead>
@@ -148,7 +145,7 @@
 											<tr>
 												<td>{{++$no}}</td>
 												<td>{{$placement->company}}</td>
-												<td>{{$placement->package}}</td>
+												{{-- <td>{{$placement->package}}</td> --}}
 												<td>{{$placement->students}}</td>
 												<td>{{$placement->academic_year}}</td>
 											</tr>
@@ -189,16 +186,16 @@
 										<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
 										<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
 									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			<div class="space"></div>
+					<div class="space"></div>
 
-		</div>
-	</div>
-@endsection
-@section('post')
-	<script type="text/javascript" src="js/chart.min.js"></script>
-	<script type="text/javascript" src="{{ asset('js/vue.js') }}"></script>
-@endsection
+				</div>
+			</div>
+		@endsection
+		@section('post')
+			<script type="text/javascript" src="js/chart.min.js"></script>
+			<script type="text/javascript" src="{{ asset('js/vue.js') }}"></script>
+		@endsection
