@@ -25,6 +25,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/select2.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/select2-bootstrap.css') }}">
+  @yield('css')
 </head>
 <body class="no-trans">
   <div class="scrollToTop"><i class="icon-up-open-big"></i></div>

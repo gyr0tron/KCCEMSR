@@ -10,11 +10,7 @@ class AcademicsController extends Controller
 {
   public function getCurriculumplan()
   {
-    $title = 'Academic Calender';
-    $url = url('/academic_calender.pdf');
-    $menu_item = "academics";
-    return view('pages.pdfview', compact("title", "url","menu_item"));
-    // return view('pages.curriculum-plan');
+    return view('pages.curriculum-plan');
   }
 
   public function getStaffNotices()
