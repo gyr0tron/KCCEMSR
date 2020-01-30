@@ -75,9 +75,8 @@
 								<li>Dr. Sai Kiran Khanna, Managing Director,Excelssior Education Society.</li>
 								<li>Mrs. Pushpa Narang, Director, Excelssior Education Society.</li>
 								<li>Er. Satish Wadhwa, Secretary, Excelssior Education Society.</li>
-								<li>Dr. H.S Cheema,CEO,Excelssior Education Society.</li>
 								<li>Dr. N.S.Poonawala,  Dean &amp; Director, KCCEMSR.</li>
-								<li>Dr. Puja Rai,Institutional Director,KCCEMSR.</li>
+								<li>Dr. Puja Rai, Chief Operating Officer, KCCEMSR.</li>
 							</ul>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="advcmtee">
@@ -97,10 +96,9 @@
 							<ul style="list-style: none; padding-left: 0px;">
 								<li>Dr. Vilas Nitnaware (PRINCIPAL,KCCEMSR).</br><small>principal@kccemsr.edu.in</small></li>
 								<li>Dr. Arundhati Chakrabarti (VICE PRINCIPAL,KCCEMSR).</br><small>arundhati.chkrabarti@kccemsr.edu.in</small></li>
-								<li>Prof. Mandar Ganjapurkar (HOD COMPUTER,KCCEMSR).</br><small>asmita.deshmukh@kccemsr.edu.in</small></li>
+								<li>Prof. Mandar Ganjapurkar (HOD COMPUTER,KCCEMSR).</br><small>mandar.ganjapurkar@kccemsr.edu.in</small></li>
 								<li>Prof. Amarja Adgaonkar (HOD IT,KCCEMSR).</br><small>amarja.adgaonkar@kccemsr.edu.in</small></li>
 								<li>Dr. Baban Rindhe (HOD EXTC,KCCEMSR).</br><small>baban.rindhe@kccemsr.edu.in</small></li>
-								<li>Prof. Rajiv Iyer (HOD ELECTRONICS,KCCEMSR).</br><small>poornima.mahesh@kccemsr.edu.in</small></li>
 								<li>Prof. Sana Haji Naik (Computer Department).</br><small>sana.naik@kccemsr.edu.in</small></li>
 							</ul>
 						</div>
