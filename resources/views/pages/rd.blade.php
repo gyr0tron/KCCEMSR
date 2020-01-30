@@ -39,7 +39,7 @@
 							<li>To organize national and international conferences.</li>
 							<li>To organize workshops on research methodology and patents.</li>
 							<li>To arrange symposia and guest lectures to enhance awareness in various research area.</li>
-							{{-- <li>To encourage every faculty member for research proposal writing and to participate in R&amp;D activities leading to Doctoral degree.</li> --}}
+							<li>To encourage for research proposal writing and to participate in R&amp;D activities leading to Doctoral degree.</li>
 							<li>To facilitate collaboration and interaction of researchers working on disciplinary and interdisciplinary research.</li>
 						</ol>
 					</div>

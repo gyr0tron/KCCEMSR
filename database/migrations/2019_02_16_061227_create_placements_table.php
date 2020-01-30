@@ -18,7 +18,7 @@ class CreatePlacementsTable extends Migration
       $table->string('company')->nullable();
       $table->double('package')->nullable();
       $table->integer('students')->nullable();
-      $table->integer('academic_year')->nullable();
+      $table->string('academic_year')->nullable();
     });
   }
   public function down()
