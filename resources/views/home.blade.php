@@ -119,7 +119,7 @@
 				<div class="space"></div>
 				<div class="row">
 					<div class="col-md-6">
-						<h2 class="title text-center">KC@Glance</h2>
+						<h2 class="title text-center"><span>KC@Glance</span></h2>
 						<div class="b" id="b2">
 							<div class="b-con" style="height: 2600px; margin-top: 0px;">
 								@foreach (App\Story::where('type','0')->orderBy('created_at', 'DESC')->get() as $story)
@@ -132,7 +132,7 @@
 							<div class="space"></div>
 						</div>
 						<div class="col-md-6">
-							<h2 class="title text-center">Upcoming Events</h2>
+							<h2 class="title text-center"><span>Upcoming Events</span></h2>
 							<ul class="events" style="padding-left: 0px;max-height: 500px;overflow-y: scroll;">
 								@foreach (App\Story::where('type','1')->orderBy('created_at', 'DESC')->get() as $story)
 									@php
@@ -163,7 +163,7 @@
 	<!-- ================ -->
 	<div class="section">
 		<div class="container">
-			<h1 class="text-center title" id="portfolio">Events</h1>
+			<h1 class="text-center title" id="portfolio"><span>Events</span></h1>
 			<div class="separator"></div>
 			<br>
 			<div class="row object-non-visible" data-animation-effect="fadeIn">
@@ -217,7 +217,7 @@
 	<!-- ================ -->
 	<div class="section">
 		<div class="container">
-			<h1 class="text-center title" id="portfolio">Our students are placed with the following companies</h1>
+			<h1 class="text-center title" id="portfolio"><span>Our students are placed with the following companies</span></h1>
 			<div class="separator"></div>
 			<br>
 			<div class="row object-non-visible" data-animation-effect="fadeIn">
