@@ -95,6 +95,8 @@
 						<div role="tabpanel" class="tab-pane" id="editTeam">
 							<h3><span>Editorial Team</span></h3>
 							<ul style="list-style: none; padding-left: 0px;">
+								<li>Dr. Vilas Nitnaware (PRINCIPAL,KCCEMSR).</br><small>principal@kccemsr.edu.in</small></li>
+								<li>Dr. Arundhati Chakrabarti (VICE PRINCIPAL,KCCEMSR).</br><small>arundhati.chkrabarti@kccemsr.edu.in</small></li>
 								<li>Prof. Mandar Ganjapurkar (HOD COMPUTER,KCCEMSR).</br><small>asmita.deshmukh@kccemsr.edu.in</small></li>
 								<li>Prof. Amarja Adgaonkar (HOD IT,KCCEMSR).</br><small>amarja.adgaonkar@kccemsr.edu.in</small></li>
 								<li>Dr. Baban Rindhe (HOD EXTC,KCCEMSR).</br><small>baban.rindhe@kccemsr.edu.in</small></li>
