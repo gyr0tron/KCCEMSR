@@ -49,6 +49,14 @@ class AboutController extends Controller
       $menu_item = "about";
       return view('pages.pdfview', compact("title", "url","menu_item"));
     }
+    public function getAQAR201819() {
+      $file = FileUpload::where('type', 'AQAR-2018-19')->first();
+      if(!$file) abort("404");
+      $title = $file->name;
+      $url = $file->getUrl();
+      $menu_item = "naac";
+      return view('pages.pdfview', compact("title", "url","menu_item"));
+    }
     public function getSSR() {
       return redirect('/public/naac/ssr.pdf');
     }

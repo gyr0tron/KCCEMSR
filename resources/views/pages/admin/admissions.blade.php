@@ -1,8 +1,8 @@
 @extends('layouts.master2')
 @section('pre')
   @php
-  $title = "Academics";
-  $menu_item = 'academics';
+  $title = "Admissions";
+  $menu_item = 'admissions';
 @endphp
 @endsection
 @section('styles')

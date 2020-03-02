@@ -224,6 +224,7 @@
 									<li><a href="{{route('naac-ssr')}}">SSR</a></li>
 									<li><a href="{{route('naac-sop')}}">SOP</a></li>
 									<li><a href="{{route('naac-feedback')}}">Feedback</a></li>
+									<li><a href="{{route('naac-AQAR-2018-19')}}">AQAR-2018-19</a></li>
 								</ul>
 							</li>
 							<li class="{{$menu_item=='iqac'?'active':''}} sub-menu-parent"><a href="{{route('iqac', 'introduction')}}">IQAC</a></li>
