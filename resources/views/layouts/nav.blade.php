@@ -77,6 +77,7 @@
 								<li><a href="/#contact">Contact Us</a></li>
 								<li><a href="{{route('kcinmedia')}}">KC in Media</a></li>
 								<li><a href="{{route('careeratkc')}}">Careers</a></li>
+								<li><a href="https://www.orionhack.com" style="text-shadow: 1px 1px 1.4px #48a9ed;">OrionHack</a></li>
 							</ul>
 						</div>
 					</div>
