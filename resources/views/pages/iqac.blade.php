@@ -52,7 +52,7 @@
 							</thead>
 							<tr>
 								<td>1</td>
-								<td>Dr. V. N. Pawar</td>
+								<td>Dr. Vilas Nitnaware</td>
 								<td>Chairman (Principal) </td>
 							</tr>
 							<tr>
@@ -63,7 +63,7 @@
 							<tr>
 								<td>3</td>
 								<td>Dr. Arundhati Chakrabarti</td>
-								<td>IQAC Coordinator (Faculty)</td>
+								<td>IQAC Coordinator (Vice Principal)</td>
 							</tr>
 							<tr>
 								<td>4</td>
@@ -122,7 +122,7 @@
 							</tr>
 							<tr>
 								<td>15</td>
-								<td>Mr. Amanjeet Malhotra</td>
+								<td>Mr. Harsh Kanjaria</td>
 								<td>Member (Student Representative)</td>
 							</tr>
 							<tr>
