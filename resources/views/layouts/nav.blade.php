@@ -161,6 +161,7 @@
 										<li><a href="{{route('publications')}}">Publications</a></li>
 										{{-- <li><a href="{{route('publications')}}">News Letter</a></li> --}}
 										<li><a href="{{route('rd', 'aim')}}">Research &amp; Development</a></li>
+										<li><a href="{{route('vac')}}">Value Added Cell</a></li>
 									</ul>
 								</li>
 								<li class="{{$menu_item=='library'?'active':''}} sub-menu-parent"><a href="#">Library</a>

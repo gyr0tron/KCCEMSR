@@ -83,4 +83,8 @@ class AcademicsController extends Controller
   {
     return view('pages.student-development');
   }
+  public function getValueAddedCell()
+  {
+    return view('pages.');
+  }
 }

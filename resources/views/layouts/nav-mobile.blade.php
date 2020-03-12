@@ -48,6 +48,7 @@
 								<li><a href="http://www.learningatkc.com/moodle/login/index.php" target="_blank">KC-Moodle</a></li>
 								<li><a href="{{route('publications')}}">Publications</a></li>
 								<li><a href="{{route('rd', 'aim')}}">Research &amp; Development</a></li>
+								<li><a href="{{route('vac')}}">Value Added Cell</a></li>
 							</ul>
 						</li>
 						<li class="has-dropdown">

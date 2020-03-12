@@ -41,6 +41,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/academics/publications','AcademicsController@getPublications')->name('publications');
   Route::get('/academics/newsletter','AcademicsController@getNewsletter')->name('newsletter');
   Route::get('/academics/research-and-Development/{action}','AcademicsController@getResearchAndDevelopment')->name('rd');
+  Route::get('/academics/value-added-cell','AcademicsController@getValueAddedCell')->name('vac');
   Route::get('/circulars','AcademicsController@getCirculars')->name('circulars');
   Route::get('/circulars/{id}','AcademicsController@getCircularsByID')->name('circulars-id');
   Route::get('/student-corner/student-development','AcademicsController@getStudentDevelopment')->name('student-development');

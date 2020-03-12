@@ -18,7 +18,8 @@
 							<li class="active"><a href="#" data-filter="*">All</a></li>
 							@foreach ($types as $type)
 								@php
-									$count = App\Event::where('department', $type->url)->count();
+								if($type->url == 'vac') continue;
+								$count = App\Event::where('department', $type->url)->count();
 								@endphp
 								@if ($count != 0)
 									<li><a href="#" data-filter=".{{$type->url}}">{{$type->name}}</a></li>
