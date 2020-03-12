@@ -60,6 +60,9 @@ class AboutController extends Controller
     public function getCourseOutcome() {
       return redirect('/public/naac/course-outcome.xlsx');
     }
+    public function getSSS() {
+      return redirect('/public/naac/sss.pdf');
+    }
     public function getSSR() {
       return redirect('/public/naac/ssr.pdf');
     }
