@@ -12,7 +12,7 @@
       <br>
       <div class="row object-non-visible" data-animation-effect="fadeIn">
         <div class="col-md-12">
-          @foreach (App\Event::where('type', 'vac')->orderBy('date','desc')->get() as $event)
+          @foreach (App\Event::where('url', 'vac')->orderBy('date','desc')->get() as $event)
             <div class="col-sm-6 col-md-3">
               <div class="image-box">
                 <div class="overlay-container">
