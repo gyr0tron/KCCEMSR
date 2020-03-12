@@ -58,12 +58,7 @@ class AboutController extends Controller
       return view('pages.pdfview', compact("title", "url","menu_item"));
     }
     public function getCourseOutcome() {
-      $file = FileUpload::where('type', 'naac-course-outcome')->first();
-      if(!$file) abort("404");
-      $title = $file->name;
-      $url = $file->getUrl();
-      $menu_item = "naac";
-      return view('pages.pdfview', compact("title", "url","menu_item"));
+      return redirect('/public/naac/course-outcome.pdf');
     }
     public function getSSR() {
       return redirect('/public/naac/ssr.pdf');
