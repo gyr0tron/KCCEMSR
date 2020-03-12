@@ -85,6 +85,6 @@ class AcademicsController extends Controller
   }
   public function getValueAddedCell()
   {
-    return view('pages.');
+    return view('pages.value-added-cell');
   }
 }
