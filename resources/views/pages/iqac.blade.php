@@ -184,7 +184,7 @@
 					<div id="meetings" class="{{$action=='meetings'?'tab-pane fade in active':'tab-pane fade in'}}">
 						<h3>Meetings</h3>
 						<ul>
-							@for ($i=1; $i < 10; $i++)
+							@for ($i=1; $i < 14+1; $i++)
 								<li><a target="_blank" href="{{route('iqac-meetings',$i)}}">Meeting {{$i}}</a></li>
 							@endfor
 						</ul>
