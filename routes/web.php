@@ -29,7 +29,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::get('/naac/AQAR-2018-19','AboutController@getAQAR201819')->name('naac-AQAR-2018-19');
   Route::get('/naac/course-outcome','AboutController@getCourseOutcome')->name('naac-course-outcome');
   Route::get('/naac/sss','AboutController@getSSS')->name('naac-sss');
-  Route::get('/naac/naac-institutional-distinctiveness','AboutController@getInstitutionalDistinctiveness')->name('naac-naac-institutional-distinctiveness');
+  Route::get('/naac/naac-institutional-distinctiveness','AboutController@getInstitutionalDistinctiveness')->name('naac-institutional-distinctiveness');
   Route::get('/naac/best-practices','AboutController@getBestPractices')->name('naac-best-practices');
 
   Route::get('/departments','DepartmentController@getList')->name('department-list');
