@@ -58,7 +58,7 @@ class AboutController extends Controller
       return view('pages.pdfview', compact("title", "url","menu_item"));
     }
     public function getCourseOutcome() {
-      return redirect('/public/naac/course-outcome.xlsx');
+      return redirect('/public/naac/course-outcome.pdf');
     }
     public function getSSS() {
       return redirect('/public/naac/sss.pdf');
