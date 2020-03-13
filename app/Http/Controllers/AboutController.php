@@ -63,6 +63,15 @@ class AboutController extends Controller
     public function getSSS() {
       return redirect('/public/naac/sss.pdf');
     }
+    public function getInstitutionalDistinctiveness() {
+      return redirect('/public/naac/sss.pdf');
+    }
+    public function getInstitutionalDistinctiveness() {
+      return redirect('/public/naac/institutional-distinctiveness.pdf');
+    }
+    public function getBestPractices() {
+      return redirect('/public/naac/best-practices.pdf');
+    }
     public function getSSR() {
       return redirect('/public/naac/ssr.pdf');
     }

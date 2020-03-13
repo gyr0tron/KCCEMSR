@@ -122,6 +122,8 @@
 								<li><a href="{{route('naac-AQAR-2018-19')}}">AQAR-2018-19</a></li>
 								<li><a href="{{route('naac-course-outcome')}}">Course Outcome</a></li>
 								<li><a href="{{route('naac-sss')}}">SSS</a></li>
+								<li><a href="{{route('naac-institutional-distinctiveness')}}">Institutional Distinctiveness</a></li>
+								<li><a href="{{route('naac-best-practices')}}">Best Practices</a></li>
 							</ul>
 						</li>
 						{{-- <li class="has-dropdown">
