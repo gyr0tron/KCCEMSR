@@ -41,4 +41,8 @@ class AdmissionsController extends Controller
   {
     return view('pages.admissions.student-application');
   }
+  public function mockcet2020()
+  {
+    return view('pages.admissions.mockcet2020');
+  }
 }
