@@ -44,7 +44,7 @@
       </div>
       <div class="space"></div>
       <div class="row">
-        <div class="scale-section default-bg" style="background-color: black;">
+        <div style="background-color: #f7f7f7; padding: 15px; border-radius: 5px;">
           <div class="container">
             <div class="col-md-12">
               <h3 class="text-center">Dear aspirant, Fowllowing are some useful courses you can do before you start your career in Engineering</h3>
@@ -99,18 +99,17 @@
           </form>
         </div>
         <div class="col-md-6">
-          <h2 class="title"><span>Youtube video</span></h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/u5uc69ZEwF4?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
       <div class="space"></div>
-      <div class="scale-section default-bg" style="background-color: black;">
-          <div class="container">
-            <div class="col-md-12">
-              <h3 class="text-center">Get more info about CET <a class="ribbon-link" href="">Govt. web link</a></h3>
-
-              <h3 class="text-center">Interested in test series? <a class="ribbon-link" href="">Click here!</a></h3>
-            </div>
+      <div style="background-color: #f7f7f7; padding: 15px; border-radius: 5px;">
+        <div class="container">
+          <div class="col-md-12">
+            <h3 class="text-center">Get more info about CET </br><a class="ribbon-link" href="http://cetcell.mahacet.org">Govt. web link</a></h3>
+            {{-- <h3 class="text-center">Interested in test series? <a class="ribbon-link" href="">Click here!</a></h3> --}}
           </div>
+        </div>
       </div>
     </div>
   </div>
