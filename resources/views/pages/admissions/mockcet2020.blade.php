@@ -84,13 +84,13 @@
             <div class="form-group">
               <div class="input-group" style="width:100%">
                 <label for="name">Name</label>
-                <input id="name" type="text" class="form-control" name="name" placeholder="Enter your name">
+                <input id="name" type="text" class="form-control" name="name" placeholder="Enter your name" required>
               </div>
             </div>
             <div class="form-group">
               <div class="input-group" style="width:100%">
                 <label for="email">Email</label>
-                <input id="email" type="email" class="form-control" name="email" placeholder="Enter your email">
+                <input id="email" type="email" class="form-control" name="email" placeholder="Enter your email" required>
               </div>
             </div>
             <div class="form-group">
@@ -107,11 +107,11 @@
           <div class="container">
             <div class="col-md-12">
               <h3 class="text-center">Get more info about CET <a class="ribbon-link" href="">Govt. web link</a></h3>
-              
+
               <h3 class="text-center">Interested in test series? <a class="ribbon-link" href="">Click here!</a></h3>
             </div>
           </div>
-      </div>    
+      </div>
     </div>
   </div>
 @endsection

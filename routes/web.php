@@ -57,6 +57,7 @@ Route::middleware([MaintenanceCheck::class])->group(function () {
   Route::post('/admissions/student-application','Auth\AdmissionsController@postApplication');
   Route::get('/admissions/student-application/print','Auth\AdmissionsController@printApplication')->name("admissions-application-print");
   Route::get('/admissions/mockcet2020','AdmissionsController@mockcet2020')->name("mockcet2020");
+  Route::post('/admissions/mockcet2020','AdmissionsController@postMockcet2020');
 
 
   Route::get('/admissions/{action}','AdmissionsController@get')->name('admissions');

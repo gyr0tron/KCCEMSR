@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Auth;
 use App\FileUpload;
+use App\Mail\MockcetMail;
+use Mail;
 
 class AdmissionsController extends Controller
 {
@@ -43,6 +45,17 @@ class AdmissionsController extends Controller
   }
   public function mockcet2020()
   {
+    return view('pages.admissions.mockcet2020');
+  }
+  public function postMockcet2020(Request $request)
+  {
+    $name = $request->input('name');
+    $to_email = $request->input('email');
+    Mail::send('mails.mockcet', ['name'=>$name], function($message) use($to_email)  {
+      $message->subject("MOCK CET 2020 Test");
+      if(strpos(env('MAIL_USERNAME'), "@"))$message->from(env('MAIL_USERNAME'), 'kccemsr.edu.in');
+      $message->to($to_email);
+    });
     return view('pages.admissions.mockcet2020');
   }
 }
