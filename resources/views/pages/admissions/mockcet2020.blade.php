@@ -44,6 +44,38 @@
       </div>
       <div class="space"></div>
       <div class="row">
+        <div class="scale-section default-bg" style="background-color: black;">
+          <div class="container">
+            <div class="col-md-12">
+              <h3 class="text-center">Dear aspirant, Fowllowing are some useful courses you can do before you start your career in Engineering</h3>
+              <ul class="list-unstyled">
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Swayam - <a class="ribbon-link" href="https://swayam.gov.in/">https://swayam.gov.in/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">NPTEL - <a class="ribbon-link" href="https://onlinecourses.nptel.ac.in/">https://onlinecourses.nptel.ac.in/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Mooc - <a class="ribbon-link" href="http://mooc.org/">http://mooc.org/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Edx - <a class="ribbon-link" href="https://www.edx.org/">https://www.edx.org/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Coursera- <a class="ribbon-link" href="https://www.coursera.org/">https://www.coursera.org/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Udacity - <a class="ribbon-link" href="https://in.udacity.com/">https://in.udacity.com/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Udemy - <a class="ribbon-link" href="https://www.udemy.com/">https://www.udemy.com/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Khanacademy - <a class="ribbon-link" href="https://www.khanacademy.org/">https://www.khanacademy.org/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Skillsahre - <a class="ribbon-link" href="https://www.skillshare.com/">https://www.skillshare.com/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Harvard University - <a class="ribbon-link" href="https://online-learning.harvard.edu/">https://online-learning.harvard.edu/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Ted - <a class="ribbon-link" href="https://ed.ted.com/">https://ed.ted.com/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Alison - <a class="ribbon-link" href="https://alison.com/">https://alison.com/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Futurelearn - <a class="ribbon-link" href="https://www.futurelearn.com/">https://www.futurelearn.com/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Web Development - <a class="ribbon-link" href="https://digitaldefynd.com/best-free-web-development-courses-tutorials-certification/">https://digitaldefynd.com/best-free-web-development-courses-tutorials-certification/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Digital Marketing - <a class="ribbon-link" href="https://digitaldefynd.com/best-free-digital-marketing-certifications/">https://digitaldefynd.com/best-free-digital-marketing-certifications/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">IOS app development - <a class="ribbon-link" href="https://digitaldefynd.com/best-ios-app-development-course-tutorial/">https://digitaldefynd.com/best-ios-app-development-course-tutorial/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Open Learn - <a class="ribbon-link" href="http://www.open.edu/openlearn/">http://www.open.edu/openlearn/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Tuts Plus - <a class="ribbon-link" href="https://tutsplus.com/">https://tutsplus.com/</a></p></li>
+                <li><i class="fa fa-caret-right pr-10 text-colored list-dept-page-uorder-img" style="margin-top: 3px;"></i> <p class="list-text-ovrflw-fix">Open Culture - <a class="ribbon-link" href="http://www.openculture.com">http://www.openculture.com</a></p></li>
+              </ul>
+            </div>
+            <h1 id="ribbon-title" class="title text-center"><span style="font-weight: 100;">Stay home, Stay safe!</span></h1>
+          </div>
+        </div>
+      </div>
+      <div class="space"></div>
+      <div class="row">
         <div class="col-md-6">
           <h2 class="title"><span>Mock CET 2020</span></h2>
           <h4>Enter name and email to get the link for Mock CET 2020</h4>
@@ -66,7 +98,20 @@
             </div>
           </form>
         </div>
+        <div class="col-md-6">
+          <h2 class="title"><span>Youtube video</span></h2>
+        </div>
       </div>
+      <div class="space"></div>
+      <div class="scale-section default-bg" style="background-color: black;">
+          <div class="container">
+            <div class="col-md-12">
+              <h3 class="text-center">Get more info about CET <a class="ribbon-link" href="">Govt. web link</a></h3>
+              
+              <h3 class="text-center">Interested in test series? <a class="ribbon-link" href="">Click here!</a></h3>
+            </div>
+          </div>
+      </div>    
     </div>
   </div>
 @endsection
