@@ -106,7 +106,7 @@
       <div style="background-color: #f7f7f7; padding: 15px; border-radius: 5px;">
         <div class="container">
           <div class="col-md-12">
-            <h3 class="text-center">Get more info about CET </br><a class="ribbon-link" href="http://cetcell.mahacet.org">Govt. web link</a></h3>
+            <h3 class="text-center">Get more info about CET </br><a class="ribbon-link" href="http://cetcell.mahacet.org">Government of Maharashtra CET Cell Link</a></h3>
             {{-- <h3 class="text-center">Interested in test series? <a class="ribbon-link" href="">Click here!</a></h3> --}}
           </div>
         </div>
