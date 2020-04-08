@@ -12,9 +12,9 @@ use Mail;
 class AdmissionsController extends Controller
 {
   public function __construct()
-{
+  {
     $this->middleware('admission', ['only' => ['studentApplication']]);
-}
+  }
   public function get($action)
   {
     if($action == "aicte-affiliation") return view('pages.aicte-affiliation');
@@ -49,13 +49,23 @@ class AdmissionsController extends Controller
   }
   public function postMockcet2020(Request $request)
   {
+    $this->validate($request, [
+      'name' => 'required',
+      'email' => 'required|unique:mock_test_users',
+    ]);
     $name = $request->input('name');
     $to_email = $request->input('email');
-    Mail::send('mails.mockcet', ['name'=>$name], function($message) use($to_email)  {
-      $message->subject("MOCK CET 2020 Test");
-      if(strpos(env('MAIL_USERNAME'), "@"))$message->from(env('MAIL_USERNAME'), 'kccemsr.edu.in');
-      $message->to($to_email);
-    });
-    return view('pages.admissions.mockcet2020');
+
+    $user = \App\MockTestUser::create([
+      'name' => $name,
+      'email' => $to_email,
+    ]);
+
+    // Mail::send('mails.mockcet', ['name'=>$name], function($message) use($to_email)  {
+    //   $message->subject("MOCK CET 2020 Test");
+    //   if(strpos(env('MAIL_USERNAME'), "@"))$message->from(env('MAIL_USERNAME'), 'kccemsr.edu.in');
+    //   $message->to($to_email);
+    // });
+    return view('pages.admissions.mockcet2020')->with(['success'=>true]);
   }
 }
