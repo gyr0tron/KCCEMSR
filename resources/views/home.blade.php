@@ -9,10 +9,10 @@
 @section('content')
 	<!-- banner start -->
 	<!-- ================ -->
-	{{-- <a href="https://www.orionhack.com" id="notification"><i class="fa fa-bell">
-	<p class="bubble speech" id="bell_info" style="color:black">Click the bell to apply for OrionHack
+	<a href="{{route('mockcet2020')}}" id="notification"><i class="fa fa-bell">
+	<p class="bubble speech" id="bell_info" style="color:black">Click the bell for Mock CET Test
 </p>
-</i></a> --}}
+</i></a>
 
 {{-- <div id="splashscreen">
 <button type="button" class="close enter_site" aria-label="Close"><span aria-hidden="true">&times;</span></button>
