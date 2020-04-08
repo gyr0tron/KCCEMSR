@@ -10,7 +10,7 @@
 		<div class="container main-content">
 			<div class="row">
 				<div class="col-md-12">
-					<h1 id="about" class="title text-center">Admissions <span>2019</span></h1>
+					<h1 id="about" class="title text-center">Admissions <span>2020</span></h1>
 					<div class="space"></div>
 					<div class="row">
 						<div class="col-md-6">

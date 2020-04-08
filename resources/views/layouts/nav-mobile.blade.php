@@ -65,7 +65,7 @@
 						<li class="has-dropdown">
 							<a href="#">Admissions</a>
 							<ul>
-								<li><a href="{{route('admissions-details')}}">Admissions 2019</a></li>
+								<li><a href="{{route('admissions-details')}}">Admissions 2020</a></li>
 								<li><a href="{{route('admissions-apply')}}">Apply Online</a></li>
 								<li><a href="{{route('admissions', 'admission-criteria')}}">Admission Criteria</a></li>
 								{{-- <li><a href="{{route('admissions', 'fees-notices')}}">Fees Notices</a></li> --}}
