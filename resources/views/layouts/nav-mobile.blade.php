@@ -27,17 +27,17 @@
 							<a href="#">About</a>
 							<ul>
 								<li><a href="{{route('about')}}">College Info</a></li>
-								<li><a href="{{route('hr-handbook')}}">HR Handbook</a></li>
-								<li><a href="{{route('about')}}#chp-msg">Chairperson Message</a></li>
-								<li><a href="{{route('about')}}#md-msg">MD Message</a></li>
-								<li><a href="{{url('/public/files/institute-prospectus.pdf')}}">Director Institutional Development Message</a></li>
+								<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
+								<li><a href="{{route('about')}}#chp-msg">Chairperson's Message</a></li>
+								<li><a href="{{route('about')}}#md-msg">MD's Message</a></li>
+								<li><a href="{{route('about')}}#coo-msg">COO's Message</a></li>
 								{{-- <li><a href="{{route('about')}}#ceo-msg">CEO Message</a></li> --}}
 								<li><a href="{{route('about')}}#prncp-msg">Principal's Message</a></li>
-								<li><a href="{{route('about')}}#vision">Vision &amp; Mission</a></li>
+								<li><a href="{{route('hr-handbook')}}">HR Handbook</a></li>
 								{{-- <li><a href="{{route('about')}}">Board of Governance</a></li> --}}
 								<li><a href="{{route('infrastructures')}}">Infrastructure</a></li>
 								<li><a href="{{route('committees')}}">Committees</a></li>
-								<li><a href="{{route('careeratkc')}}">Career At KC</a></li>
+								{{-- <li><a href="{{route('careeratkc')}}">Career At KC</a></li> --}}
 							</ul>
 						</li>
 						<li class="has-dropdown">

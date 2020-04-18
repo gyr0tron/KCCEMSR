@@ -107,7 +107,7 @@
 						<div class="space"></div>
 
 						<div class="row" id="">
-							<a class="anchor_guide" id="dir_id-msg"></a>
+							<a class="anchor_guide" id="coo-msg"></a>
 							<div class="col-md-3 col-sm-3 col-xs-12">
 								<div style="width:100%;">
 									<img src="{{url("images/director.jpg")}}" style="margin: 0 auto;" alt="" width="235" height="245" class="img-responsive">
